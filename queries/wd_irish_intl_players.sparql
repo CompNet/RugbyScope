@@ -3,28 +3,20 @@ SELECT DISTINCT ?player ?playerLabel
   (GROUP_CONCAT(DISTINCT ?lastnameLabel; SEPARATOR=", ") as ?lastnameLabels)
   ?sexLabel 
   (MAX(?dob) AS ?dobMax) (CONCAT(STR(YEAR(?dobMax)),"-",STR(MONTH(?dobMax)),"-",STR(DAY(?dobMax))) AS ?dobFormat)
-  (GROUP_CONCAT(DISTINCT ?pobLabel; SEPARATOR=", ") as ?pobLabels)
+  (GROUP_CONCAT(DISTINCT ?pobLabel; SEPARATOR=", ") AS ?pobLabels)
   (MAX(?dod) AS ?dodMax) (CONCAT(STR(YEAR(?dodMax)),"-",STR(MONTH(?dodMax)),"-",STR(DAY(?dodMax))) AS ?dodFormat)
-  (GROUP_CONCAT(DISTINCT ?podLabel; SEPARATOR=", ") as ?podLabels)
-  (GROUP_CONCAT(DISTINCT ?citizenshipLabel; SEPARATOR=", ") as ?citizenshipLabels)
-  (GROUP_CONCAT(DISTINCT ?sportCountryLabel; SEPARATOR=", ") as ?sportCountryLabels)
-  (GROUP_CONCAT(DISTINCT ?positionLabel; SEPARATOR=", ") as ?positionLabels)
-  (GROUP_CONCAT(DISTINCT ?careerStartYear; SEPARATOR=", ") as ?careerStartYears)
-  (GROUP_CONCAT(DISTINCT ?careerEndYear; SEPARATOR=", ") as ?careerEndYears)
-  (GROUP_CONCAT(DISTINCT ?mass; SEPARATOR=", ") as ?masses)
-  (GROUP_CONCAT(DISTINCT ?height; SEPARATOR=", ") as ?heights)
-  (GROUP_CONCAT(DISTINCT ?ESPNscrumID; SEPARATOR=", ") as ?ESPNscrumIDs)
-  (GROUP_CONCAT(DISTINCT ?AllRugbyID; SEPARATOR=", ") as ?AllRugbyIDs)
-  (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR=", ") as ?GoogleKnowlIDs)
-  (GROUP_CONCAT(DISTINCT ?ItsRugbyID; SEPARATOR=", ") as ?ItsRugbyIDs)
-  (GROUP_CONCAT(DISTINCT ?RugbyDatabaseID; SEPARATOR=", ") as ?RugbyDatabaseIDs)
+  (GROUP_CONCAT(DISTINCT ?podLabel; SEPARATOR=", ") AS ?podLabels)
+  (GROUP_CONCAT(DISTINCT ?citizenshipLabel; SEPARATOR=", ") AS ?citizenshipLabels)
+  (GROUP_CONCAT(DISTINCT ?sportCountryLabel; SEPARATOR=", ") AS ?sportCountryLabels)
+  (GROUP_CONCAT(DISTINCT ?positionLabel; SEPARATOR=", ") AS ?positionLabels)
+  ?careerStart ?careerEnd
+  ?mass ?height
+  ?ESPNscrumID ?AllRugbyID ?GoogleKnowlID ?ItsRugbyID ?RugbyDatabaseID
 WHERE
-{ #BIND(wd:Q3470454 AS ?player)
+{
+  ?player wdt:P106 wd:Q14089670;   # P106=occupation, Q14089670=Rugby Union player
+          wdt:P54 wd:Q599903.	     # P54=member of sports team, Q599903=Ireland national rugby union team
   
-  ?player wdt:P106 wd:Q14089670;         # P106=occupation, Q14089670=Rugby Union player
-          wdt:P54/wdt:P31 wd:Q43009164.	 # P54=member of sports team, P31=instance of, Q43009164=Rugby Union club
-#           wdt:P54 wd:Q599903.	         # alt: P54=member of sports team, Q599903=Ireland national rugby union team
-
   OPTIONAL{?player wdt:P735 ?firstname.}
   OPTIONAL{?player wdt:P734 ?lastname.}
   OPTIONAL{?player wdt:P21 ?sex.}
@@ -35,10 +27,8 @@ WHERE
   OPTIONAL{?player wdt:P27 ?citizenship.}
   OPTIONAL{?player wdt:P1532 ?sportCountry.}
   OPTIONAL{?player wdt:P413 ?position.}
-  OPTIONAL{?player wdt:P2031 ?careerStart.
-           BIND(STR(YEAR(?careerStart)) AS ?careerStartYear)}
-  OPTIONAL{?player wdt:P2032 ?careerEnd.
-           BIND(STR(YEAR(?careerEnd)) AS ?careerEndYear)}
+  OPTIONAL{?player wdt:P2031 ?careerStart.}
+  OPTIONAL{?player wdt:P2032 ?careerEnd.}
   OPTIONAL{?player wdt:P2067 ?mass.}
   OPTIONAL{?player wdt:P2048 ?height.}
   OPTIONAL{?player wdt:P858 ?ESPNscrumID.}
@@ -58,5 +48,4 @@ WHERE
                            ?position rdfs:label ?positionLabel.
                          } # just to get the label right
 }
-GROUP BY ?player ?playerLabel ?sexLabel ?dobFormat ?dodFormat
-ORDER BY ?player 
+GROUP BY ?player ?playerLabel ?sexLabel ?dobFormat ?dodFormat ?careerStart ?careerEnd ?mass ?height ?ESPNscrumID ?AllRugbyID ?GoogleKnowlID ?ItsRugbyID ?RugbyDatabaseID

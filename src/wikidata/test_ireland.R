@@ -257,4 +257,4 @@ while(row <= nrow(filt_careers)) {
 # init graph
 g <- graph_from_edgelist(el, directed=TRUE)
 plot(g)
-write.graph(g, file = file.path("out", "irish_intnl_teams.graphml"), format = "graphml")
+write.graph(g, file = file.path("out", "irish_intnl_transfers.graphml"), format = "graphml")

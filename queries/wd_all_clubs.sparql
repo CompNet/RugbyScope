@@ -1,0 +1,40 @@
+SELECT DISTINCT ?club ?clubLabel
+  ?inception
+  (GROUP_CONCAT(DISTINCT ?nicknameLabel; SEPARATOR=", ") as ?nickmaneLabels)
+  ?affiliation ?affiliationLabel
+  ?country ?countryLabel
+  ?competition ?competitionLabel
+  ?homeVenue ?homeVenueLabel ?homeVenueCapacity
+  ?location ?locationLabel
+  ?AllRugbyID
+WHERE
+{ #BIND(wd:Q3470454 AS ?player)
+  
+  ?club wdt:P31 wd:Q43009164.                                  # P31=instance of, Q43009164=Rugby Union club
+  # TODO additional constraint: must have players in WD ?
+
+  OPTIONAL{?club wdt:P571 ?inception.}                         # P571=inception
+  OPTIONAL{?club wdt:P1448 ?name.}                             # P1448=official name
+  OPTIONAL{?club wdt:P1449 ?nickname.}                         # P1449=nickname
+  OPTIONAL{?club wdt:P1416 ?affiliation.}                      # P1416=affiliation
+  OPTIONAL{?club wdt:P17 ?country.}                            # P17=country
+  OPTIONAL{?club wdt:P118 ?competition.}                       # P118=league or competition
+  OPTIONAL{?club p:P115 ?statement.                            # P115=home venue
+           ?statement ps:P115 ?home.                           # ps:=object of the relation, pq:=qualifier of the relation
+           OPTIONAL{?statement pq:P1083 ?homeVenueCapacity.}   # P1083=maximum capacity
+          }
+  OPTIONAL{?club wdt:P159 ?location.}                          # P159=headquarters location
+  OPTIONAL{?club wdt:P10590 ?AllRugbyID.}                      # P10590=All.Rugby club ID
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
+                           ?club rdfs:label ?clubLabel.
+                           ?nickname rdfs:label ?nicknameLabel.
+                           ?affiliation rdfs:label ?affiliationLabel.
+                           ?country rdfs:label ?countryLabel.
+                           ?competition rdfs:label ?competitionLabel.
+                           ?homeVenue rdfs:label ?homeVenueLabel.
+                           ?location rdfs:label ?locationLabel.
+                         } # just to get the label right
+}
+GROUP BY ?club ?clubLabel ?inception ?affiliation ?affiliationLabel ?country ?countryLabel ?competition ?competitionLabel ?homeVenue ?homeVenueLabel ?homeVenueCapacity ?location ?locationLabel ?AllRugbyID
+ORDER BY ?club 
