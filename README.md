@@ -16,7 +16,7 @@ If you use this source code or the associated data, please cite <!--[[L'22](#ref
 
 <!--```bibtex
 @Article{Labatut2022,
-  ...
+  ....
 }
 ```-->
 
