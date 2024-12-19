@@ -1,4 +1,6 @@
-# Tests of the WikidataR package
+# Tests of the WikidataR package.
+# 
+# !!!! DON'T RUN THAT !!!!
 #
 # Vincent Labatut
 # 12/2024

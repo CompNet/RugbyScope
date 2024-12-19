@@ -18,10 +18,18 @@ library("WikidataR")
 
 
 ########################################################################
+# paths
+query.folder <- file.path("queries")
+out.folder <- file.path("out", "wikidata")
+
+
+
+
+########################################################################
 # complete extraction of pro players
 
 # load query file
-query <- readtext(file.path("queries", "wd_all_players.sparql"))$text
+query <- readtext(file.path(query.folder, "wd_all_players.sparql"))$text
 
 # querying WD with pagination
 PAGE_SIZE <- 500
@@ -48,8 +56,8 @@ while (go_on) {
 
 # export as CSV file
 print(dim(players))
-write.csv(players, file.path("out", "all_pro_players_descr.csv"))
-# players <- read.csv(file.path("out", "all_pro_players_descr.csv"))
+write.csv(players, file.path(out.folder, "all_pro_players_descr.csv"))
+# players <- read.csv(file.path(out.folder, "all_pro_players_descr.csv"))
 print(apply(players, 2, class))
 print.data.frame(players[1:10,])
 
@@ -70,11 +78,11 @@ for (double in doubles) {
 # extraction of player careers
 
 # load query file
-query <- readtext(file.path("queries", "wd_all_careers.sparql"))$text
+query <- readtext(file.path(query.folder, "wd_all_careers.sparql"))$text
 
 careers <- query_wikidata(query)
-write.csv(careers, file.path("out", "all_pro_players_careers.csv"))
-# careers <- read.csv(file.path("out", "all_pro_players_careers.csv"))
+write.csv(careers, file.path(out.folder, "all_pro_players_careers.csv"))
+# careers <- read.csv(file.path(out.folder, "all_pro_players_careers.csv"))
 print(apply(careers, 2, class))
 print.data.frame(careers[1:10,])
 
@@ -85,11 +93,11 @@ print.data.frame(careers[1:10,])
 # extraction of club/team information
 
 # load query file
-query <- readtext(file.path("queries", "wd_all_teams.sparql"))$text
+query <- readtext(file.path(query.folder, "wd_all_teams.sparql"))$text
 
 teams <- query_wikidata(query)
-write.csv(teams, file.path("out", "all_pro_teams_descr.csv"))
-# teams <- read.csv(file.path("out", "all_pro_teams_descr.csv"))
+write.csv(teams, file.path(out.folder, "all_pro_teams_descr.csv"))
+# teams <- read.csv(file.path(out.folder, "all_pro_teams_descr.csv"))
 print(apply(teams, 2, class))
 print.data.frame(teams[1:10,])
 

@@ -9,10 +9,17 @@ library("igraph")
 
 
 ########################################################################
+# paths
+out.folder <- file.path("out","wikidata")
+
+
+
+
+########################################################################
 # load data tables
-players <- read.csv(file.path("out", "all_pro_players_descr.csv"))
-careers <- read.csv(file.path("out", "all_pro_players_careers.csv"))
-teams <- read.csv(file.path("out", "all_pro_teams_descr.csv"))
+players <- read.csv(file.path(out.folder, "all_pro_players_descr.csv"))
+careers <- read.csv(file.path(out.folder, "all_pro_players_careers.csv"))
+teams <- read.csv(file.path(out.folder, "all_pro_teams_descr.csv"))
 
 
 
@@ -66,7 +73,7 @@ E(g)$weight <- weights
 plot(g)
 
 # export as a graphml file
-write.graph(g, file = file.path("out", "all_pro_teams.graphml"), format = "graphml")
+write.graph(g, file = file.path(out.folder, "all_pro_teams.graphml"), format = "graphml")
 
 # TODO
 # > rajouter une feuille pr les clubs
