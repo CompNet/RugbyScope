@@ -20,8 +20,6 @@ out.folder <- file.path("out","wikidata")
 # load data tables
 teams <- read.csv(file.path(out.folder, "all_pro_teams_descr.csv"))
 cat("Raw number of teams:", nrow(teams), "\n")
-teams <- teams %>% mutate(across(where(is.character), ~ na_if(.,"")))
-
 
 players <- read.csv(file.path(out.folder, "all_pro_players_descr.csv"))
 cat("Raw number of players:", nrow(players), "\n")

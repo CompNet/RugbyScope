@@ -25,7 +25,7 @@ out.folder <- file.path("out", "wikidata")
 
 
 ########################################################################
-# complete extraction of pro players
+# extraction of players information
 
 # load query file
 query <- readtext(file.path(query.folder, "wd_all_players.sparql"))$text
@@ -55,6 +55,7 @@ while (go_on) {
 
 # export as CSV file
 print(dim(players))
+players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))  # replace "" by NA
 write.csv(players, file.path(out.folder, "all_pro_players_descr.csv"))
 # players <- read.csv(file.path(out.folder, "all_pro_players_descr.csv"))
 print(apply(players, 2, class))
@@ -79,6 +80,7 @@ for (double in doubles) {
 query <- readtext(file.path(query.folder, "wd_all_teams.sparql"))$text
 
 teams <- query_wikidata(query)
+teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))  # replace "" by NA
 write.csv(teams, file.path(out.folder, "all_pro_teams_descr.csv"))
 # teams <- read.csv(file.path(out.folder, "all_pro_teams_descr.csv"))
 print(apply(teams, 2, class))
@@ -103,6 +105,7 @@ for (double in doubles) {
 query <- readtext(file.path(query.folder, "wd_all_careers.sparql"))$text
 
 careers <- query_wikidata(query)
+careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))  # replace "" by NA
 write.csv(careers, file.path(out.folder, "all_pro_players_careers.csv"))
 # careers <- read.csv(file.path(out.folder, "all_pro_players_careers.csv"))
 print(apply(careers, 2, class))
@@ -111,5 +114,3 @@ print.data.frame(careers[1:10, ])
 
 
 # TODO: add the wikipedia URLs for players
-# TODO: teams that are not clubs, franchises, or national teams:
-#       > What about national A or development teams? (also Fiji Warriors)
