@@ -862,7 +862,6 @@ Q2817319,Stade Montchaninois,rugby union team,1961-01-01T00:00:00Z,,,,France,,,,
 Q2819481,ASUB Waterloo,rugby union team,1959-01-01T00:00:00Z,,,,Belgium,,,,,,
 Q2819484,RSV Köln,rugby union team,1951-01-01T00:00:00Z,,,,Germany,Rugby-Bundesliga,,,,,
 Q2821574,Aberdeen GSFP RFC,rugby union team,1893-01-01T00:00:00Z,,,,United Kingdom,Scottish Premiership,Rubislaw Playing Fields,NA,,,
-Q28223950,Australian Barbarians,rugby union team,1957-01-01T00:00:00Z,,,,,,,,,,/g/11c0q_cmym
 Q282354,Hamilton RFC,rugby union team,1927-01-01T00:00:00Z,,,,United Kingdom,Scottish Premiership Division Two,,,,,
 Q2827226,AgroUniversity Kazan,rugby union club,1967-01-01T00:00:00Z,,,,Russia,,,,,,
 Q28402763,Long Eaton RFC,rugby union team,,,,,United Kingdom,,,,,,/g/11c1p7_72k
@@ -1095,7 +1094,7 @@ Q3462337,Q3462337,rugby union team,,,,,France,,,,Saint-Girons,,/g/120z6z6r
 Q3462531,Saint-Jean-de-Luz Olympique rugby team,rugby union team,1927-01-01T00:00:00Z,,,,France,,Stade du Pavillon bleu,NA,Saint-Jean-de-Luz,,/g/122czl1r
 Q3463122,Saint-Paul Sports Rugby,rugby union team,1909-01-01T00:00:00Z,,,,France,,,,Saint-Paul-lès-Dax,,
 Q3463991,Saint-Médard rugby club,rugby union team,1905-01-01T00:00:00Z,,,,France,,Stade Robert-Monseau,NA,Saint-Médard-en-Jalles,,/g/122fjygr
-Q3469726,Salford Red Devils,rugby union team,1873-01-01T00:00:00Z,,,,United Kingdom,,"Salford City Stadium; New Barnes; The Willows, Salford",NA,,,
+Q3469726,Salford Red Devils,rugby union team,1873-01-01T00:00:00Z,,,,United Kingdom,,"New Barnes; The Willows, Salford; Salford City Stadium",NA,,,
 Q3471435,San Francisco Golden Gate RFC,rugby union team,2001-01-01T00:00:00Z,,,,United States of America,,,,San Francisco,,
 Q3471485,San Gregorio Catania Rugby,rugby union team,1990-01-01T00:00:00Z,2013-01-01T00:00:00Z,,Italian Rugby Federation,Italy,,,,,,
 Q3472221,Q3472221,rugby union team,,,,,,,,,,,
@@ -1269,8 +1268,8 @@ Q3790180,Q3790180,rugby union team,1973-01-01T00:00:00Z,,,,Italy,,,,,,/g/120jxn9
 Q3790328,Q3790328,rugby union club,1977-01-01T00:00:00Z,,I Lupi,,Italy,,,,Rome,,/g/120zjflr
 Q3796742,Q3796742,rugby union team,,,,Italian Rugby Federation,Italy,,,,,,/g/122_sg26
 Q3808106,Q3808106,rugby union team,,,,Italian Rugby Federation,Italy,,,,,,/g/120jr4n7
-Q3858789,Q3858789,rugby union team,1957-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Q3957792,,,,,/g/121g0zjn
 Q3858789,Q3858789,rugby union club,1957-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Q3957792,,,,,/g/121g0zjn
+Q3858789,Q3858789,rugby union team,1957-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Q3957792,,,,,/g/121g0zjn
 Q3859932,Q3859932,rugby union team,1965-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie B,,,,,/g/122qmh9w
 Q38605283,Fijian Drua,rugby union team,2017-01-01T00:00:00Z,,,,Fiji,,Churchill Park,NA,,,/g/11f03pgs6l
 Q3873939,Libya national rugby union team,national rugby union team,,,,,Libya,,,,,,
@@ -1318,8 +1317,8 @@ Q3964715,Q3964715,rugby union team,1962-01-01T00:00:00Z,,,Italian Rugby Federati
 Q3967137,Q3967137,rugby union team,1978-01-01T00:00:00Z,2006-01-01T00:00:00Z,,Italian Rugby Federation,Italy,,,,Catania,,/g/112yfvqn5
 Q3976615,Sudamérica XV,rugby union team,1980-01-01T00:00:00Z,,,,Uruguay; Brazil; Chile; Argentina; Colombia,,,,,,
 Q4001395,Avezzano Rugby,rugby union team,1977-01-01T00:00:00Z,,Orsi,Italian Rugby Federation,Italy,Serie A,,,Avezzano,,/g/1218dxz0
-Q4001580,Unione Sportiva Primavera Rugby,rugby union team,1976-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie B,,,Morlupo; Rome,,/g/11b6gly442
-Q4001580,Unione Sportiva Primavera Rugby,rugby union club,1976-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie B,,,Morlupo; Rome,,/g/11b6gly442
+Q4001580,Unione Sportiva Primavera Rugby,rugby union club,1976-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie B,,,Rome; Morlupo,,/g/11b6gly442
+Q4001580,Unione Sportiva Primavera Rugby,rugby union team,1976-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie B,,,Rome; Morlupo,,/g/11b6gly442
 Q4001742,U.S. Rugby Benevento,rugby union team,1966-01-01T00:00:00Z,,,,Italy,Q3957792,Stadio Alfredo Dell’Oste,4000,,,/g/120j8j34
 Q4005371,Rugby Parabiago 1948,rugby union team,1948-01-01T00:00:00Z,,I Galletti,Italian Rugby Federation,Italy,Serie A,,,Parabiago,,/g/120hht67
 Q4005968,Unión Marplatense de Rugby,rugby union team,1951-01-01T00:00:00Z,,,Argentine Rugby Union,Argentina,,,,Mar del Plata,,
@@ -1387,8 +1386,8 @@ Q4743536,American Cougars,rugby union team,,,,,New Zealand,,,,,,
 Q4744892,American Samoa national rugby sevens team,national rugby union team,,,,,,,,,,,
 Q4745828,Amersham and Chiltern Rugby Football Club,rugby union team,1924-01-01T00:00:00Z,,,,United Kingdom,,,,,,
 Q4747139,Amman United RFC,rugby union team,1903-01-01T00:00:00Z,,,,United Kingdom,,,,,,
-Q4747155,Ammanford RFC,rugby union team,1887-01-01T00:00:00Z,,,,Wales,,,,,,
 Q4747155,Ammanford RFC,rugby union club,1887-01-01T00:00:00Z,,,,Wales,,,,,,
+Q4747155,Ammanford RFC,rugby union team,1887-01-01T00:00:00Z,,,,Wales,,,,,,
 Q4748551,Ampthill Rugby Club,rugby union club,1881-01-01T00:00:00Z,,,,United Kingdom,,Dillingham Park,NA,Ampthill,,
 Q474910,Unione Rugby Capitolina,rugby union team,1996-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie B,,,,,
 Q474910,Unione Rugby Capitolina,rugby union team,1996-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie A,,,,,
@@ -1614,7 +1613,7 @@ Q5315713,Dunstablians R.F.C.,rugby union team,1948-01-01T00:00:00Z,,,,United Kin
 Q5315784,Dunvant RFC,rugby union team,,,,,United Kingdom,,,,,,
 Q5325488,Ealing Rugby Club,rugby union club,1871-01-01T00:00:00Z,,,,United Kingdom,Premiership Rugby,Trailfinders Sports Ground,NA,,,
 Q5326546,Earlston RFC,rugby union team,,,,,United Kingdom,,,,,,
-Q5327644,East Africa rugby union team,rugby union team,,,,,,,,,,,
+Q5327644,East Africa rugby union team,national rugby union team,,,,,,,,,,,
 Q5328727,East Kilbride RFC,rugby union team,,,,,United Kingdom,,,,,,
 Q5329479,East Tamaki RFC,rugby union club,1962-01-01T00:00:00Z,,,,New Zealand,,,,,,
 Q5334368,Ecuador national rugby union team,national rugby union team,,,,,Ecuador,,,,,,
@@ -1798,7 +1797,7 @@ Q62006391,France national under-21 rugby union team,national rugby union team,,,
 Q620948,CR Arquitectura Técnica,rugby union club,1976-01-01T00:00:00Z,,,,Spain,,,,A Coruña,,/g/1hf_wf5ms
 Q620948,CR Arquitectura Técnica,rugby union team,1976-01-01T00:00:00Z,,,,Spain,,,,A Coruña,,/g/1hf_wf5ms
 Q622443,Australia national rugby union team,national rugby union team,1899-06-24T00:00:00Z,,,,Australia,,,,,,
-Q624092,Arabian Gulf rugby union team,rugby union team,,,,,,,,,,,
+Q624092,Arabian Gulf rugby union team,national rugby union team,,,,,,,,,,,
 Q62615889,U.R. L’Aquila,rugby union team,2018-01-01T00:00:00Z,,,Italian Rugby Federation,Italy,Serie A,,,L'Aquila,,
 Q62911900,Q62911900,rugby union team,2018-01-01T00:00:00Z,,,,Belgium,,,,,,
 Q630112,Aviron Bayonnais,rugby union club,1906-10-14T00:00:00Z,,,French Rugby Federation,France,Top 14,Stade Jean Dauger,16934,Bayonne,,
@@ -1868,7 +1867,6 @@ Q65051787,Tabard RFC,rugby union club,,,,,United Kingdom,,,,,,/g/11hz0s8fgh
 Q65065461,St Boswells RFC,rugby union club,,,,,United Kingdom,,,,,,/g/11fkyzqsj2
 Q65067838,Hawick Trades,rugby union club,,,,,United Kingdom,,,,,,/g/11h1dnydm1
 Q65068100,Grangemouth Stags,rugby union club,,,,,United Kingdom,,,,,,/g/11h1fy_qhm
-Q65068423,Penguin International RFC,rugby union team,,,,,,,,,,,/g/11h77pr4rf
 Q65069044,Hillfoots RFC,rugby union club,,,,,United Kingdom,,,,,,/g/11h1hqwcxx
 Q65069403,Oban Lorne RFC,rugby union team,1962-01-01T00:00:00Z,,,Scottish Rugby Union,United Kingdom,,,,Oban,,/g/11h1j31llg
 Q65070097,Strathmore RFC,rugby union club,,,,,United Kingdom,,,,,,/g/11h7b59mss
@@ -2138,7 +2136,7 @@ Q753618,Stade Aurillacois Cantal Auvergne,rugby union club,1904-01-01T00:00:00Z,
 Q75375252,Q75375252,rugby union team,1945-03-17T00:00:00Z,,,,France,,,,13th arrondissement of Paris,,/g/11h8h89g1g
 Q75375259,Q75375259,rugby union team,1928-03-11T00:00:00Z,1945-03-17T00:00:00Z,,,France,,,,Paris,,/g/11h8h8p_4h
 Q7565371,South Africa amateur national rugby union team,national rugby union team,,,,,South Africa,,,,,,
-Q7565434,South African Barbarians,rugby union team,1960-01-01T00:00:00Z,,,,South Africa,,,,,,
+Q7565434,South African Barbarians,national rugby union team,1960-01-01T00:00:00Z,,,,South Africa,,,,,,
 Q756594,Stade Rochelais,rugby union team,1898-01-01T00:00:00Z,,les Maritimes,French Rugby Federation,France,Top 14,Stade Marcel-Deflandre,16000,La Rochelle,la-rochelle,
 Q7567806,South Leicester RFC,rugby union team,1919-01-01T00:00:00Z,,,,United Kingdom,,,,,,
 Q7569546,Southend RFC,rugby union club,,,,,United Kingdom,,,,,,

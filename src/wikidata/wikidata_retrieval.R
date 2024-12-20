@@ -76,26 +76,22 @@ for (double in doubles) {
 # extraction of club/team information
 
 # load query file
-query <- readtext(file.path(query.folder, "wd_all_clubs.sparql"))$text
+query <- readtext(file.path(query.folder, "wd_all_teams.sparql"))$text
 
-clubs <- query_wikidata(query)
-write.csv(clubs, file.path(out.folder, "all_pro_clubs_descr.csv"))
-# clubs <- read.csv(file.path(out.folder, "all_pro_clubs_descr.csv"))
-print(apply(clubs, 2, class))
-print.data.frame(clubs[1:10, ])
+teams <- query_wikidata(query)
+write.csv(teams, file.path(out.folder, "all_pro_teams_descr.csv"))
+# teams <- read.csv(file.path(out.folder, "all_pro_teams_descr.csv"))
+print(apply(teams, 2, class))
+print.data.frame(teams[1:10, ])
 
-# list clubs occurring several times
-doubles <- names(which(table(clubs$club) > 1))
+# list teams occurring several times
+doubles <- names(which(table(teams$club) > 1))
 for (double in doubles) {
-  idx <- which(clubs$club == double)
+  idx <- which(teams$club == double)
   print(idx)
-  print.data.frame(clubs[idx, ])
-  print(colnames(clubs)[which(clubs[idx[1], ] != clubs[idx[2],])])
+  print.data.frame(teams[idx, ])
+  print(colnames(teams)[which(teams[idx[1], ] != teams[idx[2],])])
 }
-
-# TODO
-# affiliation : check rugby organization
-# some have several headquarters
 
 
 
@@ -111,3 +107,9 @@ write.csv(careers, file.path(out.folder, "all_pro_players_careers.csv"))
 # careers <- read.csv(file.path(out.folder, "all_pro_players_careers.csv"))
 print(apply(careers, 2, class))
 print.data.frame(careers[1:10, ])
+
+
+
+# TODO: add the wikipedia URLs for players
+# TODO: teams that are not clubs, franchises, or national teams:
+#       > What about national A or development teams? (also Fiji Warriors)

@@ -4,6 +4,7 @@
 # 12/2024
 ########################################################################
 library("igraph")
+library("dplyr")
 
 
 
@@ -17,9 +18,60 @@ out.folder <- file.path("out","wikidata")
 
 ########################################################################
 # load data tables
+teams <- read.csv(file.path(out.folder, "all_pro_teams_descr.csv"))
+cat("Raw number of teams:", nrow(teams), "\n")
+teams <- teams %>% mutate(across(where(is.character), ~ na_if(.,"")))
+
+
 players <- read.csv(file.path(out.folder, "all_pro_players_descr.csv"))
+cat("Raw number of players:", nrow(players), "\n")
+
 careers <- read.csv(file.path(out.folder, "all_pro_players_careers.csv"))
-clubs <- read.csv(file.path(out.folder, "all_pro_clubs_descr.csv"))
+cat("Raw number of career steps:", nrow(careers), "\n")
+
+
+
+
+########################################################################
+# clean team data
+
+# filter out national teams
+idx <- which(teams[, "clubTypeLabel"] == "national rugby union team")
+if (length(idx) > 0)
+  clubs <- teams[-idx, ]
+cat("Removed", length(idx), "national teams\n")
+
+# filter out invitational teams (Barbarians et al.)
+# note: Brussels Barbarians is a proper club
+invitational_teams <- c("Q807749", "Q28223950", "Q2004853", "Q7015235", "Q7565434", "Q3071726", "Q65068423", "Q7435412", "Q1490464")
+idx <- which(clubs[, "clubId"] %in% invitational_teams)
+if (length(idx) > 0)
+  clubs <- clubs[-idx, ]
+cat("Removed", length(idx), "invitational teams\n")
+
+# filter out combined teams (British & Irish Lions et al.)
+combined_teams <- c("Q3651754", "Q624092", "Q733600", "Q5327644", "Q3606252", "Q247246", "Q3976615", "Q121190772")
+idx <- which(clubs[, "clubId"] %in% combined_teams)
+if (length(idx) > 0)
+  clubs <- clubs[-idx, ]
+cat("Removed", length(idx), "combined teams\n")
+
+# # filter out clubs with no affiliation and competition
+# idx <- which(is.na(clubs[, "affiliationLabel"]) & is.na(clubs[, "competitionLabel"]))
+# if (length(idx) > 0)
+#   clubs <- clubs[-idx, ]
+# cat("Removed", length(idx), "clubs without affiliation and competition\n")
+
+cat("Number of clubs remaining:", nrow(clubs), "\n")
+
+
+
+
+########################################################################
+# clean career data
+
+# filer out career steps without a start date
+# TODO
 
 
 
@@ -76,4 +128,7 @@ plot(g)
 write.graph(g, file = file.path(out.folder, "all_pro_transfers.graphml"), format = "graphml")
 
 # TODO
-# > rajouter une feuille pr les clubs
+# > keep only rows with a start date
+# > check prev end date and next start date are both present and consecutive
+# > handle clubs vs. national selections / invitation clubs
+

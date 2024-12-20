@@ -24,23 +24,34 @@ WHERE
   ?player wdt:P106 wd:Q14089670;         # P106=occupation, Q14089670=Rugby Union player
           wdt:P54/wdt:P31 wd:Q43009164.	 # P54=member of sports team, P31=instance of, Q43009164=Rugby Union club
 #           wdt:P54 wd:Q599903.	         # alt: P54=member of sports team, Q599903=Ireland national rugby union team
-
+  
+  # name / sex
   OPTIONAL{?player wdt:P735 ?firstname.}
   OPTIONAL{?player wdt:P734 ?lastname.}
   OPTIONAL{?player wdt:P21 ?sex.}
+  
+  # date/place of birth/death
   OPTIONAL{?player wdt:P569 ?dob.}
   OPTIONAL{?player wdt:P19 ?pob.}
   OPTIONAL{?player wdt:P570 ?dod.}
   OPTIONAL{?player wdt:P20 ?pod.}
+  
+  # countries & positions
   OPTIONAL{?player wdt:P27 ?citizenship.}
   OPTIONAL{?player wdt:P1532 ?sportCountry.}
   OPTIONAL{?player wdt:P413 ?position.}
+  
+  # career start/end dates
   OPTIONAL{?player wdt:P2031 ?careerStart.
            BIND(STR(YEAR(?careerStart)) AS ?careerStartYear)}
   OPTIONAL{?player wdt:P2032 ?careerEnd.
            BIND(STR(YEAR(?careerEnd)) AS ?careerEndYear)}
+  
+  # physical attributes
   OPTIONAL{?player wdt:P2067 ?mass.}
   OPTIONAL{?player wdt:P2048 ?height.}
+  
+  # external IDs
   OPTIONAL{?player wdt:P858 ?ESPNscrumID.}
   OPTIONAL{?player wdt:P9903 ?AllRugbyID.}
   OPTIONAL{?player wdt:P2671 ?GoogleKnowlID.}
