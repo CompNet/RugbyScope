@@ -12,6 +12,7 @@
 ########################################################################
 library("readtext")
 library("WikidataR")
+library("dplyr")
 
 
 
@@ -56,7 +57,7 @@ while (go_on) {
 # export as CSV file
 print(dim(players))
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))  # replace "" by NA
-write.csv(players, file.path(out.folder, "all_pro_players_descr.csv"))
+write.csv(players, file.path(out.folder, "all_pro_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 # players <- read.csv(file.path(out.folder, "all_pro_players_descr.csv"))
 print(apply(players, 2, class))
 print.data.frame(players[1:10, ])
@@ -81,7 +82,7 @@ query <- readtext(file.path(query.folder, "wd_all_teams.sparql"))$text
 
 teams <- query_wikidata(query)
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))  # replace "" by NA
-write.csv(teams, file.path(out.folder, "all_pro_teams_descr.csv"))
+write.csv(teams, file.path(out.folder, "all_pro_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 # teams <- read.csv(file.path(out.folder, "all_pro_teams_descr.csv"))
 print(apply(teams, 2, class))
 print.data.frame(teams[1:10, ])
@@ -106,11 +107,37 @@ query <- readtext(file.path(query.folder, "wd_all_careers.sparql"))$text
 
 careers <- query_wikidata(query)
 careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))  # replace "" by NA
-write.csv(careers, file.path(out.folder, "all_pro_players_careers.csv"))
+write.csv(careers, file.path(out.folder, "all_pro_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 # careers <- read.csv(file.path(out.folder, "all_pro_players_careers.csv"))
 print(apply(careers, 2, class))
 print.data.frame(careers[1:10, ])
 
 
 
-# TODO: add the wikipedia URLs for players
+
+########################################################################
+# add the Wikipedia URLs of the players
+# this has to be handled separately, due to timeout limits
+
+# extend the table
+col_names <- c("articleEn", "articleFr", "articleEs", "articleJa")
+players <- cbind(players, matrix(NA, nrow = nrow(players), ncol = ncol(col_names)))
+colnames(players)[(ncol(players) - 3):ncol(players)] <- col_names
+
+# load query file
+query <- readtext(file.path(query.folder, "wd_wikipedia_url.sparql"))$text
+for (row in 1:nrow(players)) {
+  player_id <- players[row, "playerId"]
+  cat("++++++++++++ Processing player ", player_id, " (", row, "/", nrow(players), ")\n", sep="")
+  
+  # run query
+  pl_query <- gsub("QQQQQQ", player_id, query, fixed = TRUE)
+  urls <- query_wikidata(pl_query)
+  print(urls)
+
+  # add to table
+  players[row, col_names] <- urls[1, col_names]
+}
+write.csv(players, file.path(out.folder, "all_pro_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+
+# TODO: make queries individual to completely automate them?
