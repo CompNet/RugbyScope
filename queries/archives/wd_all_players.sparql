@@ -1,4 +1,20 @@
-SELECT DISTINCT ?player ?playerLabel
+# This query retrieves all the rugby players in Wikidata.
+# 
+# Note that it fails when ran from R (HTTP error 500), but 
+# runs OK on Wikidata QPARQL Web interface:
+# https://query.wikidata.org/
+# 
+# It does not always work on the first attemptn though: 
+# it sometimes times out (possibly depending on server load).
+# 
+# In order to keep a fully automated process, we switched to
+# individual queries, repeatedly ran by the R source code. 
+# 
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+SELECT DISTINCT ?playerId ?playerLabel
   (GROUP_CONCAT(DISTINCT ?firstnameLabel; SEPARATOR="; ") as ?firstnameLabels)
   (GROUP_CONCAT(DISTINCT ?lastnameLabel; SEPARATOR="; ") as ?lastnameLabels)
   ?sexLabel 
@@ -18,13 +34,18 @@ SELECT DISTINCT ?player ?playerLabel
   (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR="; ") as ?GoogleKnowlIDs)
   (GROUP_CONCAT(DISTINCT ?ItsRugbyID; SEPARATOR="; ") as ?ItsRugbyIDs)
   (GROUP_CONCAT(DISTINCT ?RugbyDatabaseID; SEPARATOR="; ") as ?RugbyDatabaseIDs)
+  ?articleEn ?articleFr ?articleEs ?articleJa
+
 WHERE
 { #BIND(wd:Q3470454 AS ?player)
-  
+
+
+  ############# 1st version of the constraints: focus on clubs
 #   ?player wdt:P106 wd:Q14089670;                   # P106=occupation, Q14089670=Rugby Union player
 #           wdt:P54/wdt:P31 wd:Q43009164.	           # P54=member of sport team, P31=instance of, Q43009164=Rugby Union club
 # #           wdt:P54 wd:Q599903.	                   # alt: P54=member of sports team, Q599903=Ireland national rugby union team
   
+  ############# 2nd version of the constraints: include teams more generally
 #   ?player wdt:P106 wd:Q14089670;                   # P106=occupation, Q14089670=Rugby Union player
 #           wdt:P54/wdt:P31/wdt:P279* wd:Q14645593.  # P54=member of sport team, P31=instance of, P279=subclass of, Q43009164=Rugby union team
 #   ?player wdt:P54/wdt:P31 ?clubType.                                          # P31=instance of
@@ -37,7 +58,7 @@ WHERE
 #                       wd:Q58840819                                  # Q58840819=national rugby union team
 #                     ))
   
-  
+  ############# 3rd version of the contraints: try to make the query faster
   # get the rugby teams (more general category)
   {    
     ?club wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
@@ -57,7 +78,7 @@ WHERE
 #                     wd:Q113144812,                                # Q113144812=women's rugby union club
                       wd:Q58840819                                  # Q58840819=national rugby union team
                     ))
-  
+  # additional constraints: not used for the moment
 #   # the club must have an affiliation
 #   ?club wdt:P1416 ?affiliation.                                     # P1416=affiliation
 #   ?affiliation wdt:P641 ?affSport.                                  # P641=sport
@@ -67,11 +88,16 @@ WHERE
 #   ?competition wdt:P641 ?competSport.                               # P641=sport
 #   FILTER(!BOUND(?competSport) || ?competSport = wd:Q5849)           # Q5849=Rugby Union (keep sport-less and rugby affiliations)
   
-  ?player wdt:P106 wd:Q14089670;                                     # P106=occupation, Q14089670=Rugby Union player
-          wdt:P54 ?club.                                             # P54=member of sport team
-    
+  # get the players
+  ?player wdt:P106 wd:Q14089670;                                      # P106=occupation, Q14089670=Rugby Union player
+          wdt:P21 wd:Q6581097;                                        # P21=sex or gender, Q6581097=male
+          wdt:P54 ?club.                                              # P54=member of sport team
   
+
+  ############# retrieve individual information
   
+  # keep only the Wikidata ID (not the whole URL)
+  BIND(STRAFTER(STR(?player), STR(wd:)) AS ?playerId).
   
   # name / sex
   OPTIONAL{?player wdt:P735 ?firstname.}                        # P735=given name
@@ -105,7 +131,31 @@ WHERE
   OPTIONAL{?player wdt:P2671 ?GoogleKnowlID.}                   # P2671=Google Knowledge Graph ID
   OPTIONAL{?player wdt:P3769 ?ItsRugbyID.}                      # P3769=It's Rugby player ID
   OPTIONAL{?player wdt:P12335 ?RugbyDatabaseID.}                # P12335=Rugby Database player ID
+
   
+  ############# retrieve wikipedia article
+  # English Wipedia article
+  ?articleEn schema:about ?player;
+           schema:inLanguage "en";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+  
+  # French Wipedia article
+  ?articleFr schema:about ?player;
+           schema:inLanguage "fr";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+  
+  # Spanish Wipedia article
+  ?articleEs schema:about ?player;
+           schema:inLanguage "es";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+  
+  # Japanese Wipedia article
+  ?articleJa schema:about ?player;
+           schema:inLanguage "ja";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+  
+  
+  ############# retrieve textual labels
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". 
                            ?player rdfs:label ?playerLabel.
                            ?firstname rdfs:label ?firstnameLabel.
@@ -118,5 +168,5 @@ WHERE
                            ?position rdfs:label ?positionLabel.
                          } # just to get the label right
 }
-GROUP BY ?player ?playerLabel ?sexLabel ?dobFormat ?dodFormat
-ORDER BY ?player 
+GROUP BY ?playerId ?playerLabel ?sexLabel ?dobFormat ?dodFormat ?articleEn ?articleFr ?articleEs ?articleJa
+ORDER BY ?playerId 

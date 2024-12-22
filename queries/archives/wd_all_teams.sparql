@@ -1,3 +1,20 @@
+# This query retrieves all the rugby union teams described
+# on Wikidata.
+# 
+# Note that it fails when ran from R (HTTP error 500), but 
+# runs OK on Wikidata QPARQL Web interface:
+# https://query.wikidata.org/
+# 
+# It does not always work on the first attemptn though: 
+# it sometimes times out (possibly depending on server load).
+# 
+# In order to keep a fully automated process, we switched to
+# individual queries, repeatedly ran by the R source code. 
+# 
+# Vincent Labatut
+# 12/2024
+########################################################################
+
 SELECT DISTINCT ?clubId ?clubLabel
   ?clubTypeLabel
   ?inception ?termination
@@ -10,9 +27,12 @@ SELECT DISTINCT ?clubId ?clubLabel
   (GROUP_CONCAT(DISTINCT ?locationLabel; SEPARATOR="; ") as ?locationLabels)
   (GROUP_CONCAT(DISTINCT ?AllRugbyID; SEPARATOR="; ") as ?AllRugbyIDs)
   (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR="; ") as ?GoogleKnowlIDs)
+
 WHERE
 { #BIND(wd:Q5478456 AS ?club)
   
+  
+  ############# constraints on the rugby teams
   # get the rugby teams (more general category)
   {    
     ?club wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
@@ -33,6 +53,8 @@ WHERE
                       wd:Q58840819                                  # Q58840819=national rugby union team
                     ))
   
+  
+  ############# retrieve individual information
   # keep only the Wikidata ID (not the whole URL)
   BIND(STRAFTER(STR(?club), STR(wd:)) AS ?clubId).
   
@@ -68,7 +90,9 @@ WHERE
   # external IDs
   OPTIONAL{?club wdt:P10590 ?AllRugbyID.}                           # P10590=All.Rugby club ID
   OPTIONAL{?club wdt:P2671 ?GoogleKnowlID.}                         # P2671=Google Knowledge Graph ID
-
+  
+  
+  ############# retrieve textual labels
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
                            ?club rdfs:label ?clubLabel.
                            ?clubType rdfs:label ?clubTypeLabel.

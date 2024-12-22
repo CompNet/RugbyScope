@@ -1,0 +1,92 @@
+# This query retrieves the information describing a specific rugby 
+# union teams described on Wikidata.
+# 
+# It is designed to be called from R, after replacing "QQQQQQ" by the
+# team's proper Wikidata ID.
+#
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+SELECT DISTINCT ?clubId ?clubLabel
+  ?clubTypeLabel
+  (MAX(?inception) AS ?inceptionMax) (CONCAT(STR(YEAR(?inceptionMax)),"-",STR(MONTH(?inceptionMax)),"-",STR(DAY(?inceptionMax))) AS ?inceptionFormat)
+  (MAX(?termination) AS ?terminationMax) (CONCAT(STR(YEAR(?terminationMax)),"-",STR(MONTH(?terminationMax)),"-",STR(DAY(?terminationMax))) AS ?terminationFormat)
+  (GROUP_CONCAT(DISTINCT ?nicknameLabel; SEPARATOR="; ") as ?nickmaneLabels)
+  (GROUP_CONCAT(DISTINCT ?affiliationLabel; SEPARATOR="; ") as ?affiliationLabels)
+  (GROUP_CONCAT(DISTINCT ?countryLabel; SEPARATOR="; ") as ?countryLabels)
+  (GROUP_CONCAT(DISTINCT ?competitionLabel; SEPARATOR="; ") as ?competitionLabels)
+  (GROUP_CONCAT(DISTINCT ?homeVenueLabel; SEPARATOR="; ") as ?homeVenueLabels)
+  (GROUP_CONCAT(DISTINCT ?homeVenueCapacity; SEPARATOR="; ") as ?homeVenueCapacities)
+  (GROUP_CONCAT(DISTINCT ?locationLabel; SEPARATOR="; ") as ?locationLabels)
+  (GROUP_CONCAT(DISTINCT ?AllRugbyID; SEPARATOR="; ") as ?AllRugbyIDs)
+  (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR="; ") as ?GoogleKnowlIDs)
+
+WHERE
+{ 
+  # set the player variable
+  BIND(wd:QQQQQQ AS ?club).
+
+  # keep only the Wikidata ID (not the whole URL)
+  BIND(STRAFTER(STR(?club), STR(wd:)) AS ?clubId).
+
+
+  ############# retrieve individual information
+  # club type
+  ?club wdt:P31 ?clubType.                                              # P31=instance of
+  FILTER(?clubType IN(
+                      wd:Q14645593,                                     # Q14645593=Rugby Union team
+                      wd:Q43009164,                                     # Q43009164=Rugby Union club
+                      wd:Q63171169,                                     # Q63171169=rugby union franchise
+                      wd:Q63171186,                                     # Q63171186=defunct rugby union club
+#                     wd:Q113144812,                                    # Q113144812=women's rugby union club
+                      wd:Q58840819                                      # Q58840819=national rugby union team
+                    ))
+  
+  # dates
+  OPTIONAL{?club wdt:P571 ?inception.}                                  # P571=inception
+  OPTIONAL{?club wdt:P576 ?termination.}                                # P576=dissolved, abolished or demolished date
+  
+  # names
+  OPTIONAL{?club wdt:P1448 ?name.}                                      # P1448=official name
+  OPTIONAL{?club wdt:P1449 ?nickname.}                                  # P1449=nickname
+  
+  # affiliations / country
+  OPTIONAL{?club wdt:P1416 ?affiliation.                                # P1416=affiliation
+           # for multisport clubs (several affiliation: keep only rugby)
+           ?affiliation wdt:P641 ?affSport.                             # P641=sport
+           FILTER(!BOUND(?affSport) || ?affSport = wd:Q5849)            # Q5849=Rugby Union (keep sport-less and rugby affiliations)
+          }
+  OPTIONAL{?club wdt:P17 ?country.}                                     # P17=country
+  OPTIONAL{?club wdt:P118 ?competition.                                 # P118=league or competition
+           # for multisport clubs (several competitions: keep only rugby)
+           ?competition wdt:P641 ?competSport.                          # P641=sport
+           FILTER(!BOUND(?competSport) || ?competSport = wd:Q5849)      # Q5849=Rugby Union (keep sport-less and rugby affiliations)
+          }
+  
+  # location & home venue
+  OPTIONAL{?club p:P115 ?statement.                                     # P115=home venue
+           ?statement ps:P115 ?homeVenue.                               # ps:=object of the relation, pq:=qualifier of the relation
+           OPTIONAL{?statement pq:P1083 ?capacity.}                     # P1083=maximum capacity
+           BIND(COALESCE(?capacity, "NA") As ?homeVenueCapacity)        # forces NA as the default value if no capacity specified
+         }
+  OPTIONAL{?club wdt:P159 ?location.}                                   # P159=headquarters location
+  
+  # external IDs
+  OPTIONAL{?club wdt:P10590 ?AllRugbyID.}                               # P10590=All.Rugby club ID
+  OPTIONAL{?club wdt:P2671 ?GoogleKnowlID.}                             # P2671=Google Knowledge Graph ID
+  
+  
+  ############# retrieve textual labels
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
+                           ?club rdfs:label ?clubLabel.
+                           ?clubType rdfs:label ?clubTypeLabel.
+                           ?nickname rdfs:label ?nicknameLabel.
+                           ?affiliation rdfs:label ?affiliationLabel.
+                           ?country rdfs:label ?countryLabel.
+                           ?competition rdfs:label ?competitionLabel.
+                           ?homeVenue rdfs:label ?homeVenueLabel.
+                           ?location rdfs:label ?locationLabel.
+                         } # just to get the label right
+}
+GROUP BY ?clubId ?clubLabel ?clubTypeLabel ?inceptionFormat ?terminationFormat

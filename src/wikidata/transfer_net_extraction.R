@@ -4,14 +4,13 @@
 # 12/2024
 ########################################################################
 library("igraph")
-library("dplyr")
 
 
 
 
 ########################################################################
 # paths
-out.folder <- file.path("out","wikidata")
+out.folder <- file.path("out", "wikidata")
 
 
 
@@ -69,64 +68,69 @@ cat("Number of clubs remaining:", nrow(clubs), "\n")
 # clean career data
 
 # filer out career steps without a start date
-# TODO
+idx <- which(is.na(careers$startYear))
+filt_careers <- careers[-idx, ]
+cat("Removed", length(idx), "steps without start date\n")
 
+cat("Number of steps remaining:", nrow(filt_careers), "\n")
 
 
 
 ########################################################################
 # extract club network
 
-# init
-idx <- which(is.na(careers$startYear))
-el <- NA
-filt_careers <- careers[-idx,]
-current_player <- filt_careers[1, "player"]
-last_club <- filt_careers[1, "clubLabel"]
+# init edgelist table
+el <- matrix(NA, nrow = 1, ncol = 2)
+colnames(el) <- c("From", "To")
+el <- el[-1, , drop = FALSE]
+weights <- c()
+
+# init last step variables
+last_player <- filt_careers[1, "playerId"]
+last_club <- filt_careers[1, "clubId"]
+last_end <- filt_careers[1, "endYear"]
 row <- 2
 
 # loop over each career step
 while(row <= nrow(filt_careers)) {
   cat("Processing career step ", row, "/", nrow(filt_careers), "\n", sep="")
-  cat(filt_careers$player[row], ", ", filt_careers$clubLabel[row], "\n", sep="")
+  player_id <- filt_careers[row, "playerId"]
+  club_id <- filt_careers[row, "clubId"]
+  start_year <- filt_careers[row, "startYear"]
+  end_year <- filt_careers[row, "endYear"]
+  cat(player_id, ", ", club_id, "\n", sep="")
 
   # next step of the previous player
-  if (filt_careers$player[row] == current_player) {
-    new_club <- filt_careers$clubLabel[row]
-    if (last_club != new_club) {
-      if (all(is.na(el))) {
-        el <- matrix(c(last_club, new_club), nrow = 1, ncol = 2)
-        weights <- 1
-        colnames(el) <- c("From", "To")
+  if (player_id == last_player) {
+    # the new club must be different, and there must be no gap between both steps' dates
+    if (last_club != club_id && (is.na(last_end) || start_year == last_end || start_year == (last_end + 1))) {
+      idx <- which(el[, "From"] == last_club & el[, "To"] == club_id)
+      if (length(idx) == 0) {
+        el <- rbind(el, c(last_club, club_id))
+        weights <- c(weights, 1)
       } else {
-        idx <- which(el[,"From"] == last_club & el[,"To"] == new_club)
-        if (length(idx) == 0) {
-          el <- rbind(el, c(last_club, new_club))
-          weights <- c(weights, 1)
-        } else {
-          weights[idx] <- weights[idx] + 1
-        }
+        weights[idx] <- weights[idx] + 1
       }
-      last_club <- new_club
     }
   } else {
     # starting to process a different player
-    current_player <- filt_careers$player[row]
-    last_club <- filt_careers$clubLabel[row]
+    last_player <- player_id
   }
+  last_club <- club_id
+  last_end <- end_year
+
   row <- row + 1
 }
 
 # init graph
-g <- graph_from_edgelist(el, directed=TRUE)
+g <- graph_from_edgelist(el, directed = TRUE)
 E(g)$weight <- weights
+idx <- match(V(g)$name, teams[, "clubId"])
+V(g)$fullname <- teams[idx, "clubLabel"]
 plot(g)
 
 # export as a graphml file
 write.graph(g, file = file.path(out.folder, "all_pro_transfers.graphml"), format = "graphml")
 
 # TODO
-# > keep only rows with a start date
 # > check prev end date and next start date are both present and consecutive
-# > handle clubs vs. national selections / invitation clubs
-

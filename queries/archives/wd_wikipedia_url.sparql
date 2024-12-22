@@ -1,0 +1,36 @@
+# Generic query that returns the Wikipedia URL of the a Wikidata item.
+# 
+# It is designed to be called from R, after replacing "QQQQQQ" by the
+# proper Wikidata ID.
+# 
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+SELECT DISTINCT ?item ?articleEn ?articleFr ?articleEs ?articleJa WHERE {
+  BIND(wd:QQQQQQ AS ?item)
+  
+  # English Wipedia article
+  OPTIONAL{?articleEn schema:about ?item;
+           schema:inLanguage "en";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # French Wipedia article
+  OPTIONAL{?articleFr schema:about ?item;
+           schema:inLanguage "fr";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Spanish Wipedia article
+  OPTIONAL{?articleEs schema:about ?item;
+           schema:inLanguage "es";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Japanese Wipedia article
+  OPTIONAL{?articleJa schema:about ?item;
+           schema:inLanguage "ja";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+}
