@@ -140,7 +140,7 @@ teams <- as.data.frame(matrix(NA, nrow=length(team_ids), ncol=length(col_names))
 colnames(teams) <- col_names
 
 # run query for each team
-for (t in 864:length(team_ids)) {
+for (t in 1:length(team_ids)) {
   # get team ID
   team_id <- team_ids[t]
   cat("++++++++++++ Processing team ", team_id, " (", t, "/", length(team_ids), ")\n", sep="")

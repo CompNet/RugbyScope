@@ -31,12 +31,31 @@ cat("Raw number of career steps:", nrow(careers), "\n")
 
 ########################################################################
 # clean team data
+clubs <- teams
+
+# # debug stuff
+# idx <- which(grepl("^Q\\d+", teams[, "clubLabel"]))
+# paste0("https://www.wikidata.org/wiki/", teams[idx, "clubId"])
+
+# filter out national teams for specific world cups
+idx <- which(grepl("world cup", clubs[, "clubLabel"], fixed = TRUE) | grepl("World Cup", clubs[, "clubLabel"], fixed = TRUE))
+# clubs[idx, "clubLabel"]
+# paste0("https://www.wikidata.org/wiki/", clubs[idx, "clubId"])
+if (length(idx) > 0)
+  clubs <- clubs[-idx, ]
+cat("Removed", length(idx), "national teams tied to specific world cups\n")
 
 # filter out national teams
-idx <- which(teams[, "clubTypeLabel"] == "national rugby union team")
+idx <- which(clubs[, "clubTypeLabel"] == "national rugby union team")
 if (length(idx) > 0)
-  clubs <- teams[-idx, ]
+  clubs <- clubs[-idx, ]
 cat("Removed", length(idx), "national teams\n")
+
+# filter out national youth teams
+idx <- which(grepl("under", clubs[, "clubLabel"], fixed = TRUE) | grepl("Under", clubs[, "clubLabel"], fixed = TRUE))
+if (length(idx) > 0)
+  clubs <- clubs[-idx, ]
+cat("Removed", length(idx), "national youth teams\n")
 
 # filter out invitational teams (Barbarians et al.)
 # note: Brussels Barbarians is a proper club
@@ -53,24 +72,33 @@ if (length(idx) > 0)
   clubs <- clubs[-idx, ]
 cat("Removed", length(idx), "combined teams\n")
 
-# # filter out clubs with no affiliation and competition
-# idx <- which(is.na(clubs[, "affiliationLabel"]) & is.na(clubs[, "competitionLabel"]))
-# if (length(idx) > 0)
-#   clubs <- clubs[-idx, ]
-# cat("Removed", length(idx), "clubs without affiliation and competition\n")
+# filter out clubs with no affiliation and competition
+idx <- which(is.na(clubs[, "affiliationLabel"]) & is.na(clubs[, "competitionLabel"]))
+if (length(idx) > 0)
+  clubs <- clubs[-idx, ]
+cat("Removed", length(idx), "clubs without affiliation and competition\n")
 
 cat("Number of clubs remaining:", nrow(clubs), "\n")
+
+# TODO
+# university clubs ?
 
 
 
 
 ########################################################################
 # clean career data
+filt_careers <- careers
 
-# filer out career steps without a start date
-idx <- which(is.na(careers$startYear))
-filt_careers <- careers[-idx, ]
+# filter out career steps without a start date
+idx <- which(is.na(filt_careers$startYear))
+filt_careers <- filt_careers[-idx, ]
 cat("Removed", length(idx), "steps without start date\n")
+
+# filter out career steps related to clubs (now) absent from the list
+idx <- which(!(filt_careers$clubId %in% clubs$clubId))
+filt_careers <- filt_careers[-idx, ]
+cat("Removed", length(idx), "steps without club (or with filtered out club)\n")
 
 cat("Number of steps remaining:", nrow(filt_careers), "\n")
 
@@ -131,6 +159,3 @@ plot(g)
 
 # export as a graphml file
 write.graph(g, file = file.path(out.folder, "all_pro_transfers.graphml"), format = "graphml")
-
-# TODO
-# > check prev end date and next start date are both present and consecutive
