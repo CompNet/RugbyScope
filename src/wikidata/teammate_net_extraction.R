@@ -1,6 +1,8 @@
-# Extracts the club network based on the data retrieved from Wikidata.
-# Vertices represent clubs and directed edges represent player transfers
-# between them. Edge weights correspond to the number of transfers.
+# Extracts the teammate network based on the data retrieved from Wikidata.
+# Each vertex represents a player, and vertices are connected when the
+# corresponding players have played together for the same club. The edges
+# are undirected, and their weight correspond to the number of seasons
+# (possible incomplete seasons) spent together in the same club.
 #
 # Vincent Labatut
 # 12/2024
@@ -118,6 +120,8 @@ last_player <- filt_careers[1, "playerId"]
 last_club <- filt_careers[1, "clubId"]
 last_end <- filt_careers[1, "endYear"]
 row <- 2
+
+##### TODO #####
 
 # loop over each career step
 while(row <= nrow(filt_careers)) {

@@ -95,7 +95,7 @@ cat("Top of the table:\n");
 print.data.frame(players[1:10, ])
 
 # export table as a CSV
-write.csv(x = players, file = file.path(out.folder, "all_pro_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = players, file = file.path(out.folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -166,7 +166,7 @@ cat("Top of the table:\n")
 print.data.frame(teams[1:10, ])
 
 # export table as a CSV
-write.csv(x = teams, file = file.path(out.folder, "all_pro_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = teams, file = file.path(out.folder, "all_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -226,4 +226,4 @@ club_names <- teams[idx, "clubLabel"]
 careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "clubId"], clubLabel = club_names, careers[,3:ncol(careers)])
 
 # export table as a CSV
-write.csv(x = careers, file = file.path(out.folder, "all_pro_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = careers, file = file.path(out.folder, "all_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")
