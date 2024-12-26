@@ -1,8 +1,8 @@
 # Extracts the teammate network based on the data retrieved from Wikidata.
 # Each vertex represents a player, and vertices are connected when the
-# corresponding players have played together for the same club. The edges
+# corresponding players have played together in the same club. The edges
 # are undirected, and their weight correspond to the number of seasons
-# (possible incomplete seasons) spent together in the same club.
+# (possibly *incomplete* seasons) spent together in the same club.
 #
 # Vincent Labatut
 # 12/2024
@@ -20,89 +20,8 @@ out.folder <- file.path("out", "wikidata")
 
 
 ########################################################################
-# load data tables
-teams <- read.csv(file.path(out.folder, "all_teams_descr.csv"))
-cat("Raw number of teams:", nrow(teams), "\n")
-
-players <- read.csv(file.path(out.folder, "all_players_descr.csv"))
-cat("Raw number of players:", nrow(players), "\n")
-
-careers <- read.csv(file.path(out.folder, "all_players_careers.csv"))
-cat("Raw number of career steps:", nrow(careers), "\n")
-
-
-
-
-########################################################################
-# clean team data
-clubs <- teams
-
-# # debug stuff
-# idx <- which(grepl("^Q\\d+", teams[, "clubLabel"]))
-# paste0("https://www.wikidata.org/wiki/", teams[idx, "clubId"])
-
-# filter out national teams for specific world cups
-idx <- which(grepl("world cup", clubs[, "clubLabel"], fixed = TRUE) | grepl("World Cup", clubs[, "clubLabel"], fixed = TRUE))
-# clubs[idx, "clubLabel"]
-# paste0("https://www.wikidata.org/wiki/", clubs[idx, "clubId"])
-if (length(idx) > 0)
-  clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "national teams tied to specific world cups\n")
-
-# filter out national teams
-idx <- which(clubs[, "clubTypeLabel"] == "national rugby union team")
-if (length(idx) > 0)
-  clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "national teams\n")
-
-# filter out national youth teams
-idx <- which(grepl("under", clubs[, "clubLabel"], fixed = TRUE) | grepl("Under", clubs[, "clubLabel"], fixed = TRUE))
-if (length(idx) > 0)
-  clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "national youth teams\n")
-
-# filter out invitational teams (Barbarians et al.)
-# note: Brussels Barbarians is a proper club
-invitational_teams <- c("Q807749", "Q28223950", "Q2004853", "Q7015235", "Q7565434", "Q3071726", "Q65068423", "Q7435412", "Q1490464")
-idx <- which(clubs[, "clubId"] %in% invitational_teams)
-if (length(idx) > 0)
-  clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "invitational teams\n")
-
-# filter out combined teams (British & Irish Lions et al.)
-combined_teams <- c("Q3651754", "Q624092", "Q733600", "Q5327644", "Q3606252", "Q247246", "Q3976615", "Q121190772")
-idx <- which(clubs[, "clubId"] %in% combined_teams)
-if (length(idx) > 0)
-  clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "combined teams\n")
-
-# filter out clubs with no affiliation and no competition
-# this is a attempt to retain only pro clubs
-idx <- which(is.na(clubs[, "affiliationLabels"]) & is.na(clubs[, "competitionLabels"]))
-if (length(idx) > 0)
-  clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "clubs without affiliation and without competition\n")
-
-cat("Number of clubs remaining:", nrow(clubs), "\n")
-
-
-
-
-########################################################################
-# clean career data
-filt_careers <- careers
-
-# filter out career steps without a start date
-idx <- which(is.na(filt_careers$startYear))
-filt_careers <- filt_careers[-idx, ]
-cat("Removed", length(idx), "steps without start date\n")
-
-# filter out career steps related to clubs (now) absent from the list
-idx <- which(!(filt_careers$clubId %in% clubs$clubId))
-filt_careers <- filt_careers[-idx, ]
-cat("Removed", length(idx), "steps without club (or with filtered out club)\n")
-
-cat("Number of steps remaining:", nrow(filt_careers), "\n")
+# load and clean data tables
+source("src/wikidata/clean_tables.R")
 
 
 
@@ -110,61 +29,79 @@ cat("Number of steps remaining:", nrow(filt_careers), "\n")
 # extract club network
 
 # init edgelist table
-el <- matrix(NA, nrow = 1, ncol = 2)
-colnames(el) <- c("From", "To")
-el <- el[-1, , drop = FALSE]
-weights <- c()
+adj_mat <- matrix(0, nrow = nrow(players), ncol = nrow(players))
+colnames(adj_mat) <- rownames(adj_matrix) <- players[, "playerId"]
 
-# init last step variables
-last_player <- filt_careers[1, "playerId"]
-last_club <- filt_careers[1, "clubId"]
-last_end <- filt_careers[1, "endYear"]
-row <- 2
+# loop over the first players
+for(p1 in 1:(nrow(players) - 1)) {
+  p1_id <- players[p1, "playerId"]
+  cat("Processing player #1 ", p1_id, " ", p1, "/", (nrow(players) - 1), " (", players[p1, "playerLabel"], ")", "\n", sep = "")
+  
+  # only process those with enough information
+  idx1 <- which(filt_careers[, "playerId"] == p1_id)
+  if (length(idx1) > 0) {
+    w_club <- idx1[!is.na(filt_careers[idx1, "clubId"])]
+    if (length(w_club) > 0) {
+      
+      # loop over the second player
+      for(p2 in (p1 + 1):nrow(players)) {
+        p2_id <- players[p2, "playerId"]
+        cat("..Processing player #2 ", p2_id, " ", p2, "/", nrow(players), " (", players[p2, "playerLabel"], ")", "\n", sep = "")
 
-##### TODO #####
-
-# loop over each career step
-while(row <= nrow(filt_careers)) {
-  cat("Processing career step ", row, "/", nrow(filt_careers), "\n", sep="")
-  player_id <- filt_careers[row, "playerId"]
-  club_id <- filt_careers[row, "clubId"]
-  start_year <- filt_careers[row, "startYear"]
-  end_year <- filt_careers[row, "endYear"]
-  cat(player_id, ", ", club_id, "\n", sep="")
-
-  # next step of the previous player
-  if (player_id == last_player) {
-    # the new club must be different, and there must be no gap between both steps' dates
-    if (last_club != club_id && (is.na(last_end) || start_year == last_end || start_year == (last_end + 1))) {
-      idx <- which(el[, "From"] == last_club & el[, "To"] == club_id)
-      if (length(idx) == 0) {
-        el <- rbind(el, c(last_club, club_id))
-        weights <- c(weights, 1)
-      } else {
-        weights[idx] <- weights[idx] + 1
+        # only process those with enough information
+        idx2 <- which(filt_careers[, "playerId"] == p2_id)
+        if (length(idx2) > 0) {
+          w_club <- idx2[!is.na(filt_careers[idx2, "clubId"])]
+          if (length(w_club) > 0) {
+            
+            # compare the career steps
+            inter_clubs <- intersect(filt_careers[idx1, "clubId"], filt_careers[idx2, "clubId"])
+            for (inter_club in inter_clubs) {
+              cat("....Processing common club ",inter_club, " (", clubs[which(clubs[, "clubId"] == inter_club), "clubLabel"], ")\n", sep = "")
+              
+              i1 <- which(filt_careers[idx1, "clubId"] == inter_club)
+              i2 <- which(filt_careers[idx2, "clubId"] == inter_club)
+              start1 <- filt_careers[idx1[i1], "startYear"]
+              end1 <- filt_careers[idx1[i1], "endYear"]
+              start2 <- filt_careers[idx2[i2], "startYear"]
+              end2 <- filt_careers[idx2[i2], "endYear"]
+              overlap <- min(end1, end2) - max(start1, start2) + 1
+              cat("......Temporal overlap: [", start1, ";", end1, "] vs. [", start2, ";", end2, "] >> ", overlap, " years\n", sep = "")
+              if (overlap > 0) {
+                adj_mat[p1, p2] <- adj_mat[p1, p2] + overlap
+                adj_mat[p2, p1] <- adj_mat[p2, p1] + overlap
+              }
+            }
+          }
+        }
       }
     }
-  } else {
-    # starting to process a different player
-    last_player <- player_id
   }
-  last_club <- club_id
-  last_end <- end_year
-
-  row <- row + 1
 }
 
 # init graph
-g <- graph_from_edgelist(el, directed = TRUE)
-E(g)$weight <- weights
-idx <- match(V(g)$name, teams[, "clubId"])
-V(g)$fullname <- teams[idx, "clubLabel"]
-plot(g)
+g <- graph_from_adjacency_matrix(adjmatrix = adj_mat, mode = "undirected", weighted = TRUE, diag = FALSE)
+cat("Number of vertices: ", gorder(g), "\n", sep = "")
+cat("Number of edges: ", gsize(g), "\n", sep = "")
 
-# add main team information
-idx <- match(V(g)$name, teams[, "clubId"])
-V(g)$country <- teams[idx, "countryLabels"]
-V(g)$competition <- teams[idx, "competitionLabels"]
+# add names
+idx <- match(V(g)$name, players[, "playerId"])
+V(g)$fullname <- players[idx, "playerLabel"]
+# plot(g)
+
+# add main player information
+V(g)$country <- players[idx, "countryLabels"]
+V(g)$composition <- players[idx, "positionLabels"]
+V(g)$mass <- players[idx, "masses"]
+V(g)$height <- players[idx, "heights"]
+
+# remove isolates
+deg <- degree(graph = g, mode = "all")
+idx <- which(deg == 0)
+g <- delete_vertices(graph = g, v = idx)
+cat("Removed ", length(idx), " isolates\n", sep = "")
 
 # export as a graphml file
-write.graph(g, file = file.path(out.folder, "pro_transfers.graphml"), format = "graphml")
+cat("Number of vertices remaining: ", gorder(g), "\n", sep = "")
+cat("Number of edges remaining: ", gsize(g), "\n", sep = "")
+write.graph(g, file = file.path(out.folder, "all_teammates.graphml"), format = "graphml")

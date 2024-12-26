@@ -8,7 +8,9 @@
   * remove university clubs (cf Japan)
     'university' could be used to select them, 
     but some clubs use this word without being tied to a uni anymore (ex. Lyon)  
+  * check script to extract teammate network
 
 * stats
-  * active players stats with filtering process
-  * active players by country
+  * active players stats with *filtering* process
+  * fix country colors (ireland=green, france=blue, etc.)
+
