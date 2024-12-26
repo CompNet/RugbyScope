@@ -32,8 +32,11 @@ WHERE
 
   # get the players
   ?player wdt:P106 wd:Q14089670;                                    # P106=occupation, Q14089670=Rugby Union player
-          wdt:P21 wd:Q6581097;                                      # P21=sex or gender, Q6581097=male
           wdt:P54 ?club.                                            # P54=member of sport team
+  # filter by sex only if indicated
+  OPTIONAL{?player wdt:P21 ?sex.                                    # P21=sex or gender
+           FILTER(!BOUND(?sex) || ?sex = wd:Q5849)                  # Q6581097=male
+          }
   
   # keep only the Wikidata ID (not the whole URL)
   BIND(STRAFTER(STR(?player), STR(wd:)) AS ?playerId).
