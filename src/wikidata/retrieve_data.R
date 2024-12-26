@@ -1,4 +1,5 @@
-# Script designed to extract raw data from Wikidata.
+# Script designed to extract raw data from Wikidata, and record
+# them as tables.
 #
 # We had to break down the queries in small bits in order
 # for them to run on the Wikidata server.
@@ -8,7 +9,7 @@
 # Note: this script runs correctly as of 22/12/2024, but that
 # may not be true in the future, depending on the evolution of 
 # Wikidata data. The CSV files produced by this scripts are 
-# available in folder `out/wikidata.`
+# available in folder `out/wikidata/tables.`
 #
 # Vincent Labatut
 # 12/2024
@@ -22,8 +23,8 @@ library("dplyr")
 
 ########################################################################
 # paths
-query.folder <- file.path("queries")
-out.folder <- file.path("out", "wikidata")
+query_folder <- file.path("queries", "wikidata")
+table_folder <- file.path("data", "wikidata", "tables")
 
 
 
@@ -33,7 +34,7 @@ out.folder <- file.path("out", "wikidata")
 cat("Retrieving the list of player IDs from WD\n")
 
 # load query file
-query <- readtext(file.path(query.folder, "wd_players_list.sparql"))$text
+query <- readtext(file.path(query_folder, "players_list.sparql"))$text
 
 # run query and get list of ids
 player_ids <- query_wikidata(query)$playerId
@@ -57,7 +58,7 @@ col_names <- c(
 )
 
 # load query file
-query <- readtext(file.path(query.folder, "wd_players_info.sparql"))$text
+query <- readtext(file.path(query_folder, "players_info.sparql"))$text
 # remove the comments/spaces/newlines, otherwise the query is too long
 query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
 query <- gsub("  +", " ", query)
@@ -95,7 +96,7 @@ cat("Top of the table:\n");
 print.data.frame(players[1:10, ])
 
 # export table as a CSV
-write.csv(x = players, file = file.path(out.folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = players, file = file.path(table_folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -105,7 +106,7 @@ write.csv(x = players, file = file.path(out.folder, "all_players_descr.csv"), ro
 cat("Retrieving the list of team IDs from WD\n")
 
 # load query file
-query <- readtext(file.path(query.folder, "wd_teams_list.sparql"))$text
+query <- readtext(file.path(query_folder, "teams_list.sparql"))$text
 
 # run query and get list of ids
 team_ids <- query_wikidata(query)$clubId
@@ -128,7 +129,7 @@ col_names <- c(
 )
 
 # load query file
-query <- readtext(file.path(query.folder, "wd_teams_info.sparql"))$text
+query <- readtext(file.path(query_folder, "teams_info.sparql"))$text
 # remove the comments/spaces/newlines, otherwise the query is too long
 query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
 query <- gsub("  +", " ", query)
@@ -166,7 +167,7 @@ cat("Top of the table:\n")
 print.data.frame(teams[1:10, ])
 
 # export table as a CSV
-write.csv(x = teams, file = file.path(out.folder, "all_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -182,7 +183,7 @@ col_names <- c(
 )
 
 # load query file
-query <- readtext(file.path(query.folder, "wd_career_steps.sparql"))$text
+query <- readtext(file.path(query_folder, "career_steps.sparql"))$text
 # remove the comments/spaces/newlines, otherwise the query is too long
 query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
 query <- gsub("  +", " ", query)
@@ -226,4 +227,4 @@ club_names <- teams[idx, "clubLabel"]
 careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "clubId"], clubLabel = club_names, careers[,3:ncol(careers)])
 
 # export table as a CSV
-write.csv(x = careers, file = file.path(out.folder, "all_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")

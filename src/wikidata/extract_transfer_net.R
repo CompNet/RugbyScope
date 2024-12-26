@@ -1,4 +1,5 @@
 # Extracts the club network based on the data retrieved from Wikidata.
+#
 # Vertices represent clubs and directed edges represent player transfers
 # between them. Edge weights correspond to the number of transfers.
 #
@@ -12,14 +13,14 @@ library("igraph")
 
 ########################################################################
 # paths
-out.folder <- file.path("out", "wikidata")
+net_folder <- file.path("data", "wikidata", "networks")
 
 
 
 
 ########################################################################
 # load and clean data tables
-source("src/wikidata/clean_tables.R")
+source("src/wikidata/load_tables.R")
 
 
 
@@ -83,5 +84,9 @@ idx <- match(V(g)$name, teams[, "clubId"])
 V(g)$country <- teams[idx, "countryLabels"]
 V(g)$competition <- teams[idx, "competitionLabels"]
 
+# print some stats
+print(sort(table(V(g)$country)))
+print(sort(table(V(g)$competition)))
+
 # export as a graphml file
-write.graph(g, file = file.path(out.folder, "pro_transfers.graphml"), format = "graphml")
+write.graph(g, file = file.path(net_folder, "all_transfers.graphml"), format = "graphml")

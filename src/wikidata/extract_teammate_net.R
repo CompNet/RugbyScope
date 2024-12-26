@@ -1,4 +1,5 @@
 # Extracts the teammate network based on the data retrieved from Wikidata.
+#
 # Each vertex represents a player, and vertices are connected when the
 # corresponding players have played together in the same club. The edges
 # are undirected, and their weight correspond to the number of seasons
@@ -6,22 +7,26 @@
 #
 # Vincent Labatut
 # 12/2024
+#
+# setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope/RugbyScope")
 ########################################################################
 library("igraph")
+
+source("src/wikidata/clean_tables.R")
 
 
 
 
 ########################################################################
 # paths
-out.folder <- file.path("out", "wikidata")
+net_folder <- file.path("data", "wikidata", "networks")
 
 
 
 
 ########################################################################
 # load and clean data tables
-source("src/wikidata/clean_tables.R")
+source("src/wikidata/load_tables.R")
 
 
 
@@ -30,7 +35,7 @@ source("src/wikidata/clean_tables.R")
 
 # init edgelist table
 adj_mat <- matrix(0, nrow = nrow(players), ncol = nrow(players))
-colnames(adj_mat) <- rownames(adj_matrix) <- players[, "playerId"]
+colnames(adj_mat) <- rownames(adj_mat) <- players[, "playerId"]
 
 # loop over the first players
 for(p1 in 1:(nrow(players) - 1)) {
@@ -46,7 +51,7 @@ for(p1 in 1:(nrow(players) - 1)) {
       # loop over the second player
       for(p2 in (p1 + 1):nrow(players)) {
         p2_id <- players[p2, "playerId"]
-        cat("..Processing player #2 ", p2_id, " ", p2, "/", nrow(players), " (", players[p2, "playerLabel"], ")", "\n", sep = "")
+        # cat("..Processing player #2 ", p2_id, " ", p2, "/", nrow(players), " (", players[p2, "playerLabel"], ")", "\n", sep = "")
 
         # only process those with enough information
         idx2 <- which(filt_careers[, "playerId"] == p2_id)
@@ -57,7 +62,7 @@ for(p1 in 1:(nrow(players) - 1)) {
             # compare the career steps
             inter_clubs <- intersect(filt_careers[idx1, "clubId"], filt_careers[idx2, "clubId"])
             for (inter_club in inter_clubs) {
-              cat("....Processing common club ",inter_club, " (", clubs[which(clubs[, "clubId"] == inter_club), "clubLabel"], ")\n", sep = "")
+              # cat("....Processing common club ",inter_club, " (", clubs[which(clubs[, "clubId"] == inter_club), "clubLabel"], ")\n", sep = "")
               
               i1 <- which(filt_careers[idx1, "clubId"] == inter_club)
               i2 <- which(filt_careers[idx2, "clubId"] == inter_club)
@@ -66,7 +71,7 @@ for(p1 in 1:(nrow(players) - 1)) {
               start2 <- filt_careers[idx2[i2], "startYear"]
               end2 <- filt_careers[idx2[i2], "endYear"]
               overlap <- min(end1, end2) - max(start1, start2) + 1
-              cat("......Temporal overlap: [", start1, ";", end1, "] vs. [", start2, ";", end2, "] >> ", overlap, " years\n", sep = "")
+              # cat("......Temporal overlap: [", start1, ";", end1, "] vs. [", start2, ";", end2, "] >> ", overlap, " years\n", sep = "")
               if (overlap > 0) {
                 adj_mat[p1, p2] <- adj_mat[p1, p2] + overlap
                 adj_mat[p2, p1] <- adj_mat[p2, p1] + overlap
@@ -90,7 +95,8 @@ V(g)$fullname <- players[idx, "playerLabel"]
 # plot(g)
 
 # add main player information
-V(g)$country <- players[idx, "countryLabels"]
+all_countries <- get_clean_countries(players)
+V(g)$country <- all_countries[idx]
 V(g)$composition <- players[idx, "positionLabels"]
 V(g)$mass <- players[idx, "masses"]
 V(g)$height <- players[idx, "heights"]
@@ -99,9 +105,9 @@ V(g)$height <- players[idx, "heights"]
 deg <- degree(graph = g, mode = "all")
 idx <- which(deg == 0)
 g <- delete_vertices(graph = g, v = idx)
-cat("Removed ", length(idx), " isolates\n", sep = "")
+cat("Removed ", length(idx), " isolates out of ", nrow(players), " vertices\n", sep = "")
 
 # export as a graphml file
 cat("Number of vertices remaining: ", gorder(g), "\n", sep = "")
 cat("Number of edges remaining: ", gsize(g), "\n", sep = "")
-write.graph(g, file = file.path(out.folder, "all_teammates.graphml"), format = "graphml")
+write.graph(g, file = file.path(net_folder, "all_teammates.graphml"), format = "graphml")
