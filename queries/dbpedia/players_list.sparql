@@ -1,0 +1,59 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbop: <http://dbpedia.org/ontology/Person/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT 
+  ?player
+  ?fullName
+  (GROUP_CONCAT(DISTINCT ?firstName; SEPARATOR="; ") as ?firstNames)
+  (GROUP_CONCAT(DISTINCT ?givenName; SEPARATOR="; ") as ?givenNames)
+  (GROUP_CONCAT(DISTINCT ?lastName; SEPARATOR="; ") as ?lastNames)
+  (GROUP_CONCAT(DISTINCT ?birthName; SEPARATOR="; ") as ?birthNames)
+  ?birthDate 
+  (GROUP_CONCAT(DISTINCT ?birthPlace; SEPARATOR="; ") as ?birthPlaces)
+  ?deathDate 
+  (GROUP_CONCAT(DISTINCT ?deathPlace; SEPARATOR="; ") as ?deathPlaces)
+  ?weightA ?heightA ?weightB ?heightB
+  ?position
+  ?wikidataId
+#SELECT (COUNT(*) AS ?count)
+WHERE {
+  # get the players
+  ?player rdf:type dbo:RugbyPlayer.
+  
+  # get names
+  OPTIONAL { ?player foaf:name ?fullName.}
+  OPTIONAL { ?player dbp:firstName ?firstName. }
+  OPTIONAL { ?player dbp:givenName ?givenName. }
+  OPTIONAL { ?player dbp:surname ?lastName. }
+  OPTIONAL { ?player dbp:givenName ?givenName. }
+  OPTIONAL { ?player dbp:birthName ?birthName. }
+  
+  # get birth/death info
+  OPTIONAL { ?player dbp:birthDate ?birthDate. }
+  OPTIONAL { ?player dbp:birthPlace ?birthPlace. }
+  OPTIONAL { ?player dbp:deathDate ?deathDate. }
+  OPTIONAL { ?player dbp:deathPlace ?deathPlace. }
+  
+  # physical features
+  OPTIONAL { ?player dbp:weight ?weightA. }
+  OPTIONAL { ?player dbp:height ?heightA. }
+  OPTIONAL { ?player dbop:weight ?weightB. }
+  OPTIONAL { ?player dbop:height ?heightB. }
+  
+  # position
+  OPTIONAL { ?player dbp:ruPosition ?position. }
+  
+  # get Wikidata id
+  OPTIONAL{ ?player owl:sameAs ?wikidataId
+                     FILTER(!BOUND(?wikidataId) || regex(str(?wikidataId), "www.wikidata.org"))
+                    }
+  
+  # filter by sex only if indicated
+  OPTIONAL{ ?player dbo:gender ?sex.
+                     FILTER(!BOUND(?sex) || ?sex = dbr:Male)
+                   }
+}
