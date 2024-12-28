@@ -114,4 +114,5 @@ WHERE
                            ?position rdfs:label ?positionLabel.
                          } # just to get the label right
 }
+
 GROUP BY ?playerId ?playerLabel ?sexLabel ?dobFormat ?dodFormat ?articleEn ?articleFr ?articleEs ?articleJa

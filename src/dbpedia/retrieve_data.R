@@ -71,23 +71,34 @@ query_dbpedia <- function(query, file) {
 
 ########################################################################
 # extraction of player table
-cat("Retrieving the list of players\n")
+cat("Retrieving the list of players from DBpedia\n")
 
 # load query file
 query <- readtext(file.path(query_folder, "players_list.sparql"))$text
 
-# run query and get the players
+# run query and get the players (must use a paginated access due to 10000 hit DBpedia limit)
 tab_file <- file.path(table_folder, "all_players_descr.csv")
-players <- query_dbpedia(query, file = tab_file)
-
-# display a few details for verification
+go_on <- TRUE
+page_nbr <- 1
+pg_limit <- 10000
+players <- NA
+while (go_on) {
+  cat("Processing page ", page_nbr, "\n", sep = "")
+  offset <- (page_nbr - 1) * pg_limit
+  pg_query <- gsub("xxxxxx", offset, query, fixed = TRUE)
+  page <- query_dbpedia(pg_query, file = tab_file)
+  if (page_nbr == 1)
+    players <- page
+  else
+    players <- rbind(players, page)
+  go_on <- nrow(page) == pg_limit
+  page_nbr <- page_nbr + 1
+}
 cat("Dimension of the players table:", paste(dim(players), collapse = ", "), "\n")
-cat("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "), "\n")
-cat("Top of the table:\n");
-print.data.frame(players[1:10, ])
 
 # normalize certain columns
 # TODO
+# - SIZE PB: 10 000 LIMITATION
 # - merge "firstNames","givenNames","lastNames"
 # - merge "fullName", "birthNames"? or keep both?
 # - check dates are complete (no year alone)
@@ -97,7 +108,12 @@ print.data.frame(players[1:10, ])
 # - normalize position
 # - remove http from WD id
 # - check if WD id always filled
-# - filter out rugby league players (see names, WD)
+
+# display a few details for verification
+cat("Dimension of the players table:", paste(dim(players), collapse = ", "), "\n")
+cat("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "), "\n")
+cat("Top of the table:\n")
+print.data.frame(players[1:10, ])
 
 # export table as a CSV
 write.csv(x = players, file = file.path(table_folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
@@ -107,62 +123,26 @@ write.csv(x = players, file = file.path(table_folder, "all_players_descr.csv"), 
 
 ########################################################################
 # extraction of team list
-cat("Retrieving the list of team IDs from WD\n")
+cat("Retrieving the list of teams from DBpedia\n")
 
 # load query file
 query <- readtext(file.path(query_folder, "teams_list.sparql"))$text
 
-# run query and get list of ids
-team_ids <- query_wikidata(query)$clubId
-cat("Number of teams IDs retrieved:", length(team_ids), "\n")
+# run query and get the players
+tab_file <- file.path(table_folder, "all_teams_descr.csv")
+teams <- query_dbpedia(query, file = tab_file)
+cat("Dimension of the teams table:", paste(dim(teams), collapse = ", "), "\n")
 
+# normalize certain columns
+# TODO
+# - merge names: "teamLabel", "teamNames", "teamNames2", "fullNames"
+# - remove http from WD id
+# - check if WD id always filled
 
-
-
-########################################################################
-# extraction of team information
-cat("Retrieving the individual information of each team (may take a while)\n")
-col_names <- c(
-  "clubId", "clubLabel", "clubTypeLabel",
-  "inceptionMax", "inceptionFormat",
-  "terminationMax", "terminationFormat",
-  "nickmaneLabels", "affiliationLabels",
-  "countryLabels", "competitionLabels",
-  "homeVenueLabels", "homeVenueCapacities", "locationLabels",
-  "AllRugbyIDs", "GoogleKnowlIDs"
-)
-
-# load query file
-query <- readtext(file.path(query_folder, "teams_info.sparql"))$text
-# remove the comments/spaces/newlines, otherwise the query is too long
-query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
-query <- gsub("  +", " ", query)
-query <- gsub("[\r\n]+", "\n", query)
-query <- gsub(" *[\r\n] *", "\n", query)
-
-# init teams table
-teams <- as.data.frame(matrix(NA, nrow=length(team_ids), ncol=length(col_names)))
-colnames(teams) <- col_names
-
-# run query for each team
-for (t in 1:length(team_ids)) {
-  # get team ID
-  team_id <- team_ids[t]
-  cat("++++++++++++ Processing team ", team_id, " (", t, "/", length(team_ids), ")\n", sep="")
-
-  # run query
-  tm_query <- gsub("QQQQQQ", team_id, query, fixed = TRUE)
-  row <- query_wikidata(tm_query)
-  print.data.frame(row)
-  if(nrow(row) > 1)
-    stop(paste0("ERROR: several rows returned for one team (some field probably contains multiple values). Team ID= "), player_id)
-
-  # add to table
-  teams[t, col_names] <- row[1, col_names]
-}
-
-# replacing empty strings by NAs
-teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
+idx <- which(grepl("season", teams[, "team"], fixed = TRUE) | grepl("Season", teams[, "team"], fixed = TRUE))
+cat("Removing ", length(idx), " women teams from the table\n")
+teams <- teams[-idx, ]
+# >> do that in the query!
 
 # display a few details for verification
 cat("Dimension of the teams table:", paste(dim(teams), collapse = ", "), "\n")

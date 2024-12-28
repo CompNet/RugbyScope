@@ -67,4 +67,5 @@ WHERE
 #  ############# retrieve textual labels
 #  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". } # just to get the label right
 }
+
 ORDER BY ?startYear

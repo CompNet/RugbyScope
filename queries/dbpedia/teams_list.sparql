@@ -1,0 +1,51 @@
+# This query retrieves the list and information of all the rugby union 
+# teams described on DBpedia.
+#
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?team ?teamLabel 
+(GROUP_CONCAT(DISTINCT ?teamName; SEPARATOR="; ") as ?teamNames)
+(GROUP_CONCAT(DISTINCT ?teamName2; SEPARATOR="; ") as ?teamNames2)
+(GROUP_CONCAT(DISTINCT ?fullName; SEPARATOR="; ") as ?fullNames)
+(GROUP_CONCAT(DISTINCT ?nickName; SEPARATOR="; ") as ?nickNames)
+?wikidataId
+
+WHERE {
+#  VALUES ?types { dbo:SportsTeam dbo:SportsClub dbo:RugbyClub } # filtering based on these more general entities returns any type of club
+  VALUES ?types { dbo:RugbyClub }
+  ?team rdf:type ?types ;
+        rdfs:label ?teamLabel.
+  
+  # filter by sport (only if specified)
+  OPTIONAL{ ?team dbo:sport ?discipline.
+            FILTER(!BOUND(?discipline) || ?discipline = dbr:Rugby_union)
+          }
+  # also use the team name
+  FILTER( !REGEX(STR(?teamLabel), "(([aA]ustralian [rR]ules)|[bB]asketball)|([cC]ricket)|([hH]ockey)|([rR]ugby [lL]eague)|([sS]evens)|([tT]ennis)" ))
+
+  # filter out women's teams
+  FILTER( !REGEX(STR(?teamLabel), "([wW]om[ae]n)|([Ll]ad(y|ies))" ))
+
+  # filter out entities related to specific seasons
+  FILTER( !REGEX(STR(?teamLabel), " ([sS]eason)|([cC]hampionship)" ))
+
+  # different types of names
+  FILTER(lang(?teamLabel) = "en")
+  OPTIONAL { ?team dbo:teamName ?teamName.}
+  OPTIONAL { ?team dbo:teamname ?teamName2.}
+  OPTIONAL { ?team dbp:fullname ?fullName.}
+  OPTIONAL { ?team dbp:nickname ?nickName.}
+  
+  # get Wikidata id
+  OPTIONAL{ ?team owl:sameAs ?wikidataId
+            FILTER(!BOUND(?wikidataId) || regex(str(?wikidataId), "www.wikidata.org"))
+          }
+}
+
+ORDER BY ?team 

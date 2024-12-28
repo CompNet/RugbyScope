@@ -89,4 +89,5 @@ WHERE
                            ?location rdfs:label ?locationLabel.
                          } # just to get the label right
 }
+
 GROUP BY ?clubId ?clubLabel ?clubTypeLabel ?inceptionFormat ?terminationFormat

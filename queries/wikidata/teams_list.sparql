@@ -34,4 +34,5 @@ WHERE
   BIND(STRAFTER(STR(?club), STR(wd:)) AS ?clubId).
   
 }
+
 ORDER BY ?clubId

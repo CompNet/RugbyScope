@@ -1,4 +1,4 @@
-# This query retrieves the list all the rugby union players described 
+# This query retrieves the list of all the rugby union players described 
 # on Wikidata.
 # 
 # Vincent Labatut
@@ -42,4 +42,5 @@ WHERE
   BIND(STRAFTER(STR(?player), STR(wd:)) AS ?playerId).
 
 }
+
 ORDER BY ?playerId

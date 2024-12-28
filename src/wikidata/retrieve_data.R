@@ -92,7 +92,7 @@ players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # display a few details for verification
 cat("Dimension of the players table:", paste(dim(players), collapse = ", "), "\n")
 cat("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "), "\n")
-cat("Top of the table:\n");
+cat("Top of the table:\n")
 print.data.frame(players[1:10, ])
 
 # export table as a CSV
@@ -216,7 +216,7 @@ careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 # display a few details for verification
 cat("Dimension of the careers table:", paste(dim(careers), collapse = ", "), "\n")
 cat("Classes of the columns: ", paste(apply(careers, 2, class), collapse = ", "), "\n")
-cat("Top of the table:\n");
+cat("Top of the table:\n")
 print.data.frame(careers[1:10, ])
 
 # add player and team names
