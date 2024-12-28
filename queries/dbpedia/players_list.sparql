@@ -37,8 +37,8 @@ WHERE {
 
   # filter out rugby league players (based on WP page URL)
   FILTER( !REGEX(STR(?player), "[rR]ugby[ _][lL]eague" ))
-  # filter out other outliers
-  FILTER( !REGEX(STR(?player), "(Justice_of_the)|(Keeper_of_)|(Rugby_World_Cup)|(Tennis_Channel)|(dog-free_zone)|(3M_computer)|(5_lever_lock)|(President_)|(Postmaster-General)|(Positional_advantage)|(Post-structural)|(Port_Mayaca)|(Presidential_Assistant)|(Presiding_bishop)|(Primacy_of_Simon_Peter)|(Prime_Minister)|(Private_trustee)|(Procurator_)|(Production_)|(_position)|(Protovestiarios)|(Provincial_)|(Provost_of_)|(Psychologism)|(_minister)|(Government)" ))
+  # filter out other outliers (takes too much time)
+  #FILTER( !REGEX(STR(?player), "(Justice_of_the)|(Keeper_of_)|(Rugby_World_Cup)|(Tennis_Channel)|(dog-free_zone)|(3M_computer)|(5_lever_lock)|(President_)|(Postmaster-General)|(Positional_advantage)|(Post-structural)|(Port_Mayaca)|(Presidential_Assistant)|(Presiding_bishop)|(Primacy_of_Simon_Peter)|(Prime_Minister)|(Private_trustee)|(Procurator_)|(Production_)|(_position)|(Protovestiarios)|(Provincial_)|(Provost_of_)|(Psychologism)|(_minister)|(Government)" ))
   
   # get names
   OPTIONAL { ?player foaf:name ?fullName.}

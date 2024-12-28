@@ -53,8 +53,8 @@ col_names <- c(
   "citizenshipLabels", "sportCountryLabels", 
   "positionLabels", "careerStartYears", "careerEndYears", 
   "masses", "heights", 
-  "ESPNscrumIDs", "AllRugbyIDs", "GoogleKnowlIDs", "ItsRugbyIDs", "RugbyDatabaseIDs",
-  "articleEn", "articleFr", "articleEs", "articleJa"
+  "ESPNscrumIDs", "AllRugbyIDs", "GoogleKnowlIDs", "ItsRugbyIDs", "RugbyDatabaseIDs"
+  # "articleEn", "articleFr", "articleEs", "articleJa"
 )
 
 # load query file

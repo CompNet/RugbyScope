@@ -27,7 +27,7 @@ WHERE {
             FILTER(!BOUND(?discipline) || ?discipline = dbr:Rugby_union)
           }
   # also use the team name
-  FILTER( !REGEX(STR(?teamLabel), "(([aA]ustralian [rR]ules)|[bB]asketball)|([cC]ricket)|([hH]ockey)|([rR]ugby [lL]eague)|([sS]evens)|([tT]ennis)" ))
+  FILTER( !REGEX(STR(?teamLabel), "(([aA]ustralian [rR]ules)|[bB]asketball)|([cC]ricket)|([hH]ockey)|([rR]ugby [lL]eague)|([sS]evens)|([tT]ennis)|([vV]olleyball)|(XIII)" ))
 
   # filter out women's teams
   FILTER( !REGEX(STR(?teamLabel), "([wW]om[ae]n)|([Ll]ad(y|ies))" ))

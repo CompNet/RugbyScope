@@ -96,24 +96,259 @@ while (go_on) {
 }
 cat("Dimension of the players table:", paste(dim(players), collapse = ", "), "\n")
 
-# normalize certain columns
-# TODO
-# - SIZE PB: 10 000 LIMITATION
-# - merge "firstNames","givenNames","lastNames"
-# - merge "fullName", "birthNames"? or keep both?
-# - check dates are complete (no year alone)
-# - remove html part of place names
-# - remove units in weights/heights
-# - merge "weightA","heightA","weightB","heightB"
-# - normalize position
-# - remove http from WD id
-# - check if WD id always filled
+# remove manually detected outliers
+patterns <- c("Justice_of_the", "Keeper_of_", "Rugby_World_Cup", "Tennis_Channel",
+  "dog-free_zone", "3M_computer", "5_lever_lock", "President_", "Postmaster-General",
+  "Positional_advantage", "Post-structural", "Port_Mayaca", "Presidential_Assistant",
+  "Presiding_bishop", "Primacy_of_Simon_Peter", "Prime_Minister", "Private_trustee",
+  "Procurator_", "Production_", "_position", "Protovestiarios", "Provincial_",
+  "Provost_of_", "Psychologism", "_minister", "Government", "1°_West", "A-A_line",
+  "Conservator_of", "_governor", "Acton's_Lock", "Actualism", "_manager", "_supremacy",
+  "/Arkansas", "Assistant_", "Attorney_", "Attitude_", "/Australian", "Rugby_Association",
+  "Secretary", "Chairman_", "Chair_of_", "Chadron_State_Eagles", "/Chief_",
+  "China's_", "Acronical_place", "Alaska_Anchorage_Seawolves", "Inspector",
+  "Intendant", "InterLock", "Interchange", "Winona_State_Warriors", "TSIG"
+)
+for (pattern in patterns) {
+  idx <- which(grepl(pattern, players[, "player"], fixed = TRUE))
+  if (length(idx) > 0) {
+    players <- players[-idx, ]
+    cat("Removed ", length(idx), " items based on pattern \"", pattern, "\"\n", sep = "")
+  } else {
+    cat("Did not find pattern \"", pattern, "\"\n", sep = "")
+  }
+}
+
+# remove empty columns (last time I checked: "firstNames", "givenNames", "lastNames")
+idx <- which(sapply(1:ncol(players), function(col) all(is.na(players[, col]))))
+if (length(idx) > 0)
+  players <- players[, -idx]
+cat("Removed ", length(idx), " empty columns\n", sep = "")
+
+# merge fullname-related fields
+for (p in 1:nrow(players)) {
+  if (is.na(players[p, "fullNames"])) {
+    players[p, "fullNames"] <- players[p, "birthNames"]
+  } else {
+    if (!is.na(players[p, "birthNames"])) {
+      names1 <- strsplit(players[p, "fullNames"], "; ")[[1]]
+      names2 <- strsplit(players[p, "birthNames"], "; ")[[1]]
+      names <- union(names1, names2)
+      players[p, "fullNames"] <- paste(names, collapse = "; ")
+    }
+  }
+}
+players <- players[, -which(colnames(players) == "birthNames")]
+cat("Merged birthNames into fullNames\n", sep = "")
+
+# remove DBpedia URL part from place names
+players[, "birthPlaces"] <- gsub("http://dbpedia.org/resource/", "", players[, "birthPlaces"], fixed = TRUE)
+players[, "birthPlaces"] <- gsub("_", " ", players[, "birthPlaces"], fixed = TRUE)
+players[, "deathPlaces"] <- gsub("http://dbpedia.org/resource/", "", players[, "deathPlaces"], fixed = TRUE)
+players[, "deathPlaces"] <- gsub("_", " ", players[, "deathPlaces"], fixed = TRUE)
+
+# remove Wikidata URL part from WD ids
+players[, "wikidataId"] <- gsub("http://www.wikidata.org/entity/", "", players[, "wikidataId"], fixed = TRUE)
+
+# normalize rugby positions
+players[, "positions"] <- gsub("http://dbpedia.org/resource/", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("_(rugby_union)", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("_(sports)", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("_", " ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("; Rugby union positions", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("Rugby union positions;", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("Rugby union/", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" .", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("  /  ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" / ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("/", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" and ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" or ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(", ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("[", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("]", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" -", "-", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("- ", "-", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("^-", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub("^:", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub("^;", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub("^2;", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub(";+", ";", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub(" ; ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("(rugby union)", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- trimws(players[, "positions"])
+players[which(players[, "positions"] %in% c("unknown", "tbc", "m", "-", "--", "?", "1")), "positions"] <- NA
+# debug
+# sort(unique(players[, "positions"]))
+
+# clean birth dates
+for (colname in c("birthDates", "deathDates")) {
+  cat(">>>> Processing field ", colname, "\n", sep = "")
+  players[, colname] <- gsub("^;", "", players[, colname], fixed = FALSE)
+  players[, colname] <- trimws(players[, colname])
+
+  # replace certain problematic strings (identical patterns)
+  patterns <- c()
+  patterns["August"] <- ""
+  patterns["Feb 1880"] <- "01/02/1880"
+  patterns["http://dbpedia.org/resource/Argentina; http://dbpedia.org/resource/Buenos_Aires"] <- ""
+  patterns["p"] <- ""
+  patterns["January→March 1950"] <- "01/01/1950"
+  patterns["July→September 1860"] <- "01/07/1860"
+  patterns["July→September 1862"] <- "01/07/1862"
+  patterns["July→September 1960"] <- "01/07/1960"
+  patterns["June"] <- ""
+  patterns["June→September 1858"] <- "01/06/1858"
+  patterns["May"] <- ""
+  patterns["November"] <- ""
+  patterns["September"] <- ""
+  patterns["October→December 1861"] <- "01/10/1861"
+  patterns["October→December 1893"] <- "01/10/1893"
+  for (p in 1:length(patterns)) {
+    idx <- which(players[, colname] == names(patterns)[p])
+    if (length(idx) > 0) {
+      players[idx, colname] <- patterns[p]
+      cat("Fixed ", length(idx), " dates based on pattern \"", names(patterns)[p], "\"\n", sep = "")
+    } else {
+      cat("Did not find pattern \"", names(patterns)[p], "\"\n", sep = "")
+    }
+  }
+  # remove "circa" and variants at the beginning of dates
+  patterns <- c("circa-", "circa", "c. ", "c.", "ca. ", "c",
+    "unknown", "Unknown", "date of birth unknown", "Date of birth unknown", "date unknown",
+    "Daniel Maiava", "Sauniatu, Samoa", ", Beckenham", "?", "≥",
+    "Auckland, New Zealand", "pre ", "Tauranga, New Zealand",
+    "early", "Q1 ", "first ¼ ", "first ¼", "first", "registered first ¼",
+    "second quarter of ", "second quarter ", "second ¼ ", "second ¼", "second",
+    "Register Q3 ", "third quarter", "third ¼ ", "Third ¼ ", "third ¼", "Reg Q3, ",
+    "fourth ¼ ", "fourth ¼", "fourth  ¼ "
+  )
+  for (pattern in patterns) {
+    idx <- which(startsWith(players[, colname], pattern))
+    if (length(idx) > 0) {
+      players[idx, colname] <- substr(players[idx, colname], start = nchar(pattern) + 1, stop = nchar(players[idx, colname]))
+      cat("Fixed ", length(idx), " dates based on pattern \"", pattern, "\"\n", sep = "")
+    } else {
+      cat("Did not find pattern \"", pattern, "\"\n", sep = "")
+    }
+  }
+  #
+  # replace string months by int
+  patterns <- c("January ", "February ", "March ", "April ", "May ", "June ", "July ", "August ", "September ", "October ", "Novembre ", "December ")
+  for (pattern in patterns) {
+    idx <- which(startsWith(players[, colname], pattern))
+    if (length(idx) > 0) {
+      players[idx, colname] <- substr(players[idx, colname], start = nchar(pattern) + 1, stop = nchar(players[idx, colname]))
+      players[idx, colname] <- paste(sprintf("01/%02d", which(patterns == pattern)), "/", players[idx, colname], sep = "")
+      cat("Fixed ", length(idx), " dates based on pattern \"", pattern, "\"\n", sep = "")
+    } else {
+      cat("Did not find pattern \"", pattern, "\"\n", sep = "")
+    }
+  }
+  #
+  # remove incorrect year values
+  years <- as.integer(players[, colname])
+  idx <- which(!is.na(years) & years < 1800)
+  players[idx, colname] <- NA
+  cat("Removed ", length(idx), " incorrect year values\n", sep = "")
+  #
+  # complement incomplete dates
+  years <- as.integer(players[, colname])
+  idx <- which(!is.na(years))
+  players[idx, colname] <- paste("01/01/", trimws(players[idx, colname]), sep = "")
+  cat("Complemented ", length(idx), " incomplete dates\n", sep = "")
+  #
+  # remove incorrect alternate dates
+  idx <- which(grepl("; ", players[, colname], fixed = TRUE))
+  if (length(idx) > 0) {
+    players[idx, colname] <- substr(players[idx, colname], start = 1, stop = nchar("xxxx-xx-xx"))
+  }
+  cat("Removed ", length(idx), " incorrect alternate dates\n", sep = "")
+  #
+  # remove dates without year
+  idx <- which(startsWith(players[, colname], "--"))
+  if (length(idx) > 0)
+    players <- players[-idx, ]
+  cat("Removed ", length(idx), " dates without a year\n", sep = "")
+}
+# debug
+# idx <- which(nchar(sort(unique(players[, "deathDates"])))!=10)
+# sort(unique(players[, "deathDates"]))[idx]
+
+# normalize/merge weight-related fields
+for (colname in c("weightA", "weightB")) {
+  # remove non-numerical values
+  patterns <- c("Bloody heavy", "Cruiserweight", "Heavyweight",
+    "http://dbpedia.org/resource/Super_welterweight", "or", "to",
+    "ru_position = Flanker, Scrum half", "Unknown", "unknown"
+  )
+  for (pattern in patterns) {
+    idx <- which(players[, colname] == pattern)
+    if (length(idx) > 0)
+      players[idx, colname] <- NA
+  }
+
+  # remove values that are too small
+  weights <- as.numeric(players[, colname])
+  idx <- which(weights < 40)
+  if (length(idx) > 0)
+    players[idx, colname] <- NA
+}
+#
+# weightB seems more reliable than weightA: using it in priority
+idx <- which(!is.na(players[, "weightB"]))
+players[idx, "weightA"] <- players[idx, "weightB"]
+colnames(players)[which(colnames(players) == "weightA")] <- "weights"
+players <- players[, -which(colnames(players) == "weightB")]
+#
+# debug
+# sort(unique(players[, "weightA"]))
+
+# normalize/merge height-related fields
+for (colname in c("heightA", "heightB")) {
+  # remove non-numerical values
+  patterns <- c("Bexley, New South Wales, Australia", "or",
+    ")", ".", "[2]", "0", "1999-12-18"
+  )
+  for (pattern in patterns) {
+    idx <- which(players[, colname] == pattern)
+    if (length(idx) > 0)
+      players[idx, colname] <- NA
+  }
+
+  # remove units
+  players[, colname] <- gsub(" *m *", "", players[, colname], fixed = FALSE)
+
+  # possibly convert meters to centimeters
+  heights <- as.numeric(players[, colname])
+  idx <- which(heights < 2.14)
+  if (length(idx) > 0)
+    players[idx, colname] <- heights[idx] * 100
+
+  # remove values that are too samll or too large
+  heights <- as.numeric(players[, colname])
+  idx <- which(heights < 140 | heights > 214)
+  if (length(idx) > 0)
+    players[idx, colname] <- NA
+}
+#
+# heightB seems more reliable than heightA: using it in priority
+idx <- which(!is.na(players[, "heightB"]))
+players[idx, "heightA"] <- players[idx, "heightB"]
+colnames(players)[which(colnames(players) == "heightA")] <- "heights"
+players <- players[, -which(colnames(players) == "heightB")]
+#
+# debug
+# sort(unique(players[, "heightA"]))
 
 # display a few details for verification
 cat("Dimension of the players table:", paste(dim(players), collapse = ", "), "\n")
 cat("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "), "\n")
 cat("Top of the table:\n")
 print.data.frame(players[1:10, ])
+
+# replacing empty strings by NAs
+players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # export table as a CSV
 write.csv(x = players, file = file.path(table_folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
@@ -128,27 +363,59 @@ cat("Retrieving the list of teams from DBpedia\n")
 # load query file
 query <- readtext(file.path(query_folder, "teams_list.sparql"))$text
 
-# run query and get the players
+# run query and get the teams
 tab_file <- file.path(table_folder, "all_teams_descr.csv")
 teams <- query_dbpedia(query, file = tab_file)
 cat("Dimension of the teams table:", paste(dim(teams), collapse = ", "), "\n")
 
-# normalize certain columns
-# TODO
-# - merge names: "teamLabel", "teamNames", "teamNames2", "fullNames"
-# - remove http from WD id
-# - check if WD id always filled
+# remove manually detected outliers
+patterns <- c("Till_I_Get_My_Way", "Breakin'_Away", "I'm_Born_Again",
+  "It's_My_Life", "Millie_Pulled_a_Pistol_on_Santa", "Mr._Nutz",
+  "See_What_a_Fool_I've_Been"
+)
+for (pattern in patterns) {
+  idx <- which(grepl(pattern, teams[, "team"], fixed = TRUE))
+  if (length(idx) > 0) {
+    teams <- teams[-idx, ]
+    cat("Removed ", length(idx), " items based on pattern \"", pattern, "\"\n", sep = "")
+  } else {
+    cat("Did not find pattern \"", pattern, "\"\n", sep = "")
+  }
+}
 
-idx <- which(grepl("season", teams[, "team"], fixed = TRUE) | grepl("Season", teams[, "team"], fixed = TRUE))
-cat("Removing ", length(idx), " women teams from the table\n")
-teams <- teams[-idx, ]
-# >> do that in the query!
+# remove empty columns (last time I checked: "teamNames2")
+idx <- which(sapply(1:ncol(teams), function(col) all(is.na(teams[, col]))))
+if (length(idx) > 0)
+  teams <- teams[, -idx]
+cat("Removed ", length(idx), " empty columns\n", sep = "")
+
+# merge name-related columns
+for(t in 1:nrow(teams)) {
+  if (is.na(teams[t, "teamNames"])) {
+    teams[t, "teamNames"] <- teams[t, "fullNames"]
+  } else {
+    if (!is.na(teams[t, "fullNames"])) {
+      names1 <- strsplit(teams[p, "teamNames"], "; ")[[1]]
+      names2 <- strsplit(teams[p, "fullNames"], "; ")[[1]]
+      names <- union(names1, names2)
+      teams[p, "teamNames"] <- paste(names, collapse = "; ")
+    }
+  }
+}
+teams <- teams[, -which(colnames(teams) == "fullNames")]
+cat("Merged fullNames into teamNames\n", sep = "")
+
+# remove Wikidata URL part from WD ids
+teams[, "wikidataId"] <- gsub("http://www.wikidata.org/entity/", "", teams[, "wikidataId"], fixed = TRUE)
 
 # display a few details for verification
 cat("Dimension of the teams table:", paste(dim(teams), collapse = ", "), "\n")
 cat("Classes of the columns: ", paste(apply(teams, 2, class), collapse = ", "), "\n")
 cat("Top of the table:\n")
 print.data.frame(teams[1:10, ])
+
+# replacing empty strings by NAs
+teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # export table as a CSV
 write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
@@ -158,6 +425,9 @@ write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.
 
 ########################################################################
 # extraction of player careers
+
+# TODO : find out how to do that on DBP
+
 cat("Retrieving players' careers (may take a while)\n")
 col_names <- c(
   "playerId",

@@ -1,6 +1,4 @@
 * Data retrieval
-  * are there many players with no sex on WD?
-    if it is the case, then keep sexless ones
   * manually check that all teams from main pro leagues are present
     maybe just plot the number of clubs from each country?
 
