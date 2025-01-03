@@ -8,7 +8,7 @@
 # 12/2024
 ########################################################################
 
-SELECT DISTINCT ?playerId ?playerLabel
+SELECT DISTINCT ?playerId #?playerLabel
   (GROUP_CONCAT(DISTINCT ?firstnameLabel; SEPARATOR="; ") as ?firstnameLabels)
   (GROUP_CONCAT(DISTINCT ?lastnameLabel; SEPARATOR="; ") as ?lastnameLabels)
   ?sexLabel 
@@ -28,7 +28,7 @@ SELECT DISTINCT ?playerId ?playerLabel
   (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR="; ") as ?GoogleKnowlIDs)
   (GROUP_CONCAT(DISTINCT ?ItsRugbyID; SEPARATOR="; ") as ?ItsRugbyIDs)
   (GROUP_CONCAT(DISTINCT ?RugbyDatabaseID; SEPARATOR="; ") as ?RugbyDatabaseIDs)
-  ?articleEn ?articleFr ?articleEs ?articleJa
+  ?articleEn #?articleFr ?articleIt ?articleEs ?articleJa
 
 WHERE
 { 
@@ -88,6 +88,12 @@ WHERE
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
+  # Italian Wipedia article
+  OPTIONAL{?articleIt schema:about ?player;
+           schema:inLanguage "it";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
   # Spanish Wipedia article
   OPTIONAL{?articleEs schema:about ?player;
            schema:inLanguage "es";
@@ -115,4 +121,4 @@ WHERE
                          } # just to get the label right
 }
 
-GROUP BY ?playerId ?playerLabel ?sexLabel ?dobFormat ?dodFormat ?articleEn ?articleFr ?articleEs ?articleJa
+GROUP BY ?playerId ?playerLabel ?sexLabel ?dobFormat ?dodFormat ?articleEn ?articleFr ?articleIt ?articleEs ?articleJa

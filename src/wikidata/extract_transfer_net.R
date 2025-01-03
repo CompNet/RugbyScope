@@ -79,14 +79,29 @@ idx <- match(V(g)$name, teams[, "clubId"])
 V(g)$fullname <- teams[idx, "clubLabel"]
 plot(g)
 
+
+
+
+########################################################################
+# insert individual information
+cat("Insert individual information\n")
+
 # add main team information
 idx <- match(V(g)$name, teams[, "clubId"])
 V(g)$country <- teams[idx, "countryLabels"]
 V(g)$competition <- teams[idx, "competitionLabels"]
+
+
+
+
+########################################################################
+# finalize the network
 
 # print some stats
 print(sort(table(V(g)$country)))
 print(sort(table(V(g)$competition)))
 
 # export as a graphml file
-write.graph(g, file = file.path(net_folder, "all_transfers.graphml"), format = "graphml")
+net_file <- file.path(net_folder, "all_transfers.graphml")
+cat("Recording graph in '", net_file, "'\n")
+write.graph(g, file = net_file, format = "graphml")

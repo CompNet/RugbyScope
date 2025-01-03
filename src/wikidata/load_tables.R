@@ -59,7 +59,7 @@ cat("Removed", length(idx), "national youth teams\n")
 
 # filter out invitational teams (Barbarians et al.)
 # note: Brussels Barbarians is a proper club
-invitational_teams <- c("Q807749", "Q28223950", "Q2004853", "Q7015235", "Q7565434", "Q3071726", "Q65068423", "Q7435412", "Q1490464")
+invitational_teams <- c("Q807749", "Q28223950", "Q2004853", "Q7015235", "Q7565434", "Q3071726", "Q65068423", "Q7435412", "Q1490464", "Q11298953")
 idx <- which(clubs[, "clubId"] %in% invitational_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
@@ -71,6 +71,20 @@ idx <- which(clubs[, "clubId"] %in% combined_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
 cat("Removed", length(idx), "combined teams\n")
+
+# filter out regional selections (NZ south island, etc.)
+regional_teams <- c("Q104649868", "Q16237227", "Q7057169", "Q85815139")
+idx <- which(clubs[, "clubId"] %in% regional_teams)
+if (length(idx) > 0)
+  clubs <- clubs[-idx, ]
+cat("Removed", length(idx), "regional teams\n")
+
+# filter out armed force teams (Royal Air Force Rugby Union, etc.)
+army_teams <- c("Q105561254", "Q7374556")
+idx <- which(clubs[, "clubId"] %in% army_teams)
+if (length(idx) > 0)
+  clubs <- clubs[-idx, ]
+cat("Removed", length(idx), "regional teams\n")
 
 # filter out clubs with no affiliation and no competition
 # this is an attempt to retain only pro clubs

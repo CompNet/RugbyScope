@@ -390,7 +390,7 @@ if (length(idx) > 0)
 cat("Removed ", length(idx), " empty columns\n", sep = "")
 
 # merge name-related columns
-for(t in 1:nrow(teams)) {
+for (t in 1:nrow(teams)) {
   if (is.na(teams[t, "teamNames"])) {
     teams[t, "teamNames"] <- teams[t, "fullNames"]
   } else {
@@ -426,59 +426,5 @@ write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.
 ########################################################################
 # extraction of player careers
 
-# TODO : find out how to do that on DBP
-
-cat("Retrieving players' careers (may take a while)\n")
-col_names <- c(
-  "playerId",
-  "clubId",
-  "startYear", "endYear",
-  "played", "points"
-)
-
-# load query file
-query <- readtext(file.path(query_folder, "career_steps.sparql"))$text
-# remove the comments/spaces/newlines, otherwise the query is too long
-query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
-query <- gsub("  +", " ", query)
-query <- gsub("[\r\n]+", "\n", query)
-query <- gsub(" *[\r\n] *", "\n", query)
-
-# init careers table
-careers <- as.data.frame(matrix(NA, nrow = 1, ncol=length(col_names)))
-colnames(careers) <- col_names
-careers <- careers[-1, , drop = FALSE]
-
-# run query for each player
-for (p in 1:length(player_ids)) {
-  # get player ID
-  player_id <- player_ids[p]
-  cat("++++++++++++ Processing player ", player_id, " (", p, "/", length(player_ids), ")\n", sep="")
-
-  # run query
-  cr_query <- gsub("QQQQQQ", player_id, query, fixed = TRUE)
-  row <- query_wikidata(cr_query)
-  print.data.frame(row)
-
-  # add to table
-  careers <- rbind(careers, row[, col_names])
-}
-
-# replacing empty strings by NAs
-careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
-
-# display a few details for verification
-cat("Dimension of the careers table:", paste(dim(careers), collapse = ", "), "\n")
-cat("Classes of the columns: ", paste(apply(careers, 2, class), collapse = ", "), "\n")
-cat("Top of the table:\n");
-print.data.frame(careers[1:10, ])
-
-# add player and team names
-idx <- match(unlist(careers[, "playerId"]), players[, "playerId"])
-plyr_names <- players[idx, "playerLabel"]
-idx <- match(unlist(careers[, "clubId"]), teams[, "clubId"])
-club_names <- teams[idx, "clubLabel"]
-careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "clubId"], clubLabel = club_names, careers[,3:ncol(careers)])
-
-# export table as a CSV
-write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+# this requires field "careerStation", but apparentiyl it is not filled for rugby players
+# (I've seen it filled for football players, though)

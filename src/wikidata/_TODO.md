@@ -2,7 +2,7 @@
   * manually check that all teams from main pro leagues are present
     maybe just plot the number of clubs from each country?
 
-* network extraction
+* Network extraction
   * improve removal of amateur clubs
     currently removing clubs without an affiliation and a competition
     but that is probably too strict (ex. it removes many English clubs)
@@ -10,6 +10,46 @@
     'university' could be used to select them, 
     but some clubs use this word without being tied to a uni anymore (ex. Lyon)  
 
-* stats
+* Stats
   * active players stats with *filtering* process
   * fix country colors (ireland=green, france=blue, etc.)
+  * histo number of team by country, distinguishing WD/non-WD
+
+
+x. complement wikidata to include more rugby clubs
+x. list clubs in all major countries
+3. check they are correctly referenced in WD
+4. re-retrieve club info
+5. same for players, then careeers
+6. compare/match DBP and WD
+
+
+* notes
+  - if we just focus on pro clubs, the careers will be very incomplete, the sequences very short (not useful)
+    > must try to include amateur/university clubs too
+  - must be able to assess the completeness of the data
+    > list all clubs (at least in tier 1 countries)
+  - Wikidata = manual vs. DBpedia = auto extraction of info box
+    src: https://stackoverflow.com/questions/33862336/how-to-extract-information-from-a-wikipedia-infobox
+  - DBpedia data:
+    - seems possible to get the players' career, but this requires "careerStation" to be filled on DBP
+      https://dbpedia.org/page/Alexandre_Lacazette
+      it is the case for footballers, but apparently not for rugby players
+      see on https://dbpedia.org/sparql :
+PREFIX dbpedia: <http://dbpedia.org/resource/>
+SELECT 
+  ?playerName ?station
+WHERE
+{ ?player rdf:type dbo:RugbyPlayer.
+#{ BIND(dbpedia:Antoine_Dupont AS ?player).
+#{ BIND(dbpedia:Alexandre_Lacazette AS ?player).
+  ?player rdfs:label ?playerName;
+              dbo:careerStation ?station.
+}
+ORDER BY ?playerName
+  - retrieve infobox data  
+    - Python lib to extract infobox data (seems old): https://github.com/siznax/wptools
+    - New WP API "enterprise": 
+      - https://enterprise.wikimedia.com/blog/structured-contents-wikipedia-infobox/ 
+      - https://enterprise.wikimedia.com/docs/on-demand/#article-structured-contents-beta
+    - There's also a way using Panda: https://gist.github.com/aculich/b34868c098d94d614515
