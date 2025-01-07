@@ -8,20 +8,14 @@
     but that is probably too strict (ex. it removes many English clubs)
   * remove university clubs (cf Japan)
     'university' could be used to select them, 
-    but some clubs use this word without being tied to a uni anymore (ex. Lyon)  
+    but some clubs use this word without being tied to a uni anymore (ex. Lyon)
+    Also, some country use university clubs as amateur clubs (JP, ZA)
 
 * Stats
   * active players stats with *filtering* process
   * fix country colors (ireland=green, france=blue, etc.)
-  * histo number of team by country, distinguishing WD/non-WD
+  * histo number of teams by country, distinguishing WD/non-WD
 
-
-x. complement wikidata to include more rugby clubs
-x. list clubs in all major countries
-3. check they are correctly referenced in WD
-4. re-retrieve club info
-5. same for players, then careeers
-6. compare/match DBP and WD
 
 
 * notes
@@ -47,6 +41,8 @@ WHERE
               dbo:careerStation ?station.
 }
 ORDER BY ?playerName
+    - other DBpedia problem: the live version does not seem to work anymore
+    > is the DB even updated nowadays?
   - retrieve infobox data  
     - Python lib to extract infobox data (seems old): https://github.com/siznax/wptools
     - New WP API "enterprise": 
