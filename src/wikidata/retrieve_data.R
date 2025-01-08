@@ -65,6 +65,10 @@ colnames(players) <- col_names
 
 # load query file
 query <- readtext(file.path(query_folder, "players_info.sparql"))$text
+######
+#     NOTE: if the query times out, it is possible to run it in two steps,
+#           using files "players_info1.sparql" and "players_info2.sparql"
+######
 # remove the comments/spaces/newlines, otherwise the query is too long
 query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
 query <- gsub("  +", " ", query)
@@ -86,10 +90,10 @@ for (p in 1:length(player_ids)) {
     stop(paste0("ERROR: several rows returned for one player (some field probably contains multiple values). Player ID= "), player_id)
 
   # add to table
-  idx <- which(players[, "playerId"] == row[1, "playerId"])
+  idx <- which(players[, "playerId"] == player_id)
   if (length(idx) == 0)
     idx <- p
-  cols <- intersect(colnames(row), col_names)
+  cols <- setdiff(intersect(colnames(row), col_names), "playerId")
   players[idx, cols] <- row[1, cols]
 }
 tlog.end.loop(0, "Player loop completed")
@@ -150,10 +154,10 @@ query <- gsub(" *[\r\n] *", "\n", query)
 
 # run query for each team
 tlog.start.loop(0, length(team_ids), "Looping over teams")
-for (t in 1:length(team_ids)) {
+for (t in which(is.na(teams[,"clubLabel"]))) {
   # get team ID
   team_id <- team_ids[t]
-  tlog.loop(2, p, "++++++++++++ Processing team ", team_id, " (", t, "/", length(team_ids), ")")
+  tlog.loop(2, t, "++++++++++++ Processing team ", team_id, " (", t, "/", length(team_ids), ")")
 
   # run query
   tm_query <- gsub("QQQQQQ", team_id, query, fixed = TRUE)
@@ -163,7 +167,12 @@ for (t in 1:length(team_ids)) {
     stop(paste0("ERROR: several rows returned for one team (some field probably contains multiple values). Team ID= "), player_id)
 
   # add to table
-  teams[t, col_names] <- row[1, col_names]
+  idx <- which(teams[, "clubId"] == team_id)
+  if (length(idx) == 0)
+    idx <- t
+  cols <- setdiff(intersect(colnames(row), col_names), "clubId")
+  teams[idx, cols] <- row[1, cols]
+  teams[idx, "clubId"] <- team_id
 }
 tlog.end.loop(0, "Team loop completed")
 
@@ -206,7 +215,7 @@ query <- gsub("[\r\n]+", "\n", query)
 query <- gsub(" *[\r\n] *", "\n", query)
 
 # run query for each player
-tlog.start.loop(0, length(player_ids), "Looping over players")
+tlog.start.loop(0, length(player_ids), "Looping over player careers")
 for (p in 1:length(player_ids)) {
   # get player ID
   player_id <- player_ids[p]
@@ -220,7 +229,7 @@ for (p in 1:length(player_ids)) {
   # add to table
   careers <- rbind(careers, row[, col_names])
 }
-tlog.end.loop(0, "Player loop completed")
+tlog.end.loop(0, "Career loop completed")
 
 # replacing empty strings by NAs
 careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))

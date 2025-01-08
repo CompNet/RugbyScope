@@ -1,11 +1,8 @@
-# This query retrieves the information describing a specific rugby 
-# union player described on Wikidata.
+# Sometimes, query `players_info.sparql` times out: it is possible to run
+# the same query in two steps. This query is the first step.
 # 
 # It is designed to be called from R, after replacing "QQQQQQ" by the
 # player's proper Wikidata ID.
-# 
-# If this query times out, it is possible to run it in two steps using
-# queries `players_info1.sparql` and `players_info2.sparql`.
 #
 # Vincent Labatut
 # 12/2024
@@ -31,7 +28,6 @@ SELECT DISTINCT ?playerId ?playerLabel
   (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR="; ") as ?GoogleKnowlIDs)
   (GROUP_CONCAT(DISTINCT ?ItsRugbyID; SEPARATOR="; ") as ?ItsRugbyIDs)
   (GROUP_CONCAT(DISTINCT ?RugbyDatabaseID; SEPARATOR="; ") as ?RugbyDatabaseIDs)
-  ?articleEn ?articleFr ?articleIt ?articleEs ?articleJa
 
 WHERE
 { 
@@ -76,38 +72,6 @@ WHERE
   OPTIONAL{?player wdt:P2671 ?GoogleKnowlID.}                   # P2671=Google Knowledge Graph ID
   OPTIONAL{?player wdt:P3769 ?ItsRugbyID.}                      # P3769=It's Rugby player ID
   OPTIONAL{?player wdt:P12335 ?RugbyDatabaseID.}                # P12335=Rugby Database player ID
-
-  
-  ############# retrieve wikipedia article
-  # English Wipedia article
-  OPTIONAL{?articleEn schema:about ?player;
-           schema:inLanguage "en";
-           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
-          }
-  
-  # French Wipedia article
-  OPTIONAL{?articleFr schema:about ?player;
-           schema:inLanguage "fr";
-           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
-          }
-  
-  # Italian Wipedia article
-  OPTIONAL{?articleIt schema:about ?player;
-           schema:inLanguage "it";
-           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
-          }
-  
-  # Spanish Wipedia article
-  OPTIONAL{?articleEs schema:about ?player;
-           schema:inLanguage "es";
-           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
-          }
-  
-  # Japanese Wipedia article
-  OPTIONAL{?articleJa schema:about ?player;
-           schema:inLanguage "ja";
-           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
-          }
   
   
   ############# retrieve textual labels
@@ -124,4 +88,4 @@ WHERE
                          } # just to get the label right
 }
 
-GROUP BY ?playerId ?playerLabel ?sexLabel ?dobFormat ?dodFormat ?articleEn ?articleFr ?articleIt ?articleEs ?articleJa
+GROUP BY ?playerId ?playerLabel ?sexLabel ?dobFormat ?dodFormat

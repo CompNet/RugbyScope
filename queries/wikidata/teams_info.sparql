@@ -35,12 +35,13 @@ WHERE
   # club type
   ?club wdt:P31 ?clubType.                                              # P31=instance of
   FILTER(?clubType IN(
-                      wd:Q14645593,                                     # Q14645593=Rugby Union team
-                      wd:Q43009164,                                     # Q43009164=Rugby Union club
+                      wd:Q14645593,                                     # Q14645593=rugby union team
+                      wd:Q43009164,                                     # Q43009164=rugby union club
                       wd:Q63171169,                                     # Q63171169=rugby union franchise
                       wd:Q63171186,                                     # Q63171186=defunct rugby union club
 #                     wd:Q113144812,                                    # Q113144812=women's rugby union club
-                      wd:Q58840819                                      # Q58840819=national rugby union team
+                      wd:Q58840819,                                     # Q58840819=national rugby union team
+                      wd:Q104630756                                     # Q104630756=second rugby union team
                     ))
   
   # dates
@@ -55,13 +56,13 @@ WHERE
   OPTIONAL{?club wdt:P1416 ?affiliation.                                # P1416=affiliation
            # for multisport clubs (several affiliation: keep only rugby)
            ?affiliation wdt:P641 ?affSport.                             # P641=sport
-           FILTER(!BOUND(?affSport) || ?affSport = wd:Q5849)            # Q5849=Rugby Union (keep sport-less and rugby affiliations)
+           FILTER(!BOUND(?affSport) || ?affSport = wd:Q5849)            # Q5849=Rugby Union (keep rugby affiliations, but also sport-less ones)
           }
   OPTIONAL{?club wdt:P17 ?country.}                                     # P17=country
   OPTIONAL{?club wdt:P118 ?competition.                                 # P118=league or competition
            # for multisport clubs (several competitions: keep only rugby)
            ?competition wdt:P641 ?competSport.                          # P641=sport
-           FILTER(!BOUND(?competSport) || ?competSport = wd:Q5849)      # Q5849=Rugby Union (keep sport-less and rugby affiliations)
+           FILTER(!BOUND(?competSport) || ?competSport = wd:Q5849)      # Q5849=Rugby Union (keep rugby competitions, but also sport-less ones)
           }
   
   # location & home venue

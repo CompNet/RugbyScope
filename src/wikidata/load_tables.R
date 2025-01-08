@@ -46,20 +46,22 @@ if (length(idx) > 0)
 cat("Removed", length(idx), "national teams tied to specific world cups\n")
 
 # filter out national teams
-idx <- which(clubs[, "clubTypeLabel"] == "national rugby union team")
+nationalA_teams <- c("Q3873496", "Q7961749", "Q18159009", "Q18417085", "Q19578106")
+idx <- which(clubs[, "clubTypeLabel"] %in% c("national rugby union team", "second national rugby union teams") | clubs[, "clubId"] %in% nationalA_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
 cat("Removed", length(idx), "national teams\n")
 
 # filter out national youth teams
-idx <- which(grepl("under", clubs[, "clubLabel"], fixed = TRUE) | grepl("Under", clubs[, "clubLabel"], fixed = TRUE))
+nationalA_youth_teams <- c("Q749756")
+idx <- which(grepl("under", clubs[, "clubLabel"], fixed = TRUE) | grepl("Under", clubs[, "clubLabel"], fixed = TRUE)  | clubs[, "clubId"] %in% nationalA_youth_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
 cat("Removed", length(idx), "national youth teams\n")
 
 # filter out invitational teams (Barbarians et al.)
 # note: Brussels Barbarians is a proper club
-invitational_teams <- c("Q807749", "Q28223950", "Q2004853", "Q7015235", "Q7565434", "Q3071726", "Q65068423", "Q7435412", "Q1490464", "Q11298953")
+invitational_teams <- c("Q807749", "Q28223950", "Q2004853", "Q7015235", "Q7565434", "Q3071726", "Q65068423", "Q7435412", "Q1490464", "Q11298953", "Q2894383")
 idx <- which(clubs[, "clubId"] %in% invitational_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
@@ -73,7 +75,7 @@ if (length(idx) > 0)
 cat("Removed", length(idx), "combined teams\n")
 
 # filter out regional selections (NZ south island, etc.)
-regional_teams <- c("Q104649868", "Q16237227", "Q7057169", "Q85815139")
+regional_teams <- c("Q104649868", "Q16237227", "Q7057169", "Q85815139", "Q7565682", "Q7569050")
 idx <- which(clubs[, "clubId"] %in% regional_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]

@@ -46,6 +46,7 @@ hits <- which(!is.na(teams_dbp[, "wikidataId"]))
 cat("DBP teams with a WD Id: ", length(hits), "/", nrow(teams_dbp), "\n", sep = "")
 idx <- match(teams_dbp[hits, "wikidataId"], teams_wd[, "clubId"])
 cat("DBP teams found in the WD table: ", length(which(!is.na(idx))), "/", length(hits), "\n", sep = "")
+print(teams_dbp[hits[which(is.na(idx))], "wikidataId"])
 
 hits <- which(!is.na(players_dbp[, "wikidataId"]))
 cat("DBP players with a WD Id: ", length(hits), "/", nrow(players_dbp), "\n", sep = "")
