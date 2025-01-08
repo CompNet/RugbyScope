@@ -19,6 +19,9 @@
 
 
 * notes
+  - filtering players depending on whether they played for a club: 
+    many are missed
+    but if their club is not indicated... maybe they are not important enough?
   - if we just focus on pro clubs, the careers will be very incomplete, the sequences very short (not useful)
     > must try to include amateur/university clubs too
   - must be able to assess the completeness of the data
