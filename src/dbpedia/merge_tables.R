@@ -54,7 +54,7 @@ cat("DBP players with a WD Id: ", length(hits), "/", nrow(players_dbp), "\n", se
 idx <- match(players_dbp[hits, "wikidataId"], players_wd[, "playerId"])
 cat("DBP players found in the WD table: ", length(which(!is.na(idx))), "/", length(hits), "\n", sep = "")
 print(players_dbp[hits[is.na(idx)], "wikidataId"])
-# lot of female rugby player, also players not tied to any club
+# lot of female rugby player, rugby leaguer players, and players not tied to any club
 
 # which(players_wd[, "playerId"] == "Q24874273")
 # cbind(players_dbp[hits[!is.na(idx)], "wikidataId"], players_wd[idx[!is.na(idx)], "playerId"])

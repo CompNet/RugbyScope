@@ -110,6 +110,8 @@ V(g)$fullname <- players[idx, "playerLabel"]
 # add main player information
 all_countries <- get_clean_countries(players)
 V(g)$country <- all_countries[idx]
+all_positions <- get_clean_positions(players)
+V(g)$position <- all_positions[idx]
 V(g)$composition <- players[idx, "positionLabels"]
 V(g)$mass <- players[idx, "masses"]
 V(g)$height <- players[idx, "heights"]
