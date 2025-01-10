@@ -1,0 +1,7 @@
+
+['./data/IrishPP/428_Finlay Jackson.json',
+ './data/IrishPP/466_Theodore Pike.json',
+ './data/IrishPP/476_Mark Deering.json',
+ './data/IrishPP/508_Ham Lambert.json',
+ './data/IrishPP/700_Paddy Lane.json',
+ './data/IrishPP/800_Jim Glennon.json']

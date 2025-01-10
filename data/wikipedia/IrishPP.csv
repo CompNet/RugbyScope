@@ -1,0 +1,273 @@
+name,dob,pob,height,weight,no_position,is_still_playing,no_senior_club,senior_club_start,senior_club_end,senior_club_apps,senior_club_points,no_internaional_club,internaional_club_start,internaional_club_end,internaional_club_apps,internaional_club_points
+Stephen Ferris,1985-08-02,"maghaberry, northern ireland",1.93,116.0,1,False,1,2005,2014,106,60,3,8,2009,38,10
+Brian Carney,,,1.8,91.0,0,False,0,-9,-9,0,0,0,-9,-9,0,0
+Tony Buckley,1980-09-18,"cork,ireland",1.96,138.0,1,False,3,2004,2014,213,75,2,2007,2011,31,15
+Tomás O'Leary,1983-10-22,"cork,ireland",1.8,85.0,1,False,4,2005,2017,193,62,3,2006,2012,33,20
+Rob Kearney,1986-03-26,"cooley peninsula,county louth,ireland",1.85,94.0,1,False,2,2005,2021,227,243,3,2006,2019,103,100
+Barry Murphy,1982-11-28,"limerick,ireland",1.85,90.0,2,False,1,2003,2011,73,75,2,2006,2009,8,5
+Shane Jennings,1981-07-08,"knocklyon,dublin,ireland",1.85,105.0,1,False,3,2000,2015,265,165,5,1999,2015,37,10
+Keith Earls,1987-10-02,"moyross, ireland",1.78,87.0,3,False,1,2007,2023,202,320,3,2007,2023,114,210
+Donnacha Ryan,1983-12-11,"nenagh,county tipperary,ireland",2.01,115.0,2,False,2,2004,2021,251,50,2,2008,2017,59,0
+Tom Court,1980-11-06,"brisbane, australia",1.91,122.0,1,False,5,2004,2019,252,70,3,8,2013,39,5
+Ryan Caldwell,1984-09-01,"belfast,northern ireland",2.0,112.0,1,False,3,2005,2014,141,25,2,2007,2010,13,10
+Darren Cave,1987-04-05,"holywood,northern ireland",1.83,93.0,1,False,1,2007,2019,229,229,4,2007,2015,27,50
+Ian Dowling,,,1.81,93.0,1,False,1,2005,2011,98,75,2,2006,2010,7,15
+Ian Keatley,1987-04-01,"dublin,ireland",1.8,91.0,3,False,6,2007,2021,288,2129,5,2007,2017,28,178
+John Muldoon,1982-11-30,"portumna,county galway,ireland",1.92,110.0,1,False,1,2003,2018,327,117,5,2000,2017,15,10
+Niall Ronan,1982-09-14,"pilltown,meath,ireland",1.85,113.0,1,False,2,2003,2014,138,115,2,2008,2011,10,0
+Mike Ross,1979-12-21,"cork,ireland",1.88,110.0,1,False,3,2005,2017,236,10,2,2007,2016,74,0
+Ian Whitten,1987-06-05,"lisburn,northern ireland",1.88,102.0,1,True,2,2008,2012,334,180,2,2009,2011,3,10
+Denis Hurley,1984-07-15,"cork,ireland",1.91,100.0,3,False,1,2006,2016,167,85,2,2008,2012,10,15
+Cian Healy,1987-10-07,"dublin, ireland",1.85,117.0,1,True,1,2007,2007,277,160,4,2007,2013,143,65
+Johnny Sexton,1985-07-11,"dublin, ireland",1.88,90.0,1,False,3,2006,2023,229,1994,5,2004,2023,150,1179
+Seán O'Brien,1987-02-14,"carlow,ireland",1.88,108.0,2,False,2,2008,2022,154,100,5,2006,2019,76,35
+Seán Cronin,1986-05-06,"limerick, ireland",1.78,103.0,1,False,3,2005,2022,270,265,3,2005,2019,87,40
+Kevin McLaughlin,1984-09-20,"dublin,ireland",1.93,109.0,1,False,1,2007,2015,115,20,4,13,2013,24,5
+Dan Tuohy,1985-06-18,"bristol,england",1.96,119.0,1,True,7,2007,2018,185,75,3,2009,2016,16,5
+John Fogarty,1977-10-18,"tipperary,ireland",1.78,102.0,1,False,3,2000,2010,159,45,2,2006,2010,13,15
+Chris Henry,1984-10-17,"belfast,northern ireland",1.91,107.0,1,False,1,2006,2018,184,55,2,12,2015,34,40
+Rhys Ruddock,1990-11-13,"dublin,ireland",1.91,113.0,1,False,2,2008,2024,228,75,4,2009,2021,50,20
+Damien Varley,1983-10-29,"limerick,ireland",1.78,110.0,1,False,3,2006,2015,127,70,2,2010,2014,7,0
+Devin Toner,1986-06-29,"moynalvey,meath,ireland",2.09,127.0,1,False,1,2006,2022,280,20,3,2006,2020,88,15
+Fergus McFadden,1986-06-17,"kilkenny,ireland",1.83,91.0,2,True,2,2007,2020,184,444,4,2004,2018,62,86
+Mike McCarthy,1981-11-27,"south africa,england",1.95,115.0,1,False,5,2001,2017,315,95,3,2002,2016,22,0
+Felix Jones,1987-08-05,"dublin,ireland",1.85,90.0,2,False,2,2008,2015,91,50,3,2007,2015,23,40
+Conor Murray,1989-04-20,"limerick, ireland",1.88,93.0,1,True,1,2010,2010,193,195,3,2009,2021,135,144
+Peter O'Mahony,1989-09-17,"cork, ireland",1.91,107.0,2,True,1,2010,2010,188,80,3,2009,2017,115,25
+Simon Zebo,1990-03-16,"cork, ireland",1.88,99.0,2,True,3,2010,2021,236,490,3,2010,2017,46,68
+Declan Fitzpatrick,1983-07-12,"bromsgrove,england",1.8,118.0,1,False,1,2006,2015,98,15,2,2006,2013,16,0
+Ronan Loughney,1984-11-01,"galway, ireland",1.85,118.0,1,False,1,2006,2017,184,20,2,2012,2012,2,0
+Richardt Strauss,1986-01-29,"pretoria, south africa",1.74,101.0,1,False,2,2006,2018,195,125,3,2004,2018,19,10
+Michael Bent,1986-04-25,"hāwera, new zealand",1.86,118.0,1,True,3,2009,2021,223,40,2,2012,2022,10,0
+Iain Henderson,1992-02-21,"craigavon, northern ireland",1.99,119.0,2,True,1,2012,2012,152,70,4,2011,2021,104,50
+Dave Kilcoyne,1988-12-14,"limerick, ireland",1.83,111.0,1,True,1,2011,2011,218,110,2,2012,2022,59,10
+Craig Gilroy,1991-03-11,"belfast,county antrim, northern ireland",1.83,93.0,1,False,1,2010,2023,213,345,4,2011,2017,21,65
+Luke Marshall,1991-03-03,"ballymena,northern ireland",1.8,92.0,1,False,1,2010,2024,175,152,2,11,2017,17,25
+Paddy Jackson,1992-01-05,"lisburn,northern ireland",1.78,89.0,1,True,4,2011,2023,239,1779,3,2010,2017,41,318
+Ian Madigan,1989-03-21,"dublin,ireland",1.78,91.0,3,False,4,2009,2023,249,1407,3,2008,2016,49,166
+Stephen Archer,1988-01-29,"cork, ireland",1.88,118.0,1,True,1,2009,2009,287,30,4,2008,2015,15,5
+Paul Marshall,1985-07-26,"belfast,northern ireland",1.69,76.0,1,False,1,2006,2018,206,122,3,2006,2013,5,0
+Robbie Henshaw,1993-06-12,"athlone, ireland",1.91,99.0,1,True,2,2012,2016,161,135,5,2011,2021,83,55
+Stuart Olding,1993-03-11,"belfast,northern ireland",1.78,88.0,1,True,2,2011,2018,132,180,2,2012,2016,13,5
+Tommy O'Donnell,1987-06-21,"cahir,ireland",1.85,105.0,1,False,1,2007,2021,187,100,4,2007,2019,20,15
+Jamie Hagan,1987-04-15,"dublin,ireland",1.91,126.0,1,True,8,2005,2016,241,10,3,2007,2013,8,0
+Mike Sherry,1988-06-18,"limerick,ireland",1.83,105.0,1,False,2,2009,2019,113,65,2,2012,2013,3,0
+James Downey,1981-03-23,"dublin,ireland",1.93,105.0,1,False,8,2003,2016,264,95,2,2009,2013,4,0
+Jack McGrath,1989-10-11,"dublin,ireland",1.85,118.0,1,False,2,2010,2022,170,60,5,2009,2019,77,10
+Dave Kearney,1989-06-19,"dundalk,ireland",1.8,90.0,1,True,2,23,2023,186,275,4,2008,2019,41,65
+Martin Moore,1991-03-01,"dublin,ireland",1.8,118.0,1,True,3,2012,2018,203,45,3,2010,2022,19,10
+Jordi Murphy,1991-04-22,"barcelona,spain",1.88,106.0,1,False,2,2011,2023,171,135,5,2008,2019,52,15
+Robbie Diack,1985-11-12,"johannesburg,south africa",1.93,111.0,2,False,2,2006,2018,235,105,2,2014,2015,4,0
+Kieran Marmion,1992-02-11,"barking, england",1.78,86.0,1,True,2,23,2023,234,225,3,12,2014,45,30
+Rodney Ah You,1988-10-27,"wellington,new zealand",1.85,128.0,1,False,5,2009,2021,160,25,3,2007,2014,11,0
+James Cronin,1990-11-23,"ballincollig,cork,ireland",1.83,116.0,1,True,4,2013,2022,192,135,2,2014,2016,5,0
+Noel Reid,1990-05-22,"dublin,ireland",1.85,92.0,2,True,5,2011,2023,157,164,5,2008,2015,13,34
+Rob Herring,1990-04-27,"cape town, south africa",1.85,103.0,1,True,5,2009,2012,260,200,3,2013,2015,45,30
+Jared Payne,1985-10-13,"tauranga,new zealand",1.88,95.0,1,False,3,2006,2018,121,206,3,2006,2017,23,25
+Dave Foley,1988-05-16,"clonmel,ireland",1.98,112.0,1,False,2,2010,2019,113,5,2,2013,2014,8,0
+Dominic Ryan,1990-03-28,"dublin,ireland",1.93,106.0,1,False,2,2009,2018,118,90,4,2009,2015,28,5
+Robin Copeland,1987-10-23,"wexford,ireland",1.96,110.0,3,True,6,2010,2020,216,190,3,2014,2014,5,10
+Jack Conan,1992-07-29,"bray, ireland",1.93,110.0,1,True,1,2014,2014,133,135,4,2012,2021,62,75
+Nathan White,1981-09-04,"hāwera,new zealand",1.88,122.0,1,False,3,2002,2016,155,25,2,2015,2016,14,0
+Tadhg Furlong,1992-11-14,"wexford, ireland",1.83,125.0,1,True,1,2013,2013,127,50,3,2011,2021,97,25
+CJ Stander,1990-04-05,"george, south africa",1.85,114.0,2,False,3,2010,2021,224,305,4,2008,2021,63,75
+Stuart McCloskey,1992-08-06,"bangor, northern ireland",1.93,114.0,1,True,1,2014,2014,190,184,2,2014,2016,22,25
+Josh van der Flier,1993-04-25,"wicklow, ireland",1.86,103.0,2,True,1,2014,2014,125,125,3,2011,2016,75,50
+Ultan Dillane,1993-11-09,"paris,france",1.98,115.0,2,True,2,2014,2022,151,30,2,2016,2021,20,5
+Finlay Bealham,1991-10-09,"canberra,australian capital territory, australia",1.88,118.0,1,True,1,2014,2014,185,95,3,2011,2016,47,20
+Quinn Roux,1990-10-30,"pretoria, south africa",1.98,122.0,1,True,6,2011,2022,166,40,1,2016,2020,16,15
+Sean Reidy,1989-05-10,"auckland,new zealand",1.83,104.0,1,True,2,2013,2022,159,110,1,2016,2017,2,5
+Tiernan O'Halloran,1991-02-26,"clifden,county galway, ireland",1.88,98.0,1,True,1,2009,2024,236,249,3,2010,2017,17,20
+Matt Healy,1989-03-14,"dublin,ireland",1.83,92.0,1,False,1,2012,2022,151,290,2,2009,2016,10,0
+Joey Carbery,1995-11-01,"auckland, new zealand",1.83,86.0,2,True,3,2016,2024,105,618,2,2015,2016,46,197
+Garry Ringrose,1995-01-26,"dublin, ireland",1.88,95.0,1,True,1,2015,2015,117,203,2,2014,2016,75,115
+Billy Holland,1985-08-03,"cork,ireland",1.91,112.0,2,False,1,2007,2021,247,30,2,2014,2016,6,5
+Jack O'Donoghue,1994-02-08,"waterford, ireland",1.91,109.0,2,True,1,2014,2014,203,135,2,2013,2017,11,10
+John Ryan,1988-08-02,"berrings, ireland",1.83,120.0,1,False,6,2011,2024,247,30,3,2013,2022,30,5
+James Tracy,1991-04-02,"kill, county kildare,ireland",1.83,106.0,1,False,1,2012,2022,141,90,3,2011,2017,19,15
+Niyi Adeolokun,1990-11-03,"ibadan,nigeria",1.83,96.0,1,False,2,2014,2022,115,185,2,2016,2019,3,0
+Luke McGrath,1993-02-03,"hamilton, ontario, canada",1.75,84.0,1,True,1,2012,2012,204,250,3,2012,2016,38,33
+Dan Leavy,1994-05-23,"dublin,ireland",1.91,106.0,1,False,1,2014,2022,79,85,2,2013,2018,18,25
+Niall Scannell,1992-04-08,"cork, ireland",1.85,111.0,1,True,1,2013,2013,175,110,2,2012,2017,28,5
+Andrew Conway,1991-07-11,"dublin, ireland",1.8,90.0,2,False,2,2010,2023,192,290,5,2009,2022,54,175
+Jacob Stockdale,1996-04-03,"newtownstewart, northern ireland",1.91,102.0,3,True,1,2016,2016,120,220,3,2015,2022,51,145
+Rory Scannell,1993-12-22,"cork, ireland",1.78,96.0,3,True,1,2014,2014,190,179,3,2013,2017,14,52
+Dave Heffernan,1991-01-31,"ballina, county mayo,ireland",1.88,110.0,1,True,1,2012,2012,194,40,4,11,2019,12,10
+Andrew Porter,1996-01-16,"dublin, ireland",1.83,123.0,1,True,1,2016,2016,115,85,2,2015,2017,82,40
+James Ryan,1996-07-24,"blackrock, ireland",2.03,116.0,1,True,1,2017,2017,72,20,2,2016,2017,73,35
+Kieran Treadwell,1995-11-06,"carshalton, england",1.98,115.0,1,True,3,2014,2016,173,35,3,2013,2017,24,5
+Rory O'Loughlin,1994-01-21,"dublin,ireland",1.88,9.0,2,True,2,2016,2022,119,120,1,2017,2017,1,0
+John Cooney,1990-05-01,"dublin, ireland",1.78,85.0,1,True,4,2011,2017,208,1237,4,2008,2017,29,17
+Bundee Aki,1990-04-07,"auckland, new zealand",1.78,102.0,1,True,3,2011,2014,200,240,2,2017,2021,59,80
+Darren Sweetnam,1993-05-05,"dunmanway,cork,ireland",1.85,93.0,2,True,3,2015,2021,132,160,2,2013,2017,9,15
+Chris Farrell,1993-03-16,"fivemiletown, northern ireland",1.91,110.0,1,True,4,2011,2023,157,100,2,2012,2021,24,10
+Adam Byrne,1994-04-10,"kill, county kildare,ireland",1.95,98.0,2,False,2,2012,2023,72,135,2,2013,2017,7,5
+Jordan Larmour,1997-06-10,"dublin, ireland",1.78,91.0,2,True,1,2017,2017,97,180,2,2017,2018,37,45
+Tadhg Beirne,1992-01-08,"eadestown, ireland",1.98,113.0,2,True,3,2015,2018,137,105,3,2012,2021,63,60
+Ross Byrne,1995-04-08,"dublin, ireland",1.91,92.0,1,True,1,2015,2015,156,1040,2,2014,2018,37,185
+Will Addison,1992-08-20,"penrith, cumbria,england",1.85,93.0,3,True,4,2010,2024,160,216,2,2012,2020,9,2
+Sammy Arnold,1996-04-08,"surrey,england",1.81,105.0,1,True,5,2015,2024,123,105,2,2015,2018,11,0
+Jack Carty,1992-08-31,"athlone,ireland",1.81,91.0,1,True,1,2012,2012,200,1235,2,2012,2019,15,27
+Jean Kleyn,1993-08-26,"johannesburg, south africa",2.03,123.0,1,True,3,2014,2016,180,80,2,2019,2023,12,0
+Mike Haley,1994-06-28,"preston, england",1.91,93.0,1,True,3,2012,2018,226,192,3,2016,2019,4,0
+Caelan Doris,1998-04-02,"ballina, ireland",1.93,111.0,2,True,1,2018,2018,55,40,2,2017,2020,56,45
+Rónan Kelleher,1998-01-24,"dublin, ireland",1.83,110.0,1,True,1,2019,2019,53,90,2,2017,2020,43,45
+Max Deegan,1996-10-01,"dublin,ireland",1.93,108.0,2,True,1,2016,2016,103,160,3,2016,2022,14,20
+Hugo Keenan,1996-06-18,"dublin, ireland",1.85,92.0,2,True,1,2016,2016,63,65,2,2016,2020,49,65
+Will Connors,1996-04-04,"donadea,kildare,ireland",1.96,100.0,1,True,1,2018,2018,39,10,2,2016,2020,9,15
+Ed Byrne,1993-09-09,"carlow,ireland",1.8,9.0,1,True,2,2014,2024,96,65,4,2011,2020,17,0
+Jamison Gibson-Park,1992-02-23,"great barrier island, new zealand",1.75,80.0,1,True,4,2012,2016,211,190,2,2012,2020,43,45
+James Lowe,1992-07-08,"nelson,new zealand",1.88,101.0,2,True,3,2012,2017,180,525,2,2014,2020,39,110
+Billy Burns,1994-06-13,"bath, somerset,england",1.85,86.0,2,True,4,2012,2024,251,700,2,2013,2020,15,113
+Shane Daly,1996-12-19,"cork, ireland",1.91,92.0,3,True,1,2018,2018,95,110,5,2016,2022,16,30
+Eric O'Sullivan,1995-11-30,"dublin,ireland",1.87,117.0,1,True,1,2018,2018,115,10,1,2020,2020,1,0
+Ryan Baird,1999-07-26,"dublin, ireland",1.98,112.0,2,True,1,2019,2019,55,50,2,2019,2021,25,10
+Craig Casey,1999-04-19,"limerick, ireland",1.65,76.0,1,True,1,2019,2019,87,90,3,2019,2022,23,15
+Gavin Coombes,1997-12-11,"skibbereen, ireland",1.98,110.0,3,True,1,2018,2018,99,220,3,2017,2022,12,10
+Robert Baloucoune,1997-08-19,"enniskillen,northern ireland",1.93,89.0,2,True,1,2018,2018,69,145,2,2021,2022,6,15
+James Hume,1998-09-07,"belfast,northern ireland",1.86,95.0,1,True,1,2018,2018,95,70,3,2018,2022,11,5
+Tom O'Toole,1998-09-23,"drogheda, ireland",1.83,123.0,1,True,1,2018,2018,106,15,3,2018,2022,19,0
+Nick Timoney,1995-08-01,"dublin,ireland",1.88,9.0,1,True,1,2017,2017,146,180,3,2014,2022,12,15
+Paul Boyle,1997-01-14,"dublin,ireland",1.88,106.0,1,True,1,2018,2018,73,85,2,2017,2021,10,10
+Harry Byrne,1999-04-22,"dublin,ireland",1.9,82.0,1,True,1,2019,2019,64,300,2,2018,2021,17,130
+Fineen Wycherley,1997-12-11,"bantry, ireland",1.95,116.0,2,True,1,2017,2017,107,40,2,2017,2021,10,5
+Caolin Blade,1994-04-29,"galway, ireland",1.7,80.0,1,True,1,2014,2014,171,175,2,2021,2022,3,0
+Dan Sheehan,1998-09-17,"dublin, ireland",1.91,111.0,1,True,1,2020,2020,64,180,2,2018,2021,32,55
+Mack Hansen,1998-03-27,"canberra,australian capital territory, australia",1.88,89.0,2,True,3,2017,2021,67,103,2,2018,2022,26,60
+Michael Lowry,1998-08-20,"belfast,northern ireland",1.7,79.0,2,True,1,2018,2018,103,120,3,2018,2022,3,10
+Jimmy O'Brien,1996-11-27,"eadestown, ireland",1.83,90.0,2,True,1,2018,2018,76,114,2,2016,2022,16,5
+Jeremy Loughman,1995-07-22,"reno, united states",1.85,118.0,1,True,2,2016,2017,112,30,3,2015,2022,11,0
+Jack Crowley,2000-01-13,"innishannon, ireland",1.85,89.0,3,True,1,2021,2021,54,240,4,2020,2022,22,143
+Cian Prendergast,2000-02-23,"kildare, ireland",1.96,112.0,2,True,1,2020,2020,65,65,3,2020,2022,6,0
+Joe McCarthy,2001-03-26,"manhattan,new york, u.s.",1.98,124.0,1,True,1,2022,2022,31,15,3,2020,2022,15,5
+John Birch,,,0.0,0.0,1,False,0,-9,-9,0,0,1,1970,1970,2,0
+Leo Galvin,,,0.0,0.0,1,False,0,-9,-9,0,0,1,1973,1973,1,0
+Emmet O'Rafferty,,,0.0,0.0,1,False,0,-9,-9,0,0,1,1976,1976,1,0
+Rab Brady,,,0.0,0.0,1,False,0,-9,-9,0,0,1,1985,1985,1,0
+Paul Clinch,1961-03-25,"aldershot, england",0.0,0.0,1,False,0,-9,-9,0,0,1,1989,1989,2,0
+Ciarán Frawley,1997-12-04,"sydney,new south wales, australia",1.91,91.0,3,True,1,2018,2018,79,230,3,2017,2023,17,28
+Tom Stewart,2001-01-11,"belfast, northern ireland",1.83,103.0,1,True,1,2021,2021,46,135,3,2020,2023,6,0
+Calvin Nash,1997-08-08,"limerick, ireland",1.78,90.0,2,True,1,2017,2017,73,100,4,2017,2023,19,40
+Oli Jager,1995-07-05,"london, england",1.92,128.0,1,True,3,2016,2023,91,25,3,2013,2024,2,0
+Peter Russell,1962-02-22,"belfast, northern ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,92,1990,4,23
+Gary Halpin,1966-02-14,"dublin, ireland",1.83,111.0,1,False,3,1991,2001,145,10,1,1990,1995,11,5
+Alain Rolland,1966-08-22,"dublin, ireland",1.72,76.0,1,False,2,1989,1997,51,0,3,1990,2014,3,0
+Paddy Johns,1968-02-19,"portadown,county armagh,northern ireland",1.98,110.0,1,False,0,-9,-9,0,0,1,1990,2000,59,20
+Philip Lawlor,1965-07-02,"co. kildare, ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,93,1990,3,0
+Simon Geoghegan,1968-09-01,"knebworth,hertfordshire",1.83,83.0,1,False,1,1991,1994,22,25,1,1991,1996,37,51
+Brian Rigney,1963-09-22,"portlaoise,county laois, ireland",1.96,0.0,1,False,0,-9,-9,0,0,1,1991,1992,8,0
+Mick Galwey,1966-10-08,"currow,county kerry,ireland",1.93,115.0,1,False,1,1987,2003,130,85,5,1991,2002,41,15
+Jim Staples,1965-10-20,"bermondsey,southwark,united kingdom",1.88,87.0,1,False,3,1984,1998,0,0,1,1991,1997,26,25
+David Curtis,1965-04-10,"salisbury,southern rhodesia",0.0,0.0,1,False,0,-9,-9,0,0,1,1991,1992,13,7
+Richard Wallace,1968-01-16,"cork, ireland",1.8,89.0,1,False,2,97,1997,36,75,2,98,1993,29,23
+Nicky Barry,1969-01-05,"limerick, ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1991,1991,1,0
+Mick Fitzgibbon,1965-04-02,"askeaton, county limerick, ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,6,0
+Derek McAleese,1964-09-14,"limavady, northern ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,1,12
+Paul Hogan,1968-06-29,"limerick, ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,1,0
+Ronald Carey,1965-08-06,"dungannon, northern ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,2,0
+Neville Furlong,1968-07-18,"waterford, ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,2,4
+Paul McCarthy,1963-08-27,"cork,ireland",1.83,114.0,1,False,1,1992,1996,6,0,1,1992,1993,5,0
+Kelvin Leahy,1965-09-01,"cork, ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,1,0
+Mark McCall,1967-11-29,"bangor, northern ireland",1.77,80.0,1,False,3,1989,1998,0,0,1,1992,1998,13,0
+Paddy Kenny,1960-04-28,philippines,0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,1,0
+John N. Murphy,1963-02-08,"dublin, ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1992,1992,1,0
+Colin Wilkinson,1961-04-04,"belfast, northern ireland",0.0,0.0,1,False,0,-9,-9,0,0,1,1993,1993,1,0
+Niall Malone,1971-04-30,"leeds,england",0.0,0.0,3,True,1,-9,-9,0,0,1,1993,1994,3,9
+Richard Costello,1964-03-08,"limerick, ireland",2.01,0.0,1,False,0,-9,-9,0,0,1,1993,1993,1,0
+Ciaran Clarke,1969-03-08,"dublin, ireland",1.85,93.0,1,False,0,-9,-9,0,0,1,98,1993,5,3
+Peter Clohessy,1966-03-22,"limerick,ireland",1.8,106.0,1,False,3,1987,2002,73,10,1,1993,2002,54,20
+Brian Glennon,1967-04-17,,0.0,0.0,1,False,0,-9,-9,0,0,1,1993,1993,1,0
+Eric Elwood,1969-02-26,"galway, ireland",1.8,92.0,1,False,1,1989,2005,168,1152,2,1993,1999,36,308
+Conor O'Shea,1970-10-21,"limerick,republic of ireland",1.88,100.0,1,True,2,1995,2000,127,412,1,1993,2000,35,44
+Ken O'Connell,1968-07-25,"cork, ireland",1.88,102.0,1,False,0,-9,-9,0,0,1,1994,1994,2,0
+Jonny Bell,1974-02-07,"belfast,northern ireland",1.8,0.0,0,False,3,1994,2006,129,35,1,1994,2003,36,40
+Niall Woods,1971-06-21,,1.83,82.0,1,False,0,-9,-9,0,0,1,1994,1999,8,5
+Keith Wood,1972-01-27,"killaloe, county clare, ireland",1.83,106.0,1,False,3,1995,2003,88,78,2,1994,2003,63,75
+Alan McGowan,1972-01-02,"dublin,ireland",1.78,73.0,1,False,1,1995,1998,29,372,1,1994,1994,1,13
+Paul Burke,1973-05-01,"paddington, london,england",1.73,85.0,1,False,7,1992,2008,250,1975,2,1992,2003,14,108
+Niall Hogan,1971-04-20,,1.73,79.0,1,False,1,1997,1998,16,15,1,1995,1997,13,5
+Anthony Foley,1973-10-30,"limerick,ireland",1.91,111.0,2,False,1,1995,2008,201,195,1,1995,2005,62,25
+Ben Cronin,1968-07-13,,1.96,108.0,1,False,1,98,1996,8,15,1,97,1995,2,0
+Davy Tweed,,,0.0,0.0,0,False,0,-9,-9,0,0,0,-9,-9,0,0
+Eddie Halvey,1970-08-11,"limerick,ireland",1.93,108.0,1,False,3,1995,2004,84,45,1,1995,1997,8,10
+Darragh O'Mahony,1972-08-18,"cork,ireland",1.8,83.0,1,False,0,-9,-9,0,0,1,1995,1998,4,5
+David O'Mahony,1970-08-18,"derry,northern ireland",1.75,86.0,1,False,2,1995,1998,11,10,1,1995,1995,1,0
+Paul Wallace,1971-12-30,"cork,ireland",1.83,110.0,1,False,2,1996,2003,91,50,2,1995,2002,49,25
+Chris Saverimutto,1971-08-08,"wallasey, england",1.73,0.0,1,False,0,-9,-9,0,0,1,96,1995,3,0
+Jeremy Davidson,1974-04-28,"belfast, northern ireland",1.98,114.0,1,False,4,1995,2003,0,0,2,1995,2001,35,0
+Allen Clarke,1967-07-29,"dungannon,northern ireland",1.73,0.0,1,False,4,1989,2001,0,0,1,1995,1998,8,0
+Victor Costello,1970-10-23,,1.96,122.0,2,False,3,1993,2005,129,85,1,1996,2004,39,20
+David Humphreys,1971-09-10,"belfast,northern ireland",1.78,83.0,1,False,2,97,2008,219,1862,1,1996,2006,72,560
+Simon Mason,1973-10-22,"wirral, england",1.85,91.0,1,False,0,-9,-9,0,0,1,1996,1996,3,42
+Rob Henderson,1972-10-27,"dover,england",1.85,93.0,1,False,4,6,2006,143,190,2,1999,2003,32,30
+James Topping,1974-12-18,,1.8,95.0,1,False,0,-9,-9,0,0,1,1996,2003,8,5
+Dominic Crotty,1974-07-26,"cork,ireland",1.9,90.0,2,False,1,1995,2005,87,80,1,1996,2000,5,0
+Eric Miller,1975-09-23,"dublin,ireland",1.91,108.0,1,False,4,1995,2006,0,0,3,1997,2005,52,35
+Denis Hickie,1976-02-13,"dublin,ireland",1.88,93.0,1,False,1,1996,2007,129,303,2,1997,2007,62,145
+Brian O'Meara,1976-04-05,"cork,ireland",1.75,91.0,1,False,3,1997,2007,125,553,2,1996,2003,9,0
+Paul Flavin,1972-04-04,"dublin, ireland",1.83,102.0,1,False,0,-9,-9,0,0,1,1997,1997,2,0
+Kevin Nowlan,1971-06-26,"dublin, ireland",1.88,83.0,1,False,0,-9,-9,0,0,1,1997,1997,3,10
+John McWeeney,1976-05-26,"dublin, ireland",1.91,102.0,1,False,0,-9,-9,0,0,1,1997,1997,1,0
+Conor McGuinness,1975-03-29,"dublin, ireland",1.78,0.0,1,False,0,-9,-9,0,0,1,99,1997,14,5
+Malcolm O'Kelly,1974-07-19,"chelmsford,essex,england",2.03,119.0,1,False,3,1995,2010,239,80,3,1997,2010,96,45
+Kieron Dawson,1975-01-29,"bangor,northern ireland",1.85,100.0,1,False,2,1996,2009,228,20,1,1997,2003,21,0
+David Erskine,,"waltham forest, london, england",0.0,0.0,2,False,1,1994,2000,0,0,1,1997,1998,3,0
+Kevin Maggs,1974-06-03,"bristol, england",1.83,93.0,1,False,6,1993,2011,251,155,1,1997,2005,6,75
+Reggie Corrigan,,"dublin,ireland",1.88,118.0,1,False,0,-9,-9,0,0,1,1997,2006,47,0
+Andy Ward,1970-09-08,"whangārei, new zealand",0.0,0.0,1,False,1,1997,2005,119,95,1,1998,2001,28,15
+Justin Bishop,1974-11-08,"crawley,west sussex,england",1.85,87.0,2,False,1,1994,2007,280,290,1,1998,2006,25,40
+Justin Fitzpatrick,1973-11-21,"chichester,west sussex",1.88,117.0,1,False,4,1994,2010,190,0,1,1998,2003,26,0
+Dion O'Cuinneagain,1972-05-24,"cape town, south africa",1.93,102.0,2,False,5,1997,2001,0,0,2,1998,2000,19,5
+Trevor Brennan,1973-09-22,"leixlip,ireland",1.96,110.0,1,False,2,1996,2007,173,40,1,1998,2001,13,0
+Girvan Dempsey,1975-10-02,"dublin,ireland",1.83,91.0,1,False,2,1993,2010,173,194,1,1998,2008,82,95
+Brian O'Driscoll,1979-01-21,"dublin, ireland",1.75,93.0,1,False,2,1998,2014,186,311,6,1996,2014,154,250
+Matt Mostyn,1974-09-10,"sydney,nsw,australia",1.88,96.0,1,False,4,0,2003,180,365,1,1999,1999,6,15
+Gordon D'Arcy,1980-02-10,"ferns, county wexford,ireland",1.8,91.0,1,False,1,1998,2015,257,334,7,1997,2015,105,45
+Alan Quinlan,1974-07-13,"tipperary,ireland",1.91,105.0,1,False,1,1996,2011,212,165,1,1999,2008,27,30
+Bob Casey,1978-07-18,"maynooth,republic of ireland",2.02,125.0,1,False,2,1999,2012,166,35,2,1999,2009,21,10
+Shane Horgan,1978-07-18,"bellewstown, county meath, ireland",1.93,104.0,2,False,1,1998,2011,203,348,5,1996,2009,87,110
+Ronan O'Gara,1977-03-07,"san diego,california, u.s.",1.83,84.0,1,False,1,1997,2013,240,2625,3,1999,2013,131,1083
+Peter Stringer,1977-12-13,"cork,ireland",1.71,73.0,1,False,6,1998,2018,353,90,3,2000,2011,103,30
+Simon Easterby,1975-07-21,"harrogate, yorkshire, england",1.93,100.0,1,False,3,1998,2010,207,105,2,2000,2008,67,45
+John Hayes,1973-11-02,"dromsally,county limerick, ireland",1.93,128.0,1,False,1,1998,2011,217,20,2,2000,2011,107,10
+Geordan Murphy,1978-04-19,"dublin, ireland",1.85,87.0,2,False,1,1997,2013,322,657,3,2000,2011,80,105
+Guy Easterby,1971-03-21,"tadcaster,west riding of yorkshire",1.83,94.0,1,False,6,1996,2008,56,25,1,2000,2005,28,30
+Frankie Sheahan,1976-08-27,"toronto,canada",1.8,107.0,1,False,1,1996,2009,163,110,2,1999,2008,35,25
+David Wallace,1976-07-08,"limerick,ireland",1.88,105.0,1,False,1,1997,2012,203,205,2,2000,2011,75,60
+Marcus Horan,1977-09-07,"clonlara,ireland",1.85,106.0,1,False,1,1999,2013,225,125,2,2000,2011,82,35
+Tyrone Howe,1971-04-02,"newtownards,northern ireland",1.8,90.0,1,True,1,-9,-9,0,0,2,2000,2006,14,30
+Gary Longwell,1971-07-30,"belfast,northern ireland",2.01,117.0,1,False,1,1991,2005,152,0,1,4,2000,26,5
+Emmet Byrne,1973-04-04,"dublin, ireland",1.83,106.0,1,False,1,1997,2006,97,0,1,2001,2003,9,0
+Shane Byrne,1971-07-18,"aughrim, county wicklow",1.78,101.0,1,False,2,1995,2007,164,30,2,2001,2005,45,15
+Mick O'Driscoll,1978-10-08,"cork,ireland",1.96,113.0,1,False,3,1998,2012,242,30,3,2000,2012,41,5
+Jeremy Staunton,1980-05-07,"limerick,ireland",1.85,95.0,1,False,6,1999,2012,394,2198,2,1999,2007,19,130
+Paul O'Connell,1979-10-20,"limerick,ireland",1.98,112.0,1,False,2,2001,2016,178,95,2,2002,2015,115,40
+Keith Gleeson,1976-06-17,"dublin,ireland",1.86,98.0,1,False,1,2001,2008,120,70,4,1995,2007,33,25
+John Kelly,1974-04-18,"dublin, republic of ireland",1.78,89.0,2,False,1,1997,2007,154,170,2,3,2002,28,55
+Leo Cullen,1978-01-09,"wicklow,ireland",1.98,110.0,2,False,3,1998,2014,275,90,4,1997,2011,68,0
+Donncha O'Callaghan,1979-03-24,"cork, ireland",1.98,115.0,1,False,2,1998,2018,331,45,4,2002,2017,107,5
+Simon Best,1978-02-11,"craigavon,northern ireland",1.85,114.0,1,False,1,1999,2008,118,25,2,6,2005,30,10
+Anthony Horgan,1976-11-15,"cork,ireland",1.8,96.0,1,False,1,1997,2009,146,205,2,5,2003,16,40
+Aidan McCullen,1977-01-05,"dublin,ireland",1.93,110.0,1,False,4,1998,2008,82,30,2,1998,2003,1,0
+Paul Shields,1978-09-25,"belfast,northern ireland",0.0,0.0,1,False,2,2007,2009,145,30,2,5,2003,10,10
+Gavin Duffy,1981-09-18,"ballina,ireland",1.88,0.0,1,False,4,2001,2014,589,252,2,2004,2012,21,23
+Johnny O'Connor,1980-02-09,"galway, ireland",1.8,100.0,1,False,3,2000,2013,207,100,2,2001,2008,21,10
+Denis Leamy,1981-11-27,"cashel,ireland",1.88,108.0,3,False,1,2002,2012,145,150,1,2004,2011,57,10
+Tommy Bowe,1984-02-22,"emyvale,monaghan,ireland",1.91,98.0,2,False,3,2003,2018,245,495,4,2004,2017,78,155
+Matt McCullough,1981-09-09,,1.98,110.0,2,False,1,2001,2009,130,40,1,2005,2005,4,0
+Roger Wilson,1981-09-21,"belfast, northern ireland",1.89,108.0,1,False,3,2003,2017,334,95,4,2005,2014,15,5
+Bernard Jackman,1976-05-05,"tullow,republic of ireland",1.83,115.0,1,False,5,1997,2010,184,45,1,2000,2008,9,0
+David Quinlan,1978-01-04,"dublin,ireland",1.93,103.0,1,False,2,5,2007,48,5,2,6,2005,9,0
+Trevor Hogan,1979-11-19,"nenagh, ireland",1.98,113.0,1,False,2,2002,2011,116,20,2,2005,2009,16,0
+Kieran Campbell,1979-07-06,"hillingdon,london,england",1.76,80.0,1,False,3,1997,2010,205,10,2,2001,2007,14,0
+Kieran Lewis,1980-08-19,,1.85,90.0,2,False,2,7,2007,86,50,2,7,2005,13,10
+Rory Best,1982-08-15,"craigavon,northern ireland",1.82,105.0,1,False,1,2004,2019,218,115,3,2005,2019,125,60
+Neil Best,1979-04-03,"belfast,northern ireland",1.91,105.0,1,False,4,2002,2015,246,130,2,8,2008,27,25
+Andrew Trimble,1984-10-20,"coleraine,northern ireland",1.86,99.0,2,False,1,2005,2018,229,382,2,13,2017,73,90
+Jerry Flannery,1978-10-17,"galway,ireland",1.8,100.0,1,False,2,2001,2012,99,40,2,2005,2011,41,15
+Eoin Reddan,1980-11-20,"limerick,ireland",1.76,83.0,1,False,4,3,2009,312,125,2,9,2006,73,15
+Bryan Young,1981-06-11,"belfast,northern ireland",1.85,110.0,1,False,2,11,2011,136,0,2,7,2006,17,0
+Isaac Boss,1980-04-09,"tokoroa,new zealand[1]",1.78,88.0,2,False,4,1999,2016,297,135,3,1999,2015,38,30
+Paddy Wallace,1979-08-27,"dundonald,northern ireland",1.8,81.0,3,False,1,14,2001,189,411,3,10,2006,44,137
+Luke Fitzgerald,1987-09-13,"county wicklow,ireland",1.85,92.0,3,False,1,2006,2016,141,160,3,2006,2016,38,25
+Jamie Heaslip,1983-12-15,"tiberias, israel",1.92,110.0,1,False,1,2005,2018,229,190,4,2004,2017,117,70
