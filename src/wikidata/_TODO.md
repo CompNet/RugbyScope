@@ -18,7 +18,7 @@
 
 
 
-* notes
+* NOTES
   - filtering players depending on whether they played for a club: 
     many are missed
     but if their club is not indicated... maybe they are not important enough?
