@@ -1,1256 +1,1301 @@
 "Name","Tier","Division","WD"
-"ASM Clermont",1,"Top 14",NA
-"Aviron bayonnais",1,"Top 14",NA
-"Castres olympique",1,"Top 14",NA
-"Lyon olympique universitaire rugby",1,"Top 14",NA
-"Montpellier HR",1,"Top 14",NA
-"Oyonnax Rugby",1,"Top 14",NA
-"Racing 92",1,"Top 14",NA
-"RC Toulon",1,"Top 14",NA
-"Section paloise",1,"Top 14",NA
-"Stade Français",1,"Top 14",NA
-"Stade Rochelais",1,"Top 14",NA
-"Stade Toulousain",1,"Top 14",NA
-"Union Bordeaux Bègles",1,"Top 14",NA
-"USA Perpignan",1,"Top 14",NA
-"AS Béziers",2,"Pro D2",NA
-"Biarritz olympique",2,"Pro D2",NA
-"CA Brive",2,"Pro D2",NA
-"Colomiers Rugby",2,"Pro D2",NA
-"FC Grenoble",2,"Pro D2",NA
-"Provence Rugby",2,"Pro D2",NA
-"RC Vannes",2,"Pro D2",NA
-"Rouen NR",2,"Pro D2",NA
-"Soyaux Angoulême XV",2,"Pro D2",NA
-"Stade Aurillacois",2,"Pro D2",NA
-"Stade Montois",2,"Pro D2",NA
-"SU Agen",2,"Pro D2",NA
-"US Dax",2,"Pro D2",NA
-"US Montauban",2,"Pro D2",NA
-"USON Nevers",2,"Pro D2",NA
-"Valence Romans DR",2,"Pro D2",NA
-"Blagnac Rugby",3,"Nationale 1",NA
-"CA Périgueux",3,"Nationale 1",NA
-"CS Bourgoin-Jailleu",3,"Nationale 1",NA
-"CS Vienne",3,"Nationale 1",NA
-"RC Hyères Carqueiranne La Crau",3,"Nationale 1",NA
-"RC Massy",3,"Nationale 1",NA
-"RC Narbonne",3,"Nationale 1",NA
-"RC Suresnes",3,"Nationale 1",NA
-"SC Albi",3,"Nationale 1",NA
-"SO Chambéry",3,"Nationale 1",NA
-"Stade Niçois",3,"Nationale 1",NA
-"Stado Tarbes PR",3,"Nationale 1",NA
-"US bressane",3,"Nationale 1",NA
-"US Carcassonne",3,"Nationale 1",NA
-"Anglet ORC",4,"Nationale 2",NA
-"AS Bédarrides Châteauneuf-du-Pape",4,"Nationale 2",NA
-"AS Fleurance",4,"Nationale 2",NA
-"AS Mâcon",4,"Nationale 2",NA
-"Avenir valencien",4,"Nationale 2",NA
-"CA Lannemezan",4,"Nationale 2",NA
-"Niort RC",4,"Nationale 2",NA
-"Olympique marcquois",4,"Nationale 2",NA
-"RC Aubenas Vals",4,"Nationale 2",NA
-"RC Auch",4,"Nationale 2",NA
-"RC bassin d'Arcachon",4,"Nationale 2",NA
-"RC Nîmes",4,"Nationale 2",NA
-"RCS Rumilly",4,"Nationale 2",NA
-"Rennes EC",4,"Nationale 2",NA
-"Saint-Jean-de-Luz olympique",4,"Nationale 2",NA
-"SC Graulhet",4,"Nationale 2",NA
-"Stade Dijonnais",4,"Nationale 2",NA
-"Stade Langonnais",4,"Nationale 2",NA
-"Stade Matéo-Petit Arcachon",4,"Nationale 2",NA
-"Stade Métropolitain",4,"Nationale 2",NA
-"US Cognac",4,"Nationale 2",NA
-"US Marmande",4,"Nationale 2",NA
-"US Salles",4,"Nationale 2",NA
-"US seynoise",4,"Nationale 2",NA
-"USA Limoges",4,"Nationale 2",NA
-"AAS Sarcelles",5,"Fédérale 1 - Poule 1",NA
-"Beauvais RC",5,"Fédérale 1 - Poule 1",NA
-"C' Chartres Rugby",5,"Fédérale 1 - Poule 1",NA
-"CS Beaune",5,"Fédérale 1 - Poule 1",NA
-"CS Nuiton",5,"Fédérale 1 - Poule 1",NA
-"CS Villefranche-sur-Saône",5,"Fédérale 1 - Poule 1",NA
-"Le Havre AC",5,"Fédérale 1 - Poule 1",NA
-"Paris UC",5,"Fédérale 1 - Poule 1",NA
-"RC Courbevoie",5,"Fédérale 1 - Poule 1",NA
-"RC Orléans",5,"Fédérale 1 - Poule 1",NA
-"Servette RC",5,"Fédérale 1 - Poule 1",NA
-"Union Drancy Saint-Denis",5,"Fédérale 1 - Poule 1",NA
-"Avenir Gruissanais",5,"Fédérale 1 - Poule 2",NA
-"Céret sportif",5,"Fédérale 1 - Poule 2",NA
-"CO Berre XV",5,"Fédérale 1 - Poule 2",NA
-"CS Annonay",5,"Fédérale 1 - Poule 2",NA
-"RC Châteaurenard",5,"Fédérale 1 - Poule 2",NA
-"RC Tricastin",5,"Fédérale 1 - Poule 2",NA
-"RO Agde",5,"Fédérale 1 - Poule 2",NA
-"RO Grasse",5,"Fédérale 1 - Poule 2",NA
-"SC royannais",5,"Fédérale 1 - Poule 2",NA
-"US Annecy",5,"Fédérale 1 - Poule 2",NA
-"US Issoire",5,"Fédérale 1 - Poule 2",NA
-"XV du Coudon",5,"Fédérale 1 - Poule 2",NA
-"AS Layrac",5,"Fédérale 1 - Poule 3",NA
-"AS vauréenne",5,"Fédérale 1 - Poule 3",NA
-"CA Castelsarrasin",5,"Fédérale 1 - Poule 3",NA
-"CM Floirac",5,"Fédérale 1 - Poule 3",NA
-"FC Oloron",5,"Fédérale 1 - Poule 3",NA
-"Lombez Samatan club",5,"Fédérale 1 - Poule 3",NA
-"Peyrehorade SR",5,"Fédérale 1 - Poule 3",NA
-"Rion Morcenx CR",5,"Fédérale 1 - Poule 3",NA
-"RO Castelnaudary XV",5,"Fédérale 1 - Poule 3",NA
-"SA Mauléon",5,"Fédérale 1 - Poule 3",NA
-"Saint-Médard RC",5,"Fédérale 1 - Poule 3",NA
-"SC Mazamet",5,"Fédérale 1 - Poule 3",NA
-"SC Pamiers",5,"Fédérale 1 - Poule 3",NA
-"SC Tulle",5,"Fédérale 1 - Poule 3",NA
-"Stade Bagnérais",5,"Fédérale 1 - Poule 3",NA
-"Stade Nantais",5,"Fédérale 1 - Poule 3",NA
-"TOEC TOAC FCT",5,"Fédérale 1 - Poule 3",NA
-"UA Gaillac",5,"Fédérale 1 - Poule 3",NA
-"Union Barbézieux Jonzac",5,"Fédérale 1 - Poule 3",NA
-"US Bergerac",5,"Fédérale 1 - Poule 3",NA
-"US L'Isle-Jourdain",5,"Fédérale 1 - Poule 3",NA
-"US Nafarroa",5,"Fédérale 1 - Poule 3",NA
-"US Saint-Sulpice",5,"Fédérale 1 - Poule 3",NA
-"US Tyrosse",5,"Fédérale 1 - Poule 3",NA
-"CA Pontarlier",6,"Fédérale 2 - Poule 1",NA
-"CO Le Creusot",6,"Fédérale 2 - Poule 1",NA
-"CO Le Puy",6,"Fédérale 2 - Poule 1",NA
-"FC Saint-Claude",6,"Fédérale 2 - Poule 1",NA
-"Grand Dole Rugby",6,"Fédérale 2 - Poule 1",NA
-"RC Andrézieux-Bouthéon",6,"Fédérale 2 - Poule 1",NA
-"RC de la Dombes",6,"Fédérale 2 - Poule 1",NA
-"RC Rillieux",6,"Fédérale 2 - Poule 1",NA
-"Rugby Tango Chalonnais",6,"Fédérale 2 - Poule 1",NA
-"Saint-Priest Rugby",6,"Fédérale 2 - Poule 1",NA
-"US Meyzieu",6,"Fédérale 2 - Poule 1",NA
-"US Nantua Port",6,"Fédérale 2 - Poule 1",NA
-"AS Monaco",6,"Fédérale 2 - Poule 2",NA
-"Avignon Le Pontet Rugby",6,"Fédérale 2 - Poule 2",NA
-"Bièvre Saint-Geoirs RC",6,"Fédérale 2 - Poule 2",NA
-"CA Saint-Raphaël Fréjus",6,"Fédérale 2 - Poule 2",NA
-"RC Aubagne",6,"Fédérale 2 - Poule 2",NA
-"RC des Vallons-de-la-Tour",6,"Fédérale 2 - Poule 2",NA
-"RC Les Angles",6,"Fédérale 2 - Poule 2",NA
-"Saint-Marcellin sports",6,"Fédérale 2 - Poule 2",NA
-"SO Voiron",6,"Fédérale 2 - Poule 2",NA
-"US Montmélian",6,"Fédérale 2 - Poule 2",NA
-"US Véore XV",6,"Fédérale 2 - Poule 2",NA
-"US Vinay",6,"Fédérale 2 - Poule 2",NA
-"Avenir Castanéen",6,"Fédérale 2 - Poule 3",NA
-"Balma ORC",6,"Fédérale 2 - Poule 3",NA
-"Étoile sportive catalane",6,"Fédérale 2 - Poule 3",NA
-"FC Villefranche",6,"Fédérale 2 - Poule 3",NA
-"JO Prades",6,"Fédérale 2 - Poule 3",NA
-"Lévézou Ségala Aveyron XV",6,"Fédérale 2 - Poule 3",NA
-"RCM Palavas Lunel",6,"Fédérale 2 - Poule 3",NA
-"Salanque Côte Radieuse",6,"Fédérale 2 - Poule 3",NA
-"SC Leucate",6,"Fédérale 2 - Poule 3",NA
-"SO Millau",6,"Fédérale 2 - Poule 3",NA
-"Stade Piscénois",6,"Fédérale 2 - Poule 3",NA
-"USC Alban",6,"Fédérale 2 - Poule 3",NA
-"4 Cantons BHAP",6,"Fédérale 2 - Poule 4",NA
-"Bourges XV",6,"Fédérale 2 - Poule 4",NA
-"CA Sarlat",6,"Fédérale 2 - Poule 4",NA
-"EV Malemort BO",6,"Fédérale 2 - Poule 4",NA
-"JA Isle",6,"Fédérale 2 - Poule 4",NA
-"RC Arpajon Veinazès",6,"Fédérale 2 - Poule 4",NA
-"RC Clermont Cournon-d'Auvergne",6,"Fédérale 2 - Poule 4",NA
-"RC Riom",6,"Fédérale 2 - Poule 4",NA
-"RCP Saint-Yrieix",6,"Fédérale 2 - Poule 4",NA
-"Rugby Causse Vézère",6,"Fédérale 2 - Poule 4",NA
-"SC Decazeville",6,"Fédérale 2 - Poule 4",NA
-"Stade belvesois",6,"Fédérale 2 - Poule 4",NA
-"AA Nogaro",6,"Fédérale 2 - Poule 5",NA
-"Cahors Rugby",6,"Fédérale 2 - Poule 5",NA
-"Entente Astarac Bigorre XV",6,"Fédérale 2 - Poule 5",NA
-"ES Gimont",6,"Fédérale 2 - Poule 5",NA
-"FC Lourdes",6,"Fédérale 2 - Poule 5",NA
-"Oursbelille Bordères RC",6,"Fédérale 2 - Poule 5",NA
-"RC Bon-Encontre Boé",6,"Fédérale 2 - Poule 5",NA
-"Rugby Grenade",6,"Fédérale 2 - Poule 5",NA
-"Saint-Girons SC",6,"Fédérale 2 - Poule 5",NA
-"SC Rieumes",6,"Fédérale 2 - Poule 5",NA
-"Stade Beaumontois",6,"Fédérale 2 - Poule 5",NA
-"USEP Ger Séron Bédeille",6,"Fédérale 2 - Poule 5",NA
-"AS Pont-Long",6,"Fédérale 2 - Poule 6",NA
-"AS Soustons",6,"Fédérale 2 - Poule 6",NA
-"Boucau Tarnos stade",6,"Fédérale 2 - Poule 6",NA
-"Entente Aramits Asasp",6,"Fédérale 2 - Poule 6",NA
-"Hasparren AC",6,"Fédérale 2 - Poule 6",NA
-"Saint-Paul SR",6,"Fédérale 2 - Poule 6",NA
-"Stade Hendayais",6,"Fédérale 2 - Poule 6",NA
-"Stade Navarrais",6,"Fédérale 2 - Poule 6",NA
-"US Coarraze Nay",6,"Fédérale 2 - Poule 6",NA
-"US Morlaàs",6,"Fédérale 2 - Poule 6",NA
-"US Mouguerre",6,"Fédérale 2 - Poule 6",NA
-"US Orthez",6,"Fédérale 2 - Poule 6",NA
-"AS Mérignac",6,"Fédérale 2 - Poule 7",NA
-"CA Lormont",6,"Fédérale 2 - Poule 7",NA
-"FC yonnais",6,"Fédérale 2 - Poule 7",NA
-"RC Trignac",6,"Fédérale 2 - Poule 7",NA
-"SA Rochefort",6,"Fédérale 2 - Poule 7",NA
-"SC Surgères",6,"Fédérale 2 - Poule 7",NA
-"Stade Poitevin",6,"Fédérale 2 - Poule 7",NA
-"UA Gujan-Mestras",6,"Fédérale 2 - Poule 7",NA
-"US Bazas",6,"Fédérale 2 - Poule 7",NA
-"US Casteljaloux",6,"Fédérale 2 - Poule 7",NA
-"US Castillon",6,"Fédérale 2 - Poule 7",NA
-"US Tours",6,"Fédérale 2 - Poule 7",NA
-"Antony Métro 92",6,"Fédérale 2 - Poule 8",NA
-"CA Orsay RC",6,"Fédérale 2 - Poule 8",NA
-"CJF Saint-Malo",6,"Fédérale 2 - Poule 8",NA
-"CSM Gennevilliers",6,"Fédérale 2 - Poule 8",NA
-"MLSGP Rugby",6,"Fédérale 2 - Poule 8",NA
-"Plaisir RC",6,"Fédérale 2 - Poule 8",NA
-"Plouzané AC",6,"Fédérale 2 - Poule 8",NA
-"RC Amiens",6,"Fédérale 2 - Poule 8",NA
-"RC Auxerre",6,"Fédérale 2 - Poule 8",NA
-"RC Versailles",6,"Fédérale 2 - Poule 8",NA
-"SC Le Rheu",6,"Fédérale 2 - Poule 8",NA
-"US Ris-Orangis",6,"Fédérale 2 - Poule 8",NA
-"AC Soissons",7,"Fédérale 3 - Poule 1",NA
-"Paris XO",7,"Fédérale 3 - Poule 1",NA
-"RC Arras",7,"Fédérale 3 - Poule 1",NA
-"RC béthunois",7,"Fédérale 3 - Poule 1",NA
-"RC Compiègne",7,"Fédérale 3 - Poule 1",NA
-"RC Pays de Meaux",7,"Fédérale 3 - Poule 1",NA
-"RC Roubaix",7,"Fédérale 3 - Poule 1",NA
-"RU Dunkerque Littoral",7,"Fédérale 3 - Poule 1",NA
-"Rugby Épernay Champagne",7,"Fédérale 3 - Poule 1",NA
-"Stade villeneuvois LM",7,"Fédérale 3 - Poule 1",NA
-"ES Baronnies",7,"Fédérale 3 - Poule 10",NA
-"Juillan XV RC",7,"Fédérale 3 - Poule 10",NA
-"Magnoac FC",7,"Fédérale 3 - Poule 10",NA
-"RS Mauvezin",7,"Fédérale 3 - Poule 10",NA
-"Stade saint-gaudinois",7,"Fédérale 3 - Poule 10",NA
-"UA Saverdun",7,"Fédérale 3 - Poule 10",NA
-"Union Cazères Le Fousseret",7,"Fédérale 3 - Poule 10",NA
-"US L'Isle-en-Dodon",7,"Fédérale 3 - Poule 10",NA
-"US Tarascon XV",7,"Fédérale 3 - Poule 10",NA
-"US Vic",7,"Fédérale 3 - Poule 10",NA
-"Avenir Aturin",7,"Fédérale 3 - Poule 11",NA
-"Avenir de Bizanos",7,"Fédérale 3 - Poule 11",NA
-"Barcus Menditte Xiberoa",7,"Fédérale 3 - Poule 11",NA
-"Entente Sévignacq Vallée du Gabas",7,"Fédérale 3 - Poule 11",NA
-"Gan Olympique",7,"Fédérale 3 - Poule 11",NA
-"JS Riscle",7,"Fédérale 3 - Poule 11",NA
-"OO Laruns",7,"Fédérale 3 - Poule 11",NA
-"SA Hagetmau",7,"Fédérale 3 - Poule 11",NA
-"US Argelès",7,"Fédérale 3 - Poule 11",NA
-"US Josbaig",7,"Fédérale 3 - Poule 11",NA
-"AS Bayonne",7,"Fédérale 3 - Poule 12",NA
-"AS Urruñarrak",7,"Fédérale 3 - Poule 12",NA
-"Association Côte Landes",7,"Fédérale 3 - Poule 12",NA
-"Biscarrosse olympique",7,"Fédérale 3 - Poule 12",NA
-"Emak Hor Rugby",7,"Fédérale 3 - Poule 12",NA
-"Inthalatz rugby Larressore",7,"Fédérale 3 - Poule 12",NA
-"US Bardos",7,"Fédérale 3 - Poule 12",NA
-"US Cambo",7,"Fédérale 3 - Poule 12",NA
-"US Mugron",7,"Fédérale 3 - Poule 12",NA
-"US Saint-Palais",7,"Fédérale 3 - Poule 12",NA
-"CO Pont-du-Casse",7,"Fédérale 3 - Poule 13",NA
-"Léognan Rugby",7,"Fédérale 3 - Poule 13",NA
-"RC Gradignan",7,"Fédérale 3 - Poule 13",NA
-"RC Villeneuve",7,"Fédérale 3 - Poule 13",NA
-"Stade Blayais",7,"Fédérale 3 - Poule 13",NA
-"Stade Bordelais",7,"Fédérale 3 - Poule 13",NA
-"Stade Foyen",7,"Fédérale 3 - Poule 13",NA
-"Stade Réolais",7,"Fédérale 3 - Poule 13",NA
-"US Nérac",7,"Fédérale 3 - Poule 13",NA
-"US Vallée du Lot",7,"Fédérale 3 - Poule 13",NA
-"GS Figeac",7,"Fédérale 3 - Poule 14",NA
-"Naves SLR",7,"Fédérale 3 - Poule 14",NA
-"RC buguois",7,"Fédérale 3 - Poule 14",NA
-"RC Saint-Cernin",7,"Fédérale 3 - Poule 14",NA
-"RC Saint-Simon",7,"Fédérale 3 - Poule 14",NA
-"Stade Marivalois",7,"Fédérale 3 - Poule 14",NA
-"UA Vergt",7,"Fédérale 3 - Poule 14",NA
-"Union Saint-Astier Neuvic",7,"Fédérale 3 - Poule 14",NA
-"US Argentat",7,"Fédérale 3 - Poule 14",NA
-"USV Le Lardin-St-Lazare",7,"Fédérale 3 - Poule 14",NA
-"AS Saint-Junien",7,"Fédérale 3 - Poule 15",NA
-"Espérance Saint-Léger-des-Vignes",7,"Fédérale 3 - Poule 15",NA
-"FC Moulins",7,"Fédérale 3 - Poule 15",NA
-"OC Montluçon",7,"Fédérale 3 - Poule 15",NA
-"RC Guéret",7,"Fédérale 3 - Poule 15",NA
-"RC Issoudun",7,"Fédérale 3 - Poule 15",NA
-"RC Vichy",7,"Fédérale 3 - Poule 15",NA
-"Rugby sancerrois",7,"Fédérale 3 - Poule 15",NA
-"SA Vierzon",7,"Fédérale 3 - Poule 15",NA
-"US Ussel",7,"Fédérale 3 - Poule 15",NA
-"ARC Chauray",7,"Fédérale 3 - Poule 16",NA
-"RC La Baule",7,"Fédérale 3 - Poule 16",NA
-"RC Puilboreau",7,"Fédérale 3 - Poule 16",NA
-"RC sablais",7,"Fédérale 3 - Poule 16",NA
-"RC Saint-Sébastien",7,"Fédérale 3 - Poule 16",NA
-"Rugby Saint-Herblain",7,"Fédérale 3 - Poule 16",NA
-"SA Parthenay",7,"Fédérale 3 - Poule 16",NA
-"Saint-Nazaire ovalie",7,"Fédérale 3 - Poule 16",NA
-"SCORC Angers",7,"Fédérale 3 - Poule 16",NA
-"XV de l'Erdre",7,"Fédérale 3 - Poule 16",NA
-"AS Rouen UC",7,"Fédérale 3 - Poule 17",NA
-"Aurore de Vitré",7,"Fédérale 3 - Poule 17",NA
-"Grandchamp RC",7,"Fédérale 3 - Poule 17",NA
-"Pays Auray RC",7,"Fédérale 3 - Poule 17",NA
-"RC Concarneau",7,"Fédérale 3 - Poule 17",NA
-"RC Plabennec",7,"Fédérale 3 - Poule 17",NA
-"RC Pont-Audemer",7,"Fédérale 3 - Poule 17",NA
-"ROC Bruz",7,"Fédérale 3 - Poule 17",NA
-"Stade Caennais RC",7,"Fédérale 3 - Poule 17",NA
-"XV couronnais",7,"Fédérale 3 - Poule 17",NA
-"AC Bobigny 93",7,"Fédérale 3 - Poule 18",NA
-"AC Boulogne-Billancourt",7,"Fédérale 3 - Poule 18",NA
-"CS Clichy",7,"Fédérale 3 - Poule 18",NA
-"Évreux AC",7,"Fédérale 3 - Poule 18",NA
-"RC Montesson Chatou",7,"Fédérale 3 - Poule 18",NA
-"RC Vincennes",7,"Fédérale 3 - Poule 18",NA
-"RCA Cergy-Pontoise",7,"Fédérale 3 - Poule 18",NA
-"Rugby Aulnay Club",7,"Fédérale 3 - Poule 18",NA
-"SCUF rugby",7,"Fédérale 3 - Poule 18",NA
-"US Olympiades Massif central",7,"Fédérale 3 - Poule 18",NA
-"CA Chevreuse",7,"Fédérale 3 - Poule 2",NA
-"Clamart Rugby 92",7,"Fédérale 3 - Poule 2",NA
-"ES Vitry",7,"Fédérale 3 - Poule 2",NA
-"Gretz Tournan Ozoir RC 77",7,"Fédérale 3 - Poule 2",NA
-"RC Blois",7,"Fédérale 3 - Poule 2",NA
-"RC Sucy-en-Brie",7,"Fédérale 3 - Poule 2",NA
-"Rugby Champagne Saint-André",7,"Fédérale 3 - Poule 2",NA
-"Stade Pontellois",7,"Fédérale 3 - Poule 2",NA
-"US Pithiviers",7,"Fédérale 3 - Poule 2",NA
-"US Vendôme",7,"Fédérale 3 - Poule 2",NA
-"Colmar RC",7,"Fédérale 3 - Poule 3",NA
-"COS Villers-lès-Nancy",7,"Fédérale 3 - Poule 3",NA
-"CR Illkirch-Graffenstaden",7,"Fédérale 3 - Poule 3",NA
-"Entente Montbéliard Belfort AR",7,"Fédérale 3 - Poule 3",NA
-"FC Haguenau",7,"Fédérale 3 - Poule 3",NA
-"Nancy Seichamps Rugby",7,"Fédérale 3 - Poule 3",NA
-"Olympique de Besançon",7,"Fédérale 3 - Poule 3",NA
-"RC Metz",7,"Fédérale 3 - Poule 3",NA
-"Strasbourg AR",7,"Fédérale 3 - Poule 3",NA
-"US Genlis",7,"Fédérale 3 - Poule 3",NA
-"CS Lons",7,"Fédérale 3 - Poule 4",NA
-"RC Belleville Beaujolais",7,"Fédérale 3 - Poule 4",NA
-"RC Chagny",7,"Fédérale 3 - Poule 4",NA
-"RC Faucigny Mont-Blanc",7,"Fédérale 3 - Poule 4",NA
-"RC Montceau Bourgogne",7,"Fédérale 3 - Poule 4",NA
-"RC Viriat",7,"Fédérale 3 - Poule 4",NA
-"SC Couches",7,"Fédérale 3 - Poule 4",NA
-"Stade Montchaninois Bourgogne",7,"Fédérale 3 - Poule 4",NA
-"US Bellegarde Coupy",7,"Fédérale 3 - Poule 4",NA
-"US pays de Gex",7,"Fédérale 3 - Poule 4",NA
-"AS Ampuis Côte-rôtie",7,"Fédérale 3 - Poule 5",NA
-"AS Saint-Marcel-Isle d'Abeau",7,"Fédérale 3 - Poule 5",NA
-"Clermont UC Aubière",7,"Fédérale 3 - Poule 5",NA
-"FC Aix-les-Bains",7,"Fédérale 3 - Poule 5",NA
-"RC saint-jeannais",7,"Fédérale 3 - Poule 5",NA
-"Rhône Sportif Rugby",7,"Fédérale 3 - Poule 5",NA
-"Saint-Savin sportif",7,"Fédérale 3 - Poule 5",NA
-"SC Tarare",7,"Fédérale 3 - Poule 5",NA
-"SO Givors",7,"Fédérale 3 - Poule 5",NA
-"US Beaurepaire",7,"Fédérale 3 - Poule 5",NA
-"Bassin de Crussol Rugby",7,"Fédérale 3 - Poule 6",NA
-"Entente Chateauneuf St-Marcel XV",7,"Fédérale 3 - Poule 6",NA
-"FC Tournon Tain",7,"Fédérale 3 - Poule 6",NA
-"RC cévenol",7,"Fédérale 3 - Poule 6",NA
-"RC Romans Péage",7,"Fédérale 3 - Poule 6",NA
-"RC Seyssins",7,"Fédérale 3 - Poule 6",NA
-"RC teillois",7,"Fédérale 3 - Poule 6",NA
-"US Deux-Ponts",7,"Fédérale 3 - Poule 6",NA
-"US Montélimar",7,"Fédérale 3 - Poule 6",NA
-"US Renage Rives",7,"Fédérale 3 - Poule 6",NA
-"Aix UC",7,"Fédérale 3 - Poule 7",NA
-"Boxeland Club islois XV",7,"Fédérale 3 - Poule 7",NA
-"Marseille RM",7,"Fédérale 3 - Poule 7",NA
-"RC de la Vallée du Gapeau",7,"Fédérale 3 - Poule 7",NA
-"RC Draguignan",7,"Fédérale 3 - Poule 7",NA
-"RC Jacou Montpellier Nord",7,"Fédérale 3 - Poule 7",NA
-"RC Sète",7,"Fédérale 3 - Poule 7",NA
-"Stade Marseillais UC",7,"Fédérale 3 - Poule 7",NA
-"SU Cavaillon",7,"Fédérale 3 - Poule 7",NA
-"US Mourillon",7,"Fédérale 3 - Poule 7",NA
-"Avenir Bleu et Blanc",7,"Fédérale 3 - Poule 8",NA
-"Entente Vendres Lespignan",7,"Fédérale 3 - Poule 8",NA
-"JS illibérienne",7,"Fédérale 3 - Poule 8",NA
-"RC Saint-Affrique",7,"Fédérale 3 - Poule 8",NA
-"RC Trèbes",7,"Fédérale 3 - Poule 8",NA
-"Rivesaltes Baixas Espira Agly XV",7,"Fédérale 3 - Poule 8",NA
-"Servian Boujan Rugby",7,"Fédérale 3 - Poule 8",NA
-"Union Sigean Port-la-Nouvelle",7,"Fédérale 3 - Poule 8",NA
-"US Quillan Limoux",7,"Fédérale 3 - Poule 8",NA
-"US Thuir",7,"Fédérale 3 - Poule 8",NA
-"AS Tournefeuille",7,"Fédérale 3 - Poule 9",NA
-"Coq léguevinois",7,"Fédérale 3 - Poule 9",NA
-"Entente de la vallée du Girou",7,"Fédérale 3 - Poule 9",NA
-"RC de la Saudrune",7,"Fédérale 3 - Poule 9",NA
-"RC Saint-Sulpice",7,"Fédérale 3 - Poule 9",NA
-"RC Salvetat Plaisance",7,"Fédérale 3 - Poule 9",NA
-"Rodez Rugby",7,"Fédérale 3 - Poule 9",NA
-"SC Nègrepelisse",7,"Fédérale 3 - Poule 9",NA
-"Sor Agout XV",7,"Fédérale 3 - Poule 9",NA
-"US Caussade",7,"Fédérale 3 - Poule 9",NA
-"AS Bortoise",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Forgeron Commentryens",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"CAS Gerzatois",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Chassieu Rugby",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Club Omnisport de Lyon",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"CR Ancizes Comps",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"EMD Plaine de l'Ain",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Entente Mun Et Sportive de Bron",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Entente Vaulnaveys Vizille",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"FC Moulinois",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Grenoble Université Club - Saint Martin D'heres Rugby",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"La Voulte Rugby Club Ardeche",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Lovali XV",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Meythet RC",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Ol St Genis Laval",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Pays de Thiers Rugby",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Bourguesan",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Canton Montrevel en Bresse",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Eyrieux",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Haute Bresse",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Matheysin",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Mauriacois",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Motterain",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC St Flour",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC St Simon",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Vif Monestier Trieves",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Rhodia Cl Peage Rous Et Sal",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Rhone Sportif",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Annemassien",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Eymeux",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Entente Est Lyonnais XV",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"SO Givors Rugby 2 Vallees",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"SC ACussetois",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"SC Brivadois",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Stade Ath Bourg En Bresse",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"UA Tullins Fures",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Union Rugby En Ardeche Meridionale",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"Union Sportive Rhone XV",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"US Deux Ponts",8,"Régionale 1 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Autunoise",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"Association Sportive Chablisienne",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"Chambertin Olympique",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"Champagnole Rugby",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"CS Beaunois",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"CS Seurrois",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"Entente Montbeliard Belfort Ascap Rugby Rcpm",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"FC Digoin Rugby Charolais XV",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"RC Chagnotin",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Club du Louhannais",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"US Clunisoise",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"US Doloise",8,"Régionale 1 - Ligue Bourgogne-Franche-Comté",NA
-"Avant Garde Laique de Fougères",8,"Régionale 1 - Ligue Bretagne",NA
-"Dinan Rugby",8,"Régionale 1 - Ligue Bretagne",NA
-"RC Quimperois",8,"Régionale 1 - Ligue Bretagne",NA
-"RC Redonnais",8,"Régionale 1 - Ligue Bretagne",NA
-"RC St Brieuc",8,"Régionale 1 - Ligue Bretagne",NA
-"Rugby Club Brocéliande Oust Serent",8,"Régionale 1 - Ligue Bretagne",NA
-"Rugby Kreiz Treger",8,"Régionale 1 - Ligue Bretagne",NA
-"Rugby Lannion Perros",8,"Régionale 1 - Ligue Bretagne",NA
-"Dammarie RC",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"RAC Castelroussin",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"Ras Pole Sologne",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"RC Drouais",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"RC Orleans La Source",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"SA Vierzonnais",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"SC Chinonais",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"US Bracieux",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"US Joue",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"US La Chatre",8,"Régionale 1 - Ligue Centre-Val de Loire",NA
-"Association Sportive Des Cheminots de Strasbourg Rugby",8,"Régionale 1 - Ligue Grand Est",NA
-"C Ol Chalonnais",8,"Régionale 1 - Ligue Grand Est",NA
-"Entente Sud Haute Marne",8,"Régionale 1 - Ligue Grand Est",NA
-"RUS Hayange",8,"Régionale 1 - Ligue Grand Est",NA
-"RC Mulhouse",8,"Régionale 1 - Ligue Grand Est",NA
-"RC Pont A Mousson",8,"Régionale 1 - Ligue Grand Est",NA
-"Rugby Champagne St André Vergers",8,"Régionale 1 - Ligue Grand Est",NA
-"C Leo Lagrange Armentieres",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"Le Touquet Etaples Rugby Club",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"L'Ovale Racing Club Marquettois",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"R Ol C Tourquennois",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"RC Bethunois",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"Saint Omer / Millam",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"Stade Villeneuvois Lille Metropole",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"XV Bailleulois",8,"Régionale 1 - Ligue Hauts-de-France",NA
-"AC Bobigny 93 Rugby",8,"Régionale 1 - Ligue Île-de-France",NA
-"AS Lagny Rugby",8,"Régionale 1 - Ligue Île-de-France",NA
-"C AChevreuse",8,"Régionale 1 - Ligue Île-de-France",NA
-"C Ath Orsay Rugby Club",8,"Régionale 1 - Ligue Île-de-France",NA
-"CO Gargenville",8,"Régionale 1 - Ligue Île-de-France",NA
-"Entente AS Marcoussis US Limours",8,"Régionale 1 - Ligue Île-de-France",NA
-"Paris Xo Rugby",8,"Régionale 1 - Ligue Île-de-France",NA
-"Parisis Rugby Club",8,"Régionale 1 - Ligue Île-de-France",NA
-"Racing Club de L Agglomeration Cergy Pontoise",8,"Régionale 1 - Ligue Île-de-France",NA
-"RC Paris 15",8,"Régionale 1 - Ligue Île-de-France",NA
-"Red Star Ol Audonien St Ouen",8,"Régionale 1 - Ligue Île-de-France",NA
-"RO C Giffois",8,"Régionale 1 - Ligue Île-de-France",NA
-"RO C Houilles Carrieres Seine",8,"Régionale 1 - Ligue Île-de-France",NA
-"Rst Chilly / Epinay",8,"Régionale 1 - Ligue Île-de-France",NA
-"Rst UBM/Champigny",8,"Régionale 1 - Ligue Île-de-France",NA
-"Rueil AC",8,"Régionale 1 - Ligue Île-de-France",NA
-"Rugby Cellois Chesnaysien",8,"Régionale 1 - Ligue Île-de-France",NA
-"Rugby Club Garches Vaucresson",8,"Régionale 1 - Ligue Île-de-France",NA
-"Rugby Club Vallee de Montmorency Soisy",8,"Régionale 1 - Ligue Île-de-France",NA
-"Rugby Melun Combs Senart 77",8,"Régionale 1 - Ligue Île-de-France",NA
-"Terres de France Rugby",8,"Régionale 1 - Ligue Île-de-France",NA
-"Vie Au Grand Air de St Maur",8,"Régionale 1 - Ligue Île-de-France",NA
-"CS Gravenchon",8,"Régionale 1 - Ligue Normandie",NA
-"Dieppe Universitaire Club",8,"Régionale 1 - Ligue Normandie",NA
-"Ras Ava R1",8,"Régionale 1 - Ligue Normandie",NA
-"RC Granvillais",8,"Régionale 1 - Ligue Normandie",NA
-"RC Yvetotais",8,"Régionale 1 - Ligue Normandie",NA
-"Rugby Club Grand Quevilly",8,"Régionale 1 - Ligue Normandie",NA
-"Rugby Club Mont Saint Aignan",8,"Régionale 1 - Ligue Normandie",NA
-"Slr Lisieux / Rac Honfleur",8,"Régionale 1 - Ligue Normandie",NA
-"A Urrugnarrak",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Amicale Rugby de Marans",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"AS Meyssacoise",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"AS Montfortoise",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Aytre Rugby",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Bidart Union Club",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Bordeaux E C",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"CA Riberacois",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Confluent Rugby Club XV",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"CS Nontronnais",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"ES Arudyenne",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"ES Lembeye",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Esperance Sportive Montignac",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Jse Sp Labouheyre",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Jse Sp Villeneuve de Marsan",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Limoges Étudiants Club",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Marsacq XV",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Pays Medoc Rugby",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Pessac Rugby",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"RAC Angerien",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Ras Escou Lasseube",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Ras Rcpsy / Urca",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Ras Salon La Tour - Uzerche",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"RC Cestadais",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"RC Mussidanais",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"RC Queyrannais",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"RC Ustaritz Jatxou",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club de La Pimpine",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Libournais",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Martignas Illac",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Pouillon Labatut (RCPL)",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"SA Monein",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"SA St Severin",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"St Cyprien AC",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"St Pee U C",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Stade Reolais",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Stade Saint Livradais XV",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"UA Issigeacoise",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"UA Mimizannaise",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Union Sportive Cublac Terrasson",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Union Sportive Juillac Objat",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"US Bouscataise",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"US Egletonnaise",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"US Habassaise",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"US Josbaig St Goin",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"US Lalinde",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"US Saintes Rugby",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"US Vezerienne Le Lardin St Lazare",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"XV Haut Perigord",8,"Régionale 1 - Ligue Nouvelle-Aquitaine",NA
-"Association Sportive Poussan XV",8,"Régionale 1 - Ligue Occitanie",NA
-"Avenir Moissagais",8,"Régionale 1 - Ligue Occitanie",NA
-"Aviron Castrais",8,"Régionale 1 - Ligue Occitanie",NA
-"Club Athletique Bedarieux Grand Orb Rugby",8,"Régionale 1 - Ligue Occitanie",NA
-"CO Castelnaudais",8,"Régionale 1 - Ligue Occitanie",NA
-"Coquelicots Montechois Rugby",8,"Régionale 1 - Ligue Occitanie",NA
-"Entente La Vallee Du Girou",8,"Régionale 1 - Ligue Occitanie",NA
-"Entente Sp Coteaux de L Arret",8,"Régionale 1 - Ligue Occitanie",NA
-"FC Triais",8,"Régionale 1 - Ligue Occitanie",NA
-"Gourdon XV Bouriane",8,"Régionale 1 - Ligue Occitanie",NA
-"Les Rives d'Orb",8,"Régionale 1 - Ligue Occitanie",NA
-"Mazeres Cassagne Sports",8,"Régionale 1 - Ligue Occitanie",NA
-"Ol Montredonnais XV",8,"Régionale 1 - Ligue Occitanie",NA
-"Ras Bretenoux Biars Vayrac / Gramat",8,"Régionale 1 - Ligue Occitanie",NA
-"RC Bassoues Lupiac Montesq",8,"Régionale 1 - Ligue Occitanie",NA
-"RC Espalionnais Nord Aveyron",8,"Régionale 1 - Ligue Occitanie",NA
-"RC Mauguio Carnon Pays D'or",8,"Régionale 1 - Ligue Occitanie",NA
-"RC Montalbanais",8,"Régionale 1 - Ligue Occitanie",NA
-"RC Revelois",8,"Régionale 1 - Ligue Occitanie",NA
-"RC Uzetien",8,"Régionale 1 - Ligue Occitanie",NA
-"Rugby Club Muretain",8,"Régionale 1 - Ligue Occitanie",NA
-"Rugby Club Plages d'Orb",8,"Régionale 1 - Ligue Occitanie",NA
-"Rugby Club Saint Sulpice La Pointe XV",8,"Régionale 1 - Ligue Occitanie",NA
-"SA Condomoise",8,"Régionale 1 - Ligue Occitanie",NA
-"St Cere Rugby",8,"Régionale 1 - Ligue Occitanie",NA
-"St Juery Arthes Ol Rugby",8,"Régionale 1 - Ligue Occitanie",NA
-"Stade O Maubourguetois Rugby",8,"Régionale 1 - Ligue Occitanie",NA
-"Stade Saint Gaudinois Luchonnais Boulonnais XV",8,"Régionale 1 - Ligue Occitanie",NA
-"Toulouse Electrogaz Club",8,"Régionale 1 - Ligue Occitanie",NA
-"Toulouse Lalande Aucamville XV",8,"Régionale 1 - Ligue Occitanie",NA
-"Toulouse UC",8,"Régionale 1 - Ligue Occitanie",NA
-"UA Vicoise",8,"Régionale 1 - Ligue Occitanie",NA
-"Union Sigean Port La Nouvelle",8,"Régionale 1 - Ligue Occitanie",NA
-"Union Rugby Club de La Geune Juillan Louey",8,"Régionale 1 - Ligue Occitanie",NA
-"Union Sportive des Coteaux Pouyastruc",8,"Régionale 1 - Ligue Occitanie",NA
-"US Canton St Lys",8,"Régionale 1 - Ligue Occitanie",NA
-"US Lectouroise",8,"Régionale 1 - Ligue Occitanie",NA
-"US Luzechoise",8,"Régionale 1 - Ligue Occitanie",NA
-"US Millas",8,"Régionale 1 - Ligue Occitanie",NA
-"US Verfeilloise Sect Rugby",8,"Régionale 1 - Ligue Occitanie",NA
-"Ailes Sportives Bouguenais - Reze Rugby",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Fontenay Lucon Rugby Sud Vendee",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"RO Choletais",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Rugby Club du Haut Anjou",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Rugby Club Herbretais",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Rugby Olympique Chemille",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Rugby Saint Herblain",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Sport Atlh Club Clissonnais",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Velo Sport Nantais",8,"Régionale 1 - Ligue Pays de la Loire",NA
-"Aix Universite Rugby",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Club Rugby Amateur de Balagne",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Pennes Mirabeau Cadeneaux Rug",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Portivechju Rugby",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC de La Vallee Du Gapeau",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Dignois",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Lucciana",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Orangeois",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Fos Sur Mer",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Six Fours - Le Brusc",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"SC Salonais",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"US Valreassienne Rugby",8,"Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Etang Sale Rugby Club",8,"Régionale 1 - Ligue Réunion",NA
-"Leu Rugby Club",8,"Régionale 1 - Ligue Réunion",NA
-"RC Le Tampon",8,"Régionale 1 - Ligue Réunion",NA
-"RC Portois Le Port",8,"Régionale 1 - Ligue Réunion",NA
-"RC Saint Paul",8,"Régionale 1 - Ligue Réunion",NA
-"RC St Gilles",8,"Régionale 1 - Ligue Réunion",NA
-"RC St Pierre Et Du Sud",8,"Régionale 1 - Ligue Réunion",NA
-"Sporting Club Du Chaudron",8,"Régionale 1 - Ligue Réunion",NA
-"XV Dionysien",8,"Régionale 1 - Ligue Réunion",NA
-"Archiball West Indies Rugby",9,"Régionale 2 - Guadeloupe",NA
-"Barracudas",9,"Régionale 2 - Guadeloupe",NA
-"Boisripeaux Rugby Club Abymes",9,"Régionale 2 - Guadeloupe",NA
-"Le Good Luck",9,"Régionale 2 - Guadeloupe",NA
-"Rugby Club de Goyave",9,"Régionale 2 - Guadeloupe",NA
-"Amberieu Bugey XV",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Amicale Laique Echirolles",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Arcol Rugby",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Cours La Ville",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Culin",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Granoise",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Roannaise",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Romagnatoise Rugby",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Succieu Terres Froides",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"ASS Verpilliere Nord Isere XV",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Bugey Ol Club Belley",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"CA Mauriennais",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Chartreuse Rugby Club",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"CS Gresivaudan Belledonne",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"CS Sauxillangeois",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Entente Blanzat Chateaugay",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Étoile Du Bugey Rugby",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Ol RC Riom Es Montagnes",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Ol St Bonnet Pres Riom",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Oval Club Gevaudan",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Ovalie Berg Coiron Helvie",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Pays de L'arbresle Rugby Club",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Canton de Marsanne",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Castelpontin",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Chartreuse Neron",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Chatillonnais",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Combronde",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Forezien Feurs",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Gresivaudan",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC La Sevenne",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Montaigut Besse",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Montmeyrannais",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Plats / RC Lamastrois",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Rambertois",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Roche La Molière",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Sillans",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC St Genes Champanelle",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Thones Aravis",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Thonon Chablais Leman",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Varacieux",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Veyle Saone",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Clermont La Plaine",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Billomois",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club des Landes",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club du Pays d'Ozon",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Le Mole",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Vaux",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Olympique Donzerois",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"SO Pont Cheruy Charvieu Chavanoz Tignieu",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"SO Ugine Albertville",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Saint Mamet Rugby",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"SC Privadois Rugby",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Stade Chamalierois",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Stade Clermontois Rugby",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"Stade Olympique Annoneen",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"UA Cotoise (cote St Andre)",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"US Cotes d'Arey",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"US Izeaux",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"US Jarrie Champs",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"US La Ravoire",9,"Régionale 2 - Ligue Auvergne-Rhône-Alpes",NA
-"ASC Saint Apollinaire",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Avenir Sportif Tournus",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Chatenoy RC",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Is Alliance Rugby",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"RC Vesoul",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Toucy Puisaye Forterre",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Union Morteau Plateau 25",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Saone Seille Rugby",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"US Buxynoise",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Verdun R AC",9,"Régionale 2 - Ligue Bourgogne-Franche-Comté",NA
-"Bain de Bretagne Rugby",9,"Régionale 2 - Ligue Bretagne",NA
-"Brest Bretagne Rugby",9,"Régionale 2 - Ligue Bretagne",NA
-"Le Relecq Kerhuon Rugby",9,"Régionale 2 - Ligue Bretagne",NA
-"RC Landivisien",9,"Régionale 2 - Ligue Bretagne",NA
-"RST Ploemeur RC - PGK",9,"Régionale 2 - Ligue Bretagne",NA
-"RST Rennes Rugby",9,"Régionale 2 - Ligue Bretagne",NA
-"Rugby Club Iroise Saint Renan",9,"Régionale 2 - Ligue Bretagne",NA
-"Rugby Club Lanester Bretagne Sud",9,"Régionale 2 - Ligue Bretagne",NA
-"Union Sportive Acignolaise",9,"Régionale 2 - Ligue Bretagne",NA
-"XV de L'ic",9,"Régionale 2 - Ligue Bretagne",NA
-"AC Aubigny",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"Arcay Rugby Club Pays de Bourges",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"AS Luynoise Rugby",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"Buzancais Rug Val Indre Brenne",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"Cercle Jules Ferry Rugby Fleury Les Aubrais",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"Loches RO C",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"Oval Club Sancoinnais",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"Rugby Esvres Club Val de L'indre",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"USM Montargis",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"US St Pierre Des Corps",9,"Régionale 2 - Ligue Centre-Val de Loire",NA
-"Ardennes Rugby",9,"Régionale 2 - Ligue Grand Est",NA
-"Entente Bar-le-duc / Saint-dizier",9,"Régionale 2 - Ligue Grand Est",NA
-"Lauterbourg AS",9,"Régionale 2 - Ligue Grand Est",NA
-"RC Naborien",9,"Régionale 2 - Ligue Grand Est",NA
-"RC St Louis",9,"Régionale 2 - Ligue Grand Est",NA
-"Rugby Club de La Licorne - Saverne",9,"Régionale 2 - Ligue Grand Est",NA
-"Rugby Club Thann",9,"Régionale 2 - Ligue Grand Est",NA
-"Stade Reims",9,"Régionale 2 - Ligue Grand Est",NA
-"Thionville Yutz Generation R E",9,"Régionale 2 - Ligue Grand Est",NA
-"US Bassin de Longwy",9,"Régionale 2 - Ligue Grand Est",NA
-"Amicale Du Rugby Calaisien",9,"Régionale 2 - Ligue Hauts-de-France",NA
-"Clermont Club Rugby",9,"Régionale 2 - Ligue Hauts-de-France",NA
-"Phalempin / Omr",9,"Régionale 2 - Ligue Hauts-de-France",NA
-"RC Laon",9,"Régionale 2 - Ligue Hauts-de-France",NA
-"RC Valenciennois",9,"Régionale 2 - Ligue Hauts-de-France",NA
-"Rugby Olympique Flesselles",9,"Régionale 2 - Ligue Hauts-de-France",NA
-"Entente RC CS Bretigny",9,"Régionale 2 - Ligue Île-de-France",NA
-"Entente RC Plessis Robinson Meudo",9,"Régionale 2 - Ligue Île-de-France",NA
-"Provins Rugby Club",9,"Régionale 2 - Ligue Île-de-France",NA
-"R Conflans Herblay Val Seine",9,"Régionale 2 - Ligue Île-de-France",NA
-"Racing Nanterre Rugby",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rambouillet Sports",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Creteil Choisy",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Dourdan",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Livry Gargan",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Neuilly Sur Marne",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Noisy Le Gd Marne La Vallee",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Paris Neuilly Sur Seine",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Senlis",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Val de Bièvre",9,"Régionale 2 - Ligue Île-de-France",NA
-"RC Velizy Villacoublay",9,"Régionale 2 - Ligue Île-de-France",NA
-"RO Yerrois",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rst Plateau Briard/bonneuil Villeneuve Brevannes",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rst Puteaux / ACBB",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Club Bagnoltais",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Club de Suresnes - Hauts De Seine (3)",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Club du Pays de Nemours",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Club Montreuillois",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Club Porte de l'Oise",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Club Seine & Oise Triel Sur Seine",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Olympique de Pantin",9,"Régionale 2 - Ligue Île-de-France",NA
-"Rugby Sud 77",9,"Régionale 2 - Ligue Île-de-France",NA
-"Stade Ol Rosneen",9,"Régionale 2 - Ligue Île-de-France",NA
-"Union Rugby Centre 78",9,"Régionale 2 - Ligue Île-de-France",NA
-"US Alfortville Rugby",9,"Régionale 2 - Ligue Île-de-France",NA
-"USO Athis Mons",9,"Régionale 2 - Ligue Île-de-France",NA
-"Havre Rugby Club",9,"Régionale 2 - Ligue Normandie",NA
-"Racing Club Port du Havre",9,"Régionale 2 - Ligue Normandie",NA
-"RC Alencon",9,"Régionale 2 - Ligue Normandie",NA
-"RC Cherbourg Hague",9,"Régionale 2 - Ligue Normandie",NA
-"RC Herouvillais",9,"Régionale 2 - Ligue Normandie",NA
-"RC Pays de Coutances",9,"Régionale 2 - Ligue Normandie",NA
-"RC St Lois",9,"Régionale 2 - Ligue Normandie",NA
-"Rugby Ouest Cotentin",9,"Régionale 2 - Ligue Normandie",NA
-"4 C XV",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Asasp Arros",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Capelaine",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Castelmoron XV",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Chasteaux Et Lissac",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Elgarrekin Ascain",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Jeunes de Dampniat",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Le Passage Rugby",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Miramontaise",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Narrossaise",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS Ondraise",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS P O Brive",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AS St Martin de Seignanx",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Athletic Rugby Club Baillargeois Du Valvert",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Benejacq Ol En Val Du Lagoin",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"C Ath Pontacq",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Club Omnisports Couronnais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Club Ovalie Du Bocage 79",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Entente Lesperon Onesse",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Étoile SP Eysinaise",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Folles Ambazac Ras",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Jarnac Rouillac Fin Bois",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Marsilly Rugby Club",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Oleron RC",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Ovalie Club Villeneuvois",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Pedale Stade Tarusate",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Ras RC V / L B R",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"RC Billere ASPTT Lescar",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"RC Cantonal Salignacois Pays de Fenelon",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"RC Chameyracois",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"RC Confolentais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"RC Cubzaguais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"RC Lege Cap Ferret",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"RC Nieuil L Espoir",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Association Pays Isle Dronne 33",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Bazeillais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Daglanais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club de Trelissac",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Verneuillais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"SA Montponnais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"SC Saint Aubin",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Sporting Club Rhetais",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"URG - Union Rugby Gascon",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Union Rugby Clubs XV Ambares, St Loubes, Izon",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Union Varetz Saint Aulaire Rugby",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"US Aspoise",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"USB Arthez Lagor",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"US Grenadoise Rugby",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"US Herm Rugby",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"US Lavardac Barbaste",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"US Roquentin Laroque Timbaut",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"US Trembladaise",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"Ychoux Ol",9,"Régionale 2 - Ligue Nouvelle-Aquitaine",NA
-"AC Labastide Beauvoir",9,"Régionale 2 - Ligue Occitanie",NA
-"Am Sp Cult Aureilhan",9,"Régionale 2 - Ligue Occitanie",NA
-"Amicale Sportive Lisloise",9,"Régionale 2 - Ligue Occitanie",NA
-"AS Maureilhan Montady Rugby XV",9,"Régionale 2 - Ligue Occitanie",NA
-"AS Olonzac Minervois",9,"Régionale 2 - Ligue Occitanie",NA
-"Association Ouveillan Cuxac",9,"Régionale 2 - Ligue Occitanie",NA
-"Association Sportive Canet",9,"Régionale 2 - Ligue Occitanie",NA
-"Avenir Monclarais",9,"Régionale 2 - Ligue Occitanie",NA
-"Avenir Ol Viviez",9,"Régionale 2 - Ligue Occitanie",NA
-"C Ol St Lary Soulan",9,"Régionale 2 - Ligue Occitanie",NA
-"Compound C ACapdenacois",9,"Régionale 2 - Ligue Occitanie",NA
-"Entente Fleury Salles Coursan XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Entente La Tet",9,"Régionale 2 - Ligue Occitanie",NA
-"Entente Les 3 Clochers",9,"Régionale 2 - Ligue Occitanie",NA
-"Entente US Murviel Thezan",9,"Régionale 2 - Ligue Occitanie",NA
-"Étoile Sportive Laroque Belesta",9,"Régionale 2 - Ligue Occitanie",NA
-"F Laique Ht Vernet Perpignan",9,"Régionale 2 - Ligue Occitanie",NA
-"Hers Lauragais XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Jeunesse Sportive Ibosceenne XV",9,"Régionale 2 - Ligue Occitanie",NA
-"JSE SP Caramanaise",9,"Régionale 2 - Ligue Occitanie",NA
-"Lauzerte Quercy Pays de Serres XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Masseube XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Olympique Des Monts de Lacaune",9,"Régionale 2 - Ligue Occitanie",NA
-"Olympique Labruguiere XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Piège Lauragais Malepere XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Puylaurens AC",9,"Régionale 2 - Ligue Occitanie",NA
-"Racing Club Ponteilla",9,"Régionale 2 - Ligue Occitanie",NA
-"Ras Eoll XV Launaguet",9,"Régionale 2 - Ligue Occitanie",NA
-"Ras ESPCV XV (cers/portiragnes)",9,"Régionale 2 - Ligue Occitanie",NA
-"Ras Ovalie Villecomtal Rabastens",9,"Régionale 2 - Ligue Occitanie",NA
-"Ras Rugby Pays d'Olmes",9,"Régionale 2 - Ligue Occitanie",NA
-"RC Bagnols Marcoule",9,"Régionale 2 - Ligue Occitanie",NA
-"RC Labarthe sur Leze",9,"Régionale 2 - Ligue Occitanie",NA
-"RC Mende Lozere",9,"Régionale 2 - Ligue Occitanie",NA
-"RC Mirapicien XV",9,"Régionale 2 - Ligue Occitanie",NA
-"RC Rougier",9,"Régionale 2 - Ligue Occitanie",NA
-"RC St Gillois",9,"Régionale 2 - Ligue Occitanie",NA
-"RO Lunellois",9,"Régionale 2 - Ligue Occitanie",NA
-"Rugby Carbonne Longages XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Rugby Club Alaric",9,"Régionale 2 - Ligue Occitanie",NA
-"Rugby Club Quint Fonsegrives",9,"Régionale 2 - Ligue Occitanie",NA
-"Rugby Club Saint Jory Bruguieres XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Rugby Coeur de Lomagne",9,"Régionale 2 - Ligue Occitanie",NA
-"Rugby Entente Du Cabardes",9,"Régionale 2 - Ligue Occitanie",NA
-"SA Auterivain",9,"Régionale 2 - Ligue Occitanie",NA
-"Saint Gely Pic Saint Loup Rugby",9,"Régionale 2 - Ligue Occitanie",NA
-"SC Briatextois",9,"Régionale 2 - Ligue Occitanie",NA
-"Semeac Ol",9,"Régionale 2 - Ligue Occitanie",NA
-"Sidobre Montagne XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Stade Ath Rabastens Couffouleu",9,"Régionale 2 - Ligue Occitanie",NA
-"Stade Maursois Chataigneraie Cele",9,"Régionale 2 - Ligue Occitanie",NA
-"Stade St Orennais XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Tournay Sports",9,"Régionale 2 - Ligue Occitanie",NA
-"Union Sportive Cote Vermeille XV",9,"Régionale 2 - Ligue Occitanie",NA
-"Union Sportive du Mardaing Azereix / Ossun",9,"Régionale 2 - Ligue Occitanie",NA
-"Union Sportive Nissan Colombiers",9,"Régionale 2 - Ligue Occitanie",NA
-"Union Sportive Villemur Fronton",9,"Régionale 2 - Ligue Occitanie",NA
-"US Adeenne",9,"Régionale 2 - Ligue Occitanie",NA
-"US Aussillon Mazamet XV",9,"Régionale 2 - Ligue Occitanie",NA
-"US Carmaux Rugby",9,"Régionale 2 - Ligue Occitanie",NA
-"US Critourienne Verniollaise",9,"Régionale 2 - Ligue Occitanie",NA
-"US Eauze d'Armagnac",9,"Régionale 2 - Ligue Occitanie",NA
-"US Fuxeenne",9,"Régionale 2 - Ligue Occitanie",NA
-"US Lezadoise",9,"Régionale 2 - Ligue Occitanie",NA
-"US Montrealaise",9,"Régionale 2 - Ligue Occitanie",NA
-"US Montrejeau Gourdan Polignan",9,"Régionale 2 - Ligue Occitanie",NA
-"US Plaisantine",9,"Régionale 2 - Ligue Occitanie",NA
-"US Portesienne",9,"Régionale 2 - Ligue Occitanie",NA
-"US Ramonville Ste Agne",9,"Régionale 2 - Ligue Occitanie",NA
-"US Severagaise",9,"Régionale 2 - Ligue Occitanie",NA
-"US Souillagaise",9,"Régionale 2 - Ligue Occitanie",NA
-"US Vielmuroise",9,"Régionale 2 - Ligue Occitanie",NA
-"Val XV",9,"Régionale 2 - Ligue Occitanie",NA
-"C Ol Pontlieue",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"Ras Sac / Crc",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"RC Grace Guenrouet",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"RC Lavallois",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"RC Pays d'Ancenis",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"RC Pornicais",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"Rugby Club Baulois",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"Saumur Rugby",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"Stade Treillierain",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"US Thouarsaise Rugby",9,"Régionale 2 - Ligue Pays de la Loire",NA
-"Bastia XV",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"C Ol Sisteronnais",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Étoile Sp Monteux",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Gap Hautes Alpes Rugby",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Gemenos Rugby Est Provence",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Lerins Rugby Club",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Ajaccien",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Antibes Sophia Antipolis",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Arlesien XV",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Las",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Le Beausset",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Noves-Eyragues",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Ollioulais",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Pernois",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Pertuisien",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Bedarrides",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Pierrefeucain",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Sorgues Rhone Ouveze",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Stade Laurentin Rugby",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Vitrolles Rugby Club",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"XV de Besagne",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"XV Saint Remois",9,"Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"AL Cisternes La Foret",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"AS A I A Lempdes",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Dompierroise",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Fontaine",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Pulverieres",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Varennoise",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Association Rugby Technologie",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Courtenay Rugby XV",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"CS Puy Guillaume Rugby",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Entente RChauffailles Charlieu",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Entente Ennezat Aigueperse",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Entente Sioule Limagne",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Entente St Amour Coligny",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Jeunesse Ath Heyrieux Rugby",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Joyeuse Sportive A Quinze de St Paul Les Romans",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"La Fraternelle Moirans",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Les Loups de La Croix",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Ovale Reins Amplepuis",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Plauzat Olympique",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rass RC Cruas / Sc Ouveze Payre",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Beaumontois",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Brezins",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Des Hauts Plateaux",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Donatien",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Faverges",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Haut Gevaudan",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Langeadois",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Lapalissois",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Livradois",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Mions",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Perignat Sur Allier",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Saint Yorre Rugby",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Sancy",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Touvet Pontcharra",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC Villeneuvois V de Marc",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"RC XV Brives Charensac",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Royans Sports",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rst RC Rhodanien / ASACR Régionale",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Chabeuillois",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Corbelin",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Domes Sioule",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club du Genevois",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club du Pays Briançonnais",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Haute Tarentaise",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Massiacois",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Club Val de Saone",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Des Monts",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Rugby Entente Velay Est",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Savigneux Montbrison Rugby Club",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"St Vallier Sportif",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Unieux Firminy Ondaine Rugby",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Union Sportive Albinoise Rive Gauche",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"Union Sportive Vallée de La Drome Rugby",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"US Dieulefit Bourdeaux",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"US Florinoise",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"US Martres de Veyre",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"US Valloire Galaure",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"US Venissieux",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"XV Des Combrailles",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"XV Suranais",10,"Régionale 3 - Ligue Auvergne-Rhône-Alpes",NA
-"AS Amicale Vauzelles",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"AS Pougues La Charite",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"ASU C Migennes",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Avallon Chatillon Tonnerre",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Chenove Rugby Club",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"CR Censeau / Usa",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Entente Rugby Givry Cheilly",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"RC Auxonnais",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"RC Morez Haut Jura",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"RC Ordon",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"RC St Martin Du Lac",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"RCP Maichois Embar",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Club de Coulanges Sur Yonne",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Club Dijonnais SA",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Club Montbard Auxois",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Club Senonais",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Club Vallee de L Ouche",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Rugby Ovalie Luron",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Saulieu RC",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"US Baumoise",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"US Bourbon Lancy",10,"Régionale 3 - Ligue Bourgogne-Franche-Comté",NA
-"Douarnenez Rugby Athletic Club",10,"Régionale 3 - Ligue Bretagne",NA
-"RFC Kastellin",10,"Régionale 3 - Ligue Bretagne",NA
-"Racing Club Brocéliande Rugby Paimpont",10,"Régionale 3 - Ligue Bretagne",NA
-"RC Carhaix",10,"Régionale 3 - Ligue Bretagne",NA
-"RC Pontivyen",10,"Régionale 3 - Ligue Bretagne",NA
-"Rhuys Rugby Club",10,"Régionale 3 - Ligue Bretagne",NA
-"Rugby Bretagne Romantique",10,"Régionale 3 - Ligue Bretagne",NA
-"Rugby Club de L'hermine",10,"Régionale 3 - Ligue Bretagne",NA
-"Rugby Club du Pays de Morlaix",10,"Régionale 3 - Ligue Bretagne",NA
-"Rugby Club Pays d'Elven",10,"Régionale 3 - Ligue Bretagne",NA
-"Rugby Club Pays Muzillacais",10,"Régionale 3 - Ligue Bretagne",NA
-"Rugby Club Val D'ille Aubigne Melesse",10,"Régionale 3 - Ligue Bretagne",NA
-"Saint Pere Rugby Club",10,"Régionale 3 - Ligue Bretagne",NA
-"Skol Rugby Er Nav Ker",10,"Régionale 3 - Ligue Bretagne",NA
-"UR Landerneau",10,"Régionale 3 - Ligue Bretagne",NA
-"C'chartres Rugby",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Entente SC St Amand Et RC Orval",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Foecy Ovale Club",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"J.A.S.",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"L'ovale de Loire",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Oval Union Rugby Sud 28",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Ras Lunery Saint Florent +18",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Ras Portes de Sologne +18",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Ras Sancerre XV Cosnois",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Ras Sully / Chateauneuf",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"RC Deolois",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"RC Gien Briare",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Section Chailloise",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"Union Sportive Berrichonne",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"US Argentonnaise",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"US Orléanaise",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"XV Gaulois Charentillais",10,"Régionale 3 - Ligue Centre-Val de Loire",NA
-"AS Chalampe",10,"Régionale 3 - Ligue Grand Est",NA
-"Boulay Olympique",10,"Régionale 3 - Ligue Grand Est",NA
-"Club Rugby Aube Champagne Ossey Marigny",10,"Régionale 3 - Ligue Grand Est",NA
-"CR Illkirch Graffenstaden",10,"Régionale 3 - Ligue Grand Est",NA
-"Drusus Harpastum Rugby",10,"Régionale 3 - Ligue Grand Est",NA
-"Entente Sportive Hagondange",10,"Régionale 3 - Ligue Grand Est",NA
-"Forbach Sarrebruck Rugby",10,"Régionale 3 - Ligue Grand Est",NA
-"Mutzig Ovalie Molsheim",10,"Régionale 3 - Ligue Grand Est",NA
-"Ovalie Club Du Bassin Toulois",10,"Régionale 3 - Ligue Grand Est",NA
-"RA Epinal Golbey",10,"Régionale 3 - Ligue Grand Est",NA
-"RC Dieulouard Liverdun",10,"Régionale 3 - Ligue Grand Est",NA
-"RC Lunevillois",10,"Régionale 3 - Ligue Grand Est",NA
-"RC Selestat Giessen",10,"Régionale 3 - Ligue Grand Est",NA
-"RCS Vittellois",10,"Régionale 3 - Ligue Grand Est",NA
-"Romilly Rugby Club",10,"Régionale 3 - Ligue Grand Est",NA
-"Rugby Centre Meuse Force 4",10,"Régionale 3 - Ligue Grand Est",NA
-"Rugby Club des Deux Vallees",10,"Régionale 3 - Ligue Grand Est",NA
-"Saint Die - Raon L Etape - Baccarat XV",10,"Régionale 3 - Ligue Grand Est",NA
-"ASS Anciens Eleves de Leforest",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Chateau-thierry / Soissons / Montreuil Aux Lions",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Duisans / Arras",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Entente Amiens Somme",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"RI Plessis Lagny",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"R Ol Cambraisien",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Racing Cl St Quentinois",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"RC Amandinois",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"RC Noyonnais",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"RO Fourmisien",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Rugby Club Anzinois",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Rugby Club de Meru Les Sablons",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Rugby Club Flandres Littoral Nord",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Rugby Club Hazebrouck",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"Rugby Club Lens Lievin",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"XV Crepynois",10,"Régionale 3 - Ligue Hauts-de-France",NA
-"AAS Fresnes",10,"Régionale 3 - Ligue Île-de-France",NA
-"Amicale Laique Des Jeunes de Limay Rugby",10,"Régionale 3 - Ligue Île-de-France",NA
-"Arpajon Rugby XV",10,"Régionale 3 - Ligue Île-de-France",NA
-"Association Sportive Mantaise",10,"Régionale 3 - Ligue Île-de-France",NA
-"Blanc Mesnil Sports Rugby",10,"Régionale 3 - Ligue Île-de-France",NA
-"Entente Goussainville Gonesse XV",10,"Régionale 3 - Ligue Île-de-France",NA
-"Étampes RC",10,"Régionale 3 - Ligue Île-de-France",NA
-"Grigny Rugby A 15",10,"Régionale 3 - Ligue Île-de-France",NA
-"M Laffitte St Germain Poissy",10,"Régionale 3 - Ligue Île-de-France",NA
-"Olympique Columerien et Pays Fertois Rugby",10,"Régionale 3 - Ligue Île-de-France",NA
-"Paris Olympique Rugby Club",10,"Régionale 3 - Ligue Île-de-France",NA
-"Paris Universite Club",10,"Régionale 3 - Ligue Île-de-France",NA
-"Plaisir Rugby Club",10,"Régionale 3 - Ligue Île-de-France",NA
-"Racing Club Asnierois",10,"Régionale 3 - Ligue Île-de-France",NA
-"RC Ballancourtois",10,"Régionale 3 - Ligue Île-de-France",NA
-"RC L'isle Adam",10,"Régionale 3 - Ligue Île-de-France",NA
-"RC Noisy Le Sec",10,"Régionale 3 - Ligue Île-de-France",NA
-"Rst AS Corbeil Essonne/RC Mennecy/Saintry",10,"Régionale 3 - Ligue Île-de-France",NA
-"Rst Aubergenville / Epone",10,"Régionale 3 - Ligue Île-de-France",NA
-"Rst Fontenay / Antony",10,"Régionale 3 - Ligue Île-de-France",NA
-"Rugby Charenton Maisons Alfort St Maurice",10,"Régionale 3 - Ligue Île-de-France",NA
-"Rugby Club de Champs - Val Maubuee",10,"Régionale 3 - Ligue Île-de-France",NA
-"Rugby Club Les Mureaux",10,"Régionale 3 - Ligue Île-de-France",NA
-"Rugby Val d'Orge Savigny Lonjumeau",10,"Régionale 3 - Ligue Île-de-France",NA
-"Saint Denis Rugby 93",10,"Régionale 3 - Ligue Île-de-France",NA
-"Sainte Geneviève Sports Rugby",10,"Régionale 3 - Ligue Île-de-France",NA
-"SCUF",10,"Régionale 3 - Ligue Île-de-France",NA
-"Sèvres Chaville Rugby",10,"Régionale 3 - Ligue Île-de-France",NA
-"US Jeunesse de Mitry Mory",10,"Régionale 3 - Ligue Île-de-France",NA
-"USO Chelles Rugby",10,"Régionale 3 - Ligue Île-de-France",NA
-"US Palaiseau",10,"Régionale 3 - Ligue Île-de-France",NA
-"Viry Chatillon Rugby Club",10,"Régionale 3 - Ligue Île-de-France",NA
-"Bayeux Rugby Club",10,"Régionale 3 - Ligue Normandie",NA
-"Cote de Nacre Rugby Club",10,"Régionale 3 - Ligue Normandie",NA
-"RC Du Bocage Virois",10,"Régionale 3 - Ligue Normandie",NA
-"RC Flers Et Pays Du Bocage",10,"Régionale 3 - Ligue Normandie",NA
-"RC St Martin Champs Avranches",10,"Régionale 3 - Ligue Normandie",NA
-"Rugby Club Valognes",10,"Régionale 3 - Ligue Normandie",NA
-"Alliance Ovalienne Caudecostoise En Brulhois",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"AS Penne St Sylvestre",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"AS Seilhacoise",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"AS St Aubin de Medoc",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Association Sportive Buzy Ogeu",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Avant Garde de Theze",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Biganos Rugby XV",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"C Ol Colayracais",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"C Ol Perigueux Ouest",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"CA Meymac",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Cazaux Olympique",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Club-Orgnac-Lubersac",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"CS Bellachon",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Entente Sp Bruges Blanquefort",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Étoile Sportive Miramontoise",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Gabardan AS",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Jurancon XV",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Les Marcassins",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Nord Bearn XV",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Ovalie Grand Chatellerault Pleumartin",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Poitiers Étudiants Club",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"R Ol Pontois",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"RC Mezinais",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"RC Palaisien",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"RC Prigontin",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Ruffec AC",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club L'Aurence Limoges",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Pays de Roquefort",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Club Pomarez-amou",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Rugby Tonnay Charente",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"SA St Maixentais",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Sanguinet AC",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"Sarako Izarra",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"SC St Pierre du Mont",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"US Chauvinoise Rugby",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"US Mourenx",10,"Régionale 3 - Ligue Nouvelle-Aquitaine",NA
-"AS Bastidienne",10,"Régionale 3 - Ligue Occitanie",NA
-"AS La Barguillere",10,"Régionale 3 - Ligue Occitanie",NA
-"AS Marciacaise",10,"Régionale 3 - Ligue Occitanie",NA
-"Association Sportive Beaulieuroise XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Avenir du Rugby Boulonnais",10,"Régionale 3 - Ligue Occitanie",NA
-"Avenir Montbeton Lacourt Rugby",10,"Régionale 3 - Ligue Occitanie",NA
-"Avenir Salanquais XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Avenir Villefranchois",10,"Régionale 3 - Ligue Occitanie",NA
-"Bas Armagnac Rugby Club",10,"Régionale 3 - Ligue Occitanie",NA
-"Bassin Sud Minervois XV",10,"Régionale 3 - Ligue Occitanie",NA
-"CA Prateen",10,"Régionale 3 - Ligue Occitanie",NA
-"Cabestany Olympique XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Caunes Rugby Club XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Club Olympique Tauch Corbieres",10,"Régionale 3 - Ligue Occitanie",NA
-"Corbieres Maritimes XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Deux Rives",10,"Régionale 3 - Ligue Occitanie",NA
-"Entente Bazet Andrest",10,"Régionale 3 - Ligue Occitanie",NA
-"Entente Haut Vallespir",10,"Régionale 3 - Ligue Occitanie",NA
-"Etoile Sp Villenouvelloise",10,"Régionale 3 - Ligue Occitanie",NA
-"Étoile Sp Vinassanaise",10,"Régionale 3 - Ligue Occitanie",NA
-"Garonna XV",10,"Régionale 3 - Ligue Occitanie",NA
-"La Nicolaite",10,"Régionale 3 - Ligue Occitanie",NA
-"Lieuran XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Marguerittes RC",10,"Régionale 3 - Ligue Occitanie",NA
-"Marseillan Rugby Club",10,"Régionale 3 - Ligue Occitanie",NA
-"Meze Rugby Club",10,"Régionale 3 - Ligue Occitanie",NA
-"Montestruc Gers Rugby",10,"Régionale 3 - Ligue Occitanie",NA
-"Panjas AC",10,"Régionale 3 - Ligue Occitanie",NA
-"Rabastens XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Racing Cl Septfontois",10,"Régionale 3 - Ligue Occitanie",NA
-"Racing Club Limoux Rugby XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Racing Club Naucellois",10,"Régionale 3 - Ligue Occitanie",NA
-"Racing Club Rieupeyroux XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Racing Club Villeneuve Les Maguelone",10,"Régionale 3 - Ligue Occitanie",NA
-"Racing Club Villeneuvois",10,"Régionale 3 - Ligue Occitanie",NA
-"Ras Frontignan / St Jean de Vedas",10,"Régionale 3 - Ligue Occitanie",NA
-"Ras Haute Vallée Aveyron Rodez Rugby",10,"Régionale 3 - Ligue Occitanie",NA
-"Ras Hers Pyrenees Cathare",10,"Régionale 3 - Ligue Occitanie",NA
-"Ras US Haut Salat /co Castillon",10,"Régionale 3 - Ligue Occitanie",NA
-"RC St Quentinois",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Athletic Cerdagne Capcir XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Club du Brulhois 82",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Club Grand Mottois",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Club Jacou Montpellier Nord",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Club Lavernose Lacasse",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Club Mazeres XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Club Olympique du Salagou Coeur d'Herault",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Club Roquemaure XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Corneilhan XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Rugby Ecole de Vendargues",10,"Régionale 3 - Ligue Occitanie",NA
-"SC L'honor de Cos",10,"Régionale 3 - Ligue Occitanie",NA
-"SC Montastrucois",10,"Régionale 3 - Ligue Occitanie",NA
-"Stade Bessanais",10,"Régionale 3 - Ligue Occitanie",NA
-"Stade Montfauconnais Rugby",10,"Régionale 3 - Ligue Occitanie",NA
-"Stade Montpellierain 2020",10,"Régionale 3 - Ligue Occitanie",NA
-"Stade Uchaudois Associatif Rugby Club",10,"Régionale 3 - Ligue Occitanie",NA
-"Thore Rugby Club",10,"Régionale 3 - Ligue Occitanie",NA
-"Toulouse Ath C/la Fourguette",10,"Régionale 3 - Ligue Occitanie",NA
-"Toulouse Rugby Club",10,"Régionale 3 - Ligue Occitanie",NA
-"UA Lalouberienne",10,"Régionale 3 - Ligue Occitanie",NA
-"Union Catalane Pollestres Bages Villeneuve",10,"Régionale 3 - Ligue Occitanie",NA
-"Union Rive Gauche XV",10,"Régionale 3 - Ligue Occitanie",NA
-"Union Sp Castelnau Bastide 117",10,"Régionale 3 - Ligue Occitanie",NA
-"US Castelnau En Madiranais",10,"Régionale 3 - Ligue Occitanie",NA
-"US Finhanaise",10,"Régionale 3 - Ligue Occitanie",NA
-"US Gondrinoise",10,"Régionale 3 - Ligue Occitanie",NA
-"US L'Ayguette",10,"Régionale 3 - Ligue Occitanie",NA
-"US St Antoninoise",10,"Régionale 3 - Ligue Occitanie",NA
-"US Ste Foy de Peyrolieres",10,"Régionale 3 - Ligue Occitanie",NA
-"Valence Ol D'albi",10,"Régionale 3 - Ligue Occitanie",NA
-"Vals et Villages en Astarac L'Isle de Noe XV",10,"Régionale 3 - Ligue Occitanie",NA
-"XV de La Save",10,"Régionale 3 - Ligue Occitanie",NA
-"Entente Du Nord Sarthe",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"Ras Anjou Ovalie R3",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"Ras Oss 72",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"RC Castrogonterien",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"RC Douessin Rugby",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"Rugby Club Saint Hilaire Ocean",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"Rugby Olympique Mayennais",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"Seiches Rugby",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"XV de Grand-lieu",10,"Régionale 3 - Ligue Pays de la Loire",NA
-"Association Sportive Apt Vallee du Calavon",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Bollene RC",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Brignoles Provence XV",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Entente St Jean Du Var - Corse 83",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Eyguieres XV",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Manosque Rugby Club",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Racing Club Pradetan",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Ras Tarascon Beaucaire XV",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RC Vaisonnais",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RCR Rugby Club du Rocher",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"RO Planais",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rubgy Club Maubecquois",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Ciotat Ceyreste",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club des Plages",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club du Golfe",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Hyeres Carqueiranne La Crau 83",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Marseillais",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Club Port de Bouc",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"Rugby Saint Maximinois XV",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
-"US St Mandrier",10,"Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur",NA
+ASM Clermont,1,Top 14,
+Aviron Bayonnais,1,Top 14,
+Castres Olympique,1,Top 14,
+Lyon Olympique Universitaire Rugby,1,Top 14,
+Montpellier HR,1,Top 14,
+Oyonnax Rugby,1,Top 14,
+Racing 92,1,Top 14,
+RC Toulon,1,Top 14,
+Section Paloise,1,Top 14,
+Stade Français,1,Top 14,
+Stade Rochelais,1,Top 14,
+Stade Toulousain,1,Top 14,
+Union Bordeaux Bègles,1,Top 14,
+USA Perpignan,1,Top 14,
+AS Béziers,2,Pro D2,
+Biarritz olympique,2,Pro D2,
+CA Brive,2,Pro D2,
+Colomiers Rugby,2,Pro D2,
+FC Grenoble,2,Pro D2,
+Provence Rugby,2,Pro D2,
+RC Vannes,2,Pro D2,
+Rouen Normandie Rugby,2,Pro D2,
+Soyaux Angoulême XV,2,Pro D2,
+Stade Aurillacois,2,Pro D2,
+Stade Montois,2,Pro D2,
+SU Agen,2,Pro D2,
+US Dax,2,Pro D2,
+US Montauban,2,Pro D2,
+USON Nevers,2,Pro D2,
+Valence Romans Drôme Rugby,2,Pro D2,
+Blagnac Rugby,3,Nationale 1,
+CA Périgueux,3,Nationale 1,
+CS Bourgoin-Jailleu,3,Nationale 1,
+CS Vienne,3,Nationale 1,
+RC Hyères Carqueiranne La Crau,3,Nationale 1,
+RC Massy,3,Nationale 1,
+RC Narbonne,3,Nationale 1,
+RC Suresnes,3,Nationale 1,
+SC Albi,3,Nationale 1,
+SO Chambéry,3,Nationale 1,
+Stade Niçois,3,Nationale 1,
+Stado Tarbes PR,3,Nationale 1,
+US Bressane,3,Nationale 1,
+US Carcassonne,3,Nationale 1,
+Anglet ORC,4,Nationale 2,
+AS Bédarrides Châteauneuf-du-Pape,4,Nationale 2,
+AS Fleurance,4,Nationale 2,
+AS Mâcon,4,Nationale 2,
+Avenir Valencien,4,Nationale 2,
+CA Lannemezan,4,Nationale 2,
+Niort RC,4,Nationale 2,
+Olympique Marcquois,4,Nationale 2,
+RC Aubenas Vals,4,Nationale 2,
+RC Auch,4,Nationale 2,
+RC Bassin d'Arcachon,4,Nationale 2,
+RC Nîmes,4,Nationale 2,
+RC Savoie Rumilly,4,Nationale 2,
+Rennes Étudiants Club Rugby,4,Nationale 2,
+Saint-Jean-de-Luz Olympique Rugby,4,Nationale 2,
+SC Graulhet,4,Nationale 2,
+Stade Dijonnais,4,Nationale 2,
+Stade Langonnais,4,Nationale 2,
+Stade Matéo-Petit Arcachon,4,Nationale 2,
+Stade Métropolitain,4,Nationale 2,
+US Cognac,4,Nationale 2,
+US Marmande,4,Nationale 2,
+US Salles,4,Nationale 2,
+US Seynoise,4,Nationale 2,
+USA Limoges,4,Nationale 2,
+AAS Sarcelles,5,Fédérale 1 - Poule 1,
+Beauvais RC,5,Fédérale 1 - Poule 1,
+C' Chartres Rugby,5,Fédérale 1 - Poule 1,
+CS Beaune,5,Fédérale 1 - Poule 1,
+CS Nuiton,5,Fédérale 1 - Poule 1,
+CS Villefranche-sur-Saône,5,Fédérale 1 - Poule 1,
+Le Havre AC,5,Fédérale 1 - Poule 1,
+Paris UC,5,Fédérale 1 - Poule 1,
+RC Courbevoie,5,Fédérale 1 - Poule 1,
+RC Orléans,5,Fédérale 1 - Poule 1,
+Servette RC,5,Fédérale 1 - Poule 1,
+Union Drancy Saint-Denis,5,Fédérale 1 - Poule 1,
+Avenir Gruissanais,5,Fédérale 1 - Poule 2,
+Céret Sportif,5,Fédérale 1 - Poule 2,
+CO Berre XV,5,Fédérale 1 - Poule 2,
+CS Annonay,5,Fédérale 1 - Poule 2,
+RC Châteaurenard,5,Fédérale 1 - Poule 2,
+RC Tricastin,5,Fédérale 1 - Poule 2,
+RO Agde,5,Fédérale 1 - Poule 2,
+Rugby Olympique de Grasse,5,Fédérale 1 - Poule 2,
+SC royannais,5,Fédérale 1 - Poule 2,
+US Annecy,5,Fédérale 1 - Poule 2,
+US Issoire,5,Fédérale 1 - Poule 2,
+XV du Coudon,5,Fédérale 1 - Poule 2,
+AS Layrac,5,Fédérale 1 - Poule 3,
+AS Vauréenne,5,Fédérale 1 - Poule 3,
+CA Castelsarrasin,5,Fédérale 1 - Poule 3,
+CM Floirac,5,Fédérale 1 - Poule 3,
+FC Oloron,5,Fédérale 1 - Poule 3,
+Lombez Samatan club,5,Fédérale 1 - Poule 3,
+Peyrehorade SR,5,Fédérale 1 - Poule 3,
+Rion Morcenx CR,5,Fédérale 1 - Poule 3,
+RO Castelnaudary XV,5,Fédérale 1 - Poule 3,
+SA Mauléon,5,Fédérale 1 - Poule 3,
+Saint-Médard RC,5,Fédérale 1 - Poule 3,
+SC Mazamet,5,Fédérale 1 - Poule 3,
+SC Pamiers,5,Fédérale 1 - Poule 3,
+SC Tulle,5,Fédérale 1 - Poule 3,
+Stade Bagnérais,5,Fédérale 1 - Poule 3,
+Stade Nantais,5,Fédérale 1 - Poule 3,
+TOEC TOAC FCT,5,Fédérale 1 - Poule 3,
+UA Gaillac,5,Fédérale 1 - Poule 3,
+Union Barbézieux Jonzac,5,Fédérale 1 - Poule 3,
+US Bergerac,5,Fédérale 1 - Poule 3,
+US L'Isle-Jourdain,5,Fédérale 1 - Poule 3,
+US Nafarroa,5,Fédérale 1 - Poule 3,
+US Saint-Sulpice,5,Fédérale 1 - Poule 3,
+US Tyrosse,5,Fédérale 1 - Poule 3,
+CA Pontarlier,6,Fédérale 2 - Poule 1,
+CO Le Creusot,6,Fédérale 2 - Poule 1,
+CO Le Puy,6,Fédérale 2 - Poule 1,
+FC Saint-Claude,6,Fédérale 2 - Poule 1,
+Grand Dole Rugby,6,Fédérale 2 - Poule 1,
+RC Andrézieux-Bouthéon,6,Fédérale 2 - Poule 1,
+RC de la Dombes,6,Fédérale 2 - Poule 1,
+RC Rillieux,6,Fédérale 2 - Poule 1,
+Rugby Tango Chalonnais,6,Fédérale 2 - Poule 1,
+Saint-Priest Rugby,6,Fédérale 2 - Poule 1,
+US Meyzieu,6,Fédérale 2 - Poule 1,
+US Nantua Port,6,Fédérale 2 - Poule 1,
+AS Monaco,6,Fédérale 2 - Poule 2,
+Avignon Le Pontet Rugby,6,Fédérale 2 - Poule 2,
+Bièvre Saint-Geoirs RC,6,Fédérale 2 - Poule 2,
+CA Saint-Raphaël Fréjus,6,Fédérale 2 - Poule 2,
+RC Aubagne,6,Fédérale 2 - Poule 2,
+RC des Vallons-de-la-Tour,6,Fédérale 2 - Poule 2,
+RC Les Angles,6,Fédérale 2 - Poule 2,
+Saint-Marcellin sports,6,Fédérale 2 - Poule 2,
+SO Voiron,6,Fédérale 2 - Poule 2,
+US Montmélian,6,Fédérale 2 - Poule 2,
+US Véore XV,6,Fédérale 2 - Poule 2,
+US Vinay,6,Fédérale 2 - Poule 2,
+Avenir Castanéen Rugby,6,Fédérale 2 - Poule 3,
+Balma ORC,6,Fédérale 2 - Poule 3,
+Étoile sportive catalane,6,Fédérale 2 - Poule 3,
+FC Villefranche,6,Fédérale 2 - Poule 3,
+JO Prades,6,Fédérale 2 - Poule 3,
+Lévézou Ségala Aveyron XV,6,Fédérale 2 - Poule 3,
+RCM Palavas Lunel,6,Fédérale 2 - Poule 3,
+Salanque Côte Radieuse,6,Fédérale 2 - Poule 3,
+SC Leucate,6,Fédérale 2 - Poule 3,
+SO Millau,6,Fédérale 2 - Poule 3,
+Stade Piscénois,6,Fédérale 2 - Poule 3,
+USC Alban,6,Fédérale 2 - Poule 3,
+4 Cantons BHAP,6,Fédérale 2 - Poule 4,
+Bourges XV,6,Fédérale 2 - Poule 4,
+CA Sarlat,6,Fédérale 2 - Poule 4,
+EV Malemort BO,6,Fédérale 2 - Poule 4,
+JA Isle,6,Fédérale 2 - Poule 4,
+RC Arpajon Veinazès,6,Fédérale 2 - Poule 4,
+RC Clermont Cournon-d'Auvergne,6,Fédérale 2 - Poule 4,
+RC Riom,6,Fédérale 2 - Poule 4,
+RCP Saint-Yrieix,6,Fédérale 2 - Poule 4,
+Rugby Causse Vézère,6,Fédérale 2 - Poule 4,
+SC Decazeville,6,Fédérale 2 - Poule 4,
+Stade belvesois,6,Fédérale 2 - Poule 4,
+AA Nogaro,6,Fédérale 2 - Poule 5,
+Cahors Rugby,6,Fédérale 2 - Poule 5,
+Entente Astarac Bigorre XV,6,Fédérale 2 - Poule 5,
+ES Gimont,6,Fédérale 2 - Poule 5,
+FC Lourdes,6,Fédérale 2 - Poule 5,
+Oursbelille Bordères RC,6,Fédérale 2 - Poule 5,
+RC Bon-Encontre Boé,6,Fédérale 2 - Poule 5,
+Rugby Grenade,6,Fédérale 2 - Poule 5,
+Saint-Girons SC,6,Fédérale 2 - Poule 5,
+SC Rieumes,6,Fédérale 2 - Poule 5,
+Stade Beaumontois,6,Fédérale 2 - Poule 5,
+USEP Ger Séron Bédeille,6,Fédérale 2 - Poule 5,
+AS Pont-Long,6,Fédérale 2 - Poule 6,
+AS Soustons,6,Fédérale 2 - Poule 6,
+Boucau Tarnos stade,6,Fédérale 2 - Poule 6,
+Entente Aramits Asasp,6,Fédérale 2 - Poule 6,
+Hasparren AC,6,Fédérale 2 - Poule 6,
+Saint-Paul Sports Rugby,6,Fédérale 2 - Poule 6,
+Stade Hendayais Rugby,6,Fédérale 2 - Poule 6,
+Stade Navarrais,6,Fédérale 2 - Poule 6,
+US Coarraze Nay,6,Fédérale 2 - Poule 6,
+US Morlaàs,6,Fédérale 2 - Poule 6,
+US Mouguerre,6,Fédérale 2 - Poule 6,
+US Orthez,6,Fédérale 2 - Poule 6,
+AS Mérignac,6,Fédérale 2 - Poule 7,
+CA Lormont,6,Fédérale 2 - Poule 7,
+FC yonnais,6,Fédérale 2 - Poule 7,
+RC Trignac,6,Fédérale 2 - Poule 7,
+SA Rochefort,6,Fédérale 2 - Poule 7,
+SC Surgères,6,Fédérale 2 - Poule 7,
+Stade Poitevin,6,Fédérale 2 - Poule 7,
+UA Gujan-Mestras,6,Fédérale 2 - Poule 7,
+US Bazas,6,Fédérale 2 - Poule 7,
+US Casteljaloux,6,Fédérale 2 - Poule 7,
+US Castillon,6,Fédérale 2 - Poule 7,
+US Tours,6,Fédérale 2 - Poule 7,
+Antony Métro 92,6,Fédérale 2 - Poule 8,
+CA Orsay RC,6,Fédérale 2 - Poule 8,
+CJF Saint-Malo,6,Fédérale 2 - Poule 8,
+CSM Gennevilliers,6,Fédérale 2 - Poule 8,
+MLSGP Rugby,6,Fédérale 2 - Poule 8,
+Plaisir RC,6,Fédérale 2 - Poule 8,
+Plouzané AC,6,Fédérale 2 - Poule 8,
+RC Amiens,6,Fédérale 2 - Poule 8,
+RC Auxerre,6,Fédérale 2 - Poule 8,
+RC Versailles,6,Fédérale 2 - Poule 8,
+SC Le Rheu,6,Fédérale 2 - Poule 8,
+US Ris-Orangis,6,Fédérale 2 - Poule 8,
+AC Soissons,7,Fédérale 3 - Poule 1,
+Paris XO,7,Fédérale 3 - Poule 1,
+RC Arras,7,Fédérale 3 - Poule 1,
+RC béthunois,7,Fédérale 3 - Poule 1,
+RC Compiègne,7,Fédérale 3 - Poule 1,
+RC Pays de Meaux,7,Fédérale 3 - Poule 1,
+RC Roubaix,7,Fédérale 3 - Poule 1,
+RU Dunkerque Littoral,7,Fédérale 3 - Poule 1,
+Rugby Épernay Champagne,7,Fédérale 3 - Poule 1,
+Stade villeneuvois LM,7,Fédérale 3 - Poule 1,
+ES Baronnies,7,Fédérale 3 - Poule 10,
+Juillan XV RC,7,Fédérale 3 - Poule 10,
+Magnoac FC,7,Fédérale 3 - Poule 10,
+RS Mauvezin,7,Fédérale 3 - Poule 10,
+Stade Saint-Gaudinois,7,Fédérale 3 - Poule 10,
+UA Saverdun,7,Fédérale 3 - Poule 10,
+Union Cazères Le Fousseret,7,Fédérale 3 - Poule 10,
+US L'Isle-en-Dodon,7,Fédérale 3 - Poule 10,
+US Tarascon XV,7,Fédérale 3 - Poule 10,
+US Vic,7,Fédérale 3 - Poule 10,
+Avenir Aturin,7,Fédérale 3 - Poule 11,
+Avenir de Bizanos,7,Fédérale 3 - Poule 11,
+Barcus Menditte Xiberoa,7,Fédérale 3 - Poule 11,
+Entente Sévignacq Vallée du Gabas,7,Fédérale 3 - Poule 11,
+Gan Olympique,7,Fédérale 3 - Poule 11,
+JS Riscle,7,Fédérale 3 - Poule 11,
+OO Laruns,7,Fédérale 3 - Poule 11,
+SA Hagetmau,7,Fédérale 3 - Poule 11,
+US Argelès,7,Fédérale 3 - Poule 11,
+US Josbaig,7,Fédérale 3 - Poule 11,
+AS Bayonne,7,Fédérale 3 - Poule 12,
+AS Urruñarrak,7,Fédérale 3 - Poule 12,
+Association Côte Landes,7,Fédérale 3 - Poule 12,
+Biscarrosse olympique,7,Fédérale 3 - Poule 12,
+Emak Hor Rugby,7,Fédérale 3 - Poule 12,
+Inthalatz rugby Larressore,7,Fédérale 3 - Poule 12,
+US Bardos,7,Fédérale 3 - Poule 12,
+US Cambo,7,Fédérale 3 - Poule 12,
+US Mugron,7,Fédérale 3 - Poule 12,
+US Saint-Palais,7,Fédérale 3 - Poule 12,
+CO Pont-du-Casse,7,Fédérale 3 - Poule 13,
+Léognan Rugby,7,Fédérale 3 - Poule 13,
+RC Gradignan,7,Fédérale 3 - Poule 13,
+RC Villeneuve,7,Fédérale 3 - Poule 13,
+Stade Blayais,7,Fédérale 3 - Poule 13,
+Stade Bordelais,7,Fédérale 3 - Poule 13,
+Stade Foyen,7,Fédérale 3 - Poule 13,
+Stade Réolais,7,Fédérale 3 - Poule 13,
+US Nérac,7,Fédérale 3 - Poule 13,
+US Vallée du Lot,7,Fédérale 3 - Poule 13,
+GS Figeac,7,Fédérale 3 - Poule 14,
+Naves SLR,7,Fédérale 3 - Poule 14,
+RC buguois,7,Fédérale 3 - Poule 14,
+RC Saint-Cernin,7,Fédérale 3 - Poule 14,
+RC Saint-Simon,7,Fédérale 3 - Poule 14,
+Stade Marivalois,7,Fédérale 3 - Poule 14,
+UA Vergt,7,Fédérale 3 - Poule 14,
+Union Saint-Astier Neuvic,7,Fédérale 3 - Poule 14,
+US Argentat,7,Fédérale 3 - Poule 14,
+USV Le Lardin-St-Lazare,7,Fédérale 3 - Poule 14,
+AS Saint-Junien,7,Fédérale 3 - Poule 15,
+Espérance Saint-Léger-des-Vignes,7,Fédérale 3 - Poule 15,
+FC Moulins,7,Fédérale 3 - Poule 15,
+Ovalie Club Montluçon,7,Fédérale 3 - Poule 15,
+RC Guéret,7,Fédérale 3 - Poule 15,
+RC Issoudun,7,Fédérale 3 - Poule 15,
+RC Vichy,7,Fédérale 3 - Poule 15,
+Rugby sancerrois,7,Fédérale 3 - Poule 15,
+SA Vierzon,7,Fédérale 3 - Poule 15,
+US Ussel,7,Fédérale 3 - Poule 15,
+ARC Chauray,7,Fédérale 3 - Poule 16,
+RC La Baule,7,Fédérale 3 - Poule 16,
+RC Puilboreau,7,Fédérale 3 - Poule 16,
+RC sablais,7,Fédérale 3 - Poule 16,
+RC Saint-Sébastien,7,Fédérale 3 - Poule 16,
+Rugby Saint-Herblain,7,Fédérale 3 - Poule 16,
+SA Parthenay,7,Fédérale 3 - Poule 16,
+Saint-Nazaire ovalie,7,Fédérale 3 - Poule 16,
+SCORC Angers,7,Fédérale 3 - Poule 16,
+XV de l'Erdre,7,Fédérale 3 - Poule 16,
+AS Rouen Université Club,7,Fédérale 3 - Poule 17,
+Aurore de Vitré,7,Fédérale 3 - Poule 17,
+Grandchamp RC,7,Fédérale 3 - Poule 17,
+Pays Auray RC,7,Fédérale 3 - Poule 17,
+RC Concarneau,7,Fédérale 3 - Poule 17,
+RC Plabennec,7,Fédérale 3 - Poule 17,
+RC Pont-Audemer,7,Fédérale 3 - Poule 17,
+ROC Bruz,7,Fédérale 3 - Poule 17,
+Stade Caennais RC,7,Fédérale 3 - Poule 17,
+XV couronnais,7,Fédérale 3 - Poule 17,
+AC Boulogne-Billancourt,7,Fédérale 3 - Poule 18,
+CS Clichy,7,Fédérale 3 - Poule 18,
+Évreux AC,7,Fédérale 3 - Poule 18,
+RC Montesson Chatou,7,Fédérale 3 - Poule 18,
+RC Vincennes,7,Fédérale 3 - Poule 18,
+RCA Cergy-Pontoise,7,Fédérale 3 - Poule 18,
+Rugby Aulnay Club,7,Fédérale 3 - Poule 18,
+SCUF rugby,7,Fédérale 3 - Poule 18,
+US Olympiades Massif central,7,Fédérale 3 - Poule 18,
+CA Chevreuse,7,Fédérale 3 - Poule 2,
+Clamart Rugby 92,7,Fédérale 3 - Poule 2,
+ES Vitry,7,Fédérale 3 - Poule 2,
+Gretz Tournan Ozoir RC 77,7,Fédérale 3 - Poule 2,
+RC Blois,7,Fédérale 3 - Poule 2,
+RC Sucy-en-Brie,7,Fédérale 3 - Poule 2,
+Rugby Champagne Saint-André,7,Fédérale 3 - Poule 2,
+Stade Pontellois,7,Fédérale 3 - Poule 2,
+US Pithiviers,7,Fédérale 3 - Poule 2,
+US Vendôme,7,Fédérale 3 - Poule 2,
+Colmar RC,7,Fédérale 3 - Poule 3,
+COS Villers-lès-Nancy,7,Fédérale 3 - Poule 3,
+CR Illkirch-Graffenstaden,7,Fédérale 3 - Poule 3,
+Entente Montbéliard Belfort AR,7,Fédérale 3 - Poule 3,
+FC Haguenau,7,Fédérale 3 - Poule 3,
+Nancy Seichamps Rugby,7,Fédérale 3 - Poule 3,
+Olympique de Besançon,7,Fédérale 3 - Poule 3,
+RC Metz,7,Fédérale 3 - Poule 3,
+Strasbourg Alsace Rugby,7,Fédérale 3 - Poule 3,
+US Genlis,7,Fédérale 3 - Poule 3,
+CS Lons,7,Fédérale 3 - Poule 4,
+RC Belleville Beaujolais,7,Fédérale 3 - Poule 4,
+RC Chagny,7,Fédérale 3 - Poule 4,
+RC Faucigny Mont-Blanc,7,Fédérale 3 - Poule 4,
+RC Montceau Bourgogne,7,Fédérale 3 - Poule 4,
+RC Viriat,7,Fédérale 3 - Poule 4,
+SC Couches,7,Fédérale 3 - Poule 4,
+Stade Montchaninois Bourgogne,7,Fédérale 3 - Poule 4,
+US Bellegarde Coupy,7,Fédérale 3 - Poule 4,
+US pays de Gex,7,Fédérale 3 - Poule 4,
+AS Ampuis Côte-rôtie,7,Fédérale 3 - Poule 5,
+AS Saint-Marcel-Isle d'Abeau,7,Fédérale 3 - Poule 5,
+Clermont UC Aubière,7,Fédérale 3 - Poule 5,
+FC Aix-les-Bains,7,Fédérale 3 - Poule 5,
+RC saint-jeannais,7,Fédérale 3 - Poule 5,
+Rhône Sportif Rugby,7,Fédérale 3 - Poule 5,
+Saint-Savin sportif,7,Fédérale 3 - Poule 5,
+SC Tarare,7,Fédérale 3 - Poule 5,
+SO Givors,7,Fédérale 3 - Poule 5,
+US Beaurepaire,7,Fédérale 3 - Poule 5,
+Bassin de Crussol Rugby,7,Fédérale 3 - Poule 6,
+Entente Chateauneuf St-Marcel XV,7,Fédérale 3 - Poule 6,
+FC Tournon Tain,7,Fédérale 3 - Poule 6,
+RC cévenol,7,Fédérale 3 - Poule 6,
+RC Romans Péage,7,Fédérale 3 - Poule 6,
+RC Seyssins,7,Fédérale 3 - Poule 6,
+RC teillois,7,Fédérale 3 - Poule 6,
+US Deux-Ponts,7,Fédérale 3 - Poule 6,
+US Montélimar,7,Fédérale 3 - Poule 6,
+US Renage Rives,7,Fédérale 3 - Poule 6,
+Aix UC,7,Fédérale 3 - Poule 7,
+Boxeland Club islois XV,7,Fédérale 3 - Poule 7,
+Marseille RM,7,Fédérale 3 - Poule 7,
+RC de la Vallée du Gapeau,7,Fédérale 3 - Poule 7,
+RC Draguignan,7,Fédérale 3 - Poule 7,
+RC Jacou Montpellier Nord,7,Fédérale 3 - Poule 7,
+RC Sète,7,Fédérale 3 - Poule 7,
+Stade Marseillais UC,7,Fédérale 3 - Poule 7,
+SU Cavaillon,7,Fédérale 3 - Poule 7,
+US Mourillon,7,Fédérale 3 - Poule 7,
+Avenir Bleu et Blanc,7,Fédérale 3 - Poule 8,
+Entente Vendres Lespignan,7,Fédérale 3 - Poule 8,
+JS illibérienne,7,Fédérale 3 - Poule 8,
+RC Saint-Affrique,7,Fédérale 3 - Poule 8,
+RC Trèbes,7,Fédérale 3 - Poule 8,
+Rivesaltes Baixas Espira Agly XV,7,Fédérale 3 - Poule 8,
+Servian Boujan Rugby,7,Fédérale 3 - Poule 8,
+Union Sigean Port-la-Nouvelle,7,Fédérale 3 - Poule 8,
+US Quillan Limoux,7,Fédérale 3 - Poule 8,
+US Thuir,7,Fédérale 3 - Poule 8,
+AS Tournefeuille,7,Fédérale 3 - Poule 9,
+Coq léguevinois,7,Fédérale 3 - Poule 9,
+Entente de la Vallée du Girou,7,Fédérale 3 - Poule 9,
+RC de la Saudrune,7,Fédérale 3 - Poule 9,
+RC Saint-Sulpice,7,Fédérale 3 - Poule 9,
+RC Salvetat Plaisance,7,Fédérale 3 - Poule 9,
+Rodez Rugby,7,Fédérale 3 - Poule 9,
+SC Nègrepelisse,7,Fédérale 3 - Poule 9,
+Sor Agout XV,7,Fédérale 3 - Poule 9,
+US Caussade,7,Fédérale 3 - Poule 9,
+AS Bortoise,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+AS Forgeron Commentryens,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+CAS Gerzatois,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Chassieu Rugby,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Club Omnisport de Lyon,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+CR Ancizes Comps,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+EMD Plaine de l'Ain,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Entente Mun Et Sportive de Bron,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Entente Vaulnaveys Vizille,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+FC Moulinois,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Grenoble Université Club - Saint Martin D'heres Rugby,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+La Voulte Rugby Club Ardèche,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Lovali XV,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Meythet RC,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Ol St Genis Laval,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Pays de Thiers Rugby,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Bourguesan,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Canton Montrevel en Bresse,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Eyrieux,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Haute Bresse,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Matheysin,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Mauriacois,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Motterain,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC St Flour,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC St Simon,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+RC Vif Monestier Trieves,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Rhodia Cl Péage Rous Et Sal,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Rhone Sportif,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Annemassien,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Eymeux,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Rugby Entente Est Lyonnais XV,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+SC ACussetois,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+SC Brivadois,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+SO Givors Rugby 2 Vallees,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Stade Ath Bourg En Bresse,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+UA Tullins Fures,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Union Rugby En Ardeche Meridionale,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+Union Sportive Rhone XV,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+US Deux Ponts,8,Régionale 1 - Ligue Auvergne-Rhône-Alpes,
+AS Autunoise,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+Association Sportive Chablisienne,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+Chambertin Olympique,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+Champagnole Rugby,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+CS Beaunois,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+CS Seurrois,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+Entente Montbeliard Belfort Ascap Rugby Rcpm,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+FC Digoin Rugby Charolais XV,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+RC Chagnotin,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+Rugby Club du Louhannais,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+US Clunisoise,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+US Doloise,8,Régionale 1 - Ligue Bourgogne-Franche-Comté,
+Avant Garde Laique de Fougères,8,Régionale 1 - Ligue Bretagne,
+Dinan Rugby,8,Régionale 1 - Ligue Bretagne,
+RC Quimperois,8,Régionale 1 - Ligue Bretagne,
+RC Redonnais,8,Régionale 1 - Ligue Bretagne,
+RC St Brieuc,8,Régionale 1 - Ligue Bretagne,
+Rugby Club Brocéliande Oust Serent,8,Régionale 1 - Ligue Bretagne,
+Rugby Kreiz Treger,8,Régionale 1 - Ligue Bretagne,
+Rugby Lannion Perros,8,Régionale 1 - Ligue Bretagne,
+Dammarie RC,8,Régionale 1 - Ligue Centre-Val de Loire,
+RAC Castelroussin,8,Régionale 1 - Ligue Centre-Val de Loire,
+Ras Pole Sologne,8,Régionale 1 - Ligue Centre-Val de Loire,
+RC Drouais,8,Régionale 1 - Ligue Centre-Val de Loire,
+RC Orleans La Source,8,Régionale 1 - Ligue Centre-Val de Loire,
+SA Vierzonnais,8,Régionale 1 - Ligue Centre-Val de Loire,
+SC Chinonais,8,Régionale 1 - Ligue Centre-Val de Loire,
+US Bracieux,8,Régionale 1 - Ligue Centre-Val de Loire,
+US Joue,8,Régionale 1 - Ligue Centre-Val de Loire,
+US La Chatre,8,Régionale 1 - Ligue Centre-Val de Loire,
+Association Sportive Des Cheminots de Strasbourg Rugby,8,Régionale 1 - Ligue Grand Est,
+CO Chalonnais,8,Régionale 1 - Ligue Grand Est,
+Entente Sud Haute Marne,8,Régionale 1 - Ligue Grand Est,
+RC Mulhouse,8,Régionale 1 - Ligue Grand Est,
+RC Pont A Mousson,8,Régionale 1 - Ligue Grand Est,
+Rugby Champagne St André Vergers,8,Régionale 1 - Ligue Grand Est,
+RUS Hayange,8,Régionale 1 - Ligue Grand Est,
+C Leo Lagrange Armentieres,8,Régionale 1 - Ligue Hauts-de-France,
+Le Touquet Etaples Rugby Club,8,Régionale 1 - Ligue Hauts-de-France,
+L'Ovale Racing Club Marquettois,8,Régionale 1 - Ligue Hauts-de-France,
+RC Bethunois,8,Régionale 1 - Ligue Hauts-de-France,
+RO C Tourquennois,8,Régionale 1 - Ligue Hauts-de-France,
+Saint Omer / Millam,8,Régionale 1 - Ligue Hauts-de-France,
+Stade Villeneuvois Lille Metropole,8,Régionale 1 - Ligue Hauts-de-France,
+XV Bailleulois,8,Régionale 1 - Ligue Hauts-de-France,
+AC Bobigny 93 Rugby,8,Régionale 1 - Ligue Île-de-France,
+AS Lagny Rugby,8,Régionale 1 - Ligue Île-de-France,
+C AChevreuse,8,Régionale 1 - Ligue Île-de-France,
+C Ath Orsay Rugby Club,8,Régionale 1 - Ligue Île-de-France,
+CO Gargenville,8,Régionale 1 - Ligue Île-de-France,
+Entente AS Marcoussis US Limours,8,Régionale 1 - Ligue Île-de-France,
+Paris Xo Rugby,8,Régionale 1 - Ligue Île-de-France,
+Parisis Rugby Club,8,Régionale 1 - Ligue Île-de-France,
+RC Paris 15,8,Régionale 1 - Ligue Île-de-France,
+Red Star Ol Audonien St Ouen,8,Régionale 1 - Ligue Île-de-France,
+RO C Giffois,8,Régionale 1 - Ligue Île-de-France,
+RO C Houilles Carrieres Seine,8,Régionale 1 - Ligue Île-de-France,
+Rst Chilly / Epinay,8,Régionale 1 - Ligue Île-de-France,
+Rst UBM/Champigny,8,Régionale 1 - Ligue Île-de-France,
+Rueil AC,8,Régionale 1 - Ligue Île-de-France,
+Rugby Cellois Chesnaysien,8,Régionale 1 - Ligue Île-de-France,
+Rugby Club Garches Vaucresson,8,Régionale 1 - Ligue Île-de-France,
+Rugby Club Vallee de Montmorency Soisy,8,Régionale 1 - Ligue Île-de-France,
+Rugby Melun Combs Senart 77,8,Régionale 1 - Ligue Île-de-France,
+Terres de France Rugby,8,Régionale 1 - Ligue Île-de-France,
+Vie Au Grand Air de St Maur,8,Régionale 1 - Ligue Île-de-France,
+CS Gravenchon,8,Régionale 1 - Ligue Normandie,
+Dieppe Universitaire Club,8,Régionale 1 - Ligue Normandie,
+Ras Ava R1,8,Régionale 1 - Ligue Normandie,
+RC Granvillais,8,Régionale 1 - Ligue Normandie,
+RC Yvetotais,8,Régionale 1 - Ligue Normandie,
+Rugby Club Grand Quevilly,8,Régionale 1 - Ligue Normandie,
+Rugby Club Mont Saint Aignan,8,Régionale 1 - Ligue Normandie,
+Slr Lisieux / Rac Honfleur,8,Régionale 1 - Ligue Normandie,
+A Urrugnarrak,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Amicale Rugby de Marans,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+AS Meyssacoise,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+AS Montfortoise,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Aytre Rugby,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Bidart Union Club,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Bordeaux EC,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+CA Ribéracois,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Confluent Rugby Club XV,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+CS Nontronnais,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+ES Arudyenne,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+ES Lembeye,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Esperance Sportive Montignac,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Jse Sp Labouheyre,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Jse Sp Villeneuve de Marsan,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Limoges Étudiants Club,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Marsacq XV,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Pays Médoc Rugby,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Pessac Rugby,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+RAC Angérien,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Ras Escou Lasseube,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Ras RCPSY / URCA,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Ras Salon La Tour - Uzerche,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+RC Cestadais,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+RC Mussidanais,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+RC Queyrannais,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+RC Ustaritz Jatxou,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Rugby Club de La Pimpine,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Rugby Club Libournais,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Rugby Club Martignas Illac,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Rugby Club Pouillon Labatut,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+SA Monein,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+SA St Severin,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+St Cyprien AC,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+St Pee U C,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Stade Reolais,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Stade Saint Livradais XV,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+UA Issigeacoise,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+UA Mimizannaise,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Union Sportive Cublac Terrasson,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Union Sportive Juillac Objat,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+US Bouscataise,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+US Egletonnaise,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+US Habassaise,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+US Josbaig St Goin,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+US Lalinde,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+US Saintes Rugby,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+US Vezerienne Le Lardin St Lazare,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+XV Haut Perigord,8,Régionale 1 - Ligue Nouvelle-Aquitaine,
+Association Sportive Poussan XV,8,Régionale 1 - Ligue Occitanie,
+Avenir Moissagais,8,Régionale 1 - Ligue Occitanie,
+Aviron Castrais,8,Régionale 1 - Ligue Occitanie,
+Club Athlétique Bedarieux Grand Orb Rugby,8,Régionale 1 - Ligue Occitanie,
+CO Castelnaudais,8,Régionale 1 - Ligue Occitanie,
+Coquelicots Montechois Rugby,8,Régionale 1 - Ligue Occitanie,
+Entente La Vallée du Girou,8,Régionale 1 - Ligue Occitanie,
+Entente Sportive Coteaux de l'Arrêt,8,Régionale 1 - Ligue Occitanie,
+FC Triais,8,Régionale 1 - Ligue Occitanie,
+Gourdon XV Bouriane,8,Régionale 1 - Ligue Occitanie,
+Les Rives d'Orb,8,Régionale 1 - Ligue Occitanie,
+Mazeres Cassagne Sports,8,Régionale 1 - Ligue Occitanie,
+Ol Montredonnais XV,8,Régionale 1 - Ligue Occitanie,
+Ras Bretenoux Biars Vayrac / Gramat,8,Régionale 1 - Ligue Occitanie,
+RC Bassoues Lupiac Montesq,8,Régionale 1 - Ligue Occitanie,
+RC Espalionnais Nord Aveyron,8,Régionale 1 - Ligue Occitanie,
+RC Mauguio Carnon Pays D'or,8,Régionale 1 - Ligue Occitanie,
+RC Montalbanais,8,Régionale 1 - Ligue Occitanie,
+RC Revelois,8,Régionale 1 - Ligue Occitanie,
+RC Uzetien,8,Régionale 1 - Ligue Occitanie,
+Rugby Club Muretain,8,Régionale 1 - Ligue Occitanie,
+Rugby Club Plages d'Orb,8,Régionale 1 - Ligue Occitanie,
+Rugby Club Saint Sulpice La Pointe XV,8,Régionale 1 - Ligue Occitanie,
+SA Condomoise,8,Régionale 1 - Ligue Occitanie,
+Saint Céré Rugby,8,Régionale 1 - Ligue Occitanie,
+Saint Juery Arthes Ol Rugby,8,Régionale 1 - Ligue Occitanie,
+Stade O Maubourguetois Rugby,8,Régionale 1 - Ligue Occitanie,
+Stade Saint Gaudinois Luchonnais Boulonnais XV,8,Régionale 1 - Ligue Occitanie,
+Toulouse Electrogaz Club,8,Régionale 1 - Ligue Occitanie,
+Toulouse Lalande Aucamville XV,8,Régionale 1 - Ligue Occitanie,
+Toulouse UC,8,Régionale 1 - Ligue Occitanie,
+UA Vicoise,8,Régionale 1 - Ligue Occitanie,
+Union Rugby Club de La Geune Juillan Louey,8,Régionale 1 - Ligue Occitanie,
+Union Sigean Port La Nouvelle,8,Régionale 1 - Ligue Occitanie,
+Union Sportive des Coteaux Pouyastruc,8,Régionale 1 - Ligue Occitanie,
+US Canton St Lys,8,Régionale 1 - Ligue Occitanie,
+US Lectouroise,8,Régionale 1 - Ligue Occitanie,
+US Luzechoise,8,Régionale 1 - Ligue Occitanie,
+US Millas,8,Régionale 1 - Ligue Occitanie,
+US Verfeilloise Sect Rugby,8,Régionale 1 - Ligue Occitanie,
+Ailes Sportives Bouguenais - Reze Rugby,8,Régionale 1 - Ligue Pays de la Loire,
+Fontenay Lucon Rugby Sud Vendee,8,Régionale 1 - Ligue Pays de la Loire,
+RO Choletais,8,Régionale 1 - Ligue Pays de la Loire,
+Rugby Club du Haut Anjou,8,Régionale 1 - Ligue Pays de la Loire,
+Rugby Club Herbretais,8,Régionale 1 - Ligue Pays de la Loire,
+Rugby Olympique Chemille,8,Régionale 1 - Ligue Pays de la Loire,
+Rugby Saint Herblain,8,Régionale 1 - Ligue Pays de la Loire,
+Sport Atlh Club Clissonnais,8,Régionale 1 - Ligue Pays de la Loire,
+Velo Sport Nantais,8,Régionale 1 - Ligue Pays de la Loire,
+Aix Universite Rugby,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+Club Rugby Amateur de Balagne,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+Pennes Mirabeau Cadeneaux Rug,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+Portivechju Rugby,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+RC de La Vallee Du Gapeau,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Dignois,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Lucciana,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Orangeois,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Fos Sur Mer,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Six Fours - Le Brusc,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+SC Salonais,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+US Valreassienne Rugby,8,Régionale 1 - Ligue Provence-Alpes-Côte-d'Azur,
+Etang Sale Rugby Club,8,Régionale 1 - Ligue Réunion,
+Leu Rugby Club,8,Régionale 1 - Ligue Réunion,
+RC Le Tampon,8,Régionale 1 - Ligue Réunion,
+RC Portois Le Port,8,Régionale 1 - Ligue Réunion,
+RC Saint Paul,8,Régionale 1 - Ligue Réunion,
+RC St Gilles,8,Régionale 1 - Ligue Réunion,
+RC St Pierre Et Du Sud,8,Régionale 1 - Ligue Réunion,
+Sporting Club Du Chaudron,8,Régionale 1 - Ligue Réunion,
+XV Dionysien,8,Régionale 1 - Ligue Réunion,
+Archiball West Indies Rugby,9,Régionale 2 - Guadeloupe,
+Barracudas,9,Régionale 2 - Guadeloupe,
+Boisripeaux Rugby Club Abymes,9,Régionale 2 - Guadeloupe,
+Le Good Luck,9,Régionale 2 - Guadeloupe,
+Rugby Club de Goyave,9,Régionale 2 - Guadeloupe,
+Amberieu Bugey XV,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Amicale Laique Echirolles,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Arcol Rugby,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+AS Cours La Ville,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+AS Culin,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+AS Granoise,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+AS Roannaise,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+AS Romagnatoise Rugby,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+AS Succieu Terres Froides,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+ASS Verpilliere Nord Isere XV,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Bugey Ol Club Belley,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+CA Mauriennais,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Chartreuse Rugby Club,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+CS Grésivaudan Belledonne,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+CS Sauxillangeois,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Entente Blanzat Chateaugay,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Étoile Du Bugey Rugby,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Ol RC Riom Es Montagnes,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Ol St Bonnet Pres Riom,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Oval Club Gevaudan,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Ovalie Berg Coiron Helvie,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Pays de L'arbresle Rugby Club,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Canton de Marsanne,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Castelpontin,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Chartreuse Neron,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Chatillonnais,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Combronde,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Forezien Feurs,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Gresivaudan,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC La Sevenne,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Montaigut Besse,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Montmeyrannais,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Plats / RC Lamastrois,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Rambertois,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Roche La Molière,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Sillans,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC St Genes Champanelle,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Thones Aravis,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Thonon Chablais Leman,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Varacieux,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+RC Veyle Saone,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Rugby Clermont La Plaine,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Billomois,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club des Landes,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club du Pays d'Ozon,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Le Mole,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Vaux,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Rugby Olympique Donzerois,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Saint Mamet Rugby,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+SC Privadois Rugby,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+SO Pont Cheruy Charvieu Chavanoz Tignieu,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+SO Ugine Albertville,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Stade Chamalierois,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Stade Clermontois Rugby,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+Stade Olympique Annoneen,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+UA Cotoise Côte St André,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+US Côtes d'Arey,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+US Izeaux,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+US Jarrie Champs,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+US La Ravoire,9,Régionale 2 - Ligue Auvergne-Rhône-Alpes,
+ASC Saint Apollinaire,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Avenir Sportif Tournus,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Chatenoy RC,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Is Alliance Rugby,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+RC Vesoul,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Rugby Toucy Puisaye Forterre,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Rugby Union Morteau Plateau 25,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Saone Seille Rugby,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+US Buxynoise,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Verdun RAC,9,Régionale 2 - Ligue Bourgogne-Franche-Comté,
+Bain de Bretagne Rugby,9,Régionale 2 - Ligue Bretagne,
+Brest Bretagne Rugby,9,Régionale 2 - Ligue Bretagne,
+Le Relecq Kerhuon Rugby,9,Régionale 2 - Ligue Bretagne,
+RC Landivisien,9,Régionale 2 - Ligue Bretagne,
+RST Ploemeur RC - PGK,9,Régionale 2 - Ligue Bretagne,
+RST Rennes Rugby,9,Régionale 2 - Ligue Bretagne,
+Rugby Club Iroise Saint Renan,9,Régionale 2 - Ligue Bretagne,
+Rugby Club Lanester Bretagne Sud,9,Régionale 2 - Ligue Bretagne,
+Union Sportive Acignolaise,9,Régionale 2 - Ligue Bretagne,
+XV de L'ic,9,Régionale 2 - Ligue Bretagne,
+AC Aubigny,9,Régionale 2 - Ligue Centre-Val de Loire,
+Arcay Rugby Club Pays de Bourges,9,Régionale 2 - Ligue Centre-Val de Loire,
+AS Luynoise Rugby,9,Régionale 2 - Ligue Centre-Val de Loire,
+Buzancais Rug Val Indre Brenne,9,Régionale 2 - Ligue Centre-Val de Loire,
+Cercle Jules Ferry Rugby Fleury Les Aubrais,9,Régionale 2 - Ligue Centre-Val de Loire,
+Loches RO C,9,Régionale 2 - Ligue Centre-Val de Loire,
+Oval Club Sancoinnais,9,Régionale 2 - Ligue Centre-Val de Loire,
+Rugby Esvres Club Val de L'indre,9,Régionale 2 - Ligue Centre-Val de Loire,
+US St Pierre Des Corps,9,Régionale 2 - Ligue Centre-Val de Loire,
+USM Montargis,9,Régionale 2 - Ligue Centre-Val de Loire,
+Ardennes Rugby,9,Régionale 2 - Ligue Grand Est,
+Entente Bar-le-duc / Saint-dizier,9,Régionale 2 - Ligue Grand Est,
+Lauterbourg AS,9,Régionale 2 - Ligue Grand Est,
+RC Naborien,9,Régionale 2 - Ligue Grand Est,
+RC St Louis,9,Régionale 2 - Ligue Grand Est,
+Rugby Club de La Licorne - Saverne,9,Régionale 2 - Ligue Grand Est,
+Rugby Club Thann,9,Régionale 2 - Ligue Grand Est,
+Stade Reims,9,Régionale 2 - Ligue Grand Est,
+Thionville Yutz Generation R E,9,Régionale 2 - Ligue Grand Est,
+US Bassin de Longwy,9,Régionale 2 - Ligue Grand Est,
+Amicale Du Rugby Calaisien,9,Régionale 2 - Ligue Hauts-de-France,
+Clermont Club Rugby,9,Régionale 2 - Ligue Hauts-de-France,
+Phalempin / Omr,9,Régionale 2 - Ligue Hauts-de-France,
+RC Laon,9,Régionale 2 - Ligue Hauts-de-France,
+RC Valenciennois,9,Régionale 2 - Ligue Hauts-de-France,
+Rugby Olympique Flesselles,9,Régionale 2 - Ligue Hauts-de-France,
+Entente RC CS Bretigny,9,Régionale 2 - Ligue Île-de-France,
+Entente RC Plessis Robinson Meudo,9,Régionale 2 - Ligue Île-de-France,
+Provins Rugby Club,9,Régionale 2 - Ligue Île-de-France,
+R Conflans Herblay Val Seine,9,Régionale 2 - Ligue Île-de-France,
+Racing Nanterre Rugby,9,Régionale 2 - Ligue Île-de-France,
+Rambouillet Sports,9,Régionale 2 - Ligue Île-de-France,
+RC Creteil Choisy,9,Régionale 2 - Ligue Île-de-France,
+RC Dourdan,9,Régionale 2 - Ligue Île-de-France,
+RC Livry Gargan,9,Régionale 2 - Ligue Île-de-France,
+RC Neuilly Sur Marne,9,Régionale 2 - Ligue Île-de-France,
+RC Noisy Le Gd Marne La Vallee,9,Régionale 2 - Ligue Île-de-France,
+RC Paris Neuilly Sur Seine,9,Régionale 2 - Ligue Île-de-France,
+RC Senlis,9,Régionale 2 - Ligue Île-de-France,
+RC Val de Bièvre,9,Régionale 2 - Ligue Île-de-France,
+RC Velizy Villacoublay,9,Régionale 2 - Ligue Île-de-France,
+RO Yerrois,9,Régionale 2 - Ligue Île-de-France,
+Rst Plateau Briard/bonneuil Villeneuve Brevannes,9,Régionale 2 - Ligue Île-de-France,
+Rst Puteaux / ACBB,9,Régionale 2 - Ligue Île-de-France,
+Rugby Club Bagnoltais,9,Régionale 2 - Ligue Île-de-France,
+Rugby Club de Suresnes Hauts De Seine,9,Régionale 2 - Ligue Île-de-France,
+Rugby Club du Pays de Nemours,9,Régionale 2 - Ligue Île-de-France,
+Rugby Club Montreuillois,9,Régionale 2 - Ligue Île-de-France,
+Rugby Club Porte de l'Oise,9,Régionale 2 - Ligue Île-de-France,
+Rugby Club Seine & Oise Triel Sur Seine,9,Régionale 2 - Ligue Île-de-France,
+Rugby Olympique de Pantin,9,Régionale 2 - Ligue Île-de-France,
+Rugby Sud 77,9,Régionale 2 - Ligue Île-de-France,
+Stade Ol Rosneen,9,Régionale 2 - Ligue Île-de-France,
+Union Rugby Centre 78,9,Régionale 2 - Ligue Île-de-France,
+US Alfortville Rugby,9,Régionale 2 - Ligue Île-de-France,
+USO Athis Mons,9,Régionale 2 - Ligue Île-de-France,
+Le Havre Rugby Club,9,Régionale 2 - Ligue Normandie,
+Racing Club Port du Havre,9,Régionale 2 - Ligue Normandie,
+RC Alencon,9,Régionale 2 - Ligue Normandie,
+RC Cherbourg Hague,9,Régionale 2 - Ligue Normandie,
+RC Herouvillais,9,Régionale 2 - Ligue Normandie,
+RC Pays de Coutances,9,Régionale 2 - Ligue Normandie,
+RC St Lois,9,Régionale 2 - Ligue Normandie,
+Rugby Ouest Cotentin,9,Régionale 2 - Ligue Normandie,
+4 C XV,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Asasp Arros,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Capelaine,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Castelmoron XV,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Chasteaux Et Lissac,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Elgarrekin Ascain,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Jeunes de Dampniat,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Le Passage Rugby,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Miramontaise,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Narrossaise,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS Ondraise,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS P O Brive,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AS St Martin de Seignanx,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Athletic Rugby Club Baillargeois Du Valvert,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Benejacq Ol En Val Du Lagoin,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+C Ath Pontacq,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Club Omnisports Couronnais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Club Ovalie Du Bocage 79,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Entente Lesperon Onesse,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Étoile Sportive Eysinaise,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Folles Ambazac Ras,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Jarnac Rouillac Fin Bois,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Marsilly Rugby Club,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Oleron RC,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Ovalie Club Villeneuvois,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Pedale Stade Tarusate,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Ras RC V / L B R,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+RC Billere ASPTT Lescar,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+RC Cantonal Salignacois Pays de Fenelon,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+RC Chameyracois,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+RC Confolentais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+RC Cubzaguais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+RC Lege Cap Ferret,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+RC Nieuil L Espoir,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Rugby Association Pays Isle Dronne 33,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Rugby Club Bazeillais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Rugby Club Daglanais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Rugby Club de Trelissac,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Rugby Club Verneuillais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+SA Montponnais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+SC Saint Aubin,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Sporting Club Rhetais,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Union Rugby Clubs XV Ambares-St Loubes-Izon,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Union Varetz Saint Aulaire Rugby,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+URG - Union Rugby Gascon,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+US Aspoise,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+US Grenadoise Rugby,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+US Herm Rugby,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+US Lavardac Barbaste,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+US Roquentin Laroque Timbaut,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+US Trembladaise,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+USB Arthez Lagor,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+Ychoux Ol,9,Régionale 2 - Ligue Nouvelle-Aquitaine,
+AC Labastide Beauvoir,9,Régionale 2 - Ligue Occitanie,
+Amicale Sportive Cult Aureilhan,9,Régionale 2 - Ligue Occitanie,
+Amicale Sportive Lisloise,9,Régionale 2 - Ligue Occitanie,
+AS Maureilhan Montady Rugby XV,9,Régionale 2 - Ligue Occitanie,
+AS Olonzac Minervois,9,Régionale 2 - Ligue Occitanie,
+Association Ouveillan Cuxac,9,Régionale 2 - Ligue Occitanie,
+Association Sportive Canet,9,Régionale 2 - Ligue Occitanie,
+Avenir Monclarais,9,Régionale 2 - Ligue Occitanie,
+Avenir Ol Viviez,9,Régionale 2 - Ligue Occitanie,
+CO St Lary Soulan,9,Régionale 2 - Ligue Occitanie,
+Compound C ACapdenacois,9,Régionale 2 - Ligue Occitanie,
+Entente Fleury Salles Coursan XV,9,Régionale 2 - Ligue Occitanie,
+Entente La Tet,9,Régionale 2 - Ligue Occitanie,
+Entente Les 3 Clochers,9,Régionale 2 - Ligue Occitanie,
+Entente US Murviel Thezan,9,Régionale 2 - Ligue Occitanie,
+Étoile Sportive Laroque Belesta,9,Régionale 2 - Ligue Occitanie,
+F Laique Ht Vernet Perpignan,9,Régionale 2 - Ligue Occitanie,
+Hers Lauragais XV,9,Régionale 2 - Ligue Occitanie,
+Jeunesse Sportive Ibosceenne XV,9,Régionale 2 - Ligue Occitanie,
+JSE Sp Caramanaise,9,Régionale 2 - Ligue Occitanie,
+Lauzerte Quercy Pays de Serres XV,9,Régionale 2 - Ligue Occitanie,
+Masseube XV,9,Régionale 2 - Ligue Occitanie,
+Olympique Des Monts de Lacaune,9,Régionale 2 - Ligue Occitanie,
+Olympique Labruguiere XV,9,Régionale 2 - Ligue Occitanie,
+Piège Lauragais Malepere XV,9,Régionale 2 - Ligue Occitanie,
+Puylaurens AC,9,Régionale 2 - Ligue Occitanie,
+Racing Club Ponteilla,9,Régionale 2 - Ligue Occitanie,
+Ras Eoll XV Launaguet,9,Régionale 2 - Ligue Occitanie,
+Ras ESPCV XV CERS/Portiragnes,9,Régionale 2 - Ligue Occitanie,
+Ras Ovalie Villecomtal Rabastens,9,Régionale 2 - Ligue Occitanie,
+Ras Rugby Pays d'Olmes,9,Régionale 2 - Ligue Occitanie,
+RC Bagnols Marcoule,9,Régionale 2 - Ligue Occitanie,
+RC Labarthe sur Leze,9,Régionale 2 - Ligue Occitanie,
+RC Mende Lozere,9,Régionale 2 - Ligue Occitanie,
+RC Mirapicien XV,9,Régionale 2 - Ligue Occitanie,
+RC Rougier,9,Régionale 2 - Ligue Occitanie,
+RC St Gillois,9,Régionale 2 - Ligue Occitanie,
+RO Lunellois,9,Régionale 2 - Ligue Occitanie,
+Rugby Carbonne Longages XV,9,Régionale 2 - Ligue Occitanie,
+Rugby Club Alaric,9,Régionale 2 - Ligue Occitanie,
+Rugby Club Quint Fonsegrives,9,Régionale 2 - Ligue Occitanie,
+Rugby Club Saint Jory Bruguieres XV,9,Régionale 2 - Ligue Occitanie,
+Rugby Coeur de Lomagne,9,Régionale 2 - Ligue Occitanie,
+Rugby Entente Du Cabardes,9,Régionale 2 - Ligue Occitanie,
+SA Auterivain,9,Régionale 2 - Ligue Occitanie,
+Saint Gely Pic Saint Loup Rugby,9,Régionale 2 - Ligue Occitanie,
+SC Briatextois,9,Régionale 2 - Ligue Occitanie,
+Semeac Ol,9,Régionale 2 - Ligue Occitanie,
+Sidobre Montagne XV,9,Régionale 2 - Ligue Occitanie,
+Stade Ath Rabastens Couffouleu,9,Régionale 2 - Ligue Occitanie,
+Stade Maursois Chataigneraie Cele,9,Régionale 2 - Ligue Occitanie,
+Stade St Orennais XV,9,Régionale 2 - Ligue Occitanie,
+Tournay Sports,9,Régionale 2 - Ligue Occitanie,
+Union Sportive Cote Vermeille,9,Régionale 2 - Ligue Occitanie,
+Union Sportive du Mardaing Azereix / Ossun,9,Régionale 2 - Ligue Occitanie,
+Union Sportive Nissan Colombiers,9,Régionale 2 - Ligue Occitanie,
+Union Sportive Villemur Fronton,9,Régionale 2 - Ligue Occitanie,
+US Adeenne,9,Régionale 2 - Ligue Occitanie,
+US Aussillon Mazamet XV,9,Régionale 2 - Ligue Occitanie,
+US Carmaux Rugby,9,Régionale 2 - Ligue Occitanie,
+US Critourienne Verniollaise,9,Régionale 2 - Ligue Occitanie,
+US Eauze d'Armagnac,9,Régionale 2 - Ligue Occitanie,
+US Fuxéenne,9,Régionale 2 - Ligue Occitanie,
+US Lezadoise,9,Régionale 2 - Ligue Occitanie,
+US Montrealaise,9,Régionale 2 - Ligue Occitanie,
+US Montrejeau Gourdan Polignan,9,Régionale 2 - Ligue Occitanie,
+US Plaisantine,9,Régionale 2 - Ligue Occitanie,
+US Portesienne,9,Régionale 2 - Ligue Occitanie,
+US Ramonville Ste Agne,9,Régionale 2 - Ligue Occitanie,
+US Severagaise,9,Régionale 2 - Ligue Occitanie,
+US Souillagaise,9,Régionale 2 - Ligue Occitanie,
+US Vielmuroise,9,Régionale 2 - Ligue Occitanie,
+Val XV,9,Régionale 2 - Ligue Occitanie,
+CO Pontlieue,9,Régionale 2 - Ligue Pays de la Loire,
+Ras Sac / Crc,9,Régionale 2 - Ligue Pays de la Loire,
+RC Grace Guenrouet,9,Régionale 2 - Ligue Pays de la Loire,
+RC Lavallois,9,Régionale 2 - Ligue Pays de la Loire,
+RC Pays d'Ancenis,9,Régionale 2 - Ligue Pays de la Loire,
+RC Pornicais,9,Régionale 2 - Ligue Pays de la Loire,
+Rugby Club Baulois,9,Régionale 2 - Ligue Pays de la Loire,
+Saumur Rugby,9,Régionale 2 - Ligue Pays de la Loire,
+Stade Treillierain,9,Régionale 2 - Ligue Pays de la Loire,
+US Thouarsaise Rugby,9,Régionale 2 - Ligue Pays de la Loire,
+Bastia XV,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+CO Sisteronnais,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Étoile Sportive Monteux,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Gap Hautes Alpes Rugby,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Gemenos Rugby Est Provence,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Lerins Rugby Club,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Ajaccien,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Antibes Sophia Antipolis,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Arlesien XV,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Las,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Le Beausset,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Noves-Eyragues,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Ollioulais,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Pernois,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Pertuisien,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Bedarrides,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Pierrefeucain,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Sorgues Rhone Ouveze,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Stade Laurentin Rugby,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+Vitrolles Rugby Club,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+XV de Besagne,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+XV Saint Remois,9,Régionale 2 - Ligue Provence-Alpes-Côte-d'Azur,
+AL Cisternes La Foret,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+AS A I A Lempdes,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+AS Dompierroise,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+AS Fontaine,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+AS Pulverieres,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+AS Varennoise,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Association Rugby Technologie,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Courtenay Rugby XV,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+CS Puy Guillaume Rugby,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Entente Ennezat Aigueperse,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Entente RChauffailles Charlieu,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Entente Sioule Limagne,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Entente St Amour Coligny,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Jeunesse Ath Heyrieux Rugby,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Joyeuse Sportive A Quinze de St Paul Les Romans,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+La Fraternelle Moirans,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Les Loups de La Croix,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Ovale Reins Amplepuis,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Plauzat Olympique,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rass RC Cruas / Sc Ouveze Payre,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Beaumontois,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Brezins,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Des Hauts Plateaux,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Donatien,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Faverges,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Haut Gevaudan,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Langeadois,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Lapalissois,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Livradois,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Mions,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Perignat Sur Allier,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Saint Yorre Rugby,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Sancy,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Touvet Pontcharra,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC Villeneuvois V de Marc,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+RC XV Brives Charensac,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Royans Sports,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rst RC Rhodanien / ASACR Régionale,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Chabeuillois,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Corbelin,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Domes Sioule,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club du Genevois,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club du Pays Briançonnais,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Haute Tarentaise,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Massiacois,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Club Val de Saone,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Des Monts,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Rugby Entente Velay Est,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Savigneux Montbrison Rugby Club,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+St Vallier Sportif,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Unieux Firminy Ondaine Rugby,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Union Sportive Albinoise Rive Gauche,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+Union Sportive Vallée de La Drome Rugby,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+US Dieulefit Bourdeaux,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+US Florinoise,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+US Martres de Veyre,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+US Valloire Galaure,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+US Venissieux,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+XV Des Combrailles,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+XV Suranais,10,Régionale 3 - Ligue Auvergne-Rhône-Alpes,
+AS Amicale Vauzelles,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+AS Pougues La Charite,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+ASU C Migennes,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Avallon Chatillon Tonnerre,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Chenove Rugby Club,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+CR Censeau / Usa,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Entente Rugby Givry Cheilly,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+RC Auxonnais,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+RC Morez Haut Jura,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+RC Ordon,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+RC St Martin Du Lac,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+RCP Maichois Embar,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Rugby Club de Coulanges Sur Yonne,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Rugby Club Dijonnais SA,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Rugby Club Montbard Auxois,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Rugby Club Senonais,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Rugby Club Vallee de L Ouche,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Rugby Ovalie Luron,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Saulieu RC,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+US Baumoise,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+US Bourbon Lancy,10,Régionale 3 - Ligue Bourgogne-Franche-Comté,
+Douarnenez Rugby Athletic Club,10,Régionale 3 - Ligue Bretagne,
+Racing Club Brocéliande Rugby Paimpont,10,Régionale 3 - Ligue Bretagne,
+RC Carhaix,10,Régionale 3 - Ligue Bretagne,
+RC Pontivyen,10,Régionale 3 - Ligue Bretagne,
+RFC Kastellin,10,Régionale 3 - Ligue Bretagne,
+Rhuys Rugby Club,10,Régionale 3 - Ligue Bretagne,
+Rugby Bretagne Romantique,10,Régionale 3 - Ligue Bretagne,
+Rugby Club de L'hermine,10,Régionale 3 - Ligue Bretagne,
+Rugby Club du Pays de Morlaix,10,Régionale 3 - Ligue Bretagne,
+Rugby Club Pays d'Elven,10,Régionale 3 - Ligue Bretagne,
+Rugby Club Pays Muzillacais,10,Régionale 3 - Ligue Bretagne,
+Rugby Club Val D'ille Aubigne Melesse,10,Régionale 3 - Ligue Bretagne,
+Saint Pere Rugby Club,10,Régionale 3 - Ligue Bretagne,
+Skol Rugby Er Nav Ker,10,Régionale 3 - Ligue Bretagne,
+UR Landerneau,10,Régionale 3 - Ligue Bretagne,
+C' Chartres Rugby,10,Régionale 3 - Ligue Centre-Val de Loire,
+Entente SC St Amand Et RC Orval,10,Régionale 3 - Ligue Centre-Val de Loire,
+Foecy Ovale Club,10,Régionale 3 - Ligue Centre-Val de Loire,
+J.A.S.,10,Régionale 3 - Ligue Centre-Val de Loire,
+L'ovale de Loire,10,Régionale 3 - Ligue Centre-Val de Loire,
+Oval Union Rugby Sud 28,10,Régionale 3 - Ligue Centre-Val de Loire,
+Ras Lunery Saint Florent +18,10,Régionale 3 - Ligue Centre-Val de Loire,
+Ras Portes de Sologne +18,10,Régionale 3 - Ligue Centre-Val de Loire,
+Ras Sancerre XV Cosnois,10,Régionale 3 - Ligue Centre-Val de Loire,
+Ras Sully / Chateauneuf,10,Régionale 3 - Ligue Centre-Val de Loire,
+RC Deolois,10,Régionale 3 - Ligue Centre-Val de Loire,
+RC Gien Briare,10,Régionale 3 - Ligue Centre-Val de Loire,
+Section Chailloise,10,Régionale 3 - Ligue Centre-Val de Loire,
+Union Sportive Berrichonne,10,Régionale 3 - Ligue Centre-Val de Loire,
+US Argentonnaise,10,Régionale 3 - Ligue Centre-Val de Loire,
+US Orléanaise,10,Régionale 3 - Ligue Centre-Val de Loire,
+XV Gaulois Charentillais,10,Régionale 3 - Ligue Centre-Val de Loire,
+AS Chalampe,10,Régionale 3 - Ligue Grand Est,
+Boulay Olympique,10,Régionale 3 - Ligue Grand Est,
+Club Rugby Aube Champagne Ossey Marigny,10,Régionale 3 - Ligue Grand Est,
+CR Illkirch Graffenstaden,10,Régionale 3 - Ligue Grand Est,
+Drusus Harpastum Rugby,10,Régionale 3 - Ligue Grand Est,
+Entente Sportive Hagondange,10,Régionale 3 - Ligue Grand Est,
+Forbach Sarrebruck Rugby,10,Régionale 3 - Ligue Grand Est,
+Mutzig Ovalie Molsheim,10,Régionale 3 - Ligue Grand Est,
+Ovalie Club Du Bassin Toulois,10,Régionale 3 - Ligue Grand Est,
+RA Épinal Golbey,10,Régionale 3 - Ligue Grand Est,
+RC Dieulouard Liverdun,10,Régionale 3 - Ligue Grand Est,
+RC Lunevillois,10,Régionale 3 - Ligue Grand Est,
+RC Sélestat Giessen,10,Régionale 3 - Ligue Grand Est,
+RCS Vittellois,10,Régionale 3 - Ligue Grand Est,
+Romilly Rugby Club,10,Régionale 3 - Ligue Grand Est,
+Rugby Centre Meuse Force 4,10,Régionale 3 - Ligue Grand Est,
+Rugby Club des Deux Vallees,10,Régionale 3 - Ligue Grand Est,
+Saint Die - Raon L Etape - Baccarat XV,10,Régionale 3 - Ligue Grand Est,
+ASS Anciens Eleves de Leforest,10,Régionale 3 - Ligue Hauts-de-France,
+Chateau-thierry / Soissons / Montreuil Aux Lions,10,Régionale 3 - Ligue Hauts-de-France,
+Duisans / Arras,10,Régionale 3 - Ligue Hauts-de-France,
+Entente Amiens Somme,10,Régionale 3 - Ligue Hauts-de-France,
+Racing Cl St Quentinois,10,Régionale 3 - Ligue Hauts-de-France,
+RC Amandinois,10,Régionale 3 - Ligue Hauts-de-France,
+RC Noyonnais,10,Régionale 3 - Ligue Hauts-de-France,
+RI Plessis Lagny,10,Régionale 3 - Ligue Hauts-de-France,
+RO Cambraisien,10,Régionale 3 - Ligue Hauts-de-France,
+RO Fourmisien,10,Régionale 3 - Ligue Hauts-de-France,
+Rugby Club Anzinois,10,Régionale 3 - Ligue Hauts-de-France,
+Rugby Club de Meru Les Sablons,10,Régionale 3 - Ligue Hauts-de-France,
+Rugby Club Flandres Littoral Nord,10,Régionale 3 - Ligue Hauts-de-France,
+Rugby Club Hazebrouck,10,Régionale 3 - Ligue Hauts-de-France,
+Rugby Club Lens Lievin,10,Régionale 3 - Ligue Hauts-de-France,
+XV Crepynois,10,Régionale 3 - Ligue Hauts-de-France,
+AAS Fresnes,10,Régionale 3 - Ligue Île-de-France,
+Amicale Laique Des Jeunes de Limay Rugby,10,Régionale 3 - Ligue Île-de-France,
+Arpajon Rugby XV,10,Régionale 3 - Ligue Île-de-France,
+Association Sportive Mantaise,10,Régionale 3 - Ligue Île-de-France,
+Blanc Mesnil Sports Rugby,10,Régionale 3 - Ligue Île-de-France,
+Entente Goussainville Gonesse XV,10,Régionale 3 - Ligue Île-de-France,
+Étampes RC,10,Régionale 3 - Ligue Île-de-France,
+Grigny Rugby A 15,10,Régionale 3 - Ligue Île-de-France,
+M Laffitte St Germain Poissy,10,Régionale 3 - Ligue Île-de-France,
+Olympique Columerien et Pays Fertois Rugby,10,Régionale 3 - Ligue Île-de-France,
+Paris Olympique Rugby Club,10,Régionale 3 - Ligue Île-de-France,
+Paris Universite Club,10,Régionale 3 - Ligue Île-de-France,
+Plaisir Rugby Club,10,Régionale 3 - Ligue Île-de-France,
+Racing Club Asnierois,10,Régionale 3 - Ligue Île-de-France,
+RC Ballancourtois,10,Régionale 3 - Ligue Île-de-France,
+RC L'isle Adam,10,Régionale 3 - Ligue Île-de-France,
+RC Noisy Le Sec,10,Régionale 3 - Ligue Île-de-France,
+Rst AS Corbeil Essonne/RC Mennecy/Saintry,10,Régionale 3 - Ligue Île-de-France,
+Rst Aubergenville / Epone,10,Régionale 3 - Ligue Île-de-France,
+Rst Fontenay / Antony,10,Régionale 3 - Ligue Île-de-France,
+Rugby Charenton Maisons Alfort St Maurice,10,Régionale 3 - Ligue Île-de-France,
+Rugby Club de Champs - Val Maubuee,10,Régionale 3 - Ligue Île-de-France,
+Rugby Club Les Mureaux,10,Régionale 3 - Ligue Île-de-France,
+Rugby Val d'Orge Savigny Lonjumeau,10,Régionale 3 - Ligue Île-de-France,
+Saint Denis Rugby 93,10,Régionale 3 - Ligue Île-de-France,
+Sainte Geneviève Sports Rugby,10,Régionale 3 - Ligue Île-de-France,
+SCUF,10,Régionale 3 - Ligue Île-de-France,
+Sèvres Chaville Rugby,10,Régionale 3 - Ligue Île-de-France,
+US Jeunesse de Mitry Mory,10,Régionale 3 - Ligue Île-de-France,
+US Palaiseau,10,Régionale 3 - Ligue Île-de-France,
+USO Chelles Rugby,10,Régionale 3 - Ligue Île-de-France,
+Viry Chatillon Rugby Club,10,Régionale 3 - Ligue Île-de-France,
+Bayeux Rugby Club,10,Régionale 3 - Ligue Normandie,
+Cote de Nacre Rugby Club,10,Régionale 3 - Ligue Normandie,
+RC Du Bocage Virois,10,Régionale 3 - Ligue Normandie,
+RC Flers Et Pays Du Bocage,10,Régionale 3 - Ligue Normandie,
+RC St Martin Champs Avranches,10,Régionale 3 - Ligue Normandie,
+Rugby Club Valognes,10,Régionale 3 - Ligue Normandie,
+Alliance Ovalienne Caudecostoise En Brulhois,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+AS Penne St Sylvestre,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+AS Seilhacoise,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+AS St Aubin de Medoc,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Association Sportive Buzy Ogeu,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Avant Garde de Theze,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Biganos Rugby XV,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+CA Meymac,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Cazaux Olympique,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Club-Orgnac-Lubersac,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+CO Colayracais,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+CO Périgueux-Ouest,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+CS Bellachon,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Entente Sportive Bruges Blanquefort,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Étoile Sportive Miramontoise,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Gabardan AS,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Jurancon XV,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Les Marcassins,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Nord Béarn XV,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Ovalie Grand Chatellerault Pleumartin,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Poitiers Étudiants Club,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+RC Mezinais,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+RC Palaisien,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+RC Prigontin,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+RO Pontois,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Ruffec AC,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Rugby Club L'Aurence Limoges,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Rugby Club Pays de Roquefort,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Rugby Club Pomarez-amou,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Rugby Tonnay Charente,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+SA St Maixentais,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Sanguinet AC,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+Sarako Izarra,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+SC St Pierre du Mont,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+US Chauvinoise Rugby,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+US Mourenx,10,Régionale 3 - Ligue Nouvelle-Aquitaine,
+AS Bastidienne,10,Régionale 3 - Ligue Occitanie,
+AS La Barguillere,10,Régionale 3 - Ligue Occitanie,
+AS Marciacaise,10,Régionale 3 - Ligue Occitanie,
+Association Sportive Beaulieuroise XV,10,Régionale 3 - Ligue Occitanie,
+Avenir du Rugby Boulonnais,10,Régionale 3 - Ligue Occitanie,
+Avenir Montbeton Lacourt Rugby,10,Régionale 3 - Ligue Occitanie,
+Avenir Salanquais XV,10,Régionale 3 - Ligue Occitanie,
+Avenir Villefranchois,10,Régionale 3 - Ligue Occitanie,
+Bas Armagnac Rugby Club,10,Régionale 3 - Ligue Occitanie,
+Bassin Sud Minervois XV,10,Régionale 3 - Ligue Occitanie,
+CA Prateen,10,Régionale 3 - Ligue Occitanie,
+Cabestany Olympique XV,10,Régionale 3 - Ligue Occitanie,
+Caunes Rugby Club XV,10,Régionale 3 - Ligue Occitanie,
+Club Olympique Tauch Corbieres,10,Régionale 3 - Ligue Occitanie,
+Corbieres Maritimes XV,10,Régionale 3 - Ligue Occitanie,
+Deux Rives,10,Régionale 3 - Ligue Occitanie,
+Entente Bazet Andrest,10,Régionale 3 - Ligue Occitanie,
+Entente Haut Vallespir,10,Régionale 3 - Ligue Occitanie,
+Étoile Sportive Villenouvelloise,10,Régionale 3 - Ligue Occitanie,
+Étoile Sportive Vinassanaise,10,Régionale 3 - Ligue Occitanie,
+Garonna XV,10,Régionale 3 - Ligue Occitanie,
+La Nicolaite,10,Régionale 3 - Ligue Occitanie,
+Lieuran XV,10,Régionale 3 - Ligue Occitanie,
+Marguerittes RC,10,Régionale 3 - Ligue Occitanie,
+Marseillan Rugby Club,10,Régionale 3 - Ligue Occitanie,
+Meze Rugby Club,10,Régionale 3 - Ligue Occitanie,
+Montestruc Gers Rugby,10,Régionale 3 - Ligue Occitanie,
+Panjas AC,10,Régionale 3 - Ligue Occitanie,
+Rabastens XV,10,Régionale 3 - Ligue Occitanie,
+Racing Cl Septfontois,10,Régionale 3 - Ligue Occitanie,
+Racing Club Limoux Rugby XV,10,Régionale 3 - Ligue Occitanie,
+Racing Club Naucellois,10,Régionale 3 - Ligue Occitanie,
+Racing Club Rieupeyroux XV,10,Régionale 3 - Ligue Occitanie,
+Racing Club Villeneuve Les Maguelone,10,Régionale 3 - Ligue Occitanie,
+Racing Club Villeneuvois,10,Régionale 3 - Ligue Occitanie,
+Ras Frontignan / St Jean de Vedas,10,Régionale 3 - Ligue Occitanie,
+Ras Haute Vallée Aveyron Rodez Rugby,10,Régionale 3 - Ligue Occitanie,
+Ras Hers Pyrenees Cathare,10,Régionale 3 - Ligue Occitanie,
+Ras US Haut Salat /co Castillon,10,Régionale 3 - Ligue Occitanie,
+RC St Quentinois,10,Régionale 3 - Ligue Occitanie,
+Rugby Athletic Cerdagne Capcir XV,10,Régionale 3 - Ligue Occitanie,
+Rugby Club du Brulhois 82,10,Régionale 3 - Ligue Occitanie,
+Rugby Club Grand Mottois,10,Régionale 3 - Ligue Occitanie,
+Rugby Club Jacou Montpellier Nord,10,Régionale 3 - Ligue Occitanie,
+Rugby Club Lavernose Lacasse,10,Régionale 3 - Ligue Occitanie,
+Rugby Club Mazeres XV,10,Régionale 3 - Ligue Occitanie,
+Rugby Club Olympique du Salagou Coeur d'Herault,10,Régionale 3 - Ligue Occitanie,
+Rugby Club Roquemaure XV,10,Régionale 3 - Ligue Occitanie,
+Rugby Corneilhan XV,10,Régionale 3 - Ligue Occitanie,
+Rugby Ecole de Vendargues,10,Régionale 3 - Ligue Occitanie,
+SC L'honor de Cos,10,Régionale 3 - Ligue Occitanie,
+SC Montastrucois,10,Régionale 3 - Ligue Occitanie,
+Stade Bessanais,10,Régionale 3 - Ligue Occitanie,
+Stade Montfauconnais Rugby,10,Régionale 3 - Ligue Occitanie,
+Stade Montpellierain 2020,10,Régionale 3 - Ligue Occitanie,
+Stade Uchaudois Associatif Rugby Club,10,Régionale 3 - Ligue Occitanie,
+Thore Rugby Club,10,Régionale 3 - Ligue Occitanie,
+Toulouse Ath C/la Fourguette,10,Régionale 3 - Ligue Occitanie,
+Toulouse Rugby Club,10,Régionale 3 - Ligue Occitanie,
+UA Lalouberienne,10,Régionale 3 - Ligue Occitanie,
+Union Catalane Pollestres Bages Villeneuve,10,Régionale 3 - Ligue Occitanie,
+Union Rive Gauche XV,10,Régionale 3 - Ligue Occitanie,
+Union Sportive Castelnau Bastide 117,10,Régionale 3 - Ligue Occitanie,
+US Castelnau En Madiranais,10,Régionale 3 - Ligue Occitanie,
+US Finhanaise,10,Régionale 3 - Ligue Occitanie,
+US Gondrinoise,10,Régionale 3 - Ligue Occitanie,
+US L'Ayguette,10,Régionale 3 - Ligue Occitanie,
+US St Antoninoise,10,Régionale 3 - Ligue Occitanie,
+US Ste Foy de Peyrolieres,10,Régionale 3 - Ligue Occitanie,
+Valence Olympique d'Albi,10,Régionale 3 - Ligue Occitanie,
+Vals et Villages en Astarac L'Isle de Noe XV,10,Régionale 3 - Ligue Occitanie,
+XV de La Save,10,Régionale 3 - Ligue Occitanie,
+Entente Du Nord Sarthe,10,Régionale 3 - Ligue Pays de la Loire,
+Ras Anjou Ovalie R3,10,Régionale 3 - Ligue Pays de la Loire,
+Ras Oss 72,10,Régionale 3 - Ligue Pays de la Loire,
+RC Castrogonterien,10,Régionale 3 - Ligue Pays de la Loire,
+RC Douessin Rugby,10,Régionale 3 - Ligue Pays de la Loire,
+Rugby Club Saint Hilaire Ocean,10,Régionale 3 - Ligue Pays de la Loire,
+Rugby Olympique Mayennais,10,Régionale 3 - Ligue Pays de la Loire,
+Seiches Rugby,10,Régionale 3 - Ligue Pays de la Loire,
+XV de Grand-lieu,10,Régionale 3 - Ligue Pays de la Loire,
+Association Sportive Apt Vallee du Calavon,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Bollene RC,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Brignoles Provence XV,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Entente St Jean Du Var - Corse 83,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Eyguieres XV,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Manosque Rugby Club,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Racing Club Pradetan,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Ras Tarascon Beaucaire XV,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+RC Vaisonnais,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+RCR Rugby Club du Rocher,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+RO Planais,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rubgy Club Maubecquois,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Ciotat Ceyreste,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club des Plages,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club du Golfe,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Hyeres Carqueiranne La Crau 83,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Marseillais,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Club Port de Bouc,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+Rugby Saint Maximinois XV,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+US St Mandrier,10,Régionale 3 - Ligue Provence-Alpes-Côte-d'Azur,
+ASVEL Rugby,NA,NA,
+Bugue Athletic Club,NA,NA,
+CA Bordeaux Bègles Gironde,NA,NA,
+Caen Rugby Club,NA,NA,
+Entente Sportive Avignon Saint-Saturnin,NA,NA,
+Étoile Sportive Montilienne,NA,NA,
+Football Club de Lyon,NA,NA,
+International Athletic Club,NA,NA,
+Iris Club lillois,NA,NA,
+Istres Sports Rugby,NA,NA,
+Jeanne d'Arc Le Béarn,NA,NA,
+La Voulte Sportif,NA,NA,
+Lille Métropole rugby,NA,NA,
+Montluçon Rugby,NA,NA,
+Olympique,NA,NA,
+Olympique Miélanais Rugby,NA,NA,
+Paris Université Club,NA,NA,
+Racing Club Chalonnais,NA,NA,
+Racing Rugby Club de Nice,NA,NA,
+Red Star Olympique Rugby,NA,NA,
+Rhône Ovalie Club La Voulte Valence,NA,NA,
+Rugby Club Cannes Mandelieu,NA,NA,
+Rugby Club de Drancy,NA,NA,
+Rugby Club Hyérois,NA,NA,
+Rugby Club Strasbourg,NA,NA,
+Rugby Nice Côte d'Azur,NA,NA,
+Sport Athlétique Bordelais Rugby,NA,NA,
+Sport Athlétique Verdunois,NA,NA,
+Sporting Club d'Angoulême,NA,NA,
+Sporting club de Vaugirard,NA,NA,
+Sporting Club Universitaire de France,NA,NA,
+Sporting Nazairien Rugby,NA,NA,
+Stade Domontois Rugby Club,NA,NA,
+Stade Lavelanétien,NA,NA,
+Stade Montluçonnais,NA,NA,
+Stade Olympique Villelonguet,NA,NA,
+Toulouse Olympique Employés Club,NA,NA,
+Union Athlétique Libournaise,NA,NA,
+Union Cognac Saint-Jean-d'Angély,NA,NA,
+Union Sportive Baigorri,NA,NA,
+Union Sportive Fumel Libos,NA,NA,
+Union Sportive Garazi,NA,NA,
+Union Sportive Métropolitaine,NA,NA,
+Union Sportive Métropolitaine des Transports,NA,NA,
+Union Sportive Testerine,NA,NA,
+Union Sportive Vizilloise,NA,NA,
+Valence Sportif,NA,NA,

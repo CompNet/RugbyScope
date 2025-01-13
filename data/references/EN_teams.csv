@@ -1,869 +1,899 @@
 "Name","Tier","Division","WD"
-"Bath Rugby",1,"Premiership Rugby",""
-"Bristol Bears",1,"Premiership Rugby",""
-"Exeter Chiefs",1,"Premiership Rugby",""
-"Gloucester Rugby",1,"Premiership Rugby",""
-"Harlequin FC",1,"Premiership Rugby",""
-"Leicester Tigers",1,"Premiership Rugby",""
-"London Irish",1,"Premiership Rugby",""
-"London Welsh RFC",1,"Premiership Rugby",""
-"Newcastle Falcons",1,"Premiership Rugby",""
-"Northampton Saints",1,"Premiership Rugby",""
-"Sale Sharks",1,"Premiership Rugby",""
-"Saracens FC",1,"Premiership Rugby",""
-"Wasps RFC",1,"Premiership Rugby",""
-"Worcester Warriors",1,"Premiership Rugby",""
-"Ampthill RUFC",2,"RFU Championship",""
-"Bedford Blues",2,"RFU Championship",""
-"Caldy RFC",2,"RFU Championship",""
-"Cambridge RUFC",2,"RFU Championship",""
-"Chinnor RFC",2,"RFU Championship",""
-"Cornish Pirates",2,"RFU Championship",""
-"Coventry RFC",2,"RFU Championship",""
-"Doncaster Knights",2,"RFU Championship",""
-"Ealing Trailfinders Rugby Club",2,"RFU Championship",""
-"Hartpury University RFC",2,"RFU Championship",""
-"London Scottish FC",2,"RFU Championship",""
-"Nottingham RFC",2,"RFU Championship",""
-"Birmingham Moseley Rugby",3,"National League 1",""
-"Bishop's Stortford RFC",3,"National League 1",""
-"Blackheath FC",3,"National League 1",""
-"Darlington Mowden Park RFC",3,"National League 1",""
-"Dings Crusaders RFC",3,"National League 1",""
-"Esher RFC",3,"National League 1",""
-"Leicester Lions RFC",3,"National League 1",""
-"Plymouth Albion RFC",3,"National League 1",""
-"Rams RFC",3,"National League 1",""
-"Richmond FC",3,"National League 1",""
-"Rosslyn Park FC",3,"National League 1",""
-"Rotherham Titans",3,"National League 1",""
-"Sale FC Rugby Club",3,"National League 1",""
-"Sedgley Park RUFC",3,"National League 1",""
-"Barnes RFC",4,"National League 2 East",""
-"Bury St Edmunds RUFC",4,"National League 2 East",""
-"Canterbury RFC",4,"National League 2 East",""
-"Colchester RFC",4,"National League 2 East",""
-"Dorking RFC",4,"National League 2 East",""
-"Guernsey RFC",4,"National League 2 East",""
-"Havant RFC",4,"National League 2 East",""
-"Henley Hawks",4,"National League 2 East",""
-"Old Albanian RFC",4,"National League 2 East",""
-"Oxford Harlequins RFC",4,"National League 2 East",""
-"Sevenoaks RFC",4,"National League 2 East",""
-"Tonbridge Juddians RFC",4,"National League 2 East",""
-"Westcombe Park RFC",4,"National League 2 East",""
-"Worthing RFC",4,"National League 2 East",""
-"Billingham RUFC",4,"National League 2 North",""
-"Chester RUFC",4,"National League 2 North",""
-"Fylde RFC",4,"National League 2 North",""
-"Harrogate RUFC",4,"National League 2 North",""
-"Hull Ionians",4,"National League 2 North",""
-"Hull RUFC",4,"National League 2 North",""
-"Leeds Tykes",4,"National League 2 North",""
-"Lymm RFC",4,"National League 2 North",""
-"Otley RUFC",4,"National League 2 North",""
-"Preston Grasshoppers RFC",4,"National League 2 North",""
-"Sheffield RUFC",4,"National League 2 North",""
-"Sheffield Tigers RUFC",4,"National League 2 North",""
-"Tynedale RFC",4,"National League 2 North",""
-"Wharfedale RUFC",4,"National League 2 North",""
-"Bournville RFC",4,"National League 2 West",""
-"Camborne RFC",4,"National League 2 West",""
-"Cinderford RFC",4,"National League 2 West",""
-"Clifton Rugby",4,"National League 2 West",""
-"Devonport Services RFC",4,"National League 2 West",""
-"Exeter University RFC",4,"National League 2 West",""
-"Hinckley RFC",4,"National League 2 West",""
-"Hornets RFC",4,"National League 2 West",""
-"Loughborough Students RUFC",4,"National League 2 West",""
-"Luctonians",4,"National League 2 West",""
-"Macclesfield RUFC",4,"National League 2 West",""
-"Old Redcliffians",4,"National League 2 West",""
-"Redruth RFC",4,"National League 2 West",""
-"Taunton RFC",4,"National League 2 West",""
-"Banbury RUFC",5,"Regional 1 Midlands",""
-"Bridgnorth RFC",5,"Regional 1 Midlands",""
-"Broadstreet RFC",5,"Regional 1 Midlands",""
-"Bromsgrove RFC",5,"Regional 1 Midlands",""
-"Burton RFC",5,"Regional 1 Midlands",""
-"Derby RFC",5,"Regional 1 Midlands",""
-"Dudley Kingswinford RFC",5,"Regional 1 Midlands",""
-"Kenilworth RFC",5,"Regional 1 Midlands",""
-"Old Halesonians RFC",5,"Regional 1 Midlands",""
-"Stafford RFC",5,"Regional 1 Midlands","Missing"
-"Stockwood Park RFC",5,"Regional 1 Midlands","Missing"
-"Stoke-on-Trent RUFC",5,"Regional 1 Midlands",""
-"Stourbridge RFC",5,"Regional 1 Midlands",""
-"Syston RFC",5,"Regional 1 Midlands",""
-"Wolverhampton RFC",5,"Regional 1 Midlands","Missing"
-"Alnwick RFC",5,"Regional 1 North East",""
-"Blaydon RFC",5,"Regional 1 North East",""
-"Cleckheaton RUFC",5,"Regional 1 North East",""
-"Driffield RUFC",5,"Regional 1 North East",""
-"Heath RUFC",5,"Regional 1 North East",""
-"Huddersfield RUFC",5,"Regional 1 North East",""
-"Ilkley Rugby Club",5,"Regional 1 North East",""
-"Pontefract RUFC",5,"Regional 1 North East",""
-"Sandal RUFC",5,"Regional 1 North East",""
-"Scunthorpe RUFC",5,"Regional 1 North East",""
-"Selby RFC",5,"Regional 1 North East","Missing"
-"York RUFC",5,"Regional 1 North East",""
-"Anselmians RUFC",5,"Regional 1 North West",""
-"Birkenhead Park FC",5,"Regional 1 North West",""
-"Blackburn RUFC",5,"Regional 1 North West",""
-"Kendal RUFC",5,"Regional 1 North West",""
-"Kirkby Lonsdale RUFC",5,"Regional 1 North West",""
-"Leek RUFC",5,"Regional 1 North West",""
-"Manchester Rugby Club",5,"Regional 1 North West",""
-"Penrith RUFC",5,"Regional 1 North West",""
-"Rossendale RUFC",5,"Regional 1 North West",""
-"Sandbach RUFC",5,"Regional 1 North West",""
-"Stockport RUFC",5,"Regional 1 North West",""
-"Wirral RFC",5,"Regional 1 North West",""
-"Bournemouth Rugby",5,"Regional 1 South Central",""
-"Bracknell RFC",5,"Regional 1 South Central",""
-"Brighton Football Club",5,"Regional 1 South Central",""
-"Camberley RFC",5,"Regional 1 South Central",""
-"CS Rugby 1863",5,"Regional 1 South Central",""
-"Hammersmith & Fulham RFC",5,"Regional 1 South Central",""
-"Horsham Rugby Club",5,"Regional 1 South Central",""
-"London Welsh Amateur",5,"Regional 1 South Central",""
-"Maidenhead RFC",5,"Regional 1 South Central",""
-"Marlborough RFC",5,"Regional 1 South Central",""
-"Tunbridge Wells RFC",5,"Regional 1 South Central",""
-"Bedford Athletic",5,"Regional 1 South East",""
-"Guildford Rugby Club",5,"Regional 1 South East",""
-"Harpenden RFC",5,"Regional 1 South East",""
-"Hertford RFC",5,"Regional 1 South East",""
-"Letchworth Garden City RUFC",5,"Regional 1 South East",""
-"Old Northamptonians RFC",5,"Regional 1 South East",""
-"Oundle RFC",5,"Regional 1 South East",""
-"Rochford Hundred RFC",5,"Regional 1 South East",""
-"Shelford Rugby Club",5,"Regional 1 South East",""
-"Sidcup RFC",5,"Regional 1 South East","Missing"
-"Southend RFC",5,"Regional 1 South East",""
-"Sudbury RUFC",5,"Regional 1 South East",""
-"Towcestrians Sports Club",5,"Regional 1 South East",""
-"Tring Rugby",5,"Regional 1 South East",""
-"Westcliff RFC",5,"Regional 1 South East",""
-"Wimbledon RFC",5,"Regional 1 South East",""
-"Barnstaple RFC",5,"Regional 1 South West",""
-"Brixham RFC",5,"Regional 1 South West",""
-"Chew Valley RFC",5,"Regional 1 South West",""
-"Exmouth RFC",5,"Regional 1 South West",""
-"Ivybridge RFC",5,"Regional 1 South West",""
-"Launceston RUFC",5,"Regional 1 South West",""
-"Lydney RFC",5,"Regional 1 South West",""
-"Matson RFC",5,"Regional 1 South West",""
-"Mounts Bay RFC",5,"Regional 1 South West",""
-"Okehampton RFC",5,"Regional 1 South West",""
-"Old Patesians RFC",5,"Regional 1 South West",""
-"Oxford RFC",5,"Regional 1 South West",""
-"Sidmouth RFC",5,"Regional 1 South West",""
-"St Austell RFC",5,"Regional 1 South West",""
-"Weston-super-Mare RFC",5,"Regional 1 South West",""
-"Brentwood RFC",6,"Regional 2 Anglia",""
-"Chelmsford RFC",6,"Regional 2 Anglia",""
-"Eton Manor RFC",6,"Regional 2 Anglia",""
-"Harlow Rugby Club",6,"Regional 2 Anglia",""
-"Holt RFC",6,"Regional 2 Anglia","Missing"
-"Stowmarket RFC",6,"Regional 2 Anglia","Missing"
-"Wanstead RFC",6,"Regional 2 Anglia","Missing"
-"Woodford RFC",6,"Regional 2 Anglia","Missing"
-"Wymondham RFC",6,"Regional 2 Anglia","Missing"
-"Belgrave RFC",6,"Regional 2 East Midlands","Missing"
-"Daventry RFC",6,"Regional 2 East Midlands","Missing"
-"Kettering RFC",6,"Regional 2 East Midlands",""
-"Leicester Forest RFC",6,"Regional 2 East Midlands","Missing"
-"Lutterworth RFC",6,"Regional 2 East Midlands","Missing"
-"Market Bosworth RFC",6,"Regional 2 East Midlands",""
-"Market Harborough",6,"Regional 2 East Midlands","Missing"
-"Melton Mowbray RFC",6,"Regional 2 East Midlands","Missing"
-"Northampton Old Scouts",6,"Regional 2 East Midlands","Missing"
-"Oadby Wyggestonians",6,"Regional 2 East Midlands","Missing"
-"Olney RFC",6,"Regional 2 East Midlands",""
-"Peterborough RUFC",6,"Regional 2 East Midlands",""
-"Wellingborough RFC",6,"Regional 2 East Midlands","Missing"
-"Aspatria RUFC",6,"Regional 2 North",""
-"Cockermouth RFC",6,"Regional 2 North","Missing"
-"Consett RFC",6,"Regional 2 North","Missing"
-"Durham City RFC",6,"Regional 2 North",""
-"Keswick RFC",6,"Regional 2 North","Missing"
-"Middlesbrough RUFC",6,"Regional 2 North",""
-"Morpeth RFC",6,"Regional 2 North",""
-"Northern Football Club",6,"Regional 2 North",""
-"Percy Park RFC",6,"Regional 2 North",""
-"Stockton RFC",6,"Regional 2 North",""
-"Upper Eden RFC",6,"Regional 2 North","Missing"
-"West Hartlepool RFC",6,"Regional 2 North",""
-"Bradford Salem RFC",6,"Regional 2 North East","Missing"
-"Goole RFC",6,"Regional 2 North East","Missing"
-"Malton & Norton RFC",6,"Regional 2 North East","Missing"
-"Moortown RFC",6,"Regional 2 North East","Missing"
-"Morley RFC",6,"Regional 2 North East",""
-"Old Brodleians",6,"Regional 2 North East",""
-"Old Crossleyans",6,"Regional 2 North East","Missing"
-"Rochdale RUFC",6,"Regional 2 North East",""
-"Scarborough RUFC",6,"Regional 2 North East",""
-"Wetherby RFC",6,"Regional 2 North East","Missing"
-"Dronfield RFC",6,"Regional 2 North Midlands","Missing"
-"Ilkeston RFC",6,"Regional 2 North Midlands","Missing"
-"Lichfield RUFC",6,"Regional 2 North Midlands",""
-"Matlock RFC",6,"Regional 2 North Midlands","Missing"
-"Melbourne RFC",6,"Regional 2 North Midlands",""
-"Mellish RFC",6,"Regional 2 North Midlands","Missing"
-"Newark RFC",6,"Regional 2 North Midlands","Missing"
-"Old Saltleians",6,"Regional 2 North Midlands","Missing"
-"Paviors RFC",6,"Regional 2 North Midlands",""
-"Tamworth RUFC",6,"Regional 2 North Midlands",""
-"Walsall RFC",6,"Regional 2 North Midlands",""
-"West Bridgford RFC",6,"Regional 2 North Midlands",""
-"Altrincham Kersal RFC",6,"Regional 2 North West",""
-"Bowdon RFC",6,"Regional 2 North West","Missing"
-"Burnage Rugby",6,"Regional 2 North West",""
-"Crewe & Nantwich RFC",6,"Regional 2 North West","Missing"
-"Douglas RUFC",6,"Regional 2 North West",""
-"Eccles RFC",6,"Regional 2 North West",""
-"Liverpool St Helens FC",6,"Regional 2 North West",""
-"Northwich RFC",6,"Regional 2 North West","Missing"
-"Vale of Lune RUFC",6,"Regional 2 North West",""
-"Waterloo FC",6,"Regional 2 North West",""
-"Widnes RFC",6,"Regional 2 North West","Missing"
-"Winnington Park",6,"Regional 2 North West",""
-"Chippenham RFC",6,"Regional 2 Severn",""
-"Drybrook RFC",6,"Regional 2 Severn",""
-"Gordano RFC",6,"Regional 2 Severn","Missing"
-"Keynsham RFC",6,"Regional 2 Severn","Missing"
-"Longlevens RFC",6,"Regional 2 Severn","Missing"
-"Old Centralians",6,"Regional 2 Severn",""
-"Stow-on-the-Wold RFC",6,"Regional 2 Severn","Missing"
-"Swindon RFC",6,"Regional 2 Severn","Missing"
-"Thornbury RFC",6,"Regional 2 Severn","Missing"
-"Trowbridge RC",6,"Regional 2 Severn",""
-"Witney RFC",6,"Regional 2 Severn",""
-"Andover RFC",6,"Regional 2 South Central","Missing"
-"Chichester RFC",6,"Regional 2 South Central",""
-"Farnham RFC",6,"Regional 2 South Central","Missing"
-"Guildford RC",6,"Regional 2 South Central",""
-"Newbury RFC",6,"Regional 2 South Central",""
-"North Dorset RFC",6,"Regional 2 South Central",""
-"Petersfield RFC",6,"Regional 2 South Central",""
-"Tottonians RFC",6,"Regional 2 South Central","Missing"
-"Wimborne RC",6,"Regional 2 South Central",""
-"Winchester RFC",6,"Regional 2 South Central",""
-"Battersea Ironsides",6,"Regional 2 South East","Missing"
-"Beckenham RFC",6,"Regional 2 South East",""
-"Dartfordians",6,"Regional 2 South East","Missing"
-"Gravesend RFC",6,"Regional 2 South East",""
-"Medway RFC",6,"Regional 2 South East",""
-"Old Colfeians",6,"Regional 2 South East",""
-"Old Reigatian RFC",6,"Regional 2 South East",""
-"Old Tiffinians",6,"Regional 2 South East","Missing"
-"Reeds Weybridge",6,"Regional 2 South East","Missing"
-"Sutton & Epsom RFC",6,"Regional 2 South East",""
-"Thurrock RFC",6,"Regional 2 South East",""
-"Crediton RFC",6,"Regional 2 South West",""
-"Cullompton RFC",6,"Regional 2 South West","Missing"
-"Newton Abbot RFC",6,"Regional 2 South West",""
-"North Petherton RFC",6,"Regional 2 South West","Missing"
-"Teignmouth RFC",6,"Regional 2 South West",""
-"Tiverton RFC",6,"Regional 2 South West",""
-"Topsham RFC",6,"Regional 2 South West","Missing"
-"Truro RFC",6,"Regional 2 South West",""
-"Wadebridge Camels",6,"Regional 2 South West",""
-"Wellington RFC",6,"Regional 2 South West","Missing"
-"Winscombe RFC",6,"Regional 2 South West",""
-"Amersham and Chiltern RFC",6,"Regional 2 Thames",""
-"Aylesbury RFC",6,"Regional 2 Thames","Missing"
-"Beaconsfield RFC",6,"Regional 2 Thames",""
-"Belsize Park RFC",6,"Regional 2 Thames",""
-"Chobham RFC",6,"Regional 2 Thames",""
-"Fullerians",6,"Regional 2 Thames","Missing"
-"Grasshoppers",6,"Regional 2 Thames","Missing"
-"Hemel Hempstead",6,"Regional 2 Thames","Missing"
-"Honourable Artillery Company",6,"Regional 2 Thames","Missing"
-"London Irish Amateur",6,"Regional 2 Thames",""
-"Marlow RUFC",6,"Regional 2 Thames",""
-"Old Haberdashers",6,"Regional 2 Thames","Missing"
-"Old Priorians",6,"Regional 2 Thames","Missing"
-"Teddington RFC",6,"Regional 2 Thames",""
-"Cheltenham Saracens RFC",6,"Regional 2 West Midlands",""
-"Edwardians",6,"Regional 2 West Midlands","Missing"
-"Hereford RFC",6,"Regional 2 West Midlands",""
-"Ledbury RFC",6,"Regional 2 West Midlands","Missing"
-"Ludlow RFC",6,"Regional 2 West Midlands","Missing"
-"Malvern RFC",6,"Regional 2 West Midlands",""
-"Newent RFC",6,"Regional 2 West Midlands","Missing"
-"Shipston-on-Stour RFC",6,"Regional 2 West Midlands",""
-"Stratford-upon-Avon RFC",6,"Regional 2 West Midlands","Missing"
-"Whitchurch RFC",6,"Regional 2 West Midlands",""
-"Aldwinians RUFC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Aspull RFC",7,"Counties 1 ADM Lancashire & Cheshire","Missing"
-"Bolton RUFC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Broughton Park RUFC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Didsbury Toc H",7,"Counties 1 ADM Lancashire & Cheshire","Missing"
-"Glossop RFC",7,"Counties 1 ADM Lancashire & Cheshire","Missing"
-"Heaton Moor RUFC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"New Brighton FC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Sefton RUFC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Southport RFC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Tarleton RFC",7,"Counties 1 ADM Lancashire & Cheshire","Missing"
-"Trafford MV RFCC",7,"Counties 1 ADM Lancashire & Cheshire","Missing"
-"West Park St Helens",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Wilmslow RUFC",7,"Counties 1 ADM Lancashire & Cheshire",""
-"Ambleside RFC",7,"Counties 1 Cumbria","Missing"
-"Carlisle RFC",7,"Counties 1 Cumbria",""
-"Creighton RFC",7,"Counties 1 Cumbria","Missing"
-"Egremont RFC",7,"Counties 1 Cumbria","Missing"
-"Hawcoat Park RFC",7,"Counties 1 Cumbria","Missing"
-"Millom RLFC",7,"Counties 1 Cumbria",""
-"St Benedict's RFC",7,"Counties 1 Cumbria","Missing"
-"Whitehaven RUFC",7,"Counties 1 Cumbria",""
-"Wigton RFC",7,"Counties 1 Cumbria","Missing"
-"Windermere RFC",7,"Counties 1 Cumbria","Missing"
-"Workington RFC",7,"Counties 1 Cumbria",""
-"Acklam RFC",7,"Counties 1 Durham & Northumberland","Missing"
-"Bishop Auckland RFC",7,"Counties 1 Durham & Northumberland","Missing"
-"Darlington RFC",7,"Counties 1 Durham & Northumberland",""
-"Hartlepool Rovers",7,"Counties 1 Durham & Northumberland",""
-"Medicals RFC",7,"Counties 1 Durham & Northumberland",""
-"Novocastrians RFC",7,"Counties 1 Durham & Northumberland",""
-"Peterlee & Horden RFC",7,"Counties 1 Durham & Northumberland",""
-"Ponteland RFC",7,"Counties 1 Durham & Northumberland","Missing"
-"Redcar RUFC",7,"Counties 1 Durham & Northumberland",""
-"Ryton RFC",7,"Counties 1 Durham & Northumberland","Missing"
-"Seghill RFC",7,"Counties 1 Durham & Northumberland",""
-"South Shields Westoe RFC",7,"Counties 1 Durham & Northumberland",""
-"Sunderland RFC",7,"Counties 1 Durham & Northumberland","Missing"
-"Whitley Bay Rockcliff RFC",7,"Counties 1 Durham & Northumberland",""
-"Cantabrigian",7,"Counties 1 Eastern Counties","Missing"
-"Diss RFC",7,"Counties 1 Eastern Counties",""
-"Ely RFC",7,"Counties 1 Eastern Counties","Missing"
-"Ipswich RFC",7,"Counties 1 Eastern Counties","Missing"
-"Newmarket RFC",7,"Counties 1 Eastern Counties","Missing"
-"North Walsham RFC",7,"Counties 1 Eastern Counties",""
-"Norwich RFC",7,"Counties 1 Eastern Counties","Missing"
-"Romford and Gidea Park Rugby Club",7,"Counties 1 Eastern Counties",""
-"Saffron Walden RFC",7,"Counties 1 Eastern Counties","Missing"
-"Southwold RFC",7,"Counties 1 Eastern Counties","Missing"
-"Basildon RFC",7,"Counties 1 Essex","Missing"
-"Braintree RFC",7,"Counties 1 Essex","Missing"
-"Burnham-on-Crouch RFC",7,"Counties 1 Essex","Missing"
-"Campion RFC",7,"Counties 1 Essex","Missing"
-"Chingford RFC",7,"Counties 1 Essex",""
-"East London RFC",7,"Counties 1 Essex","Missing"
-"Epping Upper Clapton RFC",7,"Counties 1 Essex","Missing"
-"Maldon RFC",7,"Counties 1 Essex","Missing"
-"Mavericks",7,"Counties 1 Essex","Missing"
-"Old Cooperians",7,"Counties 1 Essex","Missing"
-"Romford & Gidea Park RC",7,"Counties 1 Essex",""
-"Upminster RFC",7,"Counties 1 Essex","Missing"
-"Basingstoke RFC",7,"Counties 1 Hampshire",""
-"Bognor RFC",7,"Counties 1 Hampshire","Missing"
-"Eastleigh RFC",7,"Counties 1 Hampshire","Missing"
-"Ellingham & Ringwood RFC",7,"Counties 1 Hampshire","Missing"
-"Gosport and Fareham RFC",7,"Counties 1 Hampshire",""
-"Jersey RFC",7,"Counties 1 Hampshire",""
-"New Milton & District RFC",7,"Counties 1 Hampshire","Missing"
-"Portsmouth RFC",7,"Counties 1 Hampshire",""
-"Sandown & Shanklin RFC",7,"Counties 1 Hampshire","Missing"
-"Trojans Rugby Club",7,"Counties 1 Hampshire",""
-"Brunel University",7,"Counties 1 Herts/Middlesex","Missing"
-"Cheshunt RFC",7,"Counties 1 Herts/Middlesex",""
-"Chiswick RFC",7,"Counties 1 Herts/Middlesex","Missing"
-"Datchworth RFC",7,"Counties 1 Herts/Middlesex","Missing"
-"Finchley RFC",7,"Counties 1 Herts/Middlesex",""
-"Hackney RFC",7,"Counties 1 Herts/Middlesex",""
-"Hitchin Rugby Club",7,"Counties 1 Herts/Middlesex",""
-"Old Streetonians",7,"Counties 1 Herts/Middlesex","Missing"
-"Ruislip RFC",7,"Counties 1 Herts/Middlesex","Missing"
-"Tabard RFC",7,"Counties 1 Herts/Middlesex",""
-"Welwyn RFC",7,"Counties 1 Herts/Middlesex",""
-"Ashford RFC",7,"Counties 1 Kent",""
-"Beccehamian RFC",7,"Counties 1 Kent",""
-"Bromley RFC",7,"Counties 1 Kent",""
-"Charlton Park RFC",7,"Counties 1 Kent",""
-"Cranbrook RFC",7,"Counties 1 Kent",""
-"Crowborough RFC",7,"Counties 1 Kent","Missing"
-"Deal & Betteshanger Rugby Club",7,"Counties 1 Kent",""
-"Dover RFC",7,"Counties 1 Kent","Missing"
-"Heathfield & Waldron",7,"Counties 1 Kent","Missing"
-"Old Alleynian FC",7,"Counties 1 Kent",""
-"Park House FC",7,"Counties 1 Kent",""
-"Thanet Wanderers",7,"Counties 1 Kent",""
-"Birstall RFC",7,"Counties 1 Midlands East - North",""
-"Boston RFC",7,"Counties 1 Midlands East - North",""
-"Kesteven RFC",7,"Counties 1 Midlands East - North","Missing"
-"Lincoln RFC",7,"Counties 1 Midlands East - North","Missing"
-"Long Eaton RFC",7,"Counties 1 Midlands East - North",""
-"Loughborough RFC",7,"Counties 1 Midlands East - North",""
-"Manor Park RFC",7,"Counties 1 Midlands East - North","Missing"
-"Mansfield Rugby Club",7,"Counties 1 Midlands East - North",""
-"Market Rasen & Louth RFC",7,"Counties 1 Midlands East - North","Missing"
-"Nottingham Moderns RFC",7,"Counties 1 Midlands East - North",""
-"Nuneaton Old Edwardians",7,"Counties 1 Midlands East - North","Missing"
-"Southwell RFC",7,"Counties 1 Midlands East - North","Missing"
-"Biggleswade RUFC",7,"Counties 1 Midlands East - South",""
-"Bourne RFC",7,"Counties 1 Midlands East - South","Missing"
-"Bugbrooke RFC",7,"Counties 1 Midlands East - South",""
-"Dunstablians RUFC",7,"Counties 1 Midlands East - South",""
-"Leighton Buzzard RFC",7,"Counties 1 Midlands East - South",""
-"Luton RFC",7,"Counties 1 Midlands East - South",""
-"Newbold-on-Avon RFC",7,"Counties 1 Midlands East - South",""
-"Old Laurentians",7,"Counties 1 Midlands East - South",""
-"Peterborough Lions RFC",7,"Counties 1 Midlands East - South",""
-"Spalding RFC",7,"Counties 1 Midlands East - South","Missing"
-"Stamford RFC",7,"Counties 1 Midlands East - South","Missing"
-"Stewarts & Lloyds RFC",7,"Counties 1 Midlands East - South","Missing"
-"Vipers RFC",7,"Counties 1 Midlands East - South","Missing"
-"Burntwood Barbarians",7,"Counties 1 Midlands West - North",""
-"Kidderminster Carolians",7,"Counties 1 Midlands West - North","Missing"
-"Longton RUFC",7,"Counties 1 Midlands West - North",""
-"Newcastle Staffs",7,"Counties 1 Midlands West - North","Missing"
-"Newport Salop RUFC",7,"Counties 1 Midlands West - North",""
-"Shrewsbury RFC",7,"Counties 1 Midlands West - North","Missing"
-"Spartans",7,"Counties 1 Midlands West - North","Missing"
-"Sutton Coldfield RFC",7,"Counties 1 Midlands West - North",""
-"Telford Hornets",7,"Counties 1 Midlands West - North","Missing"
-"Uttoxeter RFC",7,"Counties 1 Midlands West - North",""
-"Veseyans",7,"Counties 1 Midlands West - North","Missing"
-"Willenhall RFC",7,"Counties 1 Midlands West - North","Missing"
-"Alcester RFC",7,"Counties 1 Midlands West - South","Missing"
-"Barkers Butts RFC",7,"Counties 1 Midlands West - South",""
-"Berkswell & Balsall RFC",7,"Counties 1 Midlands West - South","Missing"
-"Camp Hill RFC",7,"Counties 1 Midlands West - South",""
-"Droitwich RFC",7,"Counties 1 Midlands West - South",""
-"Evesham RFC",7,"Counties 1 Midlands West - South","Missing"
-"Leamington Royals",7,"Counties 1 Midlands West - South",""
-"Old Coventrians",7,"Counties 1 Midlands West - South","Missing"
-"Old Leamingtonians",7,"Counties 1 Midlands West - South",""
-"Silhillians RUFC",7,"Counties 1 Midlands West - South",""
-"Worcester Wanderers",7,"Counties 1 Midlands West - South",""
-"Bicester RUFC",7,"Counties 1 Southern North",""
-"Bletchley RUFC",7,"Counties 1 Southern North",""
-"Buckingham RFC",7,"Counties 1 Southern North","Missing"
-"Grove RFC",7,"Counties 1 Southern North","Missing"
-"High Wycombe RFC",7,"Counties 1 Southern North",""
-"Milton Keynes RUFC",7,"Counties 1 Southern North",""
-"Reading Abbey RFC",7,"Counties 1 Southern North",""
-"Reading RFC",7,"Counties 1 Southern North",""
-"Wallingford RFC",7,"Counties 1 Southern North","Missing"
-"Windsor Lancers Rugby",7,"Counties 1 Southern North",""
-"Combe Down RFC",7,"Counties 1 Southern South",""
-"Corsham RFC",7,"Counties 1 Southern South","Missing"
-"Devizes RFC",7,"Counties 1 Southern South","Missing"
-"Dorchester RFC",7,"Counties 1 Southern South",""
-"Frome RFC",7,"Counties 1 Southern South","Missing"
-"Melksham RFC",7,"Counties 1 Southern South","Missing"
-"Royal Wootton Bassett RFC",7,"Counties 1 Southern South",""
-"Salisbury RFC",7,"Counties 1 Southern South",""
-"Sherborne RFC",7,"Counties 1 Southern South",""
-"Swanage & Wareham RFC",7,"Counties 1 Southern South","Missing"
-"Walcot RFC",7,"Counties 1 Southern South","Missing"
-"Cobham RFC",7,"Counties 1 Surrey/Sussex",""
-"East Grinstead RFC",7,"Counties 1 Surrey/Sussex",""
-"Eastbourne RFC",7,"Counties 1 Surrey/Sussex","Missing"
-"Haywards Heath RFC",7,"Counties 1 Surrey/Sussex",""
-"Hove Rugby Club",7,"Counties 1 Surrey/Sussex",""
-"KCS Old Boys RFC",7,"Counties 1 Surrey/Sussex",""
-"London Cornish RFC",7,"Counties 1 Surrey/Sussex",""
-"Old Haileyburians",7,"Counties 1 Surrey/Sussex","Missing"
-"Old Rutlishians",7,"Counties 1 Surrey/Sussex","Missing"
-"Trinity RFC",7,"Counties 1 Surrey/Sussex","Missing"
-"Twickenham RFC",7,"Counties 1 Surrey/Sussex","Missing"
-"Weybridge Vandals",7,"Counties 1 Surrey/Sussex","Missing"
-"Avonmouth Old Boys RFC",7,"Counties 1 Western North",""
-"Bridgwater & Albion RFC",7,"Counties 1 Western North",""
-"Burnham-on-Sea",7,"Counties 1 Western North",""
-"Chosen Hill Former Pupils",7,"Counties 1 Western North","Missing"
-"Cirencester RFC",7,"Counties 1 Western North",""
-"Cleve RFC",7,"Counties 1 Western North",""
-"Coney Hill RFC",7,"Counties 1 Western North",""
-"Gordon League",7,"Counties 1 Western North","Missing"
-"Nailsea & Backwell RFC",7,"Counties 1 Western North","Missing"
-"Old Bristolians RFC",7,"Counties 1 Western North",""
-"Bideford RFC",7,"Counties 1 Western West",""
-"Bude RFC",7,"Counties 1 Western West",""
-"Chard RFC",7,"Counties 1 Western West",""
-"Falmouth RFC",7,"Counties 1 Western West",""
-"Kingsbridge RFC",7,"Counties 1 Western West","Missing"
-"Paignton RFC",7,"Counties 1 Western West",""
-"Penryn RFC",7,"Counties 1 Western West",""
-"Pirates Amateurs",7,"Counties 1 Western West","Missing"
-"Plymstock Albion Oaks RFC",7,"Counties 1 Western West","Missing"
-"St Ives RFC",7,"Counties 1 Western West",""
-"Tavistock RFC",7,"Counties 1 Western West","Missing"
-"Wiveliscombe RFC",7,"Counties 1 Western West","Missing"
-"Beverley RUFC",7,"Counties 1 Yorkshire",""
-"Bradford & Bingley RFC",7,"Counties 1 Yorkshire",""
-"Bridlington RFC",7,"Counties 1 Yorkshire","Missing"
-"Harrogate Pythons",7,"Counties 1 Yorkshire","Missing"
-"Hullensians",7,"Counties 1 Yorkshire","Missing"
-"Keighley RUFC",7,"Counties 1 Yorkshire",""
-"Leodiensian",7,"Counties 1 Yorkshire","Missing"
-"North Ribblesdale RFC",7,"Counties 1 Yorkshire","Missing"
-"Old Rishworthians",7,"Counties 1 Yorkshire","Missing"
-"Pocklington RUFC",7,"Counties 1 Yorkshire",""
-"Wath-upon-Dearne RFC",7,"Counties 1 Yorkshire","Missing"
-"Wensleydale RFC",7,"Counties 1 Yorkshire","Missing"
-"West Leeds",7,"Counties 1 Yorkshire","Missing"
-"Hoylake RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Leigh RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Littleborough RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Liverpool Collegiate RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Oldham RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Orrell RUFC",8,"Counties 2 ADM Lancashire & Cheshire",""
-"Thornton-Cleveleys RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Tyldesley RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Warrington RFC",8,"Counties 2 ADM Lancashire & Cheshire","Missing"
-"Wigan RUFC",8,"Counties 2 ADM Lancashire & Cheshire",""
-"Bodmin RFC",8,"Counties 2 Cornwall","Missing"
-"Hayle RFC",8,"Counties 2 Cornwall","Missing"
-"Helston RFC",8,"Counties 2 Cornwall",""
-"Liskeard-Looe RFC",8,"Counties 2 Cornwall","Missing"
-"Newquay Hornets RFC",8,"Counties 2 Cornwall","Missing"
-"Perranporth RFC",8,"Counties 2 Cornwall","Missing"
-"Saltash RFC",8,"Counties 2 Cornwall","Missing"
-"St Just RFC",8,"Counties 2 Cornwall","Missing"
-"Veor RFC",8,"Counties 2 Cornwall",""
-"Dartmouth Rugby",8,"Counties 2 Devon",""
-"Exeter Saracens",8,"Counties 2 Devon","Missing"
-"Honiton RFC",8,"Counties 2 Devon","Missing"
-"North Tawton RFC",8,"Counties 2 Devon","Missing"
-"Old Plymothian & Mannamedian RFC",8,"Counties 2 Devon","Missing"
-"Plymouth Argaum RFC",8,"Counties 2 Devon","Missing"
-"South Molton RFC",8,"Counties 2 Devon","Missing"
-"Torquay Athletic RFC",8,"Counties 2 Devon",""
-"Withycombe RFC",8,"Counties 2 Devon","Missing"
-"Calne RFC",8,"Counties 2 Dorset & Wilts North","Missing"
-"Minety RFC",8,"Counties 2 Dorset & Wilts North","Missing"
-"Sutton Benger RFC",8,"Counties 2 Dorset & Wilts North","Missing"
-"Warminster RFC",8,"Counties 2 Dorset & Wilts North","Missing"
-"Westbury RFC",8,"Counties 2 Dorset & Wilts North","Missing"
-"Blandford RFC",8,"Counties 2 Dorset & Wilts South","Missing"
-"Bridport RFC",8,"Counties 2 Dorset & Wilts South","Missing"
-"East Dorset Dockers",8,"Counties 2 Dorset & Wilts South","Missing"
-"Oakmeadians",8,"Counties 2 Dorset & Wilts South","Missing"
-"Puddletown RFC",8,"Counties 2 Dorset & Wilts South","Missing"
-"Weymouth & Portland RFC",8,"Counties 2 Dorset & Wilts South","Missing"
-"Ashington RFC",8,"Counties 2 Durham & Northumberland","Missing"
-"Barnard Castle RFC",8,"Counties 2 Durham & Northumberland","Missing"
-"Blyth RFC",8,"Counties 2 Durham & Northumberland","Missing"
-"DMP Elizabethans",8,"Counties 2 Durham & Northumberland","Missing"
-"Durham University Rugby Football Club",8,"Counties 2 Durham & Northumberland",""
-"Gateshead RFC",8,"Counties 2 Durham & Northumberland","Missing"
-"Gosforth RFC",8,"Counties 2 Durham & Northumberland",""
-"Houghton RFC",8,"Counties 2 Durham & Northumberland","Missing"
-"North Shields RFC",8,"Counties 2 Durham & Northumberland","Missing"
-"Sedgefield RFC",8,"Counties 2 Durham & Northumberland","Missing"
-"Wallsend RUFC",8,"Counties 2 Durham & Northumberland",""
-"Crusaders RFC",8,"Counties 2 Eastern Counties","Missing"
-"Fakenham RFC",8,"Counties 2 Eastern Counties","Missing"
-"Ipswich YM",8,"Counties 2 Eastern Counties","Missing"
-"March Bears",8,"Counties 2 Eastern Counties","Missing"
-"Mersea Island RFC",8,"Counties 2 Eastern Counties","Missing"
-"Mistley RFC",8,"Counties 2 Eastern Counties","Missing"
-"Thurston RFC",8,"Counties 2 Eastern Counties","Missing"
-"West Norfolk RFC",8,"Counties 2 Eastern Counties","Missing"
-"Wisbech RFC",8,"Counties 2 Eastern Counties","Missing"
-"Woodbridge RFC",8,"Counties 2 Eastern Counties","Missing"
-"Barking RFC",8,"Counties 2 Essex",""
-"Billericay RFC",8,"Counties 2 Essex",""
-"Canvey Island RFC",8,"Counties 2 Essex","Missing"
-"Clacton RFC",8,"Counties 2 Essex","Missing"
-"Harwich & Dovercourt RFC",8,"Counties 2 Essex","Missing"
-"Kelvedon & Feering RFC",8,"Counties 2 Essex","Missing"
-"Kings Cross Steelers",8,"Counties 2 Essex",""
-"Millwall RC",8,"Counties 2 Essex",""
-"Old Brentwoods RFC",8,"Counties 2 Essex","Missing"
-"South Woodham Ferrers",8,"Counties 2 Essex","Missing"
-"Stanford-le-Hope RFC",8,"Counties 2 Essex","Missing"
-"Witham RFC",8,"Counties 2 Essex","Missing"
-"Writtle Wanderers",8,"Counties 2 Essex","Missing"
-"Fareham Heathens",8,"Counties 2 Hampshire","Missing"
-"Fordingbridge RFC",8,"Counties 2 Hampshire","Missing"
-"Isle Of Wight RFC",8,"Counties 2 Hampshire","Missing"
-"Locksheath Pumas",8,"Counties 2 Hampshire","Missing"
-"Millbrook RFC",8,"Counties 2 Hampshire","Missing"
-"United Services Portsmouth RFC",8,"Counties 2 Hampshire",""
-"Barnet Elizabethans",8,"Counties 2 Herts/Middlesex","Missing"
-"Enfield Ignatians",8,"Counties 2 Herts/Middlesex","Missing"
-"Hampstead RFC",8,"Counties 2 Herts/Middlesex","Missing"
-"Harrow RFC",8,"Counties 2 Herts/Middlesex",""
-"Old Merchant Taylors' FC",8,"Counties 2 Herts/Middlesex",""
-"Old Millhillians",8,"Counties 2 Herts/Middlesex","Missing"
-"Saracens Amateurs",8,"Counties 2 Herts/Middlesex","Missing"
-"St Albans RFC",8,"Counties 2 Herts/Middlesex",""
-"UCS Old Boys",8,"Counties 2 Herts/Middlesex","Missing"
-"Verulamians",8,"Counties 2 Herts/Middlesex","Missing"
-"Wasps FC",8,"Counties 2 Herts/Middlesex",""
-"Aylesford Bulls",8,"Counties 2 Kent","Missing"
-"Dartford Valley RFC",8,"Counties 2 Kent","Missing"
-"Folkestone RFC",8,"Counties 2 Kent","Missing"
-"Gillingham Anchorians RC",8,"Counties 2 Kent",""
-"Maidstone FC",8,"Counties 2 Kent",""
-"Old Elthamians",8,"Counties 2 Kent",""
-"Vigo RC",8,"Counties 2 Kent",""
-"Ashbourne RFC",8,"Counties 2 Midlands East - North",""
-"Ashby RFC",8,"Counties 2 Midlands East - North","Missing"
-"Ashfield RFC",8,"Counties 2 Midlands East - North","Missing"
-"Gainsborough RFC",8,"Counties 2 Midlands East - North","Missing"
-"Grimsby RUFC",8,"Counties 2 Midlands East - North",""
-"Keyworth RFC",8,"Counties 2 Midlands East - North",""
-"Mosborough RFC",8,"Counties 2 Midlands East - North","Missing"
-"Nottingham Casuals",8,"Counties 2 Midlands East - North","Missing"
-"Rolls-Royce RFC",8,"Counties 2 Midlands East - North",""
-"Brackley RUFC",8,"Counties 2 Midlands East - South",""
-"Huntingdon & District RFC",8,"Counties 2 Midlands East - South","Missing"
-"Long Buckby RFC",8,"Counties 2 Midlands East - South","Missing"
-"Northampton BBOB",8,"Counties 2 Midlands East - South","Missing"
-"Northampton Casuals",8,"Counties 2 Midlands East - South","Missing"
-"Oakham RFC",8,"Counties 2 Midlands East - South","Missing"
-"Rugby St Andrews",8,"Counties 2 Midlands East - South","Missing"
-"Rushden & Higham RFC",8,"Counties 2 Midlands East - South","Missing"
-"St Neots RUFC",8,"Counties 2 Midlands East - South",""
-"Aston Old Edwardians",8,"Counties 2 Midlands West - East","Missing"
-"Birmingham & Solihull RFC",8,"Counties 2 Midlands West - East",""
-"Claverdon RFC",8,"Counties 2 Midlands West - East","Missing"
-"Coalville RFC",8,"Counties 2 Midlands West - East","Missing"
-"Coventry Welsh",8,"Counties 2 Midlands West - East","Missing"
-"Earlsdon RFC",8,"Counties 2 Midlands West - East","Missing"
-"Harbury RFC",8,"Counties 2 Midlands West - East","Missing"
-"Old Wheatleyans RFC",8,"Counties 2 Midlands West - East",""
-"Southam RFC",8,"Counties 2 Midlands West - East","Missing"
-"Stoke Old Boys",8,"Counties 2 Midlands West - East","Missing"
-"Bridgnorth Bulls",8,"Counties 2 Midlands West - West","Missing"
-"Bromyard RFC",8,"Counties 2 Midlands West - West","Missing"
-"Clee Hill RFC",8,"Counties 2 Midlands West - West","Missing"
-"Handsworth RUFC",8,"Counties 2 Midlands West - West",""
-"Harborne RFC",8,"Counties 2 Midlands West - West","Missing"
-"Market Drayton RFC",8,"Counties 2 Midlands West - West","Missing"
-"Oswestry RFC",8,"Counties 2 Midlands West - West","Missing"
-"Stourbridge Lions",8,"Counties 2 Midlands West - West","Missing"
-"Tenbury RFC",8,"Counties 2 Midlands West - West","Missing"
-"Trentham RFC",8,"Counties 2 Midlands West - West","Missing"
-"Wednesbury RUFC",8,"Counties 2 Midlands West - West",""
-"Avon RFC",8,"Counties 2 Somerset","Missing"
-"Clevedon RFC",8,"Counties 2 Somerset","Missing"
-"Imperial Medicals RC",8,"Counties 2 Somerset",""
-"Midsomer Norton RFC",8,"Counties 2 Somerset","Missing"
-"Minehead Barbarians",8,"Counties 2 Somerset","Missing"
-"Oldfield Old Boys",8,"Counties 2 Somerset","Missing"
-"Rebels RFC",8,"Counties 2 Somerset","Missing"
-"St Bernadettes Old Boys",8,"Counties 2 Somerset","Missing"
-"Stothert & Pitt RFC",8,"Counties 2 Somerset",""
-"Wells RFC",8,"Counties 2 Somerset","Missing"
-"Bec Old Boys",8,"Counties 2 Surrey","Missing"
-"Chipstead RFC",8,"Counties 2 Surrey","Missing"
-"Croydon RFC",8,"Counties 2 Surrey",""
-"Kingston RFC",8,"Counties 2 Surrey",""
-"Metropolitan Police RFC",8,"Counties 2 Surrey","Missing"
-"Old Amplefordians",8,"Counties 2 Surrey","Missing"
-"Old Blues RFC",8,"Counties 2 Surrey",""
-"Old Caterhamians",8,"Counties 2 Surrey","Missing"
-"Old Cranleighan",8,"Counties 2 Surrey","Missing"
-"Old Walcountians",8,"Counties 2 Surrey","Missing"
-"Old Whitgiftian",8,"Counties 2 Surrey",""
-"Old Wimbledonians",8,"Counties 2 Surrey","Missing"
-"Purley John Fisher RFC",8,"Counties 2 Surrey","Missing"
-"Streatham-Croydon RFC",8,"Counties 2 Surrey",""
-"Burgess Hill RFC",8,"Counties 2 Sussex",""
-"Crawley RFC",8,"Counties 2 Sussex",""
-"Ditchling RFC",8,"Counties 2 Sussex","Missing"
-"Lewes RFC",8,"Counties 2 Sussex",""
-"Pulborough RFC",8,"Counties 2 Sussex","Missing"
-"Seaford RFC",8,"Counties 2 Sussex",""
-"Shoreham RFC",8,"Counties 2 Sussex","Missing"
-"Uckfield RFC",8,"Counties 2 Sussex","Missing"
-"Baildon RFC",8,"Counties 2 Yorkshire","Missing"
-"Bramley Phoenix",8,"Counties 2 Yorkshire","Missing"
-"Dinnington RFC",8,"Counties 2 Yorkshire","Missing"
-"Halifax Vandals RUFC",8,"Counties 2 Yorkshire",""
-"Hemsworth RFC",8,"Counties 2 Yorkshire","Missing"
-"Huddersfield Laund Hill RFC",8,"Counties 2 Yorkshire","Missing"
-"Northallerton RFC",8,"Counties 2 Yorkshire","Missing"
-"Ossett RFC",8,"Counties 2 Yorkshire","Missing"
-"Ripon RUFC",8,"Counties 2 Yorkshire",""
-"Roundhegians",8,"Counties 2 Yorkshire","Missing"
-"Yarnbury RFC",8,"Counties 2 Yorkshire","Missing"
-"Ashton-under-Lyne RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Blackpool RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Burnley RUFC",9,"Counties 3 ADM Lancashire & Cheshire",""
-"Clitheroe RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Colne & Nelson RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"De La Salle Salford RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Dukinfield RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Fleetwood RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Garstang RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Old Bedians",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Ormskirk RFC",9,"Counties 3 ADM Lancashire & Cheshire","Missing"
-"Vagabonds RUFC",9,"Counties 3 ADM Lancashire & Cheshire",""
-"Abingdon RFC",9,"Counties 3 Berks/Bucks & Oxon North","Missing"
-"Chesham RFC",9,"Counties 3 Berks/Bucks & Oxon North","Missing"
-"Crowthorne RFC",9,"Counties 3 Berks/Bucks & Oxon North","Missing"
-"Hungerford RFC",9,"Counties 3 Berks/Bucks & Oxon North","Missing"
-"Tadley Tigers",9,"Counties 3 Berks/Bucks & Oxon North","Missing"
-"Aldermaston RFC",9,"Counties 3 Berks/Bucks & Oxon South","Missing"
-"Chipping Norton RFC",9,"Counties 3 Berks/Bucks & Oxon South","Missing"
-"Didcot RFC",9,"Counties 3 Berks/Bucks & Oxon South","Missing"
-"Slough RFC",9,"Counties 3 Berks/Bucks & Oxon South","Missing"
-"Wheatley RFC",9,"Counties 3 Berks/Bucks & Oxon South","Missing"
-"Camborne School of Mines",9,"Counties 3 Cornwall","Missing"
-"Camelford RFC",9,"Counties 3 Cornwall",""
-"Illogan Park RFC",9,"Counties 3 Cornwall","Missing"
-"Lankelly-Fowey RFC",9,"Counties 3 Cornwall","Missing"
-"Redruth Albany RFC",9,"Counties 3 Cornwall","Missing"
-"Roseland RFC",9,"Counties 3 Cornwall","Missing"
-"St Agnes RFC",9,"Counties 3 Cornwall","Missing"
-"Colerne RFC",9,"Counties 3 Dorset & Wilts North","Missing"
-"Cricklade RFC",9,"Counties 3 Dorset & Wilts North","Missing"
-"Pewsey Vale RFC",9,"Counties 3 Dorset & Wilts North","Missing"
-"Supermarine RFC",9,"Counties 3 Dorset & Wilts North","Missing"
-"Christchurch RFC",9,"Counties 3 Dorset & Wilts South","Missing"
-"Lytchett Minster RFC",9,"Counties 3 Dorset & Wilts South","Missing"
-"Poole RFC",9,"Counties 3 Dorset & Wilts South","Missing"
-"Jarrovians",9,"Counties 3 Durham & Northumberland","Missing"
-"Newton Aycliffe RUFC",9,"Counties 3 Durham & Northumberland",""
-"Prudhoe & Stocksfield RFC",9,"Counties 3 Durham & Northumberland","Missing"
-"Seaham RFC",9,"Counties 3 Durham & Northumberland","Missing"
-"Seaton Carew RFC",9,"Counties 3 Durham & Northumberland","Missing"
-"Whitby RFC",9,"Counties 3 Durham & Northumberland","Missing"
-"Winlaton Vulcans",9,"Counties 3 Durham & Northumberland","Missing"
-"Yarm RFC",9,"Counties 3 Durham & Northumberland","Missing"
-"Bredon Star RFC",9,"Counties 3 Gloucestershire North","Missing"
-"Cheltenham Civil Service",9,"Counties 3 Gloucestershire North","Missing"
-"Minchinhampton RFC",9,"Counties 3 Gloucestershire North","Missing"
-"Norton RFC",9,"Counties 3 Gloucestershire North","Missing"
-"Painswick RFC",9,"Counties 3 Gloucestershire North","Missing"
-"Stroud RFC",9,"Counties 3 Gloucestershire North","Missing"
-"Tewkesbury",9,"Counties 3 Gloucestershire North","Missing"
-"Bishopston",9,"Counties 3 Gloucestershire South","Missing"
-"Bristol Aeroplane Company",9,"Counties 3 Gloucestershire South","Missing"
-"Broad Plain RFC",9,"Counties 3 Gloucestershire South",""
-"Cotham Park RFC",9,"Counties 3 Gloucestershire South","Missing"
-"Kingswood RFC",9,"Counties 3 Gloucestershire South","Missing"
-"North Bristol RFC",9,"Counties 3 Gloucestershire South","Missing"
-"Old Colstonians",9,"Counties 3 Gloucestershire South","Missing"
-"Southmead RFC",9,"Counties 3 Gloucestershire South","Missing"
-"Aldershot & Fleet RFC",9,"Counties 3 Hampshire","Missing"
-"Overton RFC",9,"Counties 3 Hampshire","Missing"
-"Romsey RFC",9,"Counties 3 Hampshire","Missing"
-"Southampton RFC",9,"Counties 3 Hampshire","Missing"
-"Ventnor RFC",9,"Counties 3 Hampshire","Missing"
-"Actonians",9,"Counties 3 Herts/Middlesex","Missing"
-"Chess Valley RFC",9,"Counties 3 Herts/Middlesex","Missing"
-"Finsbury Park RFC",9,"Counties 3 Herts/Middlesex","Missing"
-"Kilburn Cosmos",9,"Counties 3 Herts/Middlesex","Missing"
-"London French RFC",9,"Counties 3 Herts/Middlesex",""
-"Mill Hill RFC",9,"Counties 3 Herts/Middlesex","Missing"
-"Royston RFC",9,"Counties 3 Herts/Middlesex","Missing"
-"Stevenage RFC",9,"Counties 3 Herts/Middlesex","Missing"
-"Thamesians RFC",9,"Counties 3 Herts/Middlesex","Missing"
-"Watford RFC",9,"Counties 3 Herts/Middlesex","Missing"
-"Brockleians",9,"Counties 3 Kent","Missing"
-"Footscray RUFC",9,"Counties 3 Kent",""
-"Hastings & Bexhill RFC",9,"Counties 3 Kent","Missing"
-"King's College Hospital RFC",9,"Counties 3 Kent",""
-"New Ash Green RFC",9,"Counties 3 Kent","Missing"
-"Old Dunstonians",9,"Counties 3 Kent","Missing"
-"Old Gravesendians",9,"Counties 3 Kent","Missing"
-"Sittingbourne RFC",9,"Counties 3 Kent","Missing"
-"Whitstable RFC",9,"Counties 3 Kent","Missing"
-"Bingham RFC",9,"Counties 3 Midlands East - Central","Missing"
-"Castle Donnington RFC",9,"Counties 3 Midlands East - Central","Missing"
-"Leesbrook RFC",9,"Counties 3 Midlands East - Central","Missing"
-"Nottinghamians",9,"Counties 3 Midlands East - Central",""
-"Cleethorpes RUFC",9,"Counties 3 Midlands East - North East",""
-"East Retford RFC",9,"Counties 3 Midlands East - North East","Missing"
-"Grimsby RFC",9,"Counties 3 Midlands East - North East","Missing"
-"Meden Vale RFC",9,"Counties 3 Midlands East - North East","Missing"
-"North Hykeham RFC",9,"Counties 3 Midlands East - North East","Missing"
-"Ollerton RFC",9,"Counties 3 Midlands East - North East","Missing"
-"Skegness RFC",9,"Counties 3 Midlands East - North East","Missing"
-"Sleaford RFC",9,"Counties 3 Midlands East - North East","Missing"
-"Worksop RFC",9,"Counties 3 Midlands East - North East","Missing"
-"Amber Valley RFC",9,"Counties 3 Midlands East - North West","Missing"
-"Bakewell Mannerians",9,"Counties 3 Midlands East - North West","Missing"
-"Belper RFC",9,"Counties 3 Midlands East - North West","Missing"
-"Chesterfield Panthers RUFC",9,"Counties 3 Midlands East - North West",""
-"Tupton RFC",9,"Counties 3 Midlands East - North West","Missing"
-"Aylestone Athletic",9,"Counties 3 Midlands East - South","Missing"
-"Bedford Queens RFC",9,"Counties 3 Midlands East - South","Missing"
-"Deepings RFC",9,"Counties 3 Midlands East - South","Missing"
-"Northampton Men's Own",9,"Counties 3 Midlands East - South","Missing"
-"Rugby Lions",9,"Counties 3 Midlands East - South",""
-"Rugby Welsh",9,"Counties 3 Midlands East - South","Missing"
-"Sileby RFC",9,"Counties 3 Midlands East - South","Missing"
-"South Leicester RFC",9,"Counties 3 Midlands East - South",""
-"Stamford College Old Boys RFC",9,"Counties 3 Midlands East - South","Missing"
-"Thorney RUFC",9,"Counties 3 Midlands East - South",""
-"Atherstone RFC",9,"Counties 3 Midlands West - East","Missing"
-"Bedworth RFC",9,"Counties 3 Midlands West - East","Missing"
-"Nuneaton RFC",9,"Counties 3 Midlands West - East",""
-"Pinley RFC",9,"Counties 3 Midlands West - East","Missing"
-"Aldridge RFC",9,"Counties 3 Midlands West - North","Missing"
-"Barton-under-Needwood RFC",9,"Counties 3 Midlands West - North","Missing"
-"Cannock RFC",9,"Counties 3 Midlands West - North","Missing"
-"Eccleshall RFC",9,"Counties 3 Midlands West - North","Missing"
-"Essington RUFC",9,"Counties 3 Midlands West - North",""
-"Rugeley RFC",9,"Counties 3 Midlands West - North","Missing"
-"Stone RFC",9,"Counties 3 Midlands West - North","Missing"
-"Yardley & District RFC",9,"Counties 3 Midlands West - North",""
-"Cleobury Mortimer RFC",9,"Counties 3 Midlands West - South","Missing"
-"Kings Norton RFC",9,"Counties 3 Midlands West - South",""
-"Old Yardleians",9,"Counties 3 Midlands West - South","Missing"
-"Pershore RFC",9,"Counties 3 Midlands West - South","Missing"
-"Upton-upon-Severn RFC",9,"Counties 3 Midlands West - South","Missing"
-"Woodrush RFC",9,"Counties 3 Midlands West - South","Missing"
-"Bristol Barbarians",9,"Counties 3 Somerset North","Missing"
-"Bristol Telephone Area RFC",9,"Counties 3 Somerset North","Missing"
-"Castle Cary RFC",9,"Counties 3 Somerset South","Missing"
-"Martock RFC",9,"Counties 3 Somerset South","Missing"
-"Somerton RFC",9,"Counties 3 Somerset South","Missing"
-"Wyvern RFC",9,"Counties 3 Somerset South","Missing"
-"Economicals FRC",9,"Counties 3 Surrey","Missing"
-"Effingham & Leatherhead FRC",9,"Counties 3 Surrey","Missing"
-"Law Society FRC",9,"Counties 3 Surrey","Missing"
-"London Exiles",9,"Counties 3 Surrey","Missing"
-"London Media",9,"Counties 3 Surrey","Missing"
-"Old Georgians",9,"Counties 3 Surrey","Missing"
-"Old Hamptonians",9,"Counties 3 Surrey","Missing"
-"Old Johnians",9,"Counties 3 Surrey","Missing"
-"Warlingham FRC",9,"Counties 3 Surrey","Missing"
-"Worth Old Boys",9,"Counties 3 Surrey","Missing"
-"Barnsley RFC",9,"Counties 3 Yorkshire","Missing"
-"Burley RFC",9,"Counties 3 Yorkshire","Missing"
-"Castleford RFC",9,"Counties 3 Yorkshire","Missing"
-"Halifax RUFC",9,"Counties 3 Yorkshire",""
-"Leeds Corinthians",9,"Counties 3 Yorkshire","Missing"
-"Old Otliensians",9,"Counties 3 Yorkshire","Missing"
-"Rotherham Phoenix",9,"Counties 3 Yorkshire","Missing"
-"Skipton RFC",9,"Counties 3 Yorkshire","Missing"
-"Thirsk RFC",9,"Counties 3 Yorkshire","Missing"
-"Thornensians",9,"Counties 3 Yorkshire","Missing"
-"West Park Leeds RFC",9,"Counties 3 Yorkshire","Missing"
-"Wheatley Hills RFC",9,"Counties 3 Yorkshire","Missing"
-"Bristol Harlequins",10,"Counties 4 Somerset North","Missing"
-"Old Culverhaysians",10,"Counties 4 Somerset North","Missing"
-"Old Sulians",10,"Counties 4 Somerset North","Missing"
-"Yatton RFC",10,"Counties 4 Somerset North","Missing"
-"Cheddar Valley RFC",10,"Counties 4 Somerset South","Missing"
-"Crewkerne RFC",10,"Counties 4 Somerset South","Missing"
-"Huish Tigers",10,"Counties 4 Somerset South","Missing"
-"Tor RFC",10,"Counties 4 Somerset South","Missing"
-"Wincanton RFC",10,"Counties 4 Somerset South","Missing"
-"Harlequin Amateurs",10,"Counties 4 Surrey",""
-"Staines RFC",10,"Counties 4 Surrey",""
-"Hessle RUFC",10,"Counties 4 Yorkshire",""
-"Askeans RFC",11,"Counties 5 Kent","Missing"
-"East Peckham & Paddock Wood RFC",11,"Counties 5 Kent","Missing"
-"Greenwich RFC",11,"Counties 5 Kent","Missing"
-"Lordswood RFC",11,"Counties 5 Kent","Missing"
-"Egham Hollowegians",11,"Counties 5 Surrey","Missing"
-"Feltham RFC",11,"Counties 5 Surrey","Missing"
-"Guildfordians",11,"Counties 5 Surrey","Missing"
-"Merton RFC",11,"Counties 5 Surrey","Missing"
-"Mitcham & Carshalton RFC",11,"Counties 5 Surrey","Missing"
-"Raynes Park RFC",11,"Counties 5 Surrey","Missing"
-"Wandsworthians",11,"Counties 5 Surrey","Missing"
-"Woking RFC",11,"Counties 5 Surrey","Missing"
+Bath Rugby,1,Premiership Rugby,
+Bristol Bears,1,Premiership Rugby,
+Exeter Chiefs,1,Premiership Rugby,
+Gloucester Rugby,1,Premiership Rugby,
+Harlequin FC,1,Premiership Rugby,
+Leicester Tigers,1,Premiership Rugby,
+London Irish,1,Premiership Rugby,
+London Welsh RFC,1,Premiership Rugby,
+Newcastle Falcons,1,Premiership Rugby,
+Northampton Saints,1,Premiership Rugby,
+Sale Sharks,1,Premiership Rugby,
+Saracens FC,1,Premiership Rugby,
+Wasps RFC,1,Premiership Rugby,
+Worcester Warriors,1,Premiership Rugby,
+Ampthill RUFC,2,RFU Championship,
+Bedford Blues,2,RFU Championship,
+Caldy RFC,2,RFU Championship,
+Cambridge RUFC,2,RFU Championship,
+Chinnor RFC,2,RFU Championship,
+Cornish Pirates,2,RFU Championship,
+Coventry RFC,2,RFU Championship,
+Doncaster Knights,2,RFU Championship,
+Ealing Trailfinders Rugby Club,2,RFU Championship,
+Hartpury University RFC,2,RFU Championship,
+London Scottish FC,2,RFU Championship,
+Nottingham RFC,2,RFU Championship,
+Birmingham Moseley Rugby,3,National League 1,
+Bishop's Stortford RFC,3,National League 1,
+Blackheath FC,3,National League 1,
+Darlington Mowden Park RFC,3,National League 1,
+Dings Crusaders RFC,3,National League 1,
+Esher RFC,3,National League 1,
+Leicester Lions RFC,3,National League 1,
+Plymouth Albion RFC,3,National League 1,
+Rams RFC,3,National League 1,
+Richmond FC,3,National League 1,
+Rosslyn Park FC,3,National League 1,
+Rotherham Titans,3,National League 1,
+Sale FC Rugby Club,3,National League 1,
+Sedgley Park RUFC,3,National League 1,
+Barnes RFC,4,National League 2 East,
+Bury St Edmunds RUFC,4,National League 2 East,
+Canterbury RFC,4,National League 2 East,
+Colchester RFC,4,National League 2 East,
+Dorking RFC,4,National League 2 East,
+Guernsey RFC,4,National League 2 East,
+Havant RFC,4,National League 2 East,
+Henley Hawks,4,National League 2 East,
+Old Albanian RFC,4,National League 2 East,
+Oxford Harlequins RFC,4,National League 2 East,
+Sevenoaks RFC,4,National League 2 East,
+Tonbridge Juddians RFC,4,National League 2 East,
+Westcombe Park RFC,4,National League 2 East,
+Worthing RFC,4,National League 2 East,
+Billingham RUFC,4,National League 2 North,
+Chester RUFC,4,National League 2 North,
+Fylde RFC,4,National League 2 North,
+Harrogate RUFC,4,National League 2 North,
+Hull Ionians,4,National League 2 North,
+Hull RUFC,4,National League 2 North,
+Leeds Tykes,4,National League 2 North,
+Lymm RFC,4,National League 2 North,
+Otley RUFC,4,National League 2 North,
+Preston Grasshoppers RFC,4,National League 2 North,
+Sheffield RUFC,4,National League 2 North,
+Sheffield Tigers RUFC,4,National League 2 North,
+Tynedale RFC,4,National League 2 North,
+Wharfedale RUFC,4,National League 2 North,
+Bournville RFC,4,National League 2 West,
+Camborne RFC,4,National League 2 West,
+Cinderford RFC,4,National League 2 West,
+Clifton Rugby,4,National League 2 West,
+Devonport Services RFC,4,National League 2 West,
+Exeter University RFC,4,National League 2 West,
+Hinckley RFC,4,National League 2 West,
+Hornets RFC,4,National League 2 West,
+Loughborough Students RUFC,4,National League 2 West,
+Luctonians,4,National League 2 West,
+Macclesfield RUFC,4,National League 2 West,
+Old Redcliffians,4,National League 2 West,
+Redruth RFC,4,National League 2 West,
+Taunton RFC,4,National League 2 West,
+Banbury RUFC,5,Regional 1 Midlands,
+Bridgnorth RFC,5,Regional 1 Midlands,
+Broadstreet RFC,5,Regional 1 Midlands,
+Bromsgrove RFC,5,Regional 1 Midlands,
+Burton RFC,5,Regional 1 Midlands,
+Derby RFC,5,Regional 1 Midlands,
+Dudley Kingswinford RFC,5,Regional 1 Midlands,
+Kenilworth RFC,5,Regional 1 Midlands,
+Old Halesonians RFC,5,Regional 1 Midlands,
+Stafford RFC,5,Regional 1 Midlands,Missing
+Stockwood Park RFC,5,Regional 1 Midlands,Missing
+Stoke-on-Trent RUFC,5,Regional 1 Midlands,
+Stourbridge RFC,5,Regional 1 Midlands,
+Syston RFC,5,Regional 1 Midlands,
+Wolverhampton RFC,5,Regional 1 Midlands,Missing
+Alnwick RFC,5,Regional 1 North East,
+Blaydon RFC,5,Regional 1 North East,
+Cleckheaton RUFC,5,Regional 1 North East,
+Driffield RUFC,5,Regional 1 North East,
+Heath RUFC,5,Regional 1 North East,
+Huddersfield RUFC,5,Regional 1 North East,
+Ilkley Rugby Club,5,Regional 1 North East,
+Pontefract RUFC,5,Regional 1 North East,
+Sandal RUFC,5,Regional 1 North East,
+Scunthorpe RUFC,5,Regional 1 North East,
+Selby RFC,5,Regional 1 North East,Missing
+York RUFC,5,Regional 1 North East,
+Anselmians RUFC,5,Regional 1 North West,
+Birkenhead Park FC,5,Regional 1 North West,
+Blackburn RUFC,5,Regional 1 North West,
+Kendal RUFC,5,Regional 1 North West,
+Kirkby Lonsdale RUFC,5,Regional 1 North West,
+Leek RUFC,5,Regional 1 North West,
+Manchester Rugby Club,5,Regional 1 North West,
+Penrith RUFC,5,Regional 1 North West,
+Rossendale RUFC,5,Regional 1 North West,
+Sandbach RUFC,5,Regional 1 North West,
+Stockport RUFC,5,Regional 1 North West,
+Wirral RFC,5,Regional 1 North West,
+Bournemouth Rugby,5,Regional 1 South Central,
+Bracknell RFC,5,Regional 1 South Central,
+Brighton Football Club,5,Regional 1 South Central,
+Camberley RFC,5,Regional 1 South Central,
+CS Rugby 1863,5,Regional 1 South Central,
+Hammersmith & Fulham RFC,5,Regional 1 South Central,
+Horsham Rugby Club,5,Regional 1 South Central,
+London Welsh Amateur,5,Regional 1 South Central,
+Maidenhead RFC,5,Regional 1 South Central,
+Marlborough RFC,5,Regional 1 South Central,
+Tunbridge Wells RFC,5,Regional 1 South Central,
+Bedford Athletic,5,Regional 1 South East,
+Guildford Rugby Club,5,Regional 1 South East,
+Harpenden RFC,5,Regional 1 South East,
+Hertford RFC,5,Regional 1 South East,
+Letchworth Garden City RUFC,5,Regional 1 South East,
+Old Northamptonians RFC,5,Regional 1 South East,
+Oundle RFC,5,Regional 1 South East,
+Rochford Hundred RFC,5,Regional 1 South East,
+Shelford Rugby Club,5,Regional 1 South East,
+Sidcup RFC,5,Regional 1 South East,Missing
+Southend RFC,5,Regional 1 South East,
+Sudbury RUFC,5,Regional 1 South East,
+Towcestrians Sports Club,5,Regional 1 South East,
+Tring Rugby,5,Regional 1 South East,
+Westcliff RFC,5,Regional 1 South East,
+Wimbledon RFC,5,Regional 1 South East,
+Barnstaple RFC,5,Regional 1 South West,
+Brixham RFC,5,Regional 1 South West,
+Chew Valley RFC,5,Regional 1 South West,
+Exmouth RFC,5,Regional 1 South West,
+Ivybridge RFC,5,Regional 1 South West,
+Launceston RUFC,5,Regional 1 South West,
+Lydney RFC,5,Regional 1 South West,
+Matson RFC,5,Regional 1 South West,
+Mounts Bay RFC,5,Regional 1 South West,
+Okehampton RFC,5,Regional 1 South West,
+Old Patesians RFC,5,Regional 1 South West,
+Oxford RFC,5,Regional 1 South West,
+Sidmouth RFC,5,Regional 1 South West,
+St Austell RFC,5,Regional 1 South West,
+Weston-super-Mare RFC,5,Regional 1 South West,
+Brentwood RFC,6,Regional 2 Anglia,
+Chelmsford RFC,6,Regional 2 Anglia,
+Eton Manor RFC,6,Regional 2 Anglia,
+Harlow Rugby Club,6,Regional 2 Anglia,
+Holt RFC,6,Regional 2 Anglia,Missing
+Stowmarket RFC,6,Regional 2 Anglia,Missing
+Wanstead RFC,6,Regional 2 Anglia,Missing
+Woodford RFC,6,Regional 2 Anglia,Missing
+Wymondham RFC,6,Regional 2 Anglia,Missing
+Belgrave RFC,6,Regional 2 East Midlands,Missing
+Daventry RFC,6,Regional 2 East Midlands,Missing
+Kettering RFC,6,Regional 2 East Midlands,
+Leicester Forest RFC,6,Regional 2 East Midlands,Missing
+Lutterworth RFC,6,Regional 2 East Midlands,Missing
+Market Bosworth RFC,6,Regional 2 East Midlands,
+Market Harborough,6,Regional 2 East Midlands,Missing
+Melton Mowbray RFC,6,Regional 2 East Midlands,Missing
+Northampton Old Scouts,6,Regional 2 East Midlands,Missing
+Oadby Wyggestonians,6,Regional 2 East Midlands,Missing
+Olney RFC,6,Regional 2 East Midlands,
+Peterborough RUFC,6,Regional 2 East Midlands,
+Wellingborough RFC,6,Regional 2 East Midlands,Missing
+Aspatria RUFC,6,Regional 2 North,
+Cockermouth RFC,6,Regional 2 North,Missing
+Consett RFC,6,Regional 2 North,Missing
+Durham City RFC,6,Regional 2 North,
+Keswick RFC,6,Regional 2 North,Missing
+Middlesbrough RUFC,6,Regional 2 North,
+Morpeth RFC,6,Regional 2 North,
+Northern Football Club,6,Regional 2 North,
+Percy Park RFC,6,Regional 2 North,
+Stockton RFC,6,Regional 2 North,
+Upper Eden RFC,6,Regional 2 North,Missing
+West Hartlepool RFC,6,Regional 2 North,
+Bradford Salem RFC,6,Regional 2 North East,Missing
+Goole RFC,6,Regional 2 North East,Missing
+Malton & Norton RFC,6,Regional 2 North East,Missing
+Moortown RFC,6,Regional 2 North East,Missing
+Morley RFC,6,Regional 2 North East,
+Old Brodleians,6,Regional 2 North East,
+Old Crossleyans,6,Regional 2 North East,Missing
+Rochdale RUFC,6,Regional 2 North East,
+Scarborough RUFC,6,Regional 2 North East,
+Wetherby RFC,6,Regional 2 North East,Missing
+Dronfield RFC,6,Regional 2 North Midlands,Missing
+Ilkeston RFC,6,Regional 2 North Midlands,Missing
+Lichfield RUFC,6,Regional 2 North Midlands,
+Matlock RFC,6,Regional 2 North Midlands,Missing
+Melbourne RFC,6,Regional 2 North Midlands,
+Mellish RFC,6,Regional 2 North Midlands,Missing
+Newark RFC,6,Regional 2 North Midlands,Missing
+Old Saltleians,6,Regional 2 North Midlands,Missing
+Paviors RFC,6,Regional 2 North Midlands,
+Tamworth RUFC,6,Regional 2 North Midlands,
+Walsall RFC,6,Regional 2 North Midlands,
+West Bridgford RFC,6,Regional 2 North Midlands,
+Altrincham Kersal RFC,6,Regional 2 North West,
+Bowdon RFC,6,Regional 2 North West,Missing
+Burnage Rugby,6,Regional 2 North West,
+Crewe & Nantwich RFC,6,Regional 2 North West,Missing
+Douglas RUFC,6,Regional 2 North West,
+Eccles RFC,6,Regional 2 North West,
+Liverpool St Helens FC,6,Regional 2 North West,
+Northwich RFC,6,Regional 2 North West,Missing
+Vale of Lune RUFC,6,Regional 2 North West,
+Waterloo FC,6,Regional 2 North West,
+Widnes RFC,6,Regional 2 North West,Missing
+Winnington Park,6,Regional 2 North West,
+Chippenham RFC,6,Regional 2 Severn,
+Drybrook RFC,6,Regional 2 Severn,
+Gordano RFC,6,Regional 2 Severn,Missing
+Keynsham RFC,6,Regional 2 Severn,Missing
+Longlevens RFC,6,Regional 2 Severn,Missing
+Old Centralians,6,Regional 2 Severn,
+Stow-on-the-Wold RFC,6,Regional 2 Severn,Missing
+Swindon RFC,6,Regional 2 Severn,Missing
+Thornbury RFC,6,Regional 2 Severn,Missing
+Trowbridge RC,6,Regional 2 Severn,
+Witney RFC,6,Regional 2 Severn,
+Andover RFC,6,Regional 2 South Central,Missing
+Chichester RFC,6,Regional 2 South Central,
+Farnham RFC,6,Regional 2 South Central,Missing
+Guildford RC,6,Regional 2 South Central,
+Newbury RFC,6,Regional 2 South Central,
+North Dorset RFC,6,Regional 2 South Central,
+Petersfield RFC,6,Regional 2 South Central,
+Tottonians RFC,6,Regional 2 South Central,Missing
+Wimborne RC,6,Regional 2 South Central,
+Winchester RFC,6,Regional 2 South Central,
+Battersea Ironsides,6,Regional 2 South East,Missing
+Beckenham RFC,6,Regional 2 South East,
+Dartfordians,6,Regional 2 South East,Missing
+Gravesend RFC,6,Regional 2 South East,
+Medway RFC,6,Regional 2 South East,
+Old Colfeians,6,Regional 2 South East,
+Old Reigatian RFC,6,Regional 2 South East,
+Old Tiffinians,6,Regional 2 South East,Missing
+Reeds Weybridge,6,Regional 2 South East,Missing
+Sutton & Epsom RFC,6,Regional 2 South East,
+Thurrock RFC,6,Regional 2 South East,
+Crediton RFC,6,Regional 2 South West,
+Cullompton RFC,6,Regional 2 South West,Missing
+Newton Abbot RFC,6,Regional 2 South West,
+North Petherton RFC,6,Regional 2 South West,Missing
+Teignmouth RFC,6,Regional 2 South West,
+Tiverton RFC,6,Regional 2 South West,
+Topsham RFC,6,Regional 2 South West,Missing
+Truro RFC,6,Regional 2 South West,
+Wadebridge Camels,6,Regional 2 South West,
+Wellington RFC,6,Regional 2 South West,Missing
+Winscombe RFC,6,Regional 2 South West,
+Amersham and Chiltern RFC,6,Regional 2 Thames,
+Aylesbury RFC,6,Regional 2 Thames,Missing
+Beaconsfield RFC,6,Regional 2 Thames,
+Belsize Park RFC,6,Regional 2 Thames,
+Chobham RFC,6,Regional 2 Thames,
+Fullerians,6,Regional 2 Thames,Missing
+Grasshoppers,6,Regional 2 Thames,Missing
+Hemel Hempstead,6,Regional 2 Thames,Missing
+Honourable Artillery Company,6,Regional 2 Thames,Missing
+London Irish Amateur,6,Regional 2 Thames,
+Marlow RUFC,6,Regional 2 Thames,
+Old Haberdashers,6,Regional 2 Thames,Missing
+Old Priorians,6,Regional 2 Thames,Missing
+Teddington RFC,6,Regional 2 Thames,
+Cheltenham Saracens RFC,6,Regional 2 West Midlands,
+Edwardians,6,Regional 2 West Midlands,Missing
+Hereford RFC,6,Regional 2 West Midlands,
+Ledbury RFC,6,Regional 2 West Midlands,Missing
+Ludlow RFC,6,Regional 2 West Midlands,Missing
+Malvern RFC,6,Regional 2 West Midlands,
+Newent RFC,6,Regional 2 West Midlands,Missing
+Shipston-on-Stour RFC,6,Regional 2 West Midlands,
+Stratford-upon-Avon RFC,6,Regional 2 West Midlands,Missing
+Whitchurch RFC,6,Regional 2 West Midlands,
+Aldwinians RUFC,7,Counties 1 ADM Lancashire & Cheshire,
+Aspull RFC,7,Counties 1 ADM Lancashire & Cheshire,Missing
+Bolton RUFC,7,Counties 1 ADM Lancashire & Cheshire,
+Broughton Park RUFC,7,Counties 1 ADM Lancashire & Cheshire,
+Didsbury Toc H,7,Counties 1 ADM Lancashire & Cheshire,Missing
+Glossop RFC,7,Counties 1 ADM Lancashire & Cheshire,Missing
+Heaton Moor RUFC,7,Counties 1 ADM Lancashire & Cheshire,
+New Brighton FC,7,Counties 1 ADM Lancashire & Cheshire,
+Sefton RUFC,7,Counties 1 ADM Lancashire & Cheshire,
+Southport RFC,7,Counties 1 ADM Lancashire & Cheshire,
+Tarleton RFC,7,Counties 1 ADM Lancashire & Cheshire,Missing
+Trafford MV RFCC,7,Counties 1 ADM Lancashire & Cheshire,Missing
+West Park St Helens,7,Counties 1 ADM Lancashire & Cheshire,
+Wilmslow RUFC,7,Counties 1 ADM Lancashire & Cheshire,
+Ambleside RFC,7,Counties 1 Cumbria,Missing
+Carlisle RFC,7,Counties 1 Cumbria,
+Creighton RFC,7,Counties 1 Cumbria,Missing
+Egremont RFC,7,Counties 1 Cumbria,Missing
+Hawcoat Park RFC,7,Counties 1 Cumbria,Missing
+Millom RLFC,7,Counties 1 Cumbria,
+St Benedict's RFC,7,Counties 1 Cumbria,Missing
+Whitehaven RUFC,7,Counties 1 Cumbria,
+Wigton RFC,7,Counties 1 Cumbria,Missing
+Windermere RFC,7,Counties 1 Cumbria,Missing
+Workington RFC,7,Counties 1 Cumbria,
+Acklam RFC,7,Counties 1 Durham & Northumberland,Missing
+Bishop Auckland RFC,7,Counties 1 Durham & Northumberland,Missing
+Darlington RFC,7,Counties 1 Durham & Northumberland,
+Hartlepool Rovers,7,Counties 1 Durham & Northumberland,
+Medicals RFC,7,Counties 1 Durham & Northumberland,
+Novocastrians RFC,7,Counties 1 Durham & Northumberland,
+Peterlee & Horden RFC,7,Counties 1 Durham & Northumberland,
+Ponteland RFC,7,Counties 1 Durham & Northumberland,Missing
+Redcar RUFC,7,Counties 1 Durham & Northumberland,
+Ryton RFC,7,Counties 1 Durham & Northumberland,Missing
+Seghill RFC,7,Counties 1 Durham & Northumberland,
+South Shields Westoe RFC,7,Counties 1 Durham & Northumberland,
+Sunderland RFC,7,Counties 1 Durham & Northumberland,Missing
+Whitley Bay Rockcliff RFC,7,Counties 1 Durham & Northumberland,
+Cantabrigian,7,Counties 1 Eastern Counties,Missing
+Diss RFC,7,Counties 1 Eastern Counties,
+Ely RFC,7,Counties 1 Eastern Counties,Missing
+Ipswich RFC,7,Counties 1 Eastern Counties,Missing
+Newmarket RFC,7,Counties 1 Eastern Counties,Missing
+North Walsham RFC,7,Counties 1 Eastern Counties,
+Norwich RFC,7,Counties 1 Eastern Counties,Missing
+Romford and Gidea Park Rugby Club,7,Counties 1 Eastern Counties,
+Saffron Walden RFC,7,Counties 1 Eastern Counties,Missing
+Southwold RFC,7,Counties 1 Eastern Counties,Missing
+Basildon RFC,7,Counties 1 Essex,Missing
+Braintree RFC,7,Counties 1 Essex,Missing
+Burnham-on-Crouch RFC,7,Counties 1 Essex,Missing
+Campion RFC,7,Counties 1 Essex,Missing
+Chingford RFC,7,Counties 1 Essex,
+East London RFC,7,Counties 1 Essex,Missing
+Epping Upper Clapton RFC,7,Counties 1 Essex,Missing
+Maldon RFC,7,Counties 1 Essex,Missing
+Mavericks,7,Counties 1 Essex,Missing
+Old Cooperians,7,Counties 1 Essex,Missing
+Romford & Gidea Park RC,7,Counties 1 Essex,
+Upminster RFC,7,Counties 1 Essex,Missing
+Basingstoke RFC,7,Counties 1 Hampshire,
+Bognor RFC,7,Counties 1 Hampshire,Missing
+Eastleigh RFC,7,Counties 1 Hampshire,Missing
+Ellingham & Ringwood RFC,7,Counties 1 Hampshire,Missing
+Gosport and Fareham RFC,7,Counties 1 Hampshire,
+Jersey RFC,7,Counties 1 Hampshire,
+New Milton & District RFC,7,Counties 1 Hampshire,Missing
+Portsmouth RFC,7,Counties 1 Hampshire,
+Sandown & Shanklin RFC,7,Counties 1 Hampshire,Missing
+Trojans Rugby Club,7,Counties 1 Hampshire,
+Brunel University,7,Counties 1 Herts/Middlesex,Missing
+Cheshunt RFC,7,Counties 1 Herts/Middlesex,
+Chiswick RFC,7,Counties 1 Herts/Middlesex,Missing
+Datchworth RFC,7,Counties 1 Herts/Middlesex,Missing
+Finchley RFC,7,Counties 1 Herts/Middlesex,
+Hackney RFC,7,Counties 1 Herts/Middlesex,
+Hitchin Rugby Club,7,Counties 1 Herts/Middlesex,
+Old Streetonians,7,Counties 1 Herts/Middlesex,Missing
+Ruislip RFC,7,Counties 1 Herts/Middlesex,Missing
+Tabard RFC,7,Counties 1 Herts/Middlesex,
+Welwyn RFC,7,Counties 1 Herts/Middlesex,
+Ashford RFC,7,Counties 1 Kent,
+Beccehamian RFC,7,Counties 1 Kent,
+Bromley RFC,7,Counties 1 Kent,
+Charlton Park RFC,7,Counties 1 Kent,
+Cranbrook RFC,7,Counties 1 Kent,
+Crowborough RFC,7,Counties 1 Kent,Missing
+Deal & Betteshanger Rugby Club,7,Counties 1 Kent,
+Dover RFC,7,Counties 1 Kent,Missing
+Heathfield & Waldron,7,Counties 1 Kent,Missing
+Old Alleynian FC,7,Counties 1 Kent,
+Park House FC,7,Counties 1 Kent,
+Thanet Wanderers,7,Counties 1 Kent,
+Birstall RFC,7,Counties 1 Midlands East - North,
+Boston RFC,7,Counties 1 Midlands East - North,
+Kesteven RFC,7,Counties 1 Midlands East - North,Missing
+Lincoln RFC,7,Counties 1 Midlands East - North,Missing
+Long Eaton RFC,7,Counties 1 Midlands East - North,
+Loughborough RFC,7,Counties 1 Midlands East - North,
+Manor Park RFC,7,Counties 1 Midlands East - North,Missing
+Mansfield Rugby Club,7,Counties 1 Midlands East - North,
+Market Rasen & Louth RFC,7,Counties 1 Midlands East - North,Missing
+Nottingham Moderns RFC,7,Counties 1 Midlands East - North,
+Nuneaton Old Edwardians,7,Counties 1 Midlands East - North,Missing
+Southwell RFC,7,Counties 1 Midlands East - North,Missing
+Biggleswade RUFC,7,Counties 1 Midlands East - South,
+Bourne RFC,7,Counties 1 Midlands East - South,Missing
+Bugbrooke RFC,7,Counties 1 Midlands East - South,
+Dunstablians RUFC,7,Counties 1 Midlands East - South,
+Leighton Buzzard RFC,7,Counties 1 Midlands East - South,
+Luton RFC,7,Counties 1 Midlands East - South,
+Newbold-on-Avon RFC,7,Counties 1 Midlands East - South,
+Old Laurentians,7,Counties 1 Midlands East - South,
+Peterborough Lions RFC,7,Counties 1 Midlands East - South,
+Spalding RFC,7,Counties 1 Midlands East - South,Missing
+Stamford RFC,7,Counties 1 Midlands East - South,Missing
+Stewarts & Lloyds RFC,7,Counties 1 Midlands East - South,Missing
+Vipers RFC,7,Counties 1 Midlands East - South,Missing
+Burntwood Barbarians,7,Counties 1 Midlands West - North,
+Kidderminster Carolians,7,Counties 1 Midlands West - North,Missing
+Longton RUFC,7,Counties 1 Midlands West - North,
+Newcastle Staffs,7,Counties 1 Midlands West - North,Missing
+Newport Salop RUFC,7,Counties 1 Midlands West - North,
+Shrewsbury RFC,7,Counties 1 Midlands West - North,Missing
+Spartans,7,Counties 1 Midlands West - North,Missing
+Sutton Coldfield RFC,7,Counties 1 Midlands West - North,
+Telford Hornets,7,Counties 1 Midlands West - North,Missing
+Uttoxeter RFC,7,Counties 1 Midlands West - North,
+Veseyans,7,Counties 1 Midlands West - North,Missing
+Willenhall RFC,7,Counties 1 Midlands West - North,Missing
+Alcester RFC,7,Counties 1 Midlands West - South,Missing
+Barkers Butts RFC,7,Counties 1 Midlands West - South,
+Berkswell & Balsall RFC,7,Counties 1 Midlands West - South,Missing
+Camp Hill RFC,7,Counties 1 Midlands West - South,
+Droitwich RFC,7,Counties 1 Midlands West - South,
+Evesham RFC,7,Counties 1 Midlands West - South,Missing
+Leamington Royals,7,Counties 1 Midlands West - South,
+Old Coventrians,7,Counties 1 Midlands West - South,Missing
+Old Leamingtonians,7,Counties 1 Midlands West - South,
+Silhillians RUFC,7,Counties 1 Midlands West - South,
+Worcester Wanderers,7,Counties 1 Midlands West - South,
+Bicester RUFC,7,Counties 1 Southern North,
+Bletchley RUFC,7,Counties 1 Southern North,
+Buckingham RFC,7,Counties 1 Southern North,Missing
+Grove RFC,7,Counties 1 Southern North,Missing
+High Wycombe RFC,7,Counties 1 Southern North,
+Milton Keynes RUFC,7,Counties 1 Southern North,
+Reading Abbey RFC,7,Counties 1 Southern North,
+Reading RFC,7,Counties 1 Southern North,
+Wallingford RFC,7,Counties 1 Southern North,Missing
+Windsor Lancers Rugby,7,Counties 1 Southern North,
+Combe Down RFC,7,Counties 1 Southern South,
+Corsham RFC,7,Counties 1 Southern South,Missing
+Devizes RFC,7,Counties 1 Southern South,Missing
+Dorchester RFC,7,Counties 1 Southern South,
+Frome RFC,7,Counties 1 Southern South,Missing
+Melksham RFC,7,Counties 1 Southern South,Missing
+Royal Wootton Bassett RFC,7,Counties 1 Southern South,
+Salisbury RFC,7,Counties 1 Southern South,
+Sherborne RFC,7,Counties 1 Southern South,
+Swanage & Wareham RFC,7,Counties 1 Southern South,Missing
+Walcot RFC,7,Counties 1 Southern South,Missing
+Cobham RFC,7,Counties 1 Surrey/Sussex,
+East Grinstead RFC,7,Counties 1 Surrey/Sussex,
+Eastbourne RFC,7,Counties 1 Surrey/Sussex,Missing
+Haywards Heath RFC,7,Counties 1 Surrey/Sussex,
+Hove Rugby Club,7,Counties 1 Surrey/Sussex,
+KCS Old Boys RFC,7,Counties 1 Surrey/Sussex,
+London Cornish RFC,7,Counties 1 Surrey/Sussex,
+Old Haileyburians,7,Counties 1 Surrey/Sussex,Missing
+Old Rutlishians,7,Counties 1 Surrey/Sussex,Missing
+Trinity RFC,7,Counties 1 Surrey/Sussex,Missing
+Twickenham RFC,7,Counties 1 Surrey/Sussex,Missing
+Weybridge Vandals,7,Counties 1 Surrey/Sussex,Missing
+Avonmouth Old Boys RFC,7,Counties 1 Western North,
+Bridgwater & Albion RFC,7,Counties 1 Western North,
+Burnham-on-Sea,7,Counties 1 Western North,
+Chosen Hill Former Pupils,7,Counties 1 Western North,Missing
+Cirencester RFC,7,Counties 1 Western North,
+Cleve RFC,7,Counties 1 Western North,
+Coney Hill RFC,7,Counties 1 Western North,
+Gordon League,7,Counties 1 Western North,Missing
+Nailsea & Backwell RFC,7,Counties 1 Western North,Missing
+Old Bristolians RFC,7,Counties 1 Western North,
+Bideford RFC,7,Counties 1 Western West,
+Bude RFC,7,Counties 1 Western West,
+Chard RFC,7,Counties 1 Western West,
+Falmouth RFC,7,Counties 1 Western West,
+Kingsbridge RFC,7,Counties 1 Western West,Missing
+Paignton RFC,7,Counties 1 Western West,
+Penryn RFC,7,Counties 1 Western West,
+Pirates Amateurs,7,Counties 1 Western West,Missing
+Plymstock Albion Oaks RFC,7,Counties 1 Western West,Missing
+St Ives RFC,7,Counties 1 Western West,
+Tavistock RFC,7,Counties 1 Western West,Missing
+Wiveliscombe RFC,7,Counties 1 Western West,Missing
+Beverley RUFC,7,Counties 1 Yorkshire,
+Bradford & Bingley RFC,7,Counties 1 Yorkshire,
+Bridlington RFC,7,Counties 1 Yorkshire,Missing
+Harrogate Pythons,7,Counties 1 Yorkshire,Missing
+Hullensians,7,Counties 1 Yorkshire,Missing
+Keighley RUFC,7,Counties 1 Yorkshire,
+Leodiensian,7,Counties 1 Yorkshire,Missing
+North Ribblesdale RFC,7,Counties 1 Yorkshire,Missing
+Old Rishworthians,7,Counties 1 Yorkshire,Missing
+Pocklington RUFC,7,Counties 1 Yorkshire,
+Wath-upon-Dearne RFC,7,Counties 1 Yorkshire,Missing
+Wensleydale RFC,7,Counties 1 Yorkshire,Missing
+West Leeds,7,Counties 1 Yorkshire,Missing
+Hoylake RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Leigh RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Littleborough RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Liverpool Collegiate RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Oldham RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Orrell RUFC,8,Counties 2 ADM Lancashire & Cheshire,
+Thornton-Cleveleys RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Tyldesley RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Warrington RFC,8,Counties 2 ADM Lancashire & Cheshire,Missing
+Wigan RUFC,8,Counties 2 ADM Lancashire & Cheshire,
+Bodmin RFC,8,Counties 2 Cornwall,Missing
+Hayle RFC,8,Counties 2 Cornwall,Missing
+Helston RFC,8,Counties 2 Cornwall,
+Liskeard-Looe RFC,8,Counties 2 Cornwall,Missing
+Newquay Hornets RFC,8,Counties 2 Cornwall,Missing
+Perranporth RFC,8,Counties 2 Cornwall,Missing
+Saltash RFC,8,Counties 2 Cornwall,Missing
+St Just RFC,8,Counties 2 Cornwall,Missing
+Veor RFC,8,Counties 2 Cornwall,
+Dartmouth Rugby,8,Counties 2 Devon,
+Exeter Saracens,8,Counties 2 Devon,Missing
+Honiton RFC,8,Counties 2 Devon,Missing
+North Tawton RFC,8,Counties 2 Devon,Missing
+Old Plymothian & Mannamedian RFC,8,Counties 2 Devon,Missing
+Plymouth Argaum RFC,8,Counties 2 Devon,Missing
+South Molton RFC,8,Counties 2 Devon,Missing
+Torquay Athletic RFC,8,Counties 2 Devon,
+Withycombe RFC,8,Counties 2 Devon,Missing
+Calne RFC,8,Counties 2 Dorset & Wilts North,Missing
+Minety RFC,8,Counties 2 Dorset & Wilts North,Missing
+Sutton Benger RFC,8,Counties 2 Dorset & Wilts North,Missing
+Warminster RFC,8,Counties 2 Dorset & Wilts North,Missing
+Westbury RFC,8,Counties 2 Dorset & Wilts North,Missing
+Blandford RFC,8,Counties 2 Dorset & Wilts South,Missing
+Bridport RFC,8,Counties 2 Dorset & Wilts South,Missing
+East Dorset Dockers,8,Counties 2 Dorset & Wilts South,Missing
+Oakmeadians,8,Counties 2 Dorset & Wilts South,Missing
+Puddletown RFC,8,Counties 2 Dorset & Wilts South,Missing
+Weymouth & Portland RFC,8,Counties 2 Dorset & Wilts South,Missing
+Ashington RFC,8,Counties 2 Durham & Northumberland,Missing
+Barnard Castle RFC,8,Counties 2 Durham & Northumberland,Missing
+Blyth RFC,8,Counties 2 Durham & Northumberland,Missing
+DMP Elizabethans,8,Counties 2 Durham & Northumberland,Missing
+Durham University Rugby Football Club,8,Counties 2 Durham & Northumberland,
+Gateshead RFC,8,Counties 2 Durham & Northumberland,Missing
+Gosforth RFC,8,Counties 2 Durham & Northumberland,
+Houghton RFC,8,Counties 2 Durham & Northumberland,Missing
+North Shields RFC,8,Counties 2 Durham & Northumberland,Missing
+Sedgefield RFC,8,Counties 2 Durham & Northumberland,Missing
+Wallsend RUFC,8,Counties 2 Durham & Northumberland,
+Crusaders RFC,8,Counties 2 Eastern Counties,Missing
+Fakenham RFC,8,Counties 2 Eastern Counties,Missing
+Ipswich YM,8,Counties 2 Eastern Counties,Missing
+March Bears,8,Counties 2 Eastern Counties,Missing
+Mersea Island RFC,8,Counties 2 Eastern Counties,Missing
+Mistley RFC,8,Counties 2 Eastern Counties,Missing
+Thurston RFC,8,Counties 2 Eastern Counties,Missing
+West Norfolk RFC,8,Counties 2 Eastern Counties,Missing
+Wisbech RFC,8,Counties 2 Eastern Counties,Missing
+Woodbridge RFC,8,Counties 2 Eastern Counties,Missing
+Barking RFC,8,Counties 2 Essex,
+Billericay RFC,8,Counties 2 Essex,
+Canvey Island RFC,8,Counties 2 Essex,Missing
+Clacton RFC,8,Counties 2 Essex,Missing
+Harwich & Dovercourt RFC,8,Counties 2 Essex,Missing
+Kelvedon & Feering RFC,8,Counties 2 Essex,Missing
+Kings Cross Steelers,8,Counties 2 Essex,
+Millwall RC,8,Counties 2 Essex,
+Old Brentwoods RFC,8,Counties 2 Essex,Missing
+South Woodham Ferrers,8,Counties 2 Essex,Missing
+Stanford-le-Hope RFC,8,Counties 2 Essex,Missing
+Witham RFC,8,Counties 2 Essex,Missing
+Writtle Wanderers,8,Counties 2 Essex,Missing
+Fareham Heathens,8,Counties 2 Hampshire,Missing
+Fordingbridge RFC,8,Counties 2 Hampshire,Missing
+Isle Of Wight RFC,8,Counties 2 Hampshire,Missing
+Locksheath Pumas,8,Counties 2 Hampshire,Missing
+Millbrook RFC,8,Counties 2 Hampshire,Missing
+United Services Portsmouth RFC,8,Counties 2 Hampshire,
+Barnet Elizabethans,8,Counties 2 Herts/Middlesex,Missing
+Enfield Ignatians,8,Counties 2 Herts/Middlesex,Missing
+Hampstead RFC,8,Counties 2 Herts/Middlesex,Missing
+Harrow RFC,8,Counties 2 Herts/Middlesex,
+Old Merchant Taylors' FC,8,Counties 2 Herts/Middlesex,
+Old Millhillians,8,Counties 2 Herts/Middlesex,Missing
+Saracens Amateurs,8,Counties 2 Herts/Middlesex,Missing
+St Albans RFC,8,Counties 2 Herts/Middlesex,
+UCS Old Boys,8,Counties 2 Herts/Middlesex,Missing
+Verulamians,8,Counties 2 Herts/Middlesex,Missing
+Wasps FC,8,Counties 2 Herts/Middlesex,
+Aylesford Bulls,8,Counties 2 Kent,Missing
+Dartford Valley RFC,8,Counties 2 Kent,Missing
+Folkestone RFC,8,Counties 2 Kent,Missing
+Gillingham Anchorians RC,8,Counties 2 Kent,
+Maidstone FC,8,Counties 2 Kent,
+Old Elthamians,8,Counties 2 Kent,
+Vigo RC,8,Counties 2 Kent,
+Ashbourne RFC,8,Counties 2 Midlands East - North,
+Ashby RFC,8,Counties 2 Midlands East - North,Missing
+Ashfield RFC,8,Counties 2 Midlands East - North,Missing
+Gainsborough RFC,8,Counties 2 Midlands East - North,Missing
+Grimsby RUFC,8,Counties 2 Midlands East - North,
+Keyworth RFC,8,Counties 2 Midlands East - North,
+Mosborough RFC,8,Counties 2 Midlands East - North,Missing
+Nottingham Casuals,8,Counties 2 Midlands East - North,Missing
+Rolls-Royce RFC,8,Counties 2 Midlands East - North,
+Brackley RUFC,8,Counties 2 Midlands East - South,
+Huntingdon & District RFC,8,Counties 2 Midlands East - South,Missing
+Long Buckby RFC,8,Counties 2 Midlands East - South,Missing
+Northampton BBOB,8,Counties 2 Midlands East - South,Missing
+Northampton Casuals,8,Counties 2 Midlands East - South,Missing
+Oakham RFC,8,Counties 2 Midlands East - South,Missing
+Rugby St Andrews,8,Counties 2 Midlands East - South,Missing
+Rushden & Higham RFC,8,Counties 2 Midlands East - South,Missing
+St Neots RUFC,8,Counties 2 Midlands East - South,
+Aston Old Edwardians,8,Counties 2 Midlands West - East,Missing
+Birmingham & Solihull RFC,8,Counties 2 Midlands West - East,
+Claverdon RFC,8,Counties 2 Midlands West - East,Missing
+Coalville RFC,8,Counties 2 Midlands West - East,Missing
+Coventry Welsh,8,Counties 2 Midlands West - East,Missing
+Earlsdon RFC,8,Counties 2 Midlands West - East,Missing
+Harbury RFC,8,Counties 2 Midlands West - East,Missing
+Old Wheatleyans RFC,8,Counties 2 Midlands West - East,
+Southam RFC,8,Counties 2 Midlands West - East,Missing
+Stoke Old Boys,8,Counties 2 Midlands West - East,Missing
+Bridgnorth Bulls,8,Counties 2 Midlands West - West,Missing
+Bromyard RFC,8,Counties 2 Midlands West - West,Missing
+Clee Hill RFC,8,Counties 2 Midlands West - West,Missing
+Handsworth RUFC,8,Counties 2 Midlands West - West,
+Harborne RFC,8,Counties 2 Midlands West - West,Missing
+Market Drayton RFC,8,Counties 2 Midlands West - West,Missing
+Oswestry RFC,8,Counties 2 Midlands West - West,Missing
+Stourbridge Lions,8,Counties 2 Midlands West - West,Missing
+Tenbury RFC,8,Counties 2 Midlands West - West,Missing
+Trentham RFC,8,Counties 2 Midlands West - West,Missing
+Wednesbury RUFC,8,Counties 2 Midlands West - West,
+Avon RFC,8,Counties 2 Somerset,Missing
+Clevedon RFC,8,Counties 2 Somerset,Missing
+Imperial Medicals RC,8,Counties 2 Somerset,
+Midsomer Norton RFC,8,Counties 2 Somerset,Missing
+Minehead Barbarians,8,Counties 2 Somerset,Missing
+Oldfield Old Boys,8,Counties 2 Somerset,Missing
+Rebels RFC,8,Counties 2 Somerset,Missing
+St Bernadettes Old Boys,8,Counties 2 Somerset,Missing
+Stothert & Pitt RFC,8,Counties 2 Somerset,
+Wells RFC,8,Counties 2 Somerset,Missing
+Bec Old Boys,8,Counties 2 Surrey,Missing
+Chipstead RFC,8,Counties 2 Surrey,Missing
+Croydon RFC,8,Counties 2 Surrey,
+Kingston RFC,8,Counties 2 Surrey,
+Metropolitan Police RFC,8,Counties 2 Surrey,Missing
+Old Amplefordians,8,Counties 2 Surrey,Missing
+Old Blues RFC,8,Counties 2 Surrey,
+Old Caterhamians,8,Counties 2 Surrey,Missing
+Old Cranleighan,8,Counties 2 Surrey,Missing
+Old Walcountians,8,Counties 2 Surrey,Missing
+Old Whitgiftian,8,Counties 2 Surrey,
+Old Wimbledonians,8,Counties 2 Surrey,Missing
+Purley John Fisher RFC,8,Counties 2 Surrey,Missing
+Streatham-Croydon RFC,8,Counties 2 Surrey,
+Burgess Hill RFC,8,Counties 2 Sussex,
+Crawley RFC,8,Counties 2 Sussex,
+Ditchling RFC,8,Counties 2 Sussex,Missing
+Lewes RFC,8,Counties 2 Sussex,
+Pulborough RFC,8,Counties 2 Sussex,Missing
+Seaford RFC,8,Counties 2 Sussex,
+Shoreham RFC,8,Counties 2 Sussex,Missing
+Uckfield RFC,8,Counties 2 Sussex,Missing
+Baildon RFC,8,Counties 2 Yorkshire,Missing
+Bramley Phoenix,8,Counties 2 Yorkshire,Missing
+Dinnington RFC,8,Counties 2 Yorkshire,Missing
+Halifax Vandals RUFC,8,Counties 2 Yorkshire,
+Hemsworth RFC,8,Counties 2 Yorkshire,Missing
+Huddersfield Laund Hill RFC,8,Counties 2 Yorkshire,Missing
+Northallerton RFC,8,Counties 2 Yorkshire,Missing
+Ossett RFC,8,Counties 2 Yorkshire,Missing
+Ripon RUFC,8,Counties 2 Yorkshire,
+Roundhegians,8,Counties 2 Yorkshire,Missing
+Yarnbury RFC,8,Counties 2 Yorkshire,Missing
+Ashton-under-Lyne RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Blackpool RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Burnley RUFC,9,Counties 3 ADM Lancashire & Cheshire,
+Clitheroe RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Colne & Nelson RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+De La Salle Salford RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Dukinfield RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Fleetwood RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Garstang RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Old Bedians,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Ormskirk RFC,9,Counties 3 ADM Lancashire & Cheshire,Missing
+Vagabonds RUFC,9,Counties 3 ADM Lancashire & Cheshire,
+Abingdon RFC,9,Counties 3 Berks/Bucks & Oxon North,Missing
+Chesham RFC,9,Counties 3 Berks/Bucks & Oxon North,Missing
+Crowthorne RFC,9,Counties 3 Berks/Bucks & Oxon North,Missing
+Hungerford RFC,9,Counties 3 Berks/Bucks & Oxon North,Missing
+Tadley Tigers,9,Counties 3 Berks/Bucks & Oxon North,Missing
+Aldermaston RFC,9,Counties 3 Berks/Bucks & Oxon South,Missing
+Chipping Norton RFC,9,Counties 3 Berks/Bucks & Oxon South,Missing
+Didcot RFC,9,Counties 3 Berks/Bucks & Oxon South,Missing
+Slough RFC,9,Counties 3 Berks/Bucks & Oxon South,Missing
+Wheatley RFC,9,Counties 3 Berks/Bucks & Oxon South,Missing
+Camborne School of Mines,9,Counties 3 Cornwall,Missing
+Camelford RFC,9,Counties 3 Cornwall,
+Illogan Park RFC,9,Counties 3 Cornwall,Missing
+Lankelly-Fowey RFC,9,Counties 3 Cornwall,Missing
+Redruth Albany RFC,9,Counties 3 Cornwall,Missing
+Roseland RFC,9,Counties 3 Cornwall,Missing
+St Agnes RFC,9,Counties 3 Cornwall,Missing
+Colerne RFC,9,Counties 3 Dorset & Wilts North,Missing
+Cricklade RFC,9,Counties 3 Dorset & Wilts North,Missing
+Pewsey Vale RFC,9,Counties 3 Dorset & Wilts North,Missing
+Supermarine RFC,9,Counties 3 Dorset & Wilts North,Missing
+Christchurch RFC,9,Counties 3 Dorset & Wilts South,Missing
+Lytchett Minster RFC,9,Counties 3 Dorset & Wilts South,Missing
+Poole RFC,9,Counties 3 Dorset & Wilts South,Missing
+Jarrovians,9,Counties 3 Durham & Northumberland,Missing
+Newton Aycliffe RUFC,9,Counties 3 Durham & Northumberland,
+Prudhoe & Stocksfield RFC,9,Counties 3 Durham & Northumberland,Missing
+Seaham RFC,9,Counties 3 Durham & Northumberland,Missing
+Seaton Carew RFC,9,Counties 3 Durham & Northumberland,Missing
+Whitby RFC,9,Counties 3 Durham & Northumberland,Missing
+Winlaton Vulcans,9,Counties 3 Durham & Northumberland,Missing
+Yarm RFC,9,Counties 3 Durham & Northumberland,Missing
+Bredon Star RFC,9,Counties 3 Gloucestershire North,Missing
+Cheltenham Civil Service,9,Counties 3 Gloucestershire North,Missing
+Minchinhampton RFC,9,Counties 3 Gloucestershire North,Missing
+Norton RFC,9,Counties 3 Gloucestershire North,Missing
+Painswick RFC,9,Counties 3 Gloucestershire North,Missing
+Stroud RFC,9,Counties 3 Gloucestershire North,Missing
+Tewkesbury,9,Counties 3 Gloucestershire North,Missing
+Bishopston,9,Counties 3 Gloucestershire South,Missing
+Bristol Aeroplane Company,9,Counties 3 Gloucestershire South,Missing
+Broad Plain RFC,9,Counties 3 Gloucestershire South,
+Cotham Park RFC,9,Counties 3 Gloucestershire South,Missing
+Kingswood RFC,9,Counties 3 Gloucestershire South,Missing
+North Bristol RFC,9,Counties 3 Gloucestershire South,Missing
+Old Colstonians,9,Counties 3 Gloucestershire South,Missing
+Southmead RFC,9,Counties 3 Gloucestershire South,Missing
+Aldershot & Fleet RFC,9,Counties 3 Hampshire,Missing
+Overton RFC,9,Counties 3 Hampshire,Missing
+Romsey RFC,9,Counties 3 Hampshire,Missing
+Southampton RFC,9,Counties 3 Hampshire,Missing
+Ventnor RFC,9,Counties 3 Hampshire,Missing
+Actonians,9,Counties 3 Herts/Middlesex,Missing
+Chess Valley RFC,9,Counties 3 Herts/Middlesex,Missing
+Finsbury Park RFC,9,Counties 3 Herts/Middlesex,Missing
+Kilburn Cosmos,9,Counties 3 Herts/Middlesex,Missing
+London French RFC,9,Counties 3 Herts/Middlesex,
+Mill Hill RFC,9,Counties 3 Herts/Middlesex,Missing
+Royston RFC,9,Counties 3 Herts/Middlesex,Missing
+Stevenage RFC,9,Counties 3 Herts/Middlesex,Missing
+Thamesians RFC,9,Counties 3 Herts/Middlesex,Missing
+Watford RFC,9,Counties 3 Herts/Middlesex,Missing
+Brockleians,9,Counties 3 Kent,Missing
+Footscray RUFC,9,Counties 3 Kent,
+Hastings & Bexhill RFC,9,Counties 3 Kent,Missing
+King's College Hospital RFC,9,Counties 3 Kent,
+New Ash Green RFC,9,Counties 3 Kent,Missing
+Old Dunstonians,9,Counties 3 Kent,Missing
+Old Gravesendians,9,Counties 3 Kent,Missing
+Sittingbourne RFC,9,Counties 3 Kent,Missing
+Whitstable RFC,9,Counties 3 Kent,Missing
+Bingham RFC,9,Counties 3 Midlands East - Central,Missing
+Castle Donnington RFC,9,Counties 3 Midlands East - Central,Missing
+Leesbrook RFC,9,Counties 3 Midlands East - Central,Missing
+Nottinghamians,9,Counties 3 Midlands East - Central,
+Cleethorpes RUFC,9,Counties 3 Midlands East - North East,
+East Retford RFC,9,Counties 3 Midlands East - North East,Missing
+Grimsby RFC,9,Counties 3 Midlands East - North East,Missing
+Meden Vale RFC,9,Counties 3 Midlands East - North East,Missing
+North Hykeham RFC,9,Counties 3 Midlands East - North East,Missing
+Ollerton RFC,9,Counties 3 Midlands East - North East,Missing
+Skegness RFC,9,Counties 3 Midlands East - North East,Missing
+Sleaford RFC,9,Counties 3 Midlands East - North East,Missing
+Worksop RFC,9,Counties 3 Midlands East - North East,Missing
+Amber Valley RFC,9,Counties 3 Midlands East - North West,Missing
+Bakewell Mannerians,9,Counties 3 Midlands East - North West,Missing
+Belper RFC,9,Counties 3 Midlands East - North West,Missing
+Chesterfield Panthers RUFC,9,Counties 3 Midlands East - North West,
+Tupton RFC,9,Counties 3 Midlands East - North West,Missing
+Aylestone Athletic,9,Counties 3 Midlands East - South,Missing
+Bedford Queens RFC,9,Counties 3 Midlands East - South,Missing
+Deepings RFC,9,Counties 3 Midlands East - South,Missing
+Northampton Men's Own,9,Counties 3 Midlands East - South,Missing
+Rugby Lions,9,Counties 3 Midlands East - South,
+Rugby Welsh,9,Counties 3 Midlands East - South,Missing
+Sileby RFC,9,Counties 3 Midlands East - South,Missing
+South Leicester RFC,9,Counties 3 Midlands East - South,
+Stamford College Old Boys RFC,9,Counties 3 Midlands East - South,Missing
+Thorney RUFC,9,Counties 3 Midlands East - South,
+Atherstone RFC,9,Counties 3 Midlands West - East,Missing
+Bedworth RFC,9,Counties 3 Midlands West - East,Missing
+Nuneaton RFC,9,Counties 3 Midlands West - East,
+Pinley RFC,9,Counties 3 Midlands West - East,Missing
+Aldridge RFC,9,Counties 3 Midlands West - North,Missing
+Barton-under-Needwood RFC,9,Counties 3 Midlands West - North,Missing
+Cannock RFC,9,Counties 3 Midlands West - North,Missing
+Eccleshall RFC,9,Counties 3 Midlands West - North,Missing
+Essington RUFC,9,Counties 3 Midlands West - North,
+Rugeley RFC,9,Counties 3 Midlands West - North,Missing
+Stone RFC,9,Counties 3 Midlands West - North,Missing
+Yardley & District RFC,9,Counties 3 Midlands West - North,
+Cleobury Mortimer RFC,9,Counties 3 Midlands West - South,Missing
+Kings Norton RFC,9,Counties 3 Midlands West - South,
+Old Yardleians,9,Counties 3 Midlands West - South,Missing
+Pershore RFC,9,Counties 3 Midlands West - South,Missing
+Upton-upon-Severn RFC,9,Counties 3 Midlands West - South,Missing
+Woodrush RFC,9,Counties 3 Midlands West - South,Missing
+Bristol Barbarians,9,Counties 3 Somerset North,Missing
+Bristol Telephone Area RFC,9,Counties 3 Somerset North,Missing
+Castle Cary RFC,9,Counties 3 Somerset South,Missing
+Martock RFC,9,Counties 3 Somerset South,Missing
+Somerton RFC,9,Counties 3 Somerset South,Missing
+Wyvern RFC,9,Counties 3 Somerset South,Missing
+Economicals FRC,9,Counties 3 Surrey,Missing
+Effingham & Leatherhead FRC,9,Counties 3 Surrey,Missing
+Law Society FRC,9,Counties 3 Surrey,Missing
+London Exiles,9,Counties 3 Surrey,Missing
+London Media,9,Counties 3 Surrey,Missing
+Old Georgians,9,Counties 3 Surrey,Missing
+Old Hamptonians,9,Counties 3 Surrey,Missing
+Old Johnians,9,Counties 3 Surrey,Missing
+Warlingham FRC,9,Counties 3 Surrey,Missing
+Worth Old Boys,9,Counties 3 Surrey,Missing
+Barnsley RFC,9,Counties 3 Yorkshire,Missing
+Burley RFC,9,Counties 3 Yorkshire,Missing
+Castleford RFC,9,Counties 3 Yorkshire,Missing
+Halifax RUFC,9,Counties 3 Yorkshire,
+Leeds Corinthians,9,Counties 3 Yorkshire,Missing
+Old Otliensians,9,Counties 3 Yorkshire,Missing
+Rotherham Phoenix,9,Counties 3 Yorkshire,Missing
+Skipton RFC,9,Counties 3 Yorkshire,Missing
+Thirsk RFC,9,Counties 3 Yorkshire,Missing
+Thornensians,9,Counties 3 Yorkshire,Missing
+West Park Leeds RFC,9,Counties 3 Yorkshire,Missing
+Wheatley Hills RFC,9,Counties 3 Yorkshire,Missing
+Bristol Harlequins,10,Counties 4 Somerset North,Missing
+Old Culverhaysians,10,Counties 4 Somerset North,Missing
+Old Sulians,10,Counties 4 Somerset North,Missing
+Yatton RFC,10,Counties 4 Somerset North,Missing
+Cheddar Valley RFC,10,Counties 4 Somerset South,Missing
+Crewkerne RFC,10,Counties 4 Somerset South,Missing
+Huish Tigers,10,Counties 4 Somerset South,Missing
+Tor RFC,10,Counties 4 Somerset South,Missing
+Wincanton RFC,10,Counties 4 Somerset South,Missing
+Harlequin Amateurs,10,Counties 4 Surrey,
+Staines RFC,10,Counties 4 Surrey,
+Hessle RUFC,10,Counties 4 Yorkshire,
+Askeans RFC,11,Counties 5 Kent,Missing
+East Peckham & Paddock Wood RFC,11,Counties 5 Kent,Missing
+Greenwich RFC,11,Counties 5 Kent,Missing
+Lordswood RFC,11,Counties 5 Kent,Missing
+Egham Hollowegians,11,Counties 5 Surrey,Missing
+Feltham RFC,11,Counties 5 Surrey,Missing
+Guildfordians,11,Counties 5 Surrey,Missing
+Merton RFC,11,Counties 5 Surrey,Missing
+Mitcham & Carshalton RFC,11,Counties 5 Surrey,Missing
+Raynes Park RFC,11,Counties 5 Surrey,Missing
+Wandsworthians,11,Counties 5 Surrey,Missing
+Woking RFC,11,Counties 5 Surrey,Missing
+Army Rugby Union,NA,NA,
+BAE Warton Rugby,NA,NA,
+Barts and The London RFC,NA,NA,
+Berry Hill RFC,NA,NA,
+Brighton & Hove Sea Serpents RFC,NA,NA,
+Bristol Bisons RFC,NA,NA,
+Broughton RUFC,NA,NA,
+Cambridge University RUFC,NA,NA,
+Chorley RUFC,NA,NA,
+Guy's Kings and St Thomas' RFC,NA,NA,
+Haringey Rhinos RFC,NA,NA,
+Huddersfield YMCA RUFC,NA,NA,
+Leesbrook RUFC,NA,NA,
+Lincoln Lions,NA,NA,
+London New Zealand RFC,NA,NA,
+Manchester Medics RUFC,NA,NA,
+Manchester Village Spartans RUFC,NA,NA,
+Moseley Wanderers,NA,NA,
+Newcastle Ravens,NA,NA,
+Nomads RFC,NA,NA,
+North Manchester RUFC,NA,NA,
+Northolt RFC,NA,NA,
+Oxford Brookes University RFC,NA,NA,
+Oxford University RFC,NA,NA,
+Royal Free University College and Middlesex Medical Students RFC,NA,NA,
+St. George's Hospital Medical School RFC,NA,NA,
+Thomas Cook's Rugby Club,NA,NA,
+University of Birmingham Medical School RFC,NA,NA,
+Verwood RUFC,NA,NA,
+Warwickian RUFC,NA,NA,

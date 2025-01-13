@@ -95,6 +95,7 @@ for (p in 1:length(player_ids)) {
     idx <- p
   cols <- setdiff(intersect(colnames(row), col_names), "playerId")
   players[idx, cols] <- row[1, cols]
+  players[idx, "playerId"] <- player_id
 }
 tlog.end.loop(0, "Player loop completed")
 
@@ -102,7 +103,7 @@ tlog.end.loop(0, "Player loop completed")
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # display a few details for verification
-tlog("Dimension of the players table:", paste(dim(players), collapse = ", "))
+tlog("Dimension of the players table: ", paste(dim(players), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "))
 tlog("Top of the table:")
 print.data.frame(players[1:10, ])
@@ -154,7 +155,7 @@ query <- gsub(" *[\r\n] *", "\n", query)
 
 # run query for each team
 tlog.start.loop(0, length(team_ids), "Looping over teams")
-for (t in which(is.na(teams[,"clubLabel"]))) {
+for (t in which(is.na(teams[, "clubLabel"]))) {
   # get team ID
   team_id <- team_ids[t]
   tlog.loop(2, t, "++++++++++++ Processing team ", team_id, " (", t, "/", length(team_ids), ")")
@@ -180,7 +181,7 @@ tlog.end.loop(0, "Team loop completed")
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # display a few details for verification
-tlog("Dimension of the teams table:", paste(dim(teams), collapse = ", "))
+tlog("Dimension of the teams table: ", paste(dim(teams), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(teams, 2, class), collapse = ", "))
 tlog("Top of the table:\n")
 print.data.frame(teams[1:10, ])
@@ -223,11 +224,17 @@ for (p in 1:length(player_ids)) {
 
   # run query
   cr_query <- gsub("QQQQQQ", player_id, query, fixed = TRUE)
-  row <- query_wikidata(cr_query)
-  print.data.frame(row)
+  rows <- query_wikidata(cr_query)
+  print.data.frame(rows)
 
   # add to table
-  careers <- rbind(careers, row[, col_names])
+  comp_rows <- matrix(NA, nrow = nrow(rows), ncol = ncol(careers))
+  colnames(comp_rows) <- col_names
+  comp_rows <- as.data.frame(comp_rows)
+  cols <- intersect(colnames(rows), col_names)
+  comp_rows[, cols] <- rows[, cols]
+  comp_rows[, "playerId"] <- rep(player_id, nrow(comp_rows))
+  careers <- rbind(careers, comp_rows)
 }
 tlog.end.loop(0, "Career loop completed")
 
@@ -235,13 +242,13 @@ tlog.end.loop(0, "Career loop completed")
 careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # display a few details for verification
-tlog("Dimension of the careers table:", paste(dim(careers), collapse = ", "))
+tlog("Dimension of the careers table: ", paste(dim(careers), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(careers, 2, class), collapse = ", "))
 tlog("Top of the table:\n")
 print.data.frame(careers[1:10, ])
 
 # add player and team names
-idx <- match(unlist(careers[, "playerId"]), players[, "playerId"])
+idx <- match(careers[, "playerId"], players[, "playerId"])
 plyr_names <- players[idx, "playerLabel"]
 idx <- match(unlist(careers[, "clubId"]), teams[, "clubId"])
 club_names <- teams[idx, "clubLabel"]

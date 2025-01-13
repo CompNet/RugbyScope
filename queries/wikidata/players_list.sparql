@@ -9,31 +9,31 @@ SELECT DISTINCT ?player ?playerId
 
 WHERE
 { 
-  ############# constraints on the players
-  # get the rugby teams (more general category)
-  {    
-    ?club wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
-  }
-  UNION
-  # add the clubs and franchises (more specific categories)
-  {
-    ?club wdt:P31/wdt:P279* wd:Q14645593.                           # P31=instance of, P279=subclass of, Q14645593=Rugby union team
-  }
-  # filter depending on team type
-  ?club wdt:P31 ?clubType.                                          # P31=instance of
-  FILTER(?clubType IN(
-                      wd:Q14645593,                                 # Q14645593=rugby union team
-                      wd:Q43009164,                                 # Q43009164=rugby union club
-                      wd:Q63171169,                                 # Q63171169=rugby union franchise
-                      wd:Q63171186,                                 # Q63171186=defunct rugby union club
-#                     wd:Q113144812,                                # Q113144812=women's rugby union club
-                      wd:Q58840819,                                 # Q58840819=national rugby union team
-                      wd:Q104630756                                 # Q104630756=second rugby union team
-                    ))
+#  ############# constraints on the players
+#  # get the rugby teams (more general category)
+#  {    
+#    ?club wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
+#  }
+#  UNION
+#  # add the clubs and franchises (more specific categories)
+#  {
+#    ?club wdt:P31/wdt:P279* wd:Q14645593.                           # P31=instance of, P279=subclass of, Q14645593=Rugby union team
+#  }
+#  # filter depending on team type
+#  ?club wdt:P31 ?clubType.                                          # P31=instance of
+#  FILTER(?clubType IN(
+#                      wd:Q14645593,                                 # Q14645593=rugby union team
+#                      wd:Q43009164,                                 # Q43009164=rugby union club
+#                      wd:Q63171169,                                 # Q63171169=rugby union franchise
+#                      wd:Q63171186,                                 # Q63171186=defunct rugby union club
+##                     wd:Q113144812,                                # Q113144812=women's rugby union club
+#                      wd:Q58840819,                                 # Q58840819=national rugby union team
+#                      wd:Q104630756                                 # Q104630756=second rugby union team
+#                    ))
 
   # get the players
-  ?player wdt:P106 wd:Q14089670;                                    # P106=occupation, Q14089670=Rugby Union player
-          wdt:P54 ?club.                                            # P54=member of sport team
+  ?player wdt:P106 wd:Q14089670.                                    # P106=occupation, Q14089670=Rugby Union player
+#  ?player wdt:P54 ?club.                                            # P54=member of sport team
   # filter by sex only if indicated
   OPTIONAL{?player wdt:P21 ?sex.}                                   # P21=sex or gender
   FILTER(!BOUND(?sex) || ?sex = wd:Q6581097)                        # Q6581097=male

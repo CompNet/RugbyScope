@@ -1,85 +1,196 @@
 "Name","Tier","Division","WD"
-"Connacht Rugby",1,"United Rugby Championship",""
-"Leinster Rugby",1,"United Rugby Championship",""
-"Munster Rugby",1,"United Rugby Championship",""
-"Ulster Rugby",1,"United Rugby Championship",""
-"Ballynahinch RFC",2,"Division 1A",""
-"City of Armagh RFC",2,"Division 1A",""
-"Clontarf FC",2,"Division 1A",""
-"Cork Constitution",2,"Division 1A",""
-"Garryowen Football Club",2,"Division 1A",""
-"Lansdowne Football Club",2,"Division 1A",""
-"St Mary's College RFC",2,"Division 1A",""
-"Terenure College RFC",2,"Division 1A",""
-"University College Dublin RFC",2,"Division 1A",""
-"Young Munster",2,"Division 1A",""
-"Blackrock College RFC",3,"Division 1B",""
-"Dublin University Football Club",3,"Division 1B",""
-"Highfield RFC",3,"Division 1B",""
-"Naas RFC",3,"Division 1B",""
-"Nenagh Ormond",3,"Division 1B",""
-"Old Belvedere RFC",3,"Division 1B",""
-"Old Wesley RFC",3,"Division 1B",""
-"Queen's University RFC",3,"Division 1B",""
-"Shannon RFC",3,"Division 1B",""
-"University College Cork RFC",3,"Division 1B",""
-"Ballymena RFC",4,"Division 2A",""
-"Banbridge RFC",4,"Division 2A",""
-"Buccaneers RFC",4,"Division 2A",""
-"Cashel RFC",4,"Division 2A",""
-"Galway Corinthians RFC",4,"Division 2A",""
-"Greystones RFC",4,"Division 2A",""
-"Instonians",4,"Division 2A",""
-"MU Barnhall RFC",4,"Division 2A",""
-"Navan RFC",4,"Division 2A",""
-"Old Crescent RFC",4,"Division 2A",""
-"Clogher Valley RFC",5,"Division 2B",""
-"Dungannon RFC",5,"Division 2B",""
-"Galwegians RFC",5,"Division 2B",""
-"Malahide RFC",5,"Division 2B",""
-"Malone RFC",5,"Division 2B",""
-"Rainey Old Boys RFC ",5,"Division 2B",""
-"Skerries RFC",5,"Division 2B",""
-"Sligo RFC",5,"Division 2B",""
-"UL Bohemians RFC",5,"Division 2B",""
-"Wanderers FC",5,"Division 2B",""
-"Ballyclare",6,"Division 2C",""
-"Belfast Harlequins",6,"Division 2C",""
-"Bruff RFC",6,"Division 2C",""
-"Clonmel RFC",6,"Division 2C",""
-"Dolphin RFC",6,"Division 2C",""
-"Enniscorthy RFC",6,"Division 2C",""
-"Midleton RFC",6,"Division 2C",""
-"Monkstown Football Club",6,"Division 2C",""
-"Omagh Academicals RFC",6,"Division 2C",""
-"Tullamore RFC",6,"Division 2C",""
-"Connemara RFC",7,"Connacht Senior Cup",""
-"Galway Grammar School RFC",7,"Connacht Senior Cup","Missing"
-"Galway Town RFC",7,"Connacht Senior Cup","Missing"
-"County Carlow Football Club",7,"Leinster Senior Cup",""
-"De La Salle Palmerston",7,"Leinster Senior Cup",""
-"Kingstown FC",7,"Leinster Senior Cup","Missing"
-"Bandon RFC",7,"Munster Senior Cup",""
-"Rockwell College RFC",7,"Munster Senior Cup","Missing"
-"Water Park RFC",7,"Munster Senior Cup","Missing"
-"Albion RFC",7,"Ulster Senior Cup","Missing"
-"Ards RFC",7,"Ulster Senior Cup",""
-"Carrickfergus RFC",7,"Ulster Senior Cup","Missing"
-"Civil Service Rugby Club",7,"Ulster Senior Cup",""
-"Fortwilliam RFC",7,"Ulster Senior Cup","Missing"
-"Holywood RFC",7,"Ulster Senior Cup","Missing"
-"Knock RFC",7,"Ulster Senior Cup","Missing"
-"Lisburn RFC",7,"Ulster Senior Cup","Missing"
-"Rainey RFC",7,"Ulster Senior Cup",""
-"Athlone RFC",8,"Connacht Senior League","Missing"
-"Ballina RFC",8,"Connacht Senior League",""
-"Ballinasloe RFC",8,"Connacht Senior League","Missing"
-"Loughrea RFC",8,"Connacht Senior League","Missing"
-"University of Galway RFC",8,"Connacht Senior League",""
-"Bective Rangers",8,"Leinster Senior League",""
-"Sundays Well RFC",8,"Munster Senior League",""
-"Thomond RFC",8,"Munster Senior League",""
-"Bangor RFC",8,"Ulster Senior League",""
-"City of Derry RFC",8,"Ulster Senior League",""
-"Collegians",8,"Ulster Senior League",""
-"North of Ireland FC",8,"Ulster Senior League",""
+Irish Exiles,1,IRFU Interprovincial Championship,
+Connacht Rugby,1,United Rugby Championship,
+Leinster Rugby,1,United Rugby Championship,
+Munster Rugby,1,United Rugby Championship,
+Ulster Rugby,1,United Rugby Championship,
+Ballynahinch RFC,2,Division 1A,
+City of Armagh RFC,2,Division 1A,
+Clontarf FC,2,Division 1A,
+Cork Constitution,2,Division 1A,
+Garryowen Football Club,2,Division 1A,
+Lansdowne FC,2,Division 1A,
+St Mary's College RFC,2,Division 1A,
+Terenure College RFC,2,Division 1A,
+University College Dublin RFC,2,Division 1A,
+Young Munster,2,Division 1A,
+Blackrock College RFC,3,Division 1B,
+Dublin University FC,3,Division 1B,
+Highfield RFC,3,Division 1B,
+Naas RFC,3,Division 1B,
+Nenagh Ormond RFC,3,Division 1B,
+Old Belvedere RFC,3,Division 1B,
+Old Wesley RFC,3,Division 1B,
+Queen's University RFC,3,Division 1B,
+Shannon RFC,3,Division 1B,
+University College Cork RFC,3,Division 1B,
+Ballymena RFC,4,Division 2A,
+Banbridge RFC,4,Division 2A,
+Buccaneers RFC,4,Division 2A,
+Cashel RFC,4,Division 2A,
+Galway Corinthians RFC,4,Division 2A,
+Greystones RFC,4,Division 2A,
+Instonians,4,Division 2A,
+MU Barnhall RFC,4,Division 2A,
+Navan RFC,4,Division 2A,
+Old Crescent RFC,4,Division 2A,
+Clogher Valley RFC,5,Division 2B,
+Dungannon RFC,5,Division 2B,
+Galwegians RFC,5,Division 2B,
+Malahide RFC,5,Division 2B,
+Malone RFC,5,Division 2B,
+Rainey Old Boys RFC ,5,Division 2B,
+Skerries RFC,5,Division 2B,
+Sligo RFC,5,Division 2B,
+UL Bohemians RFC,5,Division 2B,
+Wanderers FC,5,Division 2B,
+Ballyclare RFC,6,Division 2C,
+Belfast Harlequins,6,Division 2C,
+Bruff RFC,6,Division 2C,
+Clonmel RFC,6,Division 2C,
+Dolphin RFC,6,Division 2C,
+Enniscorthy RFC,6,Division 2C,
+Midleton RFC,6,Division 2C,
+Monkstown FC,6,Division 2C,
+Omagh Academicals RFC,6,Division 2C,
+Tullamore RFC,6,Division 2C,
+Connemara RFC,7,Connacht Senior Cup,
+Galway Grammar School RFC,7,Connacht Senior Cup,Missing
+Galway Town RFC,7,Connacht Senior Cup,Missing
+County Carlow Football Club,7,Leinster Senior Cup,
+De La Salle Palmerston FC,7,Leinster Senior Cup,
+Kingstown FC,7,Leinster Senior Cup,Missing
+Bandon RFC,7,Munster Senior Cup,
+Rockwell College RFC,7,Munster Senior Cup,Missing
+Water Park RFC,7,Munster Senior Cup,Missing
+Albion RFC,7,Ulster Senior Cup,Missing
+Ards RFC,7,Ulster Senior Cup,
+Carrickfergus RFC,7,Ulster Senior Cup,Missing
+Civil Service Rugby Club,7,Ulster Senior Cup,
+Fortwilliam RFC,7,Ulster Senior Cup,Missing
+Holywood RFC,7,Ulster Senior Cup,Missing
+Knock RFC,7,Ulster Senior Cup,Missing
+Lisburn RFC,7,Ulster Senior Cup,Missing
+Rainey RFC,7,Ulster Senior Cup,
+Athlone RFC,8,Connacht Senior League,Missing
+Ballina RFC,8,Connacht Senior League,
+Ballinasloe RFC,8,Connacht Senior League,Missing
+Loughrea RFC,8,Connacht Senior League,Missing
+University of Galway RFC,8,Connacht Senior League,
+Bective Rangers,8,Leinster Senior League,
+Sundays Well RFC,8,Munster Senior League,
+Thomond RFC,8,Munster Senior League,
+Bangor RFC,8,Ulster Senior League,
+City of Derry RFC,8,Ulster Senior League,
+Collegians,8,Ulster Senior League,
+North of Ireland FC,8,Ulster Senior League,
+Ardee RFC,NA,Leinster League Division 3,
+Antrim RFC,NA,Ulster Minor League East 1,Missing
+An Ghaeltacht RFC,NA,Unknown Connacht Competition,Missing
+Ballinrobe RFC,NA,Unknown Connacht Competition,Missing
+Ballyhaunis RFC,NA,Unknown Connacht Competition,Missing
+Carrick-on-Shannon RFC,NA,Unknown Connacht Competition,Missing
+Castlebar RFC,NA,Unknown Connacht Competition,Missing
+Claremorris Colts Rugby Club,NA,Unknown Connacht Competition,Missing
+Corrib RFC,NA,Unknown Connacht Competition,Missing
+Creggs RFC,NA,Unknown Connacht Competition,Missing
+Dunmore RFC,NA,Unknown Connacht Competition,Missing
+Galway Bay Rugby Club,NA,Unknown Connacht Competition,Missing
+Gort RFC,NA,Unknown Connacht Competition,Missing
+Monivea RFC,NA,Unknown Connacht Competition,Missing
+OLBC RFC,NA,Unknown Connacht Competition,Missing
+Oughterard RFC,NA,Unknown Connacht Competition,Missing
+Portumna RFC,NA,Unknown Connacht Competition,Missing
+Tuam RFC,NA,Unknown Connacht Competition,Missing
+Westport RFC,NA,Unknown Connacht Competition,Missing
+Arklow RFC,NA,Unknown Leinster Competition,
+Ashbourne RFC,NA,Unknown Leinster Competition,
+Athboy RFC,NA,Unknown Leinster Competition,
+Athy RFC,NA,Unknown Leinster Competition,
+Balbriggan RFC,NA,Unknown Leinster Competition,
+BGF Ravens RFC,NA,Unknown Leinster Competition,Missing
+Birr RFC,NA,Unknown Leinster Competition,
+Blessington RFC,NA,Unknown Leinster Competition,Missing
+Boyne RFC,NA,Unknown Leinster Competition,
+Carlingford Knights RFC,NA,Unknown Leinster Competition,Missing
+Cill Dara RFC,NA,Unknown Leinster Competition,
+Clane RFC,NA,Unknown Leinster Competition,
+Clondalkin RFC,NA,Unknown Leinster Competition,
+Coolmine RFC,NA,Unknown Leinster Competition,
+CYM RFC,NA,Unknown Leinster Competition,
+Dublin City University RFC,NA,Unknown Leinster Competition,
+Dublin Dogos RFC,NA,Unknown Leinster Competition,Missing
+Dundalk RFC,NA,Unknown Leinster Competition,
+Edenderry RFC,NA,Unknown Leinster Competition,
+Emerald Warriors RFC,NA,Unknown Leinster Competition,
+Garda RFC,NA,Unknown Leinster Competition,
+Gorey RFC,NA,Unknown Leinster Competition,
+Guinness RFC,NA,Unknown Leinster Competition,Missing
+Kilkenny RFC,NA,Unknown Leinster Competition,
+Longford RFC,NA,Unknown Leinster Competition,
+Midland Warriors RFC,NA,Unknown Leinster Competition,Missing
+Mullingar RFC,NA,Unknown Leinster Competition,
+New Ross RFC,NA,Unknown Leinster Competition,
+Newbridge RFC,NA,Unknown Leinster Competition,
+North Kildare RFC,NA,Unknown Leinster Competition,
+North Meath RFC,NA,Unknown Leinster Competition,
+Parkmore RFC,NA,Unknown Leinster Competition,Missing
+Portarlington RFC,NA,Unknown Leinster Competition,
+Portlaoise RFC,NA,Unknown Leinster Competition,
+Railway Union RFC,NA,Unknown Leinster Competition,
+Rathdrum RFC,NA,Unknown Leinster Competition,
+Ratoath RFC,NA,Unknown Leinster Competition,Missing
+RCSI RFC,NA,Unknown Leinster Competition,Missing
+Roscrea RFC,NA,Unknown Leinster Competition,
+Seapoint RC,NA,Unknown Leinster Competition,
+SETU Carlow,NA,Unknown Leinster Competition,Missing
+St. Brigid's RFC,NA,Unknown Leinster Competition,Missing
+Stillorgan-Rathfarnham RFC,NA,Unknown Leinster Competition,Missing
+Suttonians RFC,NA,Unknown Leinster Competition,
+Swords RFC,NA,Unknown Leinster Competition,
+Tallaght RFC,NA,Unknown Leinster Competition,Missing
+Tullow RFC,NA,Unknown Leinster Competition,
+West Offaly Lions RFC,NA,Unknown Leinster Competition,Missing
+Wexford Wanderers RFC,NA,Unknown Leinster Competition,
+Wicklow RFC,NA,Unknown Leinster Competition,
+Ballincollig RFC,NA,Unknown Munster Competition,
+Clanwilliam FC,NA,Unknown Munster Competition,
+Clonakilty RFC,NA,Unknown Munster Competition,
+Crosshaven RFC,NA,Unknown Munster Competition,
+Ennis RFC,NA,Unknown Munster Competition,
+Kilfeacle and District RFC,NA,Unknown Munster Competition,
+Kinsale RFC,NA,Unknown Munster Competition,
+Waterpark RFC,NA,Unknown Munster Competition,
+Academy RFC,NA,Unknown Ulster Competition,Missing
+Armoy RFC,NA,Unknown Ulster Competition,Missing
+Ballymoney RFC,NA,Unknown Ulster Competition,Missing
+Ballyshannon RC,NA,Unknown Ulster Competition,Missing
+Belfast HS FP RFC,NA,Unknown Ulster Competition,Missing
+Cavan RFC,NA,Unknown Ulster Competition,Missing
+Civil Service NIR RFC,NA,Unknown Ulster Competition,Missing
+CIYMS RFC,NA,Unknown Ulster Competition,Missing
+Coleraine RC,NA,Unknown Ulster Competition,Missing
+Cooke RFC,NA,Unknown Ulster Competition,
+Cookstown RC,NA,Unknown Ulster Competition,Missing
+Donaghadee RFC,NA,Unknown Ulster Competition,Missing
+Donegal RFC,NA,Unknown Ulster Competition,Missing
+Dromore RFC,NA,Unknown Ulster Competition,Missing
+Enniskillen RFC,NA,Unknown Ulster Competition,Missing
+Finn Valley RFC,NA,Unknown Ulster Competition,Missing
+Inishowen RFC,NA,Unknown Ulster Competition,Missing
+Letterkenny RC,NA,Unknown Ulster Competition,
+Limavady RFC,NA,Unknown Ulster Competition,Missing
+Lurgan RFC,NA,Unknown Ulster Competition,Missing
+Monaghan RFC,NA,Unknown Ulster Competition,Missing
+Newry Rugby,NA,Unknown Ulster Competition,
+Ophir RFC,NA,Unknown Ulster Competition,Missing
+Perennials Rugby,NA,Unknown Ulster Competition,Missing
+Police Service of Northern Ireland RFC,NA,Unknown Ulster Competition,Missing
+Portadown RFC,NA,Unknown Ulster Competition,
+Randalstown RC,NA,Unknown Ulster Competition,Missing
+Strabane RFC,NA,Unknown Ulster Competition,Missing
+Tir Chonaill RFC,NA,Unknown Ulster Competition,Missing
+Ulster Titans,NA,Unknown Ulster Competition,
+Ulster University Coleraine Rugby,NA,Unknown Ulster Competition,Missing
+Ulster University Jordanstown RFC,NA,Unknown Ulster Competition,Missing
+Virginia RFC,NA,Unknown Ulster Competition,Missing

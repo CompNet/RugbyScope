@@ -47,7 +47,7 @@ cat("Raw number of teams:", nrow(teams), "\n")
 
 ########################################################################
 # load reference tables
-countries <- c("AR", "AU", "EN", "FJ", "FR", "IE", "IT", "JP", "SC", "WA", "ZA")
+countries <- c("AR", "AU", "EN", "FJ", "FR", "IE", "IT", "JP", "NZ", "SC", "WA", "ZA")
 country_refs <- list()
 for (country in countries) {
   file <- file.path(ref_folder, paste0(country, "_teams.csv"))
@@ -80,3 +80,26 @@ for (country in countries) {
   print(table(tiers, identified))
   # print(ref_names[!identified])
 }
+
+
+
+
+#########################################################
+# Number of clubs by country according to WP
+# https://en.wikipedia.org/wiki/List_of_rugby_union_playing_countries
+#########################################################
+# Argentina:     420
+# Australia:     767
+# England:      1809
+# Fiji:          490
+# France:       1798
+# Ireland:       221
+# Italy:         784
+# Japan:        1522
+# New Zealand:   600
+# Scotland:      251
+# South Africa: 1526
+# Wales:         250
+# Note: this probably includes a bunch of clubs out of the standard pyramid (e.g. corporate clubs in France)
+#########################################################
+
