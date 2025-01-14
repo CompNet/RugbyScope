@@ -13,6 +13,8 @@
 #
 # Vincent Labatut
 # 12/2024
+#
+# setwd("C:/Users/Vincent/eclipse/workspaces/Test/RugbyScope/RugbyScope")
 ########################################################################
 library("readtext")
 library("WikidataR")
@@ -40,7 +42,7 @@ query <- readtext(file.path(query_folder, "players_list.sparql"))$text
 
 # run query and get list of ids
 player_ids <- query_wikidata(query)$playerId
-tlog("Number of player IDs retrieved:", length(player_ids))
+tlog("Number of player IDs retrieved: ", length(player_ids))
 
 
 
@@ -123,7 +125,7 @@ query <- readtext(file.path(query_folder, "teams_list.sparql"))$text
 
 # run query and get list of ids
 team_ids <- query_wikidata(query)$clubId
-tlog("Number of teams IDs retrieved:", length(team_ids))
+tlog("Number of teams IDs retrieved: ", length(team_ids))
 
 
 
@@ -138,7 +140,8 @@ col_names <- c(
   "nickmaneLabels", "affiliationLabels",
   "countryLabels", "competitionLabels",
   "homeVenueLabels", "homeVenueCapacities", "locationLabels",
-  "AllRugbyIDs", "GoogleKnowlIDs"
+  "AllRugbyIDs", "GoogleKnowlIDs",
+  "articleEn", "articleFr", "articleIt", "articleEs", "articleJa"
 )
 
 # init teams table
@@ -228,13 +231,15 @@ for (p in 1:length(player_ids)) {
   print.data.frame(rows)
 
   # add to table
-  comp_rows <- matrix(NA, nrow = nrow(rows), ncol = ncol(careers))
-  colnames(comp_rows) <- col_names
-  comp_rows <- as.data.frame(comp_rows)
-  cols <- intersect(colnames(rows), col_names)
-  comp_rows[, cols] <- rows[, cols]
-  comp_rows[, "playerId"] <- rep(player_id, nrow(comp_rows))
-  careers <- rbind(careers, comp_rows)
+  if (!all(is.na(rows))) {
+    comp_rows <- matrix(NA, nrow = nrow(rows), ncol = ncol(careers))
+    colnames(comp_rows) <- col_names
+    comp_rows <- as.data.frame(comp_rows)
+    cols <- intersect(colnames(rows), col_names)
+    comp_rows[, cols] <- rows[, cols]
+    comp_rows[, "playerId"] <- rep(player_id, nrow(comp_rows))
+    careers <- rbind(careers, comp_rows)
+  }
 }
 tlog.end.loop(0, "Career loop completed")
 
@@ -253,6 +258,8 @@ plyr_names <- players[idx, "playerLabel"]
 idx <- match(unlist(careers[, "clubId"]), teams[, "clubId"])
 club_names <- teams[idx, "clubLabel"]
 careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "clubId"], clubLabel = club_names, careers[,3:ncol(careers)])
+colnames(careers)[1] <- "playerId"
+colnames(careers)[3] <- "clubId"
 
 # export table as a CSV
 write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")

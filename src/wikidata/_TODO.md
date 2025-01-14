@@ -1,16 +1,9 @@
-* Data retrieval
-  * manually check that all teams from main pro leagues are present
-    maybe just plot the number of clubs from each country?
-
-* Network extraction
-  * improve removal of amateur clubs
-    currently removing clubs without an affiliation and a competition
-    but that is probably too strict (ex. it removes many English clubs)
-  * remove university clubs (cf Japan)
-    'university' could be used to select them, 
-    but some clubs use this word without being tied to a uni anymore (ex. Lyon)
-    Also, some country use university clubs as amateur clubs (JP, ZA)
-
+* Data retrieveal
+  1. Update WD tables with latest queries
+  2. Merge DBP in WD (when missing data)
+  3. Normalize all heterogeneous fields (position, country, etc.)
+  4. Club names should be normalized too? (or at least, normalizing function used ad hoc)
+  5. Query WP for each player in our table, trying to connect with WD entities using WP page URLs.
 * Stats
   * active players stats with *filtering* process
   * fix country colors (ireland=green, france=blue, etc.)
@@ -19,12 +12,12 @@
 
 
 * NOTES
-  - filtering players depending on whether they played for a club: 
-    many are missed
-    but if their club is not indicated... maybe they are not important enough?
-  - if we just focus on pro clubs, the careers will be very incomplete, the sequences very short (not useful)
-    > must try to include amateur/university clubs too
-  - must be able to assess the completeness of the data
+  - Filtering players depending on whether they played for a club: many are missed
+    But if their club is not indicated... maybe they are not important enough?
+    We should get them with WP, though. So better to keep them.
+  - If we just focus on pro clubs, the careers will be very incomplete, the sequences very short (not useful)
+    > include amateur/university clubs too
+  - Must be able to assess the completeness of the data, in order to get long enough sequences
     > list all clubs (at least in tier 1 countries)
   - Wikidata = manual vs. DBpedia = auto extraction of info box
     src: https://stackoverflow.com/questions/33862336/how-to-extract-information-from-a-wikipedia-infobox
