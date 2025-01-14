@@ -23,20 +23,8 @@
     src: https://stackoverflow.com/questions/33862336/how-to-extract-information-from-a-wikipedia-infobox
   - DBpedia data:
     - seems possible to get the players' career, but this requires "careerStation" to be filled on DBP
-      https://dbpedia.org/page/Alexandre_Lacazette
+      see for instance https://dbpedia.org/page/Alexandre_Lacazette
       it is the case for footballers, but apparently not for rugby players
-      see on https://dbpedia.org/sparql :
-PREFIX dbpedia: <http://dbpedia.org/resource/>
-SELECT 
-  ?playerName ?station
-WHERE
-{ ?player rdf:type dbo:RugbyPlayer.
-#{ BIND(dbpedia:Antoine_Dupont AS ?player).
-#{ BIND(dbpedia:Alexandre_Lacazette AS ?player).
-  ?player rdfs:label ?playerName;
-              dbo:careerStation ?station.
-}
-ORDER BY ?playerName
     - other DBpedia problem: the live version does not seem to work anymore
     > is the DB even updated nowadays?
   - retrieve infobox data  

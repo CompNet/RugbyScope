@@ -150,36 +150,9 @@ players[, "deathPlaces"] <- gsub("_", " ", players[, "deathPlaces"], fixed = TRU
 # remove Wikidata URL part from WD ids
 players[, "wikidataId"] <- gsub("http://www.wikidata.org/entity/", "", players[, "wikidataId"], fixed = TRUE)
 
-# normalize rugby positions
-players[, "positions"] <- gsub("http://dbpedia.org/resource/", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("_(rugby_union)", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("_(sports)", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("_", " ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("; Rugby union positions", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("Rugby union positions;", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("Rugby union/", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub(" .", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("  /  ", "; ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub(" / ", "; ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("/", "; ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub(" and ", "; ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub(" or ", "; ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub(", ", "; ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("[", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("]", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub(" -", "-", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("- ", "-", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("^-", "", players[, "positions"], fixed = FALSE)
-players[, "positions"] <- gsub("^:", "", players[, "positions"], fixed = FALSE)
-players[, "positions"] <- gsub("^;", "", players[, "positions"], fixed = FALSE)
-players[, "positions"] <- gsub("^2;", "", players[, "positions"], fixed = FALSE)
-players[, "positions"] <- gsub(";+", ";", players[, "positions"], fixed = FALSE)
-players[, "positions"] <- gsub(" ; ", "; ", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- gsub("(rugby union)", "", players[, "positions"], fixed = TRUE)
-players[, "positions"] <- trimws(players[, "positions"])
-players[which(players[, "positions"] %in% c("unknown", "tbc", "m", "-", "--", "?", "1")), "positions"] <- NA
-# debug
-# sort(unique(players[, "positions"]))
+# clean rugby positions
+all_positions <- get_clean_positions(players)
+players[, "positions"] <- all_positions
 
 # clean birth dates
 for (colname in c("birthDates", "deathDates")) {
@@ -425,6 +398,21 @@ write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.
 
 ########################################################################
 # extraction of player careers
-
-# this requires field "careerStation", but apparentiyl it is not filled for rugby players
-# (I've seen it filled for football players, though)
+########################################################################
+# this requires field "careerStation", but apparentiyl it is not filled for 
+# most rugby players (only a handful of exceptions), whereas I've seen it
+# filled for football players. Here is an example of query to run on
+# https://dbpedia.org/sparql
+########################################################################
+# PREFIX dbpedia: <http://dbpedia.org/resource/>
+# SELECT 
+#   ?playerName ?station
+# WHERE
+# { ?player rdf:type dbo:RugbyPlayer.
+# #{ BIND(dbpedia:Antoine_Dupont AS ?player).
+# #{ BIND(dbpedia:Alexandre_Lacazette AS ?player).
+#   ?player rdfs:label ?playerName;
+#               dbo:careerStation ?station.
+# }
+# ORDER BY ?playerName
+########################################################################

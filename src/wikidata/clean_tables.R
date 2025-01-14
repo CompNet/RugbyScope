@@ -59,32 +59,61 @@ get_clean_countries <- function(players) {
 ########################################################################
 get_clean_positions <- function(players) {
   all_positions <- players[, "positionLabels"]
-  # possibly split multiple values (arbitrarily keep the first one)
-  # all_positions <- sapply(all_positions, function(position) strsplit(position, "; ")[[1]])
+  # possibly split multiple values
+  # all_positions <- sapply(all_positions, function(position) strsplit(position, "; ")[[1]])    #  arbitrarily keep the first one
   all_positions <- strsplit(all_positions, "; ")
 
   # see all existing values
   # table(unlist(all_positions))
 
+  # RUGBY POSITIONS
+  #####
+  # Forward
+  # ├─ 1st Row = Front Row
+  # │  ├─ Prop
+  # │  │  ├─ Loosehead Prop
+  # │  │  └─ Tighthead Prop
+  # │  └─ Hooker
+  # ├─ 2nd Row = Lock
+  # │  ├─ Loosehead Lock
+  # │  └─ Tighthead lock
+  # └─ 3rd Row = Back Row = Loose Forward
+  #    ├─ Flanker = Wing Forward
+  #    │  ├─ Openside Flanker
+  #    │  └─ Blindside Flanker
+  #    └─ Number 8 = Eightman
+  # Back
+  # ├─ Half-Back
+  # │  ├─ Scrum-Half
+  # │  └─ Fly-Half = First Five-Eighth = Out-Half = Stand-Off"
+  # ├─ Three-Quarter
+  # │  ├─ Center
+  # │  │  ├─ Inside Centre = Inside Back = Second Five-Eighth
+  # │  │  └─ Outside Centre = Outside Back = Centre Three-Quarter = Outside Half
+  # │  └─ Winger = Wing Three Quarter
+  # │     ├─ Left Winger
+  # │     └─ Right Winger
+  # └─ Fullback
+  
   # normalize positions
   map <- c()
   map["centre"] <- "Centre"
-  # map["center"] <- "Centre"                   # not a WD rugby union position, generally a WD error
-  # map["five-eighth"] <- "Scrum-half"          # not a WD rugby union position, generally a WD error
+  map["center"] <- "Centre"                   # not a WD rugby union position, generally a WD error
+  map["five-eighth"] <- "Scrum-Half"          # not a WD rugby union position, generally a WD error
   map["flanker"] <- "Flanker"
-  map["fly-half"] <- "Fly-half"
-  # map["forward"] <- "Forward"                 # not a WD rugby union position, generally a WD error
+  map["fly-half"] <- "Fly-Half"
+  map["forward"] <- "Forward"                 # not a WD rugby union position, generally a WD error
   map["fullback"] <- "Fullback"
   map["hooker"] <- "Hooker"
   map["lock"] <- "Lock"
-  map["Loosehead prop"] <- "Prop"             # not a WD rugby union position, generally a WD error
+  map["Loosehead prop"] <- "Loosehead Prop"   # not a WD rugby union position, generally a WD error
   map["number 8"] <- "Number 8"
   map["prop"] <- "Prop"
-  map["scrum-half"] <- "Scrum-half"
-  # map["second row"] <- "Second row"           # not a WD rugby union position, generally a WD error
-  # map["Standoff"] <- "Fly-half"               # not a WD rugby union position, generally a WD error
-  map["third line"] <- "Third row"
-  map["utility back"] <- "Utility back"
+  map["scrum-half"] <- "Scrum-Half"
+  map["second row"] <- "Lock"                 # not a WD rugby union position, generally a WD error
+  map["Standoff"] <- "Fly-Half"               # not a WD rugby union position, generally a WD error
+  map["third line"] <- "3rd row"
+  map["utility back"] <- "Utility Back"
   map["winger"] <- "Winger"
   for (p in 1:length(all_positions)) {
     positions <- all_positions[[p]]
