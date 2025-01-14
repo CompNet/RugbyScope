@@ -151,10 +151,35 @@ players[, "deathPlaces"] <- gsub("_", " ", players[, "deathPlaces"], fixed = TRU
 players[, "wikidataId"] <- gsub("http://www.wikidata.org/entity/", "", players[, "wikidataId"], fixed = TRUE)
 
 # clean rugby positions
-all_positions <- get_clean_positions(players)
-players[, "positions"] <- all_positions
+players[, "positions"] <- gsub("http://dbpedia.org/resource/", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("_(rugby_union)", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("_(sports)", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("_", " ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("; Rugby union positions", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("Rugby union positions;", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("Rugby union/", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" .", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("  /  ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" / ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("/", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" and ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" or ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(", ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("[", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("]", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub(" -", "-", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("- ", "-", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("^-", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub("^:", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub("^;", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub("^2;", "", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub(";+", ";", players[, "positions"], fixed = FALSE)
+players[, "positions"] <- gsub(" ; ", "; ", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- gsub("(rugby union)", "", players[, "positions"], fixed = TRUE)
+players[, "positions"] <- trimws(players[, "positions"])
+players[, "positions"][which(players[, "positions"] %in% c("unknown", "tbc", "m", "-", "--", "?", "1"))] <- NA
 
-# clean birth dates
+# clean birth/death dates
 for (colname in c("birthDates", "deathDates")) {
   cat(">>>> Processing field ", colname, "\n", sep = "")
   players[, colname] <- gsub("^;", "", players[, colname], fixed = FALSE)
@@ -162,21 +187,29 @@ for (colname in c("birthDates", "deathDates")) {
 
   # replace certain problematic strings (identical patterns)
   patterns <- c()
+  patterns["after-1983"] <- "01/01/1983"
+  patterns["April"] <- ""
   patterns["August"] <- ""
   patterns["Feb 1880"] <- "01/02/1880"
+  patterns["February"] <- ""
   patterns["http://dbpedia.org/resource/Argentina; http://dbpedia.org/resource/Buenos_Aires"] <- ""
-  patterns["p"] <- ""
+  patterns["January"] <- ""
   patterns["January→March 1950"] <- "01/01/1950"
+  patterns["July"] <- ""
   patterns["July→September 1860"] <- "01/07/1860"
   patterns["July→September 1862"] <- "01/07/1862"
   patterns["July→September 1960"] <- "01/07/1960"
   patterns["June"] <- ""
   patterns["June→September 1858"] <- "01/06/1858"
+  patterns["March"] <- ""
   patterns["May"] <- ""
+  patterns["Never"] <- ""
   patterns["November"] <- ""
-  patterns["September"] <- ""
+  patterns["p"] <- ""
+  patterns["October"] <- ""
   patterns["October→December 1861"] <- "01/10/1861"
   patterns["October→December 1893"] <- "01/10/1893"
+  patterns["September"] <- ""
   for (p in 1:length(patterns)) {
     idx <- which(players[, colname] == names(patterns)[p])
     if (length(idx) > 0) {
@@ -206,8 +239,8 @@ for (colname in c("birthDates", "deathDates")) {
     }
   }
   #
-  # replace string months by int
-  patterns <- c("January ", "February ", "March ", "April ", "May ", "June ", "July ", "August ", "September ", "October ", "Novembre ", "December ")
+  # replace character months by ints
+  patterns <- c("January ", "February ", "March ", "April ", "May ", "June ", "July ", "August ", "September ", "October ", "November ", "December ")
   for (pattern in patterns) {
     idx <- which(startsWith(players[, colname], pattern))
     if (length(idx) > 0) {
@@ -243,6 +276,11 @@ for (colname in c("birthDates", "deathDates")) {
   if (length(idx) > 0)
     players <- players[-idx, ]
   cat("Removed ", length(idx), " dates without a year\n", sep = "")
+  # remove incorrect dates
+  idx <- which(players[, colname] == "-")
+  if (length(idx) > 0)
+    players <- players[-idx, ]
+  cat("Removed ", length(idx), " incorrect dates\n", sep = "")
 }
 # debug
 # idx <- which(nchar(sort(unique(players[, "deathDates"])))!=10)
@@ -362,17 +400,26 @@ if (length(idx) > 0)
   teams <- teams[, -idx]
 cat("Removed ", length(idx), " empty columns\n", sep = "")
 
-# merge name-related columns
+# clean team names
+idx <- which(startsWith(teams[, "teamNames"], "; "))
+teams[idx, "teamNames"] <- substr(teams[idx, "teamNames"], start = nchar("; ") + 1, stop = nchar(teams[idx, "teamNames"]))
+
+# merge name-related columns (teamNAmes & fullNames)
 for (t in 1:nrow(teams)) {
   if (is.na(teams[t, "teamNames"])) {
     teams[t, "teamNames"] <- teams[t, "fullNames"]
   } else {
+    names0 <- teams[t, "teamLabel"]
+    names1 <- strsplit(teams[t, "teamNames"], "; ")[[1]]
+    names2 <- c()
     if (!is.na(teams[t, "fullNames"])) {
-      names1 <- strsplit(teams[p, "teamNames"], "; ")[[1]]
-      names2 <- strsplit(teams[p, "fullNames"], "; ")[[1]]
-      names <- union(names1, names2)
-      teams[p, "teamNames"] <- paste(names, collapse = "; ")
+      names2 <- strsplit(teams[t, "fullNames"], "; ")[[1]]
     }
+    names <- setdiff(union(names1, names2), names0)
+    names <- paste(names, collapse = "; ")
+    if (names == "")
+      names <- NA
+    teams[t, "teamNames"] <- names
   }
 }
 teams <- teams[, -which(colnames(teams) == "fullNames")]
