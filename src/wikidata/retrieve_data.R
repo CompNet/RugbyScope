@@ -101,15 +101,14 @@ for (p in 1:length(player_ids)) {
 }
 tlog.end.loop(0, "Player loop completed")
 
-# replacing empty strings by NAs
-players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
-
 # display a few details for verification
 tlog("Dimension of the players table: ", paste(dim(players), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "))
 tlog("Top of the table:")
 print.data.frame(players[1:10, ])
 
+# replacing empty strings by NAs
+players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
 write.csv(x = players, file = file.path(table_folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
@@ -180,15 +179,14 @@ for (t in which(is.na(teams[, "clubLabel"]))) {
 }
 tlog.end.loop(0, "Team loop completed")
 
-# replacing empty strings by NAs
-teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
-
 # display a few details for verification
 tlog("Dimension of the teams table: ", paste(dim(teams), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(teams, 2, class), collapse = ", "))
 tlog("Top of the table:\n")
 print.data.frame(teams[1:10, ])
 
+# replacing empty strings by NAs
+teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
 write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
@@ -243,9 +241,6 @@ for (p in 1:length(player_ids)) {
 }
 tlog.end.loop(0, "Career loop completed")
 
-# replacing empty strings by NAs
-careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
-
 # display a few details for verification
 tlog("Dimension of the careers table: ", paste(dim(careers), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(careers, 2, class), collapse = ", "))
@@ -261,6 +256,8 @@ careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "clu
 colnames(careers)[1] <- "playerId"
 colnames(careers)[3] <- "clubId"
 
+# replacing empty strings by NAs
+careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
 write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 

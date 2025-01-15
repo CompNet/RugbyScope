@@ -211,7 +211,7 @@ for (colname in c("birthDates", "deathDates")) {
   patterns["October→December 1893"] <- "01/10/1893"
   patterns["September"] <- ""
   for (p in 1:length(patterns)) {
-    idx <- which(players[, colname] == names(patterns)[p])
+    idx <- which(trimws(players[, colname]) == names(patterns)[p])
     if (length(idx) > 0) {
       players[idx, colname] <- patterns[p]
       cat("Fixed ", length(idx), " dates based on pattern \"", names(patterns)[p], "\"\n", sep = "")

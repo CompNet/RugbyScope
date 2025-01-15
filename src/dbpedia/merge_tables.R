@@ -5,6 +5,9 @@
 # Vincent Labatut
 # 12/2024
 ########################################################################
+library("dplyr")
+
+source("src/common/logging.R")
 
 
 
@@ -138,23 +141,66 @@ if (!("dbpediaId" %in% colnames(players))) {
 # match WD players in DBP
 idx <- match(players[, "playerId"], players_dbp[, "wikidataId"])
 
-# specific merge for the names
-# TODO only keep alt names that are not already matching fullname
+# only keep DBP alt names that are not already matching the WD label
+fullnames <- players_dbp[, "fullNames"]
+fullnames <- strsplit(fullnames, "; ")
+# loop over players to copy DBP data
+for (p in 1:length(idx)) {
+  # check that there is a match between the tables
+  if (!is.na(idx[p])) {
+    alt_names <- setdiff(fullnames[[idx[p]]], players[p, "playerLabel"])
+    players[p, "altNames"] <- paste(alt_names, collapse = "; ")
+  }
+}
 
-# specific merge for weight/height
-# TODO if several in WD, use the closest to DBP ?
+# in WD, only a few players have several weights (3, last time I checked) > arbitrarily keep the first one
+weights <- players[, "masses"]
+weights <- strsplit(weights, "; ")
+# idx <- which(sapply(weights, function(ww) length(ww) > 1))
+weights <- sapply(weights, function(ww) ww[1])
+players[, "masses"] <- weights
+# in DBP, all values are single numbers (some of them weird...)
+# head(sort(unique(players_dbp[, "weights"])))
+# tail(sort(unique(players_dbp[, "weights"])))
+# head(sort(unique(players_dbp[, "heights"])))
+# tail(sort(unique(players_dbp[, "heights"])))
+
 
 # specific merge for countries
 # TODO break multiple names in WD and DBP, only add the ones not already present
 
-# TODO check that date format is the same in DBP, otherwise convert
-
-
+# set all the dates to the same format
+# WD date of birth
+dd <- as.Date(players[, "dobMax"])
+idx <- which(is.na(dd) & !is.na(players[, "dobMax"]))
+if (length(idx) > 0)
+  tlog(0, "Problem when converting dobMax dates")
+# WD date of death
+dd <- as.Date(players[, "dodMax"])
+idx <- which(is.na(dd) & !is.na(players[, "dodMax"]))
+if (length(idx) > 0)
+  tlog(0, "Problem when converting dodMax dates")
+# DBP date of birth
+dd <- as.Date(players_dbp[, "birthDates"], tryFormats = c("%Y-%m-%d", "%Y/%m/%d"))
+idx <- which(substr(players_dbp[, "birthDates"], start = 3, stop = 3) %in% c("/", "-"))
+dd[idx] <- as.Date(players_dbp[idx, "birthDates"], tryFormats = c("%d-%m-%Y", "%d/%m/%Y"))
+idx <- which(is.na(dd) & !is.na(players_dbp[, "birthDates"]))
+if (length(idx) > 0)
+  tlog(0, "Problem when converting birthDates dates")
+players_dbp[, "birthDates"] <- dd
+# DBP date of death
+dd <- as.Date(players_dbp[, "deathDates"], tryFormats = c("%Y-%m-%d", "%Y/%m/%d"))
+idx <- which(substr(players_dbp[, "deathDates"], start = 3, stop = 3) %in% c("/", "-"))
+dd[idx] <- as.Date(players_dbp[idx, "deathDates"], tryFormats = c("%d-%m-%Y", "%d/%m/%Y"))
+idx <- which(is.na(dd) & !is.na(players_dbp[, "deathDates"]))
+if (length(idx) > 0)
+  tlog(0, "Problem when converting deathDates dates")
+players_dbp[, "deathDates"] <- dd
 
 # map SBP columns to WD columns
 map <- c()
 map["dbpediaId"] <- "player"
-map["playerLabel"] <- "fullNames"
+# map["playerLabel"] <- "fullNames"
 map["dobMax"] <- "birthDates"
 map["pobLabels"] <- "birthPlaces"
 map["dodMax"] <- "deathDates"
@@ -207,5 +253,7 @@ ids <- players[, "wikidataId"]
 ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
 players <- players[order(ids), ]
 
+# replacing empty strings by NAs
+players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
 write.csv(players, file.path(dpb_table_folder, "fusion_players.csv"), row.names = FALSE)
