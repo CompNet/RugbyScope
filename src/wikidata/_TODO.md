@@ -1,8 +1,8 @@
-* Data retrieveal
-  1. Update WD tables with latest queries
-  2. Merge DBP in WD (when missing data)
-  3. Normalize all heterogeneous fields (position, country, etc.)
-  4. Club names should be normalized too? (or at least, normalizing function used ad hoc)
+* Data retrieval
+  1. Handle missing WD ids in DBP
+  2. Handle unmatched WD ids in DBP
+  3. Deal with club name normalization tp compute completeness stats
+  4. Merge DBP in WD (when missing data)
   5. Query WP for each player in our table, trying to connect with WD entities using WP page URLs.
 * Stats
   * active players stats with *filtering* process
