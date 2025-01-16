@@ -278,3 +278,14 @@ players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 tab.file <- file.path(dpb_table_folder, "fusion_players.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(players, tab.file, row.names = FALSE)
+
+
+
+
+########################################################################
+tlog(0, "Merging the DBpedia team data into the Wikidata table")
+
+# merging the team tables: as with the players, trust the Wikidata data 
+# first, then complete with DBpedia content when WD is empty.
+teams <- teams_wd
+
