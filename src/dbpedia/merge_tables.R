@@ -15,6 +15,7 @@ source("src/common/logging.R")
 ########################################################################
 # paths
 dpb_table_folder <- file.path("data", "dbpedia", "tables")
+dpb_stats_folder <- file.path("data", "dbpedia", "stats")
 wd_table_folder <- file.path("data", "wikidata", "tables")
 
 
@@ -72,7 +73,7 @@ hits <- which(!is.na(teams_dbp[, "wikidataId"]))
 tlog(2, "DBP teams with a WD Id: ", length(hits), "/", nrow(teams_dbp))
 idx <- which(is.na(teams_dbp[, "wikidataId"]))
 # export as CSV for later use
-write.csv(teams_dbp[idx, ], file.path(dpb_table_folder, "comparison_teams_noid.csv"), row.names = FALSE)
+write.csv(teams_dbp[idx, ], file.path(dpb_stats_folder, "comparison_teams_noid.csv"), row.names = FALSE)
 # >>> manual examination reveals that these entries are either not rugby union teams
 #     or that these teams have duplicates in DBP
 
@@ -81,7 +82,7 @@ idx <- match(teams_dbp[hits, "wikidataId"], teams_wd[, "clubId"])
 tlog(2, "DBP teams found in the WD table: ", length(which(!is.na(idx))), "/", length(hits))
 # print(teams_dbp[hits[which(is.na(idx))], "wikidataId"])
 # export as CSV for later use
-write.csv(teams_dbp[hits[which(is.na(idx))], ], file.path(dpb_table_folder, "comparison_teams_nomatch.csv"), row.names = FALSE)
+write.csv(teams_dbp[hits[which(is.na(idx))], ], file.path(dpb_stats_folder, "comparison_teams_nomatch.csv"), row.names = FALSE)
 # >>> we get a bunch of entities that are not rugby union teams
 #     some are rugby league, or rugby union management organization,
 #     or even have absolutely nothing to do with rugby.
@@ -98,7 +99,7 @@ hits <- which(!is.na(players_dbp[, "wikidataId"]))
 tlog(2, "DBP players with a WD Id: ", length(hits), "/", nrow(players_dbp))
 idx <- which(is.na(players_dbp[, "wikidataId"]))
 # export as CSV for later use
-write.csv(players_dbp[idx, ], file.path(dpb_table_folder, "comparison_players_noid.csv"), row.names = FALSE)
+write.csv(players_dbp[idx, ], file.path(dpb_stats_folder, "comparison_players_noid.csv"), row.names = FALSE)
 # >>> manual examination reveals that many of these entries are indeed rugby union
 #     players, but that they are duplicates (due to several name variants) and/or
 #     actually present in the WD table. A lot of entities are also not rugby players,
@@ -109,7 +110,7 @@ tlog(2, "DBP players found in the WD table: ", length(which(!is.na(idx))), "/", 
 # print(players_dbp[hits[is.na(idx)], "wikidataId"])
 # >>> lot of females, rugby league players, and rugby union players not tied to any club
 # export as CSV for later use
-write.csv(players_dbp[hits[which(is.na(idx))], ], file.path(dpb_table_folder, "comparison_players_nomatch.csv"), row.names = FALSE)
+write.csv(players_dbp[hits[which(is.na(idx))], ], file.path(dpb_stats_folder, "comparison_players_nomatch.csv"), row.names = FALSE)
 #     so, mainly false positives in DBP
 
 # temporary tests
