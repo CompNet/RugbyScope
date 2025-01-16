@@ -75,7 +75,7 @@ start_year <- min(c(start_years, end_years))
 end_year <- max(c(start_years, end_years))
 
 # init country info
-all_countries <- get_clean_countries(players)
+all_countries <- get_merged_countries(players)
 # count them to select which countries to display later (cannot show them all)
 tt <- sort(table(all_countries), decreasing = TRUE)
 

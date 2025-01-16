@@ -16,34 +16,101 @@
 # 
 # returns: vector of countries, one for each player in the table.
 ########################################################################
-get_clean_countries <- function(players) {
-  # use field sportCountry whenever available, otherwise field citizenship
-  all_countries <- sapply(1:nrow(players), function(p) {
-    if (is.na(players[p, "sportCountryLabels"]))
-      players[p, "citizenshipLabels"]
-    else
-      players[p, "sportCountryLabels"]
-  })
+get_merged_countries <- function(players) {
+  # normalize country names in both fields
+  cz <- get_clean_countries(players, field = "citizenshipLabels")
+  sc <- get_clean_countries(players, field = "sportCountryLabels")
+
+  # use field `sportCountry` whenever available, otherwise field `citizenship`
+  all_countries <- sc
+  idx <- which(is.na(all_countries))
+  if (length(idx) > 0)
+    all_countries[idx] <- cz[idx]
+
   # possibly split multiple values (arbitrarily keep the first one)
   all_countries <- sapply(all_countries, function(country) strsplit(country, "; ")[[1]][1])
+  all_countries[all_countries == "NA"] <- NA
 
-  # normalize country names
-  all_countries[all_countries == "United Kingdom of Great Britain and Ireland"] <- "United Kingdom"
-  all_countries[all_countries == "Colony of New Zealand"] <- "New Zealand"
-  all_countries[all_countries == "British Raj"] <- "India"
-  all_countries[all_countries == "Irish Free State"] <- "Ireland"
-  all_countries[all_countries == "中華民國"] <- "Taiwan"
-  all_countries[all_countries == "Chinese Taipei"] <- "Taiwan"
-  all_countries[all_countries == "Russian Empire"] <- "Russia"
-  all_countries[all_countries == "People's Republic of China"] <- "China"
-  all_countries[all_countries == "Kingdom of the Netherlands"] <- "Netherlands"
-  all_countries[all_countries == "Czech Republic"] <- "Czechia"
-  all_countries[all_countries == "United States of America"] <- "U.S.A."
-  all_countries[all_countries == "Southern Rhodesia"] <- "Zimbabwe"
-  all_countries[all_countries == "Democratic Republic of the Congo"] <- "R.C. of the Congp"
-  # all_countries[all_countries == "England"] <- "United Kingdom"
+  return(all_countries)
+}
 
-  return (all_countries)
+
+
+
+########################################################################
+# Takes the player table and returns a normalized vector representing
+# their country, as specified by parameter `field`.
+#
+# players: player table.
+# field: the name of the column containing country names.
+# 
+# returns: vector of countries, one for each player in the table.
+########################################################################
+get_clean_countries <- function(players, field) {
+  # retrieve the country names
+  all_countries <- players[, field]
+
+  # possibly split multiple values
+  all_countries <- sapply(all_countries, function(all_country) strsplit(all_country, "; ")[[1]])
+
+  # see all existing values
+  # sort(table(unlist(all_countries)))
+
+  # define conversion map
+  map <- c()
+  map["British Raj"] <- "India"
+  map["Chinese Taipei"] <- "Taiwan"
+  map["Colony of New Zealand"] <- "New Zealand"
+  map["Czech Republic"] <- "Czechia"
+  map["Democratic Republic of the Congo"] <- "R.C. of the Congo"
+  map["Dominion of India"] <- "India"
+  # map["England"] <- "United Kingdom"
+  map["Empire of Japan"] <- "Japan"
+  map["German Democratic Republic"] <- "Germany"
+  map["German Reich"] <- "Germany"
+  map["Irish Free State"] <- "Ireland"
+  map["Kingdom of Denmark"] <- "Denmark"
+  map["Kingdom of Italy"] <- "Italy"
+  map["Kingdom of the Netherlands"] <- "Netherlands"
+  map["Northern Ireland"] <- "Ireland"
+  map["People's Republic of China"] <- "China"
+  map["Republica Moldova"] <- "Moldova"
+  map["Rhodesia"] <- "Zimbabwe"
+  map["Russian Empire"] <- "Russia"
+  map["South-West Africa"] <- "Namibia"
+  map["Southern Rhodesia"] <- "Zimbabwe"
+  map["Soviet Union"] <- "U.S.S.R."
+  map["United Kingdom of Great Britain and Ireland"] <- "United Kingdom"
+  map["United States of America"] <- "U.S.A."
+  map["United States"] <- "U.S.A."
+  map["中華民國"] <- "Taiwan"
+
+  # normalize countries
+  for (c in 1:length(all_countries)) {
+    countries <- all_countries[[c]]
+
+    # normalize country names
+    for (country in names(map))
+      countries[countries == country] <- map[country]
+
+    # remove duplicates
+    countries <- unique(countries)
+
+    # update list
+    all_countries[[c]] <- countries
+  }
+
+  # collapse to get strings again
+  result <- sapply(all_countries, function(countries) paste0(countries, collapse = "; "))
+  names(result) <- NULL
+
+  # remove empty strings
+  idx <- which(result == "")
+  if (length(idx) > 0)
+    result[idx] <- NA
+  result[result == "NA"] <- NA
+
+  return(result)
 }
 
 
@@ -95,7 +162,7 @@ get_clean_positions <- function(players) {
   # │     └─ Right Winger
   # └─ Fullback
   
-  # normalize positions
+  # define conversion map
   map <- c()
   map["centre"] <- "Centre"
   map["center"] <- "Centre"                   # not a WD rugby union position, generally a WD error
@@ -115,10 +182,12 @@ get_clean_positions <- function(players) {
   map["third line"] <- "3rd row"
   map["utility back"] <- "Utility Back"
   map["winger"] <- "Winger"
+
+  # clean positions
   for (p in 1:length(all_positions)) {
     positions <- all_positions[[p]]
 
-    # normalize rugby positions
+    # normalize positions names
     for (position in names(map))
       positions[positions == position] <- map[position]
 
@@ -129,11 +198,13 @@ get_clean_positions <- function(players) {
     if (length(positions) == 0)
       positions <- NA
 
+    # update list
     all_positions[[p]] <- positions
   }
 
   # collapse to get strings again
   result <- sapply(all_positions, function(positions) paste0(positions, collapse = "; "))
+  names(result) <- NULL
 
   return(result)
 }

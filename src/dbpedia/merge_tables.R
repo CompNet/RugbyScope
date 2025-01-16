@@ -21,13 +21,15 @@ wd_table_folder <- file.path("data", "wikidata", "tables")
 
 
 ########################################################################
+tlog(0, "Loading DBpedia tables")
+
 # load DBpedia teals
 teams_dbp <- read.csv(file.path(dpb_table_folder, "all_teams_descr.csv"))
-cat("Raw number of DPB teams:", nrow(teams_dbp), "\n")
+tlog(2, "Raw number of DPB teams: ", nrow(teams_dbp))
 
 # load DBpedia players
 players_dbp <- read.csv(file.path(dpb_table_folder, "all_players_descr.csv"))
-cat("Raw number of DPB players:", nrow(players_dbp), "\n")
+tlog(2, "Raw number of DPB players: ", nrow(players_dbp))
 
 # normalize rugby positions
 source("src/dbpedia/clean_tables.R")
@@ -38,31 +40,36 @@ players_dbp[, "positions"] <- all_positions
 
 
 ########################################################################
+tlog(0, "Loading Wikidata tables")
+
 # load Wikidata teams
 teams_wd <- read.csv(file.path(wd_table_folder, "all_teams_descr.csv"))
-cat("Raw number of WD teams:", nrow(teams_wd), "\n")
+tlog(2, "Raw number of WD teams: ", nrow(teams_wd))
 
 # load Wikidata players
 players_wd <- read.csv(file.path(wd_table_folder, "all_players_descr.csv"))
-cat("Raw number of WD players:", nrow(players_wd), "\n")
+tlog(2, "Raw number of WD players: ", nrow(players_wd))
 
 # normalize rugby positions
 source("src/wikidata/clean_tables.R")
 all_positions <- get_clean_positions(players_wd)
 players_wd[, "positionLabels"] <- all_positions
 
-# normalize countries
-all_countries <- get_clean_countries(players_wd)
-players_wd[, ""] <- all_countries
-# TODO : change function to separate normalization from merging country/sport in WD
+# normalize countries (both fields)
+all_countries <- get_clean_countries(players_wd, field = "citizenshipLabels")
+players_wd[, "citizenshipLabels"] <- all_countries
+all_countries <- get_clean_countries(players_wd, field = "sportCountryLabels")
+players_wd[, "sportCountryLabels"] <- all_countries
 
 
 
 
 ########################################################################
+tlog(0, "Comparing both team tables")
+
 # identify teams in the DBP table without a WD id
 hits <- which(!is.na(teams_dbp[, "wikidataId"]))
-cat("DBP teams with a WD Id: ", length(hits), "/", nrow(teams_dbp), "\n", sep = "")
+tlog(2, "DBP teams with a WD Id: ", length(hits), "/", nrow(teams_dbp))
 idx <- which(is.na(teams_dbp[, "wikidataId"]))
 # export as CSV for later use
 write.csv(teams_dbp[idx, ], file.path(dpb_table_folder, "comparison_teams_noid.csv"), row.names = FALSE)
@@ -71,7 +78,7 @@ write.csv(teams_dbp[idx, ], file.path(dpb_table_folder, "comparison_teams_noid.c
 
 # identify teams with a WD id that are not in our WD table (so, in theory, not rugby teams)
 idx <- match(teams_dbp[hits, "wikidataId"], teams_wd[, "clubId"])
-cat("DBP teams found in the WD table: ", length(which(!is.na(idx))), "/", length(hits), "\n", sep = "")
+tlog(2, "DBP teams found in the WD table: ", length(which(!is.na(idx))), "/", length(hits))
 # print(teams_dbp[hits[which(is.na(idx))], "wikidataId"])
 # export as CSV for later use
 write.csv(teams_dbp[hits[which(is.na(idx))], ], file.path(dpb_table_folder, "comparison_teams_nomatch.csv"), row.names = FALSE)
@@ -84,9 +91,11 @@ write.csv(teams_dbp[hits[which(is.na(idx))], ], file.path(dpb_table_folder, "com
 
 
 ########################################################################
+tlog(0, "Comparing both player tables")
+
 # identify players in the DBP table without a WD id
 hits <- which(!is.na(players_dbp[, "wikidataId"]))
-cat("DBP players with a WD Id: ", length(hits), "/", nrow(players_dbp), "\n", sep = "")
+tlog(2, "DBP players with a WD Id: ", length(hits), "/", nrow(players_dbp))
 idx <- which(is.na(players_dbp[, "wikidataId"]))
 # export as CSV for later use
 write.csv(players_dbp[idx, ], file.path(dpb_table_folder, "comparison_players_noid.csv"), row.names = FALSE)
@@ -96,7 +105,7 @@ write.csv(players_dbp[idx, ], file.path(dpb_table_folder, "comparison_players_no
 #     and even not persons.
 
 idx <- match(players_dbp[hits, "wikidataId"], players_wd[, "playerId"])
-cat("DBP players found in the WD table: ", length(which(!is.na(idx))), "/", length(hits), "\n", sep = "")
+tlog(2, "DBP players found in the WD table: ", length(which(!is.na(idx))), "/", length(hits))
 # print(players_dbp[hits[is.na(idx)], "wikidataId"])
 # >>> lot of females, rugby league players, and rugby union players not tied to any club
 # export as CSV for later use
@@ -112,36 +121,39 @@ write.csv(players_dbp[hits[which(is.na(idx))], ], file.path(dpb_table_folder, "c
 
 
 ########################################################################
+tlog(0, "Merging the DBpedia player data into the Wikidata table")
+
 # merging the player tables: trust the Wikidata data first, then complete
 # with DBpedia content when WD is empty.
 players <- players_wd
 
 # clean birth dates
+tlog(2, "Collapsing both WD birth date fields")
 idx <- which(!is.na(players[, "dobMax"]) & is.na(players[, "dobFormat"]))
 if (length(idx) > 0)
   players[idx, "dobMax"] <- NA
 
 # clean death dates
+tlog(2, "Collapsing both WD death date fields")
 idx <- which(!is.na(players[, "dodMax"]) & is.na(players[, "dodFormat"]))
 if (length(idx) > 0)
   players[idx, "dodMax"] <- NA
 
 # possibly add a new column for the DBP id
+tlog(2, "Adding missing columns")
 if (!("altNames" %in% colnames(players))) {
   players <- cbind(players[, 1:4], rep(NA, nrow(players)), players[, 5:ncol(players)])
   colnames(players)[5] <- "altNames"
 }
-
 # same for the alternative names
 if (!("dbpediaId" %in% colnames(players))) {
   players <- cbind(players, rep(NA, nrow(players)))
   colnames(players)[ncol(players)] <- "dbpediaId"
 }
 
-# match WD players in DBP
-idx <- match(players[, "playerId"], players_dbp[, "wikidataId"])
-
 # only keep DBP alt names that are not already matching the WD label
+tlog(2, "Copying DBP names into empty WD cells")
+idx <- match(players[, "playerId"], players_dbp[, "wikidataId"])
 fullnames <- players_dbp[, "fullNames"]
 fullnames <- strsplit(fullnames, "; ")
 # loop over players to copy DBP data
@@ -153,6 +165,8 @@ for (p in 1:length(idx)) {
   }
 }
 
+# cleaning/testing weight values
+tlog(2, "Processing weights")
 # in WD, only a few players have several weights (3, last time I checked) > arbitrarily keep the first one
 weights <- players[, "masses"]
 weights <- strsplit(weights, "; ")
@@ -165,28 +179,29 @@ players[, "masses"] <- weights
 # head(sort(unique(players_dbp[, "heights"])))
 # tail(sort(unique(players_dbp[, "heights"])))
 
-
-# specific merge for countries
-# TODO break multiple names in WD and DBP, only add the ones not already present
+# cleaning/testing height values
+tlog(2, "Processing heights")
+# TODO
 
 # set all the dates to the same format
+tlog(2, "Normalizing dates")
 # WD date of birth
 dd <- as.Date(players[, "dobMax"])
 idx <- which(is.na(dd) & !is.na(players[, "dobMax"]))
 if (length(idx) > 0)
-  tlog(0, "Problem when converting dobMax dates")
+  tlog(4, "Problem when converting WD dobMax dates")
 # WD date of death
 dd <- as.Date(players[, "dodMax"])
 idx <- which(is.na(dd) & !is.na(players[, "dodMax"]))
 if (length(idx) > 0)
-  tlog(0, "Problem when converting dodMax dates")
+  tlog(4, "Problem when converting WD dodMax dates")
 # DBP date of birth
 dd <- as.Date(players_dbp[, "birthDates"], tryFormats = c("%Y-%m-%d", "%Y/%m/%d"))
 idx <- which(substr(players_dbp[, "birthDates"], start = 3, stop = 3) %in% c("/", "-"))
 dd[idx] <- as.Date(players_dbp[idx, "birthDates"], tryFormats = c("%d-%m-%Y", "%d/%m/%Y"))
 idx <- which(is.na(dd) & !is.na(players_dbp[, "birthDates"]))
 if (length(idx) > 0)
-  tlog(0, "Problem when converting birthDates dates")
+  tlog(4, "Problem when converting DBP birthDates dates")
 players_dbp[, "birthDates"] <- dd
 # DBP date of death
 dd <- as.Date(players_dbp[, "deathDates"], tryFormats = c("%Y-%m-%d", "%Y/%m/%d"))
@@ -194,10 +209,10 @@ idx <- which(substr(players_dbp[, "deathDates"], start = 3, stop = 3) %in% c("/"
 dd[idx] <- as.Date(players_dbp[idx, "deathDates"], tryFormats = c("%d-%m-%Y", "%d/%m/%Y"))
 idx <- which(is.na(dd) & !is.na(players_dbp[, "deathDates"]))
 if (length(idx) > 0)
-  tlog(0, "Problem when converting deathDates dates")
+  tlog(4, "Problem when converting DBP deathDates dates")
 players_dbp[, "deathDates"] <- dd
 
-# map SBP columns to WD columns
+# map DBP columns to WD columns
 map <- c()
 map["dbpediaId"] <- "player"
 # map["playerLabel"] <- "fullNames"
@@ -211,6 +226,8 @@ map["positionLabels"] <- "positions"
 map["playerId"] <- "wikidataId"
 
 # loop over players to copy DBP data
+tlog(2, "Copying DBP data into empty WD fields")
+idx <- match(players[, "playerId"], players_dbp[, "wikidataId"])
 for (p in 1:length(idx)) {
   # check that there is a match between the tables
   if (!is.na(idx[p])) {
@@ -226,17 +243,18 @@ for (p in 1:length(idx)) {
 }
 
 # remove supefluous columns
-rem_cols <- c("dobFormat", "dodFormat")
+rem_cols <- c("dobFormat", "dodFormat", "sexLabel")
+tlog(2, "Removing supefluous columns (", paste0(rem_cols, collapse = ", "), ")")
 idx <- which(colnames(players) %in% rem_cols)
 players <- players[, -idx]
 
 # rename certain columns
+tlog(2, "Rename certain columns")
 map <- c()
 map["wikidataId"] <- "playerId"
 map["fullName"] <- "playerLabel"
 map["firstName"] <- "firstnameLabels"
 map["lastName"] <- "lastnameLabels"
-map["sex"] <- "sexLabel"
 map["birthDate"] <- "dobMax"
 map["birthPlaces"] <- "pobLabels"
 map["deathDate"] <- "dodMax"
@@ -249,11 +267,13 @@ idx <- match(map, colnames(players))
 colnames(players)[idx] <- names(map)
 
 # sort by WD id value
+tlog(2, "Sorting by WikidataId")
 ids <- players[, "wikidataId"]
 ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
 players <- players[order(ids), ]
 
 # replacing empty strings by NAs
+tlog(2, "Recording as a CSV file")
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
 write.csv(players, file.path(dpb_table_folder, "fusion_players.csv"), row.names = FALSE)
