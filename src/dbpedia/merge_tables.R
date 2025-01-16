@@ -166,23 +166,22 @@ for (p in 1:length(idx)) {
   }
 }
 
-# cleaning/testing weight values
-tlog(2, "Processing weights")
-# in WD, only a few players have several weights (3, last time I checked) > arbitrarily keep the first one
-weights <- players[, "masses"]
-weights <- strsplit(weights, "; ")
-# idx <- which(sapply(weights, function(ww) length(ww) > 1))
-weights <- sapply(weights, function(ww) ww[1])
-players[, "masses"] <- weights
-# in DBP, all values are single numbers (some of them weird...)
-# head(sort(unique(players_dbp[, "weights"])))
-# tail(sort(unique(players_dbp[, "weights"])))
-# head(sort(unique(players_dbp[, "heights"])))
-# tail(sort(unique(players_dbp[, "heights"])))
-
 # cleaning/testing height values
 tlog(2, "Processing heights")
-# TODO
+# when several heights in WD: keep the most likely to be metric
+heights <- get_clean_heights(players[, "heights"])
+players[, "heights"] <- heights
+# DBP: only single values, seemingly expressed in centimeters (so, nothing to do)
+
+# cleaning/testing weight values
+tlog(2, "Processing weights")
+# when several weights in WD: keep the most likely to be metric
+weights <- get_clean_weights(players[, "masses"])
+players[, "masses"] <- weights
+# in DBP, all values are single numbers: just convert to metric
+weights <- get_clean_weights(as.character(players_dbp[, "weights"]))
+players_dbp[, "weights"] <- weights
+# 2.0*exp(H*0.02) # formular from DOI:10.1002/ajhb.1310010412
 
 # set all the dates to the same format
 tlog(2, "Normalizing dates")
@@ -274,7 +273,8 @@ ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
 players <- players[order(ids), ]
 
 # replacing empty strings by NAs
-tlog(2, "Recording as a CSV file")
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-write.csv(players, file.path(dpb_table_folder, "fusion_players.csv"), row.names = FALSE)
+tab.file <- file.path(dpb_table_folder, "fusion_players.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(players, tab.file, row.names = FALSE)
