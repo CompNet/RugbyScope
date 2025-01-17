@@ -186,7 +186,7 @@
 "Q109717645","Fleury Olympique","rugby union team",NA,NA,NA,NA,NA,NA,"France",NA,NA,NA,"Fleury",NA,NA,NA,NA,NA,NA,NA
 "Q109717674","Stade Auto Lyon","rugby union team",NA,NA,NA,NA,NA,NA,"France",NA,NA,NA,"Lyon",NA,NA,NA,NA,NA,NA,NA
 "Q109717699","Union sportive vicquoise","rugby union team",NA,NA,NA,NA,NA,NA,"France",NA,NA,NA,"Vicq-sur-Gartempe",NA,NA,NA,NA,NA,NA,NA
-"Q109806875","RC Veyle Saône","rugby union team","1977-07-22","1977-7-22",NA,NA,NA,NA,"France",NA,"Q119370260; Q119207970",NA,"Pont-de-Veyle",NA,NA,NA,NA,NA,NA,NA
+"Q109806875","RC Veyle Saône","rugby union team","1977-07-22","1977-7-22",NA,NA,NA,NA,"France",NA,"Stade Lucien Morel; Centre Sportif du Malivert",NA,"Pont-de-Veyle",NA,NA,NA,NA,NA,NA,NA
 "Q109941509","Rugbyende Utrechtse Studenten","rugby union club",NA,NA,NA,NA,NA,NA,"Netherlands",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q1101990","SS Lazio Rugby 1927","rugby union club","1927-01-01","1927-1-1",NA,NA,"Aquile; Biancazzurri; Biancocelesti","Italian Rugby Federation","Italy","Serie A Élite","Centro Sportivo Giulio Onesti","1036",NA,NA,NA,"S.S._Lazio_Rugby_1927","Polisportiva_SS_Lazio_Rugby_1927","Polisportiva_S.S._Lazio_Rugby_1927","SS_Lazio_Rugby",NA
 "Q110250064","Rugbi Club Sant Andreu","rugby union team","1921-01-01","1921-1-1","1925-01-01","1925-1-1","Diables Rojos",NA,"Spain",NA,NA,NA,"Sant Andreu de Palomar",NA,NA,NA,NA,NA,NA,NA
@@ -252,7 +252,7 @@
 "Q11357155","Mitsubishi Heavy Industries Nagasaki Rugby Football Club","rugby union team",NA,NA,NA,NA,NA,NA,"Japan","Top Kyushu League",NA,NA,NA,NA,"120vbsss",NA,NA,NA,NA,"%E4%B8%89%E8%8F%B1%E9%87%8D%E5%B7%A5%E9%95%B7%E5%B4%8E%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
 "Q113578817","Nerja Rugby Club","rugby union club",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q11359099","Sophia University Rugby Football Club","rugby union team","1954-01-01","1954-1-1",NA,NA,NA,NA,"Japan","Kanto University Tournament",NA,NA,NA,NA,"1214mgcq",NA,NA,NA,NA,"%E4%B8%8A%E6%99%BA%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
-"Q11363453","Chugoku Red Regulions","rugby union team","1987-01-01","1987-1-1",NA,NA,NA,NA,"Japan","Japan Rugby League One",NA,NA,"Hiroshima Prefecture",NA,"120qdflk","Chugoku_Red_Regulions",NA,NA,NA,"%E4%B8%AD%E5%9B%BD%E9%9B%BB%E5%8A%9B%E3%83%AC%E3%83%83%E3%83%89%E3%83%AC%E3%82%B0%E3%83%AA%E3%82%AA%E3%83%B3%E3%82%BA"
+"Q11363453","Chugoku Red Regulions","rugby union team","1987-01-01","1987-1-1",NA,NA,NA,NA,"Japan","Japan Rugby League One",NA,NA,"Hiroshima",NA,"120qdflk","Chugoku_Red_Regulions",NA,NA,NA,"%E4%B8%AD%E5%9B%BD%E9%9B%BB%E5%8A%9B%E3%83%AC%E3%83%83%E3%83%89%E3%83%AC%E3%82%B0%E3%83%AA%E3%82%AA%E3%83%B3%E3%82%BA"
 "Q11363663","Chuo University Rugby Football Club","rugby union team",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,"122jqlhr",NA,NA,NA,NA,"%E4%B8%AD%E5%A4%AE%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
 "Q11370170","Kyushu Kyoritsu University Rugby Football Club","rugby union team",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,"120qkmsc",NA,NA,NA,NA,"%E4%B9%9D%E5%B7%9E%E5%85%B1%E7%AB%8B%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
 "Q11370211","Kyushu University Rugby Club","rugby union team",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,"121_zq3q",NA,NA,NA,NA,"%E4%B9%9D%E5%B7%9E%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
@@ -322,13 +322,13 @@
 "Q11597985","Rikkyo University Rugby Football Club","rugby union team",NA,NA,NA,NA,NA,NA,"Japan","Kanto University Tournament",NA,NA,NA,NA,"121qmyyn",NA,NA,NA,NA,"%E7%AB%8B%E6%95%99%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
 "Q11598021","Rissho University Rugby Football Club","rugby union team","1963-01-01","1963-1-1",NA,NA,NA,NA,"Japan","Kanto University Rugby League",NA,NA,NA,NA,"122hzt10",NA,NA,NA,NA,"%E7%AB%8B%E6%AD%A3%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
 "Q11602849","University of Tsukuba Rugby Football Club","rugby union team","1924-01-01","1924-1-1",NA,NA,NA,NA,"Japan","Kanto University Tournament",NA,NA,NA,NA,"122nzdl6",NA,NA,NA,NA,"%E7%AD%91%E6%B3%A2%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
-"Q116057455","Taipei Yuan-kun","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q116057584","Hai Yang Ocean Feed","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q116057621","Oriact","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q116057629","Takeshi Omura Giants","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q116057636","Taiwan Sports Lei Xu Tyrannosaurus","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q116057643","Tainan Kaier","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q116057670","Taoyuan Gorilla","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q116057455","Taipei Yuan-kun","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q116057584","Hai Yang Ocean Feed","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q116057621","Oriact","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q116057629","Takeshi Omura Giants","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q116057636","Taiwan Sports Lei Xu Tyrannosaurus","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q116057643","Tainan Kaier","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q116057670","Taoyuan Gorilla","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q11627318","Seinan Gakuin University Rugby Club","rugby union team",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,"120qkz1j",NA,NA,NA,NA,"%E8%A5%BF%E5%8D%97%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
 "Q11638608","Kinki University Rugby Club","rugby union team",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,"1232jpbg",NA,NA,NA,NA,"%E8%BF%91%E7%95%BF%E5%A4%A7%E5%AD%A6%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
 "Q116451279","Rugby Club Uzès","rugby union club","1977-01-01","1977-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -388,7 +388,7 @@
 "Q119423480","Stade Olympique Perpignan","rugby union club",NA,NA,"1919-05-06","1919-5-6",NA,NA,"France",NA,NA,NA,"Perpignan",NA,NA,NA,NA,NA,NA,NA
 "Q119423683","Arlequins Club Perpignanais","rugby union club","1919-12-08","1919-12-8","1933-05-04","1933-5-4",NA,NA,"France",NA,NA,NA,"Perpignan",NA,NA,NA,NA,NA,NA,NA
 "Q11946402","Rugby Club L'Hospitalet","rugby union club","1973-01-01","1973-1-1",NA,NA,NA,NA,"Spain",NA,NA,NA,"L'Hospitalet de Llobregat",NA,"121k2yvb","RC_L%27Hospitalet",NA,NA,"Rugby_Club_L%27Hospitalet",NA
-"Q119849076","Rugby Club Haute Bresse","rugby union club","1980-01-01","1980-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Town hall of Pont-de-Vaux",NA,NA,NA,NA,NA,NA,NA
+"Q119849076","Rugby Club Haute Bresse","rugby union club","1980-01-01","1980-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Pont-de-Vaux",NA,NA,NA,NA,NA,NA,NA
 "Q11986910","Luctonians","rugby union team","1948-01-01","1948-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Luctonians",NA,NA,NA,NA
 "Q119999690","Miami Sharks","rugby union team","2023-01-01","2023-1-1",NA,NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,"Miami_Sharks_(rugby_union)","Sharks_de_Miami",NA,"Miami_Sharks","%E3%83%9E%E3%82%A4%E3%82%A2%E3%83%9F%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%BC%E3%82%AF%E3%82%B9"
 "Q1201283","Northampton Saints","rugby union club","1880-01-01","1880-1-1",NA,NA,"The Saints","Rugby Football Union","United Kingdom","Premiership Rugby","Franklin's Gardens","13951",NA,"northampton",NA,"Northampton_Saints","Northampton_Saints","Northampton_Saints","Northampton_Saints","%E3%83%8E%E3%83%BC%E3%82%B5%E3%83%B3%E3%83%97%E3%83%88%E3%83%B3%E3%83%BB%E3%82%BB%E3%82%A4%E3%83%B3%E3%83%84"
@@ -423,7 +423,7 @@
 "Q12384806","Unión Aljarafe Sevilla","rugby union team",NA,NA,NA,NA,NA,NA,"Spain",NA,NA,NA,"Seville",NA,NA,"Uni%C3%B3n_Aljarafe_Sevilla",NA,NA,"Uni%C3%B3n_Aljarafe_Sevilla",NA
 "Q12386264","Club de Rugby Ferrol","rugby union team","2008-01-01","2008-1-1",NA,NA,NA,NA,"Spain",NA,NA,NA,"Ferrol",NA,"11clt75hr2",NA,NA,NA,"Club_de_Rugby_Ferrol",NA
 "Q12386265","Club de Rugby Lalín","rugby union team",NA,NA,NA,NA,NA,NA,"Spain",NA,NA,NA,"Lalín",NA,NA,NA,NA,NA,NA,NA
-"Q123865408","New Taipei Lei Xu Lions","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Q114563237",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q123865408","New Taipei Lei Xu Lions","rugby union team",NA,NA,NA,NA,NA,NA,"中華民國","Taiwan Corporate Rugby League",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q12390683","Ingleses R.C.","rugby union team","1988-01-01","1988-1-1",NA,NA,NA,NA,"Spain",NA,NA,NA,"Vilagarcía de Arousa",NA,NA,NA,NA,NA,NA,NA
 "Q12392916","Mareantes Rugby Clube Pontevedra","rugby union team","1988-01-01","1988-1-1",NA,NA,NA,NA,"Spain",NA,"Monte Porreiro Municipal Sports Field",NA,"Pontevedra",NA,NA,NA,NA,NA,NA,NA
 "Q12393729","Muralla Rugby Club","rugby union team","1986-01-01","1986-1-1",NA,NA,NA,NA,"Spain",NA,NA,NA,"Lugo",NA,NA,NA,NA,NA,NA,NA
@@ -469,7 +469,7 @@
 "Q125924347","UFH Baby Blues","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"UFH_Baby_Blues",NA,NA,NA,NA
 "Q125931179","CUS Torino Rugby","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"CUS_Torino_Rugby_(f%C3%A9minines)",NA,NA,NA
 "Q125958274","UJ Rugby","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"UJ_Rugby",NA,NA,NA,NA
-"Q12631981","HARK Mladost","rugby union team","1954-01-17","1954-1-17",NA,NA,NA,"Croatian Rugby Federation","Croatia","Q12640601",NA,NA,"Zagreb",NA,"122czx3h","HARK_Mladost",NA,"Hrvatski_akademski_rugby_klub_Mladost",NA,NA
+"Q12631981","HARK Mladost","rugby union team","1954-01-17","1954-1-17",NA,NA,NA,"Croatian Rugby Federation","Croatia","Croatian Rugby Union Championship",NA,NA,"Zagreb",NA,"122czx3h","HARK_Mladost",NA,"Hrvatski_akademski_rugby_klub_Mladost",NA,NA
 "Q126372406","Beantown RFC","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Beantown_RFC",NA,NA,NA,NA
 "Q126386035","Association sportive de Monaco rugby","rugby union team",NA,NA,NA,NA,NA,NA,"Monaco",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q12640954","RK Ljubljana","rugby union team",NA,NA,NA,NA,NA,NA,"Slovenia",NA,NA,NA,NA,NA,"122d8bxm","RK_Ljubljana",NA,"Rugby_klub_Ljubljana",NA,NA
@@ -506,13 +506,13 @@
 "Q130275370","Stade maursois","rugby union team","1926-01-01","1926-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Maurs",NA,NA,NA,NA,NA,NA,NA
 "Q130338958","Gravesend Rugby Football Club","rugby union club",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q130359922","Liceo Rugby Club","rugby union club",NA,NA,NA,NA,NA,NA,"Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Liceo_Rugby_Club_de_Mendoza",NA
-"Q130411345","Coomera Crushers Rugby Union Club","rugby union club","2002-01-01","2002-1-1",NA,NA,NA,NA,"Australia",NA,NA,NA,"Coomera Sports Park",NA,NA,NA,NA,NA,NA,NA
+"Q130411345","Coomera Crushers Rugby Union Club","rugby union club","2002-01-01","2002-1-1",NA,NA,NA,NA,"Australia",NA,NA,NA,"Coomera",NA,NA,NA,NA,NA,NA,NA
 "Q130437904","Gillingham Anchorians Rugby Club","rugby union club",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q130479332","Old Laurentian Rugby Football Club","rugby union club",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q130502282","Stade dacquois","rugby union team","1902-01-01","1902-1-1","1903-04-01","1903-4-1",NA,NA,"France",NA,NA,NA,"Dax",NA,NA,NA,NA,NA,NA,NA
 "Q130550687","Lince Rugby club","rugby union club",NA,NA,NA,NA,NA,NA,"Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Lince_Rugby_club",NA
 "Q130550695","Mar del Plata Club","rugby union club",NA,NA,NA,NA,NA,NA,"Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mar_del_Plata_Club",NA
-"Q130554487","Boulou Sportif XV","defunct rugby union club","1921-10-25","1921-10-25","2017-01-01","2017-1-1",NA,NA,"France","Q48750250","Q130617636",NA,NA,NA,NA,NA,"Boulou_sportif_XV",NA,NA,NA
+"Q130554487","Boulou Sportif XV","defunct rugby union club","1921-10-25","1921-10-25","2017-01-01","2017-1-1",NA,NA,"France","Ligue régionale Occitanie de rugby","Stade François Noguères",NA,NA,NA,NA,NA,"Boulou_sportif_XV",NA,NA,NA
 "Q130565826","Gipuzkoa Sortzen Rugby Taldea","rugby union club","2024-01-01","2024-1-1",NA,NA,NA,NA,"Basque Country",NA,NA,NA,"Lasarte-Oria; Zarautz; San Sebastián",NA,NA,NA,NA,NA,NA,NA
 "Q130617828","Émulation sportive pratéene","rugby union club","1924-01-01","1924-1-1",NA,NA,NA,NA,"France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q130651141","KCS Old Boys RFC","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"KCS_Old_Boys_RFC",NA,NA,NA,NA
@@ -634,7 +634,7 @@
 "Q16068853","RC Den Helder","rugby union club","1975-11-28","1975-11-28",NA,NA,NA,NA,"Netherlands",NA,NA,NA,"Den Helder",NA,"1pwgtcccz",NA,NA,NA,NA,NA
 "Q1608682","Monaco national rugby union team","national rugby union team","1996-01-01","1996-1-1",NA,NA,NA,NA,"Monaco",NA,NA,NA,NA,NA,NA,"Monaco_national_rugby_union_team","%C3%89quipe_de_Monaco_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_del_Principato_di_Monaco",NA,NA
 "Q16113601","RK Lokomotiva","rugby union team","1968-09-18","1968-9-18",NA,NA,NA,"Croatian Rugby Federation","Croatia",NA,NA,NA,NA,NA,"1215pmcq",NA,NA,"Ragbi_klub_Lokomotiva",NA,NA
-"Q16115123","Ragbi klub Makarska Rivijera","rugby union team","1968-01-01","1968-1-1",NA,NA,NA,"Croatian Rugby Federation","Croatia","Q12640601",NA,NA,"Makarska",NA,"121p6rj7",NA,NA,"Ragbi_klub_Makarska_Rivijera",NA,NA
+"Q16115123","Ragbi klub Makarska Rivijera","rugby union team","1968-01-01","1968-1-1",NA,NA,NA,"Croatian Rugby Federation","Croatia","Croatian Rugby Union Championship",NA,NA,"Makarska",NA,"121p6rj7",NA,NA,"Ragbi_klub_Makarska_Rivijera",NA,NA
 "Q16150147","Old Alleynian Football Club","rugby union team","1898-01-01","1898-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Old_Alleynian_F.C.",NA,NA,NA,NA
 "Q16156035","Alessandria Rugby","rugby union team",NA,NA,NA,NA,NA,"Italian Rugby Federation","Italy",NA,NA,NA,NA,NA,"1yjg7xg0g",NA,NA,"Alessandria_Rugby",NA,NA
 "Q16165297","Baton Rouge Rugby Football Club","rugby union team","1977-01-01","1977-1-1",NA,NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,"Baton_Rouge_Rugby_Football_Club",NA,NA,NA,NA
@@ -670,7 +670,7 @@
 "Q1634699","Jordan national rugby union team","national rugby union team",NA,NA,NA,NA,NA,NA,"Jordan",NA,NA,NA,NA,NA,NA,"Jordan_national_rugby_union_team","%C3%89quipe_de_Jordanie_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_della_Giordania",NA,NA
 "Q1634826","Turkey national rugby union team","national rugby union team",NA,NA,NA,NA,NA,NA,"Turkey",NA,NA,NA,NA,NA,NA,"Turkey_national_rugby_union_team","%C3%89quipe_de_Turquie_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_della_Turchia",NA,NA
 "Q16354761","Griffins RFC","rugby union team","2011-01-01","2011-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Griffins_RFC",NA,NA,NA,NA
-"Q1638171","USA Limoges","rugby union team","1902-01-01","1902-1-1",NA,NA,NA,NA,"France",NA,"Q3496152",NA,"Limoges",NA,NA,"USA_Limoges","Union_sportive_athl%C3%A9tique_de_Limoges",NA,NA,NA
+"Q1638171","USA Limoges","rugby union team","1902-01-01","1902-1-1",NA,NA,NA,NA,"France",NA,"Stade Municipal de Beaublanc",NA,"Limoges",NA,NA,"USA_Limoges","Union_sportive_athl%C3%A9tique_de_Limoges",NA,NA,NA
 "Q16382410","Rugby olympique agathois","rugby union club","1969-01-01","1969-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Agde",NA,"12tb8681l",NA,"Rugby_olympique_agathois",NA,NA,NA
 "Q1645702","Club Universitario de Buenos Aires","rugby union club","1918-01-01","1918-1-1",NA,NA,NA,"Unión de Rugby de Buenos Aires","Argentina","URBA Top 12",NA,NA,"Buenos Aires",NA,NA,"Club_Universitario_de_Buenos_Aires","Club_Universitario_de_Buenos_Aires","Club_Universitario_de_Buenos_Aires","Club_Universitario_de_Buenos_Aires","%E3%82%AF%E3%83%AB%E3%83%96%E3%83%BB%E3%82%A6%E3%83%8B%E3%83%99%E3%83%AB%E3%82%B7%E3%82%BF%E3%83%AA%E3%82%AA%E3%83%BB%E3%83%87%E3%83%BB%E3%83%96%E3%82%A8%E3%83%8E%E3%82%B9%E3%83%BB%E3%82%A2%E3%82%A4%E3%83%AC%E3%82%B9"
 "Q16540514","Club athlétique Lormont Hauts de Garonne","rugby union team","1995-01-01","1995-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Lormont",NA,"12mkyv5t_",NA,"Club_athl%C3%A9tique_Lormont_Hauts_de_Garonne",NA,NA,NA
@@ -1074,7 +1074,7 @@
 "Q22131490","Toyota Tsusho Blue Wing","rugby union club",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,"11b7l6zlnv",NA,NA,NA,NA,"%E8%B1%8A%E7%94%B0%E9%80%9A%E5%95%86BLUE_WING"
 "Q22271899","Lindfield Rugby Club","rugby union club","1919-01-01","1919-1-1",NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,"11cky7sbn0","Lindfield_Rugby_Club",NA,NA,NA,NA
 "Q22681306","Surfers Paradise Dolphins","rugby union team","1973-01-01","1973-1-1",NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,"11clgkyqbf","Surfers_Paradise_Dolphins",NA,NA,NA,NA
-"Q2269393","Mogliano Rugby","rugby union club","1956-01-01","1956-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie A Élite","Q3967840","786","Mogliano Veneto",NA,NA,"Mogliano_Rugby","Mogliano_Rugby_SSD","Mogliano_Rugby_1969","Mogliano_Rugby",NA
+"Q2269393","Mogliano Rugby","rugby union club","1956-01-01","1956-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie A Élite","Stadio Maurizio Quaggia","786","Mogliano Veneto",NA,NA,"Mogliano_Rugby","Mogliano_Rugby_SSD","Mogliano_Rugby_1969","Mogliano_Rugby",NA
 "Q2274476","Venezia Mestre Rugby FC","defunct rugby union club","1986-01-01","1986-1-1","2011-01-01","2011-1-1",NA,"Italian Rugby Federation","Italy",NA,NA,NA,"Venezia",NA,NA,"Venezia_Mestre_Rugby_FC","Venise_Mestre_Rugby","Veneziamestre_Rugby_1986","Veneziamestre_Rugby",NA
 "Q2278510","L’Aquila Rugby Club","defunct rugby union club","1936-01-01","1936-1-1","2018-01-01","2018-1-1","Neroverdi","Italian Rugby Federation","Italy",NA,"Stadio Tommaso Fattori","10000",NA,NA,NA,"L%27Aquila_Rugby","L%27Aquila_Rugby","L%27Aquila_Rugby_Club","L%27Aquila_Rugby","%E3%83%A9%E3%82%AF%E3%82%A4%E3%83%A9%E3%83%BB%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC"
 "Q2289089","București Wolves","rugby union team","2004-01-01","2004-1-1",NA,NA,NA,NA,"Romania",NA,NA,NA,NA,NA,NA,"Romanian_Wolves","Romanian_Wolves","Bucure%C8%99ti_Rugby","Romanian_Wolves","%E3%83%AB%E3%83%BC%E3%83%9E%E3%83%8B%E3%82%A2%E3%83%B3%E3%83%BB%E3%82%A6%E3%83%AB%E3%83%96%E3%82%BA"
@@ -1170,7 +1170,7 @@
 "Q25352074","Scottish Exiles","rugby union club",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,"11cm4b00xx","Scottish_Exiles_(rugby_union)",NA,NA,NA,NA
 "Q25382139","Stade oranais","rugby union team","2007-01-01","2007-1-1",NA,NA,NA,NA,"Algeria",NA,NA,NA,NA,NA,"11bxfvlzr4",NA,"Stade_oranais",NA,NA,NA
 "Q25393900","Flagman Rugby Club","rugby union club","2011-01-01","2011-1-1",NA,NA,NA,NA,"Russia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q25395988","Club athlétique des sports généraux","rugby union team","1903-01-01","1903-1-1","1995-05-15","1995-5-15",NA,NA,"France",NA,NA,NA,"Stade Jean-Bouin",NA,"11cmcycv4f",NA,"Club_athl%C3%A9tique_des_sports_g%C3%A9n%C3%A9raux_(rugby_%C3%A0_XV)",NA,NA,NA
+"Q25395988","Club athlétique des sports généraux","rugby union team","1903-01-01","1903-1-1","1995-05-15","1995-5-15",NA,NA,"France",NA,NA,NA,"Paris",NA,"11cmcycv4f",NA,"Club_athl%C3%A9tique_des_sports_g%C3%A9n%C3%A9raux_(rugby_%C3%A0_XV)",NA,NA,NA
 "Q254209","FC Lourdes","rugby union team","1911-01-01","1911-1-1",NA,NA,NA,"French Rugby Federation","France","Fédérale 2","Stade Antoine-Béguère","6500","Lourdes",NA,NA,"FC_Lourdes","Football_club_lourdais_XV_Hautes-Pyr%C3%A9n%C3%A9es","Football_Club_Lourdais_XV","FC_Lourdes","FC%E3%83%AB%E3%83%AB%E3%83%89"
 "Q25421425","Clube e Escola de Rugby Samambaia","rugby union team",NA,NA,NA,NA,NA,NA,"Brazil",NA,NA,NA,NA,NA,"11bx1g1ry5",NA,NA,NA,NA,NA
 "Q25477067","Mouguerre Union","rugby union team","1962-05-25","1962-5-25",NA,NA,NA,NA,"France",NA,NA,NA,"Mouguerre",NA,NA,NA,NA,NA,NA,NA
@@ -1190,7 +1190,7 @@
 "Q26267366","Rugby Club Waterland","rugby union club",NA,NA,NA,NA,NA,NA,"Netherlands",NA,NA,NA,NA,NA,"11c0rhfyxd",NA,NA,NA,NA,NA
 "Q2633484","Utrechtse Studenten Rugby Society","rugby union club",NA,NA,NA,NA,NA,NA,"Netherlands",NA,NA,NA,NA,NA,"121d6f87",NA,NA,NA,NA,NA
 "Q2637322","Petrarca Rugby","rugby union club","1947-01-01","1947-1-1",NA,NA,"Neri","Italian Rugby Federation","Italy","Serie A Élite","Stadio Plebiscito","7715","Padua",NA,NA,"Petrarca_Rugby","Petrarca_Rugby_Padoue","Petrarca_Rugby","Petrarca_Rugby","%E3%83%9A%E3%83%88%E3%83%A9%E3%83%AB%E3%82%AB%E3%83%BB%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC"
-"Q2640559","Independiente de Neuquén","rugby union club","1921-01-01","1921-1-1",NA,NA,NA,NA,"Argentina",NA,"Q21403393",NA,"Neuquén",NA,NA,"Independiente_de_Neuqu%C3%A9n",NA,NA,"Club_Atl%C3%A9tico_Independiente_(Neuqu%C3%A9n)",NA
+"Q2640559","Independiente de Neuquén","rugby union club","1921-01-01","1921-1-1",NA,NA,NA,NA,"Argentina",NA,"Estadio La Chacra",NA,"Neuquén",NA,NA,"Independiente_de_Neuqu%C3%A9n",NA,NA,"Club_Atl%C3%A9tico_Independiente_(Neuqu%C3%A9n)",NA
 "Q2650954","SRC Thor","rugby union club",NA,NA,NA,NA,NA,NA,"Netherlands",NA,NA,NA,NA,NA,"122zkfw1",NA,NA,NA,NA,NA
 "Q266149","Free State Cheetahs","rugby union club","1895-01-01","1895-1-1",NA,NA,NA,"South African Rugby Union","South Africa","Currie Cup","Free State Stadium","48000",NA,NA,NA,"Free_State_Cheetahs","Free_State_Cheetahs","Free_State_Cheetahs","Free_State_Cheetahs","%E3%83%95%E3%83%AA%E3%83%BC%E3%82%B9%E3%83%86%E3%82%A4%E3%83%88%E3%83%BB%E3%83%81%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%BA"
 "Q26760329","Japan national wheelchair rugby team","national rugby union team",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,"11c15ctcg8","Japan_national_wheelchair_rugby_team",NA,NA,NA,"%E8%BB%8A%E3%81%84%E3%81%99%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E6%97%A5%E6%9C%AC%E4%BB%A3%E8%A1%A8"
@@ -1239,7 +1239,7 @@
 "Q28407530","Old Aloysians RFC","rugby union club",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,"11ddxv85hf","Old_Aloysians_RFC",NA,NA,NA,NA
 "Q28407535","Hutchesons Aloysians","rugby union club","1990-01-01","1990-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,"11c5_z6gp4","Hutchesons_Aloysians",NA,NA,NA,NA
 "Q28408132","Brighton & Hove Sea Serpents","rugby union club",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,"11c60_50z9","Brighton_%26_Hove_Sea_Serpents_RFC",NA,NA,NA,NA
-"Q2841363","Rugby San Donà","rugby union club","1959-01-01","1959-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie B","Q3967873","1500",NA,NA,"112yg120_","Rugby_San_Don%C3%A0","Amatori_Rugby_San_Don%C3%A0","Rugby_San_Don%C3%A0",NA,NA
+"Q2841363","Rugby San Donà","rugby union club","1959-01-01","1959-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie B","Stadio Romolo Pacifici","1500",NA,NA,"112yg120_","Rugby_San_Don%C3%A0","Amatori_Rugby_San_Don%C3%A0","Rugby_San_Don%C3%A0",NA,NA
 "Q2841455","Club San Luis","rugby union club","1961-01-01","1961-1-1",NA,NA,NA,NA,"Argentina",NA,NA,NA,"Tolosa",NA,NA,"Club_San_Luis","Club_San_Luis_(rugby_%C3%A0_XV)",NA,"Club_San_Luis",NA
 "Q28446145","Towcestrians Sports Club","rugby union club","1933-01-01","1933-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,"Towcester",NA,"11cp5_nwzp","Towcestrians_Sports_Club",NA,NA,NA,NA
 "Q28495465","Union Rugby Club de Dumbéa","rugby union team","2009-01-01","2009-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Dumbéa",NA,"11c5zxq160",NA,"Union_Rugby_Club_de_Dumb%C3%A9a",NA,NA,NA
@@ -1490,7 +1490,7 @@
 "Q3416293","Racing Club Vichy Rugby","rugby union team","1905-01-01","1905-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Vichy",NA,NA,"RC_Vichy_(rugby_union)","Racing_Club_Vichy_rugby",NA,NA,NA
 "Q3416294","RC Chalon","rugby union team","1899-01-01","1899-1-1","2016-02-16","2016-2-16",NA,NA,"France",NA,NA,NA,"Chalon-sur-Saône",NA,NA,"RC_Chalon","Racing_Club_chalonnais",NA,NA,NA
 "Q3416304","Rugby Club de l'agglomération de Cergy-Pontoise","rugby union team","2003-06-01","2003-6-1","2011-07-26","2011-7-26",NA,NA,"France",NA,NA,NA,"Pontoise",NA,"121259c4",NA,"Rugby_Club_de_l%27agglom%C3%A9ration_de_Cergy-Pontoise",NA,NA,NA
-"Q3418861","Randwick DRUFC","rugby union team","1882-01-01","1882-1-1",NA,NA,"Wicks; Galloping Greens","Rugby Australia","Australia","Shute Shield",NA,NA,"City of Randwick",NA,NA,"Randwick_DRUFC","Randwick_District_Rugby_Union_Football_Club","Randwick_District_Rugby_Union_Football_Club","Randwick_DRUFC","%E3%83%A9%E3%83%B3%E3%83%89%E3%82%A6%E3%82%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC"
+"Q3418861","Randwick DRUFC","rugby union team","1882-01-01","1882-1-1",NA,NA,"Wicks; Galloping Greens","Rugby Australia","Australia","Shute Shield",NA,NA,"Randwick",NA,NA,"Randwick_DRUFC","Randwick_District_Rugby_Union_Football_Club","Randwick_District_Rugby_Union_Football_Club","Randwick_DRUFC","%E3%83%A9%E3%83%B3%E3%83%89%E3%82%A6%E3%82%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC"
 "Q3431476","Richmond Rugby Club","rugby union club","1861-01-01","1861-1-1",NA,NA,NA,"Rugby Football Union","United Kingdom","National League 1","Athletic Ground","4500",NA,NA,NA,"Richmond_F.C.","Richmond_Football_Club","Richmond_Football_Club",NA,"%E3%83%AA%E3%83%83%E3%83%81%E3%83%A2%E3%83%B3%E3%83%89FC"
 "Q3435957","RC Dragon Brno","rugby union team","1946-01-01","1946-1-1",NA,NA,NA,NA,"Czech Republic",NA,NA,NA,NA,NA,NA,"RC_Dragon_Brno",NA,"Rugby_Club_Dragon_Brno",NA,NA
 "Q3442851","Rosslyn Park F.C.","rugby union team","1879-01-01","1879-1-1",NA,NA,NA,NA,"United Kingdom","National League 1","The Rock","2000",NA,NA,NA,"Rosslyn_Park_F.C.","Rosslyn_Park_Football_Club","Rosslyn_Park_Football_Club",NA,"%E3%83%AD%E3%82%BA%E3%83%AA%E3%83%B3%E3%83%91%E3%83%BC%E3%82%AFFC"
@@ -1542,7 +1542,7 @@
 "Q3493865","Sport athlétique mauléonais","rugby union team","1905-01-01","1905-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Mauléon",NA,"1238s6g4",NA,"Sport_athl%C3%A9tique_maul%C3%A9onais",NA,NA,NA
 "Q3494120","Sporting club appaméen","rugby union team","1904-01-01","1904-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Pamiers",NA,"121_jmsg",NA,"Sporting_Club_appam%C3%A9en",NA,NA,NA
 "Q3494122","Sporting Club brivadois","rugby union team","1933-01-01","1933-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Brioude",NA,"1239_8dp",NA,"Sporting_Club_brivadois",NA,NA,NA
-"Q3494126","Sporting club tulliste","rugby union team","1904-01-01","1904-1-1",NA,NA,NA,NA,"France",NA,"Q3495498",NA,"Tulle",NA,"12dpwf79w",NA,"Sporting_Club_Tulle_Corr%C3%A8ze",NA,NA,NA
+"Q3494126","Sporting club tulliste","rugby union team","1904-01-01","1904-1-1",NA,NA,NA,NA,"France",NA,"Stade Alexandre-Cueille",NA,"Tulle",NA,"12dpwf79w",NA,"Sporting_Club_Tulle_Corr%C3%A8ze",NA,NA,NA
 "Q3494127","Sporting Club universitaire de France rugby","rugby union team","1895-01-01","1895-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"17th arrondissement of Paris",NA,"120x67vn",NA,"Sporting_Club_universitaire_de_France_rugby",NA,NA,NA
 "Q3494132","Sporting Club nazairien","rugby union team","1908-01-01","1908-1-1","2016-11-09","2016-11-9",NA,NA,"France",NA,NA,NA,"Saint-Nazaire",NA,"122dldyp",NA,"Sporting_nazairien_rugby",NA,NA,NA
 "Q3495283","St. Louis Bombers Rugby Football Club","rugby union team","1962-01-01","1962-1-1",NA,NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,"St._Louis_Bombers_Rugby_Football_Club","St._Louis_Bombers_Rugby_Football_Club",NA,NA,NA
@@ -1552,7 +1552,7 @@
 "Q3495932","Stade beaumontois Lomagne rugby","rugby union team","1903-01-01","1903-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Beaumont-de-Lomagne",NA,"1216x1j4",NA,"Stade_beaumontois_Lomagne_rugby",NA,NA,NA
 "Q3495934","Stade Bordelais","rugby union team","1889-07-18","1889-7-18",NA,NA,NA,NA,"France",NA,NA,NA,"Le Bouscat",NA,NA,"Stade_Bordelais","Stade_bordelais_(rugby_%C3%A0_XV)",NA,NA,NA
 "Q3496060","Stade Dijonnais Côte D'Or","rugby union team","1923-01-01","1923-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Longvic",NA,"122j3mx9","Stade_Dijonnais_C%C3%B4te_D%27Or","Stade_dijonnais",NA,NA,NA
-"Q3496061","Stade domontois rugby club","rugby union club","1970-01-01","1970-1-1",NA,NA,NA,NA,"France",NA,"Q96210477",NA,"Domont",NA,NA,NA,"Stade_domontois_rugby_club",NA,NA,NA
+"Q3496061","Stade domontois rugby club","rugby union club","1970-01-01","1970-1-1",NA,NA,NA,NA,"France",NA,"Stade Omnisports des Fauvettes",NA,"Domont",NA,NA,NA,"Stade_domontois_rugby_club",NA,NA,NA
 "Q3496123","Stade hendayais rugby","rugby union team","1908-01-01","1908-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Hendaye",NA,"122np64f",NA,"Stade_hendayais_rugby",NA,NA,NA
 "Q3496125","Stade Langonnais","rugby union team","1904-01-01","1904-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Langon",NA,"121j1yqm",NA,"Stade_langonnais",NA,NA,NA
 "Q3496127","Stade lavelanétien","rugby union team","1920-01-01","1920-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Lavelanet",NA,"121dcvk6",NA,"Stade_lavelan%C3%A9tien",NA,NA,NA
@@ -1675,8 +1675,8 @@
 "Q3600362","A.S. Rugby Milano","rugby union team","1945-01-01","1945-1-1","1965-01-01","1965-1-1",NA,"Italian Rugby Federation","Italy","Serie A","G.B. Curioni Sports Centre","3000","Milan",NA,"122np6nc",NA,"Rugby_Milano","Rugby_Milano",NA,NA
 "Q3600363","Rugby Monza 1949","rugby union club","1949-01-01","1949-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie C",NA,NA,NA,NA,"122_4m1m",NA,NA,"Rugby_Monza_1949",NA,NA
 "Q3601249","Rugby Casale","rugby union club","1952-01-01","1952-1-1",NA,NA,"Caimani","Italian Rugby Federation","Italy","Serie A",NA,NA,NA,NA,"1218f670",NA,NA,"Rugby_Casale",NA,NA
-"Q3601250","ASD Rugby Rieti","rugby union team","1961-01-01","1961-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie C","Q64410387","2000",NA,NA,"121kq4bn",NA,NA,"ASD_Arieti_Rugby_Rieti_2014",NA,NA
-"Q3601251","Rugby Udine","rugby union team","1928-01-01","1928-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie A","Q3942409","1500","Udine",NA,"11h1t36zj",NA,NA,"Rugby_Udine_Union_FVG",NA,NA
+"Q3601250","ASD Rugby Rieti","rugby union team","1961-01-01","1961-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie C","Stadio Fulvio Iacoboni","2000",NA,NA,"121kq4bn",NA,NA,"ASD_Arieti_Rugby_Rieti_2014",NA,NA
+"Q3601251","Rugby Udine","rugby union team","1928-01-01","1928-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie A","Rugby Stadium Otello Gerli","1500","Udine",NA,"11h1t36zj",NA,NA,"Rugby_Udine_Union_FVG",NA,NA
 "Q3606252","African Leopards","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"African_Leopards","%C3%89quipe_des_L%C3%A9opards_africains_de_rugby_%C3%A0_XV","African_Leopards",NA,NA
 "Q3613715","Amatori Parma Rugby Club","rugby union team","1971-01-01","1971-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie B","Stadio Sergio Lanfranchi","5000",NA,NA,"120r4vgv",NA,NA,"Amatori_Parma_Rugby_Club",NA,NA
 "Q3613716","Amatori Rugby Capoterra","rugby union club","1972-01-01","1972-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie B",NA,NA,"Capoterra",NA,NA,NA,NA,"Amatori_Rugby_Capoterra",NA,NA
@@ -1695,7 +1695,7 @@
 "Q3649000","CUS Padova Rugby","rugby union team",NA,NA,NA,NA,NA,"Italian Rugby Federation","Italy",NA,NA,NA,NA,NA,"120wr0f8",NA,NA,"CUS_Padova_Rugby",NA,NA
 "Q3649007","CUS Roma Rugby","rugby union team","1934-01-01","1934-1-1",NA,NA,NA,"Italian Rugby Federation","Italy",NA,"Campo Roma",NA,NA,NA,"1215ck9k","CUS_Roma_Rugby",NA,"CUS_Roma_Rugby",NA,NA
 "Q3649009","CUS Siena","rugby union club","1946-01-01","1946-1-1",NA,NA,NA,NA,"Italy",NA,NA,NA,"Siena",NA,"122jkpsm",NA,NA,"CUS_Siena",NA,NA
-"Q3649017","Verona Rugby","rugby union club","1963-01-01","1963-1-1",NA,NA,"Gli Antracite","Italian Rugby Federation","Italy","Serie A","Q111608527","2500","Verona",NA,"11g0kd6q9j",NA,NA,"Verona_Rugby",NA,NA
+"Q3649017","Verona Rugby","rugby union club","1963-01-01","1963-1-1",NA,NA,"Gli Antracite","Italian Rugby Federation","Italy","Serie A","Payanini Center","2500","Verona",NA,"11g0kd6q9j",NA,NA,"Verona_Rugby",NA,NA
 "Q3650906","Italy A national rugby union team","second national rugby union teams",NA,NA,NA,NA,"Azzurri",NA,"Italy",NA,NA,NA,NA,NA,NA,"Italy_A_national_rugby_union_team",NA,"Nazionale_A_di_rugby_a_15_dell%27Italia","Italia_A",NA
 "Q3651754","World XV","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"World_XV","XV_mondial","World_XV","World_XV",NA
 "Q3654982","Canada West","rugby union team","2006-01-01","2006-1-1",NA,NA,NA,NA,"Canada",NA,NA,NA,NA,NA,NA,"Canada_West_(rugby_union)",NA,"Canada_West",NA,NA
@@ -1703,7 +1703,7 @@
 "Q367722","Denmark national rugby union team","national rugby union team","1949-01-01","1949-1-1",NA,NA,NA,NA,"Denmark",NA,NA,NA,NA,NA,NA,"Denmark_national_rugby_union_team","%C3%89quipe_du_Danemark_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_della_Danimarca","Selecci%C3%B3n_de_rugby_de_Dinamarca",NA
 "Q3681296","Club Atlético Provincial","rugby union club","1903-05-25","1903-5-25",NA,NA,NA,NA,"Argentina",NA,NA,NA,"Rosario",NA,NA,"Club_Atl%C3%A9tico_Provincial",NA,"Club_Atl%C3%A9tico_Provincial",NA,NA
 "Q3681461","Club Atlético San Isidro (rugby)","rugby union team",NA,NA,NA,NA,NA,NA,"Argentina",NA,"Club Atlético San Isidro Stadium",NA,NA,NA,"1hhzgb33p",NA,NA,"Club_Atl%C3%A9tico_de_San_Isidro_(rugby_a_15)",NA,NA
-"Q3682837","Colleferro Rugby 1965","rugby union club","1965-01-01","1965-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie B","Q3967839","1650",NA,NA,"1pzpdgqqx",NA,NA,"Colleferro_Rugby_1965",NA,NA
+"Q3682837","Colleferro Rugby 1965","rugby union club","1965-01-01","1965-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie B","Stadio Maurizio Natali","1650",NA,NA,"1pzpdgqqx",NA,NA,"Colleferro_Rugby_1965",NA,NA
 "Q3725357","England Counties XV","national rugby union team","2001-01-01","2001-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"England_Counties_XV",NA,"England_Counties",NA,NA
 "Q373704","Niue national rugby union team","national rugby union team","1983-01-01","1983-1-1",NA,NA,"Toa Niue",NA,"Niue",NA,NA,NA,NA,NA,NA,"Niue_national_rugby_union_team","%C3%89quipe_de_Niue_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_di_Niue","Selecci%C3%B3n_de_rugby_de_Niue",NA
 "Q374255","Bosnia and Herzegovina national rugby union team","national rugby union team","1992-01-01","1992-1-1",NA,NA,NA,NA,"Bosnia and Herzegovina",NA,NA,NA,NA,NA,NA,"Bosnia_and_Herzegovina_national_rugby_union_team","%C3%89quipe_de_Bosnie-Herz%C3%A9govine_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_della_Bosnia_ed_Erzegovina","Selecci%C3%B3n_de_rugby_de_Bosnia_y_Herzegovina",NA
@@ -1759,7 +1759,7 @@
 "Q3942392","Rugby Livorno 1931","rugby union team","1931-01-01","1931-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie A",NA,NA,NA,NA,NA,"Rugby_Livorno_1931",NA,"Rugby_Livorno_1931",NA,NA
 "Q3942399","Rugby Rho","rugby union team","1947-01-01","1947-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie C",NA,NA,NA,NA,"122qglxp",NA,NA,"Rugby_Rho",NA,NA
 "Q3942400","Rugby Riviera 1975","rugby union team","1975-01-01","1975-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie C",NA,NA,"Mira",NA,"1ylhld6g4",NA,NA,"Rugby_Riviera_1975",NA,NA
-"Q3942415","ASD Rugby Vicenza","rugby union team","1974-01-01","1974-1-1",NA,NA,"I Biancorossi","Italian Rugby Federation","Italy","Serie A Élite","Q113130924","1000","Vicenza",NA,"12301y37","Rangers_Vicenza_Rugby","Rangers_Rugby_Vicenza","Rugby_Vicenza",NA,NA
+"Q3942415","ASD Rugby Vicenza","rugby union team","1974-01-01","1974-1-1",NA,NA,"I Biancorossi","Italian Rugby Federation","Italy","Serie A Élite","Rugby Arena","1000","Vicenza",NA,"12301y37","Rangers_Vicenza_Rugby","Rangers_Rugby_Vicenza","Rugby_Vicenza",NA,NA
 "Q3954857","Mayotte national rugby union team","national rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mayotte_national_rugby_union_team","%C3%89quipe_de_Mayotte_de_rugby_%C3%A0_XV","Selezione_maschile_di_rugby_a_15_di_Mayotte",NA,NA
 "Q3958419","VII Rugby Torino","rugby union team","1910-01-01","1910-1-1","1950-01-01","1950-1-1",NA,"Italian Rugby Federation","Italy","Serie A",NA,NA,"Settimo Torinese",NA,"1ylhlf0m8",NA,NA,"VII_Rugby_Torino",NA,NA
 "Q3963744","Società Sportiva Rugby Reggio Calabria","defunct rugby union club","1965-01-01","1965-1-1","1979-01-01","1979-1-1",NA,"Italian Rugby Federation","Italy",NA,NA,NA,NA,NA,"1225dn7f",NA,NA,"Societ%C3%A0_Sportiva_Rugby_Reggio_Calabria",NA,NA
@@ -1846,7 +1846,7 @@
 "Q4747155","Ammanford RFC","rugby union club","1887-01-01","1887-1-1",NA,NA,NA,NA,"Wales",NA,NA,NA,NA,NA,NA,"Ammanford_RFC",NA,NA,NA,NA
 "Q4747977","Amoskeag Rugby Club","rugby union team",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Amoskeag_Rugby_Club",NA,NA,NA,NA
 "Q4748551","Ampthill Rugby Club","rugby union club","1881-01-01","1881-1-1",NA,NA,NA,NA,"United Kingdom","RFU Championship","Dillingham Park",NA,"Ampthill",NA,NA,"Ampthill_RUFC","Ampthill_Rugby_Union_Football_Club",NA,NA,"%E3%82%A2%E3%83%B3%E3%83%97%E3%83%86%E3%82%A3%E3%83%ABRUFC"
-"Q47488335","Rugby Club Winterthur","rugby union club","2009-03-01","2009-3-1",NA,NA,NA,NA,"Switzerland",NA,"Q2326060",NA,"Winterthur",NA,"11gfjbz0ck",NA,NA,NA,NA,NA
+"Q47488335","Rugby Club Winterthur","rugby union club","2009-03-01","2009-3-1",NA,NA,NA,NA,"Switzerland",NA,"Stadion Deutweg",NA,"Winterthur",NA,"11gfjbz0ck",NA,NA,NA,NA,NA
 "Q474910","Unione Rugby Capitolina","rugby union team","1996-01-01","1996-1-1",NA,NA,NA,"Italian Rugby Federation","Italy","Serie A; Serie B",NA,NA,NA,NA,NA,"Unione_Rugby_Capitolina","Unione_Rugby_Capitolina","Unione_Rugby_Capitolina",NA,NA
 "Q4767911","Annan RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Annan_RFC",NA,NA,NA,NA
 "Q4774106","Anti-Assassins","rugby union team","1950-01-01","1950-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Anti-Assassins",NA,NA,NA,NA
@@ -2103,7 +2103,7 @@
 "Q5172659","Corpus Christi Rugby Football Club","rugby union team","1973-01-01","1973-1-1",NA,NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,"Corpus_Christi_Rugby_Football_Club",NA,NA,NA,NA
 "Q5173205","Corsários Rugby Clube","rugby union team",NA,NA,NA,NA,NA,NA,"Brazil",NA,NA,NA,NA,NA,NA,"Cors%C3%A1rios_Rugby_Clube",NA,NA,NA,NA
 "Q5173414","Corus (Port Talbot) RFC","rugby union team","1908-01-01","1908-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Tata_Steel_RFC",NA,NA,NA,NA
-"Q517805","Real Oviedo Rugby","rugby union team","1983-01-01","1983-1-1",NA,NA,NA,NA,"Spain","División de Honor B de Rugby","Q54366220",NA,"Oviedo",NA,NA,"Oviedo_RC","Real_Oviedo_Rugby",NA,"Real_Oviedo_Rugby",NA
+"Q517805","Real Oviedo Rugby","rugby union team","1983-01-01","1983-1-1",NA,NA,NA,NA,"Spain","División de Honor B de Rugby","Campo de Rugby El Naranco",NA,"Oviedo",NA,NA,"Oviedo_RC","Real_Oviedo_Rugby",NA,"Real_Oviedo_Rugby",NA
 "Q5179615","Cowbridge RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Cowbridge_RFC",NA,NA,NA,NA
 "Q518116","France national rugby union team","national rugby union team","1906-01-01","1906-1-1",NA,NA,NA,NA,"France",NA,"Parc des Princes; Yves du Manoir Stadium; Stade de France","NA; 80698",NA,"france",NA,"France_national_rugby_union_team","%C3%89quipe_de_France_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_della_Francia","Selecci%C3%B3n_de_rugby_de_Francia","%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B9%E4%BB%A3%E8%A1%A8"
 "Q5182986","Crawley Rugby Football Club","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Crawley_RFC",NA,NA,NA,NA
@@ -2220,7 +2220,7 @@
 "Q5478456","France national under-20 rugby union team","rugby union team","2008-01-01","2008-1-1",NA,NA,"Les Bleuets",NA,"France",NA,NA,NA,NA,NA,NA,"France_national_under-20_rugby_union_team","%C3%89quipe_de_France_de_rugby_%C3%A0_XV_des_moins_de_20_ans","Selezioni_giovanili_della_nazionale_di_rugby_a_15_della_Francia","Selecci%C3%B3n_juvenil_de_rugby_de_Francia","U-20%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B9%E4%BB%A3%E8%A1%A8"
 "Q548720","Old Belvedere","rugby union team","1930-01-01","1930-1-1",NA,NA,NA,NA,"Ireland","All-Ireland League",NA,NA,NA,NA,NA,"Old_Belvedere_R.F.C.","Old_Belvedere_Rugby_Football_Club","Old_Belvedere_Rugby_Football_Club",NA,NA
 "Q548893","Royal Kituro Rugby Club","rugby union team","1961-01-01","1961-1-1",NA,NA,NA,"Belgian Rugby Federation","Belgium","Belgian Elite League",NA,NA,NA,NA,NA,"Royal_Kituro_Rugby_Club","Royal_Kituro_Rugby_Club","Royal_Kituro_Rugby_Club","Kituro_Rugby_Club",NA
-"Q54953803","Rugby New York","rugby union team","2018-01-01","2018-1-1",NA,NA,NA,"USA Rugby","United States","Major League Rugby","Q16560680",NA,"Brooklyn",NA,"11g0gdjfxt","Rugby_New_York","Rugby_New_York","Rugby_New_York","Rugby_New_York","%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E3%83%BB%E3%83%A6%E3%83%8A%E3%82%A4%E3%83%86%E3%83%83%E3%83%89%E3%83%BB%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF"
+"Q54953803","Rugby New York","rugby union team","2018-01-01","2018-1-1",NA,NA,NA,"USA Rugby","United States","Major League Rugby","John F. Kennedy Stadium",NA,"Brooklyn",NA,"11g0gdjfxt","Rugby_New_York","Rugby_New_York","Rugby_New_York","Rugby_New_York","%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E3%83%BB%E3%83%A6%E3%83%8A%E3%82%A4%E3%83%86%E3%83%83%E3%83%89%E3%83%BB%E3%83%8B%E3%83%A5%E3%83%BC%E3%83%A8%E3%83%BC%E3%82%AF"
 "Q55007171","Lima Rugby Club","rugby union team","1996-04-09","1996-4-9",NA,NA,NA,NA,"Peru",NA,NA,NA,NA,NA,"11g0sltc8m",NA,NA,NA,"Lima_Rugby_Club",NA
 "Q550457","Ukraine national rugby union team","national rugby union team","1991-11-21","1991-11-21",NA,NA,NA,NA,"Ukraine",NA,NA,NA,NA,NA,NA,"Ukraine_national_rugby_union_team","%C3%89quipe_d%27Ukraine_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_dell%27Ucraina","Selecci%C3%B3n_de_rugby_de_Ucrania",NA
 "Q5507699","Munakata Sanix Blues","rugby union club","1994-01-01","1994-1-1",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"Munakata_Sanix_Blues","Munakata_Sanix_Blues",NA,NA,"%E5%AE%97%E5%83%8F%E3%82%B5%E3%83%8B%E3%83%83%E3%82%AF%E3%82%B9%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B9"
@@ -2280,7 +2280,7 @@
 "Q5615840","Guildford Rugby Club","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Guildford_Rugby",NA,NA,NA,NA
 "Q5618761","Gungahlin Eagles","rugby union club",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,"Gungahlin_Eagles",NA,NA,NA,NA
 "Q5623563","Gwernyfed RFC","rugby union team","1965-01-01","1965-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Gwernyfed_RFC",NA,NA,NA,NA
-"Q56251781","Osos del Pardo Rugby Club","rugby union team",NA,NA,NA,NA,NA,NA,"Spain",NA,NA,NA,"Community of Madrid",NA,NA,NA,NA,NA,NA,NA
+"Q56251781","Osos del Pardo Rugby Club","rugby union team",NA,NA,NA,NA,NA,NA,"Spain",NA,NA,NA,"Madrid",NA,NA,NA,NA,NA,NA,NA
 "Q5625607","Gyulai Várvédők RK","rugby union team","2010-01-01","2010-1-1",NA,NA,NA,NA,"Hungary",NA,NA,NA,NA,NA,NA,"Gyulai_V%C3%A1rv%C3%A9d%C5%91k_RK",NA,NA,NA,NA
 "Q5625632","Gyöngyösi Farkasok RK","rugby union team","1991-01-01","1991-1-1",NA,NA,NA,NA,"Hungary",NA,NA,NA,NA,NA,NA,"Gy%C3%B6ngy%C3%B6si_Farkasok_RK",NA,NA,NA,NA
 "Q5626455","Gödöllői Ördögök RC","rugby union team","2006-01-01","2006-1-1",NA,NA,NA,NA,"Hungary",NA,NA,NA,NA,NA,NA,"G%C3%B6d%C3%B6ll%C5%91i_%C3%96rd%C3%B6g%C3%B6k_RC",NA,NA,NA,NA
@@ -2555,7 +2555,7 @@
 "Q6554475","Linlithgow RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Linlithgow_RFC",NA,NA,NA,NA
 "Q6554550","Linna RC","rugby union team","2011-01-01","2011-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Linna_RC",NA,NA,NA,NA
 "Q6559031","Lismore RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Lismore_RFC",NA,NA,NA,NA
-"Q65719214","Rugby Club de Drancy","rugby union team","1947-01-01","1947-1-1",NA,NA,NA,NA,"France",NA,"Q96210667",NA,"Drancy",NA,"11fmhx2cnw",NA,"Rugby_Club_de_Drancy",NA,NA,NA
+"Q65719214","Rugby Club de Drancy","rugby union team","1947-01-01","1947-1-1",NA,NA,NA,NA,"France",NA,"Stade Guy-Môquet",NA,"Drancy",NA,"11fmhx2cnw",NA,"Rugby_Club_de_Drancy",NA,NA,NA
 "Q657211","London Scottish F.C.","rugby union club","1878-01-01","1878-1-1",NA,NA,NA,NA,"United Kingdom","RFU Championship",NA,NA,NA,NA,NA,"London_Scottish_F.C.","London_Scottish_Football_Club","London_Scottish_Football_Club","London_Scottish_FC","%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3%E3%83%BB%E3%82%B9%E3%82%B3%E3%83%86%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5FC"
 "Q661552","AC Bobigny 93 Rugby","rugby union team","1965-01-01","1965-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Bobigny",NA,NA,"AC_Bobigny_93_Rugby","Athletic_Club_de_Bobigny_93_rugby",NA,NA,NA
 "Q66314447","Olympique de Nouméa rugby","rugby union team","1955-01-01","1955-1-1",NA,NA,NA,NA,"France",NA,NA,NA,"Nouméa",NA,NA,NA,NA,NA,NA,NA
@@ -2593,7 +2593,7 @@
 "Q670755","Switzerland national rugby union team","national rugby union team","1973-04-11","1973-4-11",NA,NA,"Le XV de l'edelweiss",NA,"Switzerland",NA,NA,NA,NA,NA,NA,"Switzerland_national_rugby_union_team","%C3%89quipe_de_Suisse_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_della_Svizzera","Selecci%C3%B3n_de_rugby_de_Suiza",NA
 "Q6707732","Lydney RFC","rugby union team","1888-01-01","1888-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Lydney_RFC",NA,NA,NA,NA
 "Q6708205","Lymm RFC","rugby union team","1960-01-01","1960-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Lymm_RFC",NA,NA,NA,NA
-"Q67087991","Lokomotiv Penza","rugby union club",NA,NA,NA,NA,NA,NA,"Russia",NA,"Q106786479",NA,NA,NA,"11hzv3kqm0","Lokomotiv_Penza","Lokomotiv_Penza",NA,NA,"%E3%83%AD%E3%82%B3%E3%83%A2%E3%83%86%E3%82%A3%E3%83%96%E3%83%BB%E3%83%9A%E3%83%B3%E3%82%B6"
+"Q67087991","Lokomotiv Penza","rugby union club",NA,NA,NA,NA,NA,NA,"Russia",NA,"Stade Pervomaisky",NA,NA,NA,"11hzv3kqm0","Lokomotiv_Penza","Lokomotiv_Penza",NA,NA,"%E3%83%AD%E3%82%B3%E3%83%A2%E3%83%86%E3%82%A3%E3%83%96%E3%83%BB%E3%83%9A%E3%83%B3%E3%82%B6"
 "Q67200317","Union athlétique mimizannaise","rugby union team","1920-04-01","1920-4-1",NA,NA,NA,NA,"France",NA,NA,NA,"Mimizan",NA,"11h56jbxf3",NA,"Union_athl%C3%A9tique_mimizannaise",NA,NA,NA
 "Q6722862","Maccabi RFC","rugby union club","1969-01-01","1969-1-1",NA,NA,NA,NA,"Australia",NA,NA,NA,"Bondi Beach",NA,NA,"Maccabi_R.F.C.",NA,NA,NA,NA
 "Q6722935","Macclesfield R.U.F.C.","rugby union team","1877-01-01","1877-1-1",NA,NA,NA,NA,"United Kingdom","National League 2 North",NA,NA,NA,NA,NA,"Macclesfield_R.U.F.C.",NA,NA,NA,NA
@@ -2660,7 +2660,7 @@
 "Q6894166","Mohicans Football Club","rugby union team","1869-01-01","1869-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Mohicans_Football_Club",NA,NA,NA,NA
 "Q6895736","Mold RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Mold_RFC",NA,NA,NA,NA
 "Q6900983","Monkstown Football Club","rugby union team","1883-01-01","1883-1-1",NA,NA,NA,NA,"Ireland",NA,NA,NA,NA,NA,NA,"Monkstown_Football_Club",NA,NA,NA,NA
-"Q6901107","Monmouth RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,"Druid's Head Inn; Monmouth",NA,NA,"Monmouth_RFC",NA,NA,NA,NA
+"Q6901107","Monmouth RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,"Monmouth",NA,NA,"Monmouth_RFC",NA,NA,NA,NA
 "Q6901115","Monmouth Rugby Club","rugby union team","1973-01-01","1973-1-1",NA,NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,"Monmouth_Rugby_Club",NA,NA,NA,NA
 "Q6901165","Monmouthshire County RFC","rugby union team",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,"Monmouthshire",NA,NA,"Monmouthshire_County_RFC",NA,NA,NA,NA
 "Q6904775","Monte Grande Rugby Club","rugby union club","1965-01-01","1965-1-1",NA,NA,NA,NA,"Argentina",NA,NA,NA,"Monte Grande",NA,NA,"Monte_Grande_Rugby_Club",NA,NA,NA,NA
@@ -2842,7 +2842,7 @@
 "Q7276158","RC Antares","rugby union club",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"RC_Antares",NA,NA,NA,NA
 "Q7276159","RC Argo","rugby union team","1992-01-01","1992-1-1",NA,NA,NA,NA,"Ukraine",NA,NA,NA,"Kyiv",NA,NA,"RC_Argo",NA,NA,NA,NA
 "Q7276160","RC Arka Gdynia","rugby union team","1996-01-01","1996-1-1",NA,NA,NA,NA,"Poland",NA,NA,NA,NA,NA,NA,"RC_Arka_Gdynia",NA,NA,NA,NA
-"Q7276161","RC Aviator","rugby union club","1963-01-01","1963-1-1",NA,NA,NA,NA,"Ukraine","Q11221912","Spartak Stadium, Kyiv",NA,"Kyiv",NA,NA,"RC_Aviator",NA,NA,NA,NA
+"Q7276161","RC Aviator","rugby union club","1963-01-01","1963-1-1",NA,NA,NA,NA,"Ukraine","Ukrainian Rugby Championship","Spartak Stadium, Kyiv",NA,"Kyiv",NA,NA,"RC_Aviator",NA,NA,NA,NA
 "Q7276162","RC Batyari","rugby union team","2009-01-01","2009-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"RC_Batyari",NA,NA,NA,NA
 "Q7276164","RC Bystrc","rugby union club","1953-01-01","1953-1-1",NA,NA,NA,NA,"Czech Republic",NA,NA,NA,NA,NA,NA,"RC_Bystrc",NA,NA,NA,NA
 "Q7276166","Rugby Union Donau Wien","rugby union team","1999-01-01","1999-1-1",NA,NA,NA,NA,"Austria",NA,NA,NA,NA,NA,NA,"RC_Donau","Rugby_Union_Donau_Wien",NA,NA,NA
@@ -2853,7 +2853,7 @@
 "Q7276172","RC Graz","rugby union club",NA,NA,NA,NA,NA,NA,"Austria",NA,NA,NA,NA,NA,NA,"RC_Graz",NA,NA,NA,NA
 "Q7276176","RC Havířov","rugby union club","1966-01-01","1966-1-1",NA,NA,NA,NA,"Czech Republic",NA,NA,NA,NA,NA,NA,"RC_Hav%C3%AD%C5%99ov",NA,NA,NA,NA
 "Q7276177","RC Krems","rugby union team",NA,NA,NA,NA,NA,NA,"Austria",NA,NA,NA,"Krems",NA,NA,"RC_Krems",NA,NA,NA,NA
-"Q7276184","RC Obolon-University","rugby union team","1984-01-01","1984-1-1",NA,NA,NA,NA,"Ukraine","Q11221912",NA,NA,NA,NA,"11c5fzsbzm","RC_Obolon-University",NA,NA,NA,NA
+"Q7276184","RC Obolon-University","rugby union team","1984-01-01","1984-1-1",NA,NA,NA,NA,"Ukraine","Ukrainian Rugby Championship",NA,NA,NA,NA,"11c5fzsbzm","RC_Obolon-University",NA,NA,NA,NA
 "Q7276185","RC Olymp","rugby union club","1989-01-01","1989-1-1",NA,NA,NA,NA,NA,NA,NA,NA,"Kharkiv",NA,NA,"RC_Olymp",NA,NA,NA,NA
 "Q7276186","RC Odense","rugby union team","1980-01-01","1980-1-1",NA,NA,NA,NA,"Denmark",NA,NA,NA,NA,NA,NA,"RC_Odense",NA,NA,NA,NA
 "Q7276187","RC Polytechnic","rugby union club","1965-01-01","1965-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"RC_Polytechnic",NA,NA,NA,NA
@@ -3252,7 +3252,7 @@
 "Q93110757","Servette Rugby Club de Genève","rugby union team","2014-01-01","2014-1-1",NA,NA,NA,NA,"Switzerland",NA,NA,NA,"Geneva",NA,"11ggb2syyc",NA,"Servette_Rugby_Club",NA,NA,NA
 "Q932889","Hong Kong national rugby union team","national rugby union team","1969-03-09","1969-3-9",NA,NA,"Dragons",NA,"People's Republic of China",NA,NA,NA,NA,NA,NA,"Hong_Kong_national_rugby_union_team","%C3%89quipe_de_Hong_Kong_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_di_Hong_Kong","Selecci%C3%B3n_de_rugby_de_Hong_Kong","%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%A6%99%E6%B8%AF%E4%BB%A3%E8%A1%A8"
 "Q9338136","Skra Warszawa Rugby","rugby union team",NA,NA,NA,NA,NA,NA,"Poland",NA,NA,NA,NA,NA,"1215cmtx","Skra_Warsaw_(rugby)",NA,NA,NA,NA
-"Q93441437","Rugby Club Courbevoie","rugby union team",NA,NA,NA,NA,NA,NA,"France",NA,"Q31062868",NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q93441437","Rugby Club Courbevoie","rugby union team",NA,NA,NA,NA,NA,NA,"France",NA,"Centre Jean-Pierre Rives",NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q9353727","TJ Sokol Mariánské Hory","rugby union team","1947-01-01","1947-1-1",NA,NA,NA,NA,"Czech Republic",NA,NA,NA,NA,NA,NA,"TJ_Sokol_Mari%C3%A1nsk%C3%A9_Hory",NA,NA,NA,NA
 "Q936108","Maesteg RFC","rugby union team","1877-01-01","1877-1-1",NA,NA,NA,NA,"Wales",NA,"Llynfi Road","1100",NA,NA,NA,"Maesteg_RFC","Maesteg_Rugby_Football_Club","Maesteg_RFC",NA,NA
 "Q93928","Valorugby Emilia","rugby union club","1945-01-01","1945-1-1",NA,NA,"I Diavoli","Italian Rugby Federation","Italy",NA,"Stadio Mirabello","4400","Reggio Emilia",NA,NA,"Valorugby_Emilia","Rugby_Reggio_Associazione_Sportiva","Valorugby_Emilia",NA,NA
@@ -3269,7 +3269,7 @@
 "Q949807","Southern Kings","rugby union club","2009-01-01","2009-1-1",NA,NA,NA,NA,"South Africa",NA,"Nelson Mandela Bay Stadium",NA,"Gqeberha",NA,NA,"Southern_Kings","Southern_Kings","Southern_Kings","Southern_Kings","%E3%82%B5%E3%82%B6%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%B9"
 "Q950674","Zebre","rugby union franchise","2012-01-01","2012-1-1",NA,NA,"il XV del Nord-Ovest","Italian Rugby Federation","Italy","United Rugby Championship","Stadio Sergio Lanfranchi","5000","Parma","zebre",NA,"Zebre_Parma","Zebre_Parma","Zebre_Rugby_Club","Zebre_Rugby","%E3%82%BC%E3%83%96%E3%83%AC%E3%83%BB%E3%83%91%E3%83%AB%E3%83%9E"
 "Q95115354","Libelluli Rugby Football Club","rugby union team","1990-01-01","1990-1-1",NA,NA,NA,NA,"Italy",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-"Q951242","Provence Rugby","rugby union team","1970-01-01","1970-1-1",NA,NA,NA,NA,"France","Pro D2","stade Maurice-David",NA,"stade Maurice-David","provence-rugby",NA,"Provence_Rugby","Provence_Rugby","Provence_Rugby",NA,"%E3%83%97%E3%83%AD%E3%83%B4%E3%82%A1%E3%83%B3%E3%82%B9%E3%83%BB%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC"
+"Q951242","Provence Rugby","rugby union team","1970-01-01","1970-1-1",NA,NA,NA,NA,"France","Pro D2","stade Maurice-David",NA,"Aix-en-Provence","provence-rugby",NA,"Provence_Rugby","Provence_Rugby","Provence_Rugby",NA,"%E3%83%97%E3%83%AD%E3%83%B4%E3%82%A1%E3%83%B3%E3%82%B9%E3%83%BB%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC"
 "Q952709","CA Périgueux","rugby union team","1901-01-01","1901-1-1",NA,NA,NA,NA,"France",NA,"Stade Francis-Rongiéras",NA,"Périgueux",NA,NA,"CA_P%C3%A9rigueux","Club_athl%C3%A9tique_P%C3%A9rigueux_Dordogne","Club_atletico_di_P%C3%A9rigueux_Dordogne",NA,NA
 "Q953455","Czechoslovakia national rugby union team","national rugby union team","1927-05-22","1927-5-22","1992-11-15","1992-11-15",NA,NA,"Czechoslovakia",NA,NA,NA,NA,NA,NA,"Czechoslovakia_national_rugby_union_team","%C3%89quipe_de_Tch%C3%A9coslovaquie_de_rugby_%C3%A0_XV","Nazionale_maschile_di_rugby_a_15_della_Cecoslovacchia","Selecci%C3%B3n_de_rugby_de_Checoslovaquia",NA
 "Q953823","Otley R.U.F.C.","rugby union team","1865-01-01","1865-1-1",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"Otley_R.U.F.C.","Otley_Rugby_Union_Football_Club",NA,NA,NA

@@ -167,7 +167,10 @@ for (p in 1:length(idx)) {
   # check that there is a match between the tables
   if (!is.na(idx[p])) {
     alt_names <- setdiff(fullnames[[idx[p]]], players[p, "playerLabel"])
-    players[p, "altNames"] <- paste(alt_names, collapse = "; ")
+    if (length(alt_names) > 0)
+      players[p, "altNames"] <- paste(alt_names, collapse = "; ")
+    else
+      players[p, "altNames"] <- NA
   }
 }
 
@@ -195,11 +198,13 @@ dd <- as.Date(players[, "dobMax"])
 idx <- which(is.na(dd) & !is.na(players[, "dobMax"]))
 if (length(idx) > 0)
   tlog(4, "Problem when converting WD dobMax dates")
+players[, "dobMax"] <- dd
 # WD date of death
 dd <- as.Date(players[, "dodMax"])
 idx <- which(is.na(dd) & !is.na(players[, "dodMax"]))
 if (length(idx) > 0)
   tlog(4, "Problem when converting WD dodMax dates")
+players[, "dodMax"] <- dd
 # DBP date of birth
 dd <- as.Date(players_dbp[, "birthDates"], tryFormats = c("%Y-%m-%d", "%Y/%m/%d"))
 idx <- which(substr(players_dbp[, "birthDates"], start = 3, stop = 3) %in% c("/", "-"))
@@ -293,12 +298,17 @@ tlog(0, "Merging the DBpedia team data into the Wikidata table")
 # first, then complete with DBpedia content when WD is empty.
 teams <- teams_wd
 
+# clean inception date
+tlog(2, "Collapsing both WD inception date fields")
+idx <- which(!is.na(teams[, "inceptionMax"]) & is.na(teams[, "inceptionFormat"]))
+if (length(idx) > 0)
+  teams[idx, "inceptionMax"] <- NA
 
-# clean inception years
-# TODO "inceptionMax"        "inceptionFormat"
-
-# clean termination years
-# TODO "terminationMax" "terminationFormat"
+# clean termination date
+tlog(2, "Collapsing both WD termination date fields")
+idx <- which(!is.na(teams[, "terminationMax"]) & is.na(teams[, "terminationFormat"]))
+if (length(idx) > 0)
+  teams[idx, "terminationMax"] <- NA
 
 # possibly add a new column for the alternative names
 tlog(2, "Adding missing columns")
@@ -312,20 +322,84 @@ if (!("dbpediaId" %in% colnames(teams))) {
   colnames(teams)[ncol(teams)] <- "dbpediaId"
 }
 
-# keep DBP names as alternate names
-cols <- c("teamLabel", "teamNames", "nickNames")
-cols_wd <- c("nickmaneLabels")
-# TODO
+# prepare data for name merging
+idx <- match(teams[, "clubId"], teams_dbp[, "wikidataId"])
+names1 <- strsplit(teams_dbp[, "teamLabel"], "; ")
+names2 <- strsplit(teams_dbp[, "teamNames"], "; ")
+nicks1 <- strsplit(teams[, "nickmaneLabels"], "; ")
+nicks2 <- strsplit(teams_dbp[, "nickNames"], "; ")
 
-# TODO check if normalization required
-# "affiliationLabels"
-# "competitionLabels"
-# "homeVenueLabels" "homeVenueCapacities"
-# "locationLabels" 
+# only keep DBP alt names that are not already matching the WD label
+tlog(2, "Copying DBP names into empty WD cells")
+# loop over teams to copy DBP data
+for (t in 1:length(idx)) {
+  # check that there is a match between the tables
+  if (!is.na(idx[t])) {
+    names <- union(names1[[idx[t]]], names2[[idx[t]]])
+    names <- names[!is.na(names)]
+    nicks <- union(nicks1[[idx[t]]], nicks2[[idx[t]]])
+    nicks <- nicks[!is.na(nicks)]
+    alt_names <- setdiff(names, c(teams[t, "clubLabel"], nicks))
+    if (length(alt_names) > 0)
+      teams[t, "altNames"] <- paste(alt_names, collapse = "; ")
+    else
+      teams[t, "altNames"] <- NA
+  }
+}
 
+# merge the nicknames from WD et only keep DBP
+tlog(2, "Merging WD and DBP nicknames")
+# loop over teams to copy DBP data
+for (t in 1:length(idx)) {
+  # check that there is a match between the tables
+  if (!is.na(idx[t])) {
+    names <- union(names1[[idx[t]]], names2[[idx[t]]])
+    names <- names[!is.na(names)]
+    nicks <- union(nicks1[[idx[t]]], nicks2[[idx[t]]])
+    nicks <- nicks[!is.na(nicks)]
+    nick_names <- setdiff(nicks, c(teams[t, "clubLabel"], names))
+    if (length(nick_names) > 0)
+      teams[t, "nickmaneLabels"] <- paste(nick_names, collapse = "; ")
+    else
+      teams[t, "nickmaneLabels"] <- NA
+  }
+}
 
+# replace affiliations that do not concern national federations
+map <- c()
+map["ASA Tel Aviv Rugby Club"] <- "Rugby Israel"
+map["Entre Ríos Rugby Union"] <- "Argentine Rugby Union"
+map["Federazione Sammarinese Rugby; Italian Rugby Federation"] <- "Italian Rugby Federation"
+map["Tel Aviv Ibex RFC"] <- "Rugby Israel"
+map["Unión Cordobesa de Rugby"] <- "Argentine Rugby Union"
+map["Unión de Rugby de Buenos Aires"] <- "Argentine Rugby Union"
+map["Unión de Rugby de Rosario"] <- "Argentine Rugby Union"
+map["Unión de Rugby de Tucumán"] <- "Argentine Rugby Union"
+map["Unión Marplatense de Rugby"] <- "Argentine Rugby Union"
+map["Unión Santafesina de Rugby"] <- "Argentine Rugby Union"
+map["Union sportive dacquoise omnisports"] <- "French Rugby Federation"
+for (a in 1:length(map)) {
+  aff <- names(map)[a]
+  idx <- which(teams[, "affiliationLabels"] == aff)
+  if(length(idx) > 0)
+    teams[idx, "affiliationLabels"] <- map[aff]
+}
+# sort(unique(teams[, "affiliationLabels"]))
 
-
+# set all the dates to the same format
+tlog(2, "Normalizing dates")
+# date of inception
+dd <- as.Date(teams[, "inceptionMax"])
+idx <- which(is.na(dd) & !is.na(teams[, "inceptionMax"]))
+if (length(idx) > 0)
+  tlog(4, "Problem when converting WD inceptionMax dates")
+teams[, "inceptionMax"] <- dd
+# date of termination
+dd <- as.Date(teams[, "terminationMax"])
+idx <- which(is.na(dd) & !is.na(teams[, "terminationMax"]))
+if (length(idx) > 0)
+  tlog(4, "Problem when converting WD terminationMax dates")
+teams[, "terminationMax"] <- dd
 
 # map DBP columns to WD columns
 map <- c()
@@ -335,7 +409,8 @@ map["clubId"] <- "wikidataId"
 # loop over teams to copy DBP data
 tlog(2, "Copying DBP data into empty WD fields")
 idx <- match(teams[, "clubId"], teams_dbp[, "wikidataId"])
-for (cols in 1:length(idx)) {
+for (c in 1:length(idx)) {
+  #tlog(4, "Processing team ", c, "/", length(idx))
   # check that there is a match between the tables
   if (!is.na(idx[c])) {
     # get the empty cells in WD
@@ -361,8 +436,8 @@ map <- c()
 map["wikidataId"] <- "clubId"
 map["fullName"] <- "clubLabel"
 map["type"] <- "clubTypeLabel"
-map["inceptionYear"] <- "inceptionMax"
-map["terminationYear"] <- "terminationMax"
+map["inceptionDate"] <- "inceptionMax"
+map["terminationDate"] <- "terminationMax"
 map["affiliations"] <- "affiliationLabels"
 map["countries"] <- "countryLabels"
 map["competitions"] <- "competitionLabels"
@@ -384,6 +459,7 @@ tab.file <- file.path(dpb_table_folder, "fusion_teams.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(teams, tab.file, row.names = FALSE)
 
+# TODO chercher "; " ds players pr s'assurer qu'on n'insère pas de NA dans les listes de valeurs
 
 
 
