@@ -157,8 +157,22 @@ if (!("dbpediaId" %in% colnames(players))) {
   colnames(players)[ncol(players)] <- "dbpediaId"
 }
 
+# fix some semicolon-related issues in DBP fields 
+# fullNames
+# length(which(grepl("; ;", players_dbp[, "fullNames"], fixed = TRUE)))
+players_dbp[, "fullNames"] <- gsub("; ;", ";", players_dbp[, "fullNames"], fixed = TRUE)
+# length(which(grepl("^; ", players_dbp[, "fullNames"], fixed = FALSE)))
+players_dbp[, "fullNames"] <- gsub("^; ", "", players_dbp[, "fullNames"], fixed = FALSE)
+# birthPlaces
+# length(which(grepl("^; ", players_dbp[, "birthPlaces"], fixed = FALSE)))
+players_dbp[, "birthPlaces"] <- gsub("^; ", "", players_dbp[, "birthPlaces"], fixed = FALSE)
+# deathPlaces
+# length(which(grepl("^; ", players_dbp[, "deathPlaces"], fixed = FALSE)))
+players_dbp[, "deathPlaces"] <- gsub("^; ", "", players_dbp[, "deathPlaces"], fixed = FALSE)
+
 # only keep DBP alt names that are not already matching the WD label
 tlog(2, "Copying DBP names into empty WD cells")
+rm_names <- c("(AM)", "(CBE)", "(CVO,OBE)", "(MBE)", "(OBE)", "(OBEMStJ)", "(Sir)", "(SMOCGOMS)")  # "names" to remove
 idx <- match(players[, "playerId"], players_dbp[, "wikidataId"])
 fullnames <- players_dbp[, "fullNames"]
 fullnames <- strsplit(fullnames, "; ")
@@ -166,13 +180,15 @@ fullnames <- strsplit(fullnames, "; ")
 for (p in 1:length(idx)) {
   # check that there is a match between the tables
   if (!is.na(idx[p])) {
-    alt_names <- setdiff(fullnames[[idx[p]]], players[p, "playerLabel"])
+    alt_names <- setdiff(fullnames[[idx[p]]], c(players[p, "playerLabel"], rm_names))
     if (length(alt_names) > 0)
       players[p, "altNames"] <- paste(alt_names, collapse = "; ")
     else
       players[p, "altNames"] <- NA
   }
 }
+idx <- which(players[, "altNames"] == "NA")
+players[idx, "altNames"] <- NA
 
 # cleaning/testing height values
 tlog(2, "Processing heights")
@@ -346,6 +362,10 @@ for (t in 1:length(idx)) {
       teams[t, "altNames"] <- NA
   }
 }
+# fix some remaining issues
+# length(which(grepl("\"", teams[, "altNames"], fixed = TRUE)))
+teams[, "altNames"] <- gsub("\"", "", teams[, "altNames"], fixed = TRUE)
+teams[, "altNames"] <- gsub("; (; ),; ;;", ";", teams[, "altNames"], fixed = TRUE)
 
 # merge the nicknames from WD et only keep DBP
 tlog(2, "Merging WD and DBP nicknames")
@@ -458,65 +478,3 @@ teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 tab.file <- file.path(dpb_table_folder, "fusion_teams.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(teams, tab.file, row.names = FALSE)
-
-# TODO chercher "; " ds players pr s'assurer qu'on n'insère pas de NA dans les listes de valeurs
-
-
-
-
-
-
-####################################
-# Club name normalization info
-####################################
-# Rugby Football Club > RFC
-# Rugby Club > RC
-# Football Club > FC
-# Rugby Union Football Club > RUFC
-#
-# Amicale Laïque > AL
-# Amicale Sportive > AS
-# Association Sportive et Culturelle > ASC
-# Association Sportive > AS
-# Association Amicale et Sportive > AAS
-# Athletic Club > AC
-# Cercle Amical > CA
-# Cercle Municipal > CM
-# Club Amical > CA
-# Club Atlhétique et Sportif > CAS
-# Club Atlhétique > CA
-# Club de Rugby > CR
-# Club Municipal > CM
-# Club Olympique > CO
-# Club Omnisport > CO
-# Club Sportif > CS
-# Étoile Sportive > ES
-# Groupe Sportif > GS
-# Jeunesse Olympique > JO
-# Jeunesse Sportive > JS
-# Olympic Rugby Club > ORC
-# Racing Club > RC
-# Racing Rugby Club > RCC
-# Rassemblement > Ras
-# Rst > Ras
-# Rugby Athletic Club > RAC
-# Rugby Club Sportif > RCS
-# Rugby Olympic Club > ROC
-# Rugby Olympique > RO
-# Rugby Union Sportive > RUS
-# Sport Athlétique > SA
-# Sport Rugby > SR
-# Sporting Club > SC
-# Sporting Union > SU
-# Stade Athlétique > SA
-# Stade Olympique > SO
-# Union Athlétique > UA
-# Union Club > UC
-# Union Sportive Athlétique > USA
-# Union Sportive Olympique > USO
-# Union Sportive > US
-# Université Club > UC
-####################################
-# suppr traits d'union + points + diacritiques
-# saint/sainte > st
-# TODO : faire les sigles de fin de nom

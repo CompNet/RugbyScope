@@ -30,6 +30,62 @@ normalize_names <- function(names) {
   # switch to uppercase
   result <- toupper(result)
 
+
+####################################
+# Club name normalization info
+####################################
+# Rugby Football Club > RFC
+# Rugby Club > RC
+# Football Club > FC
+# Rugby Union Football Club > RUFC
+#
+# Amicale Laïque > AL
+# Amicale Sportive > AS
+# Association Sportive et Culturelle > ASC
+# Association Sportive > AS
+# Association Amicale et Sportive > AAS
+# Athletic Club > AC
+# Cercle Amical > CA
+# Cercle Municipal > CM
+# Club Amical > CA
+# Club Atlhétique et Sportif > CAS
+# Club Atlhétique > CA
+# Club de Rugby > CR
+# Club Municipal > CM
+# Club Olympique > CO
+# Club Omnisport > CO
+# Club Sportif > CS
+# Étoile Sportive > ES
+# Groupe Sportif > GS
+# Jeunesse Olympique > JO
+# Jeunesse Sportive > JS
+# Olympic Rugby Club > ORC
+# Racing Club > RC
+# Racing Rugby Club > RCC
+# Rassemblement > Ras
+# Rst > Ras
+# Rugby Athletic Club > RAC
+# Rugby Club Sportif > RCS
+# Rugby Olympic Club > ROC
+# Rugby Olympique > RO
+# Rugby Union Sportive > RUS
+# Sport Athlétique > SA
+# Sport Rugby > SR
+# Sporting Club > SC
+# Sporting Union > SU
+# Stade Athlétique > SA
+# Stade Olympique > SO
+# Union Athlétique > UA
+# Union Club > UC
+# Union Sportive Athlétique > USA
+# Union Sportive Olympique > USO
+# Union Sportive > US
+# Université Club > UC
+####################################
+# suppr traits d'union + points + diacritiques
+# saint/sainte > st
+
+
   return (result)
 }
 
@@ -102,4 +158,3 @@ for (country in countries) {
 # Wales:         250
 # Note: this probably includes a bunch of clubs out of the standard pyramid (e.g. corporate clubs in France)
 #########################################################
-

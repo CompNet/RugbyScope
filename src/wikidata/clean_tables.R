@@ -208,6 +208,7 @@ get_clean_positions <- function(players) {
 
   # collapse to get strings again
   result <- sapply(all_positions, function(positions) paste0(positions, collapse = "; "))
+  result[result == "NA"] <- NA
   names(result) <- NULL
 
   return(result)
