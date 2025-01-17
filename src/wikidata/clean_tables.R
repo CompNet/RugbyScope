@@ -58,11 +58,12 @@ get_clean_countries <- function(players, field) {
 
   # define conversion map
   map <- c()
+  map["Basque Country"] <- "Spain"
   map["British Raj"] <- "India"
   map["Chinese Taipei"] <- "Taiwan"
   map["Colony of New Zealand"] <- "New Zealand"
   map["Czech Republic"] <- "Czechia"
-  map["Democratic Republic of the Congo"] <- "R.C. of the Congo"
+  map["Democratic Republic of the Congo"] <- "D.R. of the Congo"
   map["Dominion of India"] <- "India"
   # map["England"] <- "United Kingdom"
   map["Empire of Japan"] <- "Japan"
@@ -75,11 +76,14 @@ get_clean_countries <- function(players, field) {
   map["Northern Ireland"] <- "Ireland"
   map["People's Republic of China"] <- "China"
   map["Republica Moldova"] <- "Moldova"
+  map["Republica of the Congo"] <- "Congo"
   map["Rhodesia"] <- "Zimbabwe"
   map["Russian Empire"] <- "Russia"
+  map["Socialist Federal Republic of Yugoslavia"] <- "Yugoslavia"
   map["South-West Africa"] <- "Namibia"
   map["Southern Rhodesia"] <- "Zimbabwe"
   map["Soviet Union"] <- "U.S.S.R."
+  map["The Bahamas"] <- "Bahamas"
   map["United Kingdom of Great Britain and Ireland"] <- "United Kingdom"
   map["United States of America"] <- "U.S.A."
   map["United States"] <- "U.S.A."

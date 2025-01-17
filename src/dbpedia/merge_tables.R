@@ -47,12 +47,17 @@ tlog(0, "Loading Wikidata tables")
 teams_wd <- read.csv(file.path(wd_table_folder, "all_teams_descr.csv"))
 tlog(2, "Raw number of WD teams: ", nrow(teams_wd))
 
+# normalize countries
+source("src/wikidata/clean_tables.R")
+all_countries <- get_clean_countries(teams_wd, field = "countryLabels")
+teams_wd[, "countryLabels"] <- all_countries
+
+
 # load Wikidata players
 players_wd <- read.csv(file.path(wd_table_folder, "all_players_descr.csv"))
 tlog(2, "Raw number of WD players: ", nrow(players_wd))
 
 # normalize rugby positions
-source("src/wikidata/clean_tables.R")
 all_positions <- get_clean_positions(players_wd)
 players_wd[, "positionLabels"] <- all_positions
 
@@ -140,13 +145,13 @@ idx <- which(!is.na(players[, "dodMax"]) & is.na(players[, "dodFormat"]))
 if (length(idx) > 0)
   players[idx, "dodMax"] <- NA
 
-# possibly add a new column for the DBP id
+# possibly add a new column for the alternative names
 tlog(2, "Adding missing columns")
 if (!("altNames" %in% colnames(players))) {
   players <- cbind(players[, 1:4], rep(NA, nrow(players)), players[, 5:ncol(players)])
   colnames(players)[5] <- "altNames"
 }
-# same for the alternative names
+# same for the DBP id
 if (!("dbpediaId" %in% colnames(players))) {
   players <- cbind(players, rep(NA, nrow(players)))
   colnames(players)[ncol(players)] <- "dbpediaId"
@@ -215,7 +220,6 @@ players_dbp[, "deathDates"] <- dd
 # map DBP columns to WD columns
 map <- c()
 map["dbpediaId"] <- "player"
-# map["playerLabel"] <- "fullNames"
 map["dobMax"] <- "birthDates"
 map["pobLabels"] <- "birthPlaces"
 map["dodMax"] <- "deathDates"
@@ -289,3 +293,154 @@ tlog(0, "Merging the DBpedia team data into the Wikidata table")
 # first, then complete with DBpedia content when WD is empty.
 teams <- teams_wd
 
+
+# clean inception years
+# TODO "inceptionMax"        "inceptionFormat"
+
+# clean termination years
+# TODO "terminationMax" "terminationFormat"
+
+# possibly add a new column for the alternative names
+tlog(2, "Adding missing columns")
+if (!("altNames" %in% colnames(teams))) {
+  teams <- cbind(teams[, 1:4], rep(NA, nrow(teams)), teams[, 5:ncol(teams)])
+  colnames(teams)[5] <- "altNames"
+}
+# same for the DBP id
+if (!("dbpediaId" %in% colnames(teams))) {
+  teams <- cbind(teams, rep(NA, nrow(teams)))
+  colnames(teams)[ncol(teams)] <- "dbpediaId"
+}
+
+# keep DBP names as alternate names
+cols <- c("teamLabel", "teamNames", "nickNames")
+cols_wd <- c("nickmaneLabels")
+# TODO
+
+# TODO check if normalization required
+# "affiliationLabels"
+# "competitionLabels"
+# "homeVenueLabels" "homeVenueCapacities"
+# "locationLabels" 
+
+
+
+
+
+# map DBP columns to WD columns
+map <- c()
+map["dbpediaId"] <- "team"
+map["clubId"] <- "wikidataId"
+
+# loop over teams to copy DBP data
+tlog(2, "Copying DBP data into empty WD fields")
+idx <- match(teams[, "clubId"], teams_dbp[, "wikidataId"])
+for (cols in 1:length(idx)) {
+  # check that there is a match between the tables
+  if (!is.na(idx[c])) {
+    # get the empty cells in WD
+    cols_wd <- colnames(teams)[is.na(teams[c, ])]
+    cols_wd <- intersect(cols_wd, names(map))
+    # copy DBP data into the WD table
+    if (length(cols_wd) > 0) {
+      cols_dbp <- map[cols_wd]
+      teams[c, cols_wd] <- teams_dbp[idx[c], cols_dbp]
+    }
+  }
+}
+
+# remove supefluous columns
+rem_cols <- c("inceptionFormat", "terminationFormat", "nickmaneLabels")
+tlog(2, "Removing supefluous columns (", paste0(rem_cols, collapse = ", "), ")")
+idx <- which(colnames(teams) %in% rem_cols)
+teams <- teams[, -idx]
+
+# rename certain columns
+tlog(2, "Rename certain columns")
+map <- c()
+map["wikidataId"] <- "clubId"
+map["fullName"] <- "clubLabel"
+map["type"] <- "clubTypeLabel"
+map["inceptionYear"] <- "inceptionMax"
+map["terminationYear"] <- "terminationMax"
+map["affiliations"] <- "affiliationLabels"
+map["countries"] <- "countryLabels"
+map["competitions"] <- "competitionLabels"
+map["homeVenueNames"] <- "homeVenueLabels"
+map["locations"] <- "locationLabels"
+idx <- match(map, colnames(teams))
+colnames(teams)[idx] <- names(map)
+
+# sort by WD id value
+tlog(2, "Sorting by WikidataId")
+ids <- teams[, "wikidataId"]
+ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
+teams <- teams[order(ids), ]
+
+# replacing empty strings by NAs
+teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
+# record as a new CSV file
+tab.file <- file.path(dpb_table_folder, "fusion_teams.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(teams, tab.file, row.names = FALSE)
+
+
+
+
+
+
+
+####################################
+# Club name normalization info
+####################################
+# Rugby Football Club > RFC
+# Rugby Club > RC
+# Football Club > FC
+# Rugby Union Football Club > RUFC
+#
+# Amicale Laïque > AL
+# Amicale Sportive > AS
+# Association Sportive et Culturelle > ASC
+# Association Sportive > AS
+# Association Amicale et Sportive > AAS
+# Athletic Club > AC
+# Cercle Amical > CA
+# Cercle Municipal > CM
+# Club Amical > CA
+# Club Atlhétique et Sportif > CAS
+# Club Atlhétique > CA
+# Club de Rugby > CR
+# Club Municipal > CM
+# Club Olympique > CO
+# Club Omnisport > CO
+# Club Sportif > CS
+# Étoile Sportive > ES
+# Groupe Sportif > GS
+# Jeunesse Olympique > JO
+# Jeunesse Sportive > JS
+# Olympic Rugby Club > ORC
+# Racing Club > RC
+# Racing Rugby Club > RCC
+# Rassemblement > Ras
+# Rst > Ras
+# Rugby Athletic Club > RAC
+# Rugby Club Sportif > RCS
+# Rugby Olympic Club > ROC
+# Rugby Olympique > RO
+# Rugby Union Sportive > RUS
+# Sport Athlétique > SA
+# Sport Rugby > SR
+# Sporting Club > SC
+# Sporting Union > SU
+# Stade Athlétique > SA
+# Stade Olympique > SO
+# Union Athlétique > UA
+# Union Club > UC
+# Union Sportive Athlétique > USA
+# Union Sportive Olympique > USO
+# Union Sportive > US
+# Université Club > UC
+####################################
+# suppr traits d'union + points + diacritiques
+# saint/sainte > st
+# TODO : faire les sigles de fin de nom
