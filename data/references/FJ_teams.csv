@@ -1,19 +1,19 @@
-"Name","Tier","Division","WD"
-"Fijian Latui",1,"Global Rapid Rugby",""
-"Fijian Drua",1,"Super Rugby",""
-"Bligh Roosters",2,"Colonial Cup",""
-"Coastal Stallions",2,"Colonial Cup",""
-"Northern Sharks",2,"Colonial Cup",""
-"Suva Highlanders",2,"Colonial Cup",""
-"Tailevu Knights",2,"Colonial Cup",""
-"Western Crusaders",2,"Colonial Cup",""
-"Lautoka",2,"Skipper Cup","Missing"
-"Nadi Jets",2,"Skipper Cup","Missing"
-"Nadroga Stallions",2,"Skipper Cup","Missing"
-"Naitasiri Bulls",2,"Skipper Cup","Missing"
-"Namosi",2,"Skipper Cup","Missing"
-"Northland",2,"Skipper Cup","Missing"
-"Rewa",2,"Skipper Cup","Missing"
-"Suva",2,"Skipper Cup","Missing"
-"Tailevu",2,"Skipper Cup","Missing"
-"Nawaka Rugby Club",NA,NA,
+"name","tier","division","wikidataId","homonyms"
+"Fijian Latui",1,"Global Rapid Rugby","Q65079133",NA
+"Fijian Drua",1,"Super Rugby","Q38605283",NA
+"Bligh Roosters",2,"Colonial Cup","Q4926458",NA
+"Coastal Stallions",2,"Colonial Cup","Q2981114",NA
+"Northern Sharks",2,"Colonial Cup","Q7058963",NA
+"Suva Highlanders",2,"Colonial Cup","Q7650470",NA
+"Tailevu Knights",2,"Colonial Cup","Q7676099",NA
+"Western Crusaders",2,"Colonial Cup","Q7987769",NA
+"Lautoka",2,"Skipper Cup","",NA
+"Nadi Jets",2,"Skipper Cup","",NA
+"Nadroga Stallions",2,"Skipper Cup","",NA
+"Naitasiri Bulls",2,"Skipper Cup","",NA
+"Namosi",2,"Skipper Cup","",NA
+"Northland",2,"Skipper Cup","",NA
+"Rewa",2,"Skipper Cup","",NA
+"Suva",2,"Skipper Cup","",NA
+"Tailevu",2,"Skipper Cup","",NA
+"Nawaka Rugby Club",NA,NA,"Q6982837",NA

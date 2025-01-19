@@ -1,197 +1,196 @@
-"Name","Tier","Division","WD"
-Border Reivers,1,Celtic League,
-Caledonia Reds,1,Celtic League,
-Edinburgh Rugby,1,United Rugby Championship,
-Glasgow Warriors,1,United Rugby Championship,
-Currie RFC,2,Scottish Premiership,
-Edinburgh Academical Football Club,2,Scottish Premiership,
-Glasgow Hawks RFC,2,Scottish Premiership,
-Glasgow Hutchesons Aloysians RFC,2,Scottish Premiership,
-Hawick RFC,2,Scottish Premiership,
-Heriot's Rugby Club,2,Scottish Premiership,
-Jed-Forest RFC,2,Scottish Premiership,
-Kelso RFC,2,Scottish Premiership,
-Marr RFC,2,Scottish Premiership,
-Musselburgh RFC,2,Scottish Premiership,
-Selkirk RFC,2,Scottish Premiership,
-Ayr RFC,3,Scottish National League Division One,
-Biggar RFC,3,Scottish National League Division One,
-Dundee HSFP,3,Scottish National League Division One,
-Gala RFC,3,Scottish National League Division One,
-Glasgow Academicals RFC,3,Scottish National League Division One,
-Glasgow High Kelvinside,3,Scottish National League Division One,
-Highland RFC,3,Scottish National League Division One,
-Melrose RFC,3,Scottish National League Division One,
-Watsonian RFC,3,Scottish National League Division One,
-Aberdeen GSFP RFC,4,Scottish National League Division Two,
-Berwick RFC,4,Scottish National League Division Two,
-Falkirk RFC,4,Scottish National League Division Two,
-Gordonians RFC,4,Scottish National League Division Two,
-Kirkcaldy RFC,4,Scottish National League Division Two,
-Lasswade RFC,4,Scottish National League Division Two,
-Newton Stewart RFC,4,Scottish National League Division Two,
-Peebles RFC,4,Scottish National League Division Two,
-Stewart's Melville RFC,4,Scottish National League Division Two,
-Stirling County RFC,4,Scottish National League Division Two,
-Allan Glen's RFC,5,Scottish National League Division Three,
-Boroughmuir RFC,5,Scottish National League Division Three,
-Cartha Queens Park RFC,5,Scottish National League Division Three,
-Dumfries Saints RFC,5,Scottish National League Division Three,
-Hamilton RFC,5,Scottish National League Division Three,
-Hillhead Jordanhill RFC,5,Scottish National League Division Three,
-Howe of Fife RFC,5,Scottish National League Division Three,
-Orkney RFC,5,Scottish National League Division Three,
-Preston Lodge RFC,5,Scottish National League Division Three,
-West of Scotland FC,5,Scottish National League Division Three,
-Aberdeen Wanderers RFC,6,Caledonia Regional League Division One,
-Blairgowrie RFC,6,Caledonia Regional League Division One,
-Caithness RFC,6,Caledonia Regional League Division One,
-Dunfermline RFC,6,Caledonia Regional League Division One,
-Ellon RFC,6,Caledonia Regional League Division One,
-Garioch RFC,6,Caledonia Regional League Division One,
-Glenrothes RFC,6,Caledonia Regional League Division One,
-Grangemouth Stags,6,Caledonia Regional League Division One,
-Hillfoots RFC,6,Caledonia Regional League Division One,
-Broughton RFC,6,East Regional League Division One,
-Dalkeith RFC,6,East Regional League Division One,
-Forrester RFC,6,East Regional League Division One,
-Haddington RFC,6,East Regional League Division One,
-Langholm RFC,6,East Regional League Division One,
-Murrayfield Wanderers RFC,6,East Regional League Division One,
-Portobello RFC,6,East Regional League Division One,
-Ross High RFC,6,East Regional League Division One,
-Annan RFC,6,West Regional League Division One,
-Cambuslang RFC,6,West Regional League Division One,
-Carrick RFC,6,West Regional League Division One,
-East Kilbride RFC,6,West Regional League Division One,
-Garnock RFC,6,West Regional League Division One,
-Irvine RFC,6,West Regional League Division One,
-Kilmarnock RFC,6,West Regional League Division One,
-Lenzie RFC,6,West Regional League Division One,
-Stewartry RFC,6,West Regional League Division One,
-Strathendrick RFC,6,West Regional League Division One,
-Alloa RFC,7,Caledonia Regional League Midlands Division Two,
-Carnoustie HSFP,7,Caledonia Regional League Midlands Division Two,
-Dundee University Medics RFC,7,Caledonia Regional League Midlands Division Two,
-Harris Academicals RFC,7,Caledonia Regional League Midlands Division Two,
-Kinross RFC,7,Caledonia Regional League Midlands Division Two,
-Madras College FP RFC,7,Caledonia Regional League Midlands Division Two,
-Panmure RFC,7,Caledonia Regional League Midlands Division Two,
-Aberdeenshire RFC,7,Caledonia Regional League North Division Two,
-Banff RFC,7,Caledonia Regional League North Division Two,
-Mackie Academy RFC,7,Caledonia Regional League North Division Two,
-Moray RFC,7,Caledonia Regional League North Division Two,
-North Police Scotland RFC,7,Caledonia Regional League North Division Two,
-Ross Sutherland RFC,7,Caledonia Regional League North Division Two,
-Corstorphine Cougars RFC,7,East Regional League Division Two,
-Dunbar RFC,7,East Regional League Division Two,
-Hawick Harlequins RFC,7,East Regional League Division Two,
-Leith RFC,7,East Regional League Division Two,
-Livingston RFC,7,East Regional League Division Two,
-Penicuik RFC,7,East Regional League Division Two,
-Royal HSFP,7,East Regional League Division Two,
-Trinity Academicals RFC,7,East Regional League Division Two,
-Clydebank RFC,7,West Regional League Division Two,
-Cumnock RFC,7,West Regional League Division Two,
-Dalziel RFC,7,West Regional League Division Two,
-Helensburgh RFC,7,West Regional League Division Two,
-Oban Lorne RFC,7,West Regional League Division Two,
-Paisley RFC,7,West Regional League Division Two,
-Strathaven RFC,7,West Regional League Division Two,
-Uddingston RFC,7,West Regional League Division Two,
-Waysiders Drumpellier,7,West Regional League Division Two,
-Wigtownshire RFC,7,West Regional League Division Two,
-Bannockburn RFC,8,Caledonia Regional League Midlands Division Three,
-Bo'ness RFC,8,Caledonia Regional League Midlands Division Three,
-Crieff and Strathearn RFC,8,Caledonia Regional League Midlands Division Three,
-Perthshire RFC,8,Caledonia Regional League Midlands Division Three,
-Rosyth Sharks,8,Caledonia Regional League Midlands Division Three,
-Strathmore RFC,8,Caledonia Regional League Midlands Division Three,
-Waid Academy FPRFC,8,Caledonia Regional League Midlands Division Three,
-Aberdeen University RFC,8,Caledonia Regional League North Division Three,
-Huntly RFC,8,Caledonia Regional League North Division Three,
-Kinloss RFC,8,Caledonia Regional League North Division Three,
-RAF Lossiemouth RFC,8,Caledonia Regional League North Division Three,
-Shetland RFC,8,Caledonia Regional League North Division Three,
-Stornoway RFC,8,Caledonia Regional League North Division Three,
-Duns RFC,8,East Regional League Division Three,
-Earlston RFC,8,East Regional League Division Three,
-Edinburgh Northern RFC,8,East Regional League Division Three,
-Edinburgh University Medics RFC,8,East Regional League Division Three,
-Eyemouth RFC,8,East Regional League Division Three,
-Gala YM RFC,8,East Regional League Division Three,
-Hawick Linden RFC,8,East Regional League Division Three,
-Inverleith RFC,8,East Regional League Division Three,
-Lismore RFC,8,East Regional League Division Three,
-Queensferry RFC,8,East Regional League Division Three,
-RDVC RFC,8,East Regional League Division Three,
-St Boswells RFC,8,East Regional League Division Three,
-Walkerburn RFC,8,East Regional League Division Three,
-Birkmyre RFC,8,West Regional League Division Three,
-Bishopton RFC,8,West Regional League Division Three,
-Bute RFC,8,West Regional League Division Three,
-Campbeltown Kintryre,8,West Regional League Division Three,
-Clydesdale RFC,8,West Regional League Division Three,
-Colonsay RFC,8,West Regional League Division Three,
-Cowal RFC,8,West Regional League Division Three,
-Cumbernauld RFC,8,West Regional League Division Three,
-Etive Vikings,8,West Regional League Division Three,
-Glasgow University Medics RFC,8,West Regional League Division Three,
-HMNB Clyde RFC,8,West Regional League Division Three,
-Hyndland RFC,8,West Regional League Division Three,
-Islay RFC,8,West Regional League Division Three,
-Isle of Arran RFC,8,West Regional League Division Three,
-Isle of Jura RFC,8,West Regional League Division Three,
-Isle of Mull RFC,8,West Regional League Division Three,
-Lanark RFC,8,West Regional League Division Three,
-Loch Lomond RFC,8,West Regional League Division Three,
-Lochaber RFC,8,West Regional League Division Three,
-Mid Argyll RFC,8,West Regional League Division Three,
-Millbrae RFC,8,West Regional League Division Three,
-Moffat RFC,8,West Regional League Division Three,
-Police Scotland Glasgow RFC,8,West Regional League Division Three,Missing
-Shawlands FP RFC,8,West Regional League Division Three,
-Aberfeldy RFC,9,Caledonia Regional League Midlands Division Four,
-Arbroath RFC,9,Caledonia Regional League Midlands Division Four,
-Stobswell RFC,9,Caledonia Regional League Midlands Division Four,
-3Scots RFC,9,Caledonia Regional League North Division Four,Missing
-Aberdeen Taexali,9,Caledonia Regional League North Division Four,
-Aberdeen University Medics RFC,9,Caledonia Regional League North Division Four,
-Abertay University RFC,9,Caledonia Regional League North Division Four,
-Alford Youth,9,Caledonia Regional League North Division Four,Missing
-Atholl RFC,9,Caledonia Regional League North Division Four,
-Deeside RFC,9,Caledonia Regional League North Division Four,
-Dyce RFC,9,Caledonia Regional League North Division Four,
-Edinburgh Wanderers,9,Caledonia Regional League North Division Four,
-Fraserburgh RFC,9,Caledonia Regional League North Division Four,
-Inverness Craig Dunain RFC,9,Caledonia Regional League North Division Four,
-Peterhead RFC,9,Caledonia Regional League North Division Four,
-RHC Cougars RFC,9,Caledonia Regional League North Division Four,
-Turriff RFC,9,Caledonia Regional League North Division Four,
-Watsonians RFC,9,Caledonia Regional League North Division Four,
-Whitecraigs RFC,9,Caledonia Regional League North Division Four,
-Ardrossan Academicals RFC,NA,NA,
-Caledonian Thebans RFC,NA,NA,
-Co-Optimist Rugby Club,NA,NA,
-Dundee University RFC,NA,NA,
-Edinburgh District,NA,NA,
-Edinburgh Napier University RFC,NA,NA,
-Edinburgh University RFC,NA,NA,
-Gael Force,NA,NA,
-Glasgow District,NA,NA,
-Glasgow University RFC,NA,NA,
-Greenock Wanderers RFC,NA,NA,
-Heriot-Watt University RFC,NA,NA,
-Liberton RFC,NA,NA,
-Linlithgow RFC,NA,NA,
-Midlands District,NA,NA,
-Moray House RFC,NA,NA,
-North Berwick RFC,NA,NA,
-Queen Margaret University RFC,NA,NA,
-Robert Gordon University RFC,NA,NA,
-Scottish Exiles,NA,NA,
-Scottish Rugby Academy,NA,NA,
-South of Scotland District,NA,NA,
-Stirling University RFC,NA,NA,
-Strathclyde University RFC,NA,NA,
-University of St Andrews RFC,NA,NA,
+"name","tier","division","wikidataId","homonyms"
+"Border Reivers",1,"Celtic League","Q893414",""
+"Caledonia Reds",1,"Celtic League","Q2933786",""
+"Edinburgh Rugby",1,"United Rugby Championship","Q739613",""
+"Glasgow Warriors",1,"United Rugby Championship","Q374981",""
+"Currie RFC",2,"Scottish Premiership","Q1144887",""
+"Edinburgh Academical Football Club",2,"Scottish Premiership","Q1284702",""
+"Glasgow Hawks RFC",2,"Scottish Premiership","Q528969",""
+"Glasgow Hutchesons Aloysians RFC",2,"Scottish Premiership","Q3108550",""
+"Hawick RFC",2,"Scottish Premiership","Q930661",""
+"Heriot's Rugby Club",2,"Scottish Premiership","Q1318239",""
+"Jed-Forest RFC",2,"Scottish Premiership","Q2366481",""
+"Kelso RFC",2,"Scottish Premiership","Q3194941",""
+"Marr RFC",2,"Scottish Premiership","Q6772766",""
+"Musselburgh RFC",2,"Scottish Premiership","Q6943105",""
+"Selkirk RFC",2,"Scottish Premiership","Q1521117",""
+"Ayr RFC",3,"Scottish National League Division One","Q793219",""
+"Biggar RFC",3,"Scottish National League Division One","Q2902403",""
+"Dundee HSFP",3,"Scottish National League Division One","Q1128070",""
+"Gala RFC",3,"Scottish National League Division One","Q613916",""
+"Glasgow Academicals RFC",3,"Scottish National League Division One","Q3108545",""
+"Glasgow High Kelvinside",3,"Scottish National League Division One","Q3108544",""
+"Highland RFC",3,"Scottish National League Division One","Q5759041",""
+"Melrose RFC",3,"Scottish National League Division One","Q1000020",""
+"Watsonian FC",3,"Scottish National League Division One","Q3566734",""
+"Aberdeen GSFP RFC",4,"Scottish National League Division Two","Q2821574",""
+"Berwick RFC",4,"Scottish National League Division Two","Q4896005",""
+"Falkirk RFC",4,"Scottish National League Division Two","Q5431941",""
+"Gordonians RFC",4,"Scottish National League Division Two","Q3110943",""
+"Kirkcaldy RFC",4,"Scottish National League Division Two","Q6415617",""
+"Lasswade RFC",4,"Scottish National League Division Two","Q6494082",""
+"Newton Stewart RFC",4,"Scottish National League Division Two","Q107501664",""
+"Peebles RFC",4,"Scottish National League Division Two","Q16932231",""
+"Stewart's Melville RFC",4,"Scottish National League Division Two","Q3499334",""
+"Stirling County RFC",4,"Scottish National League Division Two","Q3499557",""
+"Allan Glen's RFC",5,"Scottish National League Division Three","Q68377636",""
+"Boroughmuir RFC",5,"Scottish National League Division Three","Q894098",""
+"Cartha Queens Park RFC",5,"Scottish National League Division Three","Q2940573",""
+"Dumfries Saints RFC",5,"Scottish National League Division Three","Q5313800",""
+"Hamilton RFC",5,"Scottish National League Division Three","Q282354","Q17054465"
+"Hillhead Jordanhill RFC",5,"Scottish National League Division Three","Q3135671",""
+"Howe of Fife RFC",5,"Scottish National League Division Three","Q5921630",""
+"Orkney RFC",5,"Scottish National League Division Three","Q65071249",""
+"Preston Lodge RFC",5,"Scottish National League Division Three","Q7241930",""
+"West of Scotland FC",5,"Scottish National League Division Three","Q3567454",""
+"Aberdeen Wanderers RFC",6,"Caledonia Regional League Division One","Q4667008",""
+"Blairgowrie RFC",6,"Caledonia Regional League Division One","Q107501654",""
+"Caithness RFC",6,"Caledonia Regional League Division One","Q65041384",""
+"Dunfermline RFC",6,"Caledonia Regional League Division One","Q5315050",""
+"Ellon RFC",6,"Caledonia Regional League Division One","Q5366108",""
+"Garioch RFC",6,"Caledonia Regional League Division One","Q107501658",""
+"Glenrothes RFC",6,"Caledonia Regional League Division One","Q5569297",""
+"Grangemouth Stags",6,"Caledonia Regional League Division One","Q65068100",""
+"Hillfoots RFC",6,"Caledonia Regional League Division One","Q65069044",""
+"Broughton RFC",6,"East Regional League Division One","Q107970187",""
+"Dalkeith RFC",6,"East Regional League Division One","Q5211067",""
+"Forrester RFC",6,"East Regional League Division One","Q5470552",""
+"Haddington RFC",6,"East Regional League Division One","Q5637667",""
+"Langholm RFC",6,"East Regional League Division One","Q6486096",""
+"Murrayfield Wanderers RFC",6,"East Regional League Division One","Q6939543",""
+"Portobello RFC",6,"East Regional League Division One","Q7232191",""
+"Ross High RFC",6,"East Regional League Division One","Q107970192",""
+"Annan RFC",6,"West Regional League Division One","Q4767911",""
+"Cambuslang RFC",6,"West Regional League Division One","Q5025690",""
+"Carrick RFC",6,"West Regional League Division One","Q107501656",""
+"East Kilbride RFC",6,"West Regional League Division One","Q5328727",""
+"Garnock RFC",6,"West Regional League Division One","Q5523707",""
+"Irvine RFC",6,"West Regional League Division One","Q6074370",""
+"Kilmarnock RFC",6,"West Regional League Division One","Q6407987",""
+"Lenzie RFC",6,"West Regional League Division One","Q68377625",""
+"Stewartry RFC",6,"West Regional League Division One","Q67913328",""
+"Strathendrick RFC",6,"West Regional League Division One","Q7622098",""
+"Alloa RFC",7,"Caledonia Regional League Midlands Division Two","Q67913309",""
+"Carnoustie HSFP",7,"Caledonia Regional League Midlands Division Two","Q107501655",""
+"Dundee University Medics RFC",7,"Caledonia Regional League Midlands Division Two","Q107501657",""
+"Harris Academicals RFC",7,"Caledonia Regional League Midlands Division Two","Q16993693",""
+"Kinross RFC",7,"Caledonia Regional League Midlands Division Two","Q107501660",""
+"Madras College FP RFC",7,"Caledonia Regional League Midlands Division Two","Q6728475",""
+"Panmure RFC",7,"Caledonia Regional League Midlands Division Two","Q28966518",""
+"Aberdeenshire RFC",7,"Caledonia Regional League North Division Two","Q107501652",""
+"Banff RFC",7,"Caledonia Regional League North Division Two","Q107501653",""
+"Mackie Academy RFC",7,"Caledonia Regional League North Division Two","Q107501662",""
+"Moray RFC",7,"Caledonia Regional League North Division Two","Q21997618",""
+"North Police Scotland RFC",7,"Caledonia Regional League North Division Two","Q107970185",""
+"Ross Sutherland RFC",7,"Caledonia Regional League North Division Two","Q7369647",""
+"Corstorphine Cougars RFC",7,"East Regional League Division Two","Q65089233",""
+"Dunbar RFC",7,"East Regional League Division Two","Q5314155",""
+"Hawick Harlequins RFC",7,"East Regional League Division Two","Q5684758",""
+"Leith RFC",7,"East Regional League Division Two","Q6520395",""
+"Livingston RFC",7,"East Regional League Division Two","Q6659677",""
+"Penicuik RFC",7,"East Regional League Division Two","Q7162872",""
+"Royal HSFP",7,"East Regional League Division Two","Q65089239",""
+"Trinity Academicals RFC",7,"East Regional League Division Two","Q7842559",""
+"Clydebank RFC",7,"West Regional League Division Two","Q68377627",""
+"Cumnock RFC",7,"West Regional League Division Two","Q28966547",""
+"Dalziel RFC",7,"West Regional League Division Two","Q5211811",""
+"Helensburgh RFC",7,"West Regional League Division Two","Q67913273",""
+"Oban Lorne RFC",7,"West Regional League Division Two","Q65069403",""
+"Paisley RFC",7,"West Regional League Division Two","Q7125194",""
+"Strathaven RFC",7,"West Regional League Division Two","Q7622028",""
+"Uddingston RFC",7,"West Regional League Division Two","Q17021051",""
+"Waysiders Drumpellier",7,"West Regional League Division Two","Q68376692",""
+"Wigtownshire RFC",7,"West Regional League Division Two","Q67913330",""
+"Bannockburn RFC",8,"Caledonia Regional League Midlands Division Three","Q4857007",""
+"Bo'ness RFC",8,"Caledonia Regional League Midlands Division Three","Q107751032",""
+"Crieff and Strathearn RFC",8,"Caledonia Regional League Midlands Division Three","Q107920165",""
+"Perthshire RFC",8,"Caledonia Regional League Midlands Division Three","Q7170932",""
+"Rosyth Sharks",8,"Caledonia Regional League Midlands Division Three","Q107969589",""
+"Strathmore RFC",8,"Caledonia Regional League Midlands Division Three","Q65070097",""
+"Waid Academy FPRFC",8,"Caledonia Regional League Midlands Division Three","Q7959925",""
+"Aberdeen University RFC",8,"Caledonia Regional League North Division Three","Q4667001",""
+"Huntly RFC",8,"Caledonia Regional League North Division Three","Q107501659",""
+"Kinloss RFC",8,"Caledonia Regional League North Division Three","Q107970181",""
+"RAF Lossiemouth RFC",8,"Caledonia Regional League North Division Three","Q107970184",""
+"Shetland RFC",8,"Caledonia Regional League North Division Three","Q65070840",""
+"Stornoway RFC",8,"Caledonia Regional League North Division Three","Q65070825",""
+"Duns RFC",8,"East Regional League Division Three","Q5315664",""
+"Earlston RFC",8,"East Regional League Division Three","Q5326546",""
+"Edinburgh Northern RFC",8,"East Regional League Division Three","Q5338230",""
+"Edinburgh University Medics RFC",8,"East Regional League Division Three","Q107970189",""
+"Eyemouth RFC",8,"East Regional League Division Three","Q131824223",""
+"Gala YM RFC",8,"East Regional League Division Three","Q107970193",""
+"Hawick Linden RFC",8,"East Regional League Division Three","Q5684764",""
+"Inverleith RFC",8,"East Regional League Division Three","Q6060128",""
+"Lismore RFC",8,"East Regional League Division Three","Q6559031",""
+"Queensferry RFC",8,"East Regional League Division Three","Q131584305",""
+"RDVC RFC",8,"East Regional League Division Three","Q107970194",""
+"St Boswells RFC",8,"East Regional League Division Three","Q65065461",""
+"Walkerburn RFC",8,"East Regional League Division Three","Q7962353",""
+"Birkmyre RFC",8,"West Regional League Division Three","Q68377166",""
+"Bishopton RFC",8,"West Regional League Division Three","Q68376322",""
+"Bute RFC",8,"West Regional League Division Three","Q131584365",""
+"Campbeltown Kintryre",8,"West Regional League Division Three","Q131584385",""
+"Clydesdale RFC",8,"West Regional League Division Three","Q24185242",""
+"Colonsay RFC",8,"West Regional League Division Three","Q131584396",""
+"Cowal RFC",8,"West Regional League Division Three","Q67913274",""
+"Cumbernauld RFC",8,"West Regional League Division Three","Q5194001",""
+"Etive Vikings",8,"West Regional League Division Three","Q131584416",""
+"Glasgow University Medics RFC",8,"West Regional League Division Three","Q107970186",""
+"HMNB Clyde RFC",8,"West Regional League Division Three","Q131584418",""
+"Hyndland RFC",8,"West Regional League Division Three","Q68377641",""
+"Islay RFC",8,"West Regional League Division Three","Q131584422",""
+"Isle of Arran RFC",8,"West Regional League Division Three","Q131584428",""
+"Isle of Jura RFC",8,"West Regional League Division Three","Q131584437",""
+"Isle of Mull RFC",8,"West Regional League Division Three","Q131584444",""
+"Lanark RFC",8,"West Regional League Division Three","Q68375523",""
+"Loch Lomond RFC",8,"West Regional League Division Three","Q6664959",""
+"Lochaber RFC",8,"West Regional League Division Three","Q67912841",""
+"Mid Argyll RFC",8,"West Regional League Division Three","Q131584448",""
+"Millbrae RFC",8,"West Regional League Division Three","Q131584451",""
+"Moffat RFC",8,"West Regional League Division Three","Q6890346",""
+"Police Scotland Glasgow RFC",8,"West Regional League Division Three","",""
+"Shawlands FP RFC",8,"West Regional League Division Three","Q16934210",""
+"Aberfeldy RFC",9,"Caledonia Regional League Midlands Division Four","Q107565140",""
+"Arbroath RFC",9,"Caledonia Regional League Midlands Division Four","Q107536634",""
+"Stobswell RFC",9,"Caledonia Regional League Midlands Division Four","Q107524249",""
+"3Scots RFC",9,"Caledonia Regional League North Division Four","",""
+"Aberdeen Taexali",9,"Caledonia Regional League North Division Four","Q107970183",""
+"Aberdeen University Medics RFC",9,"Caledonia Regional League North Division Four","Q107970182",""
+"Abertay University RFC",9,"Caledonia Regional League North Division Four","Q107970195",""
+"Alford Youth",9,"Caledonia Regional League North Division Four","",""
+"Atholl RFC",9,"Caledonia Regional League North Division Four","",""
+"Deeside RFC",9,"Caledonia Regional League North Division Four","Q107862599",""
+"Dyce RFC",9,"Caledonia Regional League North Division Four","Q107803223",""
+"Edinburgh Wanderers",9,"Caledonia Regional League North Division Four","Q24185018",""
+"Fraserburgh RFC",9,"Caledonia Regional League North Division Four","Q107556848",""
+"Inverness Craig Dunain RFC",9,"Caledonia Regional League North Division Four","Q107545900",""
+"Peterhead RFC",9,"Caledonia Regional League North Division Four","Q7178055",""
+"RHC Cougars RFC",9,"Caledonia Regional League North Division Four","Q7374271",""
+"Turriff RFC",9,"Caledonia Regional League North Division Four","Q107556977",""
+"Whitecraigs RFC",9,"Caledonia Regional League North Division Four","Q16935504",""
+"Ardrossan Academicals RFC",NA,NA,"Q4788260",""
+"Caledonian Thebans RFC",NA,NA,"Q5019454",""
+"Co-Optimist Rugby Club",NA,NA,"Q24197292",""
+"Dundee University RFC",NA,NA,"Q107970200",""
+"Edinburgh District",NA,NA,"Q25171627",""
+"Edinburgh Napier University RFC",NA,NA,"Q107970204",""
+"Edinburgh University RFC",NA,NA,"Q5338280",""
+"Gael Force",NA,NA,"Q5516516",""
+"Glasgow District",NA,NA,"Q20877062",""
+"Glasgow University RFC",NA,NA,"Q5566952",""
+"Greenock Wanderers RFC",NA,NA,"Q5604352",""
+"Heriot-Watt University RFC",NA,NA,"Q108178995",""
+"Liberton RFC",NA,NA,"Q107970191",""
+"Linlithgow RFC",NA,NA,"Q6554475",""
+"Midlands District",NA,NA,"Q25240866",""
+"Moray House RFC",NA,NA,"Q108179024",""
+"North Berwick RFC",NA,NA,"Q107970190",""
+"Queen Margaret University RFC",NA,NA,"Q108179013",""
+"Robert Gordon University RFC",NA,NA,"Q107970202",""
+"Scottish Exiles",NA,NA,"Q25352074",""
+"Scottish Rugby Academy",NA,NA,"Q18356234",""
+"South of Scotland District",NA,NA,"Q7569050",""
+"Stirling University RFC",NA,NA,"Q107970203",""
+"Strathclyde University RFC",NA,NA,"Q107970197",""
+"University of St Andrews RFC",NA,NA,"Q7896354",""
