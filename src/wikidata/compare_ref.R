@@ -270,8 +270,8 @@ for (country in countries) {
 # check that the excel data do not contain several times the same WikidataID
 # check whether clubs retrieved from WD are all present in the ref
 
-# NZ Oxford RFC != Q22087439
-# NZ Shannon RFC != Q3394565
+# retrieve alt names from wikidata
+# https://stackoverflow.com/questions/46850562/how-to-query-wikidata-for-also-known-as
 
   # display stats
   cat("Actual hits: ", hits, "/", length(ref_names), "\n", sep = "")
