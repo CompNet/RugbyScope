@@ -1,3 +1,4 @@
+########################################################################
 # Computes and plots some stats for the tables retrieved from Wikidata.
 #
 # Vincent Labatut

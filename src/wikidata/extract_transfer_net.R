@@ -1,3 +1,4 @@
+########################################################################
 # Extracts the club network based on the data retrieved from Wikidata.
 #
 # Vertices represent clubs and directed edges represent player transfers

@@ -1,5 +1,6 @@
+########################################################################
 # Script designed to merge the tables retrieved from DBpedia
-# into those retrieved from Wikidata. We give priority to the
+# *into* those retrieved from Wikidata. We give priority to the
 # WD information, which appears to be much more reliable.
 #
 # Vincent Labatut
@@ -8,6 +9,7 @@
 library("dplyr")
 
 source("src/common/logging.R")
+source("src/common/norm_players.R")
 
 
 
@@ -23,6 +25,7 @@ wd_table_folder <- file.path("data", "wikidata", "tables")
 
 ########################################################################
 tlog(0, "Loading DBpedia tables")
+source("src/dbpedia/clean_tables.R")
 
 # load DBpedia teals
 teams_dbp <- read.csv(file.path(dpb_table_folder, "all_teams_descr.csv"))
@@ -33,7 +36,6 @@ players_dbp <- read.csv(file.path(dpb_table_folder, "all_players_descr.csv"))
 tlog(2, "Raw number of DPB players: ", nrow(players_dbp))
 
 # normalize rugby positions
-source("src/dbpedia/clean_tables.R")
 all_positions <- get_clean_positions(players_dbp)
 players_dbp[, "positions"] <- all_positions
 
@@ -42,13 +44,13 @@ players_dbp[, "positions"] <- all_positions
 
 ########################################################################
 tlog(0, "Loading Wikidata tables")
+source("src/wikidata/clean_tables.R")
 
 # load Wikidata teams
 teams_wd <- read.csv(file.path(wd_table_folder, "all_teams_descr.csv"))
 tlog(2, "Raw number of WD teams: ", nrow(teams_wd))
 
 # normalize countries
-source("src/wikidata/clean_tables.R")
 all_countries <- get_clean_countries(teams_wd, field = "countryLabels")
 teams_wd[, "countryLabels"] <- all_countries
 

@@ -1,3 +1,4 @@
+########################################################################
 # Loads the three tables (players, teams, careers) retrieved from
 # Wikidata, and remove the information considered as useless.
 #

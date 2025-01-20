@@ -1,3 +1,4 @@
+########################################################################
 # Extracts the teammate network based on the data retrieved from Wikidata.
 #
 # Each vertex represents a player, and vertices are connected when the

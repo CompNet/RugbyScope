@@ -1,3 +1,4 @@
+########################################################################
 # Script designed to extract raw data from Wikidata, and record
 # them as tables.
 #
@@ -265,7 +266,7 @@ write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv")
 
 
 ########################################################################
-# unused code
+# temporary code, used to perform some tests and debugging
 # idx <- match(players0[,"playerId"], players[,"playerId"])
 # print(which(is.na(idx)))
 # players[idx, c("articleEn", "articleFr", "articleIt", "articleEs", "articleJa")] <- players0[, c("articleEn", "articleFr", "articleIt", "articleEs", "articleJa")]

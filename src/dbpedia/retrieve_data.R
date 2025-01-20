@@ -1,3 +1,4 @@
+########################################################################
 # Script designed to extract raw data from DBpedia, and record
 # them as tables.
 #
