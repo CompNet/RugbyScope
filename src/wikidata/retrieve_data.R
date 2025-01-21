@@ -186,6 +186,12 @@ tlog("Classes of the columns: ", paste(apply(teams, 2, class), collapse = ", "))
 tlog("Top of the table:\n")
 print.data.frame(teams[1:10, ])
 
+# teams without a proper name
+idx <- which(grepl("Q[0-9]+", teams[, "clubLabel"], fixed = FALSE))
+tlog("Teams without a name: ", length(idx))
+if (length(idx) > 0)
+  print(teams[idx, ])
+
 # replacing empty strings by NAs
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
