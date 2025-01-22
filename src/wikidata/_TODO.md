@@ -3,12 +3,13 @@
   * fix country colors (ireland=green, france=blue, etc.)
   * histo number of teams by country, distinguishing WD/non-WD
 
-- rename all the "club" variables to "team", for consistency
 - normalize the type of team:
   - club/franchise
   - national senior
   - national senior B
   - youth, all age categories
+
+> query WD items that have some rugby id but are not a rugby union player/team ?
 
 
 * NOTES

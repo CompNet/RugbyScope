@@ -30,6 +30,8 @@
 # Note: this probably includes a bunch of clubs out of the standard pyramid (e.g. corporate clubs in France)
 ########################################################################
 library("stringi")
+library("stringr")
+library("stringi")
 library("dplyr")
 
 source("src/common/logging.R")
@@ -317,6 +319,86 @@ compl_teams <- rbind(teams, addendum[, colnames(teams)])
 compl_teams <- cbind(1:nrow(compl_teams), compl_teams)
 colnames(compl_teams)[1] <- "rubyscopeId"
 
+
+
+
+########################################################################
+# normalize team type: club, national team, regional team, invitational team
+
+# NA > club
+idx <- which(is.na(compl_teams[, "type"]))
+compl_teams[idx, "type"] <- "Club"
+
+# defunct rugby union club > club
+# rugby union club > club
+# rugby union franchise > club
+# rugby union team > club
+idx <- which(compl_teams[, "type"] %in% c("defunct rugby union club", "rugby union club", "rugby union franchise", "rugby union team"))
+compl_teams[idx, "type"] <- "Club"
+
+# national rugby union team > national team, tier 1
+idx <- which(compl_teams[, "type"] == "national rugby union team")
+compl_teams[idx, "type"] <- "National senior team"
+compl_teams[idx, "tier"] <- "1"
+
+# second national rugby union teams > national team, tier 2
+idx <- which(compl_teams[, "type"] == "second national rugby union teams")
+compl_teams[idx, "type"] <- "National senior team"
+compl_teams[idx, "tier"] <- "2"
+
+# third tier national teams (e.g. Maori All Blacks)
+third_teams <- c("Q1490464", "Q17087005", "Q17153081", "Q3875602")
+idx <- match(third_teams, compl_teams[, "wikidataId"])
+compl_teams[idx, "type"] <- "National senior team"
+compl_teams[idx, "tier"] <- "3"
+
+# fourth tier national teams, generally amateurs (e.g. New Zealand Heartland)
+fourth_teams <- c("Q7015419", "Q7565371", "Q8565341", "Q22098273", "Q22098276", "Q3725357")
+idx <- match(fourth_teams, compl_teams[, "wikidataId"])
+compl_teams[idx, "type"] <- "National senior team"
+compl_teams[idx, "tier"] <- "4"
+
+# fixing incorrect youth national teams
+idx <- which(grepl("\\b[uU](nder)?[ -]?[0-9]+\\b", compl_teams[, "fullName"], fixed = FALSE))
+compl_teams[idx, "type"] <- paste0("National U", str_match(compl_teams[idx, "fullName"], "([0-9]+)")[,1]," team")
+compl_teams[idx, "tier"] <- "1"
+# exceptions
+compl_teams[which(compl_teams[, "wikidataId"] == "Q24902115"), "type"] <- "National U23 team"
+
+# national school-level teams
+school_teams <- c("Q4824649", "Q17055384")
+idx <- match(school_teams, compl_teams[, "wikidataId"])
+compl_teams[idx, "type"] <- "National school team"
+compl_teams[idx, "tier"] <- "1"
+
+# national university-level teams
+univ_teams <- c("Q20967743", "Q20981974")
+idx <- match(univ_teams, compl_teams[, "wikidataId"])
+compl_teams[idx, "type"] <- "National university team"
+compl_teams[idx, "tier"] <- "1"
+
+# invitational teams
+invit_teams <- c("Q7113937", "Q7565682", "Q807749", "Q28223950", "Q2004853", "Q7015235", "Q7565434", "Q3071726", "Q65068423", "Q7435412", "Q1490464", "Q11298953")
+idx <- match(invit_teams, compl_teams[, "wikidataId"])
+compl_teams[idx, "type"] <- "Invitational team"
+compl_teams[idx, "tier"] <- "1"
+
+# regional selection (eg NZ South Island)
+regio_teams <- c("Q104649868", "Q16237227", "Q7057169", "Q85815139", "Q7565682", "Q7569050")
+idx <- match(regio_teams, compl_teams[, "wikidataId"])
+compl_teams[idx, "type"] <- "Regional team"
+compl_teams[idx, "tier"] <- "1"
+
+# combined teams (involving several countries, i.e. British & Irish Lions)
+comb_teams <- c("Q3651754", "Q624092", "Q733600", "Q5327644", "Q3606252", "Q247246", "Q3976615", "Q121190772")
+idx <- match(comb_teams, compl_teams[, "wikidataId"])
+compl_teams[idx, "type"] <- "Combined team"
+compl_teams[idx, "tier"] <- "1"
+
+
+
+
+########################################################################
 # record as a new CSV file
 tab.file <- file.path(wd_table_folder, "fusion_teams_wd-dbp-ref.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
