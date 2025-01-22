@@ -3,12 +3,6 @@
   * fix country colors (ireland=green, france=blue, etc.)
   * histo number of teams by country, distinguishing WD/non-WD
 
-- normalize the type of team:
-  - club/franchise
-  - national senior
-  - national senior B
-  - youth, all age categories
-
 > query WD items that have some rugby id but are not a rugby union player/team ?
 
 
@@ -41,7 +35,7 @@
       https://www.archiesrugbyuniondatabase.com/    - ESPN Scrum: apparently dead
       https://www.espn.com/rugby/
     - It's Rugby: very good, but commercial
-      
+      https://www.itsrugby.co.uk/
     - Pick & Go: only international matches (and Super Rugby), commercial access
       https://www.lassen.co.nz/pickandgo.php
     - RugbyStats.com: this one seems dead
