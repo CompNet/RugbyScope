@@ -1,14 +1,14 @@
-* Data retrieval
-  1. Handle missing WD ids in DBP
-  2. Handle unmatched WD ids in DBP
-  3. Deal with club name normalization tp compute completeness stats
-  4. Merge DBP in WD (when missing data)
-  5. Query WP for each player in our table, trying to connect with WD entities using WP page URLs.
 * Stats
   * active players stats with *filtering* process
   * fix country colors (ireland=green, france=blue, etc.)
   * histo number of teams by country, distinguishing WD/non-WD
 
+- rename all the "club" variables to "team", for consistency
+- normalize the type of team:
+  - club/franchise
+  - national senior
+  - national senior B
+  - youth, all age categories
 
 
 * NOTES
@@ -33,3 +33,20 @@
       - https://enterprise.wikimedia.com/blog/structured-contents-wikipedia-infobox/ 
       - https://enterprise.wikimedia.com/docs/on-demand/#article-structured-contents-beta
     - There's also a way using Panda: https://gist.github.com/aculich/b34868c098d94d614515
+  - Possible databases:
+    - All.Rugby: seems to include transfers; looks incomplete but worth exploring.
+      https://all.rugby/
+    - Archie's Rugby Union Database: commercial, doesn't work very well, and test-focused
+      https://www.archiesrugbyuniondatabase.com/    - ESPN Scrum: apparently dead
+      https://www.espn.com/rugby/
+    - It's Rugby: very good, but commercial
+      
+    - Pick & Go: only international matches (and Super Rugby), commercial access
+      https://www.lassen.co.nz/pickandgo.php
+    - RugbyStats.com: this one seems dead
+      http://www.rugbydata.com/
+    - Rugby Database: incomplete, but free access (focus on NZ?)
+      https://www.rugbydatabase.co.nz/
+    - StatBunker's Rugby Stats: seems good enough, covers the major competitions
+      They also have the referees, maybe there's something to do with that...
+      https://rugby.statbunker.com/players/PlayerDisciplineVsClubs?player_id=8586

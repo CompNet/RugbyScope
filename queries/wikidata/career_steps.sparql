@@ -1,3 +1,4 @@
+########################################################################
 # This query retrieves all the steps constituting the
 # careers of a specific rugby player from Wikidata.
 # 
@@ -12,7 +13,7 @@
 
 SELECT DISTINCT 
   ?playerId #?playerLabel
-  ?clubId #?clubLabel 
+  ?teamId #?teamLabel 
   (STR(YEAR(?startDate)) AS ?startYear)
   (STR(YEAR(?endDate)) AS ?endYear)
   ?played ?points
@@ -25,22 +26,22 @@ WHERE
   # keep only the Wikidata ID (not the whole URL)
   BIND(STRAFTER(STR(?player), STR(wd:)) AS ?playerId).
   
-  # get their club contracts
-  ?player p:P54 ?statement.                 # P54=member of sports team, statement=relation between player/club
-  ?statement ps:P54 ?club.                  # ps:=object of the relation, pq:=qualifier of the relation
+  # get their team contracts
+  ?player p:P54 ?statement.                 # P54=member of sports team, statement=relation between player/team
+  ?statement ps:P54 ?team.                  # ps:=object of the relation, pq:=qualifier of the relation
 
   # get the rugby teams (more general category)
   {    
-    ?club wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
+    ?team wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
   }
   UNION
-  # add the clubs and franchises (more specific categories)
+  # add the teams, clubs and franchises (more specific categories)
   {
-    ?club wdt:P31/wdt:P279* wd:Q14645593.                           # P31=instance of, P279=subclass of, Q14645593=Rugby union team
+    ?team wdt:P31/wdt:P279* wd:Q14645593.                           # P31=instance of, P279=subclass of, Q14645593=Rugby union team
   }
   # filter depending on team type
-  ?club wdt:P31 ?clubType.                                          # P31=instance of
-  FILTER(?clubType IN(
+  ?team wdt:P31 ?teamType.                                          # P31=instance of
+  FILTER(?teamType IN(
                       wd:Q14645593,                                 # Q14645593=rugby union team
                       wd:Q43009164,                                 # Q43009164=rugby union club
                       wd:Q63171169,                                 # Q63171169=rugby union franchise
@@ -51,7 +52,7 @@ WHERE
                     ))
   
   # keep only the Wikidata ID (not the whole URL)
-  BIND(STRAFTER(STR(?club), STR(wd:)) AS ?clubId).
+  BIND(STRAFTER(STR(?team), STR(wd:)) AS ?teamId).
   
   
   ############# retrieve individual information

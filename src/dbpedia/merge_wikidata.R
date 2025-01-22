@@ -46,6 +46,7 @@ players_dbp[, "positions"] <- all_positions
 tlog(0, "Loading Wikidata tables")
 source("src/wikidata/clean_tables.R")
 
+###
 # load Wikidata teams
 teams_wd <- read.csv(file.path(wd_table_folder, "all_teams_descr.csv"))
 tlog(2, "Raw number of WD teams: ", nrow(teams_wd))
@@ -55,6 +56,7 @@ all_countries <- get_clean_countries(teams_wd, field = "countryLabels")
 teams_wd[, "countryLabels"] <- all_countries
 
 
+###
 # load Wikidata players
 players_wd <- read.csv(file.path(wd_table_folder, "all_players_descr.csv"))
 tlog(2, "Raw number of WD players: ", nrow(players_wd))
@@ -85,7 +87,7 @@ write.csv(teams_dbp[idx, ], file.path(dpb_stats_folder, "comparison_teams_noid.c
 #     or that these teams have duplicates in DBP
 
 # identify teams with a WD id that are not in our WD table (so, in theory, not rugby teams)
-idx <- match(teams_dbp[hits, "wikidataId"], teams_wd[, "clubId"])
+idx <- match(teams_dbp[hits, "wikidataId"], teams_wd[, "teamId"])
 tlog(2, "DBP teams found in the WD table: ", length(which(!is.na(idx))), "/", length(hits))
 # print(teams_dbp[hits[which(is.na(idx))], "wikidataId"])
 # export as CSV for later use
@@ -115,7 +117,7 @@ write.csv(players_dbp[idx, ], file.path(dpb_stats_folder, "comparison_players_no
 idx <- match(players_dbp[hits, "wikidataId"], players_wd[, "playerId"])
 tlog(2, "DBP players found in the WD table: ", length(which(!is.na(idx))), "/", length(hits))
 # print(players_dbp[hits[is.na(idx)], "wikidataId"])
-# >>> lot of females, rugby league players, and rugby union players not tied to any club
+# >>> lot of females, rugby league players, and rugby union players not tied to any team
 # export as CSV for later use
 write.csv(players_dbp[hits[which(is.na(idx))], ], file.path(dpb_stats_folder, "comparison_players_nomatch.csv"), row.names = FALSE)
 #     so, mainly false positives in DBP
@@ -302,7 +304,7 @@ players <- players[order(ids), ]
 # replacing empty strings by NAs
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-tab.file <- file.path(dpb_table_folder, "fusion_players.csv")
+tab.file <- file.path(dpb_table_folder, "fusion_players_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(players, tab.file, row.names = FALSE)
 
@@ -312,7 +314,7 @@ write.csv(players, tab.file, row.names = FALSE)
 ########################################################################
 tlog(0, "Merging the DBpedia team data into the Wikidata table")
 
-# merging the team tables: as with the players, trust the Wikidata data 
+# merging the team tables: as with the players, trust the Wikidata data
 # first, then complete with DBpedia content when WD is empty.
 teams <- teams_wd
 
@@ -328,36 +330,33 @@ idx <- which(!is.na(teams[, "terminationMax"]) & is.na(teams[, "terminationForma
 if (length(idx) > 0)
   teams[idx, "terminationMax"] <- NA
 
-# possibly add a new column for the alternative names
+# possibly add a new column for the DBP id
 tlog(2, "Adding missing columns")
-if (!("altNames" %in% colnames(teams))) {
-  teams <- cbind(teams[, 1:4], rep(NA, nrow(teams)), teams[, 5:ncol(teams)])
-  colnames(teams)[5] <- "altNames"
-}
-# same for the DBP id
 if (!("dbpediaId" %in% colnames(teams))) {
   teams <- cbind(teams, rep(NA, nrow(teams)))
   colnames(teams)[ncol(teams)] <- "dbpediaId"
 }
 
 # prepare data for name merging
-idx <- match(teams[, "clubId"], teams_dbp[, "wikidataId"])
-names1 <- strsplit(teams_dbp[, "teamLabel"], "; ")
-names2 <- strsplit(teams_dbp[, "teamNames"], "; ")
-nicks1 <- strsplit(teams[, "nickmaneLabels"], "; ")
+idx <- match(teams[, "teamId"], teams_dbp[, "wikidataId"])
+names1 <- strsplit(teams[, "altNames"], "; ")
+names2 <- strsplit(teams_dbp[, "teamLabel"], "; ")
+names3 <- strsplit(teams_dbp[, "teamNames"], "; ")
+nicks1 <- strsplit(teams[, "nicknameLabels"], "; ")
 nicks2 <- strsplit(teams_dbp[, "nickNames"], "; ")
 
-# only keep DBP alt names that are not already matching the WD label
-tlog(2, "Copying DBP names into empty WD cells")
+# only keep DBP alt/nick names that are not already matching the WD label
+tlog(2, "Copying DBP names into WD table, provided not already present")
 # loop over teams to copy DBP data
 for (t in 1:length(idx)) {
   # check that there is a match between the tables
   if (!is.na(idx[t])) {
-    names <- union(names1[[idx[t]]], names2[[idx[t]]])
+    # retain only the unique names (case-insensitive)
+    names <- unique(c(names1[[t]], names2[[idx[t]]], names3[[idx[t]]], nicks1[[t]], nicks2[[idx[t]]]))
     names <- names[!is.na(names)]
-    nicks <- union(nicks1[[idx[t]]], nicks2[[idx[t]]])
-    nicks <- nicks[!is.na(nicks)]
-    alt_names <- setdiff(names, c(teams[t, "clubLabel"], nicks))
+    alt_names0 <- setdiff(toupper(names), toupper(teams[t, "teamLabel"]))
+    idx0 <- match(alt_names0, toupper(names))
+    alt_names <- names[idx0]
     if (length(alt_names) > 0)
       teams[t, "altNames"] <- paste(alt_names, collapse = "; ")
     else
@@ -367,25 +366,8 @@ for (t in 1:length(idx)) {
 # fix some remaining issues
 # length(which(grepl("\"", teams[, "altNames"], fixed = TRUE)))
 teams[, "altNames"] <- gsub("\"", "", teams[, "altNames"], fixed = TRUE)
+# length(which(grepl("; (; ),; ;;", teams[, "altNames"], fixed = TRUE)))
 teams[, "altNames"] <- gsub("; (; ),; ;;", ";", teams[, "altNames"], fixed = TRUE)
-
-# merge the nicknames from WD et only keep DBP
-tlog(2, "Merging WD and DBP nicknames")
-# loop over teams to copy DBP data
-for (t in 1:length(idx)) {
-  # check that there is a match between the tables
-  if (!is.na(idx[t])) {
-    names <- union(names1[[idx[t]]], names2[[idx[t]]])
-    names <- names[!is.na(names)]
-    nicks <- union(nicks1[[idx[t]]], nicks2[[idx[t]]])
-    nicks <- nicks[!is.na(nicks)]
-    nick_names <- setdiff(nicks, c(teams[t, "clubLabel"], names))
-    if (length(nick_names) > 0)
-      teams[t, "nickmaneLabels"] <- paste(nick_names, collapse = "; ")
-    else
-      teams[t, "nickmaneLabels"] <- NA
-  }
-}
 
 # replace affiliations that do not concern national federations
 map <- c()
@@ -426,11 +408,11 @@ teams[, "terminationMax"] <- dd
 # map DBP columns to WD columns
 map <- c()
 map["dbpediaId"] <- "team"
-map["clubId"] <- "wikidataId"
+map["teamId"] <- "wikidataId"
 
 # loop over teams to copy DBP data
 tlog(2, "Copying DBP data into empty WD fields")
-idx <- match(teams[, "clubId"], teams_dbp[, "wikidataId"])
+idx <- match(teams[, "teamId"], teams_dbp[, "wikidataId"])
 for (c in 1:length(idx)) {
   #tlog(4, "Processing team ", c, "/", length(idx))
   # check that there is a match between the tables
@@ -447,7 +429,7 @@ for (c in 1:length(idx)) {
 }
 
 # remove supefluous columns
-rem_cols <- c("inceptionFormat", "terminationFormat", "nickmaneLabels")
+rem_cols <- c("inceptionFormat", "terminationFormat", "nicknameLabels")
 tlog(2, "Removing supefluous columns (", paste0(rem_cols, collapse = ", "), ")")
 idx <- which(colnames(teams) %in% rem_cols)
 teams <- teams[, -idx]
@@ -455,9 +437,9 @@ teams <- teams[, -idx]
 # rename certain columns
 tlog(2, "Rename certain columns")
 map <- c()
-map["wikidataId"] <- "clubId"
-map["fullName"] <- "clubLabel"
-map["type"] <- "clubTypeLabel"
+map["wikidataId"] <- "teamId"
+map["fullName"] <- "teamLabel"
+map["type"] <- "teamTypeLabel"
 map["inceptionDate"] <- "inceptionMax"
 map["terminationDate"] <- "terminationMax"
 map["affiliations"] <- "affiliationLabels"
@@ -477,6 +459,6 @@ teams <- teams[order(ids), ]
 # replacing empty strings by NAs
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-tab.file <- file.path(dpb_table_folder, "fusion_teams.csv")
+tab.file <- file.path(dpb_table_folder, "fusion_teams_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(teams, tab.file, row.names = FALSE)

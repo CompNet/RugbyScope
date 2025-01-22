@@ -1,3 +1,4 @@
+########################################################################
 # This query retrieves the list of all the rugby union teams described
 # on Wikidata.
 #
@@ -5,23 +6,23 @@
 # 12/2024
 ########################################################################
 
-SELECT DISTINCT ?club ?clubId
+SELECT DISTINCT ?team ?teamId
 
 WHERE
 { 
   ############# constraints on the rugby teams
   # get the rugby teams (more general category)
   {    
-    ?club wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
+    ?team wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
   }
   UNION
-  # add the clubs and franchises (more specific categories)
+  # add the teams, clubs and franchises (more specific categories)
   {
-    ?club wdt:P31/wdt:P279* wd:Q14645593.                           # P31=instance of, P279=subclass of, Q14645593=Rugby union team
+    ?team wdt:P31/wdt:P279* wd:Q14645593.                           # P31=instance of, P279=subclass of, Q14645593=Rugby union team
   }
   # filter depending on team type
-  ?club wdt:P31 ?clubType.                                          # P31=instance of
-  FILTER(?clubType IN(
+  ?team wdt:P31 ?teamType.                                          # P31=instance of
+  FILTER(?teamType IN(
                       wd:Q14645593,                                 # Q14645593=rugby union team
                       wd:Q43009164,                                 # Q43009164=rugby union club
                       wd:Q63171169,                                 # Q63171169=rugby union franchise
@@ -32,8 +33,8 @@ WHERE
                     ))
   
   # keep only the Wikidata ID (not the whole URL)
-  BIND(STRAFTER(STR(?club), STR(wd:)) AS ?clubId).
+  BIND(STRAFTER(STR(?team), STR(wd:)) AS ?teamId).
   
 }
 
-ORDER BY ?clubId
+ORDER BY ?teamId

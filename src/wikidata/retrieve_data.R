@@ -108,7 +108,7 @@ tlog("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "
 tlog("Top of the table:")
 print.data.frame(players[1:10, ])
 
-# replacing empty strings by NAs
+# replace empty strings by NAs
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
 write.csv(x = players, file = file.path(table_folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
@@ -124,8 +124,16 @@ tlog("Retrieving the list of team IDs from WD")
 query <- readtext(file.path(query_folder, "teams_list.sparql"))$text
 
 # run query and get list of ids
-team_ids <- query_wikidata(query)$clubId
+team_ids <- query_wikidata(query)$teamId
 tlog("Number of teams IDs retrieved: ", length(team_ids))
+
+# remove the generic concepts
+concepts <- c(
+  "Q43009164" # rugby union club
+)
+idx <- which(team_ids %in% concepts)
+if (length(idx) > 0)
+  team_ids <- team_ids[-idx]
 
 
 
@@ -134,10 +142,10 @@ tlog("Number of teams IDs retrieved: ", length(team_ids))
 # extraction of team information
 tlog("Retrieving the individual information of each team (may take a while)")
 col_names <- c(
-  "clubId", "clubLabel", "clubTypeLabel",
+  "teamId", "teamLabel", "teamTypeLabel",
   "inceptionMax", "inceptionFormat",
   "terminationMax", "terminationFormat",
-  "nickmaneLabels", "affiliationLabels",
+  "altNames", "nicknameLabels", "affiliationLabels",
   "countryLabels", "competitionLabels",
   "homeVenueLabels", "homeVenueCapacities", "locationLabels",
   "AllRugbyIDs", "GoogleKnowlIDs",
@@ -150,6 +158,10 @@ colnames(teams) <- col_names
 
 # load query file
 query <- readtext(file.path(query_folder, "teams_info.sparql"))$text
+######
+#     NOTE: if the query times out, it is possible to run it in two steps,
+#           using files "teams_info1.sparql" and "teams_info2.sparql"
+######
 # remove the comments/spaces/newlines, otherwise the query is too long
 query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
 query <- gsub("  +", " ", query)
@@ -158,7 +170,8 @@ query <- gsub(" *[\r\n] *", "\n", query)
 
 # run query for each team
 tlog.start.loop(0, length(team_ids), "Looping over teams")
-for (t in which(is.na(teams[, "clubLabel"]))) {
+for (t in 1:length(team_ids)) {
+# for (t in which(is.na(teams[, "teamLabel"]))) {
   # get team ID
   team_id <- team_ids[t]
   tlog.loop(2, t, "++++++++++++ Processing team ", team_id, " (", t, "/", length(team_ids), ")")
@@ -167,16 +180,16 @@ for (t in which(is.na(teams[, "clubLabel"]))) {
   tm_query <- gsub("QQQQQQ", team_id, query, fixed = TRUE)
   row <- query_wikidata(tm_query)
   print.data.frame(row)
-  if(nrow(row) > 1)
-    stop(paste0("ERROR: several rows returned for one team (some field probably contains multiple values). Team ID= "), player_id)
+  if (nrow(row) > 1)
+    stop(paste0("ERROR: several rows returned for one team (some field probably contains multiple values). Team ID= "), team_id)
 
   # add to table
-  idx <- which(teams[, "clubId"] == team_id)
+  idx <- which(teams[, "teamId"] == team_id)
   if (length(idx) == 0)
     idx <- t
-  cols <- setdiff(intersect(colnames(row), col_names), "clubId")
+  cols <- setdiff(intersect(colnames(row), col_names), "teamId")
   teams[idx, cols] <- row[1, cols]
-  teams[idx, "clubId"] <- team_id
+  teams[idx, "teamId"] <- team_id
 }
 tlog.end.loop(0, "Team loop completed")
 
@@ -184,15 +197,35 @@ tlog.end.loop(0, "Team loop completed")
 tlog("Dimension of the teams table: ", paste(dim(teams), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(teams, 2, class), collapse = ", "))
 tlog("Top of the table:\n")
-print.data.frame(teams[1:10, ])
+print.data.frame(teams[1:5, ])
 
 # teams without a proper name
-idx <- which(grepl("Q[0-9]+", teams[, "clubLabel"], fixed = FALSE))
+idx <- which(grepl("Q[0-9]+", teams[, "teamLabel"], fixed = FALSE))
 tlog("Teams without a name: ", length(idx))
 if (length(idx) > 0)
   print(teams[idx, ])
 
-# replacing empty strings by NAs
+# remove redundant alt names
+for (t in 1:length(team_ids)) {
+  main_name <- teams[t, "teamLabel"]
+  if (!is.na(teams[t, "nicknameLabels"]))
+    nick_names <- strsplit(teams[t, "nicknameLabels"], "; ")[[1]]
+  else
+    nick_names <- c()
+  if (!is.na(teams[t, "altNames"]))
+    alt_names <- strsplit(teams[t, "altNames"], "; ")[[1]]
+  else
+    alt_names <- c()
+  alt_names0 <- setdiff(toupper(alt_names), union(toupper(main_name), toupper(nick_names)))
+  idx <- match(alt_names0, toupper(alt_names))
+  alt_names <- alt_names[idx]
+  if (length(alt_names) == 0)
+    teams[t, "altNames"] <- NA
+  else
+    teams[t, "altNames"] <- paste(alt_names, collapse = "; ")
+}
+
+# replace empty strings by NAs
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
 write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
@@ -205,7 +238,7 @@ write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.
 tlog("Retrieving players' careers (may take a while)\n")
 col_names <- c(
   "playerId",
-  "clubId",
+  "teamId",
   "startYear", "endYear",
   "played", "points"
 )
@@ -257,13 +290,13 @@ print.data.frame(careers[1:10, ])
 # add player and team names
 idx <- match(careers[, "playerId"], players[, "playerId"])
 plyr_names <- players[idx, "playerLabel"]
-idx <- match(unlist(careers[, "clubId"]), teams[, "clubId"])
-club_names <- teams[idx, "clubLabel"]
-careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "clubId"], clubLabel = club_names, careers[,3:ncol(careers)])
+idx <- match(unlist(careers[, "teamId"]), teams[, "teamId"])
+team_names <- teams[idx, "teamLabel"]
+careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "teamId"], teamLabel = team_names, careers[,3:ncol(careers)])
 colnames(careers)[1] <- "playerId"
-colnames(careers)[3] <- "clubId"
+colnames(careers)[3] <- "teamId"
 
-# replacing empty strings by NAs
+# replace empty strings by NAs
 careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
 write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")

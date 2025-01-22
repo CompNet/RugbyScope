@@ -406,8 +406,7 @@
 "http://dbpedia.org/resource/Ceylonese_Rugby_&_Football_Club","Ceylonese Rugby & Football Club","Ceylonese",NA,"Q5065805"
 "http://dbpedia.org/resource/Chad_national_rugby_union_team","Chad national rugby union team",NA,NA,"Q3590791"
 "http://dbpedia.org/resource/Chard_RFC","Chard RFC","Chard; Chard Rugby Football Club",NA,"Q17986381"
-"http://dbpedia.org/resource/Charles_River_Rats","Charles River Rats","Charles River RFC; The River Rats; Charles River Rugby Football Club
-Charles River Women's Rugby Football Club","The River Rats","Q5082080"
+"http://dbpedia.org/resource/Charles_River_Rats","Charles River Rats","Charles River RFC; The River Rats; Charles River Rugby Football Club","The River Rats","Q5082080"
 "http://dbpedia.org/resource/Charleston_Outlaws_RFC","Charleston Outlaws RFC","Charleston Rugby Football Club; Outlaws; Charleston Outlaws Rugby Football Club","Outlaws","Q5084165"
 "http://dbpedia.org/resource/Charlotte_Rugby_Club","Charlotte Rugby Club","Charlotte RFC; Olde Originals; Charlotte Rugby Football Club","Olde Originals","Q5086122"
 "http://dbpedia.org/resource/Charlton_Park_RFC","Charlton Park RFC","Charlton Park; Charlton Park Rugby Football Club",NA,"Q5086325"
@@ -904,9 +903,7 @@ Charles River Women's Rugby Football Club","The River Rats","Q5082080"
 "http://dbpedia.org/resource/Heidelberger_TV","Heidelberger TV","Heidelberger Trans RFC; Heidelberger Turnverein 1846 e.V.",NA,"Q832774"
 "http://dbpedia.org/resource/Heinzenberg_GR","Heinzenberg GR",NA,NA,"Q204593"
 "http://dbpedia.org/resource/Helensburgh_RFC","Helensburgh RFC","Helensburgh Rugby Football Club",NA,"Q67913273"
-"http://dbpedia.org/resource/Helensvale_Hogs_RUC","Helensvale Hogs RUC","Helensvale Hogs Rugby Union Football Club; Helensvale Hogs Rugby Union Football Club.
-
-Formally known as the Helensvale Hares Rugby Union Football Club.",NA,"Q24185131"
+"http://dbpedia.org/resource/Helensvale_Hogs_RUC","Helensvale Hogs RUC","Helensvale Hogs Rugby Union Football Club; Helensvale Hogs Rugby Union Football Club",NA,"Q24185131"
 "http://dbpedia.org/resource/Helsinki_RC","Helsinki RC","Big Guns (Men 1st); Blue Tigers (Men 2nd); Helsinki Rugby Club; Ladies (Women); Helsinki Rugby Football Club","Big Guns; Blue Tigers; Ladies","Q5710525"
 "http://dbpedia.org/resource/Helston_RFC","Helston RFC","Helston Rugby Football Club",NA,"Q5710580"
 "http://dbpedia.org/resource/Helvetia_Rugby","Helvetia Rugby","Alqatara Rugby Club Andalucía",NA,"Q20978019"
@@ -1321,8 +1318,7 @@ Formally known as the Helensvale Hares Rugby Union Football Club.",NA,"Q24185131
 "http://dbpedia.org/resource/Naked/Fight_Together/Tempest","Naked/Fight Together/Tempest",NA,NA,"Q2699183"
 "http://dbpedia.org/resource/Nakuru_RFC","Nakuru RFC","Nakuru; Nakuru Rugby Football Club",NA,"Q17110662"
 "http://dbpedia.org/resource/Namibia_national_under-20_rugby_union_team","Namibia national under-20 rugby union team","Welwitschias","Welwitschias","Q17110630"
-"http://dbpedia.org/resource/Nant_Conwy_RFC","Nant Conwy RFC","Motto       = Hwn yw tir nerth Teirw Nant; Nant Conwy; Teirw Nant Conwy; Clwb Rygbi Nant Conwy","Teirw Nant Conwy
-   Motto       = Hwn yw tir nerth Teirw Nant","Q6964269"
+"http://dbpedia.org/resource/Nant_Conwy_RFC","Nant Conwy RFC","Nant Conwy; Teirw Nant Conwy; Clwb Rygbi Nant Conwy","Teirw Nant Conwy","Q6964269"
 "http://dbpedia.org/resource/Nantyffyllon_RFC","Nantyffyllon RFC","Nanty; Nantyffyllon Rugby Football Club","Nanty","Q6964396"
 "http://dbpedia.org/resource/Nantyglo_RFC","Nantyglo RFC","The Glo; Nantyglo Rugby Football Club","The Glo","Q6964397"
 "http://dbpedia.org/resource/Nantymoel_RFC","Nantymoel RFC","Nantymoel Rugby Football Club",NA,"Q6964402"

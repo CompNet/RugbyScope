@@ -12,7 +12,7 @@ source("src/common/logging.R")
 
 
 ########################################################################
-# Normalizes the specified club names. The function implements three 
+# Normalizes the specified team names. The function implements three 
 # levels of normalization: 
 #   1. Removing diacritics, case, and points, replace hyphens by spaces.
 #   2. Turning standard expression into acronyms (e.g. Rugby Club => RC).
@@ -49,11 +49,13 @@ normalize_names <- function(names, level = 1) {
 
     # define conversion map
     map <- c()
+    map["Amatori Rugby"] <- "AR"
     map["Amicale Laïque"] <- "AL"
     map["Amicale Sportive"] <- "AS"
     map["Association Sportive"] <- "AS"
     map["Association Sportive et Culturelle"] <- "ASC"
     map["Association Amicale et Sportive"] <- "AAS"
+    map["Associazione Sportiva"] <- "AS"
     map["Associazione Sportiva Dilettantistica"] <- "ASD"
     map["Athletic Club"] <- "AC"
     map["Cercle Amical"] <- "CA"
@@ -99,6 +101,8 @@ normalize_names <- function(names, level = 1) {
     map["Sport Rugby"] <- "SR"
     map["Sporting Club"] <- "SC"
     map["Sporting Union"] <- "SU"
+    map["Società a Responsabilità Limitata"] <- "SRL"
+    map["Società Sportiva Dilettantistica"] <- "SSD"
     map["Stade Athlétique"] <- "SA"
     map["Stade Olympique"] <- "SO"
     map["Union Athlétique"] <- "UA"
@@ -106,27 +110,41 @@ normalize_names <- function(names, level = 1) {
     map["Union Sportive Athlétique"] <- "USA"
     map["Union Sportive Olympique"] <- "USO"
     map["Union Sportive"] <- "US"
+    map["Unione Rugby"] <- "UR"
+    map["Unione Sportiva"] <- "US"
     map["Universitario Rugby Club"] <- "URC"
     map["Université Club"] <- "UC"
+
     # remove diacritics and switch to upper case
     names <- names(map)
     map <- stri_trans_general(str = map, id = "Latin-ASCII")
     map <- toupper(map)
     names <- stri_trans_general(str = names, id = "Latin-ASCII")
-    names <- toupper(names)
-    # order by string length
-    map <- rev(map[order(nchar(names))])
-    names <- rev(names[order(nchar(names))])
-    names(map) <- names
+    names(map) <- toupper(names)
+    # add regex word boundaries
+    names(map) <- paste0("\\b", names(map), "\\b")
 
-    # third level map (replace every expression by an empty string)
-    if (level == 3)
+    # third level map
+    if (level == 3) {
+      # add abbreviations as keys in the map, associated to empty strings
+      lg <- length(unique(map))
+      map2 <- rep("", lg)
+      names(map2) <- paste0("\\b", unique(map), "\\b")
+      map <- c(map, map2)
+
+      # replace every other value by an empty string
       map[names(map)] <- rep("", length(map))
+    }
+
+    # order map by decreasing string length
+    names <- names(map)
+    map <- rev(map[order(nchar(names))])
+    names(map) <- rev(names[order(nchar(names))])
 
     # loop over map to replace original expressions
     for (m in 1:length(map)) {
       mm <- names(map)[m]
-      result <- gsub(mm, map[mm], result, fixed = TRUE)
+      result <- gsub(mm, map[mm], result, fixed = FALSE)
     }
 
     # trim heading/trailing white spaces
@@ -142,7 +160,7 @@ normalize_names <- function(names, level = 1) {
 ########################################################################
 # Matches string from the source vector into the target vector. The
 # function looks for the best matches, considering the specifics of
-# rugby union club names. The specified strings can be lists of names,
+# rugby union team names. The specified strings can be lists of names,
 # separated by "; ".
 #
 # If there are duplicates in the target list, it is possible for one

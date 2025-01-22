@@ -3,6 +3,8 @@
 # manually curated lists. This script computes various stats, and was
 # used when elaborating the reference team lists, especially to detect
 # dupplicates and insert WD ids in the reference tables.
+# Finallt, this script merges the reference list of teams into the 
+# Wikidata/DBpedia team table.
 #
 # Vincent Labatut
 # 01/2025
@@ -51,7 +53,7 @@ wd_teams <- read.csv(file.path(wd_table_folder, "all_teams_descr.csv"))
 cat("Raw number of teams in WD table:", nrow(wd_teams), "\n")
 
 # load merged data table
-fusion_file <- file.path(dpb_table_folder, "fusion_teams.csv")
+fusion_file <- file.path(dpb_table_folder, "fusion_teams_wd-dbp.csv")
 teams <- read.csv(fusion_file)
 cat("Raw number of teams in merged table:", nrow(teams), "\n")
 
@@ -97,7 +99,7 @@ print(which(table(all_teams[, "wikidataId"]) > 1))
 #   ref_names <- normalize_names(country_refs[[country]][, "name"], level = 1)
 #   tiers <- country_refs[[country]][, "tier"]
 #   theor_hits <- length(which(!is.na(country_refs[[country]][, "wikidataId"])))
-#   wd_names <- normalize_names(wd_teams[, "clubLabel"], level = 1)
+#   wd_names <- normalize_names(wd_teams[, "teamLabel"], level = 1)
 
 #   # match names
 #   idx <- match(ref_names, wd_names)
@@ -111,7 +113,7 @@ print(which(table(all_teams[, "wikidataId"]) > 1))
 #   # print(ref_names[!identified])
 
 #   # record detailed list
-#   tab <- cbind(country_refs[[country]], wd_teams[idx, c("clubId", "clubLabel")])
+#   tab <- cbind(country_refs[[country]], wd_teams[idx, c("teamId", "teamLabel")])
 #   tab_file <- file.path(wd_table_folder, paste0(country, "_teams_matches.csv"))
 #   write.csv(tab, tab_file, row.names = FALSE)
 
@@ -176,6 +178,7 @@ for (i in 1:length(result)) {
 }
 
 # display WD teams matching several reference teams
+tlog("WD teams matching several reference teams:")
 ll <- sapply(result, length)
 idx <- which(ll > 1)
 if (length(idx) > 0) {
@@ -187,9 +190,10 @@ if (length(idx) > 0) {
 }
 
 # display WD teams matching reference team by name, but WD id missing in reference
+tlog("WD teams matching reference team by name, but WD id missing in reference:")
 result <- sapply(result, function(x) x[1])
 idx <- which(!is.na(result))
-cbind(teams[wd_idx[idx], c("wikidataId", "fullName")], all_teams[ref_idx[result[idx]], ])
+print(cbind(teams[wd_idx[idx], c("wikidataId", "fullName")], all_teams[ref_idx[result[idx]], ]))
 
 
 
@@ -237,6 +241,8 @@ map["Cuyo Rugby Union; Unión de Rugby de Cuyo"] <- "Unión de Rugby de Cuyo"
 map["Fédérale 2; Fédérale 1 - Poule 1"] <- "Fédérale 1 - Poule 1"
 map["Fédérale 2; Fédérale 2 - Poule 5"] <- "Fédérale 2 - Poule 5"
 map["French rugby union regional 1 championship; Rugby union regional Auvergne-Rhône-Alpes league; Régionale 2 - Ligue Auvergne-Rhône-Alpes"] <- "French rugby union regional 1 championship; Régionale 2 - Ligue Auvergne-Rhône-Alpes"
+map["Serie C; Serie C Emilia Romagna"] <- "Serie C Emilia Romagna"
+map["Serie C; Serie C Lazio"] <- "Serie C Lazio"
 map["Serie C; Serie C Veneto"] <- "Serie C Veneto"
 map["Top East League; Top East League Group B"] <- "Top East League Group B"
 map["Top West; Top West League Group A"] <- "Top West League Group A"
@@ -276,31 +282,42 @@ for (m in 1:length(map)) {
 ########################################################################
 # which WD teams do not appear in the reference
 
+# identify these teams
 idx <- which(is.na(match(teams[, "wikidataId"], all_teams[, "wikidataId"])))
-
-write.csv(teams[idx, ], file.path(wd_table_folder, "test.csv"))
-
-
-
-
-
-
-
-
+# record as CSV to check later
+write.csv(teams[idx, ], file.path(wd_table_folder, "teams_missing_in_reference.csv"))
 
 
 
 
 ########################################################################
-##### TODO
-#
-# check whether clubs retrieved from WD are all present in the ref
-#
-# retrieve alt names from wikiData
-# https://stackoverflow.com/questions/46850562/how-to-query-wikidata-for-also-known-as
-#
-# add missing teams in merged table
-#
-# pb ds la normalisation des noms d'équipes : 
-# 1. rajouter les acronymes dans les chaines à supprimer
-# 2. rajouter les bornes regex pr ne pas suppr des morceaux de mots
+# add missing reference teams into the merged team table
+
+# check: teams in the ref list, with a WD id, but not in the WD/DBP table (?)
+idx0 <- which(!is.na(all_teams[, "wikidataId"]))
+idx <- which(is.na(match(all_teams[idx0, "wikidataId"], teams[, "wikidataId"])))
+if (length(idx) > 0) {
+  tlog("Teams possessing a WD id in the reference list, but not found in the merged table")
+  print(all_teams[idx0[idx], ])
+}
+
+# teams from the reference table without a WD id
+idx <- which(is.na(all_teams[, "wikidataId"]))
+tlog("Number of teams in the reference list not matched in the merged table: ", length(idx), "/", nrow(all_teams))
+
+# add them into the merged table
+addendum <- all_teams[idx, -which(colnames(all_teams) == "homonyms")]
+cn <- c("fullName", "tier", "competitions", "countries", "wikidataId")
+missing_cols <- setdiff(colnames(teams), cn)
+addendum <- cbind(addendum, matrix(NA, nrow = nrow(addendum), ncol = length(missing_cols)))
+colnames(addendum) <- c(cn, missing_cols)
+compl_teams <- rbind(teams, addendum[, colnames(teams)])
+
+# insert new id (internal) to account for missing WD ids
+compl_teams <- cbind(1:nrow(compl_teams), compl_teams)
+colnames(compl_teams)[1] <- "rubyscopeId"
+
+# record as a new CSV file
+tab.file <- file.path(wd_table_folder, "fusion_teams_wd-dbp-ref.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(compl_teams, tab.file, row.names = FALSE)

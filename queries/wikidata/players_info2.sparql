@@ -1,3 +1,4 @@
+########################################################################
 # Sometimes, query `players_info.sparql` times out: it is possible to run
 # the same query in two steps. This query is the second step.
 # 

@@ -17,7 +17,7 @@ SELECT DISTINCT ?team ?teamLabel
 ?wikidataId
 
 WHERE {
-#  VALUES ?types { dbo:SportsTeam dbo:SportsClub dbo:RugbyClub } # filtering based on these more general entities returns any type of club
+#  VALUES ?types { dbo:SportsTeam dbo:SportsClub dbo:RugbyClub } # filtering based on these more general entities returns any type of team
   VALUES ?types { dbo:RugbyClub }
   ?team rdf:type ?types ;
         rdfs:label ?teamLabel.

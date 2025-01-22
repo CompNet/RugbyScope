@@ -38,7 +38,7 @@ weights <- c()
 
 # init last step variables
 last_player <- filt_careers[1, "playerId"]
-last_club <- filt_careers[1, "clubId"]
+last_club <- filt_careers[1, "teamId"]
 last_end <- filt_careers[1, "endYear"]
 row <- 2
 
@@ -46,7 +46,7 @@ row <- 2
 while(row <= nrow(filt_careers)) {
   cat("Processing career step ", row, "/", nrow(filt_careers), "\n", sep="")
   player_id <- filt_careers[row, "playerId"]
-  club_id <- filt_careers[row, "clubId"]
+  club_id <- filt_careers[row, "teamId"]
   start_year <- filt_careers[row, "startYear"]
   end_year <- filt_careers[row, "endYear"]
   cat(player_id, ", ", club_id, "\n", sep="")
@@ -76,8 +76,8 @@ while(row <= nrow(filt_careers)) {
 # init graph
 g <- graph_from_edgelist(el, directed = TRUE)
 E(g)$weight <- weights
-idx <- match(V(g)$name, teams[, "clubId"])
-V(g)$fullname <- teams[idx, "clubLabel"]
+idx <- match(V(g)$name, teams[, "teamId"])
+V(g)$fullname <- teams[idx, "teamLabel"]
 plot(g)
 
 
@@ -88,7 +88,7 @@ plot(g)
 cat("Insert individual information\n")
 
 # add main team information
-idx <- match(V(g)$name, teams[, "clubId"])
+idx <- match(V(g)$name, teams[, "teamId"])
 V(g)$country <- teams[idx, "countryLabels"]
 V(g)$competition <- teams[idx, "competitionLabels"]
 

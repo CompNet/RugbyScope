@@ -1,4 +1,4 @@
-"playerId","playerLabel","clubId","clubLabel","startYear","endYear","played","points"
+"playerId","playerLabel","teamId","teamLabel","startYear","endYear","played","points"
 "Q100137736","Elia Tuqiri","Q534417","New South Wales Waratahs",NA,NA,NA,NA
 "Q100145545","Adrea Cocagi","Q2278510","L’Aquila Rugby Club","2012","2013",NA,NA
 "Q100145545","Adrea Cocagi","Q1361000","Stade Français Rugby","2013","2014",NA,NA

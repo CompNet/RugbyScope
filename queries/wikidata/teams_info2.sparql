@@ -1,0 +1,31 @@
+########################################################################
+# Sometimes, query `players_info.sparql` times out: it is possible to run
+# the same query in two steps. This query is the second step.
+# 
+# It is designed to be called from R, after replacing "QQQQQQ" by the
+# team's proper Wikidata ID.
+#
+# Vincent Labatut
+# 01/2025
+########################################################################
+
+SELECT DISTINCT ?teamId
+  (GROUP_CONCAT(DISTINCT ?altName; SEPARATOR="; ") as ?altNames)
+
+WHERE
+{ 
+  # set the player variable
+  BIND(wd:QQQQQQ AS ?team).
+
+  # keep only the Wikidata ID (not the whole URL)
+  BIND(STRAFTER(STR(?team), STR(wd:)) AS ?teamId).
+
+  # get alternative names
+  OPTIONAL { ?team skos:altLabel ?altName . }
+  
+
+  ############# retrieve textual labels
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". } # just to get the label right
+}
+
+GROUP BY ?teamId

@@ -2,9 +2,9 @@
 # Extracts the teammate network based on the data retrieved from Wikidata.
 #
 # Each vertex represents a player, and vertices are connected when the
-# corresponding players have played together in the same club. The edges
+# corresponding players have played together in the same team. The edges
 # are undirected, and their weight correspond to the number of seasons
-# (possibly *incomplete* seasons) spent together in the same club.
+# (possibly *incomplete* seasons) spent together in the same team.
 #
 # Vincent Labatut
 # 12/2024
@@ -50,8 +50,8 @@ for (p1 in 1:(nrow(players) - 1)) {
   # only process those with enough information
   idx1 <- which(filt_careers[, "playerId"] == p1_id)
   if (length(idx1) > 0) {
-    w_club <- idx1[!is.na(filt_careers[idx1, "clubId"])]
-    if (length(w_club) > 0) {
+    w_team <- idx1[!is.na(filt_careers[idx1, "teamId"])]
+    if (length(w_team) > 0) {
       
       # loop over the second player
       # tlog.start.loop(2, nrow(players) - (p1 + 1), "Looping over pairs of players: player#2")
@@ -62,16 +62,16 @@ for (p1 in 1:(nrow(players) - 1)) {
         # only process those with enough information
         idx2 <- which(filt_careers[, "playerId"] == p2_id)
         if (length(idx2) > 0) {
-          w_club <- idx2[!is.na(filt_careers[idx2, "clubId"])]
-          if (length(w_club) > 0) {
+          w_team <- idx2[!is.na(filt_careers[idx2, "teamId"])]
+          if (length(w_team) > 0) {
             
             # compare the career steps
-            inter_clubs <- intersect(filt_careers[idx1, "clubId"], filt_careers[idx2, "clubId"])
-            for (inter_club in inter_clubs) {
-              # tlog(4, "Processing common club ",inter_club, " (", clubs[which(clubs[, "clubId"] == inter_club), "clubLabel"], ")")
+            inter_teams <- intersect(filt_careers[idx1, "teamId"], filt_careers[idx2, "teamId"])
+            for (inter_team in inter_teams) {
+              # tlog(4, "Processing common team ",inter_team, " (", teams[which(teams[, "teamId"] == inter_team), "teamLabel"], ")")
               
-              i1 <- which(filt_careers[idx1, "clubId"] == inter_club)
-              i2 <- which(filt_careers[idx2, "clubId"] == inter_club)
+              i1 <- which(filt_careers[idx1, "teamId"] == inter_team)
+              i2 <- which(filt_careers[idx2, "teamId"] == inter_team)
               start1 <- filt_careers[idx1[i1], "startYear"]
               end1 <- filt_careers[idx1[i1], "endYear"]
               start2 <- filt_careers[idx2[i2], "startYear"]

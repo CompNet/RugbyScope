@@ -1,12 +1,9 @@
 ########################################################################
-# This query retrieves the information describing a specific rugby 
-# union teams described on Wikidata.
-# 
+# Sometimes, query `teams_info.sparql` times out: it is possible to run
+# the same query in two steps. This query is the first step.
+#
 # It is designed to be called from R, after replacing "QQQQQQ" by the
 # team's proper Wikidata ID.
-# 
-# If this query times out, it is possible to run it in two steps using
-# queries `teams_info1.sparql` and `teams_info2.sparql`.
 #
 # Vincent Labatut
 # 12/2024
@@ -14,10 +11,9 @@
 
 SELECT DISTINCT ?teamId ?teamLabel
   ?teamTypeLabel
-  (GROUP_CONCAT(DISTINCT ?altName; SEPARATOR="; ") as ?altNames)
   (MAX(?inception) AS ?inceptionMax) (CONCAT(STR(YEAR(?inceptionMax)),"-",STR(MONTH(?inceptionMax)),"-",STR(DAY(?inceptionMax))) AS ?inceptionFormat)
   (MAX(?termination) AS ?terminationMax) (CONCAT(STR(YEAR(?terminationMax)),"-",STR(MONTH(?terminationMax)),"-",STR(DAY(?terminationMax))) AS ?terminationFormat)
-  (GROUP_CONCAT(DISTINCT ?nicknameLabel; SEPARATOR="; ") as ?nickmaneLabels)
+  (GROUP_CONCAT(DISTINCT ?nicknameLabel; SEPARATOR="; ") as ?nicknameLabels)
   (GROUP_CONCAT(DISTINCT ?affiliationLabel; SEPARATOR="; ") as ?affiliationLabels)
   (GROUP_CONCAT(DISTINCT ?countryLabel; SEPARATOR="; ") as ?countryLabels)
   (GROUP_CONCAT(DISTINCT ?competitionLabel; SEPARATOR="; ") as ?competitionLabels)
@@ -35,9 +31,6 @@ WHERE
 
   # keep only the Wikidata ID (not the whole URL)
   BIND(STRAFTER(STR(?team), STR(wd:)) AS ?teamId).
-
-  # get alternative names
-  OPTIONAL { ?item skos:altLabel ?altName . }
 
   ############# retrieve individual information
   # team type
