@@ -347,13 +347,13 @@ compl_teams[idx, "type"] <- "National senior team"
 compl_teams[idx, "tier"] <- "2"
 
 # third tier national teams (e.g. Maori All Blacks)
-third_teams <- c("Q1490464", "Q17087005", "Q17153081", "Q3875602")
+third_teams <- c("Q1490464", "Q17087005", "Q17153081", "Q3875602", "Q22098273")
 idx <- match(third_teams, compl_teams[, "wikidataId"])
 compl_teams[idx, "type"] <- "National senior team"
 compl_teams[idx, "tier"] <- "3"
 
 # fourth tier national teams, generally amateurs (e.g. New Zealand Heartland)
-fourth_teams <- c("Q7015419", "Q7565371", "Q8565341", "Q22098273", "Q22098276", "Q3725357")
+fourth_teams <- c("Q7015419", "Q7565371", "Q8565341", "Q22098276", "Q3725357")
 idx <- match(fourth_teams, compl_teams[, "wikidataId"])
 compl_teams[idx, "type"] <- "National senior team"
 compl_teams[idx, "tier"] <- "4"

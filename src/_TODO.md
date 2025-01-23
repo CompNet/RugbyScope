@@ -32,7 +32,10 @@
     - All.Rugby: seems to include transfers; looks incomplete but worth exploring.
       https://all.rugby/
     - Archie's Rugby Union Database: commercial, doesn't work very well, and test-focused
-      https://www.archiesrugbyuniondatabase.com/    - ESPN Scrum: apparently dead
+      https://www.archiesrugbyuniondatabase.com/
+    - ESPN Scrum: seems to be the best, but does not work anymore, and didn't find any dump
+      but the focus seems to be on international matches: "Our unrivalled record of international rugby, produced by statistician Stuart Farmer, includes every Test match ever played plus individual records for every player and thanks to the powerful Statsguru tool you are now able to analyse this wealth of information like never before."
+      http://stats.espnscrum.com/statsguru/rugby/stats/index.html
       https://www.espn.com/rugby/
     - It's Rugby: very good, but commercial
       https://www.itsrugby.co.uk/
