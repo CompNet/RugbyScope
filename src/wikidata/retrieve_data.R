@@ -240,7 +240,7 @@ col_names <- c(
   "playerId",
   "teamId",
   "startYear", "endYear",
-  "played", "points"
+  "matchesPlayed", "pointsScored"
 )
 
 # init careers table
@@ -292,7 +292,7 @@ idx <- match(careers[, "playerId"], players[, "playerId"])
 plyr_names <- players[idx, "playerLabel"]
 idx <- match(unlist(careers[, "teamId"]), teams[, "teamId"])
 team_names <- teams[idx, "teamLabel"]
-careers <- cbind(careers[, "playerId"], playerLabel = plyr_names, careers[, "teamId"], teamLabel = team_names, careers[,3:ncol(careers)])
+careers <- cbind(careers[, "playerId"], playerName = plyr_names, careers[, "teamId"], teamName = team_names, careers[,3:ncol(careers)])
 colnames(careers)[1] <- "playerId"
 colnames(careers)[3] <- "teamId"
 

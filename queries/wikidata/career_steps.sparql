@@ -16,7 +16,7 @@ SELECT DISTINCT
   ?teamId #?teamLabel 
   (STR(YEAR(?startDate)) AS ?startYear)
   (STR(YEAR(?endDate)) AS ?endYear)
-  ?played ?points
+  ?matchesPlayed ?pointsScored
 
 WHERE
 { 
@@ -58,12 +58,12 @@ WHERE
   ############# retrieve individual information
   
   # end/start dates
-  OPTIONAL{?statement pq:P580 ?startDate;}  # P580=start time
-  OPTIONAL{?statement pq:P582 ?endDate.}    # P582=end time
+  OPTIONAL{?statement pq:P580 ?startDate;}         # P580=start time
+  OPTIONAL{?statement pq:P582 ?endDate.}           # P582=end time
   
   # statistics
-  OPTIONAL{?statement pq:P1350 ?played.}    # P1350=number of matches played
-  OPTIONAL{?statement pq:P1351 ?points.}    # P1351=number of points/goals/set scored
+  OPTIONAL{?statement pq:P1350 ?matchesPlayed.}    # P1350=number of matches played
+  OPTIONAL{?statement pq:P1351 ?pointsScored.}     # P1351=number of points/goals/set scored
   
   
 #  ############# retrieve textual labels
