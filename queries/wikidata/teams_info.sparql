@@ -24,9 +24,9 @@ SELECT DISTINCT ?teamId ?teamLabel
   (GROUP_CONCAT(DISTINCT ?homeVenueLabel; SEPARATOR="; ") as ?homeVenueLabels)
   (GROUP_CONCAT(DISTINCT ?homeVenueCapacity; SEPARATOR="; ") as ?homeVenueCapacities)
   (GROUP_CONCAT(DISTINCT ?locationLabel; SEPARATOR="; ") as ?locationLabels)
-  (GROUP_CONCAT(DISTINCT ?AllRugbyID; SEPARATOR="; ") as ?AllRugbyIDs)
-  (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR="; ") as ?GoogleKnowlIDs)
-  ?articleEn ?articleFr ?articleIt ?articleEs ?articleJa
+  (GROUP_CONCAT(DISTINCT ?allRugbyId; SEPARATOR="; ") as ?allRugbyIds)
+  (GROUP_CONCAT(DISTINCT ?googleKnowlId; SEPARATOR="; ") as ?googleKnowlIds)
+  ?wikipediaEn ?wikipediaFr ?wikipediaIt ?wikipediaEs ?wikipediaJa
 
 WHERE
 { 
@@ -82,37 +82,37 @@ WHERE
   OPTIONAL{?team wdt:P159 ?location.}                                   # P159=headquarters location
   
   # external IDs
-  OPTIONAL{?team wdt:P10590 ?AllRugbyID.}                               # P10590=All.Rugby club ID
-  OPTIONAL{?team wdt:P2671 ?GoogleKnowlID.}                             # P2671=Google Knowledge Graph ID
+  OPTIONAL{?team wdt:P10590 ?allRugbyId.}                               # P10590=All.Rugby club ID
+  OPTIONAL{?team wdt:P2671 ?googleKnowlId.}                             # P2671=Google Knowledge Graph ID
   
   
   ############# retrieve wikipedia article
   # English Wipedia article
-  OPTIONAL{?articleEn schema:about ?team;
+  OPTIONAL{?wikipediaEn schema:about ?team;
            schema:inLanguage "en";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # French Wipedia article
-  OPTIONAL{?articleFr schema:about ?team;
+  OPTIONAL{?wikipediaFr schema:about ?team;
            schema:inLanguage "fr";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # Italian Wipedia article
-  OPTIONAL{?articleIt schema:about ?team;
+  OPTIONAL{?wikipediaIt schema:about ?team;
            schema:inLanguage "it";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # Spanish Wipedia article
-  OPTIONAL{?articleEs schema:about ?team;
+  OPTIONAL{?wikipediaEs schema:about ?team;
            schema:inLanguage "es";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # Japanese Wipedia article
-  OPTIONAL{?articleJa schema:about ?team;
+  OPTIONAL{?wikipediaJa schema:about ?team;
            schema:inLanguage "ja";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
@@ -131,4 +131,4 @@ WHERE
                          } # just to get the label right
 }
 
-GROUP BY ?teamId ?teamLabel ?teamTypeLabel ?inceptionFormat ?terminationFormat ?articleEn ?articleFr ?articleIt ?articleEs ?articleJa
+GROUP BY ?teamId ?teamLabel ?teamTypeLabel ?inceptionFormat ?terminationFormat ?wikipediaEn ?wikipediaFr ?wikipediaIt ?wikipediaEs ?wikipediaJa

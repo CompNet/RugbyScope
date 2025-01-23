@@ -38,10 +38,12 @@
       https://www.itsrugby.co.uk/
     - Pick & Go: only international matches (and Super Rugby), commercial access
       https://www.lassen.co.nz/pickandgo.php
-    - RugbyStats.com: this one seems dead
-      http://www.rugbydata.com/
     - Rugby Database: incomplete, but free access (focus on NZ?)
       https://www.rugbydatabase.co.nz/
+    - RugbyPass: seems very basic, no career steps
+      https://www.rugbypass.com/
+    - RugbyStats.com: this one seems dead
+      http://www.rugbydata.com/
     - StatBunker's Rugby Stats: seems good enough, covers the major competitions
       They also have the referees, maybe there's something to do with that...
       https://rugby.statbunker.com/players/PlayerDisciplineVsClubs?player_id=8586

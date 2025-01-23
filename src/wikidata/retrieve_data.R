@@ -58,8 +58,8 @@ col_names <- c(
   "citizenshipLabels", "sportCountryLabels",
   "positionLabels", "careerStartYears", "careerEndYears",
   "masses", "heights",
-  "ESPNscrumIDs", "AllRugbyIDs", "GoogleKnowlIDs", "ItsRugbyIDs", "RugbyDatabaseIDs",
-  "articleEn", "articleFr", "articleIt", "articleEs", "articleJa"
+  "espnScrumIds", "allRugbyIds", "googleKnowlIds", "itsRugbyIds", "rugbyDatabaseIds",
+  "wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa"
 )
 
 # init players table
@@ -148,8 +148,8 @@ col_names <- c(
   "altNames", "nicknameLabels", "affiliationLabels",
   "countryLabels", "competitionLabels",
   "homeVenueLabels", "homeVenueCapacities", "locationLabels",
-  "AllRugbyIDs", "GoogleKnowlIDs",
-  "articleEn", "articleFr", "articleIt", "articleEs", "articleJa"
+  "allRugbyIds", "googleKnowlIds",
+  "wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa"
 )
 
 # init teams table
@@ -308,7 +308,7 @@ write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv")
 # temporary code, used to perform some tests and debugging
 # idx <- match(players0[,"playerId"], players[,"playerId"])
 # print(which(is.na(idx)))
-# players[idx, c("articleEn", "articleFr", "articleIt", "articleEs", "articleJa")] <- players0[, c("articleEn", "articleFr", "articleIt", "articleEs", "articleJa")]
-# idx <- which(sapply(1:nrow(players), function(p) all(is.na(players[p,c("articleEn", "articleFr", "articleIt", "articleEs", "articleJa")])))) 
+# players[idx, c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")] <- players0[, c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")]
+# idx <- which(sapply(1:nrow(players), function(p) all(is.na(players[p,c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")])))) 
 # print(cbind(idx, players[idx, "playerId"]))
-# players[which(players[, "playerId"] == "Q96707312"), "articleJa"] <- "フィシプナ・トゥイアキ"
+# players[which(players[, "playerId"] == "Q96707312"), "wikipediaJa"] <- "フィシプナ・トゥイアキ"

@@ -24,11 +24,11 @@ SELECT DISTINCT ?playerId ?playerLabel
   (GROUP_CONCAT(DISTINCT ?careerEndYear; SEPARATOR="; ") as ?careerEndYears)
   (GROUP_CONCAT(DISTINCT ?mass; SEPARATOR="; ") as ?masses)
   (GROUP_CONCAT(DISTINCT ?height; SEPARATOR="; ") as ?heights)
-  (GROUP_CONCAT(DISTINCT ?ESPNscrumID; SEPARATOR="; ") as ?ESPNscrumIDs)
-  (GROUP_CONCAT(DISTINCT ?AllRugbyID; SEPARATOR="; ") as ?AllRugbyIDs)
-  (GROUP_CONCAT(DISTINCT ?GoogleKnowlID; SEPARATOR="; ") as ?GoogleKnowlIDs)
-  (GROUP_CONCAT(DISTINCT ?ItsRugbyID; SEPARATOR="; ") as ?ItsRugbyIDs)
-  (GROUP_CONCAT(DISTINCT ?RugbyDatabaseID; SEPARATOR="; ") as ?RugbyDatabaseIDs)
+  (GROUP_CONCAT(DISTINCT ?espnScrumId; SEPARATOR="; ") as ?espnScrumIds)
+  (GROUP_CONCAT(DISTINCT ?allRugbyId; SEPARATOR="; ") as ?allRugbyIds)
+  (GROUP_CONCAT(DISTINCT ?googleKnowlId; SEPARATOR="; ") as ?googleKnowlIds)
+  (GROUP_CONCAT(DISTINCT ?itsRugbyId; SEPARATOR="; ") as ?itsRugbyIds)
+  (GROUP_CONCAT(DISTINCT ?rugbyDatabaseId; SEPARATOR="; ") as ?rugbyDatabaseIds)
 
 WHERE
 { 
@@ -68,11 +68,11 @@ WHERE
   OPTIONAL{?player wdt:P2048 ?height.}                          # P2048=height
   
   # external IDs
-  OPTIONAL{?player wdt:P858 ?ESPNscrumID.}                      # P858=ESPN Scrum international player ID
-  OPTIONAL{?player wdt:P9903 ?AllRugbyID.}                      # P9903=All.Rugby player ID
-  OPTIONAL{?player wdt:P2671 ?GoogleKnowlID.}                   # P2671=Google Knowledge Graph ID
-  OPTIONAL{?player wdt:P3769 ?ItsRugbyID.}                      # P3769=It's Rugby player ID
-  OPTIONAL{?player wdt:P12335 ?RugbyDatabaseID.}                # P12335=Rugby Database player ID
+  OPTIONAL{?player wdt:P858 ?espnScrumId.}                      # P858=ESPN Scrum international player ID
+  OPTIONAL{?player wdt:P9903 ?allRugbyId.}                      # P9903=All.Rugby player ID
+  OPTIONAL{?player wdt:P2671 ?googleKnowlId.}                   # P2671=Google Knowledge Graph ID
+  OPTIONAL{?player wdt:P3769 ?itsRugbyId.}                      # P3769=It's Rugby player ID
+  OPTIONAL{?player wdt:P12335 ?rugbyDatabaseId.}                # P12335=Rugby Database player ID
   
   
   ############# retrieve textual labels

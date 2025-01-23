@@ -10,7 +10,7 @@
 ########################################################################
 
 SELECT DISTINCT  
-  ?articleEn ?articleFr ?articleIt ?articleEs ?articleJa
+  ?wikipediaEn ?wikipediaFr ?wikipediaIt ?wikipediaEs ?wikipediaJa
 
 WHERE
 { 
@@ -20,31 +20,31 @@ WHERE
   
   ############# retrieve wikipedia article
   # English Wipedia article
-  OPTIONAL{?articleEn schema:about ?player;
+  OPTIONAL{?wikipediaEn schema:about ?player;
            schema:inLanguage "en";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # French Wipedia article
-  OPTIONAL{?articleFr schema:about ?player;
+  OPTIONAL{?wikipediaFr schema:about ?player;
            schema:inLanguage "fr";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # Italian Wipedia article
-  OPTIONAL{?articleIt schema:about ?player;
+  OPTIONAL{?wikipediaIt schema:about ?player;
            schema:inLanguage "it";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # Spanish Wipedia article
-  OPTIONAL{?articleEs schema:about ?player;
+  OPTIONAL{?wikipediaEs schema:about ?player;
            schema:inLanguage "es";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
   
   # Japanese Wipedia article
-  OPTIONAL{?articleJa schema:about ?player;
+  OPTIONAL{?wikipediaJa schema:about ?player;
            schema:inLanguage "ja";
            schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
           }
