@@ -40,9 +40,10 @@
       but the focus seems to be on international matches: "Our unrivalled record of international rugby, produced by statistician Stuart Farmer, includes every Test match ever played plus individual records for every player and thanks to the powerful Statsguru tool you are now able to analyse this wealth of information like never before."
       http://stats.espnscrum.com/statsguru/rugby/stats/index.html
       https://www.espn.com/rugby/
-    + It's Rugby: very good, but commercial. Maybe we could ask them to retrieve their publicly accessible data?
+    + It's Rugby: very good, but commercial (no legal notice on the website, though). 
+      Maybe we could ask them to retrieve their publicly accessible data?
       https://www.itsrugby.co.uk/
-      Maybe scrapped here: https://www.kaggle.com/datasets/patricknaylor/its-rugby-player-data
+      Seems (partially) scrapped here: https://www.kaggle.com/datasets/patricknaylor/its-rugby-player-data
     - Pick & Go: only international matches (and Super Rugby), commercial access
       https://www.lassen.co.nz/pickandgo.php
     ~ Rugby Database: incomplete, but free access (focus on NZ?)
@@ -56,7 +57,6 @@
       They also have the referees, maybe there's something to do with that...
       Not up to date for certain competitions (ProD2 stops in 2022), seems English-oriented
       No info about data rights
-      https://rugby.statbunker.com/players/PlayerDisciplineVsClubs?player_id=8586
+      https://rugby.statbunker.com/players/getPlayerHistory?player_id=8586
     - Ultimate Rugby: not great, seems like a copy of WP data
       https://www.ultimaterugby.com/antoine-dupont
-      
