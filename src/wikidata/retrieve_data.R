@@ -66,47 +66,47 @@ col_names <- c(
 players <- as.data.frame(matrix(NA, nrow=length(player_ids), ncol=length(col_names)))
 colnames(players) <- col_names
 
-# load query file
-query <- readtext(file.path(query_folder, "players_info.sparql"))$text
-######
-#     NOTE: if the query times out, it is possible to run it in two steps,
-#           using files "players_info1.sparql" and "players_info2.sparql"
-######
-# remove the comments/spaces/newlines, otherwise the query is too long
-query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
-query <- gsub("  +", " ", query)
-query <- gsub("[\r\n]+", "\n", query)
-query <- gsub(" *[\r\n] *", "\n", query)
+# the query is split in 2, to avoid times-out
+for (q in 1:2) {
+  tlog("Processing player query ", q, "/2")
+  # load query file
+  query <- readtext(file.path(query_folder, paste0("players_info", q, ".sparql")))$text
+  # remove the comments/spaces/newlines, otherwise the query is too long
+  query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
+  query <- gsub("  +", " ", query)
+  query <- gsub("[\r\n]+", "\n", query)
+  query <- gsub(" *[\r\n] *", "\n", query)
 
-# run query for each player
-tlog.start.loop(0, length(player_ids), "Looping over players")
-for (p in 1:length(player_ids)) {
-  # get player ID
-  player_id <- player_ids[p]
-  tlog.loop(2, p, "++++++++++++ Processing player ", player_id, " (", p, "/", length(player_ids), ")")
+  # run query for each player
+  tlog.start.loop(0, length(player_ids), "Looping over players")
+  for (p in 1:length(player_ids)) {
+    # get player ID
+    player_id <- player_ids[p]
+    tlog.loop(2, p, "++++++++++++ Processing (", q, ") player ", player_id, " (", p, "/", length(player_ids), ")")
 
-  # run query
-  pl_query <- gsub("QQQQQQ", player_id, query, fixed = TRUE)
-  row <- query_wikidata(pl_query)
-  print.data.frame(row)
-  if (nrow(row) > 1)
-    stop(paste0("ERROR: several rows returned for one player (some field probably contains multiple values). Player ID= "), player_id)
+    # run query
+    pl_query <- gsub("QQQQQQ", player_id, query, fixed = TRUE)
+    row <- query_wikidata(pl_query)
+    print.data.frame(row)
+    if (nrow(row) > 1)
+      stop(paste0("ERROR: several rows returned for one player (some field probably contains multiple values). Player ID= "), player_id)
 
-  # add to table
-  idx <- which(players[, "playerId"] == player_id)
-  if (length(idx) == 0)
-    idx <- p
-  cols <- setdiff(intersect(colnames(row), col_names), "playerId")
-  players[idx, cols] <- row[1, cols]
-  players[idx, "playerId"] <- player_id
+    # add to table
+    idx <- which(players[, "playerId"] == player_id)
+    if (length(idx) == 0)
+      idx <- p
+    cols <- setdiff(intersect(colnames(row), col_names), "playerId")
+    players[idx, cols] <- row[1, cols]
+    players[idx, "playerId"] <- player_id
+  }
+  tlog.end.loop(0, "Player loop completed")
 }
-tlog.end.loop(0, "Player loop completed")
 
 # display a few details for verification
 tlog("Dimension of the players table: ", paste(dim(players), collapse = ", "))
 tlog("Classes of the columns: ", paste(apply(players, 2, class), collapse = ", "))
 tlog("Top of the table:")
-print.data.frame(players[1:10, ])
+print.data.frame(players[1:5, ])
 
 # replace empty strings by NAs
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
@@ -156,42 +156,42 @@ col_names <- c(
 teams <- as.data.frame(matrix(NA, nrow=length(team_ids), ncol=length(col_names)))
 colnames(teams) <- col_names
 
-# load query file
-query <- readtext(file.path(query_folder, "teams_info.sparql"))$text
-######
-#     NOTE: if the query times out, it is possible to run it in two steps,
-#           using files "teams_info1.sparql" and "teams_info2.sparql"
-######
-# remove the comments/spaces/newlines, otherwise the query is too long
-query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
-query <- gsub("  +", " ", query)
-query <- gsub("[\r\n]+", "\n", query)
-query <- gsub(" *[\r\n] *", "\n", query)
+# the query is split in 2, to avoid times-out
+for (q in 1:2) {
+  tlog("Processing team query ", q, "/2")
+  # load query file
+  query <- readtext(file.path(query_folder, paste0("teams_info", q, ".sparql")))$text
+  # remove the comments/spaces/newlines, otherwise the query is too long
+  query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
+  query <- gsub("  +", " ", query)
+  query <- gsub("[\r\n]+", "\n", query)
+  query <- gsub(" *[\r\n] *", "\n", query)
 
-# run query for each team
-tlog.start.loop(0, length(team_ids), "Looping over teams")
-for (t in 1:length(team_ids)) {
-# for (t in which(is.na(teams[, "teamLabel"]))) {
-  # get team ID
-  team_id <- team_ids[t]
-  tlog.loop(2, t, "++++++++++++ Processing team ", team_id, " (", t, "/", length(team_ids), ")")
+  # run query for each team
+  tlog.start.loop(0, length(team_ids), "Looping over teams")
+  for (t in 1:length(team_ids)) {
+  # for (t in which(is.na(teams[, "teamLabel"]))) {
+    # get team ID
+    team_id <- team_ids[t]
+    tlog.loop(2, t, "++++++++++++ Processing (", q, ") team ", team_id, " (", t, "/", length(team_ids), ")")
 
-  # run query
-  tm_query <- gsub("QQQQQQ", team_id, query, fixed = TRUE)
-  row <- query_wikidata(tm_query)
-  print.data.frame(row)
-  if (nrow(row) > 1)
-    stop(paste0("ERROR: several rows returned for one team (some field probably contains multiple values). Team ID= "), team_id)
+    # run query
+    tm_query <- gsub("QQQQQQ", team_id, query, fixed = TRUE)
+    row <- query_wikidata(tm_query)
+    print.data.frame(row)
+    if (nrow(row) > 1)
+      stop(paste0("ERROR: several rows returned for one team (some field probably contains multiple values). Team ID= "), team_id)
 
-  # add to table
-  idx <- which(teams[, "teamId"] == team_id)
-  if (length(idx) == 0)
-    idx <- t
-  cols <- setdiff(intersect(colnames(row), col_names), "teamId")
-  teams[idx, cols] <- row[1, cols]
-  teams[idx, "teamId"] <- team_id
+    # add to table
+    idx <- which(teams[, "teamId"] == team_id)
+    if (length(idx) == 0)
+      idx <- t
+    cols <- setdiff(intersect(colnames(row), col_names), "teamId")
+    teams[idx, cols] <- row[1, cols]
+    teams[idx, "teamId"] <- team_id
+  }
+  tlog.end.loop(0, "Team loop completed")
 }
-tlog.end.loop(0, "Team loop completed")
 
 # display a few details for verification
 tlog("Dimension of the teams table: ", paste(dim(teams), collapse = ", "))

@@ -3,7 +3,9 @@
   * fix country colors (ireland=green, france=blue, etc.)
   * histo number of teams by country, distinguishing WD/non-WD
 
-> query WD items that have some rugby id but are not a rugby union player/team ?
+
+- career steps with missing end date: 
+  try to fill based on next step start date?
 
 
 * NOTES
@@ -30,6 +32,7 @@
     - There's also a way using Panda: https://gist.github.com/aculich/b34868c098d94d614515
   - Possible databases:
     - All.Rugby: seems to include transfers; looks incomplete but worth exploring.
+      They state explicitly that it's not possible to use their data like we want
       https://all.rugby/
     - Archie's Rugby Union Database: commercial, doesn't work very well, and test-focused
       https://www.archiesrugbyuniondatabase.com/
@@ -37,16 +40,23 @@
       but the focus seems to be on international matches: "Our unrivalled record of international rugby, produced by statistician Stuart Farmer, includes every Test match ever played plus individual records for every player and thanks to the powerful Statsguru tool you are now able to analyse this wealth of information like never before."
       http://stats.espnscrum.com/statsguru/rugby/stats/index.html
       https://www.espn.com/rugby/
-    - It's Rugby: very good, but commercial
+    + It's Rugby: very good, but commercial. Maybe we could ask them to retrieve their publicly accessible data?
       https://www.itsrugby.co.uk/
+      Maybe scrapped here: https://www.kaggle.com/datasets/patricknaylor/its-rugby-player-data
     - Pick & Go: only international matches (and Super Rugby), commercial access
       https://www.lassen.co.nz/pickandgo.php
-    - Rugby Database: incomplete, but free access (focus on NZ?)
+    ~ Rugby Database: incomplete, but free access (focus on NZ?)
+      But the info is incorrect for the few cases I checked (no castres for dupont, and he starts in 2020 instead of 2017 at tlse...)
       https://www.rugbydatabase.co.nz/
     - RugbyPass: seems very basic, no career steps
       https://www.rugbypass.com/
     - RugbyStats.com: this one seems dead
       http://www.rugbydata.com/
-    - StatBunker's Rugby Stats: seems good enough, covers the major competitions
+    ~ StatBunker's Rugby Stats: seems good enough, covers the major competitions
       They also have the referees, maybe there's something to do with that...
+      Not up to date for certain competitions (ProD2 stops in 2022), seems English-oriented
+      No info about data rights
       https://rugby.statbunker.com/players/PlayerDisciplineVsClubs?player_id=8586
+    - Ultimate Rugby: not great, seems like a copy of WP data
+      https://www.ultimaterugby.com/antoine-dupont
+      

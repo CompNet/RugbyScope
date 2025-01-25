@@ -30,6 +30,10 @@ WHERE
   ?player p:P54 ?statement.                 # P54=member of sports team, statement=relation between player/team
   ?statement ps:P54 ?team.                  # ps:=object of the relation, pq:=qualifier of the relation
 
+#  # same thing with a different property: not used in wikidata for rugby players (a single case)
+#  ?player p:P39 ?statement.                 # P39=position held
+#  ?statement ps:P39 wd:Q14089670.           # Q14089670=rugby union player
+
   # get the rugby teams (more general category)
   {    
     ?team wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
