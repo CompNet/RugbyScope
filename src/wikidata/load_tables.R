@@ -5,6 +5,7 @@
 # Vincent Labatut
 # 12/2024
 ########################################################################
+source("src/common/logging.R")
 
 
 
@@ -19,13 +20,13 @@ table_folder <- file.path("data", "wikidata", "tables")
 ########################################################################
 # load data tables
 teams <- read.csv(file.path(table_folder, "all_teams_descr.csv"))
-cat("Raw number of teams:", nrow(teams), "\n")
+tlog("Raw number of teams:", nrow(teams))
 
 players <- read.csv(file.path(table_folder, "all_players_descr.csv"))
-cat("Raw number of players:", nrow(players), "\n")
+tlog("Raw number of players:", nrow(players))
 
 careers <- read.csv(file.path(table_folder, "all_players_careers.csv"))
-cat("Raw number of career steps:", nrow(careers), "\n")
+tlog("Raw number of career steps:", nrow(careers))
 
 
 
@@ -44,19 +45,19 @@ idx <- which(grepl("world cup", clubs[, "teamLabel"], fixed = TRUE) | grepl("Wor
 # paste0("https://www.wikidata.org/wiki/", clubs[idx, "teamId"])
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "national teams tied to specific world cups\n")
+tlog("Removed", length(idx), "national teams tied to specific world cups")
 
 # filter out national teams
 idx <- which(clubs[, "teamTypeLabel"] %in% c("national rugby union team", "second national rugby union teams"))
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "national teams\n")
+tlog("Removed", length(idx), "national teams")
 
 # filter out national youth teams
 idx <- which(grepl("under", clubs[, "teamLabel"], fixed = TRUE) | grepl("Under", clubs[, "teamLabel"], fixed = TRUE))
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "national youth teams\n")
+tlog("Removed", length(idx), "national youth teams")
 
 # filter out invitational teams (Barbarians et al.)
 # note: Brussels Barbarians is a proper club
@@ -64,28 +65,28 @@ invitational_teams <- c("Q807749", "Q28223950", "Q2004853", "Q7015235", "Q756543
 idx <- which(clubs[, "teamId"] %in% invitational_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "invitational teams\n")
+tlog("Removed", length(idx), "invitational teams")
 
 # filter out combined teams (British & Irish Lions et al.)
 combined_teams <- c("Q3651754", "Q624092", "Q733600", "Q5327644", "Q3606252", "Q247246", "Q3976615", "Q121190772")
 idx <- which(clubs[, "teamId"] %in% combined_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "combined teams\n")
+tlog("Removed", length(idx), "combined teams")
 
 # filter out regional selections (NZ South Island, etc.)
 regional_teams <- c("Q104649868", "Q16237227", "Q7057169", "Q85815139", "Q7565682", "Q7569050")
 idx <- which(clubs[, "teamId"] %in% regional_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "regional teams\n")
+tlog("Removed", length(idx), "regional teams")
 
 # filter out armed force teams (Royal Air Force Rugby Union, etc.)
 army_teams <- c("Q105561254", "Q7374556")
 idx <- which(clubs[, "teamId"] %in% army_teams)
 if (length(idx) > 0)
   clubs <- clubs[-idx, ]
-cat("Removed", length(idx), "regional teams\n")
+tlog("Removed", length(idx), "regional teams")
 
 # filter out clubs with no affiliation and no competition
 # this is an attempt to retain only pro clubs, but this condition is too strict
@@ -94,7 +95,7 @@ cat("Removed", length(idx), "regional teams\n")
 #   clubs <- clubs[-idx, ]
 # cat("Removed", length(idx), "clubs without affiliation and without competition\n")
 
-cat("Number of clubs remaining:", nrow(clubs), "\n")
+tlog("Number of clubs remaining:", nrow(clubs))
 
 
 
@@ -106,16 +107,16 @@ filt_careers <- careers
 # filter out career steps without a start date
 idx <- which(is.na(filt_careers$startYear))
 filt_careers <- filt_careers[-idx, ]
-cat("Removed", length(idx), "steps without start date\n")
+tlog("Removed", length(idx), "steps without start date")
 
 # using the start year as the end year when it is missing
 idx <- which(is.na(filt_careers$endYear))
 filt_careers[idx, "endYear"] <- filt_careers[idx, "startYear"]
-cat("Complemented", length(idx), "missing end year (using the start year)\n")
+tlog("Complemented", length(idx), "missing end year (using the start year)")
 
 # filter out career steps related to clubs (now) absent from the list
 idx <- which(!(filt_careers$teamId %in% clubs$teamId))
 filt_careers <- filt_careers[-idx, ]
-cat("Removed", length(idx), "steps without club (or with filtered out club)\n")
+tlog("Removed", length(idx), "steps without club (or with filtered out club)")
 
-cat("Number of steps remaining:", nrow(filt_careers), "\n")
+tlog("Number of steps remaining:", nrow(filt_careers))

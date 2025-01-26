@@ -9,6 +9,8 @@
 ########################################################################
 library("igraph")
 
+source("src/common/logging.R")
+
 
 
 
@@ -28,7 +30,7 @@ source("src/wikidata/load_tables.R")
 
 ########################################################################
 # extract club network
-cat("Extracting club transfer network\n")
+tlog("Extracting club transfer network")
 
 # init edgelist table
 el <- matrix(NA, nrow = 1, ncol = 2)
@@ -44,12 +46,12 @@ row <- 2
 
 # loop over each career step
 while(row <= nrow(filt_careers)) {
-  cat("Processing career step ", row, "/", nrow(filt_careers), "\n", sep="")
+  tlog(2, "Processing career step ", row, "/", nrow(filt_careers))
   player_id <- filt_careers[row, "playerId"]
   club_id <- filt_careers[row, "teamId"]
   start_year <- filt_careers[row, "startYear"]
   end_year <- filt_careers[row, "endYear"]
-  cat(player_id, ", ", club_id, "\n", sep="")
+  tlog(2, player_id, ", ", club_id)
 
   # next step of the previous player
   if (player_id == last_player) {
@@ -85,7 +87,7 @@ plot(g)
 
 ########################################################################
 # insert individual information
-cat("Insert individual information\n")
+tlog("Insert individual information")
 
 # add main team information
 idx <- match(V(g)$name, teams[, "teamId"])
@@ -104,5 +106,5 @@ print(sort(table(V(g)$competition)))
 
 # export as a graphml file
 net_file <- file.path(net_folder, "all_transfers.graphml")
-cat("Recording graph in '", net_file, "'\n")
+tlog("Recording graph in '", net_file, "'")
 write.graph(g, file = net_file, format = "graphml")

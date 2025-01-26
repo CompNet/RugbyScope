@@ -1,6 +1,6 @@
 ########################################################################
 # Functions used to normalize certain fields that describe rugby union
-# players. This processing is generic, i.e. not tied to a specific data 
+# players. This processing is generic, i.e. not tied to a specific data
 # source.
 #
 # Vincent Labatut

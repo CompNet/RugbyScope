@@ -56,7 +56,7 @@
     ~ StatBunker's Rugby Stats: seems good enough, covers the major competitions
       They also have the referees, maybe there's something to do with that...
       Not up to date for certain competitions (ProD2 stops in 2022), seems English-oriented
-      No info about data rights
+      No explicit info about data rights on the website
       https://rugby.statbunker.com/players/getPlayerHistory?player_id=8586
     - Ultimate Rugby: not great, seems like a copy of WP data
       https://www.ultimaterugby.com/antoine-dupont

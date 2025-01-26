@@ -6,14 +6,16 @@
 # Vincent Labatut
 # 01/2025
 ########################################################################
+library("stringi")
+
 source("src/common/logging.R")
 
 
 
 
 ########################################################################
-# Normalizes the specified team names. The function implements three 
-# levels of normalization: 
+# Normalizes the specified team names. The function implements three
+# levels of normalization:
 #   1. Removing diacritics, case, and points, replace hyphens by spaces.
 #   2. Turning standard expression into acronyms (e.g. Rugby Club => RC).
 #   3. Outright remove these standard expressions.
@@ -167,11 +169,11 @@ normalize_names <- function(names, level = 1) {
 # source name to be matched to several target names, in which case the
 # function returns a list. Otherwise, it returns a vector.
 #
-# src_names: vector of (possibly multiple) names that we want to match 
+# src_names: vector of (possibly multiple) names that we want to match
 #            to the reference names.
 # tgt_names: vector of (possibly multiple) reference names.
 #
-# returns: best matches for each source name, expressed as positions in 
+# returns: best matches for each source name, expressed as positions in
 #          the target vector, or NA if there is no match at all.
 ########################################################################
 match_names <- function(src_names, tgt_names) {
