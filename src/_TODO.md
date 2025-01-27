@@ -57,6 +57,11 @@
       They also have the referees, maybe there's something to do with that...
       Not up to date for certain competitions (ProD2 stops in 2022), seems English-oriented
       No explicit info about data rights on the website
+      Do not see any contact info either
+      CEO: https://www.linkedin.com/in/stephen-mccormack-5929a02b/
+      LinkedIn: https://www.linkedin.com/in/statbunker-live-stats-52a016a6/?originalSubdomain=uk
+      Twitter: https://x.com/Statbunker
+      Site contact form: https://rugby.statbunker.com/usual/Feedback
       https://rugby.statbunker.com/players/getPlayerHistory?player_id=8586
     - Ultimate Rugby: not great, seems like a copy of WP data
       https://www.ultimaterugby.com/antoine-dupont
