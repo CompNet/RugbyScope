@@ -7,6 +7,9 @@
 - career steps with missing end date: 
   try to fill based on next step start date?
 
+- virer les treizistes des nvelles données (IR! - SB?)
+- normaliser les saisons xx/xx vs xxxx ds IR
+
 
 * NOTES
   - Filtering players depending on whether they played for a club: many are missed
@@ -53,7 +56,7 @@
       https://www.rugbypass.com/
     - RugbyStats.com: this one seems dead
       http://www.rugbydata.com/
-    ~ StatBunker's Rugby Stats: seems good enough, covers the major competitions
+    x StatBunker's Rugby Stats: seems good enough, covers the major competitions
       They also have the referees, maybe there's something to do with that...
       Not up to date for certain competitions (ProD2 stops in 2022), seems English-oriented
       No explicit info about data rights on the website
