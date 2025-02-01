@@ -3,6 +3,7 @@
   * fix country colors (ireland=green, france=blue, etc.)
   * histo number of teams by country, distinguishing WD/non-WD
 
+- lister tous ceux qui sont juste "rugby player" ?
 
 - career steps with missing end date: 
   try to fill based on next step start date?
@@ -68,3 +69,7 @@
       https://rugby.statbunker.com/players/getPlayerHistory?player_id=8586
     - Ultimate Rugby: not great, seems like a copy of WP data
       https://www.ultimaterugby.com/antoine-dupont
+
+
+REGEX: (\w+)(.* )(\1)
+REPL: $2$3

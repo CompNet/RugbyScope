@@ -82,7 +82,9 @@ hits <- which(!is.na(teams_dbp[, "wikidataId"]))
 tlog(2, "DBP teams with a WD Id: ", length(hits), "/", nrow(teams_dbp))
 idx <- which(is.na(teams_dbp[, "wikidataId"]))
 # export as CSV for later use
-write.csv(teams_dbp[idx, ], file.path(dpb_stats_folder, "comparison_teams_noid.csv"), row.names = FALSE)
+tab_file <- file.path(dpb_stats_folder, "comparison_teams_noid.csv")
+tlog(4, "Exporting as a CSV file: ", tab_file)
+write.csv(teams_dbp[idx, ], tab_file, row.names = FALSE)
 # >>> manual examination reveals that these entries are either not rugby union teams
 #     or that these teams have duplicates in DBP
 
@@ -91,7 +93,9 @@ idx <- match(teams_dbp[hits, "wikidataId"], teams_wd[, "teamId"])
 tlog(2, "DBP teams found in the WD table: ", length(which(!is.na(idx))), "/", length(hits))
 # print(teams_dbp[hits[which(is.na(idx))], "wikidataId"])
 # export as CSV for later use
-write.csv(teams_dbp[hits[which(is.na(idx))], ], file.path(dpb_stats_folder, "comparison_teams_nomatch.csv"), row.names = FALSE)
+tab_file <- file.path(dpb_stats_folder, "comparison_teams_nomatch.csv")
+tlog(4, "Exporting as a CSV file: ", tab_file)
+write.csv(teams_dbp[hits[which(is.na(idx))], ], tab_file, row.names = FALSE)
 # >>> we get a bunch of entities that are not rugby union teams
 #     some are rugby league, or rugby union management organization,
 #     or even have absolutely nothing to do with rugby.
@@ -108,7 +112,9 @@ hits <- which(!is.na(players_dbp[, "wikidataId"]))
 tlog(2, "DBP players with a WD Id: ", length(hits), "/", nrow(players_dbp))
 idx <- which(is.na(players_dbp[, "wikidataId"]))
 # export as CSV for later use
-write.csv(players_dbp[idx, ], file.path(dpb_stats_folder, "comparison_players_noid.csv"), row.names = FALSE)
+tab_file <- file.path(dpb_stats_folder, "comparison_players_noid.csv")
+tlog(4, "Exporting as a CSV file: ", tab_file)
+write.csv(players_dbp[idx, ], tab_file, row.names = FALSE)
 # >>> manual examination reveals that many of these entries are indeed rugby union
 #     players, but that they are duplicates (due to several name variants) and/or
 #     actually present in the WD table. A lot of entities are also not rugby players,
@@ -119,7 +125,9 @@ tlog(2, "DBP players found in the WD table: ", length(which(!is.na(idx))), "/", 
 # print(players_dbp[hits[is.na(idx)], "wikidataId"])
 # >>> lot of females, rugby league players, and rugby union players not tied to any team
 # export as CSV for later use
-write.csv(players_dbp[hits[which(is.na(idx))], ], file.path(dpb_stats_folder, "comparison_players_nomatch.csv"), row.names = FALSE)
+tab_file <- file.path(dpb_stats_folder, "comparison_players_nomatch.csv")
+tlog(4, "Exporting as a CSV file: ", tab_file)
+write.csv(players_dbp[hits[which(is.na(idx))], ], tab_file, row.names = FALSE)
 #     so, mainly false positives in DBP
 
 # temporary tests
@@ -209,7 +217,6 @@ players[, "masses"] <- weights
 # in DBP, all values are single numbers: just convert to metric
 weights <- get_clean_weights(as.character(players_dbp[, "weights"]))
 players_dbp[, "weights"] <- weights
-# 2.0*exp(H*0.02) # formular from DOI:10.1002/ajhb.1310010412
 
 # set all the dates to the same format
 tlog(2, "Normalizing dates")
@@ -271,9 +278,9 @@ for (p in 1:length(idx)) {
   }
 }
 
-# remove supefluous columns
+# remove superfluous columns
 rem_cols <- c("dobFormat", "dodFormat", "sexLabel")
-tlog(2, "Removing supefluous columns (", paste0(rem_cols, collapse = ", "), ")")
+tlog(2, "Removing superfluous columns (", paste0(rem_cols, collapse = ", "), ")")
 idx <- which(colnames(players) %in% rem_cols)
 players <- players[, -idx]
 
@@ -428,9 +435,9 @@ for (c in 1:length(idx)) {
   }
 }
 
-# remove supefluous columns
+# remove superfluous columns
 rem_cols <- c("inceptionFormat", "terminationFormat", "nicknameLabels")
-tlog(2, "Removing supefluous columns (", paste0(rem_cols, collapse = ", "), ")")
+tlog(2, "Removing superfluous columns (", paste0(rem_cols, collapse = ", "), ")")
 idx <- which(colnames(teams) %in% rem_cols)
 teams <- teams[, -idx]
 
@@ -459,6 +466,6 @@ teams <- teams[order(ids), ]
 # replacing empty strings by NAs
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-tab.file <- file.path(dpb_table_folder, "fusion_teams_wd-dbp.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(teams, tab.file, row.names = FALSE)
+tab_file <- file.path(dpb_table_folder, "fusion_teams_wd-dbp.csv")
+tlog(2, "Recording as a CSV file: \"", tab_file, "\"")
+write.csv(teams, tab_file, row.names = FALSE)

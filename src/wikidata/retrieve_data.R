@@ -16,6 +16,7 @@
 # 12/2024
 #
 # setwd("C:/Users/Vincent/eclipse/workspaces/Test/RugbyScope/RugbyScope")
+# source("src/wikidata/retrieve_data.R")
 ########################################################################
 library("readtext")
 library("WikidataR")
@@ -312,3 +313,10 @@ write.csv(x = careers, file = file.path(table_folder, "all_players_careers.csv")
 # idx <- which(sapply(1:nrow(players), function(p) all(is.na(players[p,c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")])))) 
 # print(cbind(idx, players[idx, "playerId"]))
 # players[which(players[, "playerId"] == "Q96707312"), "wikipediaJa"] <- "フィシプナ・トゥイアキ"
+
+
+
+
+########################################################################
+# "Q2868073","Association Sportive Bayonnaise","rugby union club","1905-01-01","1905-1-1",NA,NA,NA,"Les violets",NA,"France",NA,NA,NA,NA,NA,"122fpt6j",NA,"Association_sportive_bayonnaise",NA,NA,NA
+# "Q1672729","Iris Club lillois","rugby union club","1898-01-01","1898-1-1","1941-01-01","1941-1-1",NA,NA,NA,"France",NA,NA,NA,NA,NA,"1232hsb_","Iris_Club_lillois","Iris_Club_lillois",NA,NA,NA

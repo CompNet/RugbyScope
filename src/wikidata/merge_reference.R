@@ -27,7 +27,8 @@
 # South Africa: 1526
 # Wales:         250
 #
-# Note: this probably includes a bunch of clubs out of the standard pyramid (e.g. corporate clubs in France)
+# Note: this probably includes a bunch of clubs out of the standard
+# pyramid (e.g. corporate clubs in France)
 ########################################################################
 library("stringi")
 library("stringr")
@@ -43,7 +44,10 @@ source("src/common/norm_teams.R")
 ########################################################################
 # paths
 dpb_table_folder <- file.path("data", "dbpedia", "tables")
+#
+wd_stats_folder <- file.path("data", "wikidata", "stats")
 wd_table_folder <- file.path("data", "wikidata", "tables")
+#
 ref_folder <- file.path("data", "references")
 
 
@@ -287,7 +291,8 @@ for (m in 1:length(map)) {
 # identify these teams
 idx <- which(is.na(match(teams[, "wikidataId"], all_teams[, "wikidataId"])))
 # record as CSV to check later
-write.csv(teams[idx, ], file.path(wd_table_folder, "teams_missing_in_reference.csv"))
+tab_file <- file.path(wd_stats_folder, "teams_missing_in_reference.csv")
+write.csv(teams[idx, ], tab_file)
 
 
 
