@@ -25,7 +25,7 @@ source("src/common/logging.R")
 #
 # returns: list of normalized names.
 ########################################################################
-normalize_names <- function(names, level = 1) {
+normalize_team_names <- function(names, level = 1) {
   result <- names
 
   #### first level of normalization
@@ -176,15 +176,15 @@ normalize_names <- function(names, level = 1) {
 # returns: best matches for each source name, expressed as positions in
 #          the target vector, or NA if there is no match at all.
 ########################################################################
-match_names <- function(src_names, tgt_names) {
+match_team_names <- function(src_names, tgt_names) {
   # init result list
   result <- list()
 
   ### first attempt: for all original names
 
   # apply light normalization
-  norm_src_names <- normalize_names(names = src_names, level = 1)
-  norm_tgt_names <- normalize_names(names = tgt_names, level = 1)
+  norm_src_names <- normalize_team_names(names = src_names, level = 1)
+  norm_tgt_names <- normalize_team_names(names = tgt_names, level = 1)
 
   # split names into lists
   norm_src_names <- strsplit(norm_src_names, "; ")
@@ -208,8 +208,8 @@ match_names <- function(src_names, tgt_names) {
     tlog(0, "Matching: level ", level)
 
     # perform deeper normalization
-    norm_src_names <- normalize_names(names = src_names, level = level)
-    norm_tgt_names <- normalize_names(names = tgt_names, level = level)
+    norm_src_names <- normalize_team_names(names = src_names, level = level)
+    norm_tgt_names <- normalize_team_names(names = tgt_names, level = level)
 
     # split names into lists
     norm_src_names <- strsplit(norm_src_names, "; ")

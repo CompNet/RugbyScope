@@ -102,10 +102,10 @@ print(which(table(all_teams[, "wikidataId"]) > 1))
 #   cat("Processing ", country, "\n", sep = "")
 
 #   # get info
-#   ref_names <- normalize_names(country_refs[[country]][, "name"], level = 1)
+#   ref_names <- normalize_team_names(country_refs[[country]][, "name"], level = 1)
 #   tiers <- country_refs[[country]][, "tier"]
 #   theor_hits <- length(which(!is.na(country_refs[[country]][, "wikidataId"])))
-#   wd_names <- normalize_names(wd_teams[, "teamLabel"], level = 1)
+#   wd_names <- normalize_team_names(wd_teams[, "teamLabel"], level = 1)
 
 #   # match names
 #   idx <- match(ref_names, wd_names)
@@ -153,7 +153,7 @@ wd_names <- sapply(1:length(wd_names1), function(i) {
 # match WD names into reference names
 ref_idx <- which(is.na(all_teams[, "wikidataId"]))
 wd_idx <- which(is.na(match(teams[, "wikidataId"], all_teams[-ref_idx, "wikidataId"])))
-result <- match_names(src_names = wd_names[wd_idx], tgt_names = ref_names[ref_idx])
+result <- match_team_names(src_names = wd_names[wd_idx], tgt_names = ref_names[ref_idx])
 
 # remove known homonyms, according to reference
 for (i in 1:length(result)) {

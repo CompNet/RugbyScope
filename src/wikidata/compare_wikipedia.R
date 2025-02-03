@@ -53,13 +53,22 @@ tlog(2, "WP entries without a WP page: ", length(no_wp), "/", nrow(wp_players))
 #
 has_wp <- which(!is.na(wp_players[, "url"]))
 idx <- match(wp_players[has_wp, "url"], fus_players[, "wikipediaEn"])
-tlog(2, "WP entries with a WP page that matches a player in our table: ", length(which(!is.na(idx))), "/", length(has_wp))
+tlog(2, "WP entries with a WP page that match a player in our table: ", length(which(!is.na(idx))), "/", length(has_wp))
 #
 tlog(2, "List of the WP entries with a WP page not found in our table:")
 print(wp_players[has_wp[is.na(idx)], ])
-tab_file <- file.path(wp_table_folder, "missing_internationals.csv")
-tlog(2, "Exporting as a CSV file in: ", tab_file)
+tab_file <- file.path(wp_table_folder, "internationals__missing_from_fusion.csv")
+tlog(4, "Exporting as a CSV file in: ", tab_file)
 write.csv(wp_players[has_wp[is.na(idx)], ], tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
-# same thing using names for the players without a WP page(
-# TODO
+# same thing using names for the players without a WP page
+wp_names <- normalize_player_names(wp_players[no_wp, "name"])
+idx0 <- (1:nrow(fus_players))[-sort(unique(idx))]
+fus_names <- normalize_player_names(fus_players[idx0, "fullName"])
+mm <- match(wp_names, fus_names)
+idx1 <- which(!is.na(mm))
+tlog(2, "WP entries without a WP page that match a player's name in our table: ", length(idx1), "/", length(no_wp))
+tab_file <- file.path(wp_table_folder, "internationals__matching_names_in_fusion.csv")
+tlog(4, "Exporting as a CSV file in: ", tab_file)
+tt <- cbind(wp_names[idx1], fus_players[idx0, "wikipediaEn"][mm[idx1]])
+write.csv(tt, tab_file, row.names = FALSE, fileEncoding = "UTF-8")

@@ -11,6 +11,47 @@
 
 
 ########################################################################
+# Normalizes the specified player names to ease comparison accross different
+# data bases:
+#   - Removes diacritics and case.
+#   - Removes points, replace hyphens by spaces.
+#   - Normalize "saint" and its variants.
+#
+# names: original names.
+#
+# returns: normalized names.
+########################################################################
+normalize_player_names <- function(names) {
+  result <- names
+  
+  # remove all diacritics
+  result <- stri_trans_general(str = result, id = "Latin-ASCII")
+
+  # switch to uppercase
+  result <- toupper(result)
+
+  # normalize "saint"
+  result <- gsub("\\bSAINT(E)?\\b", "ST", result, fixed = FALSE)
+
+  # remove points
+  result <- gsub("\\.", " ", result, fixed = FALSE)
+
+  # replace hyphens by spaces
+  result <- gsub("-", " ", result, fixed = TRUE)
+
+  # remove consecutive spaces
+  result <- gsub(" +", " ", result, fixed = FALSE)
+
+  # trim
+  result <- trimws(result)
+
+  return(result)
+}
+
+
+
+
+########################################################################
 # Receives a vector of possible heights for a *single* rugby player, possibly
 # expressed in a mix of metric and imperial units. The function tries
 # first to identify a realistc metric value: if it cannot, it tries
