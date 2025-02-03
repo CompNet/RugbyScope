@@ -46,7 +46,7 @@ source("src/dbpedia/merge_wikidata.R")
 
 
 ########################################################################
-# merging the manually curated reference teams in the previously merged team table
+# merge the manually curated reference teams into the previously merged team table
 source("src/wikidata/merge_reference.R")
 # this produces one file in filder `data/wikidata/`:
 # - `fusion_players_wd-dbp-ref.csv`: merged list of players

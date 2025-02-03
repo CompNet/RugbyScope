@@ -56,6 +56,7 @@
 "Q101077976","William Pees","William","Pees","male","1993-08-06","1993-8-6","Pau",NA,NA,NA,"France",NA,"fly-half",NA,NA,NA,NA,NA,"william-pees","11hlpnmbk9","34889",NA,NA,"William_Pees",NA,NA,NA
 "Q101078445","Mathieu Berbizier","Mathieu",NA,"male","1996-09-15","1996-9-15","Lannemezan",NA,NA,NA,"France",NA,"fullback",NA,NA,NA,NA,NA,NA,"11hlpnn2vg","35275",NA,NA,"Mathieu_Berbizier",NA,NA,NA
 "Q101079491","Dimitri Delibes","Dimitri","Delibes","male","1999-03-17","1999-3-17","Toulouse",NA,NA,NA,"France",NA,"winger; centre",NA,NA,NA,NA,NA,"dimitri-delibes","11lgkw8l1p","41769","16268","Dimitri_Delibes","Dimitri_Delibes",NA,"Dimitri_Delibes",NA
+"Q101080157","Robert McKenzie","Robert","McKenzie","male","1904-02-17","1904-2-17","Wellington","1993-07-19","1993-7-19","Wellington","New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,"11qmy7st1k",NA,NA,"Craig_Mackenzie",NA,NA,NA,NA
 "Q101083673","Ullrich Pretorius","Ullrich","Pretorius","male","1988-11-21","1988-11-21",NA,NA,NA,NA,"South Africa",NA,"hooker",NA,NA,NA,NA,NA,"ulrich-pretorius","11h207hc1g","19081",NA,NA,"Ullrich_Pretorius",NA,NA,NA
 "Q101083959","Setareki Bituniyata",NA,NA,"male","1995-08-12","1995-8-12",NA,NA,NA,NA,"Fiji",NA,"winger",NA,NA,NA,NA,NA,"setareki-bituniyata","11mgcp3gwx","39859","16269",NA,"Setareki_Bituniyata",NA,NA,NA
 "Q101083993","Baptiste Couchinave","Baptiste",NA,"male","1998-01-25","1998-1-25","Préchacq-Josbaig",NA,NA,NA,"France",NA,"centre",NA,NA,NA,NA,NA,"baptiste-couchinave","11hw359hd3","42697",NA,NA,"Baptiste_Couchinave",NA,NA,NA
@@ -202,7 +203,7 @@
 "Q104028003","Gillian Benoy","Gillian","Benoy","male","1995-05-08","1995-5-8",NA,NA,NA,NA,"Belgium",NA,"lock",NA,NA,NA,NA,"294659","gillian-benoy","11qplp9t19","32570",NA,NA,"Gillian_Benoy",NA,NA,NA
 "Q104037625","Temo Mayanavanua",NA,NA,"male","1997-11-09","1997-11-9",NA,NA,NA,NA,"Fiji",NA,"lock",NA,NA,NA,NA,"299398","temo-mayanavanua","11qpm3wds6","15665","254","Temo_Mayanavanua","Temo_Mayanavanua",NA,NA,"%E3%83%86%E3%83%A2%E3%83%BB%E3%83%9E%E3%83%A4%E3%83%8A%E3%83%B4%E3%82%A1%E3%83%8C%E3%82%A2"
 "Q104053433","Edmond Vellat","Edmond",NA,"male","1897-02-14","1897-2-14","Chambéry","1996-06-03","1996-6-3","Grenoble","France",NA,NA,NA,NA,NA,NA,"3392",NA,"11ll0qrvsz",NA,NA,NA,"Edmond_Vellat",NA,NA,NA
-"Q104054614","Diogo Hasse Ferreira","Diogo","Ferreira","male","1996-10-17","1996-10-17",NA,NA,NA,NA,"Portugal","Portugal","prop",NA,NA,NA,NA,"294253","diogo-hasse-ferreira","11ll0qp4xd","35400",NA,NA,"Diogo_Ferreira_(rugby_%C3%A0_XV)",NA,NA,"%E3%83%87%E3%82%A3%E3%82%AA%E3%82%B4%E3%83%BB%E3%83%95%E3%82%A7%E3%83%AC%E3%82%A4%E3%83%A9_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
+"Q104054614","Diogo Hasse Ferreira","Diogo","Ferreira; Hasse","male","1996-10-17","1996-10-17",NA,NA,NA,NA,"Portugal","Portugal","prop",NA,NA,NA,NA,"294253","diogo-hasse-ferreira","11ll0qp4xd","35400",NA,NA,"Diogo_Hasse_Ferreira",NA,NA,"%E3%83%87%E3%82%A3%E3%82%AA%E3%82%B4%E3%83%BB%E3%83%95%E3%82%A7%E3%83%AC%E3%82%A4%E3%83%A9_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q104063478","Benjamin Doy","Benjamin","Doy","male","1993-01-01","1993-1-1","Nantua",NA,NA,NA,"France","Switzerland",NA,NA,NA,NA,NA,NA,"benjamin-doy","11ll0rvmf3","35685",NA,NA,"Benjamin_Doy",NA,NA,NA
 "Q104093213","Bennett Howe",NA,NA,"male","1932-08-30","1932-8-30","Port Nolloth","2010-04-22","2010-4-22","Gqeberha",NA,NA,NA,NA,NA,NA,NA,"6059",NA,"11qpqlbxyf",NA,NA,"Bennett_Howe",NA,NA,NA,NA
 "Q104094380","Alfie Barbeary","Alfie",NA,"male","2000-10-05","2000-10-5","Banbury",NA,NA,NA,"United Kingdom","England","number 8; third line",NA,NA,NA,NA,"301070","alfie-barbeary","11n04t7szy","44439","18091","Alfie_Barbeary","Alfie_Barbeary",NA,NA,NA
@@ -662,7 +663,7 @@
 "Q106189203","Bruno Vliegen","Bruno",NA,"male","2001-07-03","2001-7-3",NA,NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,"304729","bruno-vliegen",NA,"22163",NA,NA,"Bruno_Vliegen",NA,NA,NA
 "Q106190314","Alex Coles","Alex","Coles","male","1999-09-21","1999-9-21","Cambridge",NA,NA,NA,"United Kingdom","England","lock",NA,NA,NA,NA,"301101","alex-coles","11n1_7tttr","43555","9807","Alex_Coles_(rugby_union)","Alex_Coles",NA,NA,NA
 "Q106190340","Will Montgomery","Will","Montgomery","male","2000-02-02","2000-2-2",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"will-montgomery","11pg2gsf0x",NA,NA,"Will_Montgomery_(rugby_union)",NA,NA,NA,NA
-"Q106190371","Tommy Freeman","Tommy","Freeman","male","2001-03-05","2001-3-5","Oxford",NA,NA,NA,"United Kingdom","England","winger; fullback",NA,NA,NA,NA,"304091","tommy-freeman","11h_xgwbrl","45028","9796","Tommy_Freeman_(rugby_union)","Tommy_Freeman_(rugby_%C3%A0_XV)",NA,NA,NA
+"Q106190371","Tommy Freeman","Tommy","Freeman","male","2001-03-05","2001-3-5","Oxford",NA,NA,NA,"United Kingdom","England","winger; fullback",NA,NA,NA,NA,"304091","tommy-freeman","11h_xgwbrl","45028","9796","Tommy_Freeman_(rugby_union)","Tommy_Freeman_(rugby_%C3%A0_XV)",NA,NA,"%E3%83%88%E3%83%9F%E3%83%BC%E3%83%BB%E3%83%95%E3%83%AA%E3%83%BC%E3%83%9E%E3%83%B3_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E3%83%A6%E3%83%8B%E3%82%AA%E3%83%B3)"
 "Q1061908","Michael Owen","Michael","Owen","male","1980-11-07","1980-11-7","Pontypridd",NA,NA,NA,"United Kingdom","Wales","flanker",NA,NA,"109","197","13951",NA,NA,"545","13548","Michael_Owen_(rugby_union)","Michael_Owen_(rugby_%C3%A0_XV)","Michael_Owen_(rugbista)",NA,"%E3%83%9E%E3%82%A4%E3%82%B1%E3%83%AB%E3%83%BB%E3%82%AA%E3%83%BC%E3%82%A6%E3%82%A7%E3%83%B3_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q1061916","Jérôme Thion","Jérôme",NA,"male","1977-12-02","1977-12-2","Senlis",NA,NA,NA,"France",NA,"lock",NA,NA,"120","199","14239","jerome-thion",NA,"406",NA,"J%C3%A9r%C3%B4me_Thion","J%C3%A9r%C3%B4me_Thion","J%C3%A9r%C3%B4me_Thion",NA,"%E3%82%B8%E3%82%A7%E3%83%AD%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%86%E3%82%A3%E3%82%AA%E3%83%B3"
 "Q1061941","AJ Venter",NA,NA,"male","1973-07-29","1973-7-29","Myrina",NA,NA,NA,"South Africa",NA,"lock",NA,"2009","106","196","13539",NA,NA,"2452","11620","AJ_Venter","AJ_Venter","AJ_Venter",NA,"AJ%E3%83%BB%E3%83%95%E3%82%A7%E3%83%B3%E3%82%BF%E3%83%BC"
@@ -732,7 +733,7 @@
 "Q106479219","Kakeru Okumura","Kakeru","奥村","male","1998-06-10","1998-6-10","Kyoto Prefecture",NA,NA,NA,"Japan",NA,"fullback",NA,NA,"87","180",NA,"kakeru-okumura","11khwty1yk","48968","18989","Kakeru_Okumura",NA,NA,NA,"%E5%A5%A5%E6%9D%91%E7%BF%94_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q106479357","Q106479357",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%B0%BE%E5%B4%8E%E6%B3%B0%E9%9B%85"
 "Q106479366","Kenta Yamashita","けんた","山下","male","1999-02-04","1999-2-4","Nagasaki Prefecture",NA,NA,NA,"Japan",NA,"prop; hooker",NA,NA,NA,NA,NA,NA,"11r758430s",NA,NA,NA,NA,NA,NA,"%E5%B1%B1%E4%B8%8B%E6%86%B2%E5%A4%AA"
-"Q106479453","Kodai Okazaki","Kōdai","Okazaki","male","1998-07-27","1998-7-27","Nagasaki Prefecture",NA,NA,NA,"Japan",NA,"fly-half",NA,NA,"82","171",NA,NA,"11n7jxf5s0","51769",NA,NA,NA,NA,NA,"%E5%B2%A1%EF%A8%91%E8%88%AA%E5%A4%A7"
+"Q106479453","Kodai Okazaki","Kōdai","岡崎","male","1998-07-27","1998-7-27","Nagasaki Prefecture",NA,NA,NA,"Japan",NA,"fly-half",NA,NA,"82","171",NA,NA,"11n7jxf5s0","51769",NA,NA,NA,NA,NA,"%E5%B2%A1%EF%A8%91%E8%88%AA%E5%A4%A7"
 "Q106479548","Takuma Shoji","Takuma","庄司","male","1998-05-22","1998-5-22","Osaka Prefecture",NA,NA,NA,"Japan",NA,"flanker",NA,NA,NA,NA,NA,NA,"11r7576p5x",NA,NA,NA,NA,NA,NA,"%E5%BA%84%E5%8F%B8%E6%8B%93%E9%A6%AC"
 "Q106479555","Q106479555",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%BB%B6%E5%B1%B1%E6%95%8F%E5%92%8C"
 "Q106479677","Q106479677",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%9D%89%E6%B5%A6%E6%8B%93%E5%AE%9F"
@@ -848,7 +849,7 @@
 "Q106963271","Summa Navaratnam",NA,NA,"male","1925-05-21","1925-5-21","Araly","2023-10-19","2023-10-19",NA,NA,"Sri Lanka",NA,NA,NA,NA,NA,NA,NA,"11nmr_2_3s",NA,NA,"Summa_Navaratnam",NA,NA,NA,NA
 "Q106975912","Hamish Bryce","Hamish",NA,"male","1941-01-01","1941-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11rfdlywl6",NA,NA,"Hamish_Bryce",NA,NA,NA,NA
 "Q106977258","Liam Allen","Liam","Allen","male","2000-03-17","2000-3-17",NA,NA,NA,NA,"New Zealand",NA,"number 8; flanker",NA,NA,NA,NA,NA,"liam-allen","11nmsf4sr6","47996","1612","Liam_Allen","Liam_Allen",NA,NA,NA
-"Q106981381","Tomoki Osada","Tomoki","Osada","male","1999-11-25","1999-11-25","Oyamazaki",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,"tomoki-osada",NA,NA,NA,"Tomoki_Osada",NA,NA,NA,"%E9%95%B7%E7%94%B0%E6%99%BA%E5%B8%8C"
+"Q106981381","Tomoki Osada","Tomoki","長田","male","1999-11-25","1999-11-25","Oyamazaki",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,"tomoki-osada",NA,NA,NA,"Tomoki_Osada",NA,NA,NA,"%E9%95%B7%E7%94%B0%E6%99%BA%E5%B8%8C"
 "Q106983475","Charl du Plessis",NA,NA,"male","1987-04-08","1987-4-8","Cape Town",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Charl_du_Plessis_(rugby_player)",NA,NA,NA,NA
 "Q106990916","Alexandre Bécognée","Alexandre",NA,"male","1996-09-03","1996-9-3","Bordeaux",NA,NA,NA,"France",NA,"number 8; flanker",NA,NA,NA,NA,"308606","alexandre-becognee","11nn18fpk7","41129","10621","Alexandre_B%C3%A9cogn%C3%A9e","Alexandre_B%C3%A9cogn%C3%A9e",NA,NA,NA
 "Q106994544","Q106994544",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%B0%8F%E5%B7%9D%E6%8B%93%E6%9C%97"
@@ -988,6 +989,7 @@
 "Q107468271","Alexander Anderson",NA,"Anderson","male","1873-11-04","1873-11-4",NA,"1939-01-01","1939-1-1",NA,"United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"1113",NA,"11q7z_qdgb",NA,NA,"Alexander_Anderson_(rugby_union)",NA,NA,NA,NA
 "Q107468305","Louis Stevenson","Louis","Stevenson","male","1864-01-31","1864-1-31",NA,"1931-08-19","1931-8-19",NA,NA,NA,NA,NA,NA,NA,NA,"819",NA,NA,NA,NA,"Louis_Stevenson",NA,NA,NA,NA
 "Q107477016","Lockie Kratz",NA,"Kratz","male","2000-03-27","2000-3-27",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11nx3yt_pb","11595",NA,"Lockie_Kratz",NA,NA,NA,NA
+"Q107481293","John Lecky","John",NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11ghw0t05s",NA,NA,"John_Lecky_(rugby_union,_born_1960)",NA,NA,NA,NA
 "Q107481762","Murray Koster",NA,NA,"male","1999-02-21","1999-2-21","East London",NA,NA,NA,NA,NA,"centre",NA,NA,NA,NA,NA,"murray-koster","11j55cq3j0","45387",NA,"Murray_Koster",NA,NA,NA,"%E3%83%9E%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%B3%E3%82%B9%E3%82%BF%E3%83%BC"
 "Q107483720","Rynhardt Jonker",NA,NA,"male","2000-04-18","2000-4-18",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11nnv1fhzp",NA,NA,"Rynhardt_Jonker",NA,NA,NA,NA
 "Q107483722","Jeandre Labuschagne",NA,NA,"male","1999-07-07","1999-7-7",NA,NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,NA,"jeandre-labuschagne","11q887l_0q","45138",NA,"Jeandre_Labuschagne",NA,NA,NA,NA
@@ -1081,6 +1083,7 @@
 "Q108038783","François-Joseph Bordewie",NA,NA,"male","1993-01-01","1993-1-1",NA,NA,NA,NA,"France",NA,NA,NA,NA,NA,NA,NA,"francois-joseph-bordewie",NA,"33713",NA,NA,"Fran%C3%A7ois-Joseph_Bordewie",NA,NA,NA
 "Q108046936","Josh Turner","Josh","Turner","male","1995-09-23","1995-9-23","New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11r9vvcz4q",NA,NA,"Josh_Turner_(rugby_union)",NA,NA,NA,"%E3%82%B8%E3%83%A7%E3%82%B7%E3%83%A5%E3%83%BB%E3%82%BF%E3%83%BC%E3%83%8A%E3%83%BC_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q108048047","Andrea Buondonno",NA,NA,"male","1992-11-21","1992-11-21",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11rwlhxtr_","33415",NA,"Andrea_Buondonno",NA,NA,NA,NA
+"Q108052520","Mike Siano","Mike","Siano","male","1963-11-29","1963-11-29",NA,NA,NA,NA,"United States",NA,"wide receiver",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mike_Siano",NA,NA,NA,NA
 "Q108052739","Nathan Lawson","Nathan","Lawson","male","1999-01-23","1999-1-23","Caringbah",NA,NA,NA,"Australia","Australia",NA,NA,NA,NA,NA,NA,NA,"11ng6sgbxz",NA,NA,"Nathan_Lawson_(rugby_union)",NA,NA,NA,"%E3%83%8D%E3%83%BC%E3%82%B5%E3%83%B3%E3%83%BB%E3%83%AD%E3%83%BC%E3%82%BD%E3%83%B3"
 "Q108055427","Jacopo Abram","Jacopo","Abram","male","1996-07-11","1996-7-11",NA,NA,NA,NA,"Italy",NA,"flanker","2014",NA,"95","187",NA,NA,NA,"39134",NA,NA,NA,NA,NA,NA
 "Q108062107","Henco van Wyk",NA,"van Wyk","male","2001-01-01","2001-1-1","Rustenburg",NA,NA,NA,"South Africa",NA,"centre",NA,NA,NA,NA,NA,"henco-van-wyk","11n_yr43f6","50458","18384","Henco_van_Wyk","Henco_van_Wyk",NA,NA,NA
@@ -1175,6 +1178,7 @@
 "Q108695627","Louis Llari","Louis","Llari","male","1924-12-23","1924-12-23","Lannemezan","2014-06-29","2014-6-29","Chalabre","France",NA,"fullback; centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Louis_Llari",NA,NA,NA
 "Q108714779","Olajuwon Noa","Olajuwon","Noa","male","1989-12-28","1989-12-28","Auckland",NA,NA,NA,"New Zealand","Samoa","number 8; flanker",NA,NA,NA,NA,"308592","olajuwon-noa","11rcs1ff60","32836",NA,"Olajuwon_Noa",NA,NA,NA,NA
 "Q108730420","Gonzalo García","Gonzalo","García","male","1999-03-05","1999-3-5","Santa Fe",NA,NA,NA,"Argentina",NA,"scrum-half",NA,NA,NA,NA,NA,"gonzalo-garcia-1999","11qh84h1_z","40682","18021","Gonzalo_Garc%C3%ADa_(rugby_union,_born_1999)","Gonzalo_Garc%C3%ADa_(rugby_%C3%A0_XV,_1999)",NA,"Gonzalo_Jes%C3%BAs_Garc%C3%ADa",NA
+"Q108731855","Brock Webster",NA,NA,"male","2000-08-21","2000-8-21",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11rcsxxv_m",NA,NA,"Brock_Webster",NA,NA,NA,NA
 "Q108733069","Rodrigo Martínez","Rodrigo","Martínez","male","1998-07-07","1998-7-7",NA,NA,NA,NA,"Argentina",NA,"prop",NA,NA,NA,NA,NA,"rodrigo-martinez","11rcsy5jt2","40687","11733","Rodrigo_Mart%C3%ADnez_(rugby_union)","Rodrigo_Mart%C3%ADnez",NA,NA,NA
 "Q108741044","Sean Withy",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11p5qln2bg","43379",NA,"Sean_Withy",NA,NA,NA,NA
 "Q108741957","Louis Bruinsma","Louis","Bruinsma","male","2000-01-01","2000-1-1",NA,NA,NA,NA,"Kingdom of the Netherlands",NA,NA,NA,NA,NA,NA,NA,"louis-bruinsma",NA,"48695",NA,NA,"Louis_Bruinsma",NA,"Louis_Bruinsma",NA
@@ -1204,7 +1208,7 @@
 "Q108806383","Tietie Tuimauga",NA,NA,"male","1993-08-05","1993-8-5",NA,NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,"308521","tietie-tuimauga","11p5x46yj8","39217",NA,"Tietie_Tuimauga",NA,NA,NA,NA
 "Q108806558","Thierry Gras","Thierry","Gras","male","1970-06-24","1970-6-24",NA,NA,NA,NA,NA,NA,"lock",NA,NA,NA,NA,NA,NA,NA,"282",NA,NA,NA,NA,NA,NA
 "Q108815229","Grigoriy Tsnobiladze",NA,"Q24957316","male","1983-01-02","1983-1-2","Kutaisi",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11b6xh1m24",NA,NA,"Grigoriy_Tsnobiladze",NA,NA,NA,NA
-"Q108818556","Theo McFarland","Theodore","McFarland","male","1995-10-16","1995-10-16","Samoa",NA,NA,NA,"Samoa",NA,"pivot; lock; flanker",NA,NA,NA,NA,"308485","theo-mcfarland","11p5zsrp9_","50000",NA,"Theo_McFarland","Theo_McFarland",NA,"Theo_McFarland","%E3%82%BB%E3%82%AA%E3%83%BB%E3%83%9E%E3%82%AF%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89"
+"Q108818556","Theo McFarland","Theodore","McFarland","male","1995-10-16","1995-10-16","Samoa",NA,NA,NA,"Samoa",NA,"center; lock; flanker",NA,NA,NA,NA,"308485","theo-mcfarland","11p5zsrp9_","50000",NA,"Theo_McFarland","Theo_McFarland",NA,"Theo_McFarland","%E3%82%BB%E3%82%AA%E3%83%BB%E3%83%9E%E3%82%AF%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A9%E3%83%B3%E3%83%89"
 "Q108821676","Liam Coombes-Fabling",NA,NA,"male",NA,NA,NA,NA,NA,NA,"New Zealand",NA,"winger",NA,NA,NA,NA,NA,"liam-coombes-fabling","11r_mrh3b3","44180",NA,"Liam_Coombes-Fabling",NA,NA,NA,NA
 "Q108838500","Matthew Kailey Fosh","Matthew",NA,"male","1957-09-26","1957-9-26","Epping",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"9035",NA,NA,NA,NA,"Matthew_Fosh",NA,NA,NA,NA
 "Q108839353","Adrien Vigne","Adrien","Vigne","male","1998-10-14","1998-10-14","Béziers",NA,NA,NA,"France",NA,NA,NA,NA,NA,NA,NA,"adrien-vigne",NA,"35266",NA,NA,"Adrien_Vigne",NA,NA,NA
@@ -1761,6 +1765,7 @@
 "Q1115849","Jonathan Davies","Jonathan","Davies","male","1962-10-24","1962-10-24","Trimsaran",NA,NA,NA,"United Kingdom","Wales","fly-half","1982",NA,NA,NA,"9856",NA,NA,NA,"13618","Jonathan_Davies_(rugby,_born_1962)","Jonathan_Davies_(rugby)","Jonathan_Davies_(rugbista_1962)","Jonathan_Davies_(n._en_1962)",NA
 "Q111593080","John Rushmere",NA,NA,"male","1939-04-01","1939-4-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11gd3y1czw",NA,NA,"John_Rushmere",NA,NA,NA,NA
 "Q111593908","Corey Toole","Corey","Toole","male","2000-03-07","2000-3-7","Forbes",NA,NA,NA,"Australia","Australia",NA,NA,NA,NA,NA,NA,NA,"11q4m23mh1","51640",NA,"Corey_Toole",NA,NA,NA,"%E3%82%B3%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%AB"
+"Q111603600","Harry Khasigian",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11rvm1fhw1",NA,NA,"Fred_Khasigian",NA,NA,NA,NA
 "Q111621575","Rémi Susbielles","Rémi","Susbielles","male","1972-01-26","1972-1-26","Pau",NA,NA,NA,"France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"R%C3%A9mi_Susbielles",NA,NA,NA
 "Q111624","Shinjirō Honryō","Shinjirō",NA,"male","1903-10-08","1903-10-8","Tokyo","1971-07-24","1971-7-24",NA,"Japan; Empire of Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11jgf3s29",NA,NA,NA,NA,NA,NA,"%E6%9C%AC%E9%A0%98%E4%BF%A1%E6%B2%BB%E9%83%8E"
 "Q111626303","Jules Even","Jules","Even","male","1998-01-01","1998-1-1",NA,NA,NA,NA,"France",NA,"centre",NA,NA,NA,NA,NA,"jules-even",NA,"43424",NA,NA,"Jules_Even",NA,NA,NA
@@ -2164,6 +2169,7 @@
 "Q11438850","Shōtarō Ōnishi","Shōtarō","Ōnishi","male","1978-11-18","1978-11-18","Osaka Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"13374",NA,"120sk33x","4008",NA,"Shotaro_Onishi",NA,NA,NA,"%E5%A4%A7%E8%A5%BF%E5%B0%86%E5%A4%AA%E9%83%8E"
 "Q11439015","Takehiko Ōtani","Takehiko",NA,"male","1947-03-10","1947-3-10","Tokyo",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"121g1x3v",NA,NA,NA,NA,NA,NA,"%E5%A4%A7%E8%B0%B7%E5%89%9B%E5%BD%A6"
 "Q11441787","Takaaki Ōkuma","たかあき","Ookuma","male","1982-09-24","1982-9-24","Hirakata",NA,NA,NA,"Japan",NA,"flanker",NA,NA,"85","170",NA,NA,"121cxmc0","21107",NA,NA,NA,NA,NA,"%E5%A4%A7%E9%9A%88%E9%9A%86%E6%98%8E"
+"Q114457455","Adam H. Russell","Adam; H.","Russell","male",NA,NA,NA,NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,NA,NA,"11jt4bqmpt",NA,NA,"Adam_H._Russell",NA,NA,NA,NA
 "Q114458761","Fionn Gibbons",NA,NA,"male","2002-06-12","2002-6-12",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"fionn-gibbons","11s9254094",NA,NA,"Fionn_Gibbons",NA,NA,NA,NA
 "Q11449612","Takehisa Usuzuki","Takehisa",NA,"male","1985-09-28","1985-9-28","Osaka Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"139784",NA,"121z_8cf",NA,NA,"Takehisa_Usuzuki",NA,NA,NA,"%E5%AE%87%E8%96%84%E5%B2%B3%E5%A4%AE"
 "Q114496807","Maxime Duprat","Maxime","Duprat","male","1998-06-06","1998-6-6",NA,NA,NA,NA,"France",NA,"prop",NA,NA,NA,NA,NA,"maxime-duprat",NA,"42458","16275",NA,"Maxime_Duprat",NA,NA,NA
@@ -2183,6 +2189,7 @@
 "Q114594360","Jules Soulé","Jules","Soulé","male","1878-07-10","1878-7-10","Toulouse","1945-05-12","1945-5-12","Tarbes","France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jules_Soul%C3%A9",NA,NA,NA
 "Q1146089","Pierre Hola","Pierre",NA,"male","1978-06-09","1978-6-9","Sydney",NA,NA,NA,"Tonga",NA,"fullback",NA,"2015","105","182","12976",NA,NA,"2219",NA,"Pierre_Hola","Pierre_Hola","Pierre_Hola",NA,NA
 "Q1146098","Andrea Masi","Andrea","Masi","male","1981-03-30","1981-3-30","L'Aquila",NA,NA,NA,"Italy",NA,"centre",NA,"2016","105","185","13236","andrea-masi",NA,"570",NA,"Andrea_Masi","Andrea_Masi","Andrea_Masi","Andrea_Masi",NA
+"Q114622861","Senirusi Seruvakula",NA,NA,"male","1969-01-01","1969-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11s98cz10r",NA,NA,"Senirusi_Seruvakula",NA,NA,NA,NA
 "Q11463331","Jin Ogasawara",NA,NA,"male","1983-05-07","1983-5-7",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"122k64t7",NA,NA,NA,NA,NA,NA,"%E5%B0%8F%E7%AC%A0%E5%8E%9F%E4%BB%81_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q11463551","Osamu Koyabu","おさむ",NA,"male","1947-10-24","1947-10-24","Osaka Prefecture",NA,NA,NA,"Japan",NA,"fly-half",NA,NA,NA,NA,"8327",NA,"121ngp03",NA,NA,"Osamu_Koyabu",NA,NA,NA,"%E5%B0%8F%E8%97%AA%E4%BF%AE"
 "Q114642680","Jean Darricau","Jean","Darricau","male","1931-01-01","1931-1-1",NA,NA,NA,NA,"France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jean_Darricau","Jean_Darricau",NA,NA,NA
@@ -2345,7 +2352,7 @@
 "Q115486660","Pauli Tuala","Pauli","Tuala","male",NA,NA,NA,NA,NA,NA,"Samoa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q115491965","Alessio Sanavia",NA,NA,"male","1996-09-18","1996-9-18",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"44091",NA,"Alessio_Sanavia",NA,NA,NA,NA
 "Q115492218","Joey Caputo",NA,NA,"male","2000-04-24","2000-4-24",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11ngtf5fj3","52636",NA,"Joey_Caputo",NA,NA,NA,NA
-"Q115492321","Luca Rizzoli",NA,NA,"male","2002-05-03","2002-5-3",NA,NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,NA,"luca-rizzoli","11rqx3rhn3","49789",NA,"Luca_Rizzoli","Luca_Rizzoli",NA,NA,NA
+"Q115492321","Luca Rizzoli","Luca","Rizzoli","male","2002-05-03","2002-5-3","Roma",NA,NA,NA,"Italy",NA,"prop",NA,NA,NA,NA,NA,"luca-rizzoli","11rqx3rhn3","49789","18220","Luca_Rizzoli","Luca_Rizzoli",NA,NA,NA
 "Q115492393","Muhamed Hasa",NA,NA,"male","2001-09-10","2001-9-10",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11jyf8fkdf","47056",NA,"Muhamed_Hasa",NA,NA,NA,NA
 "Q115518158","Joe Carpenter","Joe","Carpenter","male","2001-08-19","2001-8-19","Leeds",NA,NA,NA,"United Kingdom","England","fullback",NA,NA,NA,NA,NA,"joe-carpenter","11s8yyy3cy","9080","18176","Joe_Carpenter_(rugby_union)","Joe_Carpenter",NA,NA,NA
 "Q11552016","Wataru Ikeda","Wataru","池田","male","1975-11-17","1975-11-17",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"14463",NA,"121h80_0",NA,NA,"Wataru_Ikeda",NA,NA,NA,"%E6%B1%A0%E7%94%B0%E6%B8%89"
@@ -2463,6 +2470,7 @@
 "Q116141561","Jean-Baptiste Lachaise","Jean-Baptiste","Lachaise","male","2001-01-01","2001-1-1",NA,NA,NA,NA,"France",NA,"flanker",NA,NA,NA,NA,NA,"jean-baptiste-lachaise",NA,"46905","19366",NA,"Jean-Baptiste_Lachaise",NA,NA,NA
 "Q116147125","Kō Yoshimura","Hiroshi","吉村","male","2000-10-07","2000-10-7","Kitakyushu",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%90%89%E6%9D%91%E7%B4%98"
 "Q116148187","Jim Hay",NA,NA,"male","1964-08-08","1964-8-8",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11ghvbhndd",NA,NA,"Jim_Hay_(rugby_union)",NA,NA,NA,NA
+"Q116158266","Gordon Hunter",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h_xd5j5m",NA,NA,"Gordon_Hunter_(rugby_union,_born_1958)",NA,NA,NA,NA
 "Q116160307","Ōgi Yanamoto","6b74ea734cb7cb89ba357851b2e29dd2","Yanamoto","male","2000-09-18","2000-9-18","Osaka Prefecture",NA,NA,NA,"Japan",NA,"number 8; flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%A2%81%E6%9C%AC%E6%97%BA%E7%BE%A9"
 "Q11616091","Yūji Sonoda","ゆうじ",NA,"male","1973-07-05","1973-7-5","Osaka Prefecture",NA,NA,NA,"Japan",NA,"scrum-half",NA,NA,NA,NA,"13378",NA,"122gl7cj",NA,NA,"Yuji_Sonoda",NA,NA,NA,"%E8%8B%91%E7%94%B0%E5%8F%B3%E4%BA%8C"
 "Q116162899","Benjamin Boudou","Benjamin","Boudou","male","2002-06-07","2002-6-7","Paris",NA,NA,NA,"France","France","hooker",NA,NA,NA,NA,NA,"benjamin-boudou",NA,"46790",NA,NA,"Benjamin_Boudou",NA,NA,NA
@@ -2490,12 +2498,13 @@
 "Q116254941","Emeka Ilione",NA,NA,"male","2002-03-20","2002-3-20",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h_xnppxf",NA,NA,"Emeka_Ilione",NA,NA,NA,NA
 "Q11627356","Tadasuke Nishihara",NA,"Nishihara","male","1988-01-02","1988-1-2","Osaka Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"142927",NA,"1239css7",NA,NA,NA,NA,NA,NA,"%E8%A5%BF%E5%8E%9F%E5%BF%A0%E4%BD%91"
 "Q116296649","Bill Relph",NA,NA,"male","1928-11-28","1928-11-28",NA,"2023-01-18","2023-1-18",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11shfst8mh",NA,NA,"Bill_Relph",NA,NA,NA,NA
-"Q116305126","Théo Attissogbé","Théo",NA,"male","2004-11-19","2004-11-19","Périgueux",NA,NA,NA,"France",NA,"fullback",NA,NA,NA,NA,NA,"theo-attissogbe",NA,"53534","16903","Th%C3%A9o_Attissogb%C3%A9","Th%C3%A9o_Attissogbe","Th%C3%A9o_Attissogb%C3%A9","Th%C3%A9o_Attissogb%C3%A9","%E3%83%86%E3%82%AA%E3%83%BB%E3%82%A2%E3%83%86%E3%82%A3%E3%82%BD%E3%82%B0%E3%83%99"
+"Q116305126","Théo Attissogbé","Théo",NA,"male","2004-11-19","2004-11-19","Périgueux",NA,NA,NA,"France",NA,"utility back",NA,NA,"82","180",NA,"theo-attissogbe",NA,"53534","16903","Th%C3%A9o_Attissogb%C3%A9","Th%C3%A9o_Attissogbe","Th%C3%A9o_Attissogb%C3%A9","Th%C3%A9o_Attissogb%C3%A9","%E3%83%86%E3%82%AA%E3%83%BB%E3%82%A2%E3%83%86%E3%82%A3%E3%82%BD%E3%82%B0%E3%83%99"
 "Q11631229","Q11631229",NA,NA,"male","1985-01-13","1985-1-13",NA,NA,NA,NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,"120l33sc",NA,NA,NA,NA,NA,NA,"%E8%A8%B1%E9%9B%84_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q116312825","Grégoire Arfeuil","Grégoire",NA,"male","2004-12-05","2004-12-5",NA,NA,NA,NA,"France",NA,"fullback",NA,NA,NA,NA,NA,"gregoire-arfeuil",NA,"55393","19422","Gr%C3%A9goire_Arfeuil","Gr%C3%A9goire_Arfeuil",NA,NA,NA
 "Q116313188","Axel Desperes","Axel",NA,"male","2004-01-16","2004-1-16",NA,NA,NA,NA,"France",NA,"fly-half",NA,NA,NA,NA,NA,"axel-desperes",NA,"56854","18451","Axel_Desperes","Axel_Desperes",NA,"Axel_Desperes",NA
 "Q11634029","Masakazu Toyota","まさかず",NA,"male","1986-01-01","1986-1-1","Fukuoka Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"120qdryt",NA,NA,NA,NA,NA,NA,"%E8%B1%8A%E7%94%B0%E5%B0%86%E4%B8%87"
 "Q11638245","Yutaka Tsujimoto","ゆたか","Tsujimoto","male","1975-07-24","1975-7-24","Osaka Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"13609",NA,"1223kgc6",NA,NA,NA,NA,NA,NA,"%E8%BE%BB%E6%9C%AC%E8%A3%95"
+"Q11638345","Takashi Tsuji","たかし","辻","male","1977-04-24","1977-4-24",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"120kh90p",NA,NA,"Takashi_Tsuji",NA,NA,NA,"%E8%BE%BB%E9%AB%98%E5%BF%97"
 "Q11644702","Yasumasa Shigemitsu","Yasumasa",NA,"male","1980-01-06","1980-1-6","Kyoto Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"122gfnxc",NA,NA,NA,NA,NA,NA,"%E9%87%8D%E5%85%89%E6%B3%B0%E6%98%8C"
 "Q116453914","Gabin Michet","Gabin","Michet","male","2001-06-15","2001-6-15","Clermont-Ferrand",NA,NA,NA,"France",NA,"fly-half",NA,NA,NA,NA,NA,"gabin-michet",NA,"46795",NA,NA,"Gabin_Michet",NA,NA,NA
 "Q116454443","Janick Tarrit","Jannick","Tarrit","male","1998-10-29","1998-10-29",NA,NA,NA,NA,"France",NA,"hooker",NA,NA,NA,NA,NA,"janick-tarrit",NA,"43980","14670",NA,"Janick_Tarrit",NA,NA,NA
@@ -2514,6 +2523,7 @@
 "Q116498544","Steve Lidbury","Steve",NA,"male","1968-12-25","1968-12-25",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"10292",NA,"11v5ywgcmr",NA,NA,"Steve_Lidbury",NA,NA,NA,NA
 "Q116498603","Roger Llari","Roger","Llari","male","1903-04-15","1903-4-15","Saint-Gaudens","1973-12-18","1973-12-18","Saint-Étienne","France",NA,"scrum-half",NA,NA,NA,NA,"3286",NA,NA,NA,NA,NA,"Roger_Llari",NA,NA,NA
 "Q116505156","Eddie McKeating","Eddie","McKeating","male","1936-09-01","1936-9-1",NA,"2021-05-02","2021-5-2",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11pzvb3_2s",NA,NA,"Eddie_McKeating",NA,NA,NA,NA
+"Q116507773","Bill Johnston",NA,NA,"male",NA,NA,NA,"1983-01-01","1983-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11k56r68d0",NA,NA,"Bill_Johnston_(rugby_union,_born_1896)",NA,NA,NA,NA
 "Q11651037","Katsumi Kamata","Katsumi",NA,"male","1943-09-24","1943-9-24","Akita Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"120wd_00",NA,NA,NA,NA,NA,NA,"%E9%8E%8C%E7%94%B0%E5%8B%9D%E7%BE%8E"
 "Q11653134","Yusuke Nagae","Yūsuke",NA,"male","1985-07-19","1985-7-19",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"163430",NA,"11x7vc7kl",NA,NA,NA,NA,NA,NA,"%E9%95%B7%E6%B1%9F%E6%9C%89%E7%A5%90"
 "Q11653834","Shin Hasegawa",NA,"長谷川","male","1972-03-31","1972-3-31","Kyoto",NA,NA,NA,"Japan",NA,"prop",NA,NA,NA,NA,"12603",NA,"120ylkkv",NA,NA,"Shin_Hasegawa",NA,NA,NA,"%E9%95%B7%E8%B0%B7%E5%B7%9D%E6%85%8E"
@@ -2522,13 +2532,14 @@
 "Q11659567","Hideki Nanba","Hideki",NA,"male","1976-07-08","1976-7-8","Kanagawa Prefecture",NA,NA,NA,"Japan",NA,"centre",NA,NA,NA,NA,"13086",NA,"121pw6zm",NA,NA,"Hideki_Nanba",NA,NA,NA,"%E9%9B%A3%E6%B3%A2%E8%8B%B1%E6%A8%B9"
 "Q11660149","Hitoshi Matsumoto","ひとし","松本","male","1993-09-29","1993-9-29","Nara Prefecture",NA,NA,NA,"Japan",NA,"centre",NA,NA,NA,NA,NA,NA,"11c5b7bly1",NA,NA,NA,NA,NA,NA,"%E6%9D%BE%E6%9C%AC%E4%BB%81%E5%BF%97_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q11661098","Tatsuya Aoi","たつや",NA,"male","1932-07-03","1932-7-3","Osaka Prefecture","2009-03-22","2009-3-22",NA,"Japan; Empire of Japan",NA,NA,NA,NA,NA,NA,NA,NA,"121wc9m5",NA,NA,NA,NA,NA,NA,"%E9%9D%92%E4%BA%95%E9%81%94%E4%B9%9F"
-"Q11661635","Yusuke Aoki","Yūsuke","Aoki","male","1983-06-19","1983-6-19","Tokyo",NA,NA,NA,"Japan",NA,"lock",NA,NA,NA,NA,"15501",NA,NA,NA,NA,"Yusuke_Aoki",NA,NA,NA,"%E9%9D%92%E6%9C%A8%E4%BD%91%E8%BC%94"
+"Q11661635","Yusuke Aoki","Yūsuke","青木","male","1983-06-19","1983-6-19","Tokyo",NA,NA,NA,"Japan",NA,"lock",NA,NA,NA,NA,"15501",NA,NA,NA,NA,"Yusuke_Aoki",NA,NA,NA,"%E9%9D%92%E6%9C%A8%E4%BD%91%E8%BC%94"
 "Q116621532","Luca Giannini",NA,NA,"male","2004-06-17","2004-6-17",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11k9pcpzj9",NA,NA,"Luca_Giannini",NA,NA,NA,NA
 "Q116623549","Rob Barrie",NA,NA,"male","1912-01-30","1912-1-30",NA,"1981-07-12","1981-7-12",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rob_Barrie",NA,NA,NA,NA
 "Q116650288","Colin Stephens",NA,NA,"male","1969-11-29","1969-11-29",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Colin_Stephens",NA,NA,NA,NA
 "Q11667050","Kōshirō Shutō",NA,NA,"male","1984-05-05","1984-5-5",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"1235whcy",NA,NA,NA,NA,NA,NA,"%E9%A6%96%E8%97%A4%E7%94%B2%E5%AD%90%E9%83%8E"
 "Q116671849","Colin Rigby",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11f0s65568",NA,NA,"Colin_Rigby",NA,NA,NA,NA
 "Q116681154","David Brown","David","Brown","male",NA,NA,NA,"1983-01-01","1983-1-1",NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"David_Brown_(rugby_union)",NA,NA,NA,NA
+"Q116681221","James Cotter",NA,NA,"male",NA,NA,NA,"1991-01-01","1991-1-1",NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"James_Cotter_(rugby_union)",NA,NA,NA,NA
 "Q11668301","Takayuki Komai","たかゆき",NA,"male","1960-10-26","1960-10-26","Kyoto Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"121bwp0y",NA,NA,NA,NA,NA,NA,"%E9%A7%92%E4%BA%95%E5%AD%9D%E8%A1%8C"
 "Q116687068","Ian Kilgour",NA,NA,"male","1900-01-01","1900-1-1",NA,"1977-01-01","1977-1-1",NA,NA,NA,NA,NA,NA,NA,NA,"2743",NA,NA,NA,NA,"Ian_Kilgour",NA,NA,NA,NA
 "Q116690125","Martín Sigren",NA,NA,"male","1996-05-14","1996-5-14","Santiago",NA,NA,NA,"Chile",NA,"third line",NA,NA,NA,NA,"294262","martin-sigren","11tj43xz8d","39849",NA,"Mart%C3%ADn_Sigren","Mart%C3%ADn_Sigren",NA,"Mart%C3%ADn_Sigren","%E3%83%9E%E3%83%AB%E3%83%86%E3%82%A3%E3%83%B3%E3%83%BB%E3%82%B7%E3%82%B0%E3%83%AC%E3%83%B3"
@@ -2699,6 +2710,7 @@
 "Q117254173","Douglas Schulze",NA,"Schulze","male","1881-03-05","1881-3-5",NA,"1956-01-01","1956-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11rqv8fj88",NA,NA,"Douglas_Schulze",NA,NA,NA,NA
 "Q11727941","John McCall","John","McCall","male","1985-01-01","1985-1-1",NA,"2004-03-27","2004-3-27",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"128dggdfp",NA,NA,NA,NA,NA,NA,NA
 "Q117281938","Tom McGlashan","Tom","McGlashan","male","1925-12-29","1925-12-29",NA,"2020-09-17","2020-9-17",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11qnqgzx8g",NA,NA,"Tom_McGlashan",NA,NA,NA,NA
+"Q117286451","Jason Damm",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jason_Damm",NA,NA,NA,NA
 "Q11728721","João Teixeira","João",NA,"male",NA,NA,NA,NA,NA,NA,"Portugal",NA,NA,NA,NA,NA,NA,NA,NA,"11ksfz_l2",NA,NA,NA,NA,NA,NA,NA
 "Q11728764","Juan Diego Ormaechea","Juan","Ormaechea","male","1989-01-28","1989-1-28","Montevideo",NA,NA,NA,"Uruguay",NA,"number 8",NA,NA,NA,NA,"154671","juan-diego-ormaechea","119pfv_xp","27894",NA,"Juan_Diego_Ormaechea",NA,NA,NA,"%E3%83%95%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%87%E3%82%A3%E3%82%A8%E3%82%B4%E3%83%BB%E3%82%AA%E3%83%AB%E3%83%9E%E3%82%A8%E3%83%81%E3%82%A7%E3%82%A2"
 "Q117293873","Sammy Sampson",NA,NA,"male","1913-09-26","1913-9-26",NA,"2003-01-31","2003-1-31",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Sammy_Sampson",NA,NA,NA,NA
@@ -2783,6 +2795,7 @@
 "Q118255660","Michel Capot","Michel","Capot","male","1969-01-19","1969-1-19",NA,NA,NA,NA,"France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Michel_Capot",NA,NA,NA
 "Q118270970","Alexis Bernadet","Alexis","Bernadet","male","2001-06-02","2001-6-2",NA,NA,NA,NA,"France",NA,"scrum-half",NA,NA,NA,NA,NA,"alexis-bernadet",NA,"48448","18427",NA,"Alexis_Bernadet",NA,NA,NA
 "Q118302254","Jacques Moliner","Jacques","Moliner","male","1945-08-24","1945-8-24","Baixas","1997-12-03","1997-12-3","Perpignan","France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jacques_Moliner_(rugby,_1945-1997)",NA,NA,NA
+"Q118317314","Francis Wright",NA,NA,"male","1909-07-14","1909-7-14","Scotland","1959-03-14","1959-3-14","Edinburgh",NA,NA,NA,NA,NA,NA,NA,NA,NA,"11sss9505q",NA,NA,"Francis_Wright_(rugby_union)",NA,NA,NA,NA
 "Q1183309","Deiniol Jones",NA,"Jones","male","1977-11-18","1977-11-18","Carmarthen",NA,NA,NA,"United Kingdom","Wales","lock",NA,NA,"115","196","13515",NA,NA,NA,NA,"Deiniol_Jones",NA,"Deiniol_Jones",NA,NA
 "Q118352072","George Worboys",NA,"Worboys","male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,"11h_y0mdg7",NA,NA,"George_Worboys",NA,NA,NA,NA
 "Q118368645","Tom Carr-Smith",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,"11stpz3p1c",NA,NA,"Tom_Carr-Smith",NA,NA,NA,NA
@@ -2790,6 +2803,8 @@
 "Q118383074","Jean Chezeau","Jean",NA,"male","2001-04-07","2001-4-7",NA,NA,NA,NA,"France",NA,"fly-half",NA,NA,NA,NA,NA,"jean-chezeau",NA,"50601","19710",NA,"Jean_Chezeau",NA,NA,NA
 "Q118465900","Clément Estériola","Clément",NA,"male","1990-12-09","1990-12-9",NA,NA,NA,NA,"France",NA,"hooker",NA,NA,NA,NA,NA,"clement-esteriola",NA,"24651",NA,NA,"Cl%C3%A9ment_Est%C3%A9riola",NA,NA,NA
 "Q118486402","Charlie Hancock",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,"11v05fpdky",NA,NA,"Charlie_Hancock_(rugby_union)",NA,NA,NA,NA
+"Q118521442","Kenneth Wright",NA,NA,"male",NA,NA,NA,"1984-01-01","1984-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Kenneth_Wright_(rugby_union)",NA,NA,NA,NA
+"Q118521444","John Hunter",NA,NA,"male",NA,NA,NA,"2006-01-01","2006-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"John_Hunter_(rugby_union)",NA,NA,NA,NA
 "Q118525493","Léo Aouf","Léo",NA,"male","1997-02-25","1997-2-25",NA,NA,NA,NA,"France",NA,"prop",NA,NA,"116","182",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q118558375","Swan Cormenier","Swan",NA,"male","1996-01-18","1996-1-18","Cognac",NA,NA,NA,"France",NA,"prop",NA,NA,NA,NA,NA,"swan-cormenier",NA,"40585","18492",NA,"Swan_Cormenier",NA,"Swan_Cormenier",NA
 "Q118575003","Matías Dittus",NA,NA,"male","1993-07-16","1993-7-16",NA,NA,NA,NA,"Chile",NA,"prop",NA,NA,NA,NA,"301561","matias-dittus",NA,"30691",NA,NA,"Mat%C3%ADas_Dittus",NA,NA,"%E3%83%9E%E3%83%86%E3%82%A3%E3%82%A2%E3%82%B9%E3%83%BB%E3%83%87%E3%82%A3%E3%82%BF%E3%82%B9"
@@ -2834,6 +2849,7 @@
 "Q118948733","Constantin Turut","Constantin",NA,"male","1911-01-01","1911-1-1",NA,"1982-01-01","1982-1-1",NA,NA,NA,"scrum-half",NA,NA,NA,NA,"4545",NA,NA,NA,NA,NA,"Constantin_Turut",NA,NA,NA
 "Q118949745","Thomas Carol","Thomas","Carol","male","2001-01-17","2001-1-17",NA,NA,NA,NA,"France",NA,"winger; fullback",NA,NA,NA,NA,NA,"thomas-carol",NA,"47178",NA,"Thomas_Carol","Thomas_Carol",NA,NA,NA
 "Q118954945","Philippe Tarrusson","Philippe",NA,"male","1951-04-11","1951-4-11","Millau","2022-05-17","2022-5-17","Millau","France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Philippe_Tarrusson",NA,NA,NA
+"Q119053713","Daniel Hughes",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11sv74vwf5",NA,NA,"Daniel_Hughes_(rugby_union)",NA,NA,NA,NA
 "Q11907671","Baldiri Aleu i Torres",NA,"Aleu","male","1894-01-01","1894-1-1","Sant Boi de Llobregat","1975-06-01","1975-6-1","Sant Boi de Llobregat","Spain",NA,NA,NA,NA,NA,NA,NA,NA,"122whfz5",NA,NA,NA,NA,NA,"Baldiri_Aleu_Torres",NA
 "Q119173515","Aldo Battagion","Aldo",NA,"male","1922-11-20","1922-11-20","Bergamo","2007-03-15","2007-3-15",NA,"Italy",NA,NA,NA,NA,NA,NA,"5050",NA,NA,NA,NA,NA,NA,"Aldo_Battagion",NA,NA
 "Q119190504","Paul Auradou","Paul","Auradou","male","2001-09-13","2001-9-13",NA,NA,NA,NA,"France",NA,"fly-half; fullback",NA,NA,NA,"1.87",NA,"paul-auradou",NA,"50517",NA,NA,"Paul_Auradou",NA,NA,NA
@@ -2930,8 +2946,10 @@
 "Q121598585","Michael Naitokani",NA,NA,"male","2000-03-09","2000-3-9",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11stsbx3t4",NA,NA,"Michael_Naitokani",NA,NA,NA,NA
 "Q121601009","Jason Tomane",NA,NA,"male","1995-03-04","1995-3-4",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11t6htztq6",NA,NA,"Jason_Tomane",NA,NA,NA,"%E3%82%B8%E3%83%A3%E3%82%BD%E3%83%B3%E3%83%BB%E3%83%88%E3%83%9E%E3%83%8D"
 "Q121603356","Alin Conache",NA,NA,"male","2002-05-07","2002-5-7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11s9z4h104",NA,NA,"Alin_Conache",NA,NA,NA,"%E3%82%A2%E3%83%AA%E3%83%B3%E3%83%BB%E3%82%B3%E3%83%8A%E3%82%B1"
+"Q121610333","Gabriel Pop",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Gabriel_Pop",NA,NA,NA,NA
 "Q121614434","Thomas Crețu","Thomas","Crețu","male","2002-03-05","2002-3-5","France",NA,NA,NA,"France","Romania","prop",NA,NA,NA,NA,NA,"thomas-cretu","11sqwf1z1y","47754",NA,"Thomas_Cre%C8%9Bu","Thomas_Cre%C8%9Bu",NA,NA,NA
 "Q121653186","Jun Nagayama",NA,NA,NA,NA,NA,"Kobe",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%B0%B8%E5%B1%B1%E6%B7%B3"
+"Q121702671","Ștefan Iancu",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%C8%98tefan_Iancu_(rugby_union)",NA,NA,NA,"%E3%82%B7%E3%83%A5%E3%83%86%E3%83%95%E3%82%A1%E3%83%B3%E3%83%BB%E3%83%A4%E3%83%B3%E3%82%AF"
 "Q121744887","Ian Hyde-Lay",NA,NA,"male","1958-01-31","1958-1-31",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ian_Hyde-Lay",NA,NA,NA,NA
 "Q121840883","Brendan Lebrun","Brendan","Lebrun","male","1998-01-22","1998-1-22",NA,NA,NA,NA,"France",NA,"hooker",NA,NA,NA,NA,NA,"brendan-lebrun",NA,"45169",NA,NA,"Brendan_Lebrun",NA,NA,NA
 "Q121864799","Dave Tucker",NA,NA,"male","1962-03-30","1962-3-30",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11vcxgjkpx",NA,NA,"Dave_Tucker_(rugby_union)",NA,NA,NA,NA
@@ -3111,6 +3129,7 @@
 "Q123197640","Alun Carter",NA,NA,"male","1964-12-13","1964-12-13","Malpas","2024-08-02","2024-8-2",NA,"Wales",NA,NA,NA,NA,NA,NA,"10947",NA,"11gbjqqclp",NA,NA,"Alun_Carter",NA,NA,NA,NA
 "Q123197647","Wim Visser",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"13122",NA,NA,NA,NA,"Wim_Visser",NA,NA,NA,NA
 "Q123200105","Walter Williams",NA,NA,"male","1943-11-14","1943-11-14",NA,"1985-03-10","1985-3-10",NA,NA,NA,NA,NA,NA,NA,NA,"7447",NA,"11vc47yr31",NA,NA,"Walter_Williams_(rugby_union)",NA,NA,NA,NA
+"Q123207103","Bob Agar",NA,NA,"male",NA,NA,NA,"1998-01-01","1998-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11sv4swbfz",NA,NA,"Bob_Agar",NA,NA,NA,NA
 "Q123218921","Rory Moroney",NA,NA,"male","1957-10-03","1957-10-3",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"9721",NA,"11l5wyjkvc",NA,NA,"Rory_Moroney",NA,NA,NA,NA
 "Q123219338","Kelvin Leahy",NA,NA,"male","1965-09-01","1965-9-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11205",NA,NA,NA,NA,"Kelvin_Leahy",NA,NA,NA,NA
 "Q123219569","Ajith Abeyratne",NA,NA,"male","1947-01-01","1947-1-1",NA,"2023-10-26","2023-10-26",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11stsj06lz",NA,NA,"Ajith_Abeyratne",NA,NA,NA,NA
@@ -3552,7 +3571,7 @@
 "Q124343628","Ray Clarke",NA,NA,"male",NA,NA,NA,NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,"4004",NA,"11ld2qmcrf",NA,NA,"Ray_Clarke_(rugby_union)",NA,NA,NA,NA
 "Q124344197","Dick McGregor","Dick","McGregor","male","1874-12-31","1874-12-31",NA,"1925-11-22","1925-11-22",NA,"New Zealand",NA,NA,NA,NA,NA,NA,"1567",NA,"11ld3pklf7",NA,NA,"Dick_McGregor",NA,NA,NA,NA
 "Q124344333","Bill Reedy",NA,NA,"male","1880-06-08","1880-6-8",NA,"1939-04-01","1939-4-1",NA,"New Zealand",NA,NA,NA,NA,NA,NA,"1983",NA,NA,NA,NA,"Bill_Reedy",NA,NA,NA,NA
-"Q124344804","Dan Edwards","Daniel","Edwards","male","2003-05-07","2003-5-7","Port Talbot",NA,NA,NA,"United Kingdom","Wales","fly-half",NA,NA,NA,NA,NA,"dan-edwards",NA,"52323",NA,"Dan_Edwards_(rugby_union)","Dan_Edwards",NA,NA,NA
+"Q124344804","Dan Edwards","Daniel","Edwards","male","2003-05-07","2003-5-7","Port Talbot",NA,NA,NA,"United Kingdom","Wales","fly-half",NA,NA,NA,NA,NA,"dan-edwards",NA,"52323","18241","Dan_Edwards_(rugby_union)","Dan_Edwards",NA,NA,NA
 "Q124350772","Gelu Ignat",NA,NA,"male","1963-08-26","1963-8-26",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Gelu_Ignat",NA,NA,NA,NA
 "Q124350974","Jim Barrett",NA,NA,"male",NA,NA,NA,NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,"2427",NA,"11vs37xm9b",NA,NA,"Jim_Barrett_(rugby_union)",NA,NA,NA,NA
 "Q124352659","Roger Pickering",NA,NA,"male","1943-06-15","1943-6-15",NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"7184",NA,NA,NA,NA,"Roger_Pickering",NA,NA,NA,NA
@@ -3597,7 +3616,7 @@
 "Q124479916","Q124479916",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%BD%9C%E7%94%B0%E9%A7%BF%E4%BB%8B"
 "Q124479928","Shuntaro Kitamura",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%8C%97%E6%9D%91%E7%9E%AC%E5%A4%AA%E9%83%8E"
 "Q124479929","Kaito Sugimori","かいと","杉本","male","2001-10-17","2001-10-17","Tokyo",NA,NA,NA,"Japan",NA,"winger",NA,NA,NA,"172",NA,NA,"11vpsfsjmw","63287",NA,NA,NA,NA,NA,"%E6%9D%89%E6%9C%AC%E6%B5%B7%E6%96%97"
-"Q124479930","Soma Okazaki",NA,"Okazaki","male","2001-11-20","2001-11-20","Nagasaki Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%B2%A1%EF%A8%91%E9%A2%AF%E9%A6%AC"
+"Q124479930","Soma Okazaki",NA,"岡崎","male","2001-11-20","2001-11-20","Nagasaki Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%B2%A1%EF%A8%91%E9%A2%AF%E9%A6%AC"
 "Q124479931","Sean Vete",NA,NA,"male","2000-07-03","2000-7-3",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%B3%E3%83%BB%E3%83%B4%E3%82%A7%E3%83%BC%E3%83%86%E3%83%BC"
 "Q124479944","Q124479944",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%A3%AE%E8%84%87%E5%85%89"
 "Q124479945","Q124479945",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E8%88%B9%E6%9B%B3%E6%B6%BC%E5%A4%AA"
@@ -3672,6 +3691,7 @@
 "Q124541766","Seb Blake",NA,NA,"male","2001-10-05","2001-10-5",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11q1kwpdhq",NA,NA,"Seb_Blake",NA,NA,NA,NA
 "Q124541817","Rekeiti Ma'asi-White",NA,NA,"male","2003-02-03","2003-2-3",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rekeiti_Ma%27asi-White",NA,NA,NA,NA
 "Q124544740","Patrick Tuifua","Patrick","Tuifua","male","2004-08-25","2004-8-25","New Caledonia",NA,NA,NA,"France",NA,"flanker",NA,NA,NA,NA,NA,"patrick-tuifua",NA,"59323","12778","Patrick_Tuifua","Patrick_Tuifua",NA,NA,NA
+"Q124607379","Con Murphy",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Con_Murphy_(rugby_union,_born_1914)",NA,NA,NA,NA
 "Q124607578","James Hadfield",NA,NA,"male","1997-11-27","1997-11-27",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"James_Hadfield_(rugby_union)",NA,NA,NA,NA
 "Q124610047","Ruaraidh Hart",NA,NA,"male","2004-01-01","2004-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ruaraidh_Hart",NA,NA,NA,NA
 "Q124613640","Arthur Smeets","Arthur","Smeets","male","2002-01-23","2002-1-23","Etterbeek",NA,NA,NA,"Belgium",NA,"lock; flanker",NA,NA,NA,NA,NA,"arthur-smeets",NA,"49470",NA,NA,"Arthur_Smeets",NA,NA,NA
@@ -3868,6 +3888,7 @@
 "Q1251763","Doug Howlett","Doug",NA,"male","1978-09-21","1978-9-21","Auckland",NA,NA,NA,"New Zealand",NA,"winger","1997","2013","93","185","13436","doug-howlett",NA,"1724","871","Doug_Howlett","Doug_Howlett","Doug_Howlett","Doug_Howlett","%E3%83%80%E3%82%B0%E3%83%BB%E3%83%8F%E3%82%A6%E3%83%AC%E3%83%83%E3%83%88"
 "Q125178382","Butch Horwath",NA,NA,"male","1955-01-01","1955-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"9762",NA,NA,NA,NA,"Butch_Horwath",NA,NA,NA,NA
 "Q125179216","Steve Finkel",NA,NA,"male","1953-01-01","1953-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"9335",NA,NA,NA,NA,"Steve_Finkel",NA,NA,NA,NA
+"Q125179566","David Richard",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"David_Richard",NA,NA,NA,NA
 "Q125179670","Tim Ryan",NA,NA,"male","2003-10-29","2003-10-29",NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Tim_Ryan_(rugby_union,_born_2003)",NA,NA,NA,NA
 "Q125179681","Eric Wilson",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"117270",NA,NA,NA,NA,"Eric_Wilson_(rugby_union)",NA,NA,NA,NA
 "Q125179696","Brett Johnson",NA,"Johnson","male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"287363",NA,NA,NA,NA,"Brett_Johnson_(rugby_union)",NA,NA,NA,NA
@@ -4043,6 +4064,7 @@
 "Q125555706","Philippe Racz","Philippe",NA,"male","1965-01-01","1965-1-1",NA,"2021-01-01","2021-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Philippe_Racz",NA,NA,NA
 "Q125555721","Archie O'Leary",NA,NA,"male","1929-01-01","1929-1-1",NA,"2016-01-01","2016-1-1",NA,NA,NA,NA,NA,NA,NA,NA,"5523",NA,NA,NA,NA,"Archie_O%27Leary",NA,NA,NA,NA
 "Q125559851","Harry Rea",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"7173",NA,NA,NA,NA,"Harry_Rea",NA,NA,NA,NA
+"Q125559859","Archibald Fitzgerald Law",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Archibald_Fitzgerald_Law",NA,NA,NA,NA
 "Q125561087","Dominique Dal Pos",NA,NA,"male","1965-01-01","1965-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dominique_Dal_Pos",NA,NA,NA
 "Q125562074","Wallace McMaster","Wallace","McMaster","male","1945-01-01","1945-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Wallace_McMaster",NA,NA,NA,NA
 "Q125562525","Tom Feighery",NA,NA,"male","1945-01-01","1945-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"8502",NA,NA,NA,NA,"Tom_Feighery",NA,NA,NA,NA
@@ -4096,6 +4118,7 @@
 "Q125727744","Cyril Davies",NA,NA,"male","1936-11-21","1936-11-21",NA,"2017-07-21","2017-7-21",NA,NA,NA,NA,NA,NA,NA,NA,"6122",NA,NA,NA,NA,"Cyril_Davies_(rugby_union)",NA,NA,NA,NA
 "Q125727750","Wynne Evans",NA,NA,"male","1926-08-13","1926-8-13",NA,"1987-05-08","1987-5-8",NA,NA,NA,NA,NA,NA,NA,NA,"6201",NA,NA,NA,NA,"Wynne_Evans_(rugby_union)",NA,NA,NA,NA
 "Q125728349","Pama Petia",NA,NA,"male","1980-08-24","1980-8-24",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"14288",NA,NA,NA,NA,"Pama_Petia",NA,NA,NA,NA
+"Q125728896","Henry Walter Jack",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Henry_Walter_Jack",NA,NA,NA,NA
 "Q125738751","Rayan Rebbadj","Rayan Imtiaz Hussain",NA,"male","1999-08-15","1999-8-15","Bouches-du-Rhône",NA,NA,NA,"France",NA,"winger; centre",NA,NA,NA,NA,NA,"rayan-rebbadj",NA,"46896","18336","Rayan_Rebbadj","Rayan_Rebbadj",NA,"Rayan_Rebbadj","%E3%83%A9%E3%83%A4%E3%83%B3%E3%83%BB%E3%83%AC%E3%83%90%E3%82%B8"
 "Q125747275","Peter Rees",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"4955",NA,NA,NA,NA,"Peter_Rees_(rugby_union,_born_1925)",NA,NA,NA,NA
 "Q125747635","Brenton Helleur",NA,NA,"male","1986-02-13","1986-2-13",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"120594",NA,NA,NA,NA,"Brenton_Helleur",NA,NA,NA,NA
@@ -4122,7 +4145,7 @@
 "Q125804193","Ronan Kearney",NA,NA,"male","1957-05-03","1957-5-3",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"9386",NA,NA,NA,NA,"Ronan_Kearney",NA,NA,NA,NA
 "Q125804368","Des Scott",NA,NA,"male","1941-10-02","1941-10-2",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"7186",NA,NA,NA,NA,"Des_Scott",NA,NA,NA,NA
 "Q125807675","David Bason",NA,NA,"male","1986-08-28","1986-8-28",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"144989",NA,NA,NA,NA,"David_Bason_(rugby_union)",NA,NA,NA,NA
-"Q125809104","Hugues Baldassin",NA,NA,"male","1926-01-01","1926-1-1",NA,"2008-01-01","2008-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Hugues_Baldassin",NA,NA,NA
+"Q125809104","Hugues Baldassin",NA,NA,"male","1926-01-16","1926-1-16","Arcade","2008-01-21","2008-1-21","Saint-Honoré","France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Hugues_Baldassin",NA,NA,NA
 "Q125817618","Daryl Lilley",NA,NA,"male","1974-01-01","1974-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"126895",NA,NA,NA,NA,"Daryl_Lilley",NA,NA,NA,NA
 "Q125821336","Patrick Kavanagh","Patrick","Kavanagh","male","1929-09-02","1929-9-2",NA,"2015-08-20","2015-8-20",NA,NA,NA,NA,NA,NA,NA,NA,"5536",NA,NA,NA,NA,"Patrick_Kavanagh_(rugby_union)",NA,NA,NA,NA
 "Q125821494","Jim Buckley",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"7673",NA,NA,NA,NA,"Jim_Buckley_(rugby_union)",NA,NA,NA,NA
@@ -4561,7 +4584,7 @@
 "Q127786227","Agustín Fraga","Agustín; Emiliano","Fraga","male","2002-03-06","2002-3-6",NA,NA,NA,NA,"Argentina","Argentina",NA,NA,NA,NA,NA,NA,NA,NA,"52154",NA,"Agust%C3%ADn_Fraga",NA,NA,NA,"%E3%82%A2%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%83%BB%E3%83%95%E3%83%A9%E3%82%AC"
 "Q127786314","Tobías Wade",NA,NA,"male","1999-08-06","1999-8-6",NA,NA,NA,NA,"Argentina","Argentina",NA,NA,NA,NA,NA,NA,NA,NA,"44747",NA,"Tob%C3%ADas_Wade",NA,NA,NA,"%E3%83%88%E3%83%93%E3%82%A2%E3%82%B9%E3%83%BB%E3%83%AF%E3%83%87"
 "Q127787819","Varian Pasquet","Varian","Pasquet","male","1999-07-29","1999-7-29","Paris",NA,NA,NA,"France",NA,"centre; prop",NA,NA,"90","1.92",NA,"varian-pasquet",NA,"48847","17591","Varian_Pasquet","Varian_Pasquet",NA,NA,"%E3%83%B4%E3%82%A1%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%91%E3%82%B9%E3%82%B1"
-"Q127816307","Freddie Thomas",NA,NA,"male","2001-01-01","2001-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"freddie-thomas",NA,NA,NA,"Freddie_Thomas_(rugby_union)","Freddie_Thomas",NA,NA,NA
+"Q127816307","Freddie Thomas","Freddie","Thomas","male","2001-11-09","2001-11-9","Gloucester",NA,NA,NA,"United Kingdom","England; Wales","lock; flanker",NA,NA,NA,NA,NA,"freddie-thomas",NA,"48688","18167","Freddie_Thomas_(rugby_union)","Freddie_Thomas",NA,NA,NA
 "Q127822374","Louis Hillman-Cooper",NA,NA,"male","2001-01-01","2001-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"louis-hillman-cooper",NA,NA,NA,"Louis_Hillman-Cooper",NA,NA,NA,NA
 "Q127850179","Malacchi Esdale",NA,"Esdale","male","1995-05-04","1995-5-4","Newark",NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Malacchi_Esdale",NA,NA,"Malacchi_Esdale","%E3%83%9E%E3%83%A9%E3%82%AB%E3%82%A4%E3%83%BB%E3%82%A8%E3%82%B9%E3%83%87%E3%83%BC%E3%83%AB"
 "Q127869395","Toby Fricker",NA,NA,"male","1995-01-01","1995-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Toby_Fricker",NA,NA,NA,NA
@@ -4625,7 +4648,9 @@
 "Q12864500","Viktor Kolelishvili","Viktor",NA,"male","1989-10-09","1989-10-9","Tbilisi",NA,NA,NA,"Georgia",NA,"flanker",NA,NA,NA,NA,"16037","viktor-kolelishvili",NA,"13059",NA,"Viktor_Kolelishvili","Viktor_Kolelishvili",NA,NA,NA
 "Q12866215","Levan Tsabadze",NA,NA,"male","1973-01-08","1973-1-8","Aspindza",NA,NA,NA,"Georgia; Soviet Union",NA,"prop",NA,NA,NA,NA,"11716",NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q128694207","Pierre Rivera",NA,NA,"male","1948-01-01","1948-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Pierre_Rivera",NA,NA,NA
+"Q128694296","Junya Matsumoto",NA,NA,"male","2000-03-17","2000-3-17",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Junya_Matsumoto",NA,NA,NA,NA
 "Q128697301","Medhi Narjissi","Mehdi",NA,"male","2007-02-13","2007-2-13",NA,NA,NA,NA,"France",NA,"centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q128746166","Ignacio Facciolo",NA,NA,"male","2001-01-01","2001-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ignacio_Facciolo",NA,NA,NA,"%E3%82%A4%E3%82%B0%E3%83%8A%E3%82%B7%E3%82%AA%E3%83%BB%E3%83%95%E3%82%A1%E3%83%83%E3%83%81%E3%83%A7%E3%83%AD"
 "Q128792329","Harry Taylor",NA,NA,"male","2001-09-09","2001-9-9",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"harry-taylor",NA,NA,NA,"Harry_Taylor_(rugby_union)",NA,NA,NA,NA
 "Q128797721","Mark Catchpole",NA,NA,"male","1968-01-01","1968-1-1",NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,"11640",NA,NA,NA,NA,"Mark_Catchpole",NA,NA,NA,NA
 "Q128803866","Graham Bailey","Graham","Bailey","male",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Graham_Bailey_(rugby_union)",NA,NA,NA,NA
@@ -4687,6 +4712,7 @@
 "Q1292850","Edward Larkin","Edward","Larkin","male","1880-09-21","1880-9-21","New South Wales","1915-04-25","1915-4-25","Lone Pine","Australia",NA,"hooker",NA,NA,NA,NA,"1563",NA,NA,NA,NA,"Edward_Larkin",NA,NA,NA,NA
 "Q129355314","John Ritter",NA,"Ritter","male",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"John_Ritter_(rugby_union)",NA,NA,NA,NA
 "Q129373643","Nigel Staniforth",NA,NA,"male","1981-01-01","1981-1-1",NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Nigel_Staniforth",NA,NA,NA,NA
+"Q12940","Jacques Chaban-Delmas","Jacques; Pierre; Michel","Delmas; Chaban-Delmas","male","1915-03-07","1915-3-7","13th arrondissement of Paris","2000-11-10","2000-11-10","7th arrondissement of Paris","France","France","winger",NA,NA,NA,NA,"4778",NA,NA,NA,NA,"Jacques_Chaban-Delmas","Jacques_Chaban-Delmas","Jacques_Chaban-Delmas","Jacques_Chaban-Delmas","%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%90%E3%83%B3%EF%BC%9D%E3%83%87%E3%83%AB%E3%83%9E%E3%82%B9"
 "Q129404440","Chris Stephandellis",NA,NA,"male","1961-07-30","1961-7-30",NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Chris_Stephandellis",NA,NA,NA,NA
 "Q129449431","Peter Palmer","Peter","Palmer","male",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Peter_Palmer_(rugby_union)",NA,NA,NA,NA
 "Q129466406","Alan Kennington","Alan","Kennington","male",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Alan_Kennington_(rugby)",NA,NA,NA,NA
@@ -4859,6 +4885,7 @@
 "Q130478232","Dean Coleman",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dean_Coleman_(rugby_union)",NA,NA,NA,NA
 "Q130478498","Jeff Karika",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jeff_Karika",NA,NA,NA,NA
 "Q130479827","David Kilasonia","Davit","Kilasonia",NA,"1951-06-14","1951-6-14","Tbilisi","2018-11-24","2018-11-24",NA,"Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q130481589","Robin Davies","Robin","Davies","male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Robin_Davies_(rugby_union)",NA,NA,NA,NA
 "Q130482228","Viv Evans","Vivien","Evans","male","1919-06-14","1919-6-14",NA,"1995-04-01","1995-4-1",NA,NA,NA,NA,NA,NA,NA,NA,"5777",NA,NA,NA,NA,"Viv_Evans",NA,NA,NA,NA
 "Q130482636","Chick Jones","Graham","Jones","male","1906-11-24","1906-11-24",NA,"1987-10-23","1987-10-23",NA,NA,NA,NA,NA,NA,NA,NA,"3764",NA,NA,NA,NA,"Chick_Jones",NA,NA,NA,NA
 "Q130482755","Dallas Allardice","Dallas","Allardice","male","1919-11-04","1919-11-4",NA,"2003-06-04","2003-6-4",NA,NA,NA,NA,NA,NA,NA,NA,"5000",NA,NA,NA,NA,"Dallas_Allardice",NA,NA,NA,NA
@@ -4926,6 +4953,7 @@
 "Q130535719","John Collins",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"5526",NA,NA,NA,NA,"John_Collins_(rugby_union,_born_1928)",NA,NA,NA,NA
 "Q130535726","Ian King",NA,NA,"male","1923-05-05","1923-5-5",NA,"2002-09-09","2002-9-9",NA,NA,NA,NA,NA,NA,NA,NA,"5760",NA,NA,NA,NA,"Ian_King_(rugby_union)",NA,NA,NA,NA
 "Q130535734","John Bance",NA,NA,"male","1925-01-15","1925-1-15",NA,"2009-06-19","2009-6-19",NA,NA,NA,NA,NA,NA,NA,NA,"5784",NA,NA,NA,NA,"John_Bance",NA,NA,NA,NA
+"Q130536175","Bob Steven",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Bob_Steven",NA,NA,NA,NA
 "Q130538412","Keith Bearne",NA,NA,"male","1937-03-11","1937-3-11",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"6462",NA,NA,NA,NA,"Keith_Bearne",NA,NA,NA,NA
 "Q130538728","Ronnie Thomson",NA,NA,"male","1936-10-12","1936-10-12",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"6488",NA,NA,NA,NA,"Ronnie_Thomson",NA,NA,NA,NA
 "Q130540442","Ken Ross",NA,NA,"male","1937-03-15","1937-3-15",NA,"2021-07-25","2021-7-25",NA,NA,NA,NA,NA,NA,NA,NA,"6571",NA,NA,NA,NA,"Ken_Ross_(rugby_union)",NA,NA,NA,NA
@@ -4965,6 +4993,10 @@
 "Q130559231","Alfred Aslett",NA,NA,"male","1901-01-14","1901-1-14",NA,"1980-05-15","1980-5-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Alfred_Aslett",NA,NA,NA,NA
 "Q130559234","Hyde Burton",NA,NA,"male","1898-06-10","1898-6-10",NA,"1990-01-27","1990-1-27",NA,NA,NA,NA,NA,NA,NA,NA,"3292",NA,NA,NA,NA,"Hyde_Burton",NA,NA,NA,NA
 "Q130559311","Bevan Chantrill",NA,NA,"male","1897-02-11","1897-2-11",NA,"1988-02-25","1988-2-25",NA,NA,NA,NA,NA,NA,NA,NA,"3054",NA,NA,NA,NA,"Bevan_Chantrill",NA,NA,NA,NA
+"Q130559317","Walter Hart",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Walter_Hart_(rugby_union)",NA,NA,NA,NA
+"Q130559322","John Brash",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"John_Brash_(rugby_union)",NA,NA,NA,NA
+"Q130559324","Donald White",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Donald_White_(rugby_union)",NA,NA,NA,NA
+"Q130559325","Fred Morgan",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Fred_Morgan_(rugby_union)",NA,NA,NA,NA
 "Q130560175","Matheo Triki","Mathéo","Triki","male","2001-02-02","2001-2-2","La Garenne-Colombes",NA,NA,NA,"France","Spain","flanker",NA,NA,NA,NA,NA,"matheo-triki",NA,"52616",NA,NA,"Matheo_Triki",NA,NA,NA
 "Q130560295","Edward Stanbury",NA,NA,"male","1897-08-29","1897-8-29",NA,"1968-05-01","1968-5-1",NA,NA,NA,NA,NA,NA,NA,NA,"3302",NA,NA,NA,NA,"Edward_Stanbury",NA,NA,NA,NA
 "Q130563783","Sid Smart",NA,NA,"male","1888-02-20","1888-2-20",NA,"1969-01-25","1969-1-25",NA,NA,NA,NA,NA,NA,NA,NA,"2361",NA,NA,NA,NA,"Sid_Smart",NA,NA,NA,NA
@@ -5072,6 +5104,7 @@
 "Q130668065","David Rosser",NA,"Rosser","male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"6967",NA,NA,NA,NA,"David_Rosser",NA,NA,NA,NA
 "Q130668299","Sean Kerr","Sean","Kerr","male","2004-11-08","2004-11-8","Johannesburg",NA,NA,NA,"South Africa","England","centre",NA,NA,NA,NA,NA,"sean-kerr",NA,"60981","19060","Sean_Kerr","Sean_Kerr",NA,NA,NA
 "Q130668479","William Oldham",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"1957",NA,NA,NA,NA,"William_Oldham_(rugby_union)",NA,NA,NA,NA
+"Q130680894","Wally Bornemann",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Wally_Bornemann",NA,NA,NA,NA
 "Q130681142","Billy McCombe",NA,"McCombe","male","1949-02-06","1949-2-6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"7345",NA,NA,NA,NA,"Billy_McCombe",NA,NA,NA,NA
 "Q130682651","Jim Wheeler",NA,NA,"male","1898-12-27","1898-12-27",NA,"1973-03-22","1973-3-22",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jim_Wheeler_(rugby_union)",NA,NA,NA,NA
 "Q130682836","Reuben Owens",NA,NA,"male","1898-03-19","1898-3-19",NA,"1973-08-30","1973-8-30",NA,NA,NA,NA,NA,NA,NA,NA,"2874",NA,NA,NA,NA,"Reuben_Owens",NA,NA,NA,NA
@@ -5095,6 +5128,7 @@
 "Q130711808","William Alexander",NA,NA,"male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,"3419",NA,NA,NA,NA,"William_Alexander_(rugby_union,_born_1905)",NA,NA,NA,NA
 "Q130711816","Colin Bishop",NA,NA,"male","1903-10-05","1903-10-5",NA,"1980-03-04","1980-3-4",NA,NA,NA,NA,NA,NA,NA,NA,"3420",NA,NA,NA,NA,"Colin_Bishop",NA,NA,NA,NA
 "Q130711849","Chris Matthews",NA,NA,"male","1911-08-16","1911-8-16",NA,"1965-12-05","1965-12-5",NA,NA,NA,NA,NA,NA,NA,NA,"4706",NA,NA,NA,NA,"Chris_Matthews_(rugby_union)",NA,NA,NA,NA
+"Q130714586","Norman Brand",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Norman_Brand",NA,NA,NA,NA
 "Q130719235","Paul Traynor",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Paul_Traynor_(rugby_union)",NA,NA,NA,NA
 "Q130719563","Victor Hewitt",NA,NA,"male","1913-03-23","1913-3-23",NA,"2005-01-01","2005-1-1",NA,NA,NA,NA,NA,NA,NA,NA,"4264",NA,NA,NA,NA,"Victor_Hewitt",NA,NA,NA,NA
 "Q130719566","David O'Loughlin",NA,NA,"male","1916-07-13","1916-7-13",NA,"1971-07-17","1971-7-17",NA,NA,NA,NA,NA,NA,NA,NA,"4573",NA,NA,NA,NA,"David_O%27Loughlin_(rugby_union)",NA,NA,NA,NA
@@ -5137,10 +5171,12 @@
 "Q130742006","David Thomas",NA,NA,"male","1909-03-27","1909-3-27",NA,"1952-09-28","1952-9-28",NA,NA,NA,NA,NA,NA,NA,NA,"4467",NA,NA,NA,NA,"David_Thomas_(rugby_union)",NA,NA,NA,NA
 "Q130742023","Harry Rees",NA,NA,"male","1908-05-09","1908-5-9",NA,"1978-06-03","1978-6-3",NA,NA,NA,NA,NA,NA,NA,NA,"4475",NA,NA,NA,NA,"Harry_Rees_(rugby_union)",NA,NA,NA,NA
 "Q130742032","John Ford",NA,NA,"male","1917-10-13","1917-10-13",NA,"2000-12-15","2000-12-15",NA,NA,NA,NA,NA,NA,NA,NA,"4676",NA,NA,NA,NA,"John_Ford_(rugby_union)",NA,NA,NA,NA
+"Q130742045","Billy Williams",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Billy_Williams_(rugby_union,_born_1921)",NA,NA,NA,NA
 "Q130742063","Bill Ward",NA,NA,"male","1907-01-06","1907-1-6",NA,"1973-11-22","1973-11-22",NA,NA,NA,NA,NA,NA,NA,NA,"4168",NA,NA,NA,NA,"Bill_Ward_(rugby_union)",NA,NA,NA,NA
 "Q130742066","Peter Stone",NA,NA,"male","1924-06-20","1924-6-20",NA,"1971-07-10","1971-7-10",NA,NA,NA,NA,NA,NA,NA,NA,"5164",NA,NA,NA,NA,"Peter_Stone_(rugby_union)",NA,NA,NA,NA
 "Q130744642","Armand Balent","Armand",NA,"male","1922-01-01","1922-1-1",NA,"2007-01-01","2007-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Armand_Balent",NA,NA,NA
 "Q130746431","Aengus McMorrow","Aengus","McMorrow","male","1927-11-06","1927-11-6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"5385",NA,NA,NA,NA,"Aengus_McMorrow",NA,NA,NA,NA
+"Q130746679","Jack Molony",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jack_Molony",NA,NA,NA,NA
 "Q130746681","Niall Bailey",NA,NA,"male","1929-03-20","1929-3-20",NA,"2019-08-17","2019-8-17",NA,NA,NA,NA,NA,NA,NA,NA,"5533",NA,NA,NA,NA,"Niall_Bailey",NA,NA,NA,NA
 "Q130746764","Mick Hillary",NA,NA,"male","1925-06-06","1925-6-6",NA,"2014-02-10","2014-2-10",NA,NA,NA,NA,NA,NA,NA,NA,"5535",NA,NA,NA,NA,"Mick_Hillary",NA,NA,NA,NA
 "Q130746859","Gerry Hardy",NA,NA,"male","1937-03-29","1937-3-29",NA,"1963-10-27","1963-10-27",NA,NA,NA,NA,NA,NA,NA,NA,"6671",NA,NA,NA,NA,"Gerry_Hardy",NA,NA,NA,NA
@@ -5267,6 +5303,7 @@
 "Q130772327","Bill Collopy",NA,NA,"male","1894-05-05","1894-5-5",NA,"1972-07-15","1972-7-15",NA,NA,NA,NA,NA,NA,NA,NA,"2463",NA,NA,NA,NA,"Bill_Collopy",NA,NA,NA,NA
 "Q130772330","Dick Collopy",NA,NA,"male","1899-05-02","1899-5-2",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"2959",NA,NA,NA,NA,"Dick_Collopy",NA,NA,NA,NA
 "Q130782979","Kepu Tuipulotu",NA,"Tuipulotu","male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Kepu_Tuipulotu",NA,NA,NA,NA
+"Q130783012","Barney Hughes",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Barney_Hughes_(rugby_union)",NA,NA,NA,NA
 "Q1308117","Pierre Spies","Pierre","Spies","male","1985-06-08","1985-6-8","Pretoria",NA,NA,NA,"South Africa",NA,"number 8","2005","2017","110","196","15346","pierre-spies",NA,"2189",NA,"Pierre_Spies","Pierre_Spies","Pierre_Spies","Pierre_Spies","%E3%83%94%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%BB%E3%82%B9%E3%83%94%E3%83%BC%E3%82%B9"
 "Q130817528","Leslie Griffin",NA,NA,"male","1922-09-14","1922-9-14",NA,"2003-03-13","2003-3-13",NA,NA,NA,NA,NA,NA,NA,NA,"5155",NA,NA,NA,NA,"Leslie_Griffin",NA,NA,NA,NA
 "Q130837026","Ainsworth Barr",NA,NA,"male","1875-12-09","1875-12-9",NA,"1934-12-19","1934-12-19",NA,NA,NA,NA,NA,NA,NA,NA,"1298",NA,NA,NA,NA,"Ainsworth_Barr",NA,NA,NA,NA
@@ -5323,6 +5360,7 @@
 "Q131136965","André Lacaze",NA,NA,"male","1920-05-09","1920-5-9",NA,"2013-01-01","2013-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Andr%C3%A9_Lacaze_(rugby,_1920-2013)",NA,NA,NA
 "Q131140094","John Burkitt",NA,NA,"male","1860-07-01","1860-7-1",NA,"1929-11-23","1929-11-23",NA,NA,NA,NA,NA,NA,NA,NA,"525",NA,NA,NA,NA,"John_Burkitt",NA,NA,NA,NA
 "Q131143573","Urbain Tissinier","Urbain",NA,"male","1910-09-13","1910-9-13","Molandier","1986-10-07","1986-10-7","Tarnos","France",NA,"prop",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Urbain_Tissinier",NA,NA,NA
+"Q131144660","Thomas Johnson-Smyth",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Thomas_Johnson-Smyth",NA,NA,NA,NA
 "Q131145201","René Rangotte","René",NA,"male","1914-06-20","1914-6-20",NA,"2003-08-04","2003-8-4",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ren%C3%A9_Rangotte",NA,NA,NA
 "Q131145364","François Rivière",NA,NA,"male","1912-04-06","1912-4-6",NA,"1987-03-15","1987-3-15",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Fran%C3%A7ois_Rivi%C3%A8re_(rugby,_1912-1987)",NA,NA,NA
 "Q131145538","Thomas Stevenson",NA,NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"1151",NA,NA,NA,NA,"Thomas_Stevenson_(rugby_union)",NA,NA,NA,NA
@@ -5590,6 +5628,7 @@
 "Q131720988","Mel Dunne","Melvin; Robert","Dunne","male","1934-12-16","1934-12-16","Wellington","2002-02-26","2002-2-26",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mel_Dunne",NA,NA,NA,NA
 "Q131721386","Brian Weir",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Brian_Weir",NA,NA,NA,NA
 "Q131723645","Gray McLean","Gray","McLean","male","1934-04-22","1934-4-22",NA,"2024-07-04","2024-7-4",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Gray_McLean",NA,NA,NA,NA
+"Q131726191","Kit Nascimento","Christopher","Nascimento","male","1932-01-04","1932-1-4",NA,NA,NA,NA,"Guyana",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Kit_Nascimento",NA,NA,NA,NA
 "Q131729262","Ken Burke",NA,NA,"male",NA,NA,NA,NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ken_Burke_(rugby_union)",NA,NA,NA,NA
 "Q131730299","Cecil Davies",NA,NA,"male","1909-09-12","1909-9-12",NA,"1941-12-24","1941-12-24",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Cecil_Davies",NA,NA,NA,NA
 "Q131737546","Jamie Adamson",NA,NA,"male","1999-11-09","1999-11-9",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jamie_Adamson",NA,NA,NA,NA
@@ -5632,6 +5671,11 @@
 "Q131921988","Federico Zanandrea",NA,NA,"male","2005-01-01","2005-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Federico_Zanandrea",NA,NA,NA,NA
 "Q131922349","Alessandro Gesi",NA,NA,"male","2003-10-31","2003-10-31",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Alessandro_Gesi",NA,NA,NA,NA
 "Q131922354","Simone Brisighella",NA,NA,"male","2004-07-19","2004-7-19",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Simone_Brisighella",NA,NA,NA,NA
+"Q131990585","Q131990585",NA,NA,"male","1962-06-16","1962-6-16",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Yves_Th%C3%A9ron",NA,NA,NA
+"Q131990987","Pakaitore Turia",NA,"Turia","male","1995-01-01","1995-1-1",NA,"2025-01-25","2025-1-25","Brisbane","New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"Q132029673","Giacomo Milano",NA,NA,"male","2005-01-01","2005-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Giacomo_Milano",NA,NA,NA,NA
+"Q132029730","Alec Elliot Murray",NA,NA,"male","1923-10-08","1923-10-8",NA,"1994-08-24","1994-8-24",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Alec_Elliot_Murray",NA,NA,NA,NA
+"Q132034058","Alessandro Ortombina",NA,NA,"male","2002-01-01","2002-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q1322456","Serge Blanco","Serge","Blanco","male","1958-08-31","1958-8-31","Caracas",NA,NA,NA,"France; Venezuela",NA,"fullback","1976","1992","85","185","8997",NA,NA,NA,NA,"Serge_Blanco","Serge_Blanco","Serge_Blanco","Serge_Blanco","%E3%82%BB%E3%83%AB%E3%82%B8%E3%83%A5%E3%83%BB%E3%83%96%E3%83%A9%E3%83%B3%E3%82%B3"
 "Q1333347","Robbie Deans","Robbie",NA,"male","1959-09-04","1959-9-4","Hurunui District",NA,NA,NA,"New Zealand",NA,"fullback",NA,"1990","79","180","9701",NA,NA,NA,NA,"Robbie_Deans","Robbie_Deans","Robbie_Deans","Robbie_Deans","%E3%83%AD%E3%83%93%E3%83%BC%E3%83%BB%E3%83%87%E3%82%A3%E3%83%BC%E3%83%B3%E3%82%BA"
 "Q1340053","Pierre Failliot","Pierre","Failliot","male","1887-02-25","1887-2-25","4th arrondissement of Paris","1935-12-31","1935-12-31","Paris","France",NA,"winger",NA,NA,NA,NA,"2195",NA,NA,NA,NA,"Pierre_Failliot","Pierre_Failliot","Pierre_Failliot","Pierre_Failliot","%E3%83%94%E3%82%A8%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%95%E3%82%A1%E3%83%AA%E3%82%AA"
@@ -5683,6 +5727,7 @@
 "Q1396178","Winston Peters","Raymond; Winston","Peters","male","1945-04-11","1945-4-11","Whangārei",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Winston_Peters","Winston_Peters",NA,"Winston_Peters","%E3%82%A6%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%B3%E3%83%BB%E3%83%94%E3%83%BC%E3%82%BF%E3%83%BC%E3%82%B9"
 "Q1396331","Frédéric Michalak","Gilbert; Frédéric","Michalak","male","1982-10-16","1982-10-16","Toulouse",NA,NA,NA,"France",NA,"fly-half","2001","2018","78","183","13756","frederic-michalak",NA,"421",NA,"Fr%C3%A9d%C3%A9ric_Michalak","Fr%C3%A9d%C3%A9ric_Michalak","Fr%C3%A9d%C3%A9ric_Michalak","Fr%C3%A9d%C3%A9ric_Michalak","%E3%83%95%E3%83%AC%E3%83%87%E3%83%AA%E3%83%83%E3%82%AF%E3%83%BB%E3%83%9F%E3%82%B7%E3%83%A3%E3%83%A9%E3%82%AF"
 "Q1396771","John Smit","John","Smit","male","1978-04-03","1978-4-3","Polokwane",NA,NA,NA,"South Africa",NA,"hooker","1998","2014","116","188","13432","john-smit",NA,"1699",NA,"John_Smit","John_Smit","John_Smit","John_Smit","%E3%82%B8%E3%83%A7%E3%83%B3%E3%83%BB%E3%82%B9%E3%83%9F%E3%83%83%E3%83%88"
+"Q1398207","Penaia Ganilau","Penaia","Ganilau","male","1918-07-28","1918-7-28","Taveuni","1993-12-15","1993-12-15","Washington, D.C.","Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Penaia_Ganilau","Penaia_Ganilau","Penaia_Ganilau",NA,NA
 "Q1398346","Leigh Halfpenny","Leigh","Halfpenny","male","1988-12-22","1988-12-22","Swansea",NA,NA,NA,"United Kingdom","Wales","winger","2007",NA,"85","178","27644","leigh-halfpenny",NA,"8585","9114","Leigh_Halfpenny","Leigh_Halfpenny","Leigh_Halfpenny","Leigh_Halfpenny","%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%8F%E3%83%BC%E3%83%95%E3%83%9A%E3%83%8B%E3%83%BC"
 "Q1400144","Jonathan Sexton","Jonathan","Sexton","male","1985-07-11","1985-7-11","Dublin",NA,NA,NA,"Ireland",NA,"fly-half","2005","2023","92","188","16004","jonathan-sexton",NA,"4545","8505","Johnny_Sexton","Jonathan_Sexton","Jonathan_Sexton","Jonathan_Sexton","%E3%82%B8%E3%83%A7%E3%83%8A%E3%82%B5%E3%83%B3%E3%83%BB%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%83%B3"
 "Q1402244","Gonzalo Tiesi","Gonzalo",NA,"male","1985-04-24","1985-4-24","Buenos Aires",NA,NA,NA,"Argentina",NA,"centre","2003","2016","92","184","14677","gonzalo-tiesi",NA,"3590",NA,"Gonzalo_Tiesi","Gonzalo_Tiesi","Gonzalo_Tiesi","Gonzalo_Tiesi",NA
@@ -5866,6 +5911,7 @@
 "Q15995857","Donald Campbell","Donald","Campbell","male","1919-01-01","1919-1-1","Valparaíso","1944-09-12","1944-9-12","Berlin","Chile",NA,"centre","1937",NA,NA,NA,NA,NA,NA,NA,NA,"Donald_Campbell_(rugby_union)",NA,NA,"Donald_Campbell",NA
 "Q15996134","Gus Merry","Gus","Merry","male","1888-03-01","1888-3-1","Newport","1943-12-14","1943-12-14","Newport","United Kingdom; United Kingdom of Great Britain and Ireland",NA,"hooker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Gus_Merry",NA,NA,NA,NA
 "Q15996289","Roy Muir Kinnear","Roy",NA,"male","1904-02-03","1904-2-3","Scotland","1942-09-22","1942-9-22","Uxbridge","United Kingdom; United Kingdom of Great Britain and Ireland",NA,"centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Roy_Kinnear_(rugby)",NA,NA,NA,NA
+"Q15996372","Tank van Rooyen",NA,NA,"male","1892-12-09","1892-12-9","Steynsburg","1942-09-21","1942-9-21","Runcorn","South Africa",NA,"lock",NA,NA,NA,NA,NA,NA,NA,NA,NA,"George_van_Rooyen",NA,NA,NA,NA
 "Q15996374","Thomas Ward","Thomas","Ward","male","1874-01-01","1874-1-1","Brisbane","1942-01-01","1942-1-1",NA,"Australia",NA,"winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Thomas_Ward_(rugby_union)",NA,NA,NA,NA
 "Q15996378","Harry Wilkinson","Harry","Wilkinson","male","1864-01-01","1864-1-1","Halifax","1942-06-07","1942-6-7","Halifax","United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"898",NA,NA,NA,NA,"Harry_Wilkinson_(rugby)",NA,NA,NA,NA
 "Q15996415","Vivian Davies","Vivian","Davies","male","1899-01-22","1899-1-22",NA,"1941-12-23","1941-12-23",NA,"United Kingdom; United Kingdom of Great Britain and Ireland",NA,"fly-half",NA,NA,NA,NA,"2857",NA,NA,NA,NA,"Vivian_Davies",NA,NA,NA,NA
@@ -6697,7 +6743,7 @@
 "Q16240332","Alan Lowndes","Alan","Lowndes","male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,"winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Alan_Lowndes_(rugby)",NA,NA,NA,NA
 "Q16245731","Jack Clark","Jack","Clark","male","2000-01-01","2000-1-1","United States",NA,NA,NA,"United States",NA,"lock",NA,NA,NA,NA,"8988",NA,NA,NA,NA,"Jack_Clark_(rugby_union)",NA,NA,NA,NA
 "Q16250246","Niwa Kawha",NA,NA,"male",NA,NA,NA,NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Niwa_Kawha",NA,NA,NA,NA
-"Q16263565","Shinobu Aoki",NA,"Aoki","male","1968-01-26","1968-1-26","Saitama Prefecture",NA,NA,NA,"Japan",NA,"fly-half",NA,NA,NA,NA,"10433",NA,"1ygbcgdfk",NA,NA,"Shinobu_Aoki",NA,NA,NA,"%E9%9D%92%E6%9C%A8%E5%BF%8D"
+"Q16263565","Shinobu Aoki",NA,"青木","male","1968-01-26","1968-1-26","Saitama Prefecture",NA,NA,NA,"Japan",NA,"fly-half",NA,NA,NA,NA,"10433",NA,"1ygbcgdfk",NA,NA,"Shinobu_Aoki",NA,NA,NA,"%E9%9D%92%E6%9C%A8%E5%BF%8D"
 "Q16266566","Robert Raynal","Robert","Raynal","male","1936-07-27","1936-7-27","Perpignan","2010-10-29","2010-10-29","9th arrondissement of Marseille","France",NA,"fly-half",NA,NA,NA,NA,NA,NA,"128dgg2km",NA,NA,NA,"Robert_Raynal",NA,NA,NA
 "Q16266576","Jacques Gourgues","Jacques","Gourgues","male","1937-03-27","1937-3-27","Saint-Pierre-du-Mont","2016-05-05","2016-5-5","Mont-de-Marsan","France",NA,"fullback",NA,NA,NA,NA,NA,NA,"11_yxwchw",NA,NA,NA,"Jacques_Gourgues",NA,NA,NA
 "Q16266660","Laurent Spanghero","Laurent","Spanghero","male","1939-06-12","1939-6-12","Bram",NA,NA,NA,"France",NA,NA,NA,NA,NA,NA,NA,NA,"123dmb7zy",NA,NA,NA,"Laurent_Spanghero",NA,NA,NA
@@ -6978,6 +7024,7 @@
 "Q1720081","Scott Quinnell","Scott","Quinnell","male","1972-08-20","1972-8-20","Swansea",NA,NA,NA,"United Kingdom","Wales","flanker",NA,NA,NA,NA,"11663",NA,NA,"848","13574","Scott_Quinnell","Scott_Quinnell","Scott_Quinnell",NA,NA
 "Q17210116","Kenki Fukuoka",NA,"Fukuoka","male","1992-09-07","1992-9-7","Koga",NA,NA,NA,"Japan","Japan","winger",NA,NA,"83","175","180963","kenki-fukuoka","12hhhg_p9","28611","11918","Kenki_Fukuoka","Kenki_Fukuoka","Kenki_Fukuoka","Kenki_Fukuoka","%E7%A6%8F%E5%B2%A1%E5%A0%85%E6%A8%B9"
 "Q17211372","Masataka Mikami","まさたか","三上","male","1988-06-04","1988-6-4","Aomori",NA,NA,NA,"Japan",NA,"prop",NA,NA,NA,NA,"180964","masataka-mikami","12lnhbs4_","8682","11878","Masataka_Mikami","Masataka_Mikami",NA,NA,"%E4%B8%89%E4%B8%8A%E6%AD%A3%E8%B2%B4"
+"Q1721469","Kaino Thomsen",NA,"Thomsen","male","1991-05-12","1991-5-12","Fagaʻalu",NA,NA,NA,"Samoa","Samoa",NA,NA,NA,NA,"180",NA,NA,NA,NA,NA,"Kaino_Thomsen",NA,NA,"Kaino_Thomsen-Fuataga",NA
 "Q172174","Guy Ligier","Guy","Ligier","male","1930-07-12","1930-7-12","Vichy","2015-08-23","2015-8-23","Nevers","France",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Guy_Ligier","Guy_Ligier","Guy_Ligier","Guy_Ligier","%E3%82%AE%E3%83%BB%E3%83%AA%E3%82%B8%E3%82%A7"
 "Q17223024","Katsuhiro Matsuo","Katsuhiro","Matsuo","male","1964-01-06","1964-1-6","Miyazaki Prefecture",NA,NA,NA,"Japan",NA,"fly-half",NA,NA,NA,NA,"10040",NA,"1yglpvnz_",NA,NA,"Katsuhiro_Matsuo",NA,NA,NA,"%E6%9D%BE%E5%B0%BE%E5%8B%9D%E5%8D%9A"
 "Q17223380","Hiroshi Yamashita","Hiroshi","山下","male","1986-01-01","1986-1-1","Osaka Prefecture",NA,NA,NA,"Japan",NA,"prop",NA,NA,NA,NA,"95933","hiroshi-yamashita","12hhh8vl6","15614","401","Hiroshi_Yamashita","Hiroshi_Yamashita",NA,NA,"%E5%B1%B1%E4%B8%8B%E8%A3%95%E5%8F%B2"
@@ -7510,6 +7557,7 @@
 "Q1911291","Maurice Colclough","Maurice","Colclough","male","1953-09-02","1953-9-2","Oxford","2006-01-27","2006-1-27",NA,"United Kingdom",NA,"lock",NA,NA,NA,NA,"8823",NA,NA,NA,"19121","Maurice_Colclough","Maurice_Colclough",NA,NA,NA
 "Q1913833","Maxim Lifontov","Максим",NA,"male","1986-12-30","1986-12-30",NA,NA,NA,NA,"Kazakhstan",NA,"fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maxim_Lifontov",NA,NA,NA,"%E3%83%9E%E3%82%AD%E3%82%B7%E3%83%A0%E3%83%BB%E3%83%AA%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%83%95"
 "Q19144256","Gordon Stone","Gordon","Stone","male","1914-04-06","1914-4-6","Sydney","2015-02-07","2015-2-7","Sydney","Australia",NA,NA,NA,NA,NA,NA,"4616",NA,NA,NA,NA,"Gordon_Stone_(rugby_union)",NA,NA,NA,NA
+"Q19250264","Ewan Douglas","Ewan","Douglas","male","1922-11-14","1922-11-14","Edinburgh","1999-12-29","1999-12-29","Spain","United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,"11b74gd3p3",NA,NA,"Ewan_Douglas",NA,NA,NA,NA
 "Q19276599","Lin Colling","George","Colling","male","1946-08-27","1946-8-27","Cromwell","2003-07-13","2003-7-13","Auckland","New Zealand",NA,"scrum-half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Lin_Colling",NA,NA,NA,NA
 "Q19276611","Mick Duncan","Mick","Duncan","male","1947-08-08","1947-8-8","Waipawa",NA,NA,NA,"New Zealand",NA,"centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mick_Duncan",NA,NA,NA,NA
 "Q19276643","Arthur Jennings","Arthur","Jennings","male","1940-06-15","1940-6-15","Lautoka",NA,NA,NA,"New Zealand",NA,"lock",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Arthur_Jennings_(rugby_union)",NA,NA,NA,NA
@@ -7729,7 +7777,7 @@
 "Q19842964","Jack Cobden","Jack","Cobden","male","1989-03-26","1989-3-26","England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"294814",NA,NA,"17354",NA,"Jack_Cobden",NA,NA,NA,NA
 "Q19843241","Adam Korczyk","Adam","Korczyk","male","1995-02-24","1995-2-24","Auckland",NA,NA,NA,"New Zealand",NA,"flanker",NA,NA,NA,NA,NA,NA,"11b77wzxf2","32986",NA,"Adam_Korczyk",NA,NA,NA,NA
 "Q19843687","Jean-Baptiste Singer","Jean-Baptiste","Singer","male","1994-12-19","1994-12-19","Le Puy-en-Velay",NA,NA,NA,"France","France","lock",NA,NA,NA,NA,"177476","jean-baptiste-singer","11b7qyd0ly","28128",NA,NA,"Jean-Baptiste_Singer",NA,NA,NA
-"Q19843698","Julien Marchand","Julien","Marchand","male","1995-05-10","1995-5-10","Loures-Barousse",NA,NA,NA,"France",NA,"hooker",NA,NA,NA,NA,"243185","julien-marchand","11bc6y_v2n","33505","8608","Julien_Marchand","Julien_Marchand",NA,NA,"%E3%82%B8%E3%83%A5%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%9E%E3%83%AB%E3%82%B7%E3%83%A3%E3%83%B3"
+"Q19843698","Julien Marchand","Julien","Marchand","male","1995-05-10","1995-5-10","Loures-Barousse",NA,NA,NA,"France",NA,"hooker",NA,NA,"110","181","243185","julien-marchand","11bc6y_v2n","33505","8608","Julien_Marchand","Julien_Marchand","Julien_Marchand",NA,"%E3%82%B8%E3%83%A5%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%9E%E3%83%AB%E3%82%B7%E3%83%A3%E3%83%B3"
 "Q19843792","Quentin Lespiaucq-Brettes","Quentin","Lespiaucq","male","1995-02-16","1995-2-16","Mont-de-Marsan",NA,NA,NA,"France","France","hooker",NA,NA,NA,NA,"265573","quentin-lespiaucq","11b7q21y05","29860","18326",NA,"Quentin_Lespiaucq-Brettes",NA,"Quentin_Lespiaucq-Brettes",NA
 "Q19843878","Franco Bernini","Franco","Bernini","male","1953-11-07","1953-11-7","Parma",NA,NA,NA,"Italy",NA,NA,NA,"1981",NA,NA,NA,NA,"11b7p_t1kn",NA,NA,NA,NA,"Franco_Bernini_(rugbista)",NA,NA
 "Q19843888","Regan Sue","Ian; Errol; Regan","Sue","male","1973-02-18","1973-2-18","Raetihi",NA,NA,NA,"New Zealand",NA,NA,NA,"2009","100","184",NA,NA,"11b7pzf34b",NA,NA,NA,NA,"Regan_Sue",NA,NA
@@ -7857,7 +7905,7 @@
 "Q20038355","Hideaki Aizawa",NA,NA,"male","1995-03-23","1995-3-23","Iwate Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11b77nk_mn",NA,NA,NA,NA,NA,NA,"%E5%90%88%E6%BE%A4%E8%8B%B1%E6%97%A6"
 "Q20038695","Jiro Ishiyama",NA,NA,"male","1957-05-22","1957-5-22","Akita Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11b77pzvhr",NA,NA,NA,NA,NA,NA,"%E7%9F%B3%E5%B1%B1%E6%AC%A1%E9%83%8E"
 "Q20038778","Mikiya Inoue","Mikiya","井上","male","1986-05-09","1986-5-9","Kyoto Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11b772hgyr",NA,NA,NA,NA,NA,NA,"%E4%BA%95%E4%B8%8A%E7%9B%8A%E5%9F%BA%E4%B9%9F"
-"Q20039171","Eiji Okazaki","英二","Okazaki","male","1981-05-29","1981-5-29","Tokyo",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11b772019q",NA,NA,NA,NA,NA,NA,"%E5%B2%A1%E5%B4%8E%E8%8B%B1%E4%BA%8C"
+"Q20039171","Eiji Okazaki","英二","岡崎","male","1981-05-29","1981-5-29","Tokyo",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11b772019q",NA,NA,NA,NA,NA,NA,"%E5%B2%A1%E5%B4%8E%E8%8B%B1%E4%BA%8C"
 "Q20039231","Hiroya Okuda","Hiroya","奥田","male","1986-10-21","1986-10-21",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11b77838m2",NA,NA,NA,NA,NA,NA,"%E5%A5%A5%E7%94%B0%E6%B5%A9%E4%B9%9F"
 "Q20039300","Kōdai Ono","Kōdai","Ono","male","1991-12-25","1991-12-25","Fukushima Prefecture",NA,NA,NA,"Japan",NA,"winger",NA,NA,NA,"167",NA,NA,"11b778ntsx","42219",NA,NA,NA,NA,NA,"%E5%B0%8F%E9%87%8E%E8%88%AA%E5%A4%A7"
 "Q20039308","Masato Onodera",NA,"小野寺","male","1983-07-14","1983-7-14","Iwate Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11b76pjvq6",NA,NA,NA,NA,NA,NA,"%E5%B0%8F%E9%87%8E%E5%AF%BA%E6%94%BF%E4%BA%BA"
@@ -8279,6 +8327,7 @@
 "Q21055954","John Shaw","John","Shaw","male","1968-07-06","1968-7-6","Scotland",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,NA,NA,"11bw6299c9",NA,NA,"John_Shaw_(rugby_union)",NA,NA,NA,NA
 "Q21061663","Marcus Watson","Marcus","Watson","male","1991-06-27","1991-6-27","London Borough of Hillingdon",NA,NA,NA,"United Kingdom",NA,"winger",NA,NA,"88","1.77","105020","marcus-watson","11c3l6_xst","18412","19728","Marcus_Watson_(rugby_union)","Marcus_Watson",NA,NA,"%E3%83%9E%E3%83%BC%E3%82%AB%E3%82%B9%E3%83%BB%E3%83%AF%E3%83%88%E3%82%BD%E3%83%B3"
 "Q21062721","Pio Tuwai",NA,NA,"male","1983-08-26","1983-8-26",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Pio_Tuwai",NA,NA,NA,NA
+"Q21062772","Tim O'Brien","Tim","O'Brien","male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Tim_O%27Brien_(rugby_union)",NA,NA,NA,NA
 "Q21062851","Pat Johnson","Pat","Johnson","male","1960-03-17","1960-3-17","LaGrange",NA,NA,NA,NA,NA,"hooker",NA,NA,NA,NA,"10184",NA,NA,NA,NA,"Pat_Johnson_(rugby_union)",NA,NA,NA,NA
 "Q21063323","John Ross","John","Ross","male","1967-03-06","1967-3-6",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11btx3vbz7",NA,NA,"John_Ross_(rugby_union)",NA,NA,NA,NA
 "Q21063334","Giorgi Tetrashvili","Giorgi",NA,"male","1993-08-31","1993-8-31","Tbilisi",NA,NA,NA,"Georgia","Georgia","prop",NA,NA,NA,NA,"185207","giorgi-tetrashvili","11b7xx3_m8","26509","18679","Giorgi_Tetrashvili","Giorgi_Tetrashvili",NA,"Giorgi_Tetrashvili",NA
@@ -8520,7 +8569,7 @@
 "Q21621901","Sione Mafileo","Sione",NA,"male","1993-04-14","1993-4-14","Auckland",NA,NA,NA,"New Zealand",NA,"prop",NA,NA,NA,NA,NA,"sione-mafileo","11bw8dq85r","28865","58","Sione_Mafileo",NA,NA,NA,NA
 "Q21621908","Stephan Malan","Stephan",NA,"male","1994-09-24","1994-9-24","Pretoria",NA,NA,NA,"South Africa",NA,"flanker",NA,NA,NA,NA,NA,NA,"11bwyll2m5",NA,NA,"Stephan_Malan",NA,NA,NA,NA
 "Q21621976","Semisi Masirewa","Semisi",NA,"male","1992-06-09","1992-6-9","Taveuni",NA,NA,NA,"Fiji","Japan","winger; fullback",NA,NA,NA,NA,"194651","semisi-masirewa","11bwkbsgb4","30028","1695","Semisi_Masirewa","Semisi_Masirewa",NA,NA,"%E3%82%BB%E3%83%9F%E3%82%B7%E3%83%BB%E3%83%9E%E3%82%B7%E3%83%AC%E3%83%AF"
-"Q21621982","Eoghan Masterson","Eoghan","Masterson","male","1993-04-05","1993-4-5","Port Laoise",NA,NA,NA,"Ireland","Scotland; Ireland",NA,NA,NA,NA,NA,NA,NA,"11bw7z4k5x",NA,NA,"Eoghan_Masterson",NA,NA,NA,NA
+"Q21621982","Eoghan Masterson","Eoghan","Masterson","male","1993-04-05","1993-4-5","Port Laoise",NA,NA,NA,"Ireland","Scotland; Ireland",NA,NA,NA,NA,NA,NA,NA,"11bw7z4k5x",NA,"19993","Eoghan_Masterson",NA,NA,NA,NA
 "Q21622004","Kiran McDonald","Kiran","McDonald","male","1994-01-11","1994-1-11","Scotland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"kiran-mcdonald","11bx2l5pgs","38273",NA,"Kiran_McDonald",NA,NA,NA,NA
 "Q21622014","Sam McNicol","Sam","McNicol","male","1995-10-06","1995-10-6","Feilding",NA,NA,NA,"New Zealand",NA,"winger",NA,NA,NA,NA,NA,NA,"11bw74k9gt","33097",NA,"Sam_McNicol",NA,NA,NA,NA
 "Q21622042","Carl Meyer","Carl","Meyer","male","1991-05-27","1991-5-27","Pietermaritzburg",NA,NA,NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,"11bwn5pt3k",NA,NA,"Carl_Meyer_(rugby_union)",NA,NA,NA,NA
@@ -9088,7 +9137,7 @@
 "Q24005017","Diego Magno","Diego; Gianni","Magno","male","1989-04-27","1989-4-27","Montevideo",NA,NA,NA,"Uruguay",NA,"lock; flanker",NA,NA,NA,NA,"16038","diego-magno","11bw4xsqgd","13134",NA,"Diego_Magno","Diego_Magno_(rugby_%C3%A0_XV)",NA,NA,"%E3%83%87%E3%82%A3%E3%82%A8%E3%82%B4%E3%83%BB%E3%83%9E%E3%82%B0%E3%83%8E"
 "Q24005064","Francisco Irarrázaval","Francisco José","Irarrázaval","male","1971-01-25","1971-1-25","Mendoza",NA,NA,NA,"Argentina",NA,"flanker","1990",NA,NA,NA,"11069",NA,"11bwpbf_qm",NA,NA,"Francisco_Irarr%C3%A1zaval",NA,NA,"Francisco_Irarr%C3%A1zaval",NA
 "Q24005090","Bruce Flockhart","Bruce","Flockhart","male","1997-08-23","1997-8-23","Inverness",NA,NA,NA,"United Kingdom",NA,"number 8",NA,NA,NA,NA,NA,NA,"11bxdrtky5",NA,NA,"Bruce_Flockhart",NA,NA,NA,NA
-"Q24005097","Hajime Yamashita","Hajime","山下","male","1992-06-14","1992-6-14","Nagasaki Prefecture",NA,NA,NA,"Japan",NA,"fullback",NA,NA,NA,NA,NA,NA,"11bxfg3s6v","36374",NA,"Hajime_Yamashita",NA,NA,NA,"%E5%B1%B1%E4%B8%8B%E4%B8%80"
+"Q24005097","Hajime Yamashita","一","山下","male","1992-06-14","1992-6-14","Nagasaki Prefecture",NA,NA,NA,"Japan",NA,"fullback",NA,NA,NA,NA,NA,NA,"11bxfg3s6v","36374",NA,"Hajime_Yamashita",NA,NA,NA,"%E5%B1%B1%E4%B8%8B%E4%B8%80"
 "Q24005147","Stephen Shennan","Stephen","Shennan","male","1991-01-07","1991-1-7","Auckland Region",NA,NA,NA,"Romania; New Zealand","Romania","winger",NA,NA,NA,NA,"286303",NA,"11cjj4mbr_","29738",NA,"Stephen_Shennan_(rugby_union)",NA,NA,NA,NA
 "Q24005337","Josh Adams","Josh","Adams","male","1995-04-12","1995-4-12","Swansea",NA,NA,NA,"United Kingdom",NA,"winger","2013",NA,"94","185","212319","josh--adams-","11cmcys8kb","31000","8620","Josh_Adams_(rugby_union)","Josh_Adams","Josh_Adams_(rugbista)","Josh_Adams_(rugbista)","%E3%82%B8%E3%83%A7%E3%82%B7%E3%83%A5%E3%83%BB%E3%82%A2%E3%83%80%E3%83%A0%E3%82%B9"
 "Q24005442","Chris Long","Chris","Long","male","1985-12-15","1985-12-15",NA,NA,NA,NA,"Canada",NA,NA,NA,NA,NA,NA,NA,NA,"11cmh58tfd","22415",NA,NA,NA,NA,NA,NA
@@ -9326,7 +9375,7 @@
 "Q24870190","Kōhei Yamaguchi",NA,NA,"male","1990-08-11","1990-8-11",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11bz0yk3c5",NA,NA,NA,NA,NA,NA,"%E5%B1%B1%E5%8F%A3%E6%B5%A9%E5%B9%B3"
 "Q24870427","Sione Vatuvei","Sione",NA,"male","1983-03-14","1983-3-14","Nukuʻalofa",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,"115007",NA,"11c5wkndtv",NA,NA,"Sione_Vatuvei",NA,NA,NA,"%E3%83%90%E3%83%84%E3%83%99%E3%82%A4%E3%82%B7%E3%82%AA%E3%83%8D"
 "Q24870614","Yūki Miyamae",NA,NA,"male","1990-08-03","1990-8-3",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11bz0zw4kb",NA,NA,NA,NA,NA,NA,"%E5%AE%AE%E5%89%8D%E5%8B%87%E8%A6%8F"
-"Q24870769","Masaaki Murashita",NA,NA,"male","1987-06-23","1987-6-23",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11bz0ykz0v",NA,NA,NA,NA,NA,NA,"%E6%9D%91%E4%B8%8B%E9%9B%85%E7%AB%A0"
+"Q24870769","Masaaki Murashita",NA,"村下","male","1987-06-23","1987-6-23",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11bz0ykz0v",NA,NA,NA,NA,NA,NA,"%E6%9D%91%E4%B8%8B%E9%9B%85%E7%AB%A0"
 "Q24871086","Kazushi Hano",NA,NA,"male","1991-06-21","1991-6-21","Nagoya",NA,NA,NA,"Japan","Japan",NA,NA,NA,NA,NA,NA,NA,"11c2l941qj",NA,NA,"Kazushi_Hano",NA,NA,NA,"%E7%BE%BD%E9%87%8E%E4%B8%80%E5%BF%97"
 "Q24871134","Kōsuke Hashino",NA,NA,"male","1987-11-20","1987-11-20",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11cm0jzmn_",NA,NA,NA,NA,NA,NA,"%E6%A9%8B%E9%87%8E%E7%9A%93%E4%BB%8B"
 "Q24871271","Kengo Kitagawa",NA,NA,"male","1992-08-27","1992-8-27","Fukuoka Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11cn5pz8wg",NA,NA,NA,NA,NA,NA,"%E5%8C%97%E5%B7%9D%E8%B3%A2%E5%90%BE"
@@ -10097,7 +10146,7 @@
 "Q27916454","Ryan Lonergan","Ryan",NA,"male","1998-04-06","1998-4-6","Australia",NA,NA,NA,NA,NA,"scrum-half",NA,NA,NA,NA,NA,"ryan-lonergan","11g9fk2f0x","39828",NA,"Ryan_Lonergan",NA,NA,NA,NA
 "Q27917088","Rory Hutchinson","Rory","Hutchinson","male","1996-01-29","1996-1-29","Cambridge",NA,NA,NA,"United Kingdom","Scotland","centre; fullback",NA,NA,NA,NA,"228207","rory-hutchinson","11c5s3dlb6","32164","10990","Rory_Hutchinson","Rory_Hutchinson",NA,NA,NA
 "Q27917450","Tomohiro Kubo",NA,NA,"male","1981-05-02","1981-5-2",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11c1vjyjzh",NA,NA,NA,NA,NA,NA,"%E4%B9%85%E4%BF%9D%E7%9F%A5%E5%A4%A7"
-"Q27917458","Daiki Toyota","大樹","Toyota","male","1988-11-13","1988-11-13",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11c1vrfx0c",NA,NA,NA,NA,NA,NA,"%E8%B1%8A%E7%94%B0%E5%A4%A7%E6%A8%B9"
+"Q27917458","Daiki Toyota","大樹","豊田","male","1988-11-13","1988-11-13",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11c1vrfx0c",NA,NA,NA,NA,NA,NA,"%E8%B1%8A%E7%94%B0%E5%A4%A7%E6%A8%B9"
 "Q27917464","Shin Kanto",NA,NA,"male","1981-01-18","1981-1-18",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11c58qy44h",NA,NA,NA,NA,NA,NA,"%E8%8F%85%E8%97%A4%E5%BF%83"
 "Q27917467","Shori Koshida",NA,NA,"male","1993-12-28","1993-12-28",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11cs4l3c1w",NA,NA,NA,NA,NA,NA,"%E8%B6%8A%E7%94%B0%E5%8B%9D%E5%88%A9"
 "Q27917478","Kōhei Yoshii",NA,NA,"male","1990-04-08","1990-4-8",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11c594723v",NA,NA,NA,NA,NA,NA,"%E5%90%89%E4%BA%95%E8%80%95%E5%B9%B3"
@@ -10143,7 +10192,7 @@
 "Q27917928","Hiroshi Yamashita","ひろし",NA,"male","1984-09-15","1984-9-15",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11csp7lh73",NA,NA,NA,NA,NA,NA,"%E5%B1%B1%E4%B8%8B%E7%A5%90%E5%8F%B2"
 "Q27917936","Yoshimitsu Kawano",NA,"河野","male","1981-08-08","1981-8-8",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11c2j8wd7k",NA,NA,NA,NA,NA,NA,"%E6%B2%B3%E9%87%8E%E5%A5%BD%E5%85%89"
 "Q27917944","Terutoshi Seino",NA,"Seino","male","1982-02-13","1982-2-13",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11cspbdm8f",NA,NA,NA,NA,NA,NA,"%E6%B8%85%E9%87%8E%E8%BC%9D%E4%BF%8A"
-"Q27917952","Daniel Linde","Daniel; Makoto","Linde","male","1987-11-09","1987-11-9",NA,NA,NA,NA,"Japan; Australia",NA,"lock",NA,NA,NA,NA,NA,NA,"11b5m6z_8d","4943",NA,NA,NA,NA,NA,"%E3%83%AA%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BC%E7%9C%9F%E3%83%80%E3%83%8B%E3%82%A8%E3%83%AB"
+"Q27917952","Daniel Linde","Daniel; 真","Linde","male","1987-11-09","1987-11-9",NA,NA,NA,NA,"Japan; Australia",NA,"lock",NA,NA,NA,NA,NA,NA,"11b5m6z_8d","4943",NA,NA,NA,NA,NA,"%E3%83%AA%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BC%E7%9C%9F%E3%83%80%E3%83%8B%E3%82%A8%E3%83%AB"
 "Q27917974","Yoshiyuki Koike",NA,NA,"male","1979-03-08","1979-3-8",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11c2k6673z",NA,NA,NA,NA,NA,NA,"%E5%B0%8F%E6%B1%A0%E5%96%84%E8%A1%8C"
 "Q27917982","Tevita Lepolo","Tevita",NA,"male","1987-10-15","1987-10-15","South Auckland",NA,NA,NA,"Japan; New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,"11c5rmh8n3",NA,NA,NA,NA,NA,NA,"%E3%83%AC%E3%83%9D%E3%83%AD%E3%83%86%E3%83%93%E3%82%BF"
 "Q27918007","Koichi Kubo",NA,NA,"male","1976-01-13","1976-1-13","Saitama Prefecture",NA,NA,NA,"Japan",NA,"number 8",NA,NA,NA,NA,"13517",NA,"11c2kc7myr",NA,NA,"Koichi_Kubo",NA,NA,NA,"%E4%B9%85%E4%BF%9D%E6%99%83%E4%B8%80"
@@ -10462,7 +10511,7 @@
 "Q2837676","Allan Bateman","Allan","Bateman","male","1965-03-06","1965-3-6","Caerau",NA,NA,NA,"United Kingdom","Wales","centre",NA,NA,NA,NA,"10706",NA,NA,"4227","13584","Allan_Bateman","Allan_Bateman","Allan_Bateman",NA,NA
 "Q2837717","Allan Hewson","Allan","Hewson","male","1954-06-06","1954-6-6","Lower Hutt",NA,NA,NA,"New Zealand",NA,"fullback","1973",NA,NA,NA,"9081",NA,NA,NA,NA,"Allan_Hewson","Allan_Hewson",NA,"Allan_Hewson",NA
 "Q2837722","Allan Jacobsen","Allan","Jacobsen","male","1978-09-22","1978-9-22","Edinburgh",NA,NA,NA,"United Kingdom","Scotland","prop",NA,"2013","117",NA,"13968",NA,NA,"632",NA,"Allan_Jacobsen_(rugby_union)","Allan_Jacobsen","Allan_Jacobsen",NA,NA
-"Q2837744","Allan Martin","Allan","Martin","male","1948-12-11","1948-12-11","Port Talbot",NA,NA,NA,"United Kingdom","Wales","lock",NA,NA,NA,NA,"8128",NA,NA,NA,NA,"Allan_Martin_(rugby_union)","Allan_Martin","Allan_Martin",NA,NA
+"Q2837744","Allan Martin","Allan","Martin","male","1948-12-11","1948-12-11","Port Talbot",NA,NA,NA,"United Kingdom","Wales","lock",NA,NA,NA,NA,"8128",NA,NA,NA,"19983","Allan_Martin_(rugby_union)","Allan_Martin","Allan_Martin",NA,NA
 "Q2837760","Allan Roy","Allan","Roy","male","1911-05-13","1911-5-13","Merseyside","2011-04-16","2011-4-16","Southport","United Kingdom; United Kingdom of Great Britain and Ireland",NA,"lock",NA,NA,NA,NA,"4568",NA,"123197h9",NA,NA,"Allan_Roy","Allan_Roy",NA,NA,NA
 "Q28377787","Adrian Vermeulen","Adrian","Vermeulen","male","1990-10-17","1990-10-17","Johannesburg",NA,NA,NA,NA,NA,"centre",NA,NA,NA,NA,NA,NA,"11c30q4x_y",NA,NA,NA,NA,NA,NA,NA
 "Q28382488","William McKenzie","William","McKenzie","male","1871-06-12","1871-6-12","Greytown","1943-07-01","1943-7-1","Caulfield","New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,"11c6cb7vnc",NA,NA,"William_McKenzie_(rugby_union)",NA,NA,NA,NA
@@ -10856,7 +10905,7 @@
 "Q28733608","Neil Betts","Neil","Betts","male","1926-04-13","1926-4-13","Brisbane","2017-02-04","2017-2-4","Brisbane","Australia",NA,NA,NA,NA,NA,"180","5431",NA,"11c37t55hz",NA,NA,"Neil_Betts",NA,NA,NA,NA
 "Q28740707","Henry Kiernan","Henry","Kiernan","male","1876-07-24","1876-7-24","Whanganui","1947-01-15","1947-1-15","Ōtāhuhu","New Zealand",NA,NA,NA,NA,NA,NA,"1562",NA,"11g6j9slxg",NA,NA,"Henry_Kiernan",NA,NA,NA,NA
 "Q28741188","Kalausa Leha",NA,NA,"male","1994-03-26","1994-3-26","Auckland",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,"11c380y_fj",NA,NA,"Kalausa_Leha",NA,NA,NA,NA
-"Q28741342","Ben White","Ben","White","male","1998-05-27","1998-5-27","Stoke-on-Trent",NA,NA,NA,"United Kingdom","Scotland","scrum-half",NA,NA,NA,NA,"278697","ben-white","11g6j968s5","40606","8579","Ben_White_(rugby_union,_born_1998)","Ben_White_(rugby_%C3%A0_XV)",NA,NA,"%E3%83%99%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
+"Q28741342","Ben White","Ben","White","male","1998-05-27","1998-5-27","Stoke-on-Trent",NA,NA,NA,"United Kingdom","Scotland","scrum-half",NA,NA,"80","175","278697","ben-white","11g6j968s5","40606","8579","Ben_White_(rugby_union,_born_1998)","Ben_White_(rugby_%C3%A0_XV)","Ben_White_(rugbista)",NA,"%E3%83%99%E3%83%B3%E3%83%BB%E3%83%9B%E3%83%AF%E3%82%A4%E3%83%88_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q28741345","Bob Wilson","Bob","Wilson","male","1926-07-01","1926-7-1","Galashiels","1985-03-29","1985-3-29","Edinburgh",NA,NA,"prop",NA,NA,NA,NA,NA,NA,"11c6lvwlkq",NA,NA,"Bob_Wilson_(rugby_union)",NA,NA,NA,NA
 "Q28741444","Shaun MacDonald","Shaun","MacDonald","male","1994-08-23","1994-8-23","Stirling",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11g6j3rvk_",NA,NA,NA,NA,NA,NA,NA
 "Q2874592","Avril Malan",NA,NA,"male","1937-04-09","1937-4-9","Pretoria",NA,NA,NA,"South Africa",NA,"lock",NA,NA,NA,NA,"6518",NA,"121xqlf8",NA,NA,"Avril_Malan","Avril_Malan",NA,NA,NA
@@ -11969,6 +12018,7 @@
 "Q3060138","Eugène Ribère","Eugène",NA,"male","1902-06-14","1902-6-14","Thuir","1988-03-21","1988-3-21","Bordeaux","France",NA,"flanker",NA,NA,NA,NA,"3075",NA,"121hxrfz",NA,NA,NA,"Eug%C3%A8ne_Rib%C3%A8re",NA,NA,NA
 "Q3060177","Eugène Soulié","Eugène",NA,"male","1898-07-01","1898-7-1","Paris","1927-06-21","1927-6-21","Paris","France",NA,"prop",NA,NA,NA,NA,"2620",NA,"12384nwm",NA,NA,NA,"Eug%C3%A8ne_Souli%C3%A9",NA,NA,NA
 "Q30603052","John Anderson","John; W.","Anderson","male","1849-05-09","1849-5-9","Edinburgh","1934-05-26","1934-5-26","Christchurch","New Zealand",NA,NA,NA,NA,NA,NA,"271",NA,"11dxpd_vxv",NA,NA,"John_Anderson_(New_Zealand_engineer)",NA,NA,NA,NA
+"Q30603063","Charles Cathcart","Charles","Cathcart","male","1853-03-16","1853-3-16","Edinburgh","1932-02-22","1932-2-22","Edinburgh",NA,NA,NA,NA,NA,NA,NA,"277",NA,"11g6_ts19z",NA,NA,"Charles_Walker_Cathcart",NA,NA,NA,NA
 "Q30603825","William Elliot","William","Elliot","male","1867-05-09","1867-5-9","Auckland","1958-04-16","1958-4-16",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,"11c75_v83l",NA,NA,"William_Elliot_(rugby_union)",NA,NA,NA,NA
 "Q3060976","Eusebio Guiñazú","Eusebio",NA,"male","1982-01-15","1982-1-15","Mendoza",NA,NA,NA,"Argentina",NA,"hooker","2000",NA,"114","181","14165","eusebio-guinazu",NA,"1687",NA,"Eusebio_Gui%C3%B1az%C3%BA","Eusebio_Gui%C3%B1az%C3%BA","Eusebio_Gui%C3%B1az%C3%BA","Eusebio_Gui%C3%B1az%C3%BA",NA
 "Q30610270","Alexander Foster","Alexander","Foster","male","1890-06-22","1890-6-22","Derry","1972-08-24","1972-8-24","Bantry",NA,NA,"centre",NA,NA,NA,NA,"2087",NA,"11g8crp381",NA,NA,"Alexander_Foster_(rugby_union)",NA,NA,NA,NA
@@ -12447,7 +12497,7 @@
 "Q3098305","Gareth Prothero","John; Gareth","Prothero","male","1941-12-07","1941-12-7","Wales",NA,NA,NA,"United Kingdom","Wales","flanker",NA,NA,NA,NA,"6877",NA,NA,NA,NA,"Gareth_Prothero","Gareth_Prothero",NA,NA,NA
 "Q3098306","Gareth Rees","Lloyd; Gareth","Rees","male","1967-06-30","1967-6-30","Duncan",NA,NA,NA,"Canada",NA,"fly-half; fullback","1985","2000","103","182","10137",NA,NA,"4156",NA,"Gareth_Rees_(rugby_union)","Gareth_Rees","Gareth_Rees","Gareth_Rees",NA
 "Q3098309","Gareth Roberts","Gareth","Roberts","male","1959-01-15","1959-1-15","Swansea",NA,NA,NA,"United Kingdom","Wales","number 8","1978",NA,NA,NA,"9560",NA,NA,"9367","13621","Gareth_Roberts_(rugby_union)","Gareth_Roberts_(rugby_%C3%A0_XV)",NA,"Gareth_Roberts",NA
-"Q3098316","Gareth Powell Williams","Gareth","Williams","male","1954-11-06","1954-11-6","Wales","2018-05-13","2018-5-13","Wales","United Kingdom",NA,"number 8",NA,NA,NA,NA,"9162",NA,NA,NA,NA,"Gareth_Williams_(rugby_union,_born_1954)","Gareth_Williams_(rugby_%C3%A0_XV,_1954)",NA,NA,NA
+"Q3098316","Gareth Powell Williams","Gareth","Williams","male","1954-11-06","1954-11-6","Wales","2018-05-13","2018-5-13","Wales","United Kingdom",NA,"number 8",NA,NA,NA,NA,"9162",NA,NA,NA,"19971","Gareth_Williams_(rugby_union,_born_1954)","Gareth_Williams_(rugby_%C3%A0_XV,_1954)",NA,NA,NA
 "Q3098336","Garfield Owen","Garfield","Owen","male","1932-03-20","1932-3-20","Llanharan","2019-01-17","2019-1-17",NA,"United Kingdom","Wales","fullback",NA,NA,NA,NA,"5909",NA,NA,NA,NA,"Garfield_Owen","Garfield_Owen",NA,NA,NA
 "Q3098384","Garin Jenkins","Garin","Jenkins","male","1966-08-18","1966-8-18","Ynysybwl",NA,NA,NA,"United Kingdom","Wales","hooker",NA,"2001","106","178","10694",NA,NA,"4239","13577","Garin_Jenkins","Garin_Jenkins","Garin_Jenkins",NA,NA
 "Q3098459","Garrick Morgan",NA,"Morgan","male","1970-01-25","1970-1-25","Sydney",NA,NA,NA,"Australia",NA,"lock",NA,NA,NA,NA,"11245",NA,NA,"144",NA,"Garrick_Morgan","Garrick_Morgan",NA,NA,NA
@@ -12480,7 +12530,7 @@
 "Q3101048","Geoff Gray","Geoff","Gray","male","1909-07-28","1909-7-28","Hastings","1989-08-04","1989-8-4",NA,"South Africa",NA,"centre",NA,NA,NA,NA,"3909",NA,"121w1hhq",NA,NA,NA,"Geoff_Gray",NA,NA,NA
 "Q3101049","Geoff Evans","Geoff","Evans","male","1942-05-01","1942-5-1","Llanelli",NA,NA,NA,"United Kingdom","Wales","lock",NA,NA,NA,NA,"7602",NA,NA,NA,NA,"Geoff_Evans_(rugby_union,_born_1942)","Geoff_Evans_(rugby_%C3%A0_XV,_1942)",NA,NA,NA
 "Q3101054","Geoff Pimblett","Geoff","Pimblett","male","1944-05-11","1944-5-11","St Helens","2018-02-19","2018-2-19",NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Geoff_Pimblett","Geoff_Pimblett",NA,NA,NA
-"Q3101064","Geoff Wheel","Geoff","Wheeler","male","1951-06-30","1951-6-30","Swansea","2024-12-26","2024-12-26",NA,"United Kingdom","Wales","lock",NA,NA,NA,NA,"8174",NA,NA,NA,NA,"Geoff_Wheel","Geoff_Wheel",NA,"Geoff_Wheel",NA
+"Q3101064","Geoff Wheel","Geoff","Wheeler","male","1951-06-30","1951-6-30","Swansea","2024-12-26","2024-12-26",NA,"United Kingdom","Wales","lock",NA,NA,NA,NA,"8174",NA,NA,NA,"19972","Geoff_Wheel","Geoff_Wheel",NA,"Geoff_Wheel",NA
 "Q3101065","Geoffrey Abadie","Geoffrey","Abadie","male","1965-04-01","1965-4-1","Toulouse","2015-06-06","2015-6-6","Issy-les-Moulineaux","France",NA,"winger",NA,NA,NA,NA,NA,NA,"120hnn5z","17695",NA,NA,"Geofrey_Abadie",NA,NA,NA
 "Q3101068","Geoffrey Conway","Geoffrey","Conway","male","1897-11-15","1897-11-15","Cardiff","2000-01-01","2000-1-1",NA,"United Kingdom","Wales","number 8",NA,NA,NA,NA,"2613",NA,"121j1mth",NA,NA,NA,"Geoffrey_Conway",NA,NA,NA
 "Q3101074","Geoffrey Doumayrou","Geoffrey","Doumayrou","male","1989-09-16","1989-9-16","Montpellier",NA,NA,NA,"France",NA,"centre",NA,NA,"92","186","101510","geoffrey-doumayrou",NA,"14719","10633","Geoffrey_Doumayrou","Geoffrey_Doumayrou","Geoffrey_Doumayrou",NA,NA
@@ -12700,7 +12750,7 @@
 "Q3124317","Gérard Sutra","Gérard",NA,"male","1946-03-21","1946-3-21","Narbonne",NA,NA,NA,"France",NA,"scrum-half",NA,NA,NA,NA,"7254",NA,"1237_st1",NA,NA,NA,"G%C3%A9rard_Sutra",NA,NA,NA
 "Q3124359","Gérard Viard","Gérard","Viard","male","1945-05-19","1945-5-19",NA,NA,NA,NA,"France",NA,"flanker",NA,NA,NA,NA,"7505",NA,"1237d7t4",NA,NA,NA,"G%C3%A9rard_Viard",NA,NA,NA
 "Q3124678","H.G. Wells","Herbert","Wells","male","1871-05-01","1871-5-1","Agra","1941-05-15","1941-5-15","Hendon",NA,NA,NA,NA,NA,NA,NA,"971",NA,"121qmx7w",NA,NA,NA,"H.G._Wells_(rugby_%C3%A0_XV)",NA,NA,NA
-"Q3125806","Hajime Kiso","Hajime",NA,"male","1978-11-07","1978-11-7","Osaka",NA,NA,NA,"Japan",NA,"number 8",NA,NA,NA,NA,"13606",NA,NA,"1789",NA,"Hajime_Kiso","Hajime_Kiso",NA,NA,"%E6%9C%A8%E6%9B%BD%E4%B8%80"
+"Q3125806","Hajime Kiso","一",NA,"male","1978-11-07","1978-11-7","Osaka",NA,NA,NA,"Japan",NA,"number 8",NA,NA,NA,NA,"13606",NA,NA,"1789",NA,"Hajime_Kiso","Hajime_Kiso",NA,NA,"%E6%9C%A8%E6%9B%BD%E4%B8%80"
 "Q3125858","Hakkies Husselman",NA,NA,"male","1972-11-03","1972-11-3",NA,NA,NA,NA,"Namibia",NA,"scrum-half",NA,NA,NA,NA,"11540",NA,NA,"2825",NA,"Hakkies_Husselman","Hakkies_Husselman",NA,NA,NA
 "Q3125889","Hal Luscombe","Hal",NA,"male","1981-02-23","1981-2-23","Laingsburg",NA,NA,NA,"South Africa",NA,"centre",NA,NA,"93","190","14326",NA,NA,"939","13950","Hal_Luscombe","Hal_Luscombe","Hal_Luscombe",NA,NA
 "Q3126415","Hamid Arif","Hamid","Arif","male","1977-09-13","1977-9-13","Pont-à-Mousson",NA,NA,NA,"Morocco",NA,"flanker",NA,NA,NA,NA,NA,NA,"121_bv1b","711",NA,NA,"Hamid_Arif",NA,NA,NA
@@ -14021,6 +14071,7 @@
 "Q3304186","Mefin Davies","Mefin","Davies","male","1972-09-02","1972-9-2","Carmarthenshire",NA,NA,NA,"United Kingdom","Wales","prop",NA,"2012","96","178","13810",NA,NA,"542","13565","Mefin_Davies","Mefin_Davies","Mefin_Davies",NA,NA
 "Q33044015","Jamal Ford-Robinson",NA,NA,"male","1993-09-11","1993-9-11","Bristol",NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,"293864","jamal-ford-robinson","11d_9hlwpp","32681",NA,"Jamal_Ford-Robinson",NA,NA,NA,NA
 "Q33044058","Lewis Ludlam","Lewis","Ludlam","male","1995-12-08","1995-12-8","Ipswich",NA,NA,NA,"United Kingdom","England","flanker",NA,NA,"101","189","265391","lewis-ludlam","11fxb8c3cf","34987","8488","Lewis_Ludlam","Lewis_Ludlam","Lewis_Ludlam",NA,"%E3%83%AB%E3%82%A4%E3%82%B9%E3%83%BB%E3%83%A9%E3%83%89%E3%83%A9%E3%83%A0"
+"Q33044209","Tony Ridnell","Tony",NA,"male","1961-01-01","1961-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11g8xk66l2",NA,NA,"Tony_Ridnell",NA,NA,NA,NA
 "Q3304450","Mehadji Tidjini",NA,NA,"male","1984-08-13","1984-8-13","Oran",NA,NA,NA,"France",NA,"centre",NA,NA,NA,NA,NA,"mehadji-tidjini","122dkt6c","3347",NA,NA,"Mehadji_Tidjini",NA,NA,NA
 "Q33044569","Markus Vanzati","Markus",NA,"male","1994-09-21","1994-9-21","Järvsö",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11d_d2ft6v",NA,NA,"Markus_Vanzati",NA,NA,NA,NA
 "Q33044570","Kirwan Sanday","Kirwan","Sanday","male","1991-02-13","1991-2-13","Canberra",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11g8y9lyf_",NA,NA,"Kirwan_Sanday",NA,NA,NA,NA
@@ -14131,6 +14182,7 @@
 "Q3311853","Quinton Gerber","Mickey","Gerber","male","1935-10-12","1935-10-12","Gqeberha","2005-10-07","2005-10-7","Johannesburg","South Africa",NA,"fullback",NA,NA,NA,NA,"6279",NA,"1229bnjx",NA,NA,NA,"Mickey_Gerber",NA,NA,NA
 "Q3311889","Michael Skinner","Michael","Skinner","male","1958-11-26","1958-11-26","Newcastle upon Tyne",NA,NA,NA,"United Kingdom",NA,"flanker","1978","1994",NA,NA,"10256",NA,NA,NA,NA,"Michael_Skinner_(rugby_union)","Mickey_Skinner","Mickey_Skinner","Michael_Skinner_(rugbista)",NA
 "Q33124728","Mitch Eadie","Mitch","Eadie","male","1992-07-06","1992-7-6",NA,NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,NA,"mitch-eadie","11d_tfjrp9","22531",NA,"Mitch_Eadie",NA,NA,NA,NA
+"Q33126490","Gerald Bosch","Gerald","Bosch","male","1949-05-12","1949-5-12","Vereeniging",NA,NA,NA,"South Africa",NA,"fly-half","1968",NA,NA,NA,NA,NA,"11g8_2gynm",NA,NA,"Gerald_Bosch",NA,NA,"Gerald_Bosch",NA
 "Q3312949","Miguel Avramovic","Miguel","Avramović","male","1981-07-18","1981-7-18","Buenos Aires",NA,NA,NA,"Argentina",NA,"centre",NA,NA,NA,NA,"14691","miguel-avramovic",NA,"4409",NA,"Miguel_Avramovic","Miguel_Avramovic",NA,"Miguel_Avramovic",NA
 "Q33129551","Faalelei Sione",NA,NA,"male","1996-02-19","1996-2-19","Canberra",NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,NA,NA,"11g9ddk8km",NA,NA,"Faalelei_Sione",NA,NA,NA,NA
 "Q33129561","Rob Valetini","Rob",NA,"male","1998-09-03","1998-9-3","Melbourne",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,"293862","rob-valetini","11fxvffgzb","39199","523","Rob_Valetini","Rob_Valetini",NA,NA,"%E3%83%AD%E3%83%96%E3%83%BB%E3%83%B4%E3%82%A1%E3%83%AC%E3%83%86%E3%82%A3%E3%83%8B"
@@ -14456,7 +14508,7 @@
 "Q3371870","Paul Moriarty","Paul","Moriarty","male","1964-07-16","1964-7-16","Swansea",NA,NA,NA,"United Kingdom","Wales","flanker","1983",NA,NA,NA,"10000",NA,NA,"9369","13619","Paul_Moriarty_(rugby)","Paul_Moriarty",NA,"Paul_Moriarty",NA
 "Q3372031","Paul Porical","Paul","Porical","male","1911-10-23","1911-10-23","Pézilla-la-Rivière","1977-08-10","1977-8-10","Pézilla-la-Rivière","France",NA,"fullback",NA,NA,NA,NA,NA,NA,"121_5n7s",NA,NA,NA,"Paul_Porical",NA,NA,NA
 "Q3372090","Paul Rendall","Paul","Rendall","male","1954-02-18","1954-2-18","London","2023-06-12","2023-6-12",NA,"United Kingdom",NA,"prop",NA,"1991","107","180","9320",NA,NA,NA,NA,"Paul_Rendall","Paul_Rendall","Paul_Rendall","Paul_Rendall",NA
-"Q3372102","Paul Ringer","Paul","Ringer","male","1948-01-28","1948-1-28","Leeds",NA,NA,NA,"United Kingdom",NA,"flanker",NA,NA,NA,NA,"8899",NA,NA,NA,NA,"Paul_Ringer","Paul_Ringer",NA,NA,NA
+"Q3372102","Paul Ringer","Paul","Ringer","male","1948-01-28","1948-1-28","Leeds",NA,NA,NA,"United Kingdom",NA,"flanker",NA,NA,NA,NA,"8899",NA,NA,NA,"19987","Paul_Ringer","Paul_Ringer",NA,NA,NA
 "Q3372131","Paul Roos","Paul","Roos","male","1880-10-30","1880-10-30","Stellenbosch","1948-09-22","1948-9-22","Stellenbosch","South Africa",NA,NA,NA,NA,NA,NA,"1614",NA,NA,NA,NA,"Paul_Roos_(rugby_union)","Paul_Roos",NA,NA,NA
 "Q3372148","Paul Sagot","Paul","Sagot","male","1885-01-15","1885-1-15","Dijon","1959-06-27","1959-6-27","Le Havre","France",NA,"centre",NA,NA,NA,NA,"1783",NA,"122np618",NA,NA,NA,"Paul_Sagot",NA,NA,NA
 "Q3372289","Paul Thorburn","Paul","Thorburn","male","1962-11-24","1962-11-24","Mönchengladbach",NA,NA,NA,"United Kingdom","Wales","fullback","1982","1991","90","183","9859",NA,NA,"9373","13606","Paul_Thorburn","Paul_Thorburn","Paul_Thorburn","Paul_Thorburn",NA
@@ -14494,7 +14546,7 @@
 "Q3376668","Peter Jackson","Peter","Jackson","male","1930-09-22","1930-9-22","Birmingham","2004-03-22","2004-3-22","Solihull","United Kingdom",NA,"winger",NA,NA,NA,NA,"6001",NA,NA,NA,NA,"Peter_Jackson_(rugby_union)","Peter_Jackson_(rugby_%C3%A0_XV)",NA,NA,NA
 "Q3376673","Peter Johnson","Peter","Johnson","male","1936-09-13","1936-9-13","Sydney","2016-07-12","2016-7-12","Sydney","Australia",NA,"hooker",NA,NA,NA,NA,"6398",NA,NA,NA,NA,"Peter_Johnson_(rugby_union)","Peter_Johnson",NA,NA,NA
 "Q3376694","Peter Kimlin","Peter","Kimlin","male","1985-07-11","1985-7-11","Canberra",NA,NA,NA,"Australia",NA,"flanker",NA,NA,NA,NA,"15947","peter-kimlin",NA,"8392",NA,"Peter_Kimlin","Peter_Kimlin",NA,NA,"%E3%83%94%E3%83%BC%E3%82%BF%E3%83%BC%E3%83%BB%E3%82%AD%E3%83%A0%E3%83%AA%E3%83%B3"
-"Q3376765","Peter Morgan","Peter","Morgan","male","1959-01-01","1959-1-1","Broad Haven","2024-07-28","2024-7-28","Little Haven","United Kingdom","Wales","centre",NA,NA,NA,NA,"8897",NA,NA,NA,NA,"Peter_Morgan_(rugby_union)","Peter_Morgan_(rugby_%C3%A0_XV)",NA,NA,NA
+"Q3376765","Peter Morgan","Peter","Morgan","male","1959-01-01","1959-1-1","Broad Haven","2024-07-28","2024-7-28","Little Haven","United Kingdom","Wales","centre",NA,NA,NA,NA,"8897",NA,NA,NA,"19984","Peter_Morgan_(rugby_union)","Peter_Morgan_(rugby_%C3%A0_XV)",NA,NA,NA
 "Q3376820","Peter Poulos","Peter",NA,"male","1977-07-07","1977-7-7","Samoa",NA,NA,NA,"Samoa",NA,"flanker",NA,NA,NA,NA,"14348",NA,"121qmxfx","2686",NA,"Peter_Poulos","Peter_Poulos",NA,NA,NA
 "Q3376849","Peter Richards","Peter","Richards","male","1978-03-10","1978-3-10","Portsmouth",NA,NA,NA,"United Kingdom",NA,"scrum-half",NA,"2010","94","175","15093",NA,NA,"1061",NA,"Peter_Richards","Peter_Richards","Peter_Richards",NA,NA
 "Q3376855","Peter Rogers","Peter","Rogers","male","1969-01-20","1969-1-20","Maidstone",NA,NA,NA,"United Kingdom",NA,"prop",NA,NA,NA,NA,"13013",NA,NA,"4236","13578","Peter_Rogers_(rugby_union)","Peter_Rogers",NA,NA,NA
@@ -14935,11 +14987,13 @@
 "Q3443975","William Rogers","William","Rogers","male","1902-02-06","1902-2-6","Ventura","1987-11-13","1987-11-13",NA,"United States",NA,NA,NA,NA,NA,NA,"3128",NA,NA,NA,NA,"William_Rogers_(rugby_union)",NA,NA,NA,NA
 "Q3444910","Paul Vidrașcu","Paul","Vidrașcu","male","1901-01-01","1901-1-1",NA,"a14c7ce272bca7500febedfd4e708301",NA,NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,"112yfnz2v",NA,NA,"Paul_Vidra%C8%99cu",NA,NA,NA,NA
 "Q3444926","Anastasie Tănăsescu",NA,"Tănăsescu","male","1892-01-01","1892-1-1",NA,"2a13fa44f5bd403314463ac7aa11b06b",NA,NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,"122np8x9",NA,NA,"Atanasie_T%C4%83n%C4%83sescu",NA,NA,NA,NA
+"Q3444952","Paul Nedelcovici","Paul","Nedelcovici","male","1899-01-01","1899-1-1","Bucharest","1948-06-22","1948-6-22","Romania","Romania",NA,NA,NA,NA,NA,NA,NA,NA,"1230jypt",NA,NA,"Paul_Nedelcovici",NA,NA,NA,NA
 "Q3444975","Iosif Nemeș","Iosif","Nemeș","male","1903-01-01","1903-1-1",NA,"54c89e5e1f2b7ca101c20b6ab1d07a64",NA,NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,"112yfy2y2",NA,NA,"Iosif_Nemes",NA,NA,NA,NA
 "Q3444986","Dumitru Volvoreanu","Dumitru","Volvoreanu","male","1898-01-01","1898-1-1",NA,"e79d92c4196bee4677eab885953be86d",NA,NA,"Romania",NA,NA,NA,NA,NA,NA,"3118",NA,NA,NA,NA,"Dumitru_Volvoreanu",NA,NA,NA,NA
 "Q3445238","Mircea Sfetescu","Mircea","Sfetescu","male","1905-01-01","1905-1-1","Bucharest","b27b0773b06956151f4c74e3afc95637",NA,NA,"Romania",NA,"centre",NA,NA,NA,NA,"3115",NA,NA,NA,NA,"Mircea_Sfetescu",NA,NA,NA,NA
 "Q3445242","Teodor Marian","Teodor","Marian","male","1904-01-01","1904-1-1",NA,"8a2e81147f6f387eb80a58a7c7a73f3b",NA,NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,"121slk8k",NA,NA,"Teodor_Marian",NA,NA,NA,NA
 "Q3445244","Sterian Soare",NA,"Soare","male","1906-01-01","1906-1-1",NA,"1970-01-01","1970-1-1",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Soare_Sterian",NA,NA,NA,NA
+"Q3445247","Eugen Sfetescu","Eugen","Sfetescu","male","1907-01-01","1907-1-1","Bucharest","715ed76b948c64f8178c32cd9cf4cd30",NA,NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,"1224zns8",NA,NA,"Eugen_Sfetescu",NA,NA,NA,NA
 "Q3445257","Alan Valentine","Alan","Valentine","male","1901-02-23","1901-2-23","Glen Cove","1980-07-14","1980-7-14","Rockland","United States",NA,NA,NA,NA,NA,NA,"3129",NA,NA,NA,NA,"Alan_Valentine",NA,NA,NA,NA
 "Q3445558","Rowan Frost","Rowan","Frost","male","1975-06-09","1975-6-9",NA,NA,NA,NA,"Ireland",NA,"lock",NA,NA,NA,NA,NA,NA,"121c9zgv","896","3903",NA,"Rowan_Frost",NA,NA,NA
 "Q3445568","Rowe Harding",NA,"Harding","male","1901-09-10","1901-9-10","Wales","1991-02-10","1991-2-10","Gower Peninsula","United Kingdom; United Kingdom of Great Britain and Ireland","Wales","winger",NA,NA,NA,NA,"2948",NA,NA,NA,NA,"Rowe_Harding","Rowe_Harding",NA,NA,NA
@@ -15182,7 +15236,7 @@
 "Q3498878","Steve Casey","Steve","Casey","male","1882-12-24","1882-12-24","Dunedin","1960-08-10","1960-8-10","Dunedin","New Zealand",NA,"prop",NA,NA,NA,NA,"1737",NA,NA,NA,NA,"Steve_Casey_(rugby_union)","Steve_Casey",NA,NA,NA
 "Q3498896","Steve Cutler","Steve","Cutler","male","1960-07-28","1960-7-28","Sydney",NA,NA,NA,"Australia",NA,"lock",NA,"1991","92","201","9486",NA,NA,NA,NA,"Steve_Cutler_(rugby_union)","Steve_Cutler","Steve_Cutler_(rugbista)",NA,NA
 "Q3498905","Steve Devine","Steve",NA,"male","1976-12-12","1976-12-12","Boggabri",NA,NA,NA,"New Zealand",NA,"scrum-half",NA,"2007","85","176","14075",NA,NA,"2051","828","Steve_Devine","Steve_Devine","Steve_Devine",NA,NA
-"Q3498924","Steve Fenwick","Steve","Fenwick","male","1951-07-23","1951-7-23","Caerphilly",NA,NA,NA,"United Kingdom","Wales","centre",NA,NA,NA,NA,"8307",NA,NA,NA,NA,"Steve_Fenwick","Steve_Fenwick","Steve_Fenwick",NA,NA
+"Q3498924","Steve Fenwick","Steve","Fenwick","male","1951-07-23","1951-7-23","Caerphilly",NA,NA,NA,"United Kingdom","Wales","centre",NA,NA,NA,NA,"8307",NA,NA,NA,"19978","Steve_Fenwick","Steve_Fenwick","Steve_Fenwick",NA,NA
 "Q3498946","Steve Hanley","Steve","Hanley","male","1979-06-11","1979-6-11","Whitehaven",NA,NA,NA,"United Kingdom","England","winger",NA,"2008","101","193","13124",NA,NA,"1278",NA,"Steve_Hanley_(rugby_union)","Steve_Hanley_(rugby_%C3%A0_XV)","Steve_Hanley_(rugbista)",NA,NA
 "Q3498970","Steve Jones","Steve","Jones","male","1977-04-20","1977-4-20","Neath",NA,NA,NA,"United Kingdom","Wales","hooker",NA,NA,NA,NA,"13662","steve-jones",NA,"933","15041","Steve_Jones_(rugby_union,_born_1977)","Steve_Jones_(rugby_%C3%A0_XV,_1977)",NA,NA,NA
 "Q3499002","Steve Malonga","Steve","Malonga","male","1985-04-01","1985-4-1","Le Plessis-Trévise",NA,NA,NA,"France",NA,"flanker",NA,NA,NA,NA,NA,"steve-malonga","121_bvb8","812",NA,NA,"Steve_Malonga",NA,NA,NA
@@ -15207,7 +15261,7 @@
 "Q3500807","Stuart Hogg","Stuart","Hogg","male","1992-06-24","1992-6-24","Melrose",NA,NA,NA,"United Kingdom",NA,"winger; fullback","2010",NA,"93","180","134149","stuart-hogg",NA,"22394","8574","Stuart_Hogg","Stuart_Hogg","Stuart_Hogg","Stuart_Hogg","%E3%82%B9%E3%83%81%E3%83%A5%E3%82%A2%E3%83%BC%E3%83%88%E3%83%BB%E3%83%9B%E3%83%83%E3%82%B0"
 "Q3500808","Stuart Hooper","Stuart","Hooper","male","1981-11-18","1981-11-18","Exeter",NA,NA,NA,"United Kingdom",NA,"lock",NA,NA,NA,NA,NA,"stuart-hooper",NA,"1237",NA,"Stuart_Hooper","Stuart_Hooper",NA,NA,NA
 "Q3500814","Stuart Legg","Stuart","Legg","male","1975-09-27","1975-9-27","Solihull",NA,NA,NA,"United Kingdom",NA,"winger",NA,NA,NA,NA,"126308",NA,"120j3lyb","1116",NA,"Stuart_Legg_(rugby_union)","Stuart_Legg",NA,NA,NA
-"Q3500816","Stuart Lane","Stuart","Lane","male","1952-11-12","1952-11-12","Tredegar",NA,NA,NA,"United Kingdom","Wales","flanker",NA,NA,"92","183","8042",NA,NA,NA,NA,"Stuart_Lane","Stuart_Lane","Stuart_Lane",NA,NA
+"Q3500816","Stuart Lane","Stuart","Lane","male","1952-11-12","1952-11-12","Tredegar",NA,NA,NA,"United Kingdom","Wales","flanker",NA,NA,"92","183","8042",NA,NA,NA,"19989","Stuart_Lane","Stuart_Lane","Stuart_Lane",NA,NA
 "Q3500821","Stuart Moffat","John; Stuart; David","Moffat","male","1977-08-18","1977-8-18","Edinburgh",NA,NA,NA,"United Kingdom",NA,"fullback",NA,"2008","99","190","14084",NA,NA,"3572",NA,"Stuart_Moffat","Stuart_Moffat","Stuart_Moffat",NA,NA
 "Q3500841","Stuart Turner","Stuart","Turner","male","1972-04-22","1972-4-22","Southport",NA,NA,NA,"United Kingdom",NA,"prop",NA,NA,NA,NA,"15406",NA,NA,"1197",NA,"Stuart_Turner_(rugby_union)","Stuart_Turner_(rugby_%C3%A0_XV)",NA,NA,NA
 "Q3500845","Stuart Watkins","Stuart","Watkins","male","1941-06-05","1941-6-5","Newport",NA,NA,NA,"United Kingdom","Wales","winger",NA,"1972","81","188","6878",NA,NA,NA,NA,"Stuart_Watkins","Stuart_Watkins","Stuart_Watkins",NA,NA
@@ -15753,6 +15807,7 @@
 "Q3646462","Budge Rogers",NA,"Rogers","male","1939-06-20","1939-6-20","Bedford",NA,NA,NA,"United Kingdom",NA,"flanker",NA,"1976","85","183","6577",NA,NA,NA,NA,"Budge_Rogers",NA,"Budge_Rogers",NA,NA
 "Q364694","Lote Tuqiri","Lote","Tuqiri","male","1979-09-23","1979-9-23","Suva",NA,NA,NA,"Australia; Fiji",NA,"winger","2003",NA,NA,NA,"14226",NA,NA,"1982",NA,"Lote_Tuqiri","Lote_Tuqiri","Lote_Tuqiri","Lote_Tuqiri",NA
 "Q36472525","Tedo Abzhandadze",NA,NA,"male","1999-06-13","1999-6-13","Kutaisi",NA,NA,NA,"Georgia","Georgia","fly-half",NA,NA,"80","177","301237","tedo-abzhandadze","11f01zw9q5","40740",NA,"Tedo_Abzhandadze","Tedo_Abzhandadze",NA,"Tedo_Abzhandadze","%E3%83%86%E3%83%89%E3%83%BB%E3%82%A2%E3%83%96%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%80%E3%82%BC"
+"Q3647870","Byran Black",NA,"Black","male","1912-01-01","1912-1-1",NA,"2002-01-01","2002-1-1",NA,"United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Brian_Black_(sportsman)",NA,"Byran_Black","Byran_Black",NA
 "Q364941","Matt Burke","Matt","Burke","male","1973-03-26","1973-3-26","Sydney",NA,NA,NA,"Australia",NA,"winger; fullback","1991","2008","94","183","11577",NA,NA,"910",NA,"Matt_Burke_(rugby_union,_born_1973)","Matt_Burke","Matt_Burke","Matt_Burke",NA
 "Q365677","Adolphe Bousquet","Adolphe","Bousquet","male","1899-08-14","1899-8-14","Maraussan","1972-03-17","1972-3-17","Béziers","France",NA,"fly-half",NA,NA,"72","167","2700",NA,NA,NA,NA,"Adolphe_Bousquet","Adolphe_Bousquet",NA,NA,NA
 "Q365731","Michael Lynagh","Michael","Lynagh","male","1963-10-25","1963-10-25","Brisbane",NA,NA,NA,"Australia",NA,"fly-half","1982","1998","80","178","9767",NA,NA,NA,"7428","Michael_Lynagh","Michael_Lynagh","Michael_Lynagh","Michael_Lynagh",NA
@@ -16081,7 +16136,7 @@
 "Q3992734","Tommaso Castello","Tommaso","Castello","male","1991-08-14","1991-8-14","Genoa",NA,NA,NA,"Italy","Italy","centre",NA,NA,"100","184","165878","tommy-castello","112yfs5wp","22354",NA,"Tommaso_Castello","Tommaso_Castello","Tommaso_Castello",NA,NA
 "Q3992760","Tommaso Fattori","Tommaso","Fattori","male","1909-01-25","1909-1-25","Foligno","1960-06-06","1960-6-6","L'Aquila","Italy; Kingdom of Italy",NA,NA,NA,"1940",NA,NA,"4368",NA,"122kcn3h",NA,NA,NA,NA,"Tommaso_Fattori",NA,NA
 "Q399410","Agustín Pichot","Agustín","Pichot","male","1974-08-22","1974-8-22","Buenos Aires",NA,NA,NA,"Argentina","Argentina","scrum-half","1992","2009","78","175","12004",NA,NA,"383",NA,"Agust%C3%ADn_Pichot","Agust%C3%ADn_Pichot","Agust%C3%ADn_Pichot","Agust%C3%ADn_Pichot","%E3%82%A2%E3%82%B0%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%83%BB%E3%83%94%E3%83%81%E3%83%A7%E3%83%83%E3%83%88"
-"Q39970334","Pita Gus Sowakula",NA,NA,"male","1994-10-26","1994-10-26","Lautoka",NA,NA,NA,NA,NA,"pivot; number 8; flanker",NA,NA,NA,NA,"296133","pita-gus-sowakula","11f0_gh_w9","31186","110","Pita_Gus_Sowakula","Pita_Gus_Sowakula",NA,NA,NA
+"Q39970334","Pita Gus Sowakula",NA,NA,"male","1994-10-26","1994-10-26","Lautoka",NA,NA,NA,NA,NA,"center; number 8; flanker",NA,NA,NA,NA,"296133","pita-gus-sowakula","11f0_gh_w9","31186","110","Pita_Gus_Sowakula","Pita_Gus_Sowakula",NA,NA,NA
 "Q4003038","Ulises Gamboa","Ulises",NA,"male","1975-10-03","1975-10-3","Buenos Aires",NA,NA,NA,"Argentina",NA,NA,NA,"2015","118","180",NA,NA,"120t9j2w","6091",NA,NA,NA,"Ulises_Gamboa",NA,NA
 "Q4003343","Umberto Calcinai","Umberto","Calcinai","male","1892-02-02","1892-2-2","Wellington","1963-07-26","1963-7-26","Wellington","New Zealand",NA,"hooker",NA,NA,"77",NA,NA,NA,"1215jrmz",NA,NA,"Umberto_Calcinai",NA,"Umberto_Calcinai",NA,NA
 "Q40042434","Tsuyoshi Tomioka","剛","Tomioka","male","1968-01-01","1968-1-1",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11fxdzqt38",NA,NA,NA,NA,NA,NA,"%E5%86%A8%E5%B2%A1%E5%89%9B"
@@ -16729,7 +16784,7 @@
 "Q47390306","Mack Hansen","Mack","Hansen","male","1998-03-27","1998-3-27","Canberra",NA,NA,NA,"Australia",NA,"winger; fullback",NA,NA,"89","188","296795","mackenzie-hansen","11gfht672s","41847","5584","Mack_Hansen","Mack_Hansen","Mack_Hansen",NA,"%E3%83%9E%E3%83%83%E3%82%AF%E3%83%BB%E3%83%8F%E3%83%B3%E3%82%BB%E3%83%B3"
 "Q4740401","Amasio Valence",NA,NA,"male","1979-05-12","1979-5-12","Nadi",NA,NA,NA,"New Zealand",NA,"fly-half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Amasio_Valence",NA,NA,NA,NA
 "Q4741760","Ambrose Baker","Ambrose","Baker","male","1897-07-07","1897-7-7","Swansea","1976-11-24","1976-11-24","Oldham","United Kingdom; United Kingdom of Great Britain and Ireland",NA,"flanker",NA,NA,NA,NA,"2769",NA,NA,NA,NA,"Ambrose_Baker",NA,NA,NA,NA
-"Q47450803","Mărgărit Blăgescu",NA,"Blăgescu","male","1925-01-01","1925-1-1",NA,"2004-01-01","2004-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11gfhwtzyr",NA,NA,"M%C4%83rg%C4%83rit_Bl%C4%83gescu",NA,NA,NA,NA
+"Q47450803","Mărgărit Blăgescu",NA,"Blăgescu","male","1925-08-26","1925-8-26","Oancea","2004-03-01","2004-3-1",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,"11gfhwtzyr",NA,NA,"M%C4%83rg%C4%83rit_Bl%C4%83gescu",NA,NA,NA,NA
 "Q47452825","Andrei Temnov","Андрей",NA,"male","1983-01-01","1983-1-1","Moscow",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"15370",NA,"11f2rpr00w",NA,NA,NA,NA,NA,NA,NA
 "Q47453349","Pavel Butenko","Pavel",NA,"male","1987-05-11","1987-5-11","Krasnoyarsk",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"161339",NA,"11hb2xmb4x",NA,NA,NA,NA,NA,NA,NA
 "Q47453374","Valery Morozov","Валерий","Морозов","male","1994-09-21","1994-9-21","Zelenograd",NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,"294051","valery-morozov","11hb3f21q4","39236","19329","Valery_Morozov","Valery_Morozov",NA,NA,"%E3%83%B4%E3%82%A1%E3%83%AC%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%A2%E3%83%AD%E3%82%BE%E3%83%95"
@@ -16790,6 +16845,7 @@
 "Q47538622","Seilala Lam",NA,"Lam","male","1989-02-18","1989-2-18","Hamilton",NA,NA,NA,"New Zealand",NA,"hooker",NA,NA,NA,NA,"238939","seilala-lam","11gfm4kbmd","13649","2210","Seilala_Lam","Seilala_Lam",NA,NA,"%E3%82%BB%E3%82%A4%E3%83%A9%E3%83%A9%E3%83%BB%E3%83%A9%E3%83%A0"
 "Q47541613","Ian Harvey","Ian; Hamilton","Harvey","male","1903-01-01","1903-1-1","Masterton","1966-10-22","1966-10-22","Wellington","New Zealand",NA,"lock",NA,NA,NA,NA,"3333",NA,"11gfhwyck9",NA,NA,"Ian_Harvey_(rugby_union)",NA,NA,NA,NA
 "Q47541989","Adam Parker","Adam","Parker","male","1973-04-21","1973-4-21","Christchurch",NA,NA,NA,"New Zealand",NA,"lock",NA,NA,NA,NA,NA,NA,"11gfhccdzv",NA,NA,"Adam_Parker_(rugby_union)",NA,NA,NA,"%E3%82%A2%E3%83%80%E3%83%A0%E3%83%BB%E3%83%91%E3%83%BC%E3%82%AB%E3%83%BC"
+"Q47542030","Scott Lawrence","Scott","Lawrence","male","1975-10-08","1975-10-8",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11f3xnmxdr",NA,NA,"Scott_Lawrence_(rugby_union)",NA,NA,NA,NA
 "Q47542201","Atsushi Koga",NA,NA,"male","1975-02-25","1975-2-25","Kanagawa Prefecture",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11hbkk09zf",NA,NA,"Atsushi_Koga",NA,NA,NA,"%E5%8F%A4%E8%B3%80%E6%B7%B3"
 "Q47542695","John Dalziel","John",NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11f3zr_g77",NA,NA,"John_Dalziel",NA,NA,NA,NA
 "Q475438","Vincent Clerc","Vincent","Clerc","male","1981-05-07","1981-5-7","Échirolles",NA,NA,NA,"France",NA,"winger","1999","2018","85","178","14073","vincent-clerc",NA,"286",NA,"Vincent_Clerc","Vincent_Clerc","Vincent_Clerc","Vincent_Clerc",NA
@@ -16991,6 +17047,7 @@
 "Q4823105","Austin Gralton","Austin","Gralton","male","1871-02-09","1871-2-9","Kempsey","1919-07-01","1919-7-1",NA,"Australia",NA,"scrum-half",NA,NA,NA,NA,"1356",NA,NA,NA,NA,"Austin_Gralton",NA,NA,NA,NA
 "Q4823193","Austin Matthews","Austin","Matthews","male","1904-05-03","1904-5-3",NA,"1977-07-29","1977-7-29",NA,"United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Austin_Matthews",NA,NA,NA,NA
 "Q48249423","Simon Garrouteigt","Simon","Garrouteigt","male","1996-05-07","1996-5-7","Dax",NA,NA,NA,"France",NA,"scrum-half",NA,NA,NA,NA,NA,"simon-garrouteigt","11fj0_zgjd","35705",NA,NA,"Simon_Garrouteigt",NA,NA,NA
+"Q4827954","Aveau Niko Palamo",NA,NA,"male",NA,NA,"Samoa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Aveau_Niko_Palamo",NA,NA,NA,NA
 "Q48308192","Gaëtan Robert","Gaëtan","Robert","male","1997-07-13","1997-7-13","Dax",NA,NA,NA,"France",NA,"fly-half",NA,NA,NA,NA,NA,"gaetan--robert","11f402181t","35707",NA,NA,"Ga%C3%ABtan_Robert",NA,NA,NA
 "Q48317950","Guillaume Mathy","Guillaume","Mathy","male","1995-07-01","1995-7-1","Lons-le-Saunier",NA,NA,NA,"France",NA,"centre",NA,NA,NA,NA,NA,NA,NA,"39557",NA,NA,NA,NA,NA,NA
 "Q4831827","Ayumu Goromaru","Ayumu",NA,"male","1986-03-01","1986-3-1","Fukuoka",NA,NA,NA,"Japan",NA,"fullback","2008","2021","98","185","14792","ayumu-goromaru",NA,"1800","5388","Ayumu_Goromaru","Ayumu_Goromaru","Ayumu_Gor%C5%8Dmaru","Ayumu_Goromaru","%E4%BA%94%E9%83%8E%E4%B8%B8%E6%AD%A9"
@@ -17531,6 +17588,7 @@
 "Q5080669","Charles Marriott","Charles","Marriott","male","1861-07-15","1861-7-15","Rendham","1936-12-25","1936-12-25","Ipswich",NA,NA,NA,NA,NA,NA,NA,"653",NA,NA,NA,NA,"Charles_Marriott_(rugby_union)",NA,NA,NA,NA
 "Q50807539","Tudor Butnariu",NA,NA,"male","1995-03-12","1995-3-12","Iași County",NA,NA,NA,NA,NA,"hooker",NA,NA,NA,NA,"309002",NA,"11f54kghdn","38246",NA,"Tudor_Butnariu",NA,NA,NA,NA
 "Q50807587","Daniel Plai","Daniel",NA,"male","1994-09-05","1994-9-5","Gura Humorului",NA,NA,NA,NA,NA,"scrum-half",NA,NA,NA,NA,"301153",NA,"11f54k8kj0","38259",NA,"Daniel_Plai",NA,NA,NA,NA
+"Q50809406","Anzor Sitchinava",NA,NA,"male","1995-09-09","1995-9-9","Tbilisi",NA,NA,NA,"Georgia",NA,NA,NA,NA,NA,NA,NA,NA,"11ggs2192h",NA,NA,"Anzor_Sitchinava",NA,NA,NA,NA
 "Q508105","Andrew Trimble","Andrew","Trimble","male","1984-10-20","1984-10-20","Coleraine",NA,NA,NA,"United Kingdom",NA,"centre","2005","2018","98","183","15083","andrew-trimble",NA,"3444","9951","Andrew_Trimble","Andrew_Trimble","Andrew_Trimble","Andrew_Trimble",NA
 "Q50810842","Julien Bartoli","Julien","Bartoli","male","1999-09-21","1999-9-21",NA,NA,NA,NA,"France",NA,"scrum-half",NA,NA,NA,NA,NA,NA,"11f54k7nzt","32545",NA,NA,NA,NA,NA,NA
 "Q5081106","Charles Morrissey","Charles","Morrissey","male","1903-04-26","1903-4-26",NA,"1930-02-20","1930-2-20",NA,"Australia",NA,"centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Charles_Morrissey",NA,NA,NA,NA
@@ -17828,6 +17886,7 @@
 "Q5193705","Culum Retallick",NA,NA,"male","1985-05-08","1985-5-8","Rangiora",NA,NA,NA,"New Zealand",NA,"lock",NA,"2018","114","199",NA,NA,NA,"10030",NA,"Culum_Retallick",NA,NA,NA,NA
 "Q5194886","Curly Hammond",NA,"Hammond","male","1879-10-03","1879-10-3","Pontefract","1963-04-15","1963-4-15",NA,"United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Curly_Hammond",NA,NA,NA,NA
 "Q5194890","Curly Page",NA,"Page","male","1902-05-08","1902-5-8","Lyttelton","1987-02-13","1987-2-13","Christchurch","New Zealand","New Zealand","fly-half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Curly_Page",NA,NA,NA,NA
+"Q51955043","Cornel Popescu","Cornel","Popescu","male","1960-06-08","1960-6-8","Roman",NA,NA,NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,"11gmzld224",NA,NA,"Cornel_Popescu",NA,NA,NA,NA
 "Q5195849","Curtis Palmer","Curtis","Palmer","male","1977-05-08","1977-5-8","New Zealand",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Curtis_Palmer",NA,NA,NA,NA
 "Q519589","Mike Phillips","Mike","Phillips","male","1982-08-29","1982-8-29","Carmarthen",NA,NA,NA,"United Kingdom","Wales","scrum-half",NA,NA,"101","192","14312","mike-phillips",NA,"986","11155","Mike_Phillips_(rugby_union)","Michael_Phillips_(rugby_%C3%A0_XV)","Michael_Phillips_(rugbista)","Mike_Phillips_(rugbista)","%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%BB%E3%83%95%E3%82%A3%E3%83%AA%E3%83%83%E3%83%97%E3%82%B9_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q5196754","Cuth Mullins",NA,"Mullins","male","1873-06-28","1873-6-28","Makhanda","1938-06-15","1938-6-15",NA,"South Africa",NA,NA,NA,NA,NA,NA,"1213",NA,NA,NA,NA,"Cuth_Mullins",NA,NA,NA,NA
@@ -17852,6 +17911,7 @@
 "Q52084835","Tiaan Thomas-Wheeler","Tiaan","Thomas; Wheeler","male","1999-11-19","1999-11-19","Neath",NA,NA,NA,NA,NA,"centre",NA,NA,NA,NA,NA,NA,"11hdc87dvx",NA,NA,"Tiaan_Thomas-Wheeler",NA,NA,NA,NA
 "Q5208985","Dai Davies","Dai","Davies","male","1880-01-01","1880-1-1","Llanelli","1944-01-01","1944-1-1","Manchester","United Kingdom; United Kingdom of Great Britain and Ireland","Wales","goalkeeper",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dai_Davies_(sportsman)",NA,NA,NA,NA
 "Q5208987","Dai Davies","Dai","Davies","male","1925-05-02","1925-5-2","Penygraig","2003-09-25","2003-9-25","Taunton","United Kingdom; United Kingdom of Great Britain and Ireland",NA,"hooker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dai_Davies_(rugby_union)",NA,NA,NA,NA
+"Q5208990","Dai Edwards","Dai","Edwards","male","1896-03-21","1896-3-21","Glynneath","1960-08-24","1960-8-24","Glynneath","United Kingdom; United Kingdom of Great Britain and Ireland","Wales","lock",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dai_Edwards",NA,NA,NA,NA
 "Q5208993","Dai Evans","David","Evans","male","1872-01-01","1872-1-1","Maenclochog","1912-01-01","1912-1-1","Maenclochog","United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"1177",NA,NA,NA,NA,"Dai_Evans",NA,NA,NA,NA
 "Q5208995","Dai Flanagan",NA,"Flanagan","male","1985-10-24","1985-10-24",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dai_Flanagan",NA,NA,NA,NA
 "Q5209004","Dai Hiddlestone","Dai",NA,"male","1890-06-14","1890-6-14","Hendy","1973-11-16","1973-11-16",NA,"United Kingdom; United Kingdom of Great Britain and Ireland","Wales","flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dai_Hiddlestone",NA,NA,NA,NA
@@ -18219,6 +18279,7 @@
 "Q5314561","Duncan Paterson","Duncan","Paterson","male","1943-03-27","1943-3-27","Galashiels","2009-12-22","2009-12-22",NA,"United Kingdom",NA,"scrum-half",NA,NA,NA,NA,"7551",NA,NA,NA,NA,"Duncan_Paterson",NA,NA,NA,NA
 "Q5314649","Duncan Weir","Duncan",NA,"male","1991-05-10","1991-5-10","Rutherglen",NA,NA,NA,"United Kingdom",NA,"fly-half","2010",NA,"90","173","114468","duncan-weir",NA,"19203","11008","Duncan_Weir","Duncan_Weir","Duncan_Weir","Duncan_Weir","%E3%83%80%E3%83%B3%E3%82%AB%E3%83%B3%E3%83%BB%E3%82%A6%E3%82%A3%E3%82%A2%E3%83%BC"
 "Q5314654","Duncan Williams","Duncan","Williams","male","1986-04-17","1986-4-17","Douglas",NA,NA,NA,"Ireland",NA,"scrum-half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Duncan_Williams_(rugby_union)",NA,NA,NA,NA
+"Q5315453","Dunlop McCosh Cunningham",NA,NA,"male","1901-01-01","1901-1-1",NA,"1983-01-01","1983-1-1",NA,"United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dunlop_McCosh_Cunningham",NA,NA,NA,NA
 "Q5317086","Dustin Cooper","Dustin","Cooper","male","1981-05-08","1981-5-8","Murgon",NA,NA,NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Dustin_Cooper",NA,NA,NA,NA
 "Q5317198","Dusty Noble","Dusty","Noble","male","1984-04-30","1984-4-30","Stellenbosch",NA,NA,NA,"South Africa",NA,"winger",NA,NA,NA,NA,NA,NA,NA,"2488",NA,"Dusty_Noble",NA,NA,NA,NA
 "Q5318033","Dwayne Sweeney","Dwayne","Sweeney","male","1984-08-08","1984-8-8","Hamilton",NA,NA,NA,"New Zealand",NA,"centre",NA,NA,NA,NA,"16070",NA,NA,"4564",NA,"Dwayne_Sweeney",NA,NA,NA,NA
@@ -18337,6 +18398,7 @@
 "Q5374801","Emrys Evans","Emrys","Evans","male","1911-04-24","1911-4-24","Gwaun-Cae-Gurwen","1983-06-23","1983-6-23","Bristol","United Kingdom of Great Britain and Ireland","Wales","flanker",NA,NA,NA,NA,"4464",NA,NA,NA,NA,"Emrys_Evans_(rugby)",NA,NA,NA,NA
 "Q5374908","Emyr Phillips",NA,"Phillips","male","1987-02-22","1987-2-22","Llandovery",NA,NA,NA,"United Kingdom",NA,"hooker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Emyr_Phillips",NA,NA,NA,NA
 "Q537512","Michel Yachvili","Михаил","Yachvili","male","1946-07-25","1946-7-25","Tulle",NA,NA,NA,"France",NA,"hooker",NA,"1981","85","178","7357",NA,NA,NA,NA,"Michel_Yachvili","Michel_Yachvili","Michel_Yachvili",NA,NA
+"Q53756727","Johan Heunis","Johan",NA,"male","1958-01-01","1958-1-1","George",NA,NA,NA,"South Africa",NA,"fullback","1977",NA,NA,NA,NA,NA,"11g0kd6971",NA,NA,"Johan_Heunis",NA,NA,"Johan_Heunis",NA
 "Q537574","Oscar Collodo","Oscar","Collodo","male","1958-08-16","1958-8-16","Bern",NA,NA,NA,"Italy",NA,"fly-half","1977","1993",NA,NA,"8770",NA,NA,NA,NA,"Oscar_Collodo","Oscar_Collodo","Oscar_Collodo","Oscar_Collodo",NA
 "Q53764880","Tatsuhiro Nagai",NA,"Nagai","male","1996-01-07","1996-1-7",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11ghn68ftp",NA,NA,NA,NA,NA,NA,"%E6%B0%B8%E4%BA%95%E9%81%94%E5%95%93"
 "Q53764890","Kazuma Nakagawa",NA,NA,"male","1995-10-28","1995-10-28",NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,"11f60x_10w",NA,NA,NA,NA,NA,NA,"%E4%B8%AD%E5%B7%9D%E5%92%8C%E7%9C%9F"
@@ -18416,6 +18478,7 @@
 "Q5395557","Errol Brain","Errol",NA,"male","1968-07-21","1968-7-21","New Zealand",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Errol_Brain",NA,NA,NA,NA
 "Q5395631","Errol Stewart","Errol","Stewart","male","1969-07-30","1969-7-30",NA,NA,NA,NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Errol_Stewart_(South_African_sportsman)",NA,NA,NA,NA
 "Q5395940","Eruera Te Whiti o Rongomai Love",NA,NA,"male","1905-05-18","1905-5-18","Waikawa","1942-07-12","1942-7-12",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Eruera_Love",NA,NA,NA,NA
+"Q5396711","Esala Teleni",NA,NA,"male","1950-01-01","1950-1-1","Namuka-i-Lau","2020-02-28","2020-2-28",NA,"Fiji",NA,"number 8",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Esala_Teleni",NA,NA,NA,NA
 "Q539740","Joe Ward","Joe","Ward","male","1980-06-03","1980-6-3","Dannevirke",NA,NA,NA,"New Zealand",NA,"hooker",NA,NA,NA,NA,"27210",NA,NA,"2114","961","Joe_Ward_(rugby_union)","Joe_Ward",NA,NA,NA
 "Q5398568","Esmond Martelli","Esmond","Martelli","male","1878-06-16","1878-6-16","Dublin","1926-01-01","1926-1-1","Paddington",NA,NA,"fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Esmond_Martelli",NA,NA,NA,NA
 "Q5398573","Esmond Parkinson","Esmond","Parkinson","male","1886-10-03","1886-10-3","Colinton",NA,NA,NA,"Australia",NA,"winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Esmond_Parkinson",NA,NA,NA,NA
@@ -18440,6 +18503,7 @@
 "Q5414310","Eustace North","Eustace","North","male","1868-11-04","1868-11-4","Lewisham","1942-03-17","1942-3-17","Wokingham","United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"949",NA,NA,NA,NA,"Eustace_North",NA,NA,NA,NA
 "Q5415351","Evan Crawford","Evan","Crawford","male",NA,NA,NA,NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Evan_Crawford_(rugby_union)",NA,NA,NA,NA
 "Q5415361","Evan Davies","Evan","Davies","male",NA,NA,"Tumble",NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Evan_Davies_(rugby)",NA,NA,NA,NA
+"Q5415435","Evan James","Evan","James","male","1869-01-01","1869-1-1","Swansea","1901-08-18","1901-8-18","Bon-y-maen","United Kingdom of Great Britain and Ireland","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Evan_James_(rugby)",NA,NA,NA,NA
 "Q5415464","Evan Lloyd","Evan","Lloyd","male","1871-06-06","1871-6-6","Llanelli","1951-02-28","1951-2-28","Llanelli","United Kingdom; United Kingdom of Great Britain and Ireland",NA,"winger",NA,NA,NA,NA,"1141",NA,NA,NA,NA,"Evan_Lloyd_(rugby_union,_born_1871)",NA,NA,NA,NA
 "Q5415519","Evan Rees","Evan","Rees","male","1896-08-09","1896-8-9","Cwmavon","1978-01-01","1978-1-1","Ogwr","United Kingdom",NA,"centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Evan_Rees_(rugby)",NA,NA,NA,NA
 "Q5415523","Evan Richards","Evan","Richards","male","1862-01-23","1862-1-23","Swansea","1931-04-19","1931-4-19","Llandaff","United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"704",NA,NA,NA,NA,"Evan_Richards",NA,NA,NA,NA
@@ -18533,11 +18597,12 @@
 "Q5484684","Faf de Klerk","François","de Klerk","male","1991-10-19","1991-10-19","Mbombela",NA,NA,NA,"South Africa",NA,"scrum-half","2012",NA,"80","172","214617","faf-de-klerk",NA,"25597","10472","Faf_de_Klerk","Faf_de_Klerk","Faf_de_Klerk","Faf_de_Klerk","%E3%83%95%E3%82%A1%E3%83%95%E3%83%BB%E3%83%87%E3%83%BB%E3%82%AF%E3%83%A9%E3%83%BC%E3%82%AF"
 "Q5485025","Frank Andrews","Frank","Andrews","male","1886-02-14","1886-2-14","Wales","1944-11-22","1944-11-22","Leeds","United Kingdom; United Kingdom of Great Britain and Ireland","Wales","flanker",NA,NA,NA,NA,"2339",NA,NA,NA,NA,"Frank_Andrews_(rugby)",NA,NA,NA,NA
 "Q5485328","Frank Bingham","Frank","Bingham","male","1874-09-17","1874-9-17","Alfreton","1915-05-22","1915-5-22","Ypres","United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Frank_Bingham",NA,NA,NA,NA
+"Q5485436","Frank Boylen","Frank","Boylen","male","1878-01-01","1878-1-1","Hartlepool","1938-02-03","1938-2-3","Kingston upon Hull","United Kingdom; United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Frank_Boylen",NA,NA,NA,NA
 "Q5485720","Frank Castle","Frank","Castle","male","1924-01-01","1924-1-1",NA,"1999-08-15","1999-8-15",NA,"United Kingdom; United Kingdom of Great Britain and Ireland",NA,"winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Frank_Castle_(rugby_league)",NA,NA,NA,NA
 "Q54859732","Harry Walker","Harry","Walker","male","1915-02-11","1915-2-11",NA,"2018-06-05","2018-6-5",NA,"United Kingdom",NA,"prop",NA,NA,NA,NA,"4916",NA,"11ght110xd",NA,NA,"Harry_Walker_(rugby_union)",NA,NA,NA,NA
 "Q54859879","Eric MacKay","Eric","MacKay","male","1899-08-05","1899-8-5","Kinning Park","1966-07-23","1966-7-23","East Kilbride",NA,NA,NA,NA,NA,NA,NA,"2622",NA,"11ghs9ml69",NA,NA,"Eric_MacKay",NA,NA,NA,NA
 "Q54861061","Leroy Van Dam",NA,NA,"male","1993-11-07","1993-11-7","Morrinsville",NA,NA,NA,"New Zealand",NA,"winger",NA,NA,NA,NA,NA,NA,"11f6594h1p",NA,NA,"Leroy_Van_Dam",NA,NA,NA,NA
-"Q54861308","Dan Babos",NA,NA,"male","2000-03-01","2000-3-1","Newport",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11g0lj7wb0",NA,NA,"Dan_Babos",NA,NA,NA,NA
+"Q54861308","Dan Babos","Dan","Babos","male","2000-03-01","2000-3-1","Newport",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11g0lj7wb0",NA,NA,"Dan_Babos",NA,NA,NA,NA
 "Q54861310","Taine Basham",NA,"Basham","male","1999-11-02","1999-11-2","Newport",NA,NA,NA,"United Kingdom","Wales","number 8; flanker",NA,NA,NA,NA,"298580","taine-basham","11f65fplh8","24982","11097","Taine_Basham","Taine_Basham",NA,NA,"%E3%83%86%E3%82%A4%E3%83%B3%E3%83%BB%E3%83%90%E3%82%B7%E3%83%A3%E3%83%A0"
 "Q54861418","Reinach Venter",NA,NA,"male","1995-01-03","1995-1-3","Pretoria",NA,NA,NA,NA,NA,"hooker",NA,NA,NA,NA,NA,"reinach-venter","11ghsfl06r",NA,NA,"Reinach_Venter",NA,NA,NA,NA
 "Q54861609","Senitiki Nayalo",NA,NA,"male","1988-06-28","1988-6-28","Fiji",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,NA,NA,"11ght0y4_0",NA,NA,"Senitiki_Nayalo",NA,NA,NA,NA
@@ -19015,7 +19080,7 @@
 "Q56154436","Ratu Naisa Narukutabua","Ratu",NA,"male","1982-03-11","1982-3-11","Fiji",NA,NA,NA,"Fiji","Fiji","winger; centre",NA,NA,NA,NA,NA,NA,"11gl62xs3k","17599",NA,NA,"Ratu_Naisa_Narukutabua",NA,NA,NA
 "Q5616043","Guillaume Franke","Guillaume","Franke","male","1987-10-27","1987-10-27",NA,NA,NA,NA,"Germany",NA,"winger",NA,NA,NA,NA,"110154",NA,NA,"9925",NA,"Guillaume_Franke",NA,NA,NA,NA
 "Q5616273","Guillermo Storace","Guillermo","Storace","male","1974-03-20","1974-3-20",NA,NA,NA,NA,"Uruguay",NA,"prop",NA,NA,NA,NA,"12944",NA,NA,NA,NA,"Guillermo_Storace",NA,NA,NA,NA
-"Q56164015","Mihai Wusek",NA,NA,"male","1938-09-21","1938-9-21","Bucharest","2008-10-23","2008-10-23","Lucé",NA,NA,"centre",NA,NA,NA,NA,"6394",NA,"11gl62qd4s",NA,NA,NA,"Mihai_Wusek",NA,NA,NA
+"Q56164015","Mihai Wusek","Mihai",NA,"male","1938-09-21","1938-9-21","Bucharest","2008-10-23","2008-10-23","Lucé","Romania",NA,"centre",NA,NA,NA,NA,"6394",NA,"11gl62qd4s",NA,NA,NA,"Mihai_Wusek",NA,NA,NA
 "Q56164637","George Tilsley","George","Tilsley","male","1992-02-27","1992-2-27",NA,NA,NA,NA,"New Zealand",NA,"winger; fullback",NA,NA,NA,NA,"272389","george-tilsley","11fy_gjn2c","25115","2141",NA,"George_Tilsley",NA,NA,NA
 "Q56179554","Iwan Jones","Iwan","Jones","male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q56180185","A R Lewis",NA,"Lewis","male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -19384,7 +19449,7 @@
 "Q58495352","Prince ǃGaoseb",NA,NA,"male","1998-07-07","1998-7-7","Omaruru",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,"298453","prince-gaoseb","11fhl4yz7_","19117",NA,"Prince_%C7%83Gaoseb","Prince_%C7%83Gaoseb",NA,"Prince_%C7%83Gaoseb","%E3%83%97%E3%83%AA%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%AC%E3%82%AA%E3%82%BB%E3%83%96"
 "Q585747","Jack Williams","Jack","Williams","male","1882-11-18","1882-11-18","Wales","1911-08-28","1911-8-28","Nigeria","United Kingdom of Great Britain and Ireland","Wales","lock",NA,NA,NA,NA,"1707",NA,NA,NA,NA,"Jack_Williams_(rugby_union)","Jack_Williams",NA,NA,NA
 "Q586437","Jason Robinson","Jason","Robinson","male","1974-07-30","1974-7-30","Leeds",NA,NA,NA,"United Kingdom",NA,"winger","1996",NA,NA,NA,"13578",NA,NA,"588",NA,"Jason_Robinson_(rugby)","Jason_Robinson","Jason_Robinson","Jason_Robinson_(rugbista)",NA
-"Q5865298","Francisco Borrell","Francisco","Borrell","male","1934-07-17","1934-7-17","Sant Boi de Llobregat","1992-10-20","1992-10-20","Reus","Spain",NA,"pivot",NA,NA,NA,"200",NA,NA,"11r_przg5",NA,NA,NA,"Francisco_Borrell","Francisco_Borrell","Francisco_Borrell",NA
+"Q5865298","Francisco Borrell","Francisco","Borrell","male","1934-07-17","1934-7-17","Sant Boi de Llobregat","1992-10-20","1992-10-20","Reus","Spain",NA,"center",NA,NA,NA,"200",NA,NA,"11r_przg5",NA,NA,NA,"Francisco_Borrell","Francisco_Borrell","Francisco_Borrell",NA
 "Q5865547","Francisco Domingo Abal Guerault","Francisco; Domingo","Abal","male","1951-06-24","1951-6-24","Montevideo","1972-10-14","1972-10-14","Andes","Uruguay",NA,NA,NA,NA,NA,NA,NA,NA,"121s4d53",NA,NA,"Francisco_Abal",NA,NA,"Francisco_Abal",NA
 "Q58667910","Cullen M. Taniguchi",NA,NA,"male","1976-01-01","1976-1-1",NA,"2023-11-14","2023-11-14",NA,"United States",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q5872356","Hitoshi Ōno","ひとし","Ōno","male","1978-05-06","1978-5-6","Fukushima",NA,NA,NA,"Japan",NA,"lock",NA,NA,NA,NA,"14456","hitoshi-ono",NA,"1806","11962","Hitoshi_Ono","Hitoshi_Ono",NA,"Hitoshi_Ono","%E5%A4%A7%E9%87%8E%E5%9D%87"
@@ -19532,6 +19597,7 @@
 "Q599563","Jim Calder","Jim","Calder","male","1957-08-20","1957-8-20","Haddington",NA,NA,NA,"United Kingdom",NA,"flanker",NA,NA,NA,NA,"9297",NA,NA,NA,"19130","Jim_Calder_(rugby_union)","Jim_Calder_(rugby_%C3%A0_XV)",NA,NA,NA
 "Q5995656","Ike Owens","Ike","Owens","male","1918-11-07","1918-11-7","Pontycymer","1998-10-15","1998-10-15",NA,"United Kingdom; United Kingdom of Great Britain and Ireland","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ike_Owens",NA,NA,NA,NA
 "Q5996921","Ilaisa Ma'asi",NA,NA,"male","1982-02-05","1982-2-5","Tongatapu",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,"98267",NA,NA,"10000",NA,"Ilaisa_Ma%CA%BBasi",NA,NA,NA,NA
+"Q5996927","Ilaitia Tuisese",NA,NA,"male",NA,NA,NA,"2024-10-05","2024-10-5",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ilaitia_Tuisese",NA,NA,NA,NA
 "Q5998137","Iliesa Tanivula",NA,NA,"male","1975-09-20","1975-9-20",NA,NA,NA,NA,"New Zealand",NA,"winger; centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Iliesa_Tanivula",NA,NA,NA,NA
 "Q600196","Sean Fitzpatrick","Sean","Fitzpatrick","male","1963-06-04","1963-6-4","Auckland",NA,NA,NA,"New Zealand",NA,"hooker","1982","1997","105","183","10091",NA,NA,NA,"1167","Sean_Fitzpatrick","Sean_Fitzpatrick","Sean_Fitzpatrick","Sean_Fitzpatrick","%E3%82%B7%E3%83%A7%E3%83%BC%E3%83%B3%E3%83%BB%E3%83%95%E3%82%A3%E3%83%83%E3%83%84%E3%83%91%E3%83%88%E3%83%AA%E3%83%83%E3%82%AF"
 "Q60040602","Sebastián Levaggi","Luis; Sebastián",NA,"male","1982-01-27","1982-1-27","Montevideo",NA,NA,NA,"Uruguay",NA,"prop",NA,NA,"107","180","15645",NA,"11h2g204yy","3919",NA,NA,NA,"Sebasti%C3%A1n_Levaggi",NA,NA
@@ -20404,6 +20470,7 @@
 "Q6372043","Karl Lowe","Karl","Lowe","male","1984-09-17","1984-9-17","Hastings",NA,NA,NA,"New Zealand",NA,"flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Karl_Lowe",NA,NA,NA,NA
 "Q6372170","Karl Pryce","Karl","Pryce","male","1986-07-27","1986-7-27","Bradford",NA,NA,NA,"United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Karl_Pryce",NA,NA,NA,NA
 "Q6372300","Karl Te Nana","Karl",NA,"male","1975-07-15","1975-7-15","Palmerston North",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Karl_Te_Nana",NA,NA,NA,NA
+"Q63727439","William Stafford","William","Stafford","male","433ede64c3e234c366b4aa22944fa444",NA,"Hansi","5e1700725e569b6c30d169812042f691",NA,"Crowthorne","United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,NA,NA,"11h781qw15",NA,NA,"William_Stafford_(British_Army_officer)",NA,NA,NA,NA
 "Q6372784","Nick Cummins","Nick",NA,"male","1987-10-05","1987-10-5","Port Macquarie",NA,NA,NA,"Australia",NA,"winger",NA,NA,NA,NA,"91405","nick-cummins",NA,"10106","4840","Nick_Cummins","Nick_Cummins","Nick_Cummins",NA,NA
 "Q63760015","Guglielmo Colussi","Guglielmo","Colussi","male","1938-03-22","1938-3-22","Roma","2016-02-19","2016-2-19","Roma","Italy; Kingdom of Italy",NA,NA,NA,NA,NA,NA,"6129",NA,"11h79rb9wc",NA,NA,NA,"Guglielmo_Colussi","Guglielmo_Colussi",NA,NA
 "Q6378253","Katsuyuki Kiyomiya","かつゆき",NA,"male","1967-07-17","1967-7-17","Osaka",NA,NA,NA,"Japan",NA,"number 8; flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Katsuyuki_Kiyomiya",NA,NA,NA,"%E6%B8%85%E5%AE%AE%E5%85%8B%E5%B9%B8"
@@ -20687,6 +20754,7 @@
 "Q65044875","William Fuller","William","Fuller","male","1883-04-09","1883-4-9","Christchurch","1957-07-25","1957-7-25",NA,"New Zealand",NA,"fly-half",NA,NA,NA,NA,"2149",NA,"11hydb_76t",NA,NA,"William_Fuller_(rugby_union)",NA,NA,NA,NA
 "Q65044880","Alexander Kirkpatrick","Alexander","Kirkpatrick","male","1898-01-01","1898-1-1","Northern Ireland","1971-08-25","1971-8-25",NA,NA,NA,"hooker",NA,NA,NA,NA,NA,NA,"11hydbrjr9",NA,NA,"Alexander_Kirkpatrick_(rugby_union)",NA,NA,NA,NA
 "Q65044903","Charles Jones","Charles","Jones","male","1893-01-01","1893-1-1","Cardiff","1960-01-19","1960-1-19",NA,NA,NA,"flanker",NA,NA,NA,NA,"2599",NA,"11fls3p3kt",NA,NA,"Charles_Jones_(rugby_union,_born_1893)",NA,NA,NA,NA
+"Q65047661","Stan Anderson","Stan","Anderson","male","1871-01-01","1871-1-1","Walker","1942-02-12","1942-2-12",NA,NA,NA,"winger",NA,NA,NA,NA,NA,NA,"11h426gm7f",NA,NA,"Stan_Anderson_(rugby_union)",NA,NA,NA,NA
 "Q65053769","William Anderson","William","Anderson","male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11fm73smv2",NA,NA,"William_Anderson_(rugby_union)",NA,NA,NA,NA
 "Q65054394","Kenny Smith","Kenny","Smith","male",NA,NA,"Ireland",NA,NA,NA,NA,NA,"winger",NA,NA,NA,NA,NA,NA,"11hz3jsmw_",NA,NA,"Kenny_Smith_(rugby_union)",NA,NA,NA,NA
 "Q65054647","Noel Healy","Noel","Healy","male","1959-11-20","1959-11-20","Limerick",NA,NA,NA,"Ireland",NA,"prop",NA,NA,NA,NA,NA,NA,"11f2ch_027",NA,NA,"Noel_Healy",NA,NA,NA,NA
@@ -20939,6 +21007,7 @@
 "Q66980706","Ignacio Dotti","Ignacio","Dotti","male","1994-08-18","1994-8-18","Montevideo",NA,NA,NA,"Uruguay",NA,"lock",NA,NA,NA,NA,"261655","ignacio-dotti","11fn46mpdb","31799",NA,"Ignacio_Dotti","Ignacio_Dotti",NA,"Ignacio_Dotti","%E3%82%A4%E3%82%B0%E3%83%8A%E3%82%B7%E3%82%AA%E3%83%BB%E3%83%89%E3%83%83%E3%83%86%E3%82%A3"
 "Q66982840","Rodrigo Bruno","Alejandro; Rodrigo","Bruno","male","1987-05-15","1987-5-15","Villa María",NA,NA,NA,"Argentina",NA,"number 8",NA,NA,"107; 235","75; 191","97040",NA,"11h_11crqw","19782",NA,"Rodrigo_Bruno",NA,"Rodrigo_Bruno",NA,NA
 "Q6698976","Ludovic Stuart","Ludovic","Stuart","male",NA,NA,NA,NA,NA,NA,"United Kingdom",NA,"lock",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ludovic_Stuart",NA,NA,NA,NA
+"Q67008145","Kyle Baillie","Kyle","Baillie","male","1991-04-07","1991-4-7","St. Albert",NA,NA,NA,NA,NA,"lock",NA,NA,NA,NA,NA,NA,"11fn46y_60",NA,NA,"Kyle_Baillie",NA,NA,NA,"%E3%82%AB%E3%82%A4%E3%83%AB%E3%83%BB%E3%83%99%E3%82%A4%E3%83%AA%E3%83%BC"
 "Q6701679","Lukas Hinds-Johnson","Lukas","Johnson","male","1988-12-25","1988-12-25",NA,NA,NA,NA,"Germany",NA,"lock",NA,NA,NA,NA,"110156",NA,NA,NA,NA,"Lukas_Hinds-Johnson",NA,NA,NA,NA
 "Q6701709","Lukas Rosenthal","Lukas","Rosenthal","male","1988-07-07","1988-7-7",NA,NA,NA,NA,"Germany",NA,"number 8",NA,NA,NA,NA,"110159",NA,NA,NA,NA,"Lukas_Rosenthal",NA,NA,NA,NA
 "Q67017307","Fotu Lokotui",NA,NA,"male","1992-03-19","1992-3-19","Tonga",NA,NA,NA,"Tonga",NA,"flanker",NA,NA,"110","1.8","231129","fotu-lokotui","11h_44pz_6","26587","1754","Fotu_Lokotui","Fotu_Lokotui",NA,NA,"%E3%83%95%E3%82%A9%E3%83%88%E3%82%A5%E3%83%BB%E3%83%AD%E3%82%B3%E3%83%88%E3%82%A5%E3%82%A4"
@@ -21156,6 +21225,7 @@
 "Q6791026","Matthew Nuthall","Matthew",NA,"male","1983-07-06","1983-7-6","Pontypridd",NA,NA,NA,"United Kingdom","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Matthew_Nuthall",NA,NA,NA,NA
 "Q6791076","Matthew Pewtner","Matthew",NA,"male","1990-12-26","1990-12-26","Newport",NA,NA,NA,"United Kingdom","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Matthew_Pewtner",NA,NA,NA,NA
 "Q6791131","Matthew Ridge","John; Matthew","Ridge","male","1968-08-27","1968-8-27","Rotorua",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Matthew_Ridge",NA,NA,NA,NA
+"Q6791147","Matthew Robinson","Matthew","Robinson","male","1973-04-02","1973-4-2","Cardiff",NA,NA,NA,"United Kingdom","Wales","winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Matthew_Robinson_(sportsman,_born_1973)",NA,NA,NA,NA
 "Q6791164","Matthew Rosslee","Matthew","Rosslee","male","1987-02-24","1987-2-24","Cape Town",NA,NA,NA,"South Africa",NA,"centre",NA,NA,NA,NA,NA,NA,NA,"14451",NA,"Matthew_Rosslee",NA,NA,NA,NA
 "Q6791226","Matthew Silva","Matthew","Silva","male","1970-03-15","1970-3-15","Tremorfa",NA,NA,NA,NA,NA,"winger; centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Matthew_Silva_(coach)",NA,NA,NA,NA
 "Q6791303","Matthew Tayler-Smith","Matthew",NA,"male","1987-04-22","1987-4-22","Gqeberha",NA,NA,NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Matthew_Tayler-Smith",NA,NA,NA,NA
@@ -21305,6 +21375,7 @@
 "Q6880904","Mitch Inman","Mitch",NA,"male","1988-10-24","1988-10-24","Sydney",NA,NA,NA,"Australia",NA,"centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mitch_Inman",NA,NA,NA,NA
 "Q6881163","Mitchell Chapman","Mitchell","Chapman","male","1983-03-15","1983-3-15","Sydney",NA,NA,NA,"Australia",NA,"lock; flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Mitchell_Chapman",NA,NA,NA,NA
 "Q6881187","Mitchell Crosswell","Mitchell",NA,"male","1988-11-14","1988-11-14","Feilding",NA,NA,NA,"New Zealand",NA,"flanker",NA,NA,NA,NA,NA,NA,NA,"30020",NA,"Mitchell_Crosswell",NA,NA,NA,NA
+"Q68817398","Andrew Coe","Andrew","Coe","male","1996-01-01","1996-1-1","Brampton",NA,NA,NA,NA,NA,"fullback",NA,NA,NA,NA,NA,NA,"11fnqszsfq",NA,NA,"Andrew_Coe",NA,NA,"Andrew_Coe","%E3%82%A2%E3%83%B3%E3%83%89%E3%83%AA%E3%83%A5%E3%83%BC%E3%83%BB%E3%82%B3%E3%83%BC"
 "Q68920269","Michael du Plessis","Michael",NA,"male","1958-11-04","1958-11-4","Somerset East",NA,NA,NA,NA,NA,"centre",NA,NA,NA,NA,NA,NA,"11h_w1p8b6",NA,NA,"Michael_du_Plessis",NA,NA,NA,NA
 "Q68941886","Jack O'Sullivan","Jack","O'Sullivan","male","1998-10-01","1998-10-1","Cork",NA,NA,NA,"Ireland","Ireland","flanker",NA,NA,NA,NA,"298680","jack-o-sullivan","11h_w1zj_1","42353",NA,"Jack_O%27Sullivan_(rugby_union)",NA,NA,NA,"%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%AA%E3%82%B5%E3%83%AA%E3%83%90%E3%83%B3"
 "Q68941934","Keynan Knox",NA,"Knox","male","1999-04-06","1999-4-6","South Africa",NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,NA,"keynan-knox","11h5mkl9rl","45301",NA,"Keynan_Knox",NA,NA,NA,NA
@@ -21379,6 +21450,7 @@
 "Q69749212","Agustín Della Corte","Agustín","Della Corte","male","1997-09-11","1997-9-11","Paysandú",NA,NA,NA,"Uruguay",NA,"centre",NA,NA,NA,NA,"295305","agustin-della-corte","11fnvrtj7c","37326",NA,"Agust%C3%ADn_Della_Corte",NA,NA,"Agust%C3%ADn_Della_Corte",NA
 "Q69749287","Joaquín Jaunsolo","Joaquín",NA,"male","1998-09-12","1998-9-12","Montevideo",NA,NA,NA,NA,NA,"prop",NA,NA,NA,NA,"301647","joaquin-jaunsolo","11fnxrnrdt","11512",NA,"Joaqu%C3%ADn_Jaunsolo",NA,NA,NA,NA
 "Q69749364","Federico Favaro","Federico","Favaro","male","1991-05-19","1991-5-19","Montevideo",NA,NA,NA,NA,NA,"winger",NA,NA,NA,NA,"157379","federico-favaro","11h7rgg2nw","23620",NA,"Federico_Favaro",NA,NA,NA,"%E3%83%95%E3%82%A7%E3%83%87%E3%83%AA%E3%82%B3%E3%83%BB%E3%83%95%E3%82%A1%E3%83%90%E3%83%AD"
+"Q69760093","Kyle Sumsion","Kyle",NA,"male","1993-10-29","1993-10-29","American Fork",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h__yd2yt",NA,NA,"Kyle_Sumsion",NA,NA,NA,NA
 "Q69794451","Cam Polson","Cam","Polson","male","1989-09-20","1989-9-20","London",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h__x_czy",NA,NA,"Cam_Polson",NA,NA,NA,NA
 "Q69803184","Tim Cocks","Tim",NA,"male","1952-09-29","1952-9-29","Durban",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11f0yr4yyr",NA,NA,"Tim_Cocks",NA,NA,NA,NA
 "Q69818609","Dave Frederickson","Dave","Frederickson","male","1950-08-17","1950-8-17","Lichtenburg",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h7rghsp2",NA,NA,"Dave_Frederickson_(rugby_union)",NA,NA,NA,NA
@@ -21549,6 +21621,7 @@
 "Q71332820","John Villet","John",NA,"male","1954-11-03","1954-11-3","Ceres",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11fyv_1kht",NA,NA,"John_Villet",NA,NA,NA,NA
 "Q71333187","Stan South","Stan",NA,"male","1996-01-01","1996-1-1","Southampton",NA,NA,NA,NA,NA,"lock",NA,NA,NA,NA,NA,NA,"11h804k48c",NA,NA,"Stan_South",NA,NA,NA,NA
 "Q71333541","Josua Vici","Josua","Vici","male","1994-02-20","1994-2-20","Kadavu Island",NA,NA,NA,NA,NA,"winger",NA,NA,NA,NA,NA,"josua-vici","11j06kr245","36936",NA,"Josua_Vici","Josua_Vici",NA,NA,NA
+"Q71335016","Savenaca Tamaibeka",NA,NA,"male",NA,NA,NA,"1959-03-06","1959-3-6","Suva",NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h7xx5kcb",NA,NA,"Savenaca_Tamaibeka",NA,NA,NA,NA
 "Q7143337","Pat Creedy","Pat",NA,"male","1920-01-01","1920-1-1","New Zealand","2011-04-07","2011-4-7","Wyndham","New Zealand",NA,"scrum-half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Pat_Creedy",NA,NA,NA,NA
 "Q7143404","Pat Duignan","Pat",NA,"male","1972-05-01","1972-5-1",NA,NA,NA,NA,"Canada",NA,"centre",NA,NA,NA,NA,"13032",NA,NA,NA,NA,"Pat_Duignan",NA,NA,NA,NA
 "Q7143511","Pat Hannigan","Pat",NA,"male",NA,NA,NA,"1964-04-14","1964-4-14",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Pat_Hannigan_(rugby)",NA,NA,NA,NA
@@ -21783,7 +21856,7 @@
 "Q724072","Bob Scott","Henry; Robert; William","Scott","male","1921-02-06","1921-2-6","Wellington","2012-11-16","2012-11-16","Whangamatā","New Zealand",NA,"fullback",NA,NA,NA,NA,"4855",NA,NA,NA,NA,"Bob_Scott_(rugby)","Bob_Scott",NA,NA,NA
 "Q72474620","Sean McNulty","Sean","McNulty","male","1995-07-10","1995-7-10","London",NA,NA,NA,NA,NA,"hooker",NA,NA,NA,NA,NA,NA,"11j0hz9bfx",NA,NA,"Sean_McNulty",NA,NA,NA,NA
 "Q725298","Ondřej Sekora","Ondřej","Sekora","male","1899-09-25","1899-9-25","Královo Pole","1967-07-04","1967-7-4","Prague","Czechoslovakia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ond%C5%99ej_Sekora","Ond%C5%99ej_Sekora",NA,NA,NA
-"Q725555","J. P. R. Williams","John","Williams","male","1949-03-02","1949-3-2","Bridgend","2024-01-08","2024-1-8","Cardiff","United Kingdom","Wales","fullback","1967",NA,"89","185","7443",NA,NA,NA,NA,"J._P._R._Williams","JPR_Williams","J._P._R._Williams","J._P._R._Williams",NA
+"Q725555","J. P. R. Williams","John","Williams","male","1949-03-02","1949-3-2","Bridgend","2024-01-08","2024-1-8","Cardiff","United Kingdom","Wales","fullback","1967",NA,"89","185","7443",NA,NA,NA,"19977","J._P._R._Williams","JPR_Williams","J._P._R._Williams","J._P._R._Williams",NA
 "Q725671","Michael Jones","Michael; Niko","Jones","male","1965-04-08","1965-4-8","Auckland",NA,NA,NA,"New Zealand",NA,"flanker","1983","1999","98","185","10072",NA,NA,NA,"1189","Michael_Jones_(rugby_union)","Michael_Jones_(rugby_%C3%A0_XV)","Michael_Jones_(rugbista)","Michael_Jones_(rugbista)","%E3%83%9E%E3%82%A4%E3%82%B1%E3%83%AB%E3%83%BB%E3%82%B8%E3%83%A7%E3%83%BC%E3%83%B3%E3%82%BA_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q72574237","Frans Erasmus","Frans",NA,"male","1959-06-19","1959-6-19","Ceres","1998-03-07","1998-3-7",NA,NA,NA,NA,NA,NA,NA,NA,"10027",NA,"11hf00d3_2",NA,NA,"Frans_Erasmus_(rugby_union)",NA,NA,NA,NA
 "Q7258286","Puddin Colton","Thomas",NA,"male","1874-01-01","1874-1-1","Brisbane","1958-01-01","1958-1-1",NA,NA,NA,"flanker",NA,NA,NA,NA,"1651",NA,NA,NA,NA,"Puddin_Colton",NA,NA,NA,NA
@@ -21922,6 +21995,7 @@
 "Q7327089","Richard Kingi","Richard","Kingi","male","1989-03-17","1989-3-17","Tauranga",NA,NA,NA,"Australia; New Zealand",NA,"scrum-half",NA,NA,NA,NA,NA,"richard-kingi",NA,"13650",NA,"Richard_Kingi",NA,NA,NA,NA
 "Q7327253","Richard Langmead","Richard","Langmead","male","1972-01-01","1972-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Richard_Langmead",NA,NA,NA,NA
 "Q7327790","Richard Metcalfe","Richard",NA,"male","1973-11-21","1973-11-21","Leeds",NA,NA,NA,"United Kingdom",NA,"lock",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Richard_Metcalfe",NA,NA,NA,NA
+"Q7327931","Richard Muagututia","Richard","Muagututia","male","1988-01-07","1988-1-7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Richard_Muagututia",NA,NA,NA,NA
 "Q7327965","Richard Mustoe","Richard","Mustoe","male","1981-12-09","1981-12-9","Bridgend",NA,NA,NA,"United Kingdom","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Richard_Mustoe",NA,NA,NA,NA
 "Q7328000","Richard Nancekivell","Richard",NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Richard_Nancekivell",NA,NA,NA,NA
 "Q7328200","Richard Osborne","Richard","Osborne","male","1848-05-20","1848-5-20","Middleham","1926-11-04","1926-11-4","Rochdale","United Kingdom of Great Britain and Ireland",NA,"fullback",NA,NA,NA,NA,"262",NA,NA,NA,NA,"Richard_Osborne_(rugby_union)","Richard_Osborne_(rugby)",NA,NA,NA
@@ -21964,6 +22038,7 @@
 "Q7340357","Rob McCusker","Rob","McCusker","male","1985-12-10","1985-12-10","Wrexham",NA,NA,NA,"United Kingdom",NA,"flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rob_McCusker",NA,NA,NA,NA
 "Q7340376","Rob Miller","Rob","Miller","male","1989-08-05","1989-8-5","Carlisle",NA,NA,NA,"United Kingdom","England","fullback",NA,"2022","86","180","27195","rob-miller",NA,"12577","12220","Rob_Miller_(rugby_union)","Rob_Miller","Rob_Miller",NA,NA
 "Q7340378","Rob Milligan","Rob","Milligan","male","1990-04-17","1990-4-17","Northampton",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rob_Milligan_(rugby_union)",NA,NA,NA,NA
+"Q7340385","Rob Moffat","Rob","Moffat","male",NA,NA,NA,NA,NA,NA,NA,"Scotland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rob_Moffat",NA,NA,NA,NA
 "Q7340430","Rob O'Donnell","Rob","O'Donnell","male","1985-12-15","1985-12-15","Liverpool",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rob_O%27Donnell",NA,NA,NA,NA
 "Q7340460","Rob Penney","Rob",NA,"male","1964-04-27","1964-4-27","New Zealand",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rob_Penney",NA,NA,NA,"%E3%83%AD%E3%83%96%E3%83%BB%E3%83%9A%E3%83%8B%E3%83%BC"
 "Q7340601","Rob Thirlby","Rob","Thirlby","male","1979-03-02","1979-3-2","Redruth",NA,NA,NA,NA,NA,"winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rob_Thirlby",NA,NA,NA,NA
@@ -22027,7 +22102,7 @@
 "Q7352334","Robin Copeland","Robin","Copeland","male","1987-10-23","1987-10-23","Wexford",NA,NA,NA,"Ireland",NA,"lock",NA,NA,NA,NA,"169070","robin-copeland",NA,"22040","13720","Robin_Copeland","Robin_Copeland",NA,NA,NA
 "Q7352339","Robin Cowling","Robin","Cowling","male","1944-03-24","1944-3-24",NA,NA,NA,NA,"United Kingdom",NA,"prop",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Robin_Cowling",NA,NA,NA,NA
 "Q7352426","Robin Gourley","Robin","Gourley","male","1935-11-19","1935-11-19","County Tyrone","2021-01-01","2021-1-1",NA,"Ireland; Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Robin_Gourley",NA,NA,NA,NA
-"Q73527192","Cadan Murley",NA,"Murley","male","1999-07-31","1999-7-31","Frimley",NA,NA,NA,"United Kingdom","England","winger",NA,NA,"82","175","28736","cadan-murley","11h8br_6l1","298632","18717","Cadan_Murley","Cadan_Murley","Cadan_Murley","Cadan_Murley",NA
+"Q73527192","Cadan Murley",NA,"Murley","male","1999-07-31","1999-7-31","Frimley",NA,NA,NA,"United Kingdom","England","winger",NA,NA,"82","175","28736","cadan-murley","11h8br_6l1","298632","18717","Cadan_Murley","Cadan_Murley","Cadan_Murley","Cadan_Murley","%E3%82%B1%E3%82%A4%E3%83%80%E3%83%B3%E3%83%BB%E3%83%9E%E3%83%BC%E3%83%AA%E3%83%BC"
 "Q7352890","Robin Wright","Robin","Wright","male","1900-01-01","1900-1-1",NA,"1955-12-07","1955-12-7",NA,NA,NA,"fullback","1912","1912",NA,NA,"2278",NA,NA,NA,NA,"Robin_Wright_(rugby_union)",NA,NA,NA,NA
 "Q73537047","Archie White","Archie","White","male","1997-08-05","1997-8-5","Chertsey",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,NA,"archie-white","11fpjwzs0l",NA,NA,"Archie_White_(rugby_union)",NA,NA,NA,NA
 "Q7353730","Rocco Jansen","Rocco","Jansen","male","1986-07-21","1986-7-21","Queenstown",NA,NA,NA,"South Africa",NA,"winger",NA,NA,NA,NA,NA,NA,NA,"8067",NA,"Rocco_Jansen",NA,NA,NA,NA
@@ -22059,7 +22134,7 @@
 "Q7359082","Roger Walker","Roger","Walker","male","1846-09-18","1846-9-18","Bury","1919-11-11","1919-11-11","Reading","United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"333",NA,NA,NA,NA,"Roger_Walker_(rugby_union)",NA,NA,NA,NA
 "Q7359172","Roger Young","Roger","Young","male","1943-06-29","1943-6-29",NA,NA,NA,NA,"United Kingdom",NA,"scrum-half",NA,NA,NA,NA,"6976",NA,NA,NA,NA,"Roger_Young_(rugby_union)",NA,NA,NA,NA
 "Q7359679","Rohan Hoffmann","Rohan","Hoffmann","male","1972-01-14","1972-1-14","Brisbane",NA,NA,NA,"Australia","Portugal","fly-half; fullback",NA,NA,NA,NA,"12173",NA,NA,NA,NA,"Rohan_Hoffmann",NA,NA,NA,NA
-"Q7359691","Rohan Kitshoff","Rohan","Kitshoff","male","1985-09-13","1985-9-13","Windhoek",NA,NA,NA,"Namibia",NA,"flanker",NA,NA,NA,NA,"129689","rohan-kitshoff",NA,"8311",NA,"Rohan_Kitshoff","Rohan_Kitshoff",NA,NA,NA
+"Q7359691","Rohan Kitshoff","Rohan","Kitshoff","male","1985-09-13","1985-9-13","Windhoek",NA,NA,NA,"Namibia",NA,"flanker",NA,NA,NA,NA,"129689","rohan-kitshoff",NA,"8311","20052","Rohan_Kitshoff","Rohan_Kitshoff",NA,NA,NA
 "Q7360243","Roland Gordon","Roland","Gordon","male","1883-01-22","1883-1-22",NA,"1918-08-30","1918-8-30",NA,"United Kingdom of Great Britain and Ireland",NA,"centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Roland_Gordon",NA,NA,NA,NA
 "Q7360398","Roland Raymond","Roland","Raymond","male","1899-01-12","1899-1-12",NA,"1964-01-29","1964-1-29",NA,NA,NA,"winger",NA,NA,NA,NA,"2685",NA,NA,NA,NA,"Roland_Raymond",NA,NA,NA,NA
 "Q7360447","Roland Suniula","Roland",NA,"male","1986-12-17","1986-12-17","Pago Pago",NA,NA,NA,"United States",NA,"centre",NA,NA,"91","173","97472",NA,NA,NA,NA,"Roland_Suniula",NA,"Roland_Suniula",NA,NA
@@ -22172,6 +22247,7 @@
 "Q7385230","Rynier Bernardo",NA,"Bernardo","male","1991-08-27","1991-8-27","Pretoria",NA,NA,NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rynier_Bernardo",NA,NA,NA,"%E3%83%AA%E3%83%8B%E3%83%BC%E3%82%A2%E3%83%BB%E3%83%99%E3%83%AB%E3%83%8A%E3%83%AB%E3%83%89"
 "Q7385236","Ryno Barnes","Joseph; Ryno","Barnes","male","1981-11-05","1981-11-5","Cape Town",NA,NA,NA,"South Africa",NA,"hooker",NA,NA,NA,NA,NA,NA,NA,"8204",NA,"Ryno_Barnes",NA,NA,NA,NA
 "Q7392708","SP Marais","Petrus; Sarel","Marais","male","1989-03-16","1989-3-16","Parow",NA,NA,NA,"South Africa",NA,"fullback","2008",NA,NA,NA,NA,NA,NA,NA,NA,"SP_Marais",NA,NA,"SP_Marais","%E3%82%A8%E3%82%B9%E3%83%94%E3%83%BC%E3%83%BB%E3%83%9E%E3%83%AC%E3%83%BC"
+"Q7400454","Sailosi Kepa",NA,NA,"male","1938-11-04","1938-11-4",NA,"2004-03-01","2004-3-1",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Sailosi_Kepa",NA,NA,NA,NA
 "Q7400475","Saimoni Rokini",NA,NA,"male","1972-12-09","1972-12-9",NA,NA,NA,NA,"Fiji",NA,"winger",NA,NA,NA,NA,"13377",NA,NA,NA,NA,"Saimoni_Rokini",NA,NA,NA,NA
 "Q7402839","Sakaria Taulafo",NA,NA,"male","1983-01-29","1983-1-29","Motoʻotua",NA,NA,NA,"New Zealand",NA,"prop","2003",NA,NA,NA,"100711","sakaria-taulafo",NA,"9972","3082","Sakaria_Taulafo","Sakaria_Taulafo",NA,"Sakaria_Taulafo",NA
 "Q740409","Marc Stcherbina","Marc",NA,"male","1976-12-07","1976-12-7","Sydney",NA,NA,NA,"Australia",NA,"centre",NA,NA,NA,NA,"27715",NA,NA,"23",NA,"Marc_Stcherbina","Marc_Stcherbina",NA,NA,NA
@@ -22352,7 +22428,7 @@
 "Q7491493","Shawn van Rensburg","Shawn",NA,"male",NA,NA,NA,NA,NA,NA,"South Africa",NA,"flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Shawn_van_Rensburg",NA,NA,NA,NA
 "Q7492832","Shehan Pathirana",NA,NA,"male","1992-01-27","1992-1-27",NA,NA,NA,NA,"Sri Lanka",NA,NA,NA,NA,NA,NA,"298119",NA,NA,NA,NA,"Shehan_Pathirana",NA,NA,NA,NA
 "Q7495474","Sherwin Stowers","Sherwin",NA,"male","1986-05-19","1986-5-19","Auckland",NA,NA,NA,"New Zealand",NA,"winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Sherwin_Stowers",NA,NA,NA,NA
-"Q7496427","Shiggy Konno","滋","Konno","male","1922-07-07","1922-7-7",NA,"2007-04-01","2007-4-1",NA,"Japan; Empire of Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Shiggy_Konno",NA,NA,"Shiggy_Konno","%E9%87%91%E9%87%8E%E6%BB%8B"
+"Q7496427","Shiggy Konno","滋","金野","male","1922-07-07","1922-7-7",NA,"2007-04-01","2007-4-1",NA,"Japan; Empire of Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Shiggy_Konno",NA,NA,"Shiggy_Konno","%E9%87%91%E9%87%8E%E6%BB%8B"
 "Q7500091","Shogo Mukai","Shōgo",NA,"male","1961-10-02","1961-10-2","Japan",NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,"9898",NA,NA,NA,NA,"Shogo_Mukai",NA,NA,NA,"%E5%90%91%E4%BA%95%E6%98%AD%E5%90%BE"
 "Q7500264","Sholto Taylor",NA,"Taylor","male","1972-09-01","1972-9-1",NA,NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Sholto_Taylor",NA,NA,NA,NA
 "Q7500327","Shon Siemonek",NA,NA,"male",NA,NA,NA,NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Shon_Siemonek",NA,NA,NA,NA
@@ -22918,6 +22994,7 @@
 "Q7823136","Tony Paskins","Tony","Paskins","male","1927-12-05","1927-12-5",NA,"2019-08-15","2019-8-15",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Tony_Paskins",NA,NA,NA,NA
 "Q7823318","Tony Roques","Tony",NA,"male","1978-09-07","1978-9-7","Bromley",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Tony_Roques",NA,NA,NA,NA
 "Q7823392","Tony Shaw","Tony","Shaw","male","1953-03-23","1953-3-23","Brisbane",NA,NA,NA,"Australia",NA,"lock; flanker",NA,NA,NA,NA,"8173",NA,NA,NA,NA,"Tony_Shaw_(rugby_union)","Tony_Shaw",NA,NA,NA
+"Q78234249","David Wrench","David",NA,"male","1936-11-27","1936-11-27",NA,"2018-06-18","2018-6-18","Durston","United Kingdom",NA,NA,NA,NA,NA,NA,NA,NA,"11h9g85r3p",NA,NA,"David_Wrench_(rugby_union)",NA,NA,NA,NA
 "Q7823483","Tony Steel","Tony","Steel","male","1941-07-31","1941-7-31","Greymouth","2018-05-04","2018-5-4","Hamilton","New Zealand",NA,"winger",NA,NA,NA,NA,"7119",NA,NA,NA,NA,"Tony_Steel",NA,NA,NA,NA
 "Q7823553","Tony Thoma","Tony",NA,"male","1977-04-01","1977-4-1","South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q7827255","Torsten Schippe","Torsten","Schippe","male",NA,NA,NA,NA,NA,NA,"Germany",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Torsten_Schippe",NA,NA,NA,NA
@@ -23232,6 +23309,7 @@
 "Q8070441","Zhang Zhiqiang",NA,NA,"male","1978-12-15","1978-12-15","Zibo",NA,NA,NA,"People's Republic of China",NA,"fly-half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Zhang_Zhiqiang_(rugby_union)",NA,NA,NA,"%E5%BC%B5%E5%BF%97%E5%BC%B7_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)"
 "Q80836930","Nicolás Solveyra",NA,NA,"male","1995-03-10","1995-3-10","Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q80863158","David O'Connor","David","O'Connor","male","1995-05-19","1995-5-19","Dublin",NA,NA,NA,"Ireland",NA,"lock",NA,NA,NA,NA,NA,NA,"11j3rnvtpg","33948",NA,"David_O%27Connor_(rugby_union)",NA,NA,NA,NA
+"Q80863264","Doug Fraser","Doug","Fraser","male","1992-08-05","1992-8-5","Belleville",NA,NA,NA,"Canada",NA,"centre",NA,NA,NA,NA,NA,NA,"11h7rgn8d2",NA,NA,"Doug_Fraser_(rugby_union)",NA,NA,NA,NA
 "Q80863651","Luke Campbell","Luke","Campbell","male","1992-01-01","1992-1-1","Victoria",NA,NA,NA,"Canada",NA,"number 8",NA,NA,NA,NA,NA,NA,"11fnqt2qm8",NA,NA,"Luke_Campbell_(rugby_union,_born_1992)",NA,NA,NA,"%E3%83%AB%E3%83%BC%E3%82%AF%E3%83%BB%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%99%E3%83%AB"
 "Q80863890","Peter Dahl","Peter",NA,"male","1984-11-12","1984-11-12","Christchurch",NA,NA,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,"11f4m44b8k",NA,NA,"Peter_Dahl_(rugby_union)",NA,NA,NA,NA
 "Q80864047","Rowan Osborne","Rowan","Osborne","male","1996-11-03","1996-11-3","Ireland",NA,NA,NA,"Ireland",NA,"scrum-half",NA,NA,NA,NA,NA,NA,"11j1ck_h4j",NA,NA,"Rowan_Osborne_(rugby_union)",NA,NA,NA,NA
@@ -23406,6 +23484,7 @@
 "Q85717517","William Emslie","William",NA,"male","1908-01-01","1908-1-1","New York","1969-01-01","1969-1-1",NA,NA,NA,NA,NA,NA,NA,NA,"3737",NA,"11fsnk2g1s",NA,NA,"William_Emslie",NA,NA,NA,NA
 "Q85747964","Bob Duff","Bob","Duff","male","1925-08-05","1925-8-5","Lyttelton","2006-05-11","2006-5-11",NA,"New Zealand",NA,"lock",NA,NA,NA,NA,"5417",NA,"11h84jvd57",NA,NA,"Bob_Duff_(rugby_union)",NA,NA,NA,NA
 "Q85751511","Alexandre de Nardi","Alexandre","Nardi","male","1999-01-01","1999-1-1","Mont-de-Marsan",NA,NA,NA,"France",NA,"winger",NA,NA,NA,NA,"301532","alexandre-de-nardi","11j2zdg1j3","43785",NA,NA,"Alexandre_de_Nardi",NA,NA,NA
+"Q85758659","Edward Walsh","Edward","Walsh","male","1861-01-01","1861-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h9gls8wl",NA,NA,"Edward_Walsh_(rugby_union)",NA,NA,NA,NA
 "Q85762035","Frederick Murray","Frederick","Murray","male","1871-08-20","1871-8-20",NA,"1952-08-05","1952-8-5",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h84jtmq4",NA,NA,"Frederick_Murray_(rugby_union)",NA,NA,NA,NA
 "Q85762776","Garrett Fitzgerald","Garrett","Fitzgerald","male","1955-01-01","1955-1-1","Knockraha","2020-02-14","2020-2-14",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,"11fsk7x8dy",NA,NA,"Garrett_Fitzgerald_(rugby_union)",NA,NA,NA,NA
 "Q85765847","Harry Roberts","Harry","Roberts","male","1960-12-03","1960-12-3","Lusaka",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11h8h0mpnf",NA,NA,"Harry_Roberts_(rugby_union,_born_1960)",NA,NA,NA,NA
@@ -23419,6 +23498,7 @@
 "Q85771536","John Gordon","John","Gordon","male","1849-11-09","1849-11-9","Clerkenwell",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11j2vvqgxk",NA,NA,"John_Gordon_(rugby_union)",NA,NA,NA,NA
 "Q85792911","Peter Anton","Peter","Anton","male","1850-06-25","1850-6-25","Errol","1911-12-10","1911-12-10",NA,"United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"295",NA,"11j7vj0p3y",NA,NA,"Peter_Anton_(rugby_union)",NA,NA,NA,NA
 "Q85797557","Robert Wilson","Robert","Wilson","male","1854-02-04","1854-2-4","Scotland","1911-07-06","1911-7-6",NA,"United Kingdom of Great Britain and Ireland",NA,NA,NA,NA,NA,NA,"313",NA,"11j2fn7m_c",NA,NA,"Robert_Wilson_(rugby_union,_born_1854)",NA,NA,NA,NA
+"Q85799915","Schalk Burger",NA,NA,"male","1955-10-06","1955-10-6","Cape Town",NA,NA,NA,NA,NA,"lock",NA,NA,NA,NA,NA,NA,"11h5mkp1g1",NA,NA,"Schalk_Burger_(rugby_union,_born_1955)",NA,NA,NA,NA
 "Q85815598","William Bolton","William",NA,"male","1851-03-15","1851-3-15","Stirling","1896-12-05","1896-12-5",NA,NA,NA,NA,NA,NA,NA,NA,"395",NA,"11fskb5lnq",NA,NA,"William_Bolton_(rugby_union)",NA,NA,NA,NA
 "Q85852608","Duglas Kavtelashvili",NA,NA,"male","1947-06-20","1947-6-20","Khashuri","2019-02-24","2019-2-24","Kutaisi",NA,NA,NA,NA,NA,NA,NA,NA,NA,"11hzz6xqnq",NA,NA,NA,NA,NA,NA,NA
 "Q85852807","Bence Roth","Bence","Roth","male","1996-08-02","1996-8-2",NA,NA,NA,NA,"Hungary",NA,"lock",NA,NA,NA,NA,NA,"bence-roth","11fr0t90y3","43423",NA,NA,"Bence_Roth",NA,NA,NA
@@ -23467,7 +23547,7 @@
 "Q86510378","Alex Burin","Alex","Burin","male","1999-12-01","1999-12-1","Loire-Atlantique",NA,NA,NA,"France",NA,"prop",NA,NA,NA,NA,NA,"alex-burin","11fss31z0k","44589",NA,NA,"Alex_Burin",NA,NA,NA
 "Q86517316","Léo Berdeu","Léo","Berdeu","male","1998-06-13","1998-6-13","Cannes",NA,NA,NA,"France",NA,"fly-half",NA,NA,NA,NA,NA,"leo-berdeu","11j331pm2k","40601","16966","L%C3%A9o_Berdeu","L%C3%A9o_Berdeu",NA,NA,NA
 "Q86519210","Quentin Béthune","Quentin","Béthune","male","1995-01-01","1995-1-1","Reims",NA,NA,NA,"France",NA,"prop",NA,NA,NA,NA,NA,"quentin-bethune","11gbhs_d84","33736",NA,NA,"Quentin_B%C3%A9thune",NA,"Quentin_B%C3%A9thune",NA
-"Q86525071","Matthew Tweddle","Matthew",NA,"male","1992-07-01","1992-7-1","South Africa",NA,NA,NA,NA,NA,"number 8",NA,NA,NA,NA,NA,NA,"11fst6fzbr",NA,NA,NA,NA,NA,NA,NA
+"Q86525071","Matthew Tweddle","Matthew",NA,"male","1992-07-01","1992-7-1","South Africa",NA,NA,NA,NA,NA,"number 8",NA,NA,NA,NA,NA,NA,"11fst6fzbr",NA,NA,"Matthew_Tweddle",NA,NA,NA,NA
 "Q86525077","Mirosław Janeczko","Mirosław","Janeczko","male","1961-09-21","1961-9-21","Lublin",NA,NA,NA,"Poland",NA,NA,NA,NA,NA,NA,NA,NA,"11hf79j9ns",NA,NA,NA,NA,NA,NA,NA
 "Q86531009","Luteru Tolai",NA,NA,"male","1998-06-01","1998-6-1","New Zealand",NA,NA,NA,"New Zealand","Samoa","hooker",NA,NA,NA,NA,NA,"luteru-tolai","11fst6c4pd","30649","758","Luteru_Tolai","Luteru_Tolai",NA,NA,"%E3%83%AB%E3%83%86%E3%83%AB%E3%83%BB%E3%83%88%E3%83%A9%E3%82%A4"
 "Q86535608","Andrei Bucurescu","Andrei",NA,"male","1993-12-07","1993-12-7","Romania",NA,NA,NA,NA,NA,"flanker",NA,NA,NA,NA,"202013",NA,"11j331t057","29761",NA,"Andrei_Bucurescu",NA,NA,NA,NA
@@ -24064,6 +24144,7 @@
 "Q96374795","Charles Milne","Charles","Milne","male","1864-05-15","1864-5-15","Kingston",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11jmq8p350",NA,NA,"Charles_Milne_(rugby_union)",NA,NA,NA,NA
 "Q96374799","Charles Stewart","Charles","Stewart","male","1860-05-08","1860-5-8","Glasgow",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11fw9klxby",NA,NA,"Charles_Stewart_(rugby_union)",NA,NA,NA,NA
 "Q96376031","David Fisher","David","Fisher","male","1871-07-04","1871-7-4","Glasgow","1932-10-01","1932-10-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11j6b8bwbc",NA,NA,"David_Fisher_(rugby_union)",NA,NA,NA,NA
+"Q96377911","Filippo Alongi","Filippo",NA,"male","2000-01-01","2000-1-1","Pietrasanta",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11j6jvqcq8",NA,NA,"Filippo_Alongi",NA,NA,NA,NA
 "Q96379347","George Jack","George",NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11ftwc91w7",NA,NA,"George_Jack_(rugby_union)",NA,NA,NA,NA
 "Q96379371","George Robb","George",NA,"male","1858-09-24","1858-9-24","Glasgow","1927-04-15","1927-4-15",NA,NA,NA,NA,NA,NA,NA,NA,"551",NA,"11jg57j2l5",NA,NA,"George_Robb_(rugby_union)",NA,NA,NA,NA
 "Q96379382","George Thomson","George","Thomson","male",NA,NA,NA,"2005-01-01","2005-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11ftlxs4cj",NA,NA,"George_Thomson_(rugby_union,_died_2005)",NA,NA,NA,NA
@@ -24094,9 +24175,11 @@
 "Q96401739","Rhys Davies","Rhys","Davies","male","1998-11-09","1998-11-9","Swansea",NA,NA,NA,"United Kingdom","Wales","lock; flanker",NA,NA,NA,NA,"304083","rhys-davies","11fty_3q89","37189","8672","Rhys_Davies_(rugby_union,_born_November_1998)","Rhys_Davies_(rugby_%C3%A0_XV)",NA,NA,NA
 "Q96402182","Robert Greig","Robert",NA,"male","1871-05-30","1871-5-30","Glasgow","1951-01-10","1951-1-10",NA,NA,NA,NA,NA,NA,NA,NA,"1070",NA,"11jfbwzdfj",NA,NA,"Robert_Greig_(rugby_union)",NA,NA,NA,NA
 "Q96402245","Robert Scott","Robert","Scott","male","1882-01-01","1882-1-1","Hawick","1950-01-01","1950-1-1",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11j5nswcl1",NA,NA,"Robert_Scott_(rugby_union,_born_1882)",NA,NA,NA,NA
+"Q96402252","Robert Strang","Robert",NA,"male",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11fvt33yzg",NA,NA,"Robert_Strang_(physician)",NA,NA,NA,NA
 "Q96402548","Ronald Stevenson","Ronald","Stevenson","male","1873-07-25","1873-7-25","South Shields","1934-02-12","1934-2-12",NA,NA,NA,NA,NA,NA,NA,NA,"1265",NA,"11ft_fqn66",NA,NA,"Ronald_Stevenson_(rugby_union)",NA,NA,NA,NA
 "Q96415167","William Masters","William",NA,"male","1858-06-25","1858-6-25","Edinburgh","1897-10-02","1897-10-2",NA,NA,NA,NA,NA,NA,NA,NA,"477",NA,"11j600fjd9",NA,NA,"William_Masters_(rugby_union)",NA,NA,NA,NA
 "Q96417902","Brian Doyle","Brian","Doyle","male","1985-02-28","1985-2-28","Rockland",NA,NA,NA,"United States",NA,NA,NA,NA,NA,NA,NA,NA,"11j5tnjt1f",NA,NA,"Brian_Doyle_(rugby_union)",NA,NA,NA,NA
+"Q96418470","Gert Muller","Gert",NA,"male",NA,NA,"Vryheid",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11j9cl1z3p",NA,NA,"Gert_Muller_(rugby_union,_born_1948)",NA,NA,NA,NA
 "Q96418675","Joggie Viljoen",NA,NA,"male","1945-05-14","1945-5-14","Cape Town","2023-08-07","2023-8-7",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"11fyyhpk21",NA,NA,"Joggie_Viljoen_(rugby_union,_born_1945)",NA,NA,"Joggie_Viljoen",NA
 "Q96418896","Martiens Louw",NA,NA,"male","1938-04-20","1938-4-20","Germiston","2013-10-12","2013-10-12",NA,NA,NA,NA,NA,NA,NA,NA,"7797",NA,"11jp021kjm",NA,NA,"Martiens_Louw",NA,NA,NA,NA
 "Q964302","John Hayes","John","Hayes","male","1973-11-02","1973-11-2","Dromsally",NA,NA,NA,"Ireland",NA,"prop","1998","2011","125","193","13310",NA,NA,"522","12723","John_Hayes_(rugby_union)","John_Hayes_(rugby_%C3%A0_XV)","John_Hayes_(rugbista)","John_Hayes_(rugbista)",NA

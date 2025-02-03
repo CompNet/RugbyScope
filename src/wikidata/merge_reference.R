@@ -121,7 +121,7 @@ print(which(table(all_teams[, "wikidataId"]) > 1))
 #   # record detailed list
 #   tab <- cbind(country_refs[[country]], wd_teams[idx, c("teamId", "teamLabel")])
 #   tab_file <- file.path(wd_table_folder, paste0(country, "_teams_matches.csv"))
-#   write.csv(tab, tab_file, row.names = FALSE)
+#   write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #   # display misses
 #   missed <- is.na(idx)
@@ -292,7 +292,7 @@ for (m in 1:length(map)) {
 idx <- which(is.na(match(teams[, "wikidataId"], all_teams[, "wikidataId"])))
 # record as CSV to check later
 tab_file <- file.path(wd_stats_folder, "teams_missing_in_reference.csv")
-write.csv(teams[idx, ], tab_file)
+write.csv(teams[idx, ], tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -407,4 +407,4 @@ compl_teams[idx, "tier"] <- "1"
 # record as a new CSV file
 tab.file <- file.path(wd_table_folder, "fusion_teams_wd-dbp-ref.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(compl_teams, tab.file, row.names = FALSE)
+write.csv(compl_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")

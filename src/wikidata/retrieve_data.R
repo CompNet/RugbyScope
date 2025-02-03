@@ -87,7 +87,14 @@ for (q in 1:2) {
 
     # run query
     pl_query <- gsub("QQQQQQ", player_id, query, fixed = TRUE)
-    row <- query_wikidata(pl_query)
+    row <- -1
+	  while (!all(is.na(row)) && all(row == -1)) {
+  	  row <- tryCatch(expr = {query_wikidata(pl_query)}, error = function(e) -1)
+      if (!all(is.na(row)) && all(row == -1)) {
+        tlog(4, "HTTP ERROR while retrieving the data: probably a temporary problem, trying again")
+        Sys.sleep(5)
+      }
+    }
     print.data.frame(row)
     if (nrow(row) > 1)
       stop(paste0("ERROR: several rows returned for one player (some field probably contains multiple values). Player ID= "), player_id)
@@ -178,7 +185,14 @@ for (q in 1:2) {
 
     # run query
     tm_query <- gsub("QQQQQQ", team_id, query, fixed = TRUE)
-    row <- query_wikidata(tm_query)
+    row <- -1
+	  while (!all(is.na(row)) && all(row == -1)) {
+  	  row <- tryCatch(expr = {query_wikidata(tm_query)}, error = function(e) -1)
+      if (!all(is.na(row)) && all(row == -1)) {
+        tlog(4, "HTTP ERROR while retrieving the data: probably a temporary problem, trying again")
+        Sys.sleep(5)
+      }
+    }
     print.data.frame(row)
     if (nrow(row) > 1)
       stop(paste0("ERROR: several rows returned for one team (some field probably contains multiple values). Team ID= "), team_id)
@@ -266,7 +280,14 @@ for (p in 1:length(player_ids)) {
 
   # run query
   cr_query <- gsub("QQQQQQ", player_id, query, fixed = TRUE)
-  rows <- query_wikidata(cr_query)
+  rows <- -1
+  while (!all(is.na(rows)) && all(rows == -1)) {
+    rows <- tryCatch(expr = {query_wikidata(cr_query)}, error = function(e) -1)
+    if (!all(is.na(rows)) && all(rows == -1)) {
+      tlog(4, "HTTP ERROR while retrieving the data: probably a temporary problem, trying again")
+      Sys.sleep(5)
+    }
+  }
   print.data.frame(rows)
 
   # add to table

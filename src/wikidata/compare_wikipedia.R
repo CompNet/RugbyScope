@@ -24,7 +24,7 @@ tab_file <- file.path(wp_table_folder, "all_players_urls.csv")
 tlog("Loading the Wikipedia list of players: \"", tab_file, "\"")
 wp_players <- read.csv(tab_file)
 tlog(2, "Number of players in the WP list: ", nrow(wp_players))
-# write.csv(wp_players, tab_file, row.names = FALSE)
+# write.csv(wp_players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # keep only the name of the WP page (not the beginning of the URL)
 urls <- wp_players[, "url"]
@@ -57,5 +57,9 @@ tlog(2, "WP entries with a WP page that matches a player in our table: ", length
 #
 tlog(2, "List of the WP entries with a WP page not found in our table:")
 print(wp_players[has_wp[is.na(idx)], ])
-write.csv(wp_players[has_wp[is.na(idx)], ], file.path(wp_table_folder, "missing_internationals.csv"))
+tab_file <- file.path(wp_table_folder, "missing_internationals.csv")
+tlog(2, "Exporting as a CSV file in: ", tab_file)
+write.csv(wp_players[has_wp[is.na(idx)], ], tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
+# same thing using names for the players without a WP page(
+# TODO

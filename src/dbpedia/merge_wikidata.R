@@ -84,7 +84,7 @@ idx <- which(is.na(teams_dbp[, "wikidataId"]))
 # export as CSV for later use
 tab_file <- file.path(dpb_stats_folder, "comparison_teams_noid.csv")
 tlog(4, "Exporting as a CSV file: ", tab_file)
-write.csv(teams_dbp[idx, ], tab_file, row.names = FALSE)
+write.csv(teams_dbp[idx, ], tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 # >>> manual examination reveals that these entries are either not rugby union teams
 #     or that these teams have duplicates in DBP
 
@@ -95,7 +95,7 @@ tlog(2, "DBP teams found in the WD table: ", length(which(!is.na(idx))), "/", le
 # export as CSV for later use
 tab_file <- file.path(dpb_stats_folder, "comparison_teams_nomatch.csv")
 tlog(4, "Exporting as a CSV file: ", tab_file)
-write.csv(teams_dbp[hits[which(is.na(idx))], ], tab_file, row.names = FALSE)
+write.csv(teams_dbp[hits[which(is.na(idx))], ], tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 # >>> we get a bunch of entities that are not rugby union teams
 #     some are rugby league, or rugby union management organization,
 #     or even have absolutely nothing to do with rugby.
@@ -114,7 +114,7 @@ idx <- which(is.na(players_dbp[, "wikidataId"]))
 # export as CSV for later use
 tab_file <- file.path(dpb_stats_folder, "comparison_players_noid.csv")
 tlog(4, "Exporting as a CSV file: ", tab_file)
-write.csv(players_dbp[idx, ], tab_file, row.names = FALSE)
+write.csv(players_dbp[idx, ], tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 # >>> manual examination reveals that many of these entries are indeed rugby union
 #     players, but that they are duplicates (due to several name variants) and/or
 #     actually present in the WD table. A lot of entities are also not rugby players,
@@ -127,7 +127,7 @@ tlog(2, "DBP players found in the WD table: ", length(which(!is.na(idx))), "/", 
 # export as CSV for later use
 tab_file <- file.path(dpb_stats_folder, "comparison_players_nomatch.csv")
 tlog(4, "Exporting as a CSV file: ", tab_file)
-write.csv(players_dbp[hits[which(is.na(idx))], ], tab_file, row.names = FALSE)
+write.csv(players_dbp[hits[which(is.na(idx))], ], tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 #     so, mainly false positives in DBP
 
 # temporary tests
@@ -313,7 +313,7 @@ players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
 tab.file <- file.path(dpb_table_folder, "fusion_players_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(players, tab.file, row.names = FALSE)
+write.csv(players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -468,4 +468,4 @@ teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
 tab_file <- file.path(dpb_table_folder, "fusion_teams_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab_file, "\"")
-write.csv(teams, tab_file, row.names = FALSE)
+write.csv(teams, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
