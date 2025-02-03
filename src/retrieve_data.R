@@ -17,9 +17,9 @@
 # retrieve the Wikidata tables: this takes at least several hours
 source("src/wikidata/retrieve_data.R")
 # this produces the following CSV files in folder `data/wikidata/`:
-# - `all_players.csv`: list of players
-# - `all_teams.csv`: list of teams
-# - `all_careers.csv`: career steps
+# - `players.csv`: list of players
+# - `teams.csv`: list of teams
+# - `careers.csv`: career steps
 
 # compute a few stats for these tables
 source("src/wikidata/compute_stats.R")
@@ -32,8 +32,8 @@ source("src/wikidata/compute_stats.R")
 # retrieve the DBpedia tables
 source("src/dbpedia/retrieve_data.R")
 # this produces the following CSV files in folder `data/dbpedia/`:
-# - `all_players.csv`: list of players
-# - `all_teams.csv`: list of teams
+# - `players.csv`: list of players
+# - `teams.csv`: list of teams
 # no career table, as these data are not available on DBpedia
 
 # merge DBpedia data (player and teams) into previously retrieved Wikidata tables

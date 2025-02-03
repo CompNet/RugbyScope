@@ -20,7 +20,7 @@ wp_table_folder <- file.path("data", "wikipedia", "temp_vl")
 
 ########################################################################
 # load Wikipedia list of internationals
-tab_file <- file.path(wp_table_folder, "all_players_urls.csv")
+tab_file <- file.path(wp_table_folder, "international_players_urls.csv")
 tlog("Loading the Wikipedia list of players: \"", tab_file, "\"")
 wp_players <- read.csv(tab_file)
 tlog(2, "Number of players in the WP list: ", nrow(wp_players))

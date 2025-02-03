@@ -55,7 +55,7 @@ ref_folder <- file.path("data", "references")
 
 ########################################################################
 # load WD team table
-wd_teams <- read.csv(file.path(wd_table_folder, "all_teams_descr.csv"))
+wd_teams <- read.csv(file.path(wd_table_folder, "teams_descr.csv"))
 cat("Raw number of teams in WD table:", nrow(wd_teams), "\n")
 
 # load merged data table

@@ -105,6 +105,6 @@ print(sort(table(V(g)$country)))
 print(sort(table(V(g)$competition)))
 
 # export as a graphml file
-net_file <- file.path(net_folder, "all_transfers.graphml")
+net_file <- file.path(net_folder, "transfers.graphml")
 tlog("Recording graph in '", net_file, "'")
 write.graph(g, file = net_file, format = "graphml")

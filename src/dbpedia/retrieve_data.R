@@ -78,7 +78,7 @@ cat("Retrieving the list of players from DBpedia\n")
 query <- readtext(file.path(query_folder, "players_list.sparql"))$text
 
 # run query and get the players (must use a paginated access due to 10000 hit DBpedia limit)
-tab_file <- file.path(table_folder, "all_players_descr.csv")
+tab_file <- file.path(table_folder, "players_descr.csv")
 go_on <- TRUE
 page_nbr <- 1
 pg_limit <- 10000
@@ -363,7 +363,7 @@ print.data.frame(players[1:10, ])
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # export table as a CSV
-write.csv(x = players, file = file.path(table_folder, "all_players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = players, file = file.path(table_folder, "players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -376,7 +376,7 @@ cat("Retrieving the list of teams from DBpedia\n")
 query <- readtext(file.path(query_folder, "teams_list.sparql"))$text
 
 # run query and get the teams
-tab_file <- file.path(table_folder, "all_teams_descr.csv")
+tab_file <- file.path(table_folder, "teams_descr.csv")
 teams <- query_dbpedia(query, file = tab_file)
 cat("Dimension of the teams table:", paste(dim(teams), collapse = ", "), "\n")
 
@@ -439,7 +439,7 @@ print.data.frame(teams[1:10, ])
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # export table as a CSV
-write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = teams, file = file.path(table_folder, "teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -447,13 +447,13 @@ write.csv(x = teams, file = file.path(table_folder, "all_teams_descr.csv"), row.
 ########################################################################
 # extraction of player careers
 ########################################################################
-# this requires field "careerStation", but apparentiyl it is not filled for 
+# this requires field "careerStation", but apparentiyl it is not filled for
 # most rugby players (only a handful of exceptions), whereas I've seen it
 # filled for football players. Here is an example of query to run on
 # https://dbpedia.org/sparql
 ########################################################################
 # PREFIX dbpedia: <http://dbpedia.org/resource/>
-# SELECT 
+# SELECT
 #   ?playerName ?station
 # WHERE
 # { ?player rdf:type dbo:RugbyPlayer.

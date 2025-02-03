@@ -133,6 +133,6 @@ tlog("Number of vertices remaining: ", gorder(g))
 tlog("Number of edges remaining: ", gsize(g))
 
 # export as a graphml file
-net_file <- file.path(net_folder, "all_teammates.graphml")
+net_file <- file.path(net_folder, "teammates.graphml")
 tlog("Recording graph in '", net_file, "'")
 write.graph(g, file = net_file, format = "graphml")

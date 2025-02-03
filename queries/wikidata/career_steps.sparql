@@ -5,7 +5,7 @@
 # It is designed to be called from R, after replacing "QQQQQQ" by the
 # player's proper Wikidata ID.
 # 
-# It is used to produce files `out/wikidata/all_pro_players_careers.csv`.
+# It is used to produce files `out/wikidata/players_careers.csv`.
 #
 # Vincent Labatut
 # 12/2024

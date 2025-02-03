@@ -28,11 +28,11 @@ tlog(0, "Loading DBpedia tables")
 source("src/dbpedia/clean_tables.R")
 
 # load DBpedia teals
-teams_dbp <- read.csv(file.path(dpb_table_folder, "all_teams_descr.csv"))
+teams_dbp <- read.csv(file.path(dpb_table_folder, "teams_descr.csv"))
 tlog(2, "Raw number of DPB teams: ", nrow(teams_dbp))
 
 # load DBpedia players
-players_dbp <- read.csv(file.path(dpb_table_folder, "all_players_descr.csv"))
+players_dbp <- read.csv(file.path(dpb_table_folder, "players_descr.csv"))
 tlog(2, "Raw number of DPB players: ", nrow(players_dbp))
 
 # normalize rugby positions
@@ -48,7 +48,7 @@ source("src/wikidata/clean_tables.R")
 
 ###
 # load Wikidata teams
-teams_wd <- read.csv(file.path(wd_table_folder, "all_teams_descr.csv"))
+teams_wd <- read.csv(file.path(wd_table_folder, "teams_descr.csv"))
 tlog(2, "Raw number of WD teams: ", nrow(teams_wd))
 
 # normalize countries
@@ -58,7 +58,7 @@ teams_wd[, "countryLabels"] <- all_countries
 
 ###
 # load Wikidata players
-players_wd <- read.csv(file.path(wd_table_folder, "all_players_descr.csv"))
+players_wd <- read.csv(file.path(wd_table_folder, "players_descr.csv"))
 tlog(2, "Raw number of WD players: ", nrow(players_wd))
 
 # normalize rugby positions

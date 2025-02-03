@@ -20,13 +20,13 @@ stat_folder <- file.path("data", "wikidata", "stats")
 
 ########################################################################
 # load data tables
-teams <- read.csv(file.path(table_folder, "all_teams_descr.csv"))
+teams <- read.csv(file.path(table_folder, "teams_descr.csv"))
 cat("Raw number of teams:", nrow(teams), "\n")
 
-players <- read.csv(file.path(table_folder, "all_players_descr.csv"))
+players <- read.csv(file.path(table_folder, "players_descr.csv"))
 cat("Raw number of players:", nrow(players), "\n")
 
-careers <- read.csv(file.path(table_folder, "all_players_careers.csv"))
+careers <- read.csv(file.path(table_folder, "players_careers.csv"))
 cat("Raw number of career steps:", nrow(careers), "\n")
 
 
