@@ -6,7 +6,7 @@
 - career steps with missing end date: 
   try to fill based on next step start date?
 
-- virer les treizistes des nvelles données (IR! - SB?)
+- virer les treizistes + joueuses des nvelles données (IR!)
 - normaliser les saisons xx/xx vs xxxx ds IR
 
 

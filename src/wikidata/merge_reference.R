@@ -32,7 +32,6 @@
 ########################################################################
 library("stringi")
 library("stringr")
-library("stringi")
 library("dplyr")
 
 source("src/common/logging.R")
