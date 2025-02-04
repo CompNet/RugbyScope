@@ -46,7 +46,7 @@ get_clean_positions <- function(players) {
   # │  ├─ Scrum-Half
   # │  └─ Fly-Half = First Five-Eighth = Out-Half = Stand-Off"
   # ├─ Three-Quarter
-  # │  ├─ Center
+  # │  ├─ Centre
   # │  │  ├─ Inside Centre = Inside Back = Second Five-Eighth
   # │  │  └─ Outside Centre = Outside Back = Centre Three-Quarter = Outside Half
   # │  └─ Winger = Wing Three Quarter
