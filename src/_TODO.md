@@ -6,10 +6,6 @@
 - career steps with missing end date: 
   try to fill based on next step start date?
 
-- virer les treizistes + joueuses des nvelles données (IR!)
-- normaliser les saisons xx/xx vs xxxx ds IR
-
-
 * NOTES
   - Filtering players depending on whether they played for a club: many are missed
     But if their club is not indicated... maybe they are not important enough?
