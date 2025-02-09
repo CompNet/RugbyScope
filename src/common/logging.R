@@ -29,11 +29,11 @@
 #############################################################################################
 # folder to store log files
 FOLDER_LOG <- "log"
-dir.create(path=FOLDER_LOG, showWarnings=FALSE, recursive=TRUE)
+dir.create(path = FOLDER_LOG, showWarnings = FALSE, recursive = TRUE)
 
 # start time of the log
 START_TIME <- Sys.time()
-# no opened log file 
+# no opened log file
 CONNECTION <- NA
 
 # loop start time
@@ -65,12 +65,13 @@ format.duration <- function(duration)
 	minutes <- duration %/% 60
 	seconds <- duration %% 60
 	if(days>0)
-		res <- sprintf("%02d:%02d:%02d:%02d",days,hours,minutes,seconds)
+		res <- sprintf("%02d:%02d:%02d:%02d", days, hours, minutes, seconds)
 	else
-		res <- sprintf("%02d:%02d:%02d",hours,minutes,seconds)
+		res <- sprintf("%02d:%02d:%02d", hours, minutes, seconds)
 	
 	return(res)
 }
+
 
 
 
@@ -79,16 +80,16 @@ format.duration <- function(duration)
 #
 # text: main name of the log file.
 #############################################################################################
-start.rec.log <- function(text=NA)
+start.rec.log <- function(text = NA)
 {	START_TIME <<- Sys.time()
 	
-	prefix <- format(START_TIME,"%Y%m%d_%H%M%S")
-	log.file <- file.path(FOLDER_LOG,prefix)
+	prefix <- format(START_TIME, "%Y%m%d_%H%M%S")
+	log.file <- file.path(FOLDER_LOG, prefix)
 	if(!is.na(text))
-		log.file <- paste0(log.file,"_",text)
-	log.file <- paste0(log.file,".txt")
-	CONNECTION <<- file(log.file, encoding="UTF8")
-	sink(CONNECTION, append=TRUE, split=TRUE)
+		log.file <- paste0(log.file, "_", text)
+	log.file <- paste0(log.file, ".txt")
+	CONNECTION <<- file(log.file, encoding = "UTF8")
+	sink(CONNECTION, append = TRUE, split = TRUE)
 }
 
 
@@ -113,7 +114,7 @@ end.rec.log <- function()
 #
 # offset: number of "." used to represent the hierarchical level of the message.
 #############################################################################################
-get.log.prefix <- function(offset=NA)
+get.log.prefix <- function(offset = NA)
 {	prefix <- paste0("[",format(Sys.time(),"%a %d %b %Y %X"),"] ")
 	if(!is.na(offset))
 	{	if(is.numeric(offset))
@@ -136,7 +137,7 @@ get.log.prefix <- function(offset=NA)
 # offset: number of "." used to represent the hierarchical level of the message.
 # ...: parameters fetched to the cat function.
 #############################################################################################
-tlog <- function(offset=NA, ...)
+tlog <- function(offset = NA, ...)
 {	prefix <- get.log.prefix(offset)
 	cat(prefix, ..., "\n", sep="")
 }
@@ -153,7 +154,7 @@ tlog <- function(offset=NA, ...)
 # total.it: number of iterations of the loop.
 # ...: parameters fetched to the cat function.
 #############################################################################################
-tlog.start.loop <- function(offset=NA, total.it, ...)
+tlog.start.loop <- function(offset = NA, total.it, ...)
 {	# init variables
 	TOTAL_ITERATIONS <<- c(TOTAL_ITERATIONS, total.it)
 	LOOP_START_TIME <<- c(LOOP_START_TIME, Sys.time())
@@ -175,7 +176,7 @@ tlog.start.loop <- function(offset=NA, total.it, ...)
 # it: current iteration.
 # ...: parameters fetched to the cat function.
 #############################################################################################
-tlog.loop <- function(offset=NA, it, ...)
+tlog.loop <- function(offset = NA, it, ...)
 {	# get prefix
 	prefix <- get.log.prefix(offset)
 	
@@ -201,7 +202,7 @@ tlog.loop <- function(offset=NA, it, ...)
 # offset: number of "." used to represent the hierarchical level of the message.
 # ...: parameters fetched to the cat function.
 #############################################################################################
-tlog.end.loop <- function(offset=NA, ...)
+tlog.end.loop <- function(offset = NA, ...)
 {	# get prefix
 	prefix <- get.log.prefix(offset)
 	
