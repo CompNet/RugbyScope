@@ -51,6 +51,7 @@ POSITIONS = "ポジション"
 CURRENT_TEAM = "在籍チーム"
 PERIOD = "年"
 
+# relevant info sections
 YOUTH_CAREER = "ユース経歴"
 AMAT_CAREER = "アマチュア経歴"
 SENIOR_CAREER = "シニア経歴"
@@ -65,9 +66,31 @@ CAREER_MAP = {
     STATE_CAREER: "Regional",
     INTNL_CAREER: "International"
 }
+
+# irrelevant info sections
 COACH_CAREER = "コーチ歴"
 SEVENS_CAREER = "7人制代表"
-CAREER_DISC = {SEVENS_CAREER, COACH_CAREER}
+REFEREE_CAREER = "レフリー歴"
+CAREER_DISC = {SEVENS_CAREER, COACH_CAREER, REFEREE_CAREER}
+
+
+
+
+########################################################################
+def clean_score_str(text):
+    """Clean strings representing points cored or matches played.
+
+    :param text (str): text to clean.
+    :returns: input string after cleaning (can be empty).
+    """
+
+    text = re.sub("\(\?\)", "", text)
+    text = re.sub("\?", "", text)
+    text = re.sub("\[\d+\]", "", text)
+    text = re.sub(" +", " ", text)
+    text = text.strip()
+
+    return text
 
 
 
@@ -90,8 +113,10 @@ diff_sect = [] # this is for debug
 
 ########################################################################
 # loop over players
-#player_page = "%E3%82%A2%E3%83%B3%E3%83%88%E3%83%AF%E3%83%BC%E3%83%8C%E3%83%BB%E3%83%87%E3%83%A5%E3%83%9D%E3%83%B3"
 p = 1
+# for player_page in ["リオネル・ナレ"]:
+    # orig_name = ""
+    # orig_id = ""
 for _, player in merged_table.iterrows():
     player_page = player["wikipediaJa"]
     orig_name = player["fullName"]
@@ -166,9 +191,15 @@ for _, player in merged_table.iterrows():
                     birth_date = span_elt.get_text(strip=True)
                 else:
                     text = td_elt.get_text(strip=True)
-                    pattern = r"(\d+)[^\d]*(\d+)[^\d]*(\d+)[^\d]*"
+                    pattern = r"(\d+)[^\d]*(\d+|\?+)[^\d]*(\d+|\?+)[^\d]*"
                     vals = re.findall(pattern, text)[0]
-                    birth_date = vals[0] + "-" + f"{int(vals[1]):02d}" + "-" + f"{int(vals[2]):02d}"
+                    month = vals[1]
+                    if re.match(r"\?+", month):
+                        month = "1"
+                    day = vals[2]
+                    if re.match(r"\?+", day):
+                        day = "1"
+                    birth_date = vals[0] + "-" + f"{int(month):02d}" + "-" + f"{int(day):02d}"
                 tlog(2, f"Birth date: {birth_date}")
                 # birth place
                 th_elt = infobox_elt.find("th", string=lambda text: text in BIRTH_PLACE)
@@ -221,9 +252,15 @@ for _, player in merged_table.iterrows():
                     death_date = death_elt.get_text(strip=True)
                 else:
                     text = td_elt.get_text(strip=True)
-                    pattern = r"(\d\d\d\d).(\d+).(\d+).+"
-                    values = re.findall(pattern, text)[0]
-                    death_date = f"{values[0]}-{values[1]}-{values[2]}"
+                    pattern = r"(\d+)[^\d]*(\d+|\?+)[^\d]*(\d+|\?+)[^\d]*"
+                    vals = re.findall(pattern, text)[0]
+                    month = vals[1]
+                    if re.match(r"\?+", month):
+                        month = "1"
+                    day = vals[2]
+                    if re.match(r"\?+", day):
+                        day = "1"
+                    death_date = vals[0] + "-" + f"{int(month):02d}" + "-" + f"{int(day):02d}"
                 tlog(2, f"Death date: {death_date}")
                 # death place
                 th_elt = infobox_elt.find("th", string=lambda text: text in DEATH_PLACE)
@@ -250,7 +287,7 @@ for _, player in merged_table.iterrows():
                 height = th_elt.find_next_siblings()[0].get_text(strip=True)
                 if height != "":
                     height = height.replace(u"\xa0", u" ")
-                    height = height.replace(",", ".")   # in case a comme is used for as a decimal separator
+                    height = height.replace(",", ".")   # in case a comma is used as a decimal separator
                     pattern = r"(\d.?\d\d?) ?c?m.*"
                     vals = re.findall(pattern, height)
                     height = vals[0]
@@ -265,7 +302,7 @@ for _, player in merged_table.iterrows():
             if th_elt:
                 weight = th_elt.find_next_siblings()[0].get_text(strip=True)
                 weight = weight.replace(u"\xa0", u" ")
-                pattern = r"(\d+) ?(?:kg|キログラム).*"
+                pattern = r"(\d+[.,]?\d*) ?(?:kg|キログラム).*"
                 weight = re.findall(pattern, weight)[0]
                 tlog(2, f"Weight: {weight} kg")
             else:
@@ -367,7 +404,8 @@ for _, player in merged_table.iterrows():
                                             matches_played = matches_played + "; "
                                         else:
                                             matches_played = matches_played + matches_elt.get_text(strip=True)
-                                
+                                    matches_played = clean_score_str(matches_played)
+
                                     # points scored
                                     points_scored = ""
                                     pattern = r"(\d+)"
@@ -391,6 +429,7 @@ for _, player in merged_table.iterrows():
                                             tmp = re.findall(pattern, text)
                                             if len(tmp) > 0:
                                                 points_scored = points_scored + tmp[0]
+                                    points_scored = clean_score_str(points_scored)
                                 
                                 # create step
                                 step = [orig_id, orig_name, name, player_page, CAREER_MAP[section], period, team, team_url, matches_played, points_scored]
@@ -400,6 +439,7 @@ for _, player in merged_table.iterrows():
 
                 if not has_career:
                     comment = "Career steps not found"
+                    tlog(2, comment)
 
                 # in case of types of career steps never seen before
                 section_elts = career_elt.find_all("th", colspan="4")
@@ -413,8 +453,8 @@ for _, player in merged_table.iterrows():
 
             # no career found
             else:
-                tlog(2, f"Could not find any career information")
                 comment = "Career block not found"
+                tlog(2, comment)
 
     # record player info
     player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, weight, positions, current_team])

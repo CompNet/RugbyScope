@@ -56,4 +56,25 @@ source("src/wikidata/merge_reference.R")
 
 ########################################################################
 # retrieve the raw data from Wikipedia by looping over the players listed in the above table
+
+# english wikipedia
+# TODO
+
+# french wikipedia
+# TODO
+
+# spanish wikipedia
+# TODO
+
+# italian wikipedia
+# TODO
+
+# japanese wikipedia
+# TODO
+
+
+
+
+########################################################################
+# merge the Wikipedia data with the previous tables
 # TODO
