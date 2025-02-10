@@ -32,42 +32,113 @@ careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 ########################################################################
 # clean the player table
 tlog(0, "Cleaning the player table")
-# TODO
 
-# some rows are only NAs after the first column
-idx <- which(sapply(1:nrow(players), function(r) all(is.na(players[r, 2:ncol(players)]))))
-if (length(idx) > 0) {
-  tlog(2, "Found ", length(idx), "/", nrow(players), " empty rows")
-  players <- players[-idx, ]
-}
+# remove players with no career steps
+# table(players[, "positions"])
+#  [1] "origWdId"     "origName"     "debugComment" "jaName"       "wpPage"      
+#  [6] "birthDate"    "birthPlace"   "birthPlaceWP" "deathDate"    "deathPlace"  
+# [11] "deathPlaceWP" "height"       "weight"       "currentTeam"
 
 # normalize positions
+all_positions <- players[, "positions"]
+all_positions <- gsub("\\[\\d+\\]", "", all_positions, fixed = FALSE)
+all_positions <- gsub("、", "; ", all_positions, fixed = TRUE)
+all_positions <- strsplit(all_positions, "; ")
+unique_positions <- sort(unique(trimws(unlist(all_positions))))
+# position conversion map
 map <- c()
-map["1/2 Melee"] <- "Scrum-Half"
-map["1/2 Ouverture"] <- "Fly-Half"
-map["2eme ligne"] <- "2nd Row"
-map["3eme ligne"] <- "3rd Row"
-map["5/8"] <- "Fly-Half"
-map["Ailier"] <- "Winger"
-map["Arrière"] <- "Fullback"
-map["Centre"] <- "Centre"
-map["Full back"] <- "Fullback"
-map["Hooker"] <- "Hooker"
-map["Lock"] <- "2nd Row"
-map["Pilier"] <- "Prop"
-map["Prop"] <- "Prop"
-map["Talonneur"] <- "Hooker"
-map["Wing"] <- "Winger"
-idx <- which(!is.na(players[, "position"]))
-if (length(idx) > 0)
-  players[, "position"] <- map[players[, "position"]]
+map["BK"] <- "Back"
+map["CTB"] <- "Centre"
+map["FB"] <- "Fullback"
+map["FL"] <- "Flanker"
+map["Flanker"] <- "Flanker"
+map["LO"] <- "Lock"
+map["Lock/Flanker"] <- "Lock; Flanker"
+map["No. 8"] <- "Number 8"
+map["No.8"] <- "Number 8"
+map["NO8"] <- "Number 8"
+map["Number 8"] <- "Number 8"
+map["PR"] <- "Prop"
+map["Second Row Forward"] <- "2nd Row"
+map["SH"] <- "Scrum-Half"
+map["SO"] <- "Fly-Half"
+map["WTB"] <- "Winger"
+map["インサイドセンター"] <- "Inside Centre"
+map["ウィング"] <- "Winger"
+map["ウイング"] <- "Winger"
+map["ウィング(WTB)"] <- "Winger"
+map["ウィング（WTB）"] <- "Winger"
+map["ウィング・スクラムハーフ"] <- "Winger; Scrum-Half"
+map["ウィング・フルバック"] <- "Winger; Fullback"
+map["オープン"] <- "Openside Flanker"
+map["オープンウィングアウトサイドセンター"] <- "Outside Centre"
+map["スクラムハーフ"] <- "Scrum-Half"
+map["スクラムハーフ　ウイング"] <- "Scrum-Half; Winger"
+map["スクラムハーフ/ウィング"] <- "Scrum-Half; Winger"
+map["スタンドオフ"] <- "Fly-Half"
+map["スタンドオフ (フライハーフ)"] <- "Fly-Half"
+map["スタンドオフ センター ウィング フルバック"] <- "Fly-Half; Centre; Winger; Fullback"
+map["スタンドオフ　センター　フルバック"] <- "Fly-Half; Centre; Fullback"
+map["スタンドオフ(SO)"] <- "Fly-Half"
+map["スタンドオフ/センター"] <- "Fly-Half; Centre"
+map["スタンドオフ/フライハーフ（SO/Flyhalf）"] <- "Fly-Half"
+map["スリークォーターバック"] <- "Three-Quarter"
+map["センター"] <- "Centre"
+map["センター (CTB)"] <- "Centre"
+map["センター(CTB)"] <- "Centre"
+map["センター（CTB）"] <- "Centre"
+map["センター, ウイング"] <- "Centre; Winger"
+map["センター・フルバック"] <- "Centre; Fullback"
+map["タイトヘッドプロップ"] <- "Tighthead Prop"
+map["ナンバー8"] <- "Number 8"
+map["ナンバーエイト"] <- "Number 8"
+map["ナンバーエイトフランカー"] <- "Number 8; Flanker"
+map["ハーフバック/スクラムハーフ"] <- "Scrum-Half"
+map["フォワード"] <- "Forward"
+map["フッカー"] <- "Hooker"
+map["フライハーフ"] <- "Fly-Half"
+map["フライハーフ（スタンドオフ）"] <- "Fly-Half"
+map["フランカー"] <- "Flanker"
+map["フランカー(FL)"] <- "Flanker"
+map["フルバック"] <- "Fullback"
+map["フルバック(FB)"] <- "Fullback"
+map["プロップ"] <- "Prop"
+map["フロントロー"] <- "1st Row"
+map["ユーティリティBK"] <- "Utility Back"
+map["ユーティリティバックス"] <- "Utility Back"
+map["ラグビーユニオンのポジション#フルバック"] <- "Fullback"
+map["ルースヘッド・プロップ"] <- "Loosehead Prop"
+map["ロック"] <- "Lock"
+map["ロック(LO)"] <- "Lock"
+map["ロック／フランカー"] <- "Lock; Flanker"
+map["不明"] <- ""
+map["右ウィング"] <- "Right Winger"
+map["右プロップ"] <- "Loosehead Prop"
+# clean positions
+for (p in 1:length(all_positions)) {
+  positions <- all_positions[[p]]
 
-# remove superfluous columns
-cols <- which(colnames(players) %in% c("teamId", "teamName"))
-players <- players[, -cols]
-# rename id column
-col <- which(colnames(players) == "playerId")
-colnames(players)[col] <- "customId"
+  if (length(positions) == 0) {
+    positions <- " "
+  } else {
+    # normalize positions names
+    for (position in names(map))
+      positions[positions == position] <- map[position]
+  }
+
+  # update list
+  all_positions[[p]] <- positions
+}
+# collapse to get strings again
+all_positions <- sapply(all_positions, function(positions) paste0(positions, collapse = "; "))
+all_positions[all_positions == "NA"] <- NA
+names(all_positions) <- NULL
+
+
+
+
+
+
 
 
 

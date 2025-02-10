@@ -33,7 +33,7 @@ tlog(2, "Raw number of career steps: ", nrow(our_careers))
 ########################################################################
 # load Wikipedia JA tables
 tlog("Loading WP JA tables")
-wp_folder <- file.path("data", "wikipedia", "japanese")
+wp_folder <- file.path("data", "wikipedia", "japanese", "raw")
 
 wp_players <- read.csv(file.path(wp_folder, "player_info.csv"))
 tlog(2, "Raw number of players: ", nrow(wp_players))
