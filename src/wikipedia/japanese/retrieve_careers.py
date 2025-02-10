@@ -29,7 +29,7 @@ start_rec_log("WikipediaJa")
 # init file constants
 
 # folder path
-table_folder = path.join("data", "wikipedia", "japanese")
+table_folder = path.join("data", "wikipedia", "japanese", "raw")
 
 # base url of the website
 base_url = "https://ja.wikipedia.org/wiki/{}"
