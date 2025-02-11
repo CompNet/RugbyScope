@@ -514,9 +514,43 @@ players <- players[, -cols]
 
 
 
-# ########################################################################
-# # clean the career table
-# tlog(0, "Cleaning the career table")
+########################################################################
+# clean the career table
+tlog(0, "Cleaning the career table")
+
+# origWdId,origName,jaName,wpPage,stepType,timePeriod,teamName,teamWP,matchesPlayed,pointsScored
+
+# split rows containing multiple steps
+new_careers <- careers[-(1:nrow(careers)), ]
+for (r in 1:nrow(careers)) {
+  # split row by semicolon
+  if (grepl(";", careers[r, "timePeriod"], fixed = TRUE)) {
+    
+  }
+  # split row by comma
+  # split period by hyphen
+}
+
+
+# split rows containing multiple steps
+idx <- which(grepl(";", careers[, "timePeriod"], fixed = TRUE))
+periods <- careers[idx, "timePeriod"]
+periods <- strsplit(periods, ";")
+sort(unique(trimws(unlist(periods))))
+
+# clean matches played
+mp <- careers[, "matchesPlayed"]
+# remove non-numeric values
+mp <- gsub("？", "", mp, fixed = TRUE)
+mp <- gsub("（No.370）", "", mp, fixed = TRUE)
+# split
+mp_vals <- strsplit(mp, ";")
+sort(as.integer(unique(trimws(unlist(mp_vals)))))
+# "727797518" "62104"
+
+
+# "playerId","playerName","teamId","teamName","startYear","endYear","matchesPlayed","pointsScored"
+
 
 # # remove erroneous career steps
 # idx <- which(careers[, "period"] == "ERROR 404")
