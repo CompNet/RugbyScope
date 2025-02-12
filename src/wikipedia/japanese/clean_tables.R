@@ -523,11 +523,65 @@ tlog(0, "Cleaning the career table")
 # split rows containing multiple steps
 new_careers <- careers[-(1:nrow(careers)), ]
 for (r in 1:nrow(careers)) {
-  # split row by semicolon
-  if (grepl(";", careers[r, "timePeriod"], fixed = TRUE)) {
-    
+  tlog(4, "Processing row ", r, "/", nrow(careers))
+
+  periods <- careers[r, "timePeriod"]
+  team_names <- careers[r, "teamName"]
+  team_urls <- careers[r, "teamWP"]
+  matches_played <- careers[r, "matchesPlayed"]
+  points_scored <- careers[r, "pointsScored"]
+
+  # split row by semicolon, while checking supbart consistency
+  ll <- 0
+  if (is.na(periods) || periods == "")
+    periods <- NA
+  else {
+    periods <- strsplit(periods, ";")[[1]]
+    ll <- length(periods)
   }
+  if (is.na(team_names) || team_names == "")
+    team_names <- NA
+  else {
+    team_names <- strsplit(team_names, ";")[[1]]
+    if (ll > 0 && length(team_names) != ll)
+      stop("Error (teamName): ", paste0(careers[r, ], collapse = ", "))
+    else
+      ll <- length(team_names)
+  }
+  if (is.na(team_urls) || team_urls == "")
+    team_urls <- NA
+  else {
+    team_urls <- strsplit(team_urls, ";")[[1]]
+    if (ll > 0 && length(team_urls) != ll)
+      stop("Error (matchesPlayed): ", paste0(careers[r, ], collapse = ", "))
+    else
+      ll <- length(team_urls)
+  }
+  if (is.na(matches_played) || matches_played == "")
+    matches_played <- NA
+  else {
+    matches_played <- strsplit(matches_played, ";")[[1]]
+    if (ll > 0 && length(matches_played) != ll)
+      stop("Error (matchesPlayed): ", paste0(careers[r, ], collapse = ", "))
+    else
+      ll <- length(matches_played)
+  }
+  if (is.na(points_scored) || points_scored == "")
+    points_scored <- NA
+  else {
+    points_scored <- strsplit(points_scored, ";")[[1]]
+    if (ll > 0 && length(points_scored) != ll)
+      stop("Error (pointsScored): ", paste0(careers[r, ], collapse = ", "))
+  }
+}
   # split row by comma
+  if (ll > 0) {
+    for (i in 1:ll) {
+      periods_b <- strsplit(periods_b, ",")
+
+    }
+  }
+
   # split period by hyphen
 }
 

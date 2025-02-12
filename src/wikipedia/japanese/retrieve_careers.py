@@ -84,10 +84,10 @@ def clean_score_str(text):
     :returns: input string after cleaning (can be empty).
     """
 
-    text = re.sub("\(\?\)", "", text)
-    text = re.sub("\?", "", text)
-    text = re.sub("\[\d+\]", "", text)
-    text = re.sub(" +", " ", text)
+    text = re.sub(r"\(\?\)", "", text)
+    text = re.sub(r"\?", "", text)
+    text = re.sub(r"\[\d+\]", "", text)
+    text = re.sub(r" +", " ", text)
     text = text.strip()
 
     return text
@@ -114,9 +114,9 @@ diff_sect = [] # this is for debug
 ########################################################################
 # loop over players
 p = 1
-# for player_page in ["リオネル・ナレ"]:
-    # orig_name = ""
-    # orig_id = ""
+# for player_page in ["%E3%83%9E%E3%83%8C%E3%83%BB%E3%83%88%E3%82%A5%E3%82%A4%E3%83%A9%E3%83%B3%E3%82%AE"]:
+#     orig_name = ""
+#     orig_id = ""
 for _, player in merged_table.iterrows():
     player_page = player["wikipediaJa"]
     orig_name = player["fullName"]
@@ -378,6 +378,10 @@ for _, player in merged_table.iterrows():
                                 team_elts = td_elt.contents
                                 if len(team_elts) == 0:
                                     team = td_elt.get_text(strip=True)
+                                else:
+                                    first_child = next((child for child in td_elt.children if child.name), None)
+                                    if not first_child is None and first_child.name == "span" and not "flagicon" in first_child.get("class", []) and not "mw-image-border" in first_child.get("class", []):
+                                        team_elts = first_child.children
                                 for team_elt in team_elts:
                                     if team_elt.name is None:
                                         team = team + team_elt.strip()
