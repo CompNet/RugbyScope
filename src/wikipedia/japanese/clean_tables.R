@@ -519,22 +519,19 @@ players <- players[, -cols]
 # clean the career table
 tlog(0, "Cleaning the career table")
 
-# not tested:
+# fix some specific cases
 careers <- data.frame(lapply(careers, function(col) gsub(";([^ ])", "; \\1", col, fixed = FALSE)))
 careers <- data.frame(lapply(careers, function(col) gsub(";$", "; ", col, fixed = FALSE)))
 careers <- data.frame(lapply(careers, function(col) gsub("\\[\\d+\\]", "", col, fixed = FALSE)))
 careers <- data.frame(lapply(careers, function(col) gsub(",;", ", ;", col, fixed = TRUE)))
 careers <- data.frame(lapply(careers, function(col) gsub("; （No.370）", "", col, fixed = TRUE)))
-# txt <- readLines(file.path(folder, "raw", "player_careers.csv"))
-# txt <- gsub(";([^ ])", "; \\1", txt, fixed = FALSE)
-# txt <- gsub(";$", "; ", txt, fixed = FALSE)
-# txt <- gsub(",;", ", ;", txt, fixed = TRUE)
-# txt <- gsub("（No.370）", "", txt, fixed = TRUE)
 
 # origWdId,origName,jaName,wpPage,stepType,timePeriod,teamName,teamWP,matchesPlayed,pointsScored
 
 # split rows containing multiple steps
 new_careers <- careers[-(1:nrow(careers)), ]
+new_careers <- cbind(new_careers, matrix(NA, nrow = nrow(new_careers), ncol = 2))
+colnames(new_careers)[(ncol(new_careers) - 1):ncol(new_careers)] <- c("startYear", "endYear")
 err <- c()
 for (r in 1:nrow(careers)) {
   tlog(4, "Processing row ", r, "/", nrow(careers))
@@ -545,7 +542,7 @@ for (r in 1:nrow(careers)) {
   matches_played <- careers[r, "matchesPlayed"]
   points_scored <- careers[r, "pointsScored"]
 
-  # split row by semicolon, while checking supbart consistency
+  # try to split row by semicolon, same number of split for each field
   ll <- 0
   if (is.na(periods) || periods == "")
     periods <- NA
@@ -593,15 +590,50 @@ for (r in 1:nrow(careers)) {
     }
   }
 
-  # split row by comma
-  if (ll > 0) {
+  # if no period at all: nothing changes
+  if (ll == 0) 
+    new_careers <- rbind(new_careers, careers[r, ])
+  
+  # if one or several periods: try splitting it/them by comma
+  else {
     for (i in 1:ll) {
-      periods_b <- strsplit(periods_b, ",")
+      # try to split row by comma (only in period)
+      periods_sep <- strsplit(periods[i], ",")[[1]]
+      if (length(periods_sep) > 1) {
+        # compute the number of years
+        years <- c()
+        for (p in 1:length(periods_sep)) {
+          per <- periods_sep[p]
+          if (grepl("-", per, fixed = TRUE)) {
+            pers <- as.integer(strsplit(per, "-")[[1]])
+            if (is.na(pers[2]))
+              years <- c(years, 1)
+            else {
+              if (pers[2] < pers[1])
+                pers[2] <- pers[2] + floor(pers[1] / 100) * 100
+              years <- c(years, pers[2] - pers[1] + 1)
+            }
+          } else {
+            per <- paste0(per, "-", per)
+            years <- c(years, 1)
+          }
+          periods_sep[p] <- per
+        }
 
+        # init rows
+        new_rows <- careers[rep(r, length(periods_sep)), ]
+        new_rows[, "timePeriod"] <- periods_sep
+        new_rows[, "teamName"] <- rep(team_names[i], length(periods_sep))
+        new_rows[, "teamWP"] <- rep(team_urls[i], length(periods_sep))
+
+        # adjust stats based on number of years
+        if (!is.na(matches_played[i]))
+          new_rows[, "matchesPlayed"] <- round(matches_played[i] * years / sum(years))
+        if (!is.na(points_scored[i]))
+          new_rows[, "pointsScored"] <- round(points_scored[i] * years / sum(years))
+      }
     }
   }
-
-  # split period by hyphen
 }
 
 
