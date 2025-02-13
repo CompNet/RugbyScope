@@ -84,8 +84,8 @@ def clean_score_str(text):
     :returns: input string after cleaning (can be empty).
     """
 
-    text = re.sub(r"\(\?\)", "", text)
-    text = re.sub(r"\?", "", text)
+    text = re.sub(r"\(?\?\)?", "?", text)
+    # text = re.sub(r"\?", "", text)
     text = re.sub(r"\[\d+\]", "", text)
     text = re.sub(r" +", " ", text)
     text = text.strip()
@@ -114,7 +114,7 @@ diff_sect = [] # this is for debug
 ########################################################################
 # loop over players
 p = 1
-# for player_page in ["ダヴィト・カチャラヴァ"]:
+# for player_page in ["%E3%82%A4%E3%83%AA%E3%82%A2%E3%83%BB%E3%82%BC%E3%83%89%E3%82%AE%E3%83%8B%E3%82%BC"]:
 #     orig_name = ""
 #     orig_id = ""
 for _, player in merged_table.iterrows():

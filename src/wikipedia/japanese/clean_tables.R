@@ -84,6 +84,7 @@ careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 
 
+
 ########################################################################
 # clean the player table
 tlog(0, "Cleaning the player table")
@@ -518,10 +519,23 @@ players <- players[, -cols]
 # clean the career table
 tlog(0, "Cleaning the career table")
 
+# not tested:
+careers <- data.frame(lapply(careers, function(col) gsub(";([^ ])", "; \\1", col, fixed = FALSE)))
+careers <- data.frame(lapply(careers, function(col) gsub(";$", "; ", col, fixed = FALSE)))
+careers <- data.frame(lapply(careers, function(col) gsub("\\[\\d+\\]", "", col, fixed = FALSE)))
+careers <- data.frame(lapply(careers, function(col) gsub(",;", ", ;", col, fixed = TRUE)))
+careers <- data.frame(lapply(careers, function(col) gsub("; （No.370）", "", col, fixed = TRUE)))
+# txt <- readLines(file.path(folder, "raw", "player_careers.csv"))
+# txt <- gsub(";([^ ])", "; \\1", txt, fixed = FALSE)
+# txt <- gsub(";$", "; ", txt, fixed = FALSE)
+# txt <- gsub(",;", ", ;", txt, fixed = TRUE)
+# txt <- gsub("（No.370）", "", txt, fixed = TRUE)
+
 # origWdId,origName,jaName,wpPage,stepType,timePeriod,teamName,teamWP,matchesPlayed,pointsScored
 
 # split rows containing multiple steps
 new_careers <- careers[-(1:nrow(careers)), ]
+err <- c()
 for (r in 1:nrow(careers)) {
   tlog(4, "Processing row ", r, "/", nrow(careers))
 
@@ -536,44 +550,49 @@ for (r in 1:nrow(careers)) {
   if (is.na(periods) || periods == "")
     periods <- NA
   else {
-    periods <- strsplit(periods, ";")[[1]]
+    periods <- trimws(strsplit(periods, ";")[[1]])
     ll <- length(periods)
   }
   if (is.na(team_names) || team_names == "")
     team_names <- NA
   else {
-    team_names <- strsplit(team_names, ";")[[1]]
-    if (ll > 0 && length(team_names) != ll)
-      stop("Error (teamName): ", paste0(careers[r, ], collapse = ", "))
-    else
+    team_names <- trimws(strsplit(team_names, ";")[[1]])
+    if (ll > 0 && length(team_names) != ll) {
+      err <- union(err,  careers[r, "wpPage"])
+      tlog(6, "Error (team_names): ", paste0(careers[r, ], collapse = ", "))
+    } else
       ll <- length(team_names)
   }
   if (is.na(team_urls) || team_urls == "")
     team_urls <- NA
   else {
-    team_urls <- strsplit(team_urls, ";")[[1]]
-    if (ll > 0 && length(team_urls) != ll)
-      stop("Error (matchesPlayed): ", paste0(careers[r, ], collapse = ", "))
-    else
+    team_urls <- trimws(strsplit(team_urls, ";")[[1]])
+    if (ll > 0 && length(team_urls) != ll) {
+      err <- union(err,  careers[r, "wpPage"])
+      tlog(6, "Error (team_urls): ", paste0(careers[r, ], collapse = ", "))
+    } else
       ll <- length(team_urls)
   }
   if (is.na(matches_played) || matches_played == "")
     matches_played <- NA
   else {
-    matches_played <- strsplit(matches_played, ";")[[1]]
-    if (ll > 0 && length(matches_played) != ll)
-      stop("Error (matchesPlayed): ", paste0(careers[r, ], collapse = ", "))
-    else
+    matches_played <- trimws(strsplit(matches_played, ";")[[1]])
+    if (ll > 0 && length(matches_played) != ll) {
+      err <- union(err,  careers[r, "wpPage"])
+      tlog(6, "Error (matches_played): ", paste0(careers[r, ], collapse = ", "))
+    } else
       ll <- length(matches_played)
   }
   if (is.na(points_scored) || points_scored == "")
     points_scored <- NA
   else {
-    points_scored <- strsplit(points_scored, ";")[[1]]
-    if (ll > 0 && length(points_scored) != ll)
-      stop("Error (pointsScored): ", paste0(careers[r, ], collapse = ", "))
+    points_scored <- trimws(strsplit(points_scored, ";")[[1]])
+    if (ll > 0 && length(points_scored) != ll) {
+      err <- union(err,  careers[r, "wpPage"])
+      tlog(6, "Error (pointsScored): ", paste0(careers[r, ], collapse = ", "))
+    }
   }
-}
+
   # split row by comma
   if (ll > 0) {
     for (i in 1:ll) {
