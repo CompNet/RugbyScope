@@ -13,6 +13,7 @@
 
 
 
+
 ########################################################################
 # retrieve the Wikidata tables: this takes at least several hours
 source("src/wikidata/retrieve_data.R")
@@ -38,7 +39,7 @@ source("src/dbpedia/retrieve_data.R")
 
 # merge DBpedia data (player and teams) into previously retrieved Wikidata tables
 source("src/dbpedia/merge_wikidata.R")
-# this produces two files in filder `data/fusion/`:
+# this produces two files in folder `data/fusion/`:
 # - `players_01_wd-dbp.csv`: merged list of players
 # - `teams_01_wd-dbp.csv`: merged list of players
 
@@ -48,7 +49,7 @@ source("src/dbpedia/merge_wikidata.R")
 ########################################################################
 # merge the manually curated reference teams into the previously merged team table
 source("src/wikidata/merge_reference.R")
-# this produces one file in filder `data/fusion/`:
+# this produces one file in folder `data/fusion/`:
 # - `teams_02_ref.csv`: merged list of teams
 
 
@@ -74,8 +75,10 @@ source("src/wikipedia/spanish/clean_tables.R")
 source("src/wikipedia/italian/clean_tables.R")
 
 # japanese wikipedia
-# TODO
+system("python src/wikipedia/japanese/retrieve_careers.pys")
+# this produces the raw files in folder `data/wikipedia/japanese/raw/`
 source("src/wikipedia/japanese/clean_tables.R")
+# this produces the clean files in folder `data/wikipedia/japanese/`
 
 
 
@@ -97,3 +100,7 @@ source("src/wikipedia/italian/merge_data.R")
 
 # japanese wikipedia
 source("src/wikipedia/japanese/merge_data.R")
+# this produces the following files in folder `data/fusion/`:
+# - `players_xxxxx.csv`: merged list of players
+# - `teams_xxxx.csv`: merged list of teams
+# - `careers_xxxx.csv`: merged list of career steps
