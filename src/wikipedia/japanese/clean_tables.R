@@ -525,13 +525,16 @@ careers <- data.frame(lapply(careers, function(col) gsub(";$", "; ", col, fixed 
 careers <- data.frame(lapply(careers, function(col) gsub("\\[\\d+\\]", "", col, fixed = FALSE)))
 careers <- data.frame(lapply(careers, function(col) gsub(",;", ", ;", col, fixed = TRUE)))
 careers <- data.frame(lapply(careers, function(col) gsub("; （No.370）", "", col, fixed = TRUE)))
+careers <- data.frame(lapply(careers, function(col) gsub("–", "-", col, fixed = TRUE)))
 
-# origWdId,origName,jaName,wpPage,stepType,timePeriod,teamName,teamWP,matchesPlayed,pointsScored
+# add columns for start/end years
+careers <- cbind(careers, matrix(NA, nrow = nrow(careers), ncol = 2))
+colnames(careers)[(ncol(careers) - 1):ncol(careers)] <- c("startYear", "endYear")
+
+###### origWdId,origName,jaName,wpPage,stepType,timePeriod,teamName,teamWP,matchesPlayed,pointsScored
 
 # split rows containing multiple steps
 new_careers <- careers[-(1:nrow(careers)), ]
-new_careers <- cbind(new_careers, matrix(NA, nrow = nrow(new_careers), ncol = 2))
-colnames(new_careers)[(ncol(new_careers) - 1):ncol(new_careers)] <- c("startYear", "endYear")
 err <- c()
 for (r in 1:nrow(careers)) {
   tlog(4, "Processing row ", r, "/", nrow(careers))
@@ -542,17 +545,17 @@ for (r in 1:nrow(careers)) {
   matches_played <- careers[r, "matchesPlayed"]
   points_scored <- careers[r, "pointsScored"]
 
-  # try to split row by semicolon, same number of split for each field
+  # try to split row by semicolon, same number of parts for each field (unless totally empty)
   ll <- 0
-  if (is.na(periods) || periods == "")
+  if (is.na(periods) || periods == "") {
     periods <- NA
-  else {
+  } else {
     periods <- trimws(strsplit(periods, ";")[[1]])
     ll <- length(periods)
   }
-  if (is.na(team_names) || team_names == "")
+  if (is.na(team_names) || team_names == "") {
     team_names <- NA
-  else {
+  } else {
     team_names <- trimws(strsplit(team_names, ";")[[1]])
     if (ll > 0 && length(team_names) != ll) {
       err <- union(err,  careers[r, "wpPage"])
@@ -560,9 +563,9 @@ for (r in 1:nrow(careers)) {
     } else
       ll <- length(team_names)
   }
-  if (is.na(team_urls) || team_urls == "")
+  if (is.na(team_urls) || team_urls == "") {
     team_urls <- NA
-  else {
+  } else {
     team_urls <- trimws(strsplit(team_urls, ";")[[1]])
     if (ll > 0 && length(team_urls) != ll) {
       err <- union(err,  careers[r, "wpPage"])
@@ -570,9 +573,9 @@ for (r in 1:nrow(careers)) {
     } else
       ll <- length(team_urls)
   }
-  if (is.na(matches_played) || matches_played == "")
+  if (is.na(matches_played) || matches_played == "") {
     matches_played <- NA
-  else {
+  } else {
     matches_played <- trimws(strsplit(matches_played, ";")[[1]])
     if (ll > 0 && length(matches_played) != ll) {
       err <- union(err,  careers[r, "wpPage"])
@@ -580,9 +583,9 @@ for (r in 1:nrow(careers)) {
     } else
       ll <- length(matches_played)
   }
-  if (is.na(points_scored) || points_scored == "")
+  if (is.na(points_scored) || points_scored == "") {
     points_scored <- NA
-  else {
+  } else {
     points_scored <- trimws(strsplit(points_scored, ";")[[1]])
     if (ll > 0 && length(points_scored) != ll) {
       err <- union(err,  careers[r, "wpPage"])
@@ -590,68 +593,78 @@ for (r in 1:nrow(careers)) {
     }
   }
 
-  # if no period at all: nothing changes
-  if (ll == 0) 
-    new_careers <- rbind(new_careers, careers[r, ])
-  
-  # if one or several periods: try splitting it/them by comma
-  else {
-    for (i in 1:ll) {
-      # try to split row by comma (only in period)
+  # processing each part of the original row (possibly a single one)
+  for (i in 1:ll) {
+    # if no period information, nothing special to do
+    if (all(is.na(periods)) || is.na(periods[i]) || periods[i] == "") {
+      periods_sep <- NA
+      start_years <- NA
+      end_years <- NA
+      years <- NA
+
+    # otherwise, try to split row by comma
+    } else {
       periods_sep <- strsplit(periods[i], ",")[[1]]
-      if (length(periods_sep) > 1) {
-        # compute the number of years
-        years <- c()
-        for (p in 1:length(periods_sep)) {
-          per <- periods_sep[p]
-          if (grepl("-", per, fixed = TRUE)) {
-            pers <- as.integer(strsplit(per, "-")[[1]])
-            if (is.na(pers[2]))
-              years <- c(years, 1)
-            else {
-              if (pers[2] < pers[1])
-                pers[2] <- pers[2] + floor(pers[1] / 100) * 100
-              years <- c(years, pers[2] - pers[1] + 1)
-            }
-          } else {
-            per <- paste0(per, "-", per)
+      # compute the number of years
+      years <- c()
+      start_years <- c()
+      end_years <- c()
+      for (p in 1:length(periods_sep)) {
+        per <- periods_sep[p]
+        # there is a hyphen in the period
+        if (grepl("-", per, fixed = TRUE)) {
+          pers <- as.integer(strsplit(per, "-")[[1]])
+          # end year missing
+          if (length(pers) < 2 || is.na(pers[2])) {
             years <- c(years, 1)
+            start_years <- c(start_years, pers[1])
+            end_years <- c(end_years, NA)
+          # start year missing
+          } else if (is.na(pers[1])) {
+            years <- c(years, 1)
+            start_years <- c(start_years, NA)
+            end_years <- c(end_years, pers[2])
+          # both start and end years present
+          } else {
+            if (pers[2] < pers[1])
+              pers[2] <- pers[2] + floor(pers[1] / 100) * 100
+            years <- c(years, pers[2] - pers[1] + 1)
+            start_years <- c(start_years, pers[1])
+            end_years <- c(end_years, pers[2])
           }
-          periods_sep[p] <- per
+        # no hyphen in the period
+        } else {
+          start_years <- c(start_years, per)
+          end_years <- c(end_years, per)
+          per <- paste0(per, "-", per)
+          years <- c(years, 1)
         }
-
-        # init rows
-        new_rows <- careers[rep(r, length(periods_sep)), ]
-        new_rows[, "timePeriod"] <- periods_sep
-        new_rows[, "teamName"] <- rep(team_names[i], length(periods_sep))
-        new_rows[, "teamWP"] <- rep(team_urls[i], length(periods_sep))
-
-        # adjust stats based on number of years
-        if (!is.na(matches_played[i]))
-          new_rows[, "matchesPlayed"] <- round(matches_played[i] * years / sum(years))
-        if (!is.na(points_scored[i]))
-          new_rows[, "pointsScored"] <- round(points_scored[i] * years / sum(years))
+        periods_sep[p] <- per
       }
     }
+
+    # init rows
+    new_rows <- careers[rep(r, length(periods_sep)), ]
+    new_rows[, "timePeriod"] <- periods_sep
+    new_rows[, "teamName"] <- rep(team_names[i], length(periods_sep))
+    new_rows[, "teamWP"] <- rep(team_urls[i], length(periods_sep))
+    new_rows[, "startYear"] <- start_years
+    new_rows[, "endYear"] <- end_years
+
+    # adjust stats based on number of years
+    if (!is.na(matches_played[i]))
+      new_rows[, "matchesPlayed"] <- round(as.integer(matches_played[i]) * years / sum(years))
+    if (!is.na(points_scored[i]))
+      new_rows[, "pointsScored"] <- round(as.integer(points_scored[i]) * years / sum(years))
+
+    # add rows to table
+    new_careers <- rbind(new_careers, new_rows)
   }
 }
+#options(warn = 0)
 
+# clean team URLs
 
-# split rows containing multiple steps
-idx <- which(grepl(";", careers[, "timePeriod"], fixed = TRUE))
-periods <- careers[idx, "timePeriod"]
-periods <- strsplit(periods, ";")
-sort(unique(trimws(unlist(periods))))
-
-# clean matches played
-mp <- careers[, "matchesPlayed"]
-# remove non-numeric values
-mp <- gsub("？", "", mp, fixed = TRUE)
-mp <- gsub("（No.370）", "", mp, fixed = TRUE)
-# split
-mp_vals <- strsplit(mp, ";")
-sort(as.integer(unique(trimws(unlist(mp_vals)))))
-# "727797518" "62104"
 
 
 # "playerId","playerName","teamId","teamName","startYear","endYear","matchesPlayed","pointsScored"
