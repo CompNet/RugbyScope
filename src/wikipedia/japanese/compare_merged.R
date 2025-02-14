@@ -18,10 +18,10 @@ source("src/common/norm_teams.R")
 # load our tables
 tlog("Loading our own tables")
 
-our_teams <- read.csv(file.path("data", "wikidata", "tables", "teams_02_ref.csv"))
+our_teams <- read.csv(file.path("data", "fusion", "teams_02_ref.csv"))
 tlog(2, "Raw number of teams: ", nrow(our_teams))
 
-our_players <- read.csv(file.path("data", "dbpedia", "tables", "players_01_wd-dbp.csv"))
+our_players <- read.csv(file.path("data", "fusion", "players_01_wd-dbp.csv"))
 tlog(2, "Raw number of players: ", nrow(our_players))
 
 our_careers <- read.csv(file.path("data", "wikidata", "tables", "careers.csv"))

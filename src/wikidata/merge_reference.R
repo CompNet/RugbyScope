@@ -42,7 +42,7 @@ source("src/common/norm_teams.R")
 
 ########################################################################
 # paths
-dpb_table_folder <- file.path("data", "dbpedia", "tables")
+fusion_folder <- file.path("data", "fusion")
 #
 wd_stats_folder <- file.path("data", "wikidata", "stats")
 wd_table_folder <- file.path("data", "wikidata", "tables")
@@ -58,7 +58,7 @@ wd_teams <- read.csv(file.path(wd_table_folder, "teams.csv"))
 cat("Raw number of teams in WD table:", nrow(wd_teams), "\n")
 
 # load merged data table
-fusion_file <- file.path(dpb_table_folder, "teams_01_wd-dbp.csv")
+fusion_file <- file.path(fusion_folder, "teams_01_wd-dbp.csv")
 teams <- read.csv(fusion_file)
 cat("Raw number of teams in merged table:", nrow(teams), "\n")
 
@@ -404,6 +404,6 @@ compl_teams[idx, "tier"] <- "1"
 
 ########################################################################
 # record as a new CSV file
-tab.file <- file.path(wd_table_folder, "teams_02_ref.csv")
+tab.file <- file.path(fusion_folder, "teams_02_ref.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(compl_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")

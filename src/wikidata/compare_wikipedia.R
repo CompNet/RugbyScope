@@ -12,8 +12,9 @@ source("src/common/logging.R")
 
 ########################################################################
 # paths
-dpb_table_folder <- file.path("data", "dbpedia", "tables")
 wp_table_folder <- file.path("data", "wikipedia", "temp_vl")
+#
+fusion_folder <- file.path("data", "fusion")
 
 
 
@@ -36,7 +37,7 @@ wp_players[, "url"] <- urls
 
 ########################################################################
 # load merged player table
-tab_file <- file.path(dpb_table_folder, "players_01_wd-dbp.csv")
+tab_file <- file.path(fusion_folder, "players_01_wd-dbp.csv")
 tlog("Loading the merged player table: \"", tab_file, "\"")
 fus_players <- read.csv(tab_file)
 tlog(2, "Number of players in our table: ", nrow(fus_players))

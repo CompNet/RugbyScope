@@ -18,7 +18,10 @@ source("src/common/norm_players.R")
 # paths
 dpb_table_folder <- file.path("data", "dbpedia", "tables")
 dpb_stats_folder <- file.path("data", "dbpedia", "stats")
+#
 wd_table_folder <- file.path("data", "wikidata", "tables")
+#
+fusion_folder <- file.path("data", "fusion")
 
 
 
@@ -311,7 +314,7 @@ players <- players[order(ids), ]
 # replacing empty strings by NAs
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-tab.file <- file.path(dpb_table_folder, "players_01_wd-dbp.csv")
+tab.file <- file.path(fusion_folder, "players_01_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
@@ -466,6 +469,6 @@ teams <- teams[order(ids), ]
 # replacing empty strings by NAs
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-tab_file <- file.path(dpb_table_folder, "teams_01_wd-dbp.csv")
+tab_file <- file.path(fusion_folder, "teams_01_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab_file, "\"")
 write.csv(teams, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
