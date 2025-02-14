@@ -78,7 +78,7 @@ cat("Retrieving the list of players from DBpedia\n")
 query <- readtext(file.path(query_folder, "players_list.sparql"))$text
 
 # run query and get the players (must use a paginated access due to 10000 hit DBpedia limit)
-tab_file <- file.path(table_folder, "players_descr.csv")
+tab_file <- file.path(table_folder, "players.csv")
 go_on <- TRUE
 page_nbr <- 1
 pg_limit <- 10000
@@ -363,7 +363,7 @@ print.data.frame(players[1:10, ])
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # export table as a CSV
-write.csv(x = players, file = file.path(table_folder, "players_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = players, file = file.path(table_folder, "players.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -376,7 +376,7 @@ cat("Retrieving the list of teams from DBpedia\n")
 query <- readtext(file.path(query_folder, "teams_list.sparql"))$text
 
 # run query and get the teams
-tab_file <- file.path(table_folder, "teams_descr.csv")
+tab_file <- file.path(table_folder, "teams.csv")
 teams <- query_dbpedia(query, file = tab_file)
 cat("Dimension of the teams table:", paste(dim(teams), collapse = ", "), "\n")
 
@@ -439,7 +439,7 @@ print.data.frame(teams[1:10, ])
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 # export table as a CSV
-write.csv(x = teams, file = file.path(table_folder, "teams_descr.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = teams, file = file.path(table_folder, "teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 

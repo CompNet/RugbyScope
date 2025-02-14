@@ -28,11 +28,11 @@ tlog(0, "Loading DBpedia tables")
 source("src/dbpedia/clean_tables.R")
 
 # load DBpedia teals
-teams_dbp <- read.csv(file.path(dpb_table_folder, "teams_descr.csv"))
+teams_dbp <- read.csv(file.path(dpb_table_folder, "teams.csv"))
 tlog(2, "Raw number of DPB teams: ", nrow(teams_dbp))
 
 # load DBpedia players
-players_dbp <- read.csv(file.path(dpb_table_folder, "players_descr.csv"))
+players_dbp <- read.csv(file.path(dpb_table_folder, "players.csv"))
 tlog(2, "Raw number of DPB players: ", nrow(players_dbp))
 
 # normalize rugby positions
@@ -48,7 +48,7 @@ source("src/wikidata/clean_tables.R")
 
 ###
 # load Wikidata teams
-teams_wd <- read.csv(file.path(wd_table_folder, "teams_descr.csv"))
+teams_wd <- read.csv(file.path(wd_table_folder, "teams.csv"))
 tlog(2, "Raw number of WD teams: ", nrow(teams_wd))
 
 # normalize countries
@@ -58,7 +58,7 @@ teams_wd[, "countryLabels"] <- all_countries
 
 ###
 # load Wikidata players
-players_wd <- read.csv(file.path(wd_table_folder, "players_descr.csv"))
+players_wd <- read.csv(file.path(wd_table_folder, "players.csv"))
 tlog(2, "Raw number of WD players: ", nrow(players_wd))
 
 # normalize rugby positions
@@ -311,7 +311,7 @@ players <- players[order(ids), ]
 # replacing empty strings by NAs
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-tab.file <- file.path(dpb_table_folder, "fusion_players_wd-dbp.csv")
+tab.file <- file.path(dpb_table_folder, "players_01_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
@@ -466,6 +466,6 @@ teams <- teams[order(ids), ]
 # replacing empty strings by NAs
 teams <- teams %>% mutate(across(where(is.character), ~ na_if(., "")))
 # record as a new CSV file
-tab_file <- file.path(dpb_table_folder, "fusion_teams_wd-dbp.csv")
+tab_file <- file.path(dpb_table_folder, "teams_01_wd-dbp.csv")
 tlog(2, "Recording as a CSV file: \"", tab_file, "\"")
 write.csv(teams, tab_file, row.names = FALSE, fileEncoding = "UTF-8")

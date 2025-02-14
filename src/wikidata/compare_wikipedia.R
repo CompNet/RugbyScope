@@ -36,7 +36,7 @@ wp_players[, "url"] <- urls
 
 ########################################################################
 # load merged player table
-tab_file <- file.path(dpb_table_folder, "fusion_players_wd-dbp.csv")
+tab_file <- file.path(dpb_table_folder, "players_01_wd-dbp.csv")
 tlog("Loading the merged player table: \"", tab_file, "\"")
 fus_players <- read.csv(tab_file)
 tlog(2, "Number of players in our table: ", nrow(fus_players))

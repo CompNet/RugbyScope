@@ -97,7 +97,7 @@ def clean_score_str(text):
 
 ########################################################################
 # load list of players
-merged_table = pd.read_csv(path.join("data", "dbpedia", "tables", "fusion_players_wd-dbp.csv"))
+merged_table = pd.read_csv(path.join("data", "dbpedia", "tables", "players_01_wd-dbp.csv"))
 player_number = merged_table.shape[0]
 
 

@@ -673,11 +673,11 @@ new_careers[idx, "teamWP"] <- NA
 # record all three cleaned tables as new files
 
 # record player table
-tab_file <- file.path(folder, "players_descr.csv")
+tab_file <- file.path(folder, "players.csv")
 tlog(2, "Record player table as: ", tab_file)
 write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # record career table
-tab_file <- file.path(folder, "players_careers.csv")
+tab_file <- file.path(folder, "careers.csv")
 tlog(2, "Record career table as: ", tab_file)
 write.csv(new_careers, tab_file, row.names = FALSE, fileEncoding = "UTF-8")

@@ -38,9 +38,9 @@ source("src/dbpedia/retrieve_data.R")
 
 # merge DBpedia data (player and teams) into previously retrieved Wikidata tables
 source("src/dbpedia/merge_wikidata.R")
-# this produces two files in filder `data/dbpedia/`:
-# - `fusion_players_wd-dbp.csv`: merged list of players
-# - `fusion_teams_wd-dbp.csv`: merged list of players
+# this produces two files in filder `data/fusion/`:
+# - `players_01_wd-dbp.csv`: merged list of players
+# - `teams_01_wd-dbp.csv`: merged list of players
 
 
 
@@ -48,8 +48,8 @@ source("src/dbpedia/merge_wikidata.R")
 ########################################################################
 # merge the manually curated reference teams into the previously merged team table
 source("src/wikidata/merge_reference.R")
-# this produces one file in filder `data/wikidata/`:
-# - `fusion_players_wd-dbp-ref.csv`: merged list of players
+# this produces one file in filder `data/fusion/`:
+# - `teams_02_ref.csv`: merged list of teams
 
 
 
@@ -59,22 +59,41 @@ source("src/wikidata/merge_reference.R")
 
 # english wikipedia
 # TODO
+source("src/wikipedia/english/clean_tables.R")
 
 # french wikipedia
 # TODO
+source("src/wikipedia/french/clean_tables.R")
 
 # spanish wikipedia
 # TODO
+source("src/wikipedia/spanish/clean_tables.R")
 
 # italian wikipedia
 # TODO
+source("src/wikipedia/italian/clean_tables.R")
 
 # japanese wikipedia
 # TODO
+source("src/wikipedia/japanese/clean_tables.R")
 
 
 
 
 ########################################################################
 # merge the Wikipedia data with the previous tables
-# TODO
+
+# english wikipedia
+source("src/wikipedia/english/merge_data.R")
+
+# french wikipedia
+source("src/wikipedia/french/merge_data.R")
+
+# spanish wikipedia
+source("src/wikipedia/spanish/merge_data.R")
+
+# italian wikipedia
+source("src/wikipedia/italian/merge_data.R")
+
+# japanese wikipedia
+source("src/wikipedia/japanese/merge_data.R")
