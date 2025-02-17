@@ -456,15 +456,34 @@ map_ja["ロンゴテメ"] <- "Longoteme"
 map_ja["奈良県葛城市"] <- "Katsuragi"
 map_ja["福岡県太宰府市"] <- "Dazaifu"
 map_ja["ǁKaras Region"] <- "Karas Region"
+map_ja["イタリア"] <- "Italy"
+map_ja["イングランド"] <- "England"
+map_ja["オーストラリア"] <- "Australia"
+map_ja["シドニー"] <- "Sydney"
+map_ja["ニューサウスウェールズ州"] <- "New South Wales"
+map_ja["パリ"] <- "Paris"
+map_ja["フランス"] <- "France"
+map_ja["ローマ"] <- "Rome"
+map_ja["ロンドン"] <- "London"
+map_ja["中華民国"] <- "Taiwan"
+map_ja["山東省"] <- "Shandong"
+map_ja["濰坊市"] <- "Weifang"
+
 # clean locations
 tlog(4, "Substituting in the table")
 cols <- c("birthPlace", "deathPlace")
 for (col in cols) {
   tlog(6, "Normalizing \"", col, "\"")
+  # split place names
   all_places <- players[, col]
   all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
   all_places <- strsplit(all_places, "; ")
+  # split place urls
+  all_urls <- players[, paste0(col, "WP")]
+  all_urls <- gsub("\\[.+\\]", "", all_urls, fixed = FALSE)
+  all_urls <- strsplit(all_urls, "; ")
 
+  # loop over table rows (ie players)
   for (p in 1:length(all_places)) {
     places <- all_places[[p]]
     urls <- all_urls[[p]]
@@ -488,16 +507,21 @@ for (col in cols) {
     # update list
     all_places[[p]] <- places
   }
+
   # collapse to get strings again
   all_places <- sapply(all_places, function(places) paste0(places, collapse = "; "))
   all_places[all_places == "NA"] <- NA
   names(all_places) <- NULL
   players[, col] <- all_places
 }
-all_places <- c(players[, "birthPlace"], players[, "deathPlace"])
-all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
-all_places <- strsplit(all_places, "; ")
-all_place <- sort(unique(unlist(all_places)))
+# debug
+#all_places <- c(players[, "birthPlace"], players[, "deathPlace"])
+#all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
+#all_places <- strsplit(all_places, "; ")
+#all_places <- sort(unique(unlist(all_places)))
+#print(tail(all_places))
+# debug
+# print(head(players[, c("birthPlace", "deathPlace")]))
 
 # rename certain columns
 tlog(2, "Rename certain columns")
@@ -507,7 +531,7 @@ col <- which(colnames(players) == "origName")
 colnames(players)[col] <- "fullName"
 
 # remove superfluous columns
-sup_cols <- c("jaName", "debugComment", "wpPage", "currentTeam", "birthPlaceWP", "deathPlaceWP")
+sup_cols <- c("debugComment", "wpPage", "currentTeam", "birthPlaceWP", "deathPlaceWP")
 tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
 cols <- which(colnames(players) %in% sup_cols)
 players <- players[, -cols]
