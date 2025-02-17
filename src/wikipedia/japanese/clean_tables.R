@@ -11,59 +11,7 @@ library("jsonlite")
 
 source("src/common/logging.R")
 source("src/common/norm_teams.R")
-
-
-
-
-########################################################################
-# Retrieves the English title of a Wikipedia page based on the name of
-# the page in the WP URL, possibly in a different language.
-#
-# name: name of the WP page (the end of its URL, not its title).
-# lang: language of the WP page bearing this name.
-#
-# returns: the English title of the corresponding page.
-########################################################################
-get_english_title <- function(name, lang = "ja") {
-  # normalize parameters
-  if (startsWith(name, "http")) {
-    lang <- gsub("https://([a-z]{2}).wikipedia.org/wiki/.*", "\\1", name)
-    name <- gsub("https://[a-z]{2}.wikipedia.org/wiki/(.*)", "\\1", name)
-  } else {
-    if (startsWith(name, "/wiki/"))
-      name <- substr(name, start = nchar("/wiki/") + 1, stop = nchar(name))
-  }
-  if (startsWith(name, "%"))
-    name <- URLdecode(name)
-
-  # set up HTTP query
-  url <- paste0("https://", lang, ".wikipedia.org/w/api.php")
-  params <- list(
-    action = "query",
-    prop = "langlinks",
-    titles = name,
-    lllang = "en",
-    format = "json"
-  )
-
-  # send to server
-  go_on <- TRUE
-  while (go_on) {
-    response <- tryCatch({GET(url, query = params)}, error = function(e) {tlog("Server error: ", e$message); NA})
-    go_on <- all(is.na(response))
-  }
-
-  # retrieve english title
-  data <- content(response, as = "text", encoding = "UTF-8")
-  json_data <- fromJSON(data)
-  page <- json_data$query$pages[[1]]
-  if (lang == "en")
-    result <- page$title
-  else
-    result <- page$langlinks["*"][1, 1]
-
-  return(result)
-}
+source("src/wikipedia/japanese/common.R")
 
 
 
@@ -80,7 +28,6 @@ players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 careers <- read.csv(file.path(folder, "raw", "player_careers.csv"))
 tlog(2, "Raw number of career steps: ", nrow(careers))
 careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
-
 
 
 
@@ -220,12 +167,14 @@ for (i in 1:length(unique_urls)) {
     title <- unique_url[i]
   map_url[unique_urls[i]] <- title
 }
+# debug
 #which(is.na(map_url))
 map_url["https://es.wikipedia.org/wiki/Puke_(Tonga)"] <- "Puke; Tonga"
 map_url["https://to.wikipedia.org/wiki/Lapaha"] <- "Lapaha"
 map_url["https://to.wikipedia.org/wiki/Matahau"] <- "Matahau"
 map_url["https://to.wikipedia.org/wiki/Tofoa"] <- "Tofoa"
 map_url["/wiki/Auckland"] <- "Auckland"
+#
 map_url["/wiki/%E3%82%A4%E3%83%BC%E3%82%B9%E3%83%88%E3%83%AD%E3%83%B3%E3%83%89%E3%83%B3"] <- "East London; South Africa"
 map_url["/wiki/%E3%82%A6%E3%82%A3%E3%83%AB%E3%83%88%E3%82%B7%E3%83%A3%E3%83%BC%E5%B7%9E"] <- "Wiltshire"
 map_url["/wiki/%E3%82%A6%E3%82%A7%E3%82%B9%E3%83%88%E3%83%A8%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A3%E3%83%BC"] <- "West Yorkshire"
@@ -521,7 +470,7 @@ for (col in cols) {
 #all_places <- sort(unique(unlist(all_places)))
 #print(tail(all_places))
 # debug
-# print(head(players[, c("birthPlace", "deathPlace")]))
+#print(head(players[, c("birthPlace", "deathPlace")]))
 
 # rename certain columns
 tlog(2, "Rename certain columns")
@@ -544,12 +493,20 @@ players <- players[, -cols]
 tlog(0, "Cleaning the career table")
 
 # fix some specific cases
+careers[, "timePeriod"] <- gsub("年", "", careers[, "timePeriod"], fixed = TRUE)
+careers[, "timePeriod"] <- gsub("2005/2009/2013", "2005,2009,2013", careers[, "timePeriod"], fixed = TRUE)
+careers[, "timePeriod"] <- gsub("、", ",", careers[, "timePeriod"], fixed = TRUE)
+careers[, "timePeriod"] <- gsub("20111", "2011", careers[, "timePeriod"], fixed = TRUE)
+careers[, "timePeriod"] <- gsub("1995–19991999–20032003–20042004–20092009–2010", "1995-1999,1999-2003,2003-2004,2004-2009,2009-2010", careers[, "timePeriod"], fixed = TRUE)
+careers[, "timePeriod"] <- gsub("2011,12,13,", "2011,2012,2013", careers[, "timePeriod"], fixed = TRUE)
+careers[, "timePeriod"] <- gsub("2002-2014; 2016-2014; 2014-2018", "2002-2013; 2013-2014; 2014-2018", careers[, "timePeriod"], fixed = TRUE)
 careers <- data.frame(lapply(careers, function(col) gsub(";([^ ])", "; \\1", col, fixed = FALSE)))
 careers <- data.frame(lapply(careers, function(col) gsub(";$", "; ", col, fixed = FALSE)))
 careers <- data.frame(lapply(careers, function(col) gsub("\\[\\d+\\]", "", col, fixed = FALSE)))
 careers <- data.frame(lapply(careers, function(col) gsub(",;", ", ;", col, fixed = TRUE)))
 careers <- data.frame(lapply(careers, function(col) gsub("; （No.370）", "", col, fixed = TRUE)))
-careers <- data.frame(lapply(careers, function(col) gsub("–", "-", col, fixed = TRUE)))
+careers <- data.frame(lapply(careers, function(col) gsub(" ?(–|−|〜|‐) ?", "-", col, fixed = FALSE)))
+careers <- data.frame(lapply(careers, function(col) gsub("？", "?", col, fixed = TRUE)))
 
 # add columns for start/end years
 careers <- cbind(careers, matrix(NA, nrow = nrow(careers), ncol = 2))
@@ -559,7 +516,8 @@ colnames(careers)[(ncol(careers) - 1):ncol(careers)] <- c("startYear", "endYear"
 new_careers <- careers[-(1:nrow(careers)), ]
 err <- c()
 for (r in 1:nrow(careers)) {
-  tlog(4, "Processing row ", r, "/", nrow(careers))
+  if (r %% 1000 == 0)
+    tlog(4, "Processing row ", r, "/", nrow(careers))
 
   periods <- careers[r, "timePeriod"]
   team_names <- careers[r, "teamName"]
@@ -665,6 +623,11 @@ for (r in 1:nrow(careers)) {
       }
     }
 
+    start_years <- trimws(start_years)
+    start_years[start_years == "?"] <- NA
+    end_years <- trimws(end_years)
+    end_years[end_years == "?"] <- NA
+
     # init rows
     new_rows <- careers[rep(r, length(periods_sep)), ]
     new_rows[, "timePeriod"] <- periods_sep
@@ -683,7 +646,10 @@ for (r in 1:nrow(careers)) {
     new_careers <- rbind(new_careers, new_rows)
   }
 }
+# debug
 #options(warn = 0)
+#sort(unique(new_careers[, "startYear"]))
+#sort(unique(new_careers[, "endYear"]))
 
 # clean team urls
 idx <- which(grepl("action=edit&redlink=1", new_careers[, "teamWP"], fixed = FALSE))
@@ -694,7 +660,7 @@ new_careers[idx, "teamWP"] <- NA
 
 
 ########################################################################
-# record all three cleaned tables as new files
+# record both cleaned tables as new files
 
 # record player table
 tab_file <- file.path(folder, "players.csv")
