@@ -186,7 +186,7 @@ players_dbp[, "birthPlaces"] <- gsub("^; ", "", players_dbp[, "birthPlaces"], fi
 players_dbp[, "deathPlaces"] <- gsub("^; ", "", players_dbp[, "deathPlaces"], fixed = FALSE)
 
 # only keep DBP alt names that are not already matching the WD label
-tlog(2, "Copying DBP names into empty WD cells")
+tlog(2, "Copying DBP names into WD alt name list")
 rm_names <- c("(AM)", "(CBE)", "(CVO,OBE)", "(MBE)", "(OBE)", "(OBEMStJ)", "(Sir)", "(SMOCGOMS)")  # "names" to remove
 idx <- match(players[, "playerId"], players_dbp[, "wikidataId"])
 fullnames <- players_dbp[, "fullNames"]

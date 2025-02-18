@@ -10,8 +10,8 @@ library("httr")
 library("jsonlite")
 
 source("src/common/logging.R")
+source("src/common/norm_names.R")
 source("src/common/norm_teams.R")
-source("src/wikipedia/japanese/common.R")
 
 
 

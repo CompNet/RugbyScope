@@ -11,8 +11,8 @@ library("jsonlite")
 library("magrittr")
 
 source("src/common/logging.R")
+source("src/common/norm_names.R")
 source("src/common/norm_teams.R")
-source("src/wikipedia/japanese/common.R")
 
 
 
@@ -50,8 +50,8 @@ wp_players <- read.csv(file.path(wp_folder, "players.csv"))
 tlog(2, "Raw number of players: ", nrow(wp_players))
 wp_players <- wp_players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
-careers <- read.csv(file.path(wp_folder, "careers.csv"))
-tlog(2, "Raw number of career steps: ", nrow(careers))
+wp_careers <- read.csv(file.path(wp_folder, "careers.csv"))
+tlog(2, "Raw number of career steps: ", nrow(wp_careers))
 wp_careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 
@@ -99,13 +99,124 @@ tlog(2, "Total numbers of changes: ", sum(total_changes))
 tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
 
-# alternative names are processed separately
-# map["fullName"] <- "altNames"
+# only keep WP name as alt name, if it does not match current fullname
+tlog(2, "Copying WP names into alt name list")
+full_names <- our_players[, "fullName"]
+alt_names <- strsplit(our_players[, "altNames"], "; ")
+ja_names <- wp_players[, "jaName"]
+# loop over players to copy WP data
+for (p in 1:length(idx)) {
+  if (!is.na(ja_names[p]) && ja_names[p] != full_names[idx[p]]) {
+    if (all(is.na(alt_names[[idx[p]]])))
+      a_names <- ja_names[p]
+    else
+      a_names <- union(alt_names[[idx[p]]], ja_names[p])
+    our_players[p, "altNames"] <- paste(a_names, collapse = "; ")
+  }
+}
+idx <- which(our_players[, "altNames"] == "NA")
+our_players[idx, "altNames"] <- NA
 
 # record as a new CSV file
 tab.file <- file.path(fusion_folder, "players_02_ja-wp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(our_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+
+
+########################################################################
+# extract team table from career steps
+tlog("Extract team table from career steps")
+
+# init table
+cn <- c("rugbyscopeId", "altNames", "teamWP")
+wp_teams <- data.frame(matrix(NA, nrow = 0, ncol = length(cn)))
+colnames(wp_teams) <- cn
+
+# populate table with unique names/urls
+tlog(2, "Populate team table with unique names/urls")
+alt_names <- list()
+for (r in 1:nrow(wp_careers)) {
+  team_name <- wp_careers[r, "teamName"]
+  team_url <- wp_careers[r, "teamWP"]
+  # no associated url
+  if (is.na(team_url)) {
+    # search by team name
+    idx <- which(sapply(alt_names, function(an) team_name %in% an))
+    # new entry
+    if (length(idx) == 0) {
+      wp_teams <- rbind(wp_teams, c(NA, NA, NA))
+      alt_names <- c(alt_names, list(team_name))
+    }
+  # name and url both available
+  } else {
+    idx <- which(wp_teams[, "teamWP"] == team_url)
+    # new entry
+    if (length(idx) == 0) {
+      wp_teams <- rbind(wp_teams, c(NA, NA, team_url))
+      colnames(wp_teams) <- cn
+      alt_names <- c(alt_names, list(team_name))
+    # update existing entry
+    } else {
+      nn <- union(alt_names[[idx]], team_name)
+      alt_names[[idx]] <- nn
+    }
+  }
+}
+wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
+
+# match teams using WP URLs
+tlog(2, "Match teams to merged table based on urls")
+non_na <- which(!is.na(wp_teams[, "teamWP"]))
+unique_urls <- trimws(wp_teams[non_na, "teamWP"])
+unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
+unique_urls <- unique_urls[!startsWith(unique_urls, "#")]
+unique_urls <- gsub("https://[a-z]{2}.wikipedia.org/wiki/", "", unique_urls, fixed = FALSE)
+unique_urls <- gsub("/wiki/", "", unique_urls, fixed = TRUE)
+matches <- cbind(match(unique_urls, our_teams[, "wikipediaEn"]), match(unique_urls, our_teams[, "wikipediaFr"]), match(unique_urls, our_teams[, "wikipediaIt"]), match(unique_urls, our_teams[, "wikipediaEs"]), match(unique_urls, our_teams[, "wikipediaJa"]))
+mm <- apply(matches, 1, function(row) {
+  res <- unique(row[!is.na(row)])
+  if (length(res) == 0)
+    res <- NA
+  return(res)
+})
+idx <- which(!is.na(mm))
+tlog(4, "Could match directly ", length(idx), "/", length(unique_urls), " non-NA URLs")
+wp_teams[non_na, "rugbyscopeId"] <- our_teams[mm, "rubyscopeId"]
+#length(which(!is.na(wp_teams[, "rugbyScopeId"])))
+
+# get english names of unmatched teams (with url)
+tlog(2, "Retrieving missing English team names")
+idx <- which(!is.na(wp_teams[, "teamWP"]) & is.na(wp_teams[, "rugbyscopeId"]))
+failed <- c()
+for (i in 1:length(idx)) {
+  team_url <- trimws(wp_teams[idx[i], "teamWP"])
+  # if(!grepl("redlink=1", team_url, fixed = TRUE) && !startsWith(team_url, "#")) {
+  tlog(4, "Retrieving translation for \"", team_url, "\" (", i, "/", length(idx), ")")
+  title <- get_english_title(team_url, lang = "ja")
+  tlog(6, "Result: ", title)
+  if (is.null(title))
+    failed <- c(failed, team_url)
+  else
+    alt_names[[idx[i]]] <- union(alt_names[[idx[i]]], list(team_name))
+  # Sys.sleep(1)
+}
+# debug
+write.csv(failed, file.path(wp_folder, "unnamed_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+# handle the remaining cases manually
+map_url["/wiki/%E3%83%96%E3%83%AB%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%BC%E3%82%AF%E3%82%B9"] <- "Shimizu Koto Blue Sharks"
+
+
+
+# match teams using names
+
+# record as a new CSV file
+tab.file <- file.path(wp_folder, "teams.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
 
 
 
@@ -121,23 +232,6 @@ tlog("Merging career steps")
 # [1] "playerId"      "playerName"    "teamId"        "teamName"
 # [5] "startYear"     "endYear"       "matchesPlayed" "pointsScored"
 
-# match teams using WP URLs
-tlog(2, "Matching teams")
-all_urls <- c(careers[, "teamWP"])
-all_urls <- strsplit(all_urls, "; ")
-unique_urls <- sort(unique(trimws(unlist(all_urls))))
-unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
-unique_urls <- unique_urls[!startsWith(unique_urls, "#")]
-unique_urls <- gsub("https://[a-z]{2}.wikipedia.org/wiki/", "", unique_urls, fixed = FALSE)
-unique_urls <- gsub("/wiki/", "", unique_urls, fixed = TRUE)
-matches <- cbind(match(unique_urls, our_teams[, "wikipediaEn"]), match(unique_urls, our_teams[, "wikipediaFr"]), match(unique_urls, our_teams[, "wikipediaIt"]), match(unique_urls, our_teams[, "wikipediaEs"]), match(unique_urls, our_teams[, "wikipediaJa"]))
-mm <- apply(matches, 1, function(row) {
-    res <- unique(row[!is.na(row)])
-    if (length(res) == 0)
-      res <- NA
-    return (res)
-})
-tlog(4, "Could match directly ", length(which(!is.na(mm))), "/", length(unique_urls), " URLs")
 
 
 

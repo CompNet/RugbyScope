@@ -38,7 +38,7 @@ source("src/dbpedia/retrieve_data.R")
 # no career table, as these data are not available on DBpedia
 
 # merge DBpedia data (player and teams) into previously retrieved Wikidata tables
-source("src/dbpedia/merge_wikidata.R")
+source("src/dbpedia/integrate_data.R")
 # this produces two files in folder `data/fusion/`:
 # - `players_01_wd-dbp.csv`: merged list of players
 # - `teams_01_wd-dbp.csv`: merged list of players
@@ -48,7 +48,7 @@ source("src/dbpedia/merge_wikidata.R")
 
 ########################################################################
 # merge the manually curated reference teams into the previously merged team table
-source("src/wikidata/merge_reference.R")
+source("src/wikidata/integrate_reference.R")
 # this produces one file in folder `data/fusion/`:
 # - `teams_02_ref.csv`: merged list of teams
 
@@ -87,20 +87,19 @@ source("src/wikipedia/japanese/clean_tables.R")
 # merge the Wikipedia data with the previous tables
 
 # english wikipedia
-source("src/wikipedia/english/merge_data.R")
+source("src/wikipedia/english/integrate_data.R")
 
 # french wikipedia
-source("src/wikipedia/french/merge_data.R")
+source("src/wikipedia/french/integrate_data.R")
 
 # spanish wikipedia
-source("src/wikipedia/spanish/merge_data.R")
+source("src/wikipedia/spanish/integrate_data.R")
 
 # italian wikipedia
-source("src/wikipedia/italian/merge_data.R")
+source("src/wikipedia/italian/integrate_data.R")
 
 # japanese wikipedia
-source("src/wikipedia/japanese/merge_data.R")
+source("src/wikipedia/japanese/integrate_data.R")
 # this produces the following files in folder `data/fusion/`:
 # - `players_xxxxx.csv`: merged list of players
-# - `teams_xxxx.csv`: merged list of teams
 # - `careers_xxxx.csv`: merged list of career steps

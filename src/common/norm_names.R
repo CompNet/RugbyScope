@@ -1,5 +1,5 @@
 ########################################################################
-# Functions used to clean WP data and to integrate them to our tables.
+# Functions used to normalize names using Wikipedia.
 #
 # 02/2025 Vincent Labatut
 ########################################################################
@@ -29,8 +29,33 @@ get_english_title <- function(name, lang = "ja") {
     if (startsWith(name, "/wiki/"))
       name <- substr(name, start = nchar("/wiki/") + 1, stop = nchar(name))
   }
-  if (startsWith(name, "%"))
+  if (grepl("%", name, fixed = TRUE))
     name <- URLdecode(name)
+
+  # get the proper original title by solving redirections
+  url <- paste0("https://", lang, ".wikipedia.org/w/api.php")
+  params <- list(
+    action = "query",
+    titles = name,
+    redirects = "true",
+    format = "json"
+  )
+  # send to server
+  go_on <- TRUE
+  while (go_on) {
+    response <- tryCatch({GET(url, query = params)}, error = function(e) {tlog("Server error: ", e$message); NA})
+    if (all(is.na(response))) {
+      Sys.sleep(2)
+      tlog("Server error: retrying")
+    }
+    else
+      go_on <- FALSE
+  }
+  # retrieve final title
+  data <- content(response, as = "text", encoding = "UTF-8")
+  json_data <- fromJSON(data)
+  page <- json_data$query$pages[[1]]
+  name <- page$title
 
   # set up HTTP query
   url <- paste0("https://", lang, ".wikipedia.org/w/api.php")
@@ -41,14 +66,17 @@ get_english_title <- function(name, lang = "ja") {
     lllang = "en",
     format = "json"
   )
-
   # send to server
   go_on <- TRUE
   while (go_on) {
     response <- tryCatch({GET(url, query = params)}, error = function(e) {tlog("Server error: ", e$message); NA})
-    go_on <- all(is.na(response))
+    if (all(is.na(response))) {
+      Sys.sleep(2)
+      tlog("Server error: retrying")
+    }
+    else
+      go_on <- FALSE
   }
-
   # retrieve english title
   data <- content(response, as = "text", encoding = "UTF-8")
   json_data <- fromJSON(data)
