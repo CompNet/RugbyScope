@@ -321,7 +321,7 @@ compl_teams <- rbind(teams, addendum[, colnames(teams)])
 
 # insert new id (internal) to account for missing WD ids
 compl_teams <- cbind(1:nrow(compl_teams), compl_teams)
-colnames(compl_teams)[1] <- "rubyscopeId"
+colnames(compl_teams)[1] <- "rugbyscopeId"
 
 
 

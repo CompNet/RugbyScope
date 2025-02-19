@@ -34,7 +34,6 @@ WHERE
   
   # keep only the Wikidata ID (not the whole URL)
   BIND(STRAFTER(STR(?team), STR(wd:)) AS ?teamId).
-  
 }
 
 ORDER BY ?teamId
