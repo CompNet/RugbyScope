@@ -7,11 +7,13 @@
   try to fill based on next step start date?
 - missing country: use career steps that concern national teams
 
+- function to solve WP redirections
+  > apply to all URL in RS
+
 - WP JA: 
-  - write script to clean/normalize tables
+  x write script to clean/normalize tables
   - then script to merge WP JA to our data
-  - handle dates of the form 2006,2015-2018 in the careers
-    ex. https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%89%E3%83%AA%E3%82%A2%E3%83%B3%E3%83%BB%E3%82%B9%E3%83%88%E3%83%A9%E3%82%A6%E3%82%B9
+  x handle dates of the form 2006,2015-2018 in the careers
 
 * NOTES
   - Filtering players depending on whether they played for a club: many are missed
