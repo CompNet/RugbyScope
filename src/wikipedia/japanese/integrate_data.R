@@ -175,8 +175,6 @@ tlog(4, "Found ", length(non_na), "/", nrow(wp_teams), " WP teams  with a URL")
 unique_urls <- trimws(wp_teams[non_na, "teamWP"])
 unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
 unique_urls <- unique_urls[!startsWith(unique_urls, "#")]
-unique_urls <- gsub("https://[a-z]{2}.wikipedia.org/wiki/", "", unique_urls, fixed = FALSE)
-unique_urls <- gsub("/wiki/", "", unique_urls, fixed = TRUE)
 matches <- cbind(match(unique_urls, our_teams[, "wikipediaEn"]), match(unique_urls, our_teams[, "wikipediaFr"]), match(unique_urls, our_teams[, "wikipediaIt"]), match(unique_urls, our_teams[, "wikipediaEs"]), match(unique_urls, our_teams[, "wikipediaJa"]))
 mm <- apply(matches, 1, function(row) {
   res <- unique(row[!is.na(row)])
@@ -190,7 +188,7 @@ wp_teams[non_na, "rugbyscopeId"] <- our_teams[mm, "rugbyscopeId"]
 #length(which(!is.na(wp_teams[, "rugbyScopeId"])))
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
-# get english names of unmatched teams (with url)
+# retrieve english names of unmatched teams (with url)
 tlog(2, "Retrieving missing English team names")
 idx <- which(!is.na(wp_teams[, "teamWP"]) & is.na(wp_teams[, "rugbyscopeId"]))
 failed <- c()
@@ -206,10 +204,13 @@ for (i in 1:length(idx)) {
     alt_names[[idx[i]]] <- union(alt_names[[idx[i]]], list(title))
   # Sys.sleep(1)
 }
-tlog(4, "Could retrieve the name associated to ", length(failed), "/", length(idx), " unmatched teams (that possess a URL)")
+tlog(4, "Could retrieve the name associated to ", (length(idx) - length(failed)), "/", length(idx), " unmatched teams possessing a URL")
+tlog(4, "Still missing the name associated to ", length(failed), "/", length(idx), " unmatched teams possessing a URL")
 wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
 # debug
-#write.csv(failed, file.path(wp_folder, "unnamed_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#write.csv(failed, file.path(wp_folder, "no-named_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+# at this stage, we use the above file to define manually the url2id.csv and url2name.csv map files
+# each no-name url must be associated to an id (if present in merged table) or a WP page title (otherwise)
 
 # handle the remaining cases manually, based on the WD id
 tlog(2, "Handle remaining teams possessing a URL, using manually constituted WD ids map")

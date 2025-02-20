@@ -363,8 +363,14 @@ for (r in 1:nrow(new_careers)) {
   if (!is.na(url)) {
     if (url == "")
       new_careers[r, "teamWP"] <- NA
-    else
+    else {
+      # possibly solve retrieval error
+      if (grepl("\\b(.+)/wiki/.+", url, fixed = FALSE))
+        url <- gsub("\\b(.+)/wiki/.+", "\\1", url)
+
+      # solve redirection
       new_careers[r, "teamWP"] <- solve_redirections(name = url, lang = "ja")
+    }
   }
 
   if (!is.na(url) && is.na(new_careers[r, "teamWP"]))
