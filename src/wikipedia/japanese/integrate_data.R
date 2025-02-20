@@ -214,24 +214,24 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 # handle the remaining cases manually, based on the WD id
 tlog(2, "Handle remaining teams possessing a URL, using manually constituted WD ids map")
 temp <- read.csv(file.path(wp_folder, "maps", "url2id.csv"))
-map_ids <- temp[, "wikidataId"]
+map_ids <- temp[, "teamId"]
 names(map_ids) <- temp[, "url"]
 matches <- match(names(map_ids), wp_teams[, "teamWP"])
-# handle a duplicate case
-dpl <- names(which(table(map_ids) > 1))
-dpl_urls <- names(which(map_ids == dpl))
-idx <- which(wp_teams[, "teamWP"] %in% dpl_urls)[1]
-dpl_idx <- which(wp_teams[, "teamWP"] %in% dpl_urls)[-1]
-wp_teams <- wp_teams[-dpl_idx, ]
-alt_names[[idx]] <- union(alt_names[[idx]], unlist(alt_names[dpl_idx]))
-alt_names <- alt_names[-dpl_idx]
-idx <- which(map_ids == dpl)[-1]
-map_ids <- map_ids[-idx]
-matches <- matches[-idx]
+# # handle a duplicate case
+# dpl <- names(which(table(map_ids) > 1))
+# dpl_urls <- names(which(map_ids == dpl))
+# idx <- which(wp_teams[, "teamWP"] %in% dpl_urls)[1]
+# dpl_idx <- which(wp_teams[, "teamWP"] %in% dpl_urls)[-1]
+# wp_teams <- wp_teams[-dpl_idx, ]
+# alt_names[[idx]] <- union(alt_names[[idx]], unlist(alt_names[dpl_idx]))
+# alt_names <- alt_names[-dpl_idx]
+# idx <- which(map_ids == dpl)[-1]
+# map_ids <- map_ids[-idx]
+# matches <- matches[-idx]
 # handle teams present in merged table
-idx <- match(map_ids, our_teams[, "wikidataId"])
+idx <- match(as.integer(map_ids), our_teams[, "rugbyscopeId"])
 wp_teams[matches[!is.na(idx)], "rugbyscopeId"] <- our_teams[idx[!is.na(idx)], "rugbyscopeId"]
-tlog(4, "Could match directly ", length(which(!is.na(idx))), " teams based on WD ids")
+tlog(4, "Could match directly ", length(which(!is.na(idx))), " teams based on ids")
 # handle teams absent from merged table
 temp <- read.csv(file.path(wp_folder, "maps", "id2name.csv"))
 map_names <- temp[, "fullName"]

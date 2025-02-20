@@ -350,6 +350,27 @@ for (r in 1:nrow(careers)) {
 idx <- which(grepl("action=edit&redlink=1", new_careers[, "teamWP"], fixed = FALSE))
 new_careers[idx, "teamWP"] <- NA
 #tail(sort(unique(new_careers[, "teamWP"])))
+idx <- which(new_careers[, "teamWP"] == "")
+new_careers[idx, "teamWP"] <- NA
+#print(length(which(!is.na(new_careers[, "teamWP"]))))  # 15435 non-NAs
+
+# solve wikipedia redirections
+for (r in 1:nrow(new_careers)) {
+  if (r %% 100 == 0)
+    tlog(4, "Solving redirections for entry ", r, "/", nrow(new_careers))
+
+  url <- new_careers[r, "teamWP"]
+  if (!is.na(url)) {
+    if (url == "")
+      new_careers[r, "teamWP"] <- NA
+    else
+      new_careers[r, "teamWP"] <- solve_redirections(name = url, lang = "ja")
+  }
+
+  if (!is.na(url) && is.na(new_careers[r, "teamWP"]))
+    tlog(6, "Difference: ", r)
+}
+#print(length(which(!is.na(new_careers[, "teamWP"]))))  # 15435 non-NAs
 
 
 
