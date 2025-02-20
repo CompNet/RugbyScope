@@ -10,6 +10,7 @@ library("dplyr")
 library("httr")
 library("jsonlite")
 library("magrittr")
+library("polyglotr")
 
 source("src/common/logging.R")
 source("src/common/norm_names.R")
@@ -337,8 +338,8 @@ wp_teams[wp_idx[idx], "rugbyscopeId"] <- our_teams[result[idx], "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 # focusing on the remaning teams with a URL but not matched
-tab <- wp_teams[wp_idx[-idx], ]
-wp_idx <- (1:nrow(wp_teams))[-idx]
+wp_idx <- wp_idx[-idx]
+tab <- wp_teams[wp_idx, ]
 #### debug
 #write.csv(tab, file.path(wp_folder, "temp_unmatched.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### at this stage, we use the above file to determine whether some teams can be matched manually
@@ -374,18 +375,28 @@ our_teams[which(our_teams[, "fullName"] == "???????????????????"), "countries"] 
 tlog(4, "Had to create ", nrow(supp), " new teams in merged table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
-# Hercules (disambiguation)                Crusader
-# check wales and england
-
 #### debug: remaining unmatched teams that have a URL
-idx1 <- which(is.na(wp_teams[, "rugbyscopeId"]))
-idx2 <- which(!is.na(wp_teams[, "teamWP"]))
-idx <- intersect(idx1, idx2)
-write.csv(wp_teams[idx, c("altNames", "teamWP")], file.path(wp_folder, "unnamed_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#idx1 <- which(is.na(wp_teams[, "rugbyscopeId"]))
+#idx2 <- which(!is.na(wp_teams[, "teamWP"]))
+#idx <- intersect(idx1, idx2)
+#write.csv(wp_teams[idx, c("altNames", "teamWP")], file.path(wp_folder, "unnamed_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+# at this stage, all WP teams with a URL should have been processed
+
+## we now switch to names only, as the remaining WP teams do not have a URL
+
+# translate all remaining names to english using polyglotr
+idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+en_names <- c()
+for (r in 1:length(idx)) {
+  tlog(4, "Translating name ", r, "/", length(idx))
+  orig <- wp_teams[idx[r], "altNames"]
+  translation <- create_translation_table(words = orig, languages = "en")[1, "en"]
+  tlog(6, "\"", orig, "\" >> \"", translation, "\"")
+  en_names <- c(en_names, translation)
+  Sys.sleep(1)
+}
 
 # TODO : translate remaining japanese names?
-
-# TODO : check duplicates (several WP teams with the same rugbscopeId)
 
 # TODO : add merged table name to JA entry, for visual verification
 
@@ -394,13 +405,6 @@ write.csv(wp_teams[idx, c("altNames", "teamWP")], file.path(wp_folder, "unnamed_
 
 
 
-#### debug
-# at this stage, all WP teams with a URL should have been processed
-#idx <- which(!is.na(wp_teams[, "teamWP"]) & is.na(wp_teams[, "rugbyscopeId"]))
-#write.csv(wp_teams[idx, ], file.path(wp_folder, "no-name_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-# note: actually, a bunch of highschools and universities remain to be processed
-
-## we now switch to names only, as the remaining WP teams do not have a URL
 
 
 
@@ -408,7 +412,7 @@ write.csv(wp_teams[idx, c("altNames", "teamWP")], file.path(wp_folder, "unnamed_
 
 
 
-# match teams using names
+# TODO : check duplicates (several WP teams with the same rugbscopeId)
 
 # record WP team table as a new CSV file (for verification)
 tab.file <- file.path(wp_folder, "teams.csv")
