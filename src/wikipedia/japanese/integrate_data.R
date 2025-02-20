@@ -390,7 +390,20 @@ en_names <- c()
 for (r in 1:length(idx)) {
   tlog(4, "Translating name ", r, "/", length(idx))
   orig <- wp_teams[idx[r], "altNames"]
-  translation <- create_translation_table(words = orig, languages = "en")[1, "en"]
+
+  # send to server
+  go_on <- TRUE
+  while (go_on) {
+    response <- tryCatch({create_translation_table(words = orig, languages = "en")}, error = function(e) {tlog("Server error: ", e$message); NA})
+    if (all(is.na(response))) {
+      Sys.sleep(2)
+      tlog("Server error: retrying")
+    } else {
+      go_on <- FALSE
+      translation <- response[1, "en"]
+    }
+  }
+
   tlog(6, "\"", orig, "\" >> \"", translation, "\"")
   en_names <- c(en_names, translation)
   Sys.sleep(1)
