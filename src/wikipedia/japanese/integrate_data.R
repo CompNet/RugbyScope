@@ -408,8 +408,10 @@ for (r in 1:length(idx)) {
   en_names <- c(en_names, translation)
   Sys.sleep(1)
 }
+#### debug: export translated names, for visualization
 
-# TODO : translate remaining japanese names?
+
+# filter out remaning high schools
 
 # TODO : add merged table name to JA entry, for visual verification
 
