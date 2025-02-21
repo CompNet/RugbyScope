@@ -385,11 +385,11 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 ## we now switch to names only, as the remaining WP teams do not have a URL
 
 # translate all remaining names to english using polyglotr
-idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))
 en_names <- c()
-for (r in 1:length(idx)) {
-  tlog(4, "Translating name ", r, "/", length(idx))
-  orig <- wp_teams[idx[r], "altNames"]
+for (r in 1:length(idx_noid)) {
+  tlog(4, "Translating name ", r, "/", length(idx_noid))
+  orig <- wp_teams[idx_noid[r], "altNames"]
 
   # send to server
   go_on <- TRUE
@@ -408,23 +408,48 @@ for (r in 1:length(idx)) {
   en_names <- c(en_names, translation)
   Sys.sleep(1)
 }
+unique_names <- sort(unique(en_names)) ################## <<<<<<<<<<<<<<<<<< devrait être la même longueur que idx_noid
 #### debug: export translated names, for visualization
+#tab <- cbind(unique_names, rep("", length(unique_names)))
+#colnames(tab) <- c("fullName", "teampId")
+#write.csv(tab, file.path(wp_folder, "remaining_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+
+# use manually constituted map to associate english names to teams
+# or try that automatically?
+
+# filter out remaining high schools
+idx_uhs <- which(grepl("[Hh]igh [Ss]chool", unique_names, fixed = FALSE))
+idx_ehs <- which(en_names %in% unique_names[idx_uhs])
+unique_names <- unique_names[-idx_uhs]
+wp_teams <- wp_teams[-(idx_noid[idx_ehs]), ]
+en_names <- en_names[-idx_ehs]
+idx_noids <- idx_noids[-idx_ehs]
 
 
-# filter out remaning high schools
+result <- match_team_names(src_names = unique_names, tgt_names = our_names)
+#### debug: check names with several matches
+idx <- which(sapply(result, length) > 1)
+for (i in idx) {
+  print(unique_names[i])
+  print(our_teams[result[[i]], "fullName"])
+  ii <- which(en_names == unique_names[i])
+  team <- wp_teams[idx_noid[ii], "altNames"]
+  ii <- which(wp_careers[idx_noid, "teamName"] == team)
+  print(wp_careers[idx_noid[ii], ])
+  print("-------------------")
+}
+
+
+
+
+
+
+# "→OK Finance" >> "OK Financial Group Okman", "Korea"
+# "香港FC（英語版）" >>  "Hong Kong FC", "Hong Kong"
+
+
 
 # TODO : add merged table name to JA entry, for visual verification
-
-
-
-
-
-
-
-
-
-
-
 
 
 # TODO : check duplicates (several WP teams with the same rugbscopeId)
@@ -434,7 +459,7 @@ tab.file <- file.path(wp_folder, "teams.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
-
+# TODO y avait une histoire de club nouvellement inséré qui n'était pas japonais
 
 
 
