@@ -131,6 +131,20 @@ wp_careers <- wp_careers %>% mutate(across(where(is.character), ~ na_if(., "")))
 # extract team table from career steps
 tlog("Extract team table from career steps")
 
+# clean certain team names
+wp_careers[, "teamName"] <- gsub("（英語版）", "", wp_careers[, "teamName"], fixed = TRUE)    # "english version" (of a team name)
+wp_careers[, "teamName"] <- gsub("（フランス語版）", "", wp_careers[, "teamName"], fixed = TRUE) # "french version"
+
+# remove career steps with empty team
+idx <- which(is.na(wp_careers[, "teamName"]))
+if (length(idx) > 0)
+  wp_careers <- wp_careers[-idx, ]
+
+# load url conversion map (to fix certain errors in the original data)
+temp <- read.csv(file.path(wp_folder, "maps", "url2url.csv"))
+map_urls <- temp[, "newUrl"]
+names(map_urls) <- temp[, "oldUrl"]
+
 # init table
 cn <- c("rugbyscopeId", "altNames", "teamWP")
 wp_teams <- data.frame(matrix(NA, nrow = 0, ncol = length(cn)))
@@ -142,23 +156,40 @@ alt_names <- list()
 for (r in 1:nrow(wp_careers)) {
   team_name <- wp_careers[r, "teamName"]
   team_url <- wp_careers[r, "teamWP"]
+
   # no associated url
   if (is.na(team_url)) {
     # search by team name
-    idx <- which(sapply(alt_names, function(an) team_name %in% an))
-    # new entry
+    idx <- c()
+    if (length(alt_names) > 0)
+      idx <- which(sapply(alt_names, function(an) team_name %in% an))
+    # none found: new entry
     if (length(idx) == 0) {
       wp_teams <- rbind(wp_teams, c(NA, NA, NA))
       alt_names <- c(alt_names, list(team_name))
     }
+    # otherwise: nothing to do
   # name and url both available
   } else {
+    # search by team url
+    if (team_url %in% names(map_urls))
+      team_url <- map_urls[team_url]
     idx <- which(wp_teams[, "teamWP"] == team_url)
-    # new entry
+    # none found: search by team name
     if (length(idx) == 0) {
-      wp_teams <- rbind(wp_teams, c(NA, NA, team_url))
-      colnames(wp_teams) <- cn
-      alt_names <- c(alt_names, list(team_name))
+      idx <- c()
+      if (length(alt_names) > 0)
+        idx <- which(sapply(alt_names, function(an) team_name %in% an))
+      # found none, or some with different urls: create new entry
+      if (length(idx) == 0 || all(!is.na(wp_teams[idx, "teamWP"]))) {
+        wp_teams <- rbind(wp_teams, c(NA, NA, team_url))
+        colnames(wp_teams) <- cn
+        alt_names <- c(alt_names, list(team_name))
+      # otherwise: update existing entry
+      } else {
+        idx <- which(is.na(wp_teams[idx, "teamWP"]))
+        wp_teams[idx, "teamWP"] <- team_url
+      }
     # update existing entry
     } else {
       nn <- union(alt_names[[idx]], team_name)
@@ -169,7 +200,19 @@ for (r in 1:nrow(wp_careers)) {
 tlog(4, "Found ", nrow(wp_teams), " unique teams")
 wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
 
-# we focus first on teams possessing a URL, as they are easier to match
+#### debug: check teams with the same name but a different URL (some URLs are incorrect)
+# dupp_names <- names(which(table(wp_teams[, "altNames"]) > 1))
+# tab <- wp_teams[-(1:nrow(wp_teams)), ]
+# for (dupp_name in dupp_names) {
+#   idx <- which(wp_teams[, "altNames"] == dupp_name)
+#   tab <- rbind(tab, wp_teams[idx, ])
+# }
+# write.csv(tab, file.path(wp_folder, "duplicate_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### the above code was used to define the url2url.csv map, allowing to solve specific cases of
+#### the same team being associated to several distinct URLs. the map associate an incorrect url
+#### to a correct one, and the substitution is made in the loop that builds the wp_teams table
+
+# we first focus on teams possessing a URL, as they are easier to match
 # match teams using WP URLs
 tlog(2, "Match WP teams to merged table based on urls")
 non_na <- which(!is.na(wp_teams[, "teamWP"]))
@@ -290,7 +333,6 @@ for (i in 1:length(map_names)) {
   r <- r + 1
 }
 our_teams <- rbind(our_teams, supp)
-our_teams[which(our_teams[, "fullName"] == "Eastern Hawks"), "countries"] <- "New Zeland"
 tlog(4, "Had to create ", nrow(supp), " new teams in merged table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
@@ -333,20 +375,20 @@ idx <- which(!is.na(result))
 tlog(4, "Could match ", length(idx), " teams based on English name")
 #### debug (check matches)
 #tab <- cbind(wp_teams[wp_idx[idx], "altNames"], our_names[result[idx]], our_teams[result[idx], "rugbyscopeId"], wp_teams[wp_idx[idx], "teamWP"])
-#write.csv(tab, file.path(wp_folder, "temp_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#write.csv(tab, file.path(wp_folder, "successful_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 wp_teams[wp_idx[idx], "rugbyscopeId"] <- our_teams[result[idx], "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
-# focusing on the remaning teams with a URL but not matched
+# focusing on the remaining teams with a URL but not matched
 wp_idx <- wp_idx[-idx]
 tab <- wp_teams[wp_idx, ]
 #### debug
-#write.csv(tab, file.path(wp_folder, "temp_unmatched.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#write.csv(tab, file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### at this stage, we use the above file to determine whether some teams can be matched manually
 #### if it is the case: we add them to url2ids.csv (and we apply the above process again)
 #### the rest will be considered as new teams: created and inserted in the merged table (see below)
 
-# add the remaining unmatched teams possessing URL as new teams in the merged table
+# add the remaining unmatched teams possessing a URL as new teams in the merged table
 supp <- our_teams[-(1:nrow(our_teams)), ]
 rsid <- max(our_teams[, "rugbyscopeId"]) + 1
 r <- 1
@@ -356,7 +398,7 @@ for (i in 1:nrow(tab)) {
   wp_teams[wp_idx[i], "rugbyscopeId"] <- rsid
   rsid <- rsid + 1
   supp[r, "wikipediaJa"] <- tab[i, "teamWP"]
-  supp[r, "countries"] <- "Japan"                                 # TODO some are not from japan: correct below
+  supp[r, "countries"] <- "Japan"
   names <- strsplit(tab[i, "altNames"], "; ")[[1]]
   en_name <- NA
   ja_names <- c()
@@ -370,8 +412,15 @@ for (i in 1:nrow(tab)) {
   supp[r, "altNames"] <- paste0(ja_names, collapse = "; ")
   r <- r + 1
 }
+# update certain teams' countries based on name2country.csv map
+temp <- read.csv(file.path(wp_folder, "maps", "name2country.csv"))
+map_ctry <- temp[, "country"]
+names(map_ctry) <- temp[, "teamName"]
+idx <- which(!is.na(match(supp[, "fullName"], names(map_ctry))))
+for (team in names(map_ctry))
+  supp[which(supp[, "fullName"] == team), "countries"] <- map_ctry[team]
+# add to merged table
 our_teams <- rbind(our_teams, supp)
-our_teams[which(our_teams[, "fullName"] == "???????????????????"), "countries"] <- "????????????????????????"
 tlog(4, "Had to create ", nrow(supp), " new teams in merged table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
@@ -384,9 +433,26 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 
 ## we now switch to names only, as the remaining WP teams do not have a URL
 
+# use manually defined map to match certain teams
+tlog(2, "Use manually defined map to match certain teams based on their japanese name")
+temp <- read.csv(file.path(wp_folder, "maps", "name2id.csv"))
+map_names <- temp[, "rugbyscopeId"]
+names(map_names) <- temp[, "jaName"]
+# remove teams associated with name NA
+idx <- match(names(map_names), wp_teams[, "altNames"])
+idx_rem <- which(is.na(map_names))
+if (length(idx_rem) > 0) {
+  wp_teams <- wp_teams[-(idx[idx_rem]), ]
+  map_names <- map_names[-idx_rem]
+}
+# update the other teams
+idx <- match(names(map_names), wp_teams[, "altNames"])
+wp_teams[idx, "rugbyscopeId"] <- map_names
+
 # translate all remaining names to english using polyglotr
-idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))
+idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))                      # 986
 en_names <- c()
+ja_names <- c()
 for (r in 1:length(idx_noid)) {
   tlog(4, "Translating name ", r, "/", length(idx_noid))
   orig <- wp_teams[idx_noid[r], "altNames"]
@@ -406,46 +472,72 @@ for (r in 1:length(idx_noid)) {
 
   tlog(6, "\"", orig, "\" >> \"", translation, "\"")
   en_names <- c(en_names, translation)
-  Sys.sleep(1)
+  ja_names <- c(ja_names, orig)
+  #Sys.sleep(1)
 }
-unique_names <- sort(unique(en_names)) ################## <<<<<<<<<<<<<<<<<< devrait être la même longueur que idx_noid
+unique_names <- sort(unique(en_names))                                    # 911
 #### debug: export translated names, for visualization
-#tab <- cbind(unique_names, rep("", length(unique_names)))
-#colnames(tab) <- c("fullName", "teampId")
+#tab <- cbind(unique_names, wp_teams[idx_noid[match(unique_names, en_names)], "altNames"], rep("", length(unique_names)))
+#colnames(tab) <- c("fullName", "jaName", "teamId")
 #write.csv(tab, file.path(wp_folder, "remaining_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
-# use manually constituted map to associate english names to teams
-# or try that automatically?
-
 # filter out remaining high schools
-idx_uhs <- which(grepl("[Hh]igh [Ss]chool", unique_names, fixed = FALSE))
-idx_ehs <- which(en_names %in% unique_names[idx_uhs])
-unique_names <- unique_names[-idx_uhs]
-wp_teams <- wp_teams[-(idx_noid[idx_ehs]), ]
-en_names <- en_names[-idx_ehs]
-idx_noids <- idx_noids[-idx_ehs]
+idx_uhs <- which(grepl("[Hh]igh [Ss]chool", unique_names, fixed = FALSE)) # 167
+idx_ehs <- which(en_names %in% unique_names[idx_uhs])                     # 181
+unique_names <- unique_names[-idx_uhs]                                    # 746
+en_names <- en_names[-idx_ehs]                                            # 797
+ja_names <- ja_names[-idx_ehs]                                            # 797
+wp_teams <- wp_teams[-(idx_noid[idx_ehs]), ]                              # 1323
+idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))                      # 797
 
-
+# try matching the teams by name
 result <- match_team_names(src_names = unique_names, tgt_names = our_names)
 #### debug: check names with several matches
-idx <- which(sapply(result, length) > 1)
-for (i in idx) {
-  print(unique_names[i])
-  print(our_teams[result[[i]], "fullName"])
-  ii <- which(en_names == unique_names[i])
-  team <- wp_teams[idx_noid[ii], "altNames"]
-  ii <- which(wp_careers[idx_noid, "teamName"] == team)
-  print(wp_careers[idx_noid[ii], ])
-  print("-------------------")
-}
+#idx <- which(sapply(result, length) > 1)
+#for (i in idx) {
+#  print(unique_names[i])
+#  print(our_teams[result[[i]], "fullName"])
+#  ii <- which(en_names == unique_names[i])
+#  team <- wp_teams[idx_noid[ii], "altNames"]
+#  ii <- match(team, wp_careers[, "teamName"])
+#  print(wp_careers[ii, ])
+#  print("-------------------")
+#}
+#### the above loop is used to detect cases of multiple matching
+#### and solve them manually by adding them to the map in file name2id.csv
 
+# at this stage, we assume there is no multiple matches
+idx_um <- which(!is.na(result))
+idx_em <- which(en_names %in% unique_names[idx_um])
+map <- match(en_names[idx_em], unique_names[idx_um])
+tlog(4, "Could match ", length(idx_um), " teams based on English name")
+#### debug (check matches)
+#tab <- cbind(wp_teams[idx_noid[idx_em], "altNames"], ja_names[idx_em], en_names[idx_em], our_names[result[idx_um]][map], our_teams[result[idx_um][map], "rugbyscopeId"], wp_teams[idx_noid[idx_em], "teamWP"])
+#colnames(tab) <- c("altNames", "jaName", "enName", "fullName", "rugbyscopeId", "teamWp")
+#write.csv(tab, file.path(wp_folder, "successful_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### this file is used to visually verify that the matches obtained above are correct
+#### errors can be corrected by complementing the name2id.csv file used before, to force manual matching
+wp_teams[idx_noid[idx_em], "rugbyscopeId"] <- our_teams[result[idx_um][map], "rugbyscopeId"]
+tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+
+#### debug
+idx_um <- which(is.na(result))
+idx_em <- which(en_names %in% unique_names[idx_um])
+idx_plyr <- match(ja_names[idx_em], wp_careers[, "teamName"])
+tab <- cbind(en_names[idx_em], ja_names[idx_em], rep(NA, length(idx_em)), wp_careers[idx_plyr, "wpPage"])
+colnames(tab) <- c("fullName", "jaName", "rugbyscopeId", "playerWP")
+idx <- order(en_names[idx_em])
+write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### at this stage, it was not possible to match the remaining teams automatically
+#### therefore, we export the list of remaining unmatched teams so that they can be matched manually
+#### thru the map already defined in file name2id.csv (and complemetented based on the above list)
+#### the rest will be considered as new teams: created and inserted in the merged table (see below)
 
 
 
 
 
 # "→OK Finance" >> "OK Financial Group Okman", "Korea"
-# "香港FC（英語版）" >>  "Hong Kong FC", "Hong Kong"
 
 
 
@@ -476,3 +568,12 @@ tlog("Merging career steps")
 
 # [1] "playerId"      "playerName"    "teamId"        "teamName"
 # [5] "startYear"     "endYear"       "matchesPlayed" "pointsScored"
+
+
+
+
+########################################################################
+# record as a new CSV file
+tab.file <- file.path(fusion_folder, "teams_03_ja-wp.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(our_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
