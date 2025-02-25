@@ -537,12 +537,12 @@ write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FA
 
 
 
-# "→OK Finance" >> "OK Financial Group Okman", "Korea"
 
 
 
 # TODO : add merged table name to JA entry, for visual verification
 
+# TODO : before regenerativing teams_03, integrate the manual modifs in teams_02
 
 # TODO : check duplicates (several WP teams with the same rugbscopeId)
 
@@ -553,7 +553,7 @@ write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # TODO y avait une histoire de club nouvellement inséré qui n'était pas japonais
 
-
+# TODO virer les doublons ds les altNames, après avoir subsituté les "," pr des ";" 
 
 
 ########################################################################
