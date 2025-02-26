@@ -555,6 +555,8 @@ write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # TODO virer les doublons ds les altNames, après avoir subsituté les "," pr des ";" 
 
+# TODO ds les carrières, remplacer les refs WD par des refs RS
+
 
 ########################################################################
 # merge career steps

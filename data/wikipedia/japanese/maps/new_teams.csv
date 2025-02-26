@@ -1,9 +1,10 @@
 "fullName","type","altNames","countries"
-"A.U Broncos","Club","A.Uブロンコス",NA
+"A.U Broncos","Club","A.Uブロンコス","Australia"
 "Akashi Junior Rugby Club","Club","明石ジュニアラグビークラブ","Japan"
 "Argentina national under-19 rugby union team","National U19 team","アルゼンチン U-19","Argentina"
 "Argentina national under-21 rugby union team","National U21 team","アルゼンチン U-21","Argentina"
 "Auckland Institute of Technology","Club","オークランド工科大学","Japan"
+"Australia national under-19 rugby union team","National U19 team","U18オーストラリア","Australia"
 "Australian College","Club","オーストラリアン・カレッジ","Australia"
 "Bulava Taganrog","Club","ブラヴァ・タガンログ","Russia"
 "Kabras Sugar RFC","Club","カブラスシュガーRFC","Kenya"
@@ -22,6 +23,7 @@
 "Gai Wu RFC","Club","ガイ・ウーRFC","Hong Kong"
 "HKS Dolphins Rugby","Club","香港仔ドルフィンズ","Hong Kong"
 "Hong Kong FC","Club","香港FC","Hong Kong"
+"Ireland national under-18 rugby union team","National U18 team","U18アイルランド","Ireland"
 "Ireland national under-19 rugby union team","National U19 team","アイルランドU19","Ireland"
 "Ireland national under-21 rugby union team","National U21 team","アイルランドU21","Ireland"
 "Katsunuma Club","Club","勝沼クラブ","Japan"
@@ -29,7 +31,7 @@
 "Komono Rabbits Foot RFC","Club","菰野ラビッツフットRFC","Japan"
 "Nelson Mandela University","Club","ネルソン・マンデラ大学","South Africa"
 "New Zealand Institute of Sports","Club","ニュージーランド・インスティチュート・オブ・スポーツ","New Zealand"
-"Niko Niko Do","Club","ニコニコドー",""Japan
+"Niko Niko Do","Club","ニコニコドー","Japan"
 "Niigata Sanyo Electronics","Club","新潟三洋電子","Japan"
 "North-West University","Club","ノース・ウェスト大学","South Africa"
 "NTT Tohoku","Club","NTTグループ東北","Japan"
@@ -38,31 +40,16 @@
 "PSI Super Sonics","Club","PSIスーパーソニックス","Japan"
 "Rand Afrikaans University","Club","ランドアフリカーンス大学","South Africa"
 "Redrock Rugby Club","Club","レッドロック","Fiji"
+"Rugby Thiene A.S.D.","Club","Thiene","Italy"
 "Simbas","Club","シンバス","Kenya"
 "St Mary's University College Belfast","Club","セント・メアリーズ大学","Ireland"
-"Stade Monte","スタッド・モンテ","310"
-"STM Krasnoyarsk","STMクラスノヤルスク","166"
-"StPeters College","Stぺーターズカレッジ",NA
-"Strera","ストレラ","402"
-"Strera Kazan","ストレラ・カザン","402"
-"Stud Dijonice","スタッド・ディジョナイス","667"
-"Stud Nisova","スタッド・ニソワ","674"
-"Stud Tarbes","スタッド・タルブ","89"
-"Suba Grammar School","スバグラマースクール",NA
-"Suburbs Premiers","サバーブス・プレミアズ",NA
-"Suita Rugby School","吹田ラグビースクール",NA
-"Sunny Bank","サニーバンク","683"
-"Sunnybank Dragons Colts","Sunnybank Dragons Colts","683"
+"Suva Rugby Union Team","Club","スバ","Fiji"
 "Swinburne University of Technology","Club","スウィンバーニー大学","Australia"
-"Sydney Rams","シドニー・ラムズ","740"
-"Sydney Rams","シドニーラムズ","740"
-"Sydney University","シドニー・ユニバーシティ","690"
-"Sydney University","シドニーユニバーシティー","690"
-"Sydonum RFC","シドナムRFC","5796"
-"Tagger Anon Vikings","タガーアノン・ヴァイキングズ","1904"
-"Tamarose","タマロウズ",NA
-"Tanganu","タンガヌ",NA
-"Tara","タラ",NA
-"Taranaki","タラナキ","2913"
-"Taraoare","タラオアレ",NA
-"Tarb","タルブ","89"
+"Tatami Rugby Club","Club","タタミ","Spain"
+"Tokyo Electric Power Company","Club","東京電力","Japan"
+"University of Mumbai","Club","ムンバイ大学","India"
+"University of Western Australia","Club","ウエスタンオーストラリア大学","Australia"
+"Utsunomiya VOLTS","Club","宇都宮VOLT'S","Japan"
+"Waikato Institute of Technology","Club","ワイカト工科大学","New Zealand"
+"Western Sydney University","Club","ウエスタンシドニー大学","Australia"
+"Yanbaru Rugby Club","Club","やんばるクラブ","Japan"

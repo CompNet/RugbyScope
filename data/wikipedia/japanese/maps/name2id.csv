@@ -119,7 +119,7 @@
 "CR Technikko","CRテクニッコ","476"
 "Crotiati","クロティアティ","368"
 "Crusaders","Crusaders","188"
-"CS Chrissy","CSクリシー",NA,"4563"
+"CS Chrissy","CSクリシー","4563"
 "CSM Baiamare","CSMバイアマレ","447"
 "CSM Bucharest","CSMブカレスト","2388"
 "CSM Bucresti","CSMブクレシュティ","2388"
@@ -220,7 +220,7 @@
 "Kvamri Tbilisi","クヴァムリ・トビリシ","3197"
 "Kyoto Freaks","京都フリークス",NA
 "Kyoto University Graduate School","京都大学大学院","2058"
-"La Test","ラ・テスト",NA,"722"
+"La Test","ラ・テスト","722"
 "La Vallett","ラ・ヴァレット","2881"
 "Lambasa Sangam College","ランバササンガムカレッジ",NA
 "Landberry RFC","ランドベリーRFC","100"
@@ -274,17 +274,17 @@
 "Millfield School","ミルフィールドスクール",NA
 "Modern Globis","現代グロービス",NA
 "Moldova","モルドバ","319"
-"Monaco","モナコ",NA,
+"Monaco","モナコ",NA
 "Monino","モニノ","279"
 "Montluson","モンリュソン","559"
-"Montpellier","Montpellier",NA,"76"
+"Montpellier","Montpellier","76"
 "Moon Star Club","月星クラブ",NA
 "Moreon","モレオン","655"
 "Moriano","モリアーノ","339"
 "Moriano 1956","モリアーノ1956","339"
 "Moriano Rugby","モリアーノ・ラグビー","339"
 "Moseley","モーズリー","26"
-"Mount Albert Grammar School","マウントアルバートグラマースクール",NA,
+"Mount Albert Grammar School","マウントアルバートグラマースクール",NA
 "Mount Roskill Grammar School","マウントロスキルグラマースクール",NA
 "Munakata Sanics","宗像サニックス","1250"
 "Nadi College","ナディカレッジ",NA
@@ -303,8 +303,8 @@
 "Nice","ニース","276"
 "Nior","ニオール","1839"
 "Nior Rugby Club","ニオール ラグビー クラブ","1839"
-"North Harbor","ノース・ハーバー",NA,"2904"
-"North Harbor","ノースハーバー",NA,"2904"
+"North Harbor","ノース・ハーバー","2904"
+"North Harbor","ノースハーバー","2904"
 "North Harbor Marist","ノースハーバーマリスト","5866"
 "North Harbor Ray","ノースハーバーレイ","55"
 "North Harbor Rays","ノース・ハーバーレイズ","55"
@@ -459,18 +459,124 @@
 "St. Joseph Znagy College","St.ジョセフズナジーカレッジ",NA
 "St. Kentigan College","セントケンティガンカレッジ",NA
 "St. Kentigan College","セント・ケンティガン・カレッジ",NA
-"St. Patrick's College","セント・パトリックスカレッジ",NA,""
+"St. Patrick's College","セント・パトリックスカレッジ",NA
 "St. Patrick's College","セントパトリックカレッジ",NA
 "St. Paul's College","セント・ポールズ・カレッジ",NA
 "St. Paul College Eight","セントポールカレッジエイト",NA
 "St. Peter's College","セント・ピーターズ・カレッジ",NA
 "St. Thomas High","セントトーマス高",NA
+"Stade Monte","スタッド・モンテ","310"
+"STM Krasnoyarsk","STMクラスノヤルスク","166"
+"StPeters College","Stぺーターズカレッジ",NA
+"Strera","ストレラ","402"
+"Strera Kazan","ストレラ・カザン","402"
+"Stud Dijonice","スタッド・ディジョナイス","667"
+"Stud Nisova","スタッド・ニソワ","674"
+"Stud Tarbes","スタッド・タルブ","89"
+"Suba Grammar School","スバグラマースクール",NA
 "Suba Highlanders","スバ・ハイランダーズ","1856"
+"Suburbs Premiers","サバーブス・プレミアズ",NA
+"Suita Rugby School","吹田ラグビースクール",NA
+"Sunny Bank","サニーバンク","683"
+"Sunnybank Dragons Colts","Sunnybank Dragons Colts","683"
+"Sydney Rams","シドニー・ラムズ","740"
+"Sydney Rams","シドニーラムズ","740"
+"Sydney University","シドニー・ユニバーシティ","690"
+"Sydney University","シドニーユニバーシティー","690"
+"Sydonum RFC","シドナムRFC","5796"
+"Tagger Anon Vikings","タガーアノン・ヴァイキングズ","1904"
+"Tamarose","タマロウズ",NA
+"Tanganu","タンガヌ",NA
+"Tara","タラ",NA
+"Taranaki","タラナキ","2913"
+"Taraoare","タラオアレ",NA
+"Tarb","タルブ","89"
+"Tasman","タスマン","2905"
+"Tasman","Tasman","2905"
+"Tasman Makoz","タスマン・マコズ","2905"
+"Tauponui Atoa College","タゥポヌイアトゥアカレッジ",NA
+"technical","テクニカル","476"
+"Telenuer College","テレニュアカレッジ","694"
+"Thames Valley","テムズ・ヴァリー","1880"
+"The Ballymore Tornados","バリーモア・トルネードズ","424"
+"The Medici","I Medicei","2659"
 "The Rock","ザ・ロック","2363"
+"Theaute College","テアウテカレッジ",NA
+"To Pukeko","プケコへ","5814"
+"Toberanites","トベルアナイツ","1864"
+"Tonga College","トンガカレッジ",NA
+"Tooomba","トウーンバ","3783"
+"Trevizo","トレビーゾ","59"
+"Trinity University College","トリニティー・ユニバーシティ・カレッジ",NA
+"TSV Hartberg","TSVハルトベルク","692"
+"Tupo College","トゥポカレッジ",NA
+"Tupou College","トゥポウカレッジ",NA
+"U.S. Primavera","U.S.プリマヴェーラ","858"
+"U17 Kanto","U17関東",NA
+"U17 Kinki","U17近畿",NA
+"U17 Kyushu","U17九州",NA
+"U18 England","U18イングランド","1217"
+"U18 North Harbor","U18ノースハーバー","2904"
+"U18 Wales","U18ウェールズ","1949"
+"U19 America","U19アメリカ","2688"
+"U19 New Zealand","U19ニュージーランド","1564"
+"U20 Cook Islands","U20クック諸島","2420"
+"U20 Kenya","U20ケニア","2680"
+"U20 Russia","U20ロシア","1776"
+"U21 New Zealand","U21ニュージーランド","1566"
+"UCD","UCD","75"
 "Unillon Sportive Bressantine","ユニヨン・スポルティーヴ・ブレッサンヌ","250"
-"Yokogawa Musashino","横河武蔵野","1995"
+"University of Exeter RFC","エクセター大学RFC","1226"
+"University of Johannesburg","ヨハネスブルク大学","3194"
+"University of New South Wales","ニューサウスウェールズ大学","3955"
+"University of Wellington","ウェリントン大学","270"
+"Unlucky Club","惑惑クラブ",NA
+"Upper hat","アッパーハット","6089"
+"US Berger Rack","USベルジュラック","706"
+"US Tiros","USティロス","715"
+"Utsunomiya Voltz","宇都宮ヴォルツ","TODO"
+"Uwic","UWIC","1912"
+"Valence","ヴァランス","394"
+"Valence Dajean","ヴァランス＝ダジャン","394"
+"Valence Roman","ヴァランス・ロマン","2627"
+"Verance Romance Drome Rugby","ヴェランス・ロマンス・ドローム・ラグビー","2627"
+"Viadana","ヴィアダーナ","329"
+"Vicenza","ヴィチェンツァ","850"
+"Vizcaia Guernica","ビズカイア・ゲルニカ","62"
+"VVA","VVA","279"
+"Waikato","ワイカト","2915"
+"Wairara Pubshu","ワイララパブッシュ","1946"
+"Wally's","ウォーリーズ",NA
 "Wanderers","ワンダラーズ","2637"
+"Wanganui","ワンガヌイ","730"
+"Warators U19","ワラターズU19","61"
+"Waringau","ワリンガウ","731"
+"Warlinger","ワーリンガー","731"
+"Warwick School","ワーウィックスクール",NA
+"Waseda Club M.F. Maurice Club","ワセダクラブM.F.帆柱クラブ","2480"
+"Waverly College","ウェーバリーカレッジ",NA
+"Well Whitiers","ウェルウィチアズ","563"
 "Wellington","ウェリントン","270"
+"Wellington College","ウェリントンカレッジ",NA
+"Wellington College","ウェリントン・カレッジ",NA
+"Wellwitches","ウェルウィッチアズ","563"
+"Welwitcher","ウェルウィッチア","563"
+"Weslee University","ウエスレー大学",NA
+"Wesley College","ウェズリーカレッジ",NA
+"Wesley College","ウェスレイカレッジ",NA
+"Wesley College","ウェスリーカレッジ",NA
+"Wesley College","ウェズレイカレッジ",NA
+"Wesley University","ウェズリー大学",NA
+"West Coast","ウェストコースト","736"
+"West Harbor","ウェストハーバー","737"
+"West Harbor","ウェスト・ハーバー","737"
+"West Harbor","ウエストハーバー","737"
+"West Harbor Pirates","ウエスト・ハーバー・パイレーツ","737"
+"Western Provence","ウェスタン・プロヴァンス","344"
 "Wests","Wests","741"
+"Yokogawa Musashino","横河武蔵野","1995"
+"Yokohama Rugby School","横浜ラグビースクール",NA
+"Yoo Cruj","ユ・クルジュ","1041"
+"Yorkshire","ヨークシャー","251"
+"Yukor University","ユーコル大学",NA
 "南島","南島","2899"
-"Suva Rugby Union Team","Club","スバ","Fiji"
