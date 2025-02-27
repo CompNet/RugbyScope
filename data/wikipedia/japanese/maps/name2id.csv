@@ -22,11 +22,11 @@
 "Aorelle University","アオレレ大学",NA
 "Apparela Dress Burgos","アパレジャドレス・ブルゴス","2553"
 "Argentina U20","アルゼンチンU20","862"
+"Argentina U21","アルゼンチンU21","6910"
 "AS Maron","ASマロン","412"
 "Asgol Gavin Bro Morganug","アスゴル・ガヴィン・ブロ・モルガヌグ",NA
 "Associasion Almuni","アソシアシオン・アルムニ","178"
 "Auckland","Auckland","928"
-"Auckland Institute of Technology","オークランド工科大学","6911"
 "Auckland U21","オークランドU21","928"
 "Ausch","オーシュ","2848"
 "Australia A representative","オーストラリアA代表","931"
@@ -153,8 +153,8 @@
 "FIR Academy","FIRアカデミー",NA
 "Foolscole Voterique","フールスコール・ヴォーテールク",NA
 "Francis Douglas Memoria","フランシス・ダグラス・メモリア",NA
-"Free State University","フリーステイト大学","6925"
-"Free State University","フリーステート大学","6925"
+"Free State University","フリーステイト大学","6926"
+"Free State University","フリーステート大学","6926"
 "Free State XV","フリーステートXV","22"
 "Gangarin","ガンガーリン","1283"
 "Gekcho","ゲチョ","520"
@@ -285,7 +285,6 @@
 "Moriano","モリアーノ","339"
 "Moriano 1956","モリアーノ1956","339"
 "Moriano Rugby","モリアーノ・ラグビー","339"
-"Moseley","モーズリー","26"
 "Mount Albert Grammar School","マウントアルバートグラマースクール",NA
 "Mount Roskill Grammar School","マウントロスキルグラマースクール",NA
 "Munakata Sanics","宗像サニックス","1250"
@@ -304,10 +303,8 @@
 "New Zealand U21","ニュージーランドU21","1565"
 "Newberry","ニューベリー","1567"
 "Newport Gwent Dragons","Newport Gwent Dragons","3176"
-"Nice","ニース","276"
 "Nior","ニオール","1839"
 "Nior Rugby Club","ニオール ラグビー クラブ","1839"
-"North Harbor","ノース・ハーバー","2904"
 "North Harbor","ノースハーバー","2904"
 "North Harbor Marist","ノースハーバーマリスト","5866"
 "North Harbor Ray","ノースハーバーレイ","55"
@@ -321,8 +318,8 @@
 "Northton Suburb","ノーストンサバーブ","567"
 "Northton Suburbs","ノーストン・サバーブス","567"
 "Northton United PFC","ノーストン・ユナイテッドPFC","6082"
-"North-West University","ノースウェスト大学","6941"
-"North-West University","ノースウエスト大学","6941"
+"North-West University","ノースウェスト大学","6942"
+"North-West University","ノースウエスト大学","6942"
 "Nottingham","ノッティンハム","13"
 "NSW Country","NSWカントリー","2210"
 "NSW Country Eagles","NSWカントリーイーグルス","2210"
@@ -361,7 +358,6 @@
 "Phili Moscow","フィリ・モスクワ","507"
 "Physian Latui","フィジアン・ラトゥイ","2781"
 "Physian Latzii","フィジアン・ラツィイ","2781"
-"Plymouth","プリマス","589"
 "Ponsoby","ポンソビー","1659"
 "Ponsonby","Ponsonby","1659"
 "Ponsonby","ポンソンビー","1659"
@@ -375,7 +371,7 @@
 "Queen's Country","クイーンズ・カントリー","1694"
 "Queenbian Whites","クウィーンビアン・ホワイツ","1690"
 "Queensland Country Rugby","Queensland Country Rugby","1694"
-"Rand Afrikaans University","ランドアフリカーンズ大学","6946"
+"Rand Afrikaans University","ランドアフリカーンズ大学","6947"
 "Ranelli RFC","ラネリRFC","272"
 "Rannelly RFC","ラネリーRFC","272"
 "Ratunabula College","ラトゥナブラカレッジ",NA
@@ -404,6 +400,7 @@
 "Reds U19","レッズU19",NA
 "Reel MR","リールMR","548"
 "Reggio","レッジョ","8"
+"Republic of South Africa U-18","南アフリカ共和国U-18","2403"
 "Rhone","ローヌ","2188"
 "Ricoh Black Rams","リコーブラックラムズ","487"
 "Rindo Club","りんどうクラブ",NA
@@ -429,7 +426,6 @@
 "Scott College","スコットカレッジ",NA
 "Seattle OPSB","シアトルOPSB","2671"
 "Sevenoks","セブノークス","2763"
-"Shangwu","尚武",NA
 "Shiwa Ox","紫波オックス",NA
 "Slanellee","スラネリー","272"
 "SO Chambery","SOシャンベリ","675"
@@ -520,6 +516,7 @@
 "U17 Kinki","U17近畿",NA
 "U17 Kyushu","U17九州",NA
 "U18 England","U18イングランド","1217"
+"U18 France","U18フランス","1248"
 "U18 North Harbor","U18ノースハーバー","2904"
 "U18 Wales","U18ウェールズ","1949"
 "U19 America","U19アメリカ","2688"
@@ -538,13 +535,12 @@
 "Upper hat","アッパーハット","6089"
 "US Berger Rack","USベルジュラック","706"
 "US Tiros","USティロス","715"
-"Utsunomiya Voltz","宇都宮ヴォルツ","6957"
+"Utsunomiya Voltz","宇都宮ヴォルツ","6958"
 "Uwic","UWIC","1912"
 "Valence","ヴァランス","394"
 "Valence Dajean","ヴァランス＝ダジャン","394"
 "Valence Roman","ヴァランス・ロマン","2627"
 "Verance Romance Drome Rugby","ヴェランス・ロマンス・ドローム・ラグビー","2627"
-"Viadana","ヴィアダーナ","329"
 "Vicenza","ヴィチェンツァ","850"
 "Vizcaia Guernica","ビズカイア・ゲルニカ","62"
 "VVA","VVA","279"

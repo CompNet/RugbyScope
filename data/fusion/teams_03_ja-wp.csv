@@ -6185,7 +6185,7 @@
 6186,NA,"Maties","Club",NA,NA,NA,NA,"South Africa","Varsity Cup",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6187,NA,"NWU Eagles","Club",NA,NA,NA,NA,"South Africa","Varsity Cup",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6188,NA,"UFS Shimlas","Club",NA,NA,NA,NA,"South Africa","Varsity Cup",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6190,NA,"UP Tuks","Club",NA,NA,NA,NA,"South Africa","Varsity Cup",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6190,NA,"UP Tuks","Club",NA,NA,"University of Pretoria Tuks; University of Pretoria",NA,"South Africa","Varsity Cup",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6191,NA,"Wits","Club",NA,NA,NA,NA,"South Africa","Varsity Cup",5,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6192,NA,"CPUT Rugby","Club",NA,NA,NA,NA,"South Africa","Varsity Shield",6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6193,NA,"NMMU Madibaz","Club",NA,NA,NA,NA,"South Africa","Varsity Shield",6,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -6861,98 +6861,99 @@
 6863,NA,"Stellenbosch University",NA,NA,NA,"ステレンボッシュ大学; ステレンボッシュ大",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%B9%E3%83%86%E3%83%AC%E3%83%B3%E3%83%9C%E3%83%83%E3%82%B7%E3%83%A5%E5%A4%A7%E5%AD%A6",NA
 6864,NA,"Ohio State Buckeyes",NA,NA,NA,"オハイオ州立大学",NA,"U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AA%E3%83%8F%E3%82%A4%E3%82%AA%E3%82%B9%E3%83%86%E3%83%BC%E3%83%88%E3%83%BB%E3%83%90%E3%83%83%E3%82%AF%E3%82%A2%E3%82%A4%E3%82%BA",NA
 6865,NA,"Korea Electric Power Corporation",NA,NA,NA,"韓国電力公社; 韓国電力",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E9%9F%93%E5%9B%BD%E9%9B%BB%E5%8A%9B%E5%85%AC%E7%A4%BE",NA
-6866,NA,"Newcastle University",NA,NA,NA,"ニューカッスル大学",NA,"England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%AB%E3%83%83%E3%82%B9%E3%83%AB%E5%A4%A7%E5%AD%A6_(%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89)",NA
-6867,NA,"University of Canberra",NA,NA,NA,"キャンベラ大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%99%E3%83%A9%E5%A4%A7%E5%AD%A6",NA
-6868,NA,"University of Edinburgh",NA,NA,NA,"エディンバラ大学",NA,"Scotland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%A8%E3%83%87%E3%82%A3%E3%83%B3%E3%83%90%E3%83%A9%E5%A4%A7%E5%AD%A6",NA
-6869,NA,"University of Canterbury",NA,NA,NA,"カンタベリー大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%B3%E3%82%BF%E3%83%99%E3%83%AA%E3%83%BC%E5%A4%A7%E5%AD%A6",NA
-6870,NA,"China Agricultural University",NA,NA,NA,"中国農業大学",NA,"China",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%B8%AD%E5%9B%BD%E8%BE%B2%E6%A5%AD%E5%A4%A7%E5%AD%A6",NA
-6871,NA,"University of Hong Kong",NA,NA,NA,"香港大学",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%A6",NA
-6872,NA,"Linfield University",NA,NA,NA,"リンフィールド大学",NA,"U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%AA%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%A4%A7%E5%AD%A6",NA
-6873,NA,"Japan Energy",NA,NA,NA,"日本鉱業",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E3%82%A8%E3%83%8A%E3%82%B8%E3%83%BC",NA
-6874,NA,"Yonsei University",NA,NA,NA,"延世大学",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%BB%B6%E4%B8%96%E5%A4%A7%E5%AD%A6%E6%A0%A1",NA
-6875,NA,"Dankook University",NA,NA,NA,"檀国大学",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%AA%80%E5%9B%BD%E5%A4%A7%E5%AD%A6%E6%A0%A1",NA
-6876,NA,"Korea Armed Forces Athletic Corps",NA,NA,NA,"大韓民国国軍体育部隊; 尚武",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%9B%BD%E8%BB%8D%E4%BD%93%E8%82%B2%E9%83%A8%E9%9A%8A",NA
-6877,NA,"Cardiff University",NA,NA,NA,"カーディフ大学",NA,"Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%BC%E3%83%87%E3%82%A3%E3%83%95%E5%A4%A7%E5%AD%A6",NA
-6878,NA,"Queensland University of Technology",NA,NA,NA,"クイーンズランド工科大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AF%E3%82%A4%E3%83%BC%E3%83%B3%E3%82%BA%E3%83%A9%E3%83%B3%E3%83%89%E5%B7%A5%E7%A7%91%E5%A4%A7%E5%AD%A6",NA
-6879,NA,"Kyung Hee University",NA,NA,NA,"慶熙大学",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%85%B6%E7%86%99%E5%A4%A7%E5%AD%A6%E6%A0%A1",NA
-6880,NA,"POSCO",NA,NA,NA,"ポスコ",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%9D%E3%82%B9%E3%82%B3",NA
-6881,NA,"Tohoku Fukushi University",NA,NA,NA,"東北福祉大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%9D%B1%E5%8C%97%E7%A6%8F%E7%A5%89%E5%A4%A7%E5%AD%A6",NA
-6882,NA,"Tohoku Gakuin University",NA,NA,NA,"東北学院大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%9D%B1%E5%8C%97%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6",NA
-6883,NA,"Aichi Institute of Technology",NA,NA,NA,"愛知工業大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6",NA
-6884,NA,"Victoria University",NA,NA,NA,"ビクトリア大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%93%E3%82%AF%E3%83%88%E3%83%AA%E3%82%A2%E5%A4%A7%E5%AD%A6",NA
-6885,NA,"Aichi Gakuin University",NA,NA,NA,"愛知学院大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%84%9B%E7%9F%A5%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6",NA
-6886,NA,"Meijo University",NA,NA,NA,"名城大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%90%8D%E5%9F%8E%E5%A4%A7%E5%AD%A6",NA
-6887,NA,"International Pacific University",NA,NA,NA,"環太平洋大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E7%92%B0%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%A4%A7%E5%AD%A6",NA
-6888,NA,"Sendai University",NA,NA,NA,"仙台大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%BB%99%E5%8F%B0%E5%A4%A7%E5%AD%A6",NA
-6889,NA,"Chubu University",NA,NA,NA,"中部大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%B8%AD%E9%83%A8%E5%A4%A7%E5%AD%A6",NA
-6890,NA,"Marubeni",NA,NA,NA,"丸紅",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%B8%B8%E7%B4%85",NA
-6891,NA,"University of Gloucestershire",NA,NA,NA,"グロスターシャー大学",NA,"England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%B0%E3%83%AD%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%BC%E5%A4%A7%E5%AD%A6",NA
-6892,NA,"Tonga College",NA,NA,NA,"トンガ・カレッジ",NA,"Tonga ",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%88%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%AB%E3%83%AC%E3%83%83%E3%82%B8",NA
-6893,NA,"Oita University",NA,NA,NA,"大分大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%A4%A7%E5%88%86%E5%A4%A7%E5%AD%A6",NA
-6894,NA,"Hachioji Academy",NA,NA,NA,"八王子学園八王子高校",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%85%AB%E7%8E%8B%E5%AD%90%E5%AD%A6%E5%9C%92%E5%85%AB%E7%8E%8B%E5%AD%90%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E3%83%BB%E4%B8%AD%E5%AD%A6%E6%A0%A1",NA
-6895,NA,"University of the Ryukyus",NA,NA,NA,"琉球大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E7%90%89%E7%90%83%E5%A4%A7%E5%AD%A6",NA
-6896,NA,"Nagoya Gakuin University",NA,NA,NA,"名古屋学院大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6",NA
-6897,NA,"Kaneka Corporation",NA,NA,NA,"鐘淵化学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%8D%E3%82%AB",NA
-6898,NA,"Sapporo University",NA,NA,NA,"札幌大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%9C%AD%E5%B9%8C%E5%A4%A7%E5%AD%A6",NA
-6899,NA,"Central Washington University",NA,NA,NA,"セントラル・ワシントン大学",NA,"U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%BB%E3%83%AF%E3%82%B7%E3%83%B3%E3%83%88%E3%83%B3%E5%A4%A7%E5%AD%A6",NA
-6900,NA,"National Institute of Fitness and Sports in Kanoya",NA,NA,NA,"鹿屋体育大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E9%B9%BF%E5%B1%8B%E4%BD%93%E8%82%B2%E5%A4%A7%E5%AD%A6",NA
-6901,NA,"Ibaraki University",NA,NA,NA,"茨城大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E8%8C%A8%E5%9F%8E%E5%A4%A7%E5%AD%A6",NA
-6902,NA,"York University",NA,NA,NA,"ヨーク大学",NA,"Canada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%A8%E3%83%BC%E3%82%AF%E5%A4%A7%E5%AD%A6_(%E3%82%AB%E3%83%8A%E3%83%80)",NA
-6903,NA,"Osaka International University",NA,NA,NA,"大阪国際大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%A4%A7%E9%98%AA%E5%9B%BD%E9%9A%9B%E5%A4%A7%E5%AD%A6",NA
-6904,NA,"University of California, Berkeley",NA,NA,NA,"カリフォルニア大学バークレー校",NA,"U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%AA%E3%83%95%E3%82%A9%E3%83%AB%E3%83%8B%E3%82%A2%E5%A4%A7%E5%AD%A6%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%BC%E6%A0%A1",NA
-6905,NA,"Kindai University",NA,NA,NA,"近畿大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E8%BF%91%E7%95%BF%E5%A4%A7%E5%AD%A6",NA
-6906,NA,"Nelson College",NA,NA,NA,"ネルソン・カレッジ",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%8D%E3%83%AB%E3%82%BD%E3%83%B3%E3%83%BB%E3%82%AB%E3%83%AC%E3%83%83%E3%82%B8",NA
-6907,NA,"A.U Broncos","Club",NA,NA,"A.Uブロンコス",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6908,NA,"Akashi Junior Rugby Club","Club",NA,NA,"明石ジュニアラグビークラブ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6909,NA,"Argentina national under-19 rugby union team","National U19 team",NA,NA,"アルゼンチン U-19",NA,"Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6910,NA,"Argentina national under-21 rugby union team","National U21 team",NA,NA,"アルゼンチン U-21",NA,"Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6911,NA,"Auckland University of Technology","Club",NA,NA,"オークランド工業大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6912,NA,"Australia national under-19 rugby union team","National U19 team",NA,NA,"U18オーストラリア",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6913,NA,"Australian College","Club",NA,NA,"オーストラリアン・カレッジ",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6914,NA,"Bulava Taganrog","Club",NA,NA,"ブラヴァ・タガンログ",NA,"Russia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6915,NA,"Kabras Sugar RFC","Club",NA,NA,"カブラスシュガーRFC",NA,"Kenya",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6916,NA,"Christchurch Polytechnic Institute of Technology","Club",NA,NA,"クライストチャーチ工科大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6917,NA,"CS Cleopatra Mamaia","Club",NA,NA,"CSクレオパトラ・ママヤ",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6918,NA,"CS Minaur Baia Mare","Club",NA,NA,"CSデミノー・バイア・マーレ",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6919,NA,"CS Rapid București","Club",NA,NA,"CSラピッド・ブクレシュティ",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6920,NA,"Club Alcobendas rugby","Club",NA,NA,"サニータス・アルコベンダス",NA,"Spain",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6921,NA,"Club Deportivo Universidad Católica","Club",NA,NA,"CSウニベルシダ・カトリーナ",NA,"Chile",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6922,NA,"DHL Raiwaqa Rugby Club","Club",NA,NA,"ライワカ",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6923,NA,"Fiji National University","Club",NA,NA,"フィジー工科大学",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6924,NA,"FNB Whits","Club",NA,NA,"FNBウィッツ",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6925,NA,"University of the Free State","Club",NA,NA,"フリーステイト大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6926,NA,"Fukui Prefecture Sports Association","Club",NA,NA,"福井県スポーツ協会",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6927,NA,"Genkai Tangaroa Rugby","Club",NA,NA,"玄海タンガロアラグビー",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6928,NA,"Gai Wu RFC","Club",NA,NA,"ガイ・ウーRFC",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6929,NA,"HKS Dolphins Rugby","Club",NA,NA,"香港仔ドルフィンズ",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6930,NA,"Hong Kong FC","Club",NA,NA,"香港FC",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6931,NA,"Ireland national under-18 rugby union team","National U18 team",NA,NA,"U18アイルランド",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6932,NA,"Ireland national under-19 rugby union team","National U19 team",NA,NA,"アイルランドU19",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6933,NA,"Ireland national under-21 rugby union team","National U21 team",NA,NA,"アイルランドU21",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6934,NA,"Katsunuma Club","Club",NA,NA,"勝沼クラブ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6935,NA,"Kitakami Yahaba Rugby Football Club","Club",NA,NA,"北上矢巾ブレイズラガー",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6936,NA,"Komono Rabbits Foot RFC","Club",NA,NA,"菰野ラビッツフットRFC",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6937,NA,"Nelson Mandela University","Club",NA,NA,"ネルソン・マンデラ大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6938,NA,"New Zealand Institute of Sports","Club",NA,NA,"ニュージーランド・インスティチュート・オブ・スポーツ",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6939,NA,"Niko Niko Do","Club",NA,NA,"ニコニコドー",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6940,NA,"Niigata Sanyo Electronics","Club",NA,NA,"新潟三洋電子",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6941,NA,"North-West University","Club",NA,NA,"ノース・ウェスト大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6942,NA,"NTT Tohoku","Club",NA,NA,"NTTグループ東北",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6943,NA,"OK Finance","Club",NA,NA,"OK金融",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6944,NA,"PSI Cost Cuts","Club",NA,NA,"PSIコストカッツ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6945,NA,"PSI Super Sonics","Club",NA,NA,"PSIスーパーソニックス",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6946,NA,"Rand Afrikaans University","Club",NA,NA,"ランドアフリカーンス大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6947,NA,"Redrock Rugby Club","Club",NA,NA,"レッドロック",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6948,NA,"Rugby Thiene A.S.D.","Club",NA,NA,"Thiene",NA,"Italy",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6949,NA,"Simbas","Club",NA,NA,"シンバス",NA,"Kenya",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6950,NA,"St Mary's University College Belfast","Club",NA,NA,"セント・メアリーズ大学",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6951,NA,"Suva Rugby Union Team","Club",NA,NA,"スバ",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6952,NA,"Swinburne University of Technology","Club",NA,NA,"スウィンバーニー大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6953,NA,"Tatami Rugby Club","Club",NA,NA,"タタミ",NA,"Spain",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6954,NA,"Tokyo Electric Power Company","Club",NA,NA,"東京電力",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6955,NA,"University of Mumbai","Club",NA,NA,"ムンバイ大学",NA,"India",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6956,NA,"University of Western Australia","Club",NA,NA,"ウエスタンオーストラリア大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6957,NA,"Utsunomiya VOLTS","Club",NA,NA,"宇都宮VOLT'S",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6958,NA,"Waikato Institute of Technology","Club",NA,NA,"ワイカト工科大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6959,NA,"Western Sydney University","Club",NA,NA,"ウエスタンシドニー大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6960,NA,"Yanbaru Rugby Club","Club",NA,NA,"やんばるクラブ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6866,NA,"Auckland University of Technology",NA,NA,NA,"オークランド工科大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AA%E3%83%BC%E3%82%AF%E3%83%A9%E3%83%B3%E3%83%89%E5%B7%A5%E7%A7%91%E5%A4%A7%E5%AD%A6",NA
+6867,NA,"Newcastle University",NA,NA,NA,"ニューカッスル大学",NA,"England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%AB%E3%83%83%E3%82%B9%E3%83%AB%E5%A4%A7%E5%AD%A6_(%E3%82%A4%E3%83%B3%E3%82%B0%E3%83%A9%E3%83%B3%E3%83%89)",NA
+6868,NA,"Korea Armed Forces Athletic Corps",NA,NA,NA,"尚武; 大韓民国国軍体育部隊",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%9B%BD%E8%BB%8D%E4%BD%93%E8%82%B2%E9%83%A8%E9%9A%8A",NA
+6869,NA,"University of Canberra",NA,NA,NA,"キャンベラ大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%99%E3%83%A9%E5%A4%A7%E5%AD%A6",NA
+6870,NA,"University of Edinburgh",NA,NA,NA,"エディンバラ大学",NA,"Scotland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%A8%E3%83%87%E3%82%A3%E3%83%B3%E3%83%90%E3%83%A9%E5%A4%A7%E5%AD%A6",NA
+6871,NA,"University of Canterbury",NA,NA,NA,"カンタベリー大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%B3%E3%82%BF%E3%83%99%E3%83%AA%E3%83%BC%E5%A4%A7%E5%AD%A6",NA
+6872,NA,"China Agricultural University",NA,NA,NA,"中国農業大学",NA,"China",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%B8%AD%E5%9B%BD%E8%BE%B2%E6%A5%AD%E5%A4%A7%E5%AD%A6",NA
+6873,NA,"University of Hong Kong",NA,NA,NA,"香港大学",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%A6",NA
+6874,NA,"Linfield University",NA,NA,NA,"リンフィールド大学",NA,"U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%AA%E3%83%B3%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E5%A4%A7%E5%AD%A6",NA
+6875,NA,"Japan Energy",NA,NA,NA,"日本鉱業",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%B8%E3%83%A3%E3%83%91%E3%83%B3%E3%82%A8%E3%83%8A%E3%82%B8%E3%83%BC",NA
+6876,NA,"Yonsei University",NA,NA,NA,"延世大学",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%BB%B6%E4%B8%96%E5%A4%A7%E5%AD%A6%E6%A0%A1",NA
+6877,NA,"Dankook University",NA,NA,NA,"檀国大学",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%AA%80%E5%9B%BD%E5%A4%A7%E5%AD%A6%E6%A0%A1",NA
+6878,NA,"Cardiff University",NA,NA,NA,"カーディフ大学",NA,"Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%BC%E3%83%87%E3%82%A3%E3%83%95%E5%A4%A7%E5%AD%A6",NA
+6879,NA,"Queensland University of Technology",NA,NA,NA,"クイーンズランド工科大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AF%E3%82%A4%E3%83%BC%E3%83%B3%E3%82%BA%E3%83%A9%E3%83%B3%E3%83%89%E5%B7%A5%E7%A7%91%E5%A4%A7%E5%AD%A6",NA
+6880,NA,"Kyung Hee University",NA,NA,NA,"慶熙大学",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%85%B6%E7%86%99%E5%A4%A7%E5%AD%A6%E6%A0%A1",NA
+6881,NA,"POSCO",NA,NA,NA,"ポスコ",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%9D%E3%82%B9%E3%82%B3",NA
+6882,NA,"Tohoku Fukushi University",NA,NA,NA,"東北福祉大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%9D%B1%E5%8C%97%E7%A6%8F%E7%A5%89%E5%A4%A7%E5%AD%A6",NA
+6883,NA,"Tohoku Gakuin University",NA,NA,NA,"東北学院大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%9D%B1%E5%8C%97%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6",NA
+6884,NA,"Aichi Institute of Technology",NA,NA,NA,"愛知工業大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%84%9B%E7%9F%A5%E5%B7%A5%E6%A5%AD%E5%A4%A7%E5%AD%A6",NA
+6885,NA,"Victoria University",NA,NA,NA,"ビクトリア大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%93%E3%82%AF%E3%83%88%E3%83%AA%E3%82%A2%E5%A4%A7%E5%AD%A6",NA
+6886,NA,"Aichi Gakuin University",NA,NA,NA,"愛知学院大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%84%9B%E7%9F%A5%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6",NA
+6887,NA,"Meijo University",NA,NA,NA,"名城大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%90%8D%E5%9F%8E%E5%A4%A7%E5%AD%A6",NA
+6888,NA,"International Pacific University",NA,NA,NA,"環太平洋大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E7%92%B0%E5%A4%AA%E5%B9%B3%E6%B4%8B%E5%A4%A7%E5%AD%A6",NA
+6889,NA,"Sendai University",NA,NA,NA,"仙台大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%BB%99%E5%8F%B0%E5%A4%A7%E5%AD%A6",NA
+6890,NA,"Chubu University",NA,NA,NA,"中部大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%B8%AD%E9%83%A8%E5%A4%A7%E5%AD%A6",NA
+6891,NA,"Marubeni",NA,NA,NA,"丸紅",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%B8%B8%E7%B4%85",NA
+6892,NA,"University of Gloucestershire",NA,NA,NA,"グロスターシャー大学",NA,"England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%B0%E3%83%AD%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%BC%E5%A4%A7%E5%AD%A6",NA
+6893,NA,"Tonga College",NA,NA,NA,"トンガ・カレッジ",NA,"Tonga ",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%88%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%AB%E3%83%AC%E3%83%83%E3%82%B8",NA
+6894,NA,"Oita University",NA,NA,NA,"大分大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%A4%A7%E5%88%86%E5%A4%A7%E5%AD%A6",NA
+6895,NA,"Hachioji Academy",NA,NA,NA,"八王子学園八王子高校",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%85%AB%E7%8E%8B%E5%AD%90%E5%AD%A6%E5%9C%92%E5%85%AB%E7%8E%8B%E5%AD%90%E9%AB%98%E7%AD%89%E5%AD%A6%E6%A0%A1%E3%83%BB%E4%B8%AD%E5%AD%A6%E6%A0%A1",NA
+6896,NA,"University of the Ryukyus",NA,NA,NA,"琉球大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E7%90%89%E7%90%83%E5%A4%A7%E5%AD%A6",NA
+6897,NA,"Nagoya Gakuin University",NA,NA,NA,"名古屋学院大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%90%8D%E5%8F%A4%E5%B1%8B%E5%AD%A6%E9%99%A2%E5%A4%A7%E5%AD%A6",NA
+6898,NA,"Kaneka Corporation",NA,NA,NA,"鐘淵化学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%8D%E3%82%AB",NA
+6899,NA,"Sapporo University",NA,NA,NA,"札幌大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%9C%AD%E5%B9%8C%E5%A4%A7%E5%AD%A6",NA
+6900,NA,"Central Washington University",NA,NA,NA,"セントラル・ワシントン大学",NA,"U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%BB%E3%83%AF%E3%82%B7%E3%83%B3%E3%83%88%E3%83%B3%E5%A4%A7%E5%AD%A6",NA
+6901,NA,"National Institute of Fitness and Sports in Kanoya",NA,NA,NA,"鹿屋体育大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E9%B9%BF%E5%B1%8B%E4%BD%93%E8%82%B2%E5%A4%A7%E5%AD%A6",NA
+6902,NA,"Ibaraki University",NA,NA,NA,"茨城大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E8%8C%A8%E5%9F%8E%E5%A4%A7%E5%AD%A6",NA
+6903,NA,"York University",NA,NA,NA,"ヨーク大学",NA,"Canada",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%A8%E3%83%BC%E3%82%AF%E5%A4%A7%E5%AD%A6_(%E3%82%AB%E3%83%8A%E3%83%80)",NA
+6904,NA,"Osaka International University",NA,NA,NA,"大阪国際大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%A4%A7%E9%98%AA%E5%9B%BD%E9%9A%9B%E5%A4%A7%E5%AD%A6",NA
+6905,NA,"University of California, Berkeley",NA,NA,NA,"カリフォルニア大学バークレー校",NA,"U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AB%E3%83%AA%E3%83%95%E3%82%A9%E3%83%AB%E3%83%8B%E3%82%A2%E5%A4%A7%E5%AD%A6%E3%83%90%E3%83%BC%E3%82%AF%E3%83%AC%E3%83%BC%E6%A0%A1",NA
+6906,NA,"Kindai University",NA,NA,NA,"近畿大学",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E8%BF%91%E7%95%BF%E5%A4%A7%E5%AD%A6",NA
+6907,NA,"Nelson College",NA,NA,NA,"ネルソン・カレッジ",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%83%8D%E3%83%AB%E3%82%BD%E3%83%B3%E3%83%BB%E3%82%AB%E3%83%AC%E3%83%83%E3%82%B8",NA
+6908,NA,"A.U Broncos","Club",NA,NA,"A.Uブロンコス",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6909,NA,"Akashi Junior Rugby Club","Club",NA,NA,"明石ジュニアラグビークラブ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6910,NA,"Argentina national under-19 rugby union team","National U19 team",NA,NA,"アルゼンチン U-19",NA,"Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6911,NA,"Argentina national under-21 rugby union team","National U21 team",NA,NA,"アルゼンチン U-21",NA,"Argentina",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6912,NA,"Auckland University of Technology","Club",NA,NA,"オークランド工業大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6913,NA,"Australia national under-19 rugby union team","National U19 team",NA,NA,"U18オーストラリア",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6914,NA,"Australian College","Club",NA,NA,"オーストラリアン・カレッジ",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6915,NA,"Bulava Taganrog","Club",NA,NA,"ブラヴァ・タガンログ",NA,"Russia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6916,NA,"Kabras Sugar RFC","Club",NA,NA,"カブラスシュガーRFC",NA,"Kenya",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6917,NA,"Christchurch Polytechnic Institute of Technology","Club",NA,NA,"クライストチャーチ工科大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6918,NA,"CS Cleopatra Mamaia","Club",NA,NA,"CSクレオパトラ・ママヤ",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6919,NA,"CS Minaur Baia Mare","Club",NA,NA,"CSデミノー・バイア・マーレ",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6920,NA,"CS Rapid București","Club",NA,NA,"CSラピッド・ブクレシュティ",NA,"Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6921,NA,"Club Alcobendas rugby","Club",NA,NA,"サニータス・アルコベンダス",NA,"Spain",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6922,NA,"Club Deportivo Universidad Católica","Club",NA,NA,"CSウニベルシダ・カトリーナ",NA,"Chile",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6923,NA,"DHL Raiwaqa Rugby Club","Club",NA,NA,"ライワカ",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6924,NA,"Fiji National University","Club",NA,NA,"フィジー工科大学",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6925,NA,"FNB Whits","Club",NA,NA,"FNBウィッツ",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6926,NA,"University of the Free State","Club",NA,NA,"フリーステイト大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6927,NA,"Fukui Prefecture Sports Association","Club",NA,NA,"福井県スポーツ協会",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6928,NA,"Genkai Tangaroa Rugby","Club",NA,NA,"玄海タンガロアラグビー",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6929,NA,"Gai Wu RFC","Club",NA,NA,"ガイ・ウーRFC",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6930,NA,"HKS Dolphins Rugby","Club",NA,NA,"香港仔ドルフィンズ",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6931,NA,"Hong Kong FC","Club",NA,NA,"香港FC",NA,"Hong Kong",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6932,NA,"Ireland national under-18 rugby union team","National U18 team",NA,NA,"U18アイルランド",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6933,NA,"Ireland national under-19 rugby union team","National U19 team",NA,NA,"アイルランドU19",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6934,NA,"Ireland national under-21 rugby union team","National U21 team",NA,NA,"アイルランドU21",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6935,NA,"Katsunuma Club","Club",NA,NA,"勝沼クラブ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6936,NA,"Kitakami Yahaba Rugby Football Club","Club",NA,NA,"北上矢巾ブレイズラガー",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6937,NA,"Komono Rabbits Foot RFC","Club",NA,NA,"菰野ラビッツフットRFC",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6938,NA,"Nelson Mandela University","Club",NA,NA,"ネルソン・マンデラ大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6939,NA,"New Zealand Institute of Sports","Club",NA,NA,"ニュージーランド・インスティチュート・オブ・スポーツ",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6940,NA,"Niko Niko Do","Club",NA,NA,"ニコニコドー",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6941,NA,"Niigata Sanyo Electronics","Club",NA,NA,"新潟三洋電子",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6942,NA,"North-West University","Club",NA,NA,"ノース・ウェスト大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6943,NA,"NTT Tohoku","Club",NA,NA,"NTTグループ東北",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6944,NA,"OK Finance","Club",NA,NA,"OK金融",NA,"South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6945,NA,"PSI Cost Cuts","Club",NA,NA,"PSIコストカッツ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6946,NA,"PSI Super Sonics","Club",NA,NA,"PSIスーパーソニックス",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6947,NA,"Rand Afrikaans University","Club",NA,NA,"ランドアフリカーンス大学",NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6948,NA,"Redrock Rugby Club","Club",NA,NA,"レッドロック",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6949,NA,"Rugby Thiene A.S.D.","Club",NA,NA,"Thiene",NA,"Italy",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6950,NA,"Simbas","Club",NA,NA,"シンバス",NA,"Kenya",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6951,NA,"St Mary's University College Belfast","Club",NA,NA,"セント・メアリーズ大学",NA,"Ireland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6952,NA,"Suva Rugby Union Team","Club",NA,NA,"スバ",NA,"Fiji",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6953,NA,"Swinburne University of Technology","Club",NA,NA,"スウィンバーニー大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6954,NA,"Tatami Rugby Club","Club",NA,NA,"タタミ",NA,"Spain",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6955,NA,"Tokyo Electric Power Company","Club",NA,NA,"東京電力",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6956,NA,"University of Mumbai","Club",NA,NA,"ムンバイ大学",NA,"India",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6957,NA,"University of Western Australia","Club",NA,NA,"ウエスタンオーストラリア大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6958,NA,"Utsunomiya VOLTS","Club",NA,NA,"宇都宮VOLT'S",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6959,NA,"Waikato Institute of Technology","Club",NA,NA,"ワイカト工科大学",NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6960,NA,"Western Sydney University","Club",NA,NA,"ウエスタンシドニー大学",NA,"Australia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+6961,NA,"Yanbaru Rugby Club","Club",NA,NA,"やんばるクラブ",NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

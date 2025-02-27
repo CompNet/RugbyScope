@@ -221,19 +221,43 @@ for (r in 1:nrow(wp_careers)) {
 }
 tlog(4, "Found ", nrow(wp_teams), " unique teams")
 wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
+#### debug: take a look at teams with multiple names, some are associated to very generic url
+#### and should not be merged (ex. NZ url associated to NZ, U20 NZ, U21 NZ...)
+#idx <- which(grepl(";", wp_teams[, "altNames"], fixed = TRUE) & !is.na(wp_teams[, "teamWP"]))
+#tab <- cbind(wp_teams[idx, ], paste0("http://ja.wikipedia.org/wiki/", wp_teams[idx, "teamWP"]))
+#colnames(tab)[ncol(tab)] <- "fullUrl"
+#tab <- cbind(rep(NA, nrow(tab)), tab)
+#colnames(tab)[1] <- "translation"
+#for (r in 1:nrow(tab)) {
+#   tlog(4, "Translating name ", r, "/", nrow(tab))
+#   orig <- tab[r, "altNames"]
+#   go_on <- TRUE
+#   while (go_on) {
+#     response <- tryCatch({create_translation_table(words = orig, languages = "en")}, error = function(e) {tlog("Server error: ", e$message); NA})
+#     if (all(is.na(response))) {
+#       Sys.sleep(2)
+#       tlog("Server error: retrying")
+#     } else {
+#       go_on <- FALSE
+#       tab[r, "translation"] <- response[1, "en"]
+#     }
+#   }
+#}
+#write.csv(tab, file.path(wp_folder, "multiple_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### we use the above file to manually correct careers.csv by disambiguating URLs
 
 #### debug: check teams with the same name but a different URL (some URLs are incorrect)
-# dupp_names <- names(which(table(wp_teams[, "altNames"]) > 1))
-# tab <- wp_teams[-(1:nrow(wp_teams)), ]
-# for (dupp_name in dupp_names) {
-#   idx <- which(wp_teams[, "altNames"] == dupp_name)
-#   tab <- rbind(tab, wp_teams[idx, ])
-# }
-# write.csv(tab, file.path(wp_folder, "duplicate_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
+#tab <- wp_teams[-(1:nrow(wp_teams)), ]
+#for (dupp_name in dup_names) {
+#  idx <- which(wp_teams[, "altNames"] == dupp_name)
+#  tab <- rbind(tab, wp_teams[idx, ])
+#}
+#write.csv(tab, file.path(wp_folder, "duplicate_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### the above code was used to define the url2url.csv map, allowing to solve specific cases of
-#### the same team being associated to several distinct URLs. the map associate an incorrect url
+#### the same team being associated to several distinct URLs. the map associates an incorrect url
 #### to a correct one, and the substitution is made in the loop that builds the wp_teams table
-#### Note: a few duplicates remain, but these are highschool (removed later)
+#### Note: a few duplicates remain, but these are highschools, which are removed later
 
 # we first focus on teams possessing a URL, as they are easier to match
 # match teams using WP URLs
@@ -397,8 +421,8 @@ result <- match_team_names(src_names = wp_teams[wp_idx, "altNames"], tgt_names =
 #### debug
 # handle multiple matching case (note: there should be none)
 #idx <- which(sapply(result, length) > 1)
-#for (i in idx) result[[i]] <- result[[i]][1]
-#result <- unlist(result)
+##for (i in idx) result[[i]] <- result[[i]][1]
+##result <- unlist(result)
 # use matches to update WP team table
 idx <- which(!is.na(result))
 tlog(4, "Could match ", length(idx), " teams based on English name")
@@ -478,6 +502,14 @@ if (length(idx_rem) > 0) {
 # update the other teams
 idx <- match(names(map_names), wp_teams[, "altNames"])
 wp_teams[idx, "rugbyscopeId"] <- map_names
+#### entries of name2id.csv not used anymore (keeping them just in case)
+# "Auckland Institute of Technology","オークランド工科大学","6911"
+# "Moseley","モーズリー","26"
+# "Nice","ニース","276"
+# "North Harbor","ノース・ハーバー","2904"
+# "Plymouth","プリマス","589"
+# "Shangwu","尚武",NA
+# "Viadana","ヴィアダーナ","329"
 
 # translate all remaining names to english using polyglotr
 idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))                      # 422
@@ -514,11 +546,11 @@ unique_names <- sort(unique(en_names))                                    # 383
 # filter out remaining high schools
 idx_uhs <- which(grepl("[Hh]igh [Ss]chool", unique_names, fixed = FALSE)) # 167
 idx_ehs <- which(en_names %in% unique_names[idx_uhs])                     # 181
-unique_names <- unique_names[-idx_uhs]                                    # 216
-en_names <- en_names[-idx_ehs]                                            # 241
-ja_names <- ja_names[-idx_ehs]                                            # 241
-wp_teams <- wp_teams[-(idx_noid[idx_ehs]), ]                              # 1169
-idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))                      # 241
+unique_names <- unique_names[-idx_uhs]                                    # 210
+en_names <- en_names[-idx_ehs]                                            # 229
+ja_names <- ja_names[-idx_ehs]                                            # 229
+wp_teams <- wp_teams[-(idx_noid[idx_ehs]), ]                              # 1172
+idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))                      # 229
 
 # try matching the teams by name
 result <- match_team_names(src_names = unique_names, tgt_names = our_names)
@@ -590,8 +622,8 @@ tlog(4, "Had to create ", nrow(supp), " new teams in merged table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 #### debug: check the remaining unmatched teams (should be empty)
-# idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
-# write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+#write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 # add merged table name to JA entry, for visual verification
 idx <- match(wp_teams[, "rugbyscopeId"], our_teams[, "rugbyscopeId"])
@@ -601,7 +633,7 @@ wp_teams[, "fusionName"] <- our_teams[idx, "fullName"]
 #### merged table and added during the previous steps of this script
 #idx <- which(wp_teams[, "rugbyscopeId"] == "TODO")
 #print(wp_teams[idx, ])
-#### use this list to complement name2id.csv appropriately
+#### we used this list to complement name2id.csv appropriately
 
 #### debug: check RS id duplicates (several WP teams with the same id)
 #idx <- as.integer(names(which(table(wp_teams[, "rugbyscopeId"]) > 1)))
