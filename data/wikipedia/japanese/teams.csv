@@ -340,7 +340,6 @@
 "6845","丸和運輸機関AZ-MOMOTAROS; MOMOTARO'S; 丸和運輸機関","AZ-COM%E4%B8%B8%E5%92%8CMOMOTARO%27S","AZ-COM Maruwa MOMOTARO'S"
 "2905","タスマン",NA,"Tasman Rugby Union Team"
 "689","シドニー・スターズ","Sydney_Stars","Sydney Stars"
-NA,"ヴィソル・コチェビ",NA,NA
 "2223","コチェビ・ボルニシ",NA,"RC Kochebi Bolnisi"
 "166","クラスヌイ・ヤールクラスノヤルスク",NA,"Yenisey-STM Krasnoyarsk"
 "1423","S東京ベイ; クボタ; クボタスピアーズ船橋・東京ベイ; クボタスピアーズ; 東京ベイ","%E3%82%AF%E3%83%9C%E3%82%BF%E3%82%B9%E3%83%94%E3%82%A2%E3%83%BC%E3%82%BA%E8%88%B9%E6%A9%8B%E3%83%BB%E6%9D%B1%E4%BA%AC%E3%83%99%E3%82%A4","Kubota Spears Funabashi Tokyo-Bay"
@@ -461,7 +460,7 @@ NA,"ヴィソル・コチェビ",NA,NA
 "2824","ペニャロール; ペニャロール・ラグビー","%E3%83%9A%E3%83%8B%E3%83%A3%E3%83%AD%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC","Peñarol Rugby"
 "6865","韓国電力公社; 韓国電力; Korea Electric Power Corporation","%E9%9F%93%E5%9B%BD%E9%9B%BB%E5%8A%9B%E5%85%AC%E7%A4%BE","Korea Electric Power Corporation"
 "51","韓国","%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E5%A4%A7%E9%9F%93%E6%B0%91%E5%9B%BD%E4%BB%A3%E8%A1%A8","South Korea national rugby union team"
-"6911","オークランド工科大学",NA,"Auckland Institute of Technology"
+"6911","オークランド工科大学",NA,"Auckland University of Technology"
 "2660","フィジアン・ドゥルア","%E3%83%95%E3%82%A3%E3%82%B8%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%89%E3%82%A5%E3%83%AB%E3%82%A2","Fijian Drua"
 "2898","ニュージランド北島代表",NA,"North Island (rugby union)"
 "478","コカ・コーラ; コカ・コーラウエストジャパン; コカ・コーラウエスト","%E3%82%B3%E3%82%AB%E3%83%BB%E3%82%B3%E3%83%BC%E3%83%A9%E3%83%AC%E3%83%83%E3%83%89%E3%82%B9%E3%83%91%E3%83%BC%E3%82%AF%E3%82%B9","Coca Cola West Red Sparks"
@@ -493,7 +492,7 @@ NA,"ヴィソル・コチェビ",NA,NA
 "495","イースタン・プロヴィンス・キングス; イースタン・プロヴィンス; EPキングス","%E3%82%A4%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%BB%E3%83%97%E3%83%AD%E3%83%B4%E3%82%A3%E3%83%B3%E3%82%B9%E3%83%BB%E3%82%A8%E3%83%AC%E3%83%95%E3%82%A1%E3%83%B3%E3%83%84","Eastern Province Kings"
 "179","キングス; サザン・キングス","%E3%82%B5%E3%82%B6%E3%83%B3%E3%83%BB%E3%82%AD%E3%83%B3%E3%82%B0%E3%82%B9","Southern Kings"
 "100","ランドベリーRFC",NA,"Llandovery RFC"
-"TODO","ランドアフリカーンズ大学",NA,NA
+"6946","ランドアフリカーンズ大学",NA,"Rand Afrikaans University"
 "2053","中国RR; 中国電力","%E4%B8%AD%E5%9B%BD%E9%9B%BB%E5%8A%9B%E3%83%AC%E3%83%83%E3%83%89%E3%83%AC%E3%82%B0%E3%83%AA%E3%82%AA%E3%83%B3%E3%82%BA","Chugoku Red Regulions"
 "2538","サクラメント・エクスプレス",NA,"Sacramento Express"
 "660","スポッティング・ナザイリアン",NA,"Sporting Club nazairien"
@@ -669,7 +668,7 @@ NA,"ヴィソル・コチェビ",NA,NA
 "344","ウェスタン・プロヴァンス",NA,"Western Province"
 "1915","ユニ・ノース・オウルズ","Uni-Norths_Owls","Uni-Norths Owls"
 "581","パラマタ; ウェスタンシドニー・トゥーブルーズ; ウェスタンシドニー","%E3%82%A6%E3%82%A7%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B7%E3%83%89%E3%83%8B%E3%83%BC%E3%83%BB%E3%83%88%E3%82%A5%E3%83%BC%E3%83%96%E3%83%AB%E3%83%BC%E3%82%BA","Parramatta Two Blues"
-"TODO","ノースウェスト大学",NA,NA
+"6941","ノースウェスト大学",NA,"North-West University"
 "308","レオパルズ",NA,"Leopards"
 "2733","ラグビーATL","%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BCATL","Rugby ATL"
 "424","ブリスベン・シティ","Brisbane_City_(rugby_union)","Brisbane City"
@@ -682,7 +681,7 @@ NA,"ヴィソル・コチェビ",NA,NA
 "2659","I Medicei",NA,"Rugby Club I Medicei"
 "1391","ジャージー・レッズ","%E3%82%B8%E3%83%A3%E3%83%BC%E3%82%B8%E3%83%BC%E3%83%BB%E3%83%AC%E3%83%83%E3%82%BA","The Jersey Reds R.F.C."
 "133","エアRFC","Ayr_RFC","Ayr RFC"
-"TODO","フリーステート大学",NA,NA
+"6925","フリーステート大学",NA,"University of the Free State"
 "4446","ナドロガ",NA,"Nadroga Stallions"
 "324","モントーバン",NA,"US Montauban"
 "2737","サウス・チャイナ・タイガース",NA,"South China Tigers"
@@ -691,7 +690,7 @@ NA,"ヴィソル・コチェビ",NA,NA
 "737","ウェスト・ハーバー",NA,"West Harbour RFC"
 "740","グレイター・シドニーラムズ",NA,"Western Sydney Rams"
 "494","イースタンサバーブスRUFC; イースタンサバーブス","%E3%82%A4%E3%83%BC%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B5%E3%83%90%E3%83%BC%E3%83%96%E3%82%B9RUFC","Eastern Suburbs RUFC"
-"TODO","ノースウエスト大学",NA,NA
+"6941","ノースウエスト大学",NA,"North-West University"
 "607","リッチモンドFC","%E3%83%AA%E3%83%83%E3%83%81%E3%83%A2%E3%83%B3%E3%83%89FC","Richmond Rugby Club"
 "1398","トヨタ自動車; Toyota Verblitz","%E3%83%88%E3%83%A8%E3%82%BF%E8%87%AA%E5%8B%95%E8%BB%8A%E3%83%B4%E3%82%A7%E3%83%AB%E3%83%96%E3%83%AA%E3%83%83%E3%83%84","Toyota Verblitz"
 "216","エブベール",NA,"Ebbw Vale RFC"
@@ -768,7 +767,7 @@ NA,"ヴィソル・コチェビ",NA,NA
 "842","ヴァルポリチェッラ",NA,"Rugby Club Valpolicella"
 "223","コベントリー",NA,"Coventry R.F.C."
 "339","モリアーノ・ラグビー",NA,"Mogliano Rugby"
-NA,"オークランド工業大学",NA,NA
+"6911","オークランド工業大学",NA,"Auckland University of Technology"
 "2559","デンバー・スタンピード",NA,"Denver Stampede"
 "783","ラグビー・ミラノ",NA,"A.S. Rugby Milano"
 "563","ウェルウィチアズ",NA,"Welwitschias"
@@ -1104,7 +1103,7 @@ NA,"オークランド工業大学",NA,NA
 "1283","ガンガーリン",NA,"Gungahlin Eagles"
 "6856","日本国土開発","%E6%97%A5%E6%9C%AC%E5%9B%BD%E5%9C%9F%E9%96%8B%E7%99%BA","Japan Land Development"
 "6942","NTTグループ東北",NA,"NTT Tohoku"
-"TODO","宇都宮ヴォルツ",NA,NA
+"6957","宇都宮ヴォルツ",NA,"Utsunomiya VOLTS"
 "2362","U20香港","U-20%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%A6%99%E6%B8%AF%E4%BB%A3%E8%A1%A8","Hong Kong national under-20 rugby union team"
 "541","キング・カントリー","King_Country_Rugby_Football_Union","King Country Rugby Football Union"
 "386","C.F.ベレネンセス",NA,"C.F. Os Belenenses (rugby union)"

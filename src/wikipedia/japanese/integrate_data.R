@@ -209,8 +209,8 @@ for (r in 1:nrow(wp_careers)) {
         alt_names <- c(alt_names, list(team_name))
       # otherwise: update existing entry
       } else {
-        idx <- which(is.na(wp_teams[idx, "teamWP"]))
-        wp_teams[idx, "teamWP"] <- team_url
+        idx0 <- which(is.na(wp_teams[idx, "teamWP"]))
+        wp_teams[idx[idx0], "teamWP"] <- team_url
       }
     # update existing entry
     } else {
@@ -597,7 +597,11 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 idx <- match(wp_teams[, "rugbyscopeId"], our_teams[, "rugbyscopeId"])
 wp_teams[, "fusionName"] <- our_teams[idx, "fullName"]
 
-# TODO handle "TODO" for rugbyscopeId
+#### Debug: list entries from name2id.csv that refer to teams missing from the original 
+#### merged table and added during the previous steps of this script
+#idx <- which(wp_teams[, "rugbyscopeId"] == "TODO")
+#print(wp_teams[idx, ])
+#### use this list to complement name2id.csv appropriately
 
 #### debug: check RS id duplicates (several WP teams with the same id)
 #idx <- as.integer(names(which(table(wp_teams[, "rugbyscopeId"]) > 1)))
@@ -606,23 +610,72 @@ wp_teams[, "fusionName"] <- our_teams[idx, "fullName"]
 #  ii <- which(wp_teams[, "rugbyscopeId"] == i)
 #  print(wp_teams[ii, ])
 #}
-#### there are many cases, it's normal (slightly different japanese names)
-
-# TODO insert alt names in merged table (for non-japanese names, only the ones we did not translate. may require adding a col to wp_teams to mark that)
+#### there are many cases: it is expected, there are many slightly different japanese names
 
 # record final WP team table as a new CSV file, for verification
 tab.file <- file.path(wp_folder, "teams.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
+# complement alternative names in merged table, using japanese names
+# tlog("Complement alternative names in merged team table")
+# idx <- match(wp_teams[, "rugbyscopeId"], our_teams[, "rugbyscopeId"])
+# our_full_names <- our_teams[idx, "fullName"]
+# wp_alt_names <- strsplit(wp_teams[, "altNames"], ";")
+# for (r in 1:length(idx)) {
+#   # original alt names
+#   ofn <- our_full_names[r]
+#   oan <- trimws(strsplit(our_teams[idx[r], "altNames"], ";")[[1]])
+#   if (all(is.na(oan)))
+#     oan <- c()
+#   # wp altnames
+#   wan <- trimws(wp_alt_names[[r]])
+#   ii <- which(sapply(wan, function(w) !grepl("[A-Za-z]+", w, fixed = FALSE)))
+#   # combine altnames
+#   an <- setdiff(union(oan, wan[ii]), ofn)
+#   if (all(is.na(an)) || length(an) == 0)
+#     san <- NA
+#   else
+#     san <- paste0(an, collapse = "; ")
+#   if (san != our_teams[idx[r], "altNames"]) {
+#     tlog(2, "Changed name for team ", r, "/", length(idx), ":")
+#     tlog(4, "Original: ", our_teams[idx[r], "altNames"])
+#     tlog(4, "Revised:  ", san)
+#     our_teams[idx[r], "altNames"] <- san
+#   }
+# }
+#TODO: debug above
 
 
-# TODO ds les carrières, remplacer les refs WD par des refs RS
+
+
+
+# TODO update Georgian clubs
+
+# Tao Samtskhe-Javakheti
+# RC Kazbegi
+
+# Khvamli Tbilisi
+# RC Aia Kutaisi
+# Locomotive Tbilisi
+# RC Kochebi Bolnisi
+# RC Army Tbilisi
+# Lelo Saracens
+# RC Jiki
+# RC Armazi Marneuli
+# RC Batumi
+# RC Rustavi Kharebi
+# RC Academy Tbilisi
+# Rugby Club Junkers
+# Black Lion
+
 
 
 ########################################################################
 # merge career steps
 tlog("Merging career steps")
+
+# TODO ds les carrières merged , remplacer les refs WD par des refs RS
 
 # TODO filter out from careers the teams that are absent from team table
 
@@ -633,6 +686,8 @@ tlog("Merging career steps")
 # [1] "playerId"      "playerName"    "teamId"        "teamName"
 # [5] "startYear"     "endYear"       "matchesPlayed" "pointsScored"
 
+# "rugbyscopeId","wikidataId","fullName","type","inceptionDate","terminationDate","altNames","affiliations","countries","competitions","tier","homeVenueNames","homeVenueCapacities","locations","allRugbyIds","googleKnowlIds","wikipediaEn","wikipediaFr","wikipediaIt","wikipediaEs","wikipediaJa","dbpediaId"
+# ,,""
 
 
 
