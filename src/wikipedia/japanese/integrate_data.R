@@ -689,19 +689,63 @@ write.csv(our_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 # merge career steps
 tlog("Merging career steps")
 
+#### debug: directly load the file to bypass all previous processing
+wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
+our_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
+
+# TODO bind WP career steps to merged teams (by matching wp_teams names)
+# TODO filter out from careers the teams that are absent from team table
+alt_names <- strsplit(wp_teams[, "altNames"], ";")
+alt_names <- lapply(alt_names, trimws)
+for (r in 1:nrow(wp_careers)) {
+  team_name <- wp_careers[r, "teamName"]
+  # try to match using the name
+  idx <- which(sapply(alt_names, function(names) team_name %in% names))
+  # multiple matches
+  if (length(idx) > 1) {
+    ids <- wp_teams[idx, "rugbyscopeId"]
+    # if they all agree on the merged team match, no pb
+    if (all(ids[1] == ids[-1]))
+      idx <- idx[1]
+    # otherwise, use URL to disambiguate
+    else {
+      team_url <- wp_careers[r, "teamWP"]
+      idx <- idx[which(wp_teams[idx, "teamWP"] == team_url)]
+      # if multiple matches again
+      if (length(idx) > 1) {
+        ids <- wp_teams[idx, "rugbyscopeId"]
+        # if they all agree on the merged team match, no pb
+        if (all(ids[1] == ids[-1]))
+          idx <- idx[1]
+        # otherwise, error
+        else {
+          print(team_name)
+          print(wp_teams[idx, ])
+          stop("Too many matches: ", r)
+        }
+      }
+    }
+  }
+  if (length(idx) == 0 && wp_careers[r, "stepType"] != "Youth")
+    stop("No match: ", r)
+  # get id
+  id <- wp_teams[idx, "rugbyscopeId"]
+  # TODO
+}
+
+
 # TODO ds les carrières merged , remplacer les refs WD par des refs RS
 
-# TODO filter out from careers the teams that are absent from team table
 
+#### wp_careers
 # [1] "origWdId"      "origName"      "jaName"        "wpPage"
 # [5] "stepType"      "timePeriod"    "teamName"      "teamWP"
 # [9] "matchesPlayed" "pointsScored"  "startYear"     "endYear"
 
+#### our_careers
 # [1] "playerId"      "playerName"    "teamId"        "teamName"
 # [5] "startYear"     "endYear"       "matchesPlayed" "pointsScored"
 
-# "rugbyscopeId","wikidataId","fullName","type","inceptionDate","terminationDate","altNames","affiliations","countries","competitions","tier","homeVenueNames","homeVenueCapacities","locations","allRugbyIds","googleKnowlIds","wikipediaEn","wikipediaFr","wikipediaIt","wikipediaEs","wikipediaJa","dbpediaId"
-# ,,""
 
 
 # record as a new CSV file
