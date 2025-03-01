@@ -10,10 +10,13 @@
 - function to solve WP redirections
   > apply to all URL in RS
 
+- refactoring:
+  - externalize the other uses of conversion maps
+  - switch from "step" to "stint"?
+
 - WP JA: 
   x write script to clean/normalize tables
   - then script to merge WP JA to our data
-  x handle dates of the form 2006,2015-2018 in the careers
 
 * NOTES
   - Filtering players depending on whether they played for a club: many are missed
