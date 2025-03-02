@@ -661,10 +661,10 @@ wp_teams[, "fusionName"] <- our_teams[idx, "fullName"]
 #}
 #### there are many cases: it is expected, there are many slightly different japanese names
 
-# # record final WP team table as a new CSV file, for verification
-# tab.file <- file.path(wp_folder, "teams.csv")
-# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-# write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# record final WP team table as a new CSV file, for verification
+tab.file <- file.path(wp_folder, "teams.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # complement alternative names in merged table, using japanese names
 tlog("Complement alternative names in merged team table")
@@ -679,7 +679,7 @@ for (r in 1:length(idx)) {
     oan <- c()
   # wp altnames
   wan <- trimws(wp_alt_names[[r]])
-  ii <- which(sapply(wan, function(w) !grepl("[A-Za-z]+", w, fixed = FALSE)))
+  ii <- which(sapply(wan, function(w) grepl("[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3400-\u4dbf]+", w, fixed = FALSE))) # check if the string contains at least two japanese characters
   # combine altnames
   an <- setdiff(union(oan, wan[ii]), ofn)
   if (all(is.na(an)) || length(an) == 0)
@@ -708,7 +708,7 @@ tlog("Merging career steps")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 #### debug: directly load the file to bypass all previous processing
 #wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
-#our_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
+our_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
 #### debug: reload data table for quick testing
 #wp_careers <- read.csv(file.path(wp_folder, "careers.csv"))
 #wp_careers <- wp_careers %>% mutate(across(where(is.character), ~ na_if(., "")))
@@ -913,10 +913,6 @@ for (r in 1:nrow(wp_careers)) {
   }
 }
 
-# TODO
-# 1. ordonner les deux fichiers carrières (avant/après) pr faciliter la comparaison
-
-
 #### wp_careers
 #  [1] "origWdId"      "origName"      "jaName"        "wpPage"       
 #  [5] "stepType"      "timePeriod"    "teamName"      "teamWP"
@@ -928,8 +924,14 @@ for (r in 1:nrow(wp_careers)) {
 #  [5] "teamName"      "startYear"     "endYear"       "matchesPlayed"
 #  [9] "pointsScored"  "dataSource"
 
+# reorder career table to respect wikidataId / names
+ids <- our_careers[, "playerId"]
+ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
+idx <- order(ids, our_careers[, "playerName"], our_careers[, "startYear"], our_careers[, "endYear"], our_careers[, "teamName"])
+our_careers <- our_careers[idx, ]
 
 # record as a new CSV file
+our_careers[,"teamRsId"] <- as.integer(our_careers[,"teamRsId"])
 tab.file <- file.path(fusion_folder, "careers_01_wd-ja-wp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(our_careers, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
