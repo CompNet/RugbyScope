@@ -63,6 +63,11 @@ for (r in 1:nrow(our_teams)) {
   }
 }
 
+# must add missing player names in career table
+idx <- which(grepl("Q\\d+", our_careers[, "playerName"], fixed = FALSE))
+mm <- match(our_careers[idx, "playerId"], our_players[, "wikidataId"])
+our_careers[idx, "playerName"] <- our_players[mm, "fullName"]
+
 
 
 
@@ -149,7 +154,7 @@ for (p in 1:length(idx)) {
       a_names <- ja_names[p]
     else
       a_names <- union(alt_names[[idx[p]]], ja_names[p])
-    our_players[p, "altNames"] <- paste(a_names, collapse = "; ")
+    our_players[idx[p], "altNames"] <- paste(a_names, collapse = "; ")
   }
 }
 idx <- which(our_players[, "altNames"] == "NA")
@@ -702,16 +707,22 @@ for (r in 1:length(idx)) {
 tlog("Merging career steps")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 #### debug: directly load the file to bypass all previous processing
-# wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
-# our_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
+#wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
+#our_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
 #### debug: reload data table for quick testing
-# wp_careers <- read.csv(file.path(wp_folder, "careers.csv"))
-# wp_careers <- wp_careers %>% mutate(across(where(is.character), ~ na_if(., "")))
-# wp_careers[, "teamName"] <- gsub("（英語版）", "", wp_careers[, "teamName"], fixed = TRUE)    # "english version" (of a team name)
-# wp_careers[, "teamName"] <- gsub("（フランス語版）", "", wp_careers[, "teamName"], fixed = TRUE) # "french version"
-# idx <- which(is.na(wp_careers[, "teamName"]))
-# if (length(idx) > 0)
+#wp_careers <- read.csv(file.path(wp_folder, "careers.csv"))
+#wp_careers <- wp_careers %>% mutate(across(where(is.character), ~ na_if(., "")))
+#wp_careers[, "teamName"] <- gsub("（英語版）", "", wp_careers[, "teamName"], fixed = TRUE)    # "english version" (of a team name)
+#wp_careers[, "teamName"] <- gsub("（フランス語版）", "", wp_careers[, "teamName"], fixed = TRUE) # "french version"
+#idx <- which(is.na(wp_careers[, "teamName"]))
+#if (length(idx) > 0)
 #   wp_careers <- wp_careers[-idx, ]
+
+# reorder career table to respect wikidataId / names
+ids <- our_careers[, "playerId"]
+ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
+idx <- order(ids, our_careers[, "playerName"], our_careers[, "startYear"], our_careers[, "endYear"], our_careers[, "teamName"])
+our_careers <- our_careers[idx, ]
 
 # connect WP career to WP team tables (and so merged teams)
 tlog(2, "Matching career teams to team table")
@@ -791,12 +802,126 @@ colnames(our_careers)[3:4] <- c("teamWdId", "teamRsId")
 our_careers <- cbind(our_careers, rep("WD", nrow(our_careers)))
 colnames(our_careers)[ncol(our_careers)] <- "dataSource"
 
-# insert WP events in merged table
+# insert WP steps in merged table
+for (r in 1:nrow(wp_careers)) {
+  player_id <- wp_careers[r, "origWdId"]
+  tlog(4, "Processing career step ", r, "/", nrow(wp_careers), " (player ", player_id, ")")
+  team_id <- wp_careers[r, "rugbyscopeId"]
+  found <- FALSE
+# print(wp_careers[r, ])
+
+  # retrieve existing steps for this player
+  idx <- which(our_careers[, "playerId"] == player_id)
+  if (length(idx) > 0) {
+    # compare teams
+    idx2 <- idx[our_careers[idx, "teamRsId"] == team_id]
+    if (length(idx2) > 0) {
+      start_year <- wp_careers[r, "startYear"]
+      end_year <- wp_careers[r, "endYear"]
+      matches_played <- wp_careers[r, "matchesPlayed"]
+      points_scored <- wp_careers[r, "pointsScored"]
+      update <- FALSE
+
+      if (is.na(start_year)) {
+        if (is.na(end_year)) {
+          # both start and end years contain NA > cannot be reliably matched to an existing step
+          # > nothing more to do
+          found <- TRUE
+        } else {
+          # start year is NA and end year is not: try to match only the latter
+          idx3 <- idx2[our_careers[idx2, "endYear"] == end_year]
+          if (length(idx3) == 1 && is.na(idx3)) {
+            idx3 <- idx2[is.na(our_careers[idx2, "endYear"]) | our_careers[idx2, "endYear"] == end_year]
+            # both start and end years contain NA > cannot be reliably matched to an existing step
+            found <- TRUE
+          }
+        }
+      } else {
+        if (is.na(end_year)) {
+          # start year is not NA but end year is: try to match only the former
+          idx3 <- idx2[our_careers[idx2, "startYear"] == start_year]
+          if (length(idx3) == 1 && is.na(idx3)) {
+            idx3 <- idx2[is.na(our_careers[idx2, "startYear"]) | our_careers[idx2, "startYear"] == start_year]
+            # both start and end years contain NA > cannot be reliably matched to an existing step
+            found <- TRUE
+          }
+        } else {
+          # both start and end years are non-NA: try matching both
+          idx3 <- idx2[our_careers[idx2, "startYear"] == start_year & our_careers[idx2, "endYear"] == end_year]
+          # remove NA (ie merged table with NA start and/or end year) only if several matches
+          if (length(idx3) > 1)
+            idx3 <- idx3[-is.na(idx)]
+          else if (length(idx3) == 1 && is.na(idx3))
+            idx3 <- idx2[is.na(our_careers[idx2, "startYear"]) | our_careers[idx2, "startYear"] == start_year & 
+                         is.na(our_careers[idx2, "endYear"]) | our_careers[idx2, "endYear"] == end_year]
+          # # if no match at all: consider missing years in merged table
+          # if (length(idx3) == 0)
+          #   idx3 <- idx2[our_careers[idx2, "startYear"] == start_year & is.na(our_careers[idx2, "endYear"])]
+          # if (length(idx3) == 0)
+          #   idx3 <- idx2[is.na(our_careers[idx2, "startYear"]) & our_careers[idx2, "endYear"] == end_year]
+        }
+      }
+
+      # if a single match: possibly update stats
+      if (!found && length(idx3) == 1) {
+        found <- TRUE
+        update <- TRUE
+      }
+      # if several matches: problem
+      if (!found && length(idx3) > 1) {
+        found <- TRUE
+        tlog(6, "Found several matching stints, which is not normal")
+        print(wp_careers[r, ])
+        print(our_careers[idx3, ])
+        stop("ERROR")
+      }
+      
+      # possibly update stats
+      if (update) {
+# print(our_careers[idx3, ])
+        # we assume that the info already present is more reliable
+        # and update only the NA fields from the merted table
+        if (is.na(our_careers[idx3, "startYear"]))
+          our_careers[idx3, "startYear"] <- start_year
+        if (is.na(our_careers[idx3, "endYear"]))
+          our_careers[idx3, "endYear"] <- end_year
+        if (is.na(our_careers[idx3, "matchesPlayed"]))
+          our_careers[idx3, "matchesPlayed"] <- matches_played
+        if (is.na(our_careers[idx3, "pointsScored"]))
+          our_careers[idx3, "pointsScored"] <- points_scored
+        # add WP as source if agreement on any non-NA field 
+        changes <- our_careers[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] != c(start_year, end_year, matches_played, points_scored)
+        if (!all(is.na(changes)) && any(changes, na.rm = TRUE))
+          our_careers[idx3, "dataSource"] <- paste0(our_careers[idx3, "dataSource"], "; jaWP")
+      }
+    }
+  }
+
+  # if no simlilar step, add to merged table
+  if (!found) {
+    rr <- nrow(our_careers) + 1
+    our_careers[rr, "playerId"] <- player_id
+    our_careers[rr, "playerName"] <- our_players[our_players[, "wikidataId"] == player_id, "fullName"]
+    our_careers[rr, "teamWdId"] <- our_teams[our_teams[, "rugbyscopeId"] == team_id, "wikidataId"]
+    our_careers[rr, "teamRsId"] <- team_id
+    our_careers[rr, "teamName"] <- our_teams[our_teams[, "rugbyscopeId"] == team_id, "fullName"]
+    our_careers[rr, "startYear"] <- wp_careers[r, "startYear"]
+    our_careers[rr, "endYear"] <- wp_careers[r, "endYear"]
+    our_careers[rr, "matchesPlayed"] <- wp_careers[r, "matchesPlayed"]
+    our_careers[rr, "pointsScored"] <- wp_careers[r, "pointsScored"]
+    our_careers[rr, "dataSource"] <- "jaWP"
+  }
+}
+
+# TODO
+# 1. ordonner les deux fichiers carrières (avant/après) pr faciliter la comparaison
+
 
 #### wp_careers
-# [1] "origWdId"      "origName"      "jaName"        "wpPage"
-# [5] "stepType"      "timePeriod"    "teamName"      "teamWP"
-# [9] "matchesPlayed" "pointsScored"  "startYear"     "endYear"
+#  [1] "origWdId"      "origName"      "jaName"        "wpPage"       
+#  [5] "stepType"      "timePeriod"    "teamName"      "teamWP"
+#  [9] "matchesPlayed" "pointsScored"  "startYear"     "endYear"
+# [13] "rugbyscopeId"
 
 #### our_careers
 #  [1] "playerId"      "playerName"    "teamWdId"      "teamRsId"
