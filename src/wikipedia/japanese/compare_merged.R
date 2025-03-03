@@ -18,14 +18,14 @@ source("src/common/norm_teams.R")
 # load our tables
 tlog("Loading our own tables")
 
-our_teams <- read.csv(file.path("data", "fusion", "teams_02_ref.csv"))
-tlog(2, "Raw number of teams: ", nrow(our_teams))
+fus_teams <- read.csv(file.path("data", "fusion", "teams_02_ref.csv"))
+tlog(2, "Raw number of teams: ", nrow(fus_teams))
 
-our_players <- read.csv(file.path("data", "fusion", "players_01_wd-dbp.csv"))
-tlog(2, "Raw number of players: ", nrow(our_players))
+fus_players <- read.csv(file.path("data", "fusion", "players_01_wd-dbp.csv"))
+tlog(2, "Raw number of players: ", nrow(fus_players))
 
-our_stints <- read.csv(file.path("data", "wikidata", "tables", "stints.csv"))
-tlog(2, "Raw number of stints: ", nrow(our_stints))
+fus_stints <- read.csv(file.path("data", "wikidata", "tables", "stints.csv"))
+tlog(2, "Raw number of stints: ", nrow(fus_stints))
 
 
 
@@ -63,8 +63,8 @@ sort(unique(wp_players[, "weight"]))
 
 # number of players by country
 tlog("Number of players by country:")
-idx  <- match(wp_players[, "origWdId"], our_players[, "wikidataId"])
-print(sort(table(our_players[idx, "citizenships"])))
+idx  <- match(wp_players[, "origWdId"], fus_players[, "wikidataId"])
+print(sort(table(fus_players[idx, "citizenships"])))
 
 # distribution of stints by player
 tlog("Distribution of stints by player:")
