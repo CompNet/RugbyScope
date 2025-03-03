@@ -1,5 +1,5 @@
 ########################################################################
-# Loads the three tables (players, teams, careers) retrieved from
+# Loads the three tables (players, teams, stints) retrieved from
 # Wikidata, and remove the information considered as useless.
 #
 # Vincent Labatut
@@ -25,8 +25,8 @@ tlog("Raw number of teams:", nrow(teams))
 players <- read.csv(file.path(table_folder, "players.csv"))
 tlog("Raw number of players:", nrow(players))
 
-careers <- read.csv(file.path(table_folder, "careers.csv"))
-tlog("Raw number of career steps:", nrow(careers))
+stints <- read.csv(file.path(table_folder, "stints.csv"))
+tlog("Raw number of stints:", nrow(stints))
 
 
 
@@ -101,22 +101,22 @@ tlog("Number of clubs remaining:", nrow(clubs))
 
 
 ########################################################################
-# clean career data
-filt_careers <- careers
+# clean stint data
+filt_stints <- stints
 
-# filter out career steps without a start date
-idx <- which(is.na(filt_careers$startYear))
-filt_careers <- filt_careers[-idx, ]
-tlog("Removed", length(idx), "steps without start date")
+# filter out stints without a start date
+idx <- which(is.na(filt_stints$startYear))
+filt_stints <- filt_stints[-idx, ]
+tlog("Removed", length(idx), "stints without start date")
 
 # using the start year as the end year when it is missing
-idx <- which(is.na(filt_careers$endYear))
-filt_careers[idx, "endYear"] <- filt_careers[idx, "startYear"]
+idx <- which(is.na(filt_stints$endYear))
+filt_stints[idx, "endYear"] <- filt_stints[idx, "startYear"]
 tlog("Complemented", length(idx), "missing end year (using the start year)")
 
-# filter out career steps related to clubs (now) absent from the list
-idx <- which(!(filt_careers$teamId %in% clubs$teamId))
-filt_careers <- filt_careers[-idx, ]
-tlog("Removed", length(idx), "steps without club (or with filtered out club)")
+# filter out stints related to clubs (now) absent from the list
+idx <- which(!(filt_stints$teamId %in% clubs$teamId))
+filt_stints <- filt_stints[-idx, ]
+tlog("Removed", length(idx), "stints without club (or with filtered out club)")
 
-tlog("Number of steps remaining:", nrow(filt_careers))
+tlog("Number of stints remaining:", nrow(filt_stints))

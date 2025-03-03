@@ -25,9 +25,9 @@ players <- read.csv(file.path(folder, "raw", "player_info.csv"))
 tlog(2, "Raw number of players: ", nrow(players))
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
-careers <- read.csv(file.path(folder, "raw", "player_careers.csv"))
-tlog(2, "Raw number of career steps: ", nrow(careers))
-careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
+stints <- read.csv(file.path(folder, "raw", "stint_info.csv"))
+tlog(2, "Raw number of stints: ", nrow(stints))
+stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 
 
@@ -184,41 +184,41 @@ players <- players[, -cols]
 
 
 ########################################################################
-# clean the career table
-tlog(0, "Cleaning the career table")
+# clean the stint table
+tlog(0, "Cleaning the stint table")
 
 # fix some specific cases
-careers[, "timePeriod"] <- gsub("年", "", careers[, "timePeriod"], fixed = TRUE)
-careers[, "timePeriod"] <- gsub("2005/2009/2013", "2005,2009,2013", careers[, "timePeriod"], fixed = TRUE)
-careers[, "timePeriod"] <- gsub("、", ",", careers[, "timePeriod"], fixed = TRUE)
-careers[, "timePeriod"] <- gsub("20111", "2011", careers[, "timePeriod"], fixed = TRUE)
-careers[, "timePeriod"] <- gsub("1995–19991999–20032003–20042004–20092009–2010", "1995-1999,1999-2003,2003-2004,2004-2009,2009-2010", careers[, "timePeriod"], fixed = TRUE)
-careers[, "timePeriod"] <- gsub("2011,12,13,", "2011,2012,2013", careers[, "timePeriod"], fixed = TRUE)
-careers[, "timePeriod"] <- gsub("2002-2014; 2016-2014; 2014-2018", "2002-2013; 2013-2014; 2014-2018", careers[, "timePeriod"], fixed = TRUE)
-careers <- data.frame(lapply(careers, function(col) gsub(";([^ ])", "; \\1", col, fixed = FALSE)))
-careers <- data.frame(lapply(careers, function(col) gsub(";$", "; ", col, fixed = FALSE)))
-careers <- data.frame(lapply(careers, function(col) gsub("\\[\\d+\\]", "", col, fixed = FALSE)))
-careers <- data.frame(lapply(careers, function(col) gsub(",;", ", ;", col, fixed = TRUE)))
-careers <- data.frame(lapply(careers, function(col) gsub("; （No.370）", "", col, fixed = TRUE)))
-careers <- data.frame(lapply(careers, function(col) gsub(" ?(–|−|〜|‐) ?", "-", col, fixed = FALSE)))
-careers <- data.frame(lapply(careers, function(col) gsub("？", "?", col, fixed = TRUE)))
+stints[, "timePeriod"] <- gsub("年", "", stints[, "timePeriod"], fixed = TRUE)
+stints[, "timePeriod"] <- gsub("2005/2009/2013", "2005,2009,2013", stints[, "timePeriod"], fixed = TRUE)
+stints[, "timePeriod"] <- gsub("、", ",", stints[, "timePeriod"], fixed = TRUE)
+stints[, "timePeriod"] <- gsub("20111", "2011", stints[, "timePeriod"], fixed = TRUE)
+stints[, "timePeriod"] <- gsub("1995–19991999–20032003–20042004–20092009–2010", "1995-1999,1999-2003,2003-2004,2004-2009,2009-2010", stints[, "timePeriod"], fixed = TRUE)
+stints[, "timePeriod"] <- gsub("2011,12,13,", "2011,2012,2013", stints[, "timePeriod"], fixed = TRUE)
+stints[, "timePeriod"] <- gsub("2002-2014; 2016-2014; 2014-2018", "2002-2013; 2013-2014; 2014-2018", stints[, "timePeriod"], fixed = TRUE)
+stints <- data.frame(lapply(stints, function(col) gsub(";([^ ])", "; \\1", col, fixed = FALSE)))
+stints <- data.frame(lapply(stints, function(col) gsub(";$", "; ", col, fixed = FALSE)))
+stints <- data.frame(lapply(stints, function(col) gsub("\\[\\d+\\]", "", col, fixed = FALSE)))
+stints <- data.frame(lapply(stints, function(col) gsub(",;", ", ;", col, fixed = TRUE)))
+stints <- data.frame(lapply(stints, function(col) gsub("; （No.370）", "", col, fixed = TRUE)))
+stints <- data.frame(lapply(stints, function(col) gsub(" ?(–|−|〜|‐) ?", "-", col, fixed = FALSE)))
+stints <- data.frame(lapply(stints, function(col) gsub("？", "?", col, fixed = TRUE)))
 
 # add columns for start/end years
-careers <- cbind(careers, matrix(NA, nrow = nrow(careers), ncol = 2))
-colnames(careers)[(ncol(careers) - 1):ncol(careers)] <- c("startYear", "endYear")
+stints <- cbind(stints, matrix(NA, nrow = nrow(stints), ncol = 2))
+colnames(stints)[(ncol(stints) - 1):ncol(stints)] <- c("startYear", "endYear")
 
-# split rows containing multiple steps
-new_careers <- careers[-(1:nrow(careers)), ]
+# split rows containing multiple stints
+new_stints <- stints[-(1:nrow(stints)), ]
 err <- c()
-for (r in 1:nrow(careers)) {
+for (r in 1:nrow(stints)) {
   if (r %% 1000 == 0)
-    tlog(4, "Processing row ", r, "/", nrow(careers))
+    tlog(4, "Processing row ", r, "/", nrow(stints))
 
-  periods <- careers[r, "timePeriod"]
-  team_names <- careers[r, "teamName"]
-  team_urls <- careers[r, "teamWP"]
-  matches_played <- careers[r, "matchesPlayed"]
-  points_scored <- careers[r, "pointsScored"]
+  periods <- stints[r, "timePeriod"]
+  team_names <- stints[r, "teamName"]
+  team_urls <- stints[r, "teamWP"]
+  matches_played <- stints[r, "matchesPlayed"]
+  points_scored <- stints[r, "pointsScored"]
 
   # try to split row by semicolon, same number of parts for each field (unless totally empty)
   ll <- 0
@@ -233,8 +233,8 @@ for (r in 1:nrow(careers)) {
   } else {
     team_names <- trimws(strsplit(team_names, ";")[[1]])
     if (ll > 0 && length(team_names) != ll) {
-      err <- union(err,  careers[r, "wpPage"])
-      tlog(6, "Error (team_names): ", paste0(careers[r, ], collapse = ", "))
+      err <- union(err, stints[r, "wpPage"])
+      tlog(6, "Error (team_names): ", paste0(stints[r, ], collapse = ", "))
     } else
       ll <- length(team_names)
   }
@@ -243,8 +243,8 @@ for (r in 1:nrow(careers)) {
   } else {
     team_urls <- trimws(strsplit(team_urls, ";")[[1]])
     if (ll > 0 && length(team_urls) != ll) {
-      err <- union(err,  careers[r, "wpPage"])
-      tlog(6, "Error (team_urls): ", paste0(careers[r, ], collapse = ", "))
+      err <- union(err, stints[r, "wpPage"])
+      tlog(6, "Error (team_urls): ", paste0(stints[r, ], collapse = ", "))
     } else
       ll <- length(team_urls)
   }
@@ -253,8 +253,8 @@ for (r in 1:nrow(careers)) {
   } else {
     matches_played <- trimws(strsplit(matches_played, ";")[[1]])
     if (ll > 0 && length(matches_played) != ll) {
-      err <- union(err,  careers[r, "wpPage"])
-      tlog(6, "Error (matches_played): ", paste0(careers[r, ], collapse = ", "))
+      err <- union(err, stints[r, "wpPage"])
+      tlog(6, "Error (matches_played): ", paste0(stints[r, ], collapse = ", "))
     } else
       ll <- length(matches_played)
   }
@@ -263,8 +263,8 @@ for (r in 1:nrow(careers)) {
   } else {
     points_scored <- trimws(strsplit(points_scored, ";")[[1]])
     if (ll > 0 && length(points_scored) != ll) {
-      err <- union(err,  careers[r, "wpPage"])
-      tlog(6, "Error (pointsScored): ", paste0(careers[r, ], collapse = ", "))
+      err <- union(err, stints[r, "wpPage"])
+      tlog(6, "Error (pointsScored): ", paste0(stints[r, ], collapse = ", "))
     }
   }
 
@@ -324,7 +324,7 @@ for (r in 1:nrow(careers)) {
     end_years[end_years == "?"] <- NA
 
     # init rows
-    new_rows <- careers[rep(r, length(periods_sep)), ]
+    new_rows <- stints[rep(r, length(periods_sep)), ]
     new_rows[, "timePeriod"] <- periods_sep
     new_rows[, "teamName"] <- rep(team_names[i], length(periods_sep))
     new_rows[, "teamWP"] <- rep(team_urls[i], length(periods_sep))
@@ -338,45 +338,45 @@ for (r in 1:nrow(careers)) {
       new_rows[, "pointsScored"] <- round(as.integer(points_scored[i]) * years / sum(years))
 
     # add rows to table
-    new_careers <- rbind(new_careers, new_rows)
+    new_stints <- rbind(new_stints, new_rows)
   }
 }
 # debug
 #options(warn = 0)
-#sort(unique(new_careers[, "startYear"]))
-#sort(unique(new_careers[, "endYear"]))
+#sort(unique(new_stints[, "startYear"]))
+#sort(unique(new_stints[, "endYear"]))
 
 # clean team urls
-idx <- which(grepl("action=edit&redlink=1", new_careers[, "teamWP"], fixed = FALSE))
-new_careers[idx, "teamWP"] <- NA
-#tail(sort(unique(new_careers[, "teamWP"])))
-idx <- which(new_careers[, "teamWP"] == "")
-new_careers[idx, "teamWP"] <- NA
-#print(length(which(!is.na(new_careers[, "teamWP"]))))  # 15435 non-NAs
+idx <- which(grepl("action=edit&redlink=1", new_stints[, "teamWP"], fixed = FALSE))
+new_stints[idx, "teamWP"] <- NA
+#tail(sort(unique(new_stints[, "teamWP"])))
+idx <- which(new_stints[, "teamWP"] == "")
+new_stints[idx, "teamWP"] <- NA
+#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 15435 non-NAs
 
 # solve wikipedia redirections
-for (r in 1:nrow(new_careers)) {
+for (r in 1:nrow(new_stints)) {
   if (r %% 100 == 0)
-    tlog(4, "Solving redirections for entry ", r, "/", nrow(new_careers))
+    tlog(4, "Solving redirections for entry ", r, "/", nrow(new_stints))
 
-  url <- new_careers[r, "teamWP"]
+  url <- new_stints[r, "teamWP"]
   if (!is.na(url)) {
     if (url == "")
-      new_careers[r, "teamWP"] <- NA
+      new_stints[r, "teamWP"] <- NA
     else {
       # possibly solve retrieval error
       if (grepl("\\b(.+)/wiki/.+", url, fixed = FALSE))
         url <- gsub("\\b(.+)/wiki/.+", "\\1", url)
 
       # solve redirection
-      new_careers[r, "teamWP"] <- solve_redirections(name = url, lang = "ja")
+      new_stints[r, "teamWP"] <- solve_redirections(name = url, lang = "ja")
     }
   }
 
-  if (!is.na(url) && is.na(new_careers[r, "teamWP"]))
+  if (!is.na(url) && is.na(new_stints[r, "teamWP"]))
     tlog(6, "Difference: ", r)
 }
-#print(length(which(!is.na(new_careers[, "teamWP"]))))  # 15435 non-NAs
+#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 15435 non-NAs
 
 
 
@@ -389,7 +389,7 @@ tab_file <- file.path(folder, "players.csv")
 tlog(2, "Record player table as: ", tab_file)
 write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
-# record career table
-tab_file <- file.path(folder, "careers.csv")
-tlog(2, "Record career table as: ", tab_file)
-write.csv(new_careers, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+# record stint table
+tab_file <- file.path(folder, "stints.csv")
+tlog(2, "Record stint table as: ", tab_file)
+write.csv(new_stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")

@@ -20,7 +20,7 @@ source("src/wikidata/retrieve_data.R")
 # this produces the following CSV files in folder `data/wikidata/`:
 # - `players.csv`: list of players
 # - `teams.csv`: list of teams
-# - `careers.csv`: career steps
+# - `stints.csv`: list of stints
 
 # compute a few stats for these tables
 source("src/wikidata/compute_stats.R")
@@ -35,7 +35,7 @@ source("src/dbpedia/retrieve_data.R")
 # this produces the following CSV files in folder `data/dbpedia/`:
 # - `players.csv`: list of players
 # - `teams.csv`: list of teams
-# no career table, as these data are not available on DBpedia
+# no stint table, as these data are not available on DBpedia
 
 # merge DBpedia data (player and teams) into previously retrieved Wikidata tables
 source("src/dbpedia/integrate_data.R")
@@ -75,7 +75,7 @@ source("src/wikipedia/spanish/clean_tables.R")
 source("src/wikipedia/italian/clean_tables.R")
 
 # japanese wikipedia
-system("python src/wikipedia/japanese/retrieve_careers.pys")
+system("python src/wikipedia/japanese/retrieve_stints.pys")
 # this produces the raw files in folder `data/wikipedia/japanese/raw/`
 source("src/wikipedia/japanese/clean_tables.R")
 # this produces the clean files in folder `data/wikipedia/japanese/`
@@ -93,7 +93,7 @@ source("src/wikipedia/japanese/integrate_data.R")
 # this produces the following files in folder `data/fusion/`:
 # - `players_02_ja-wp.csv`: merged list of players
 # - `teams_03_ja-wp.csv`: merged list of teams
-# - `careers_01_wd-ja-wp.csv`: merged list of career steps
+# - `stints_01_wd-ja-wp.csv`: merged list of stints
 
 # english wikipedia
 source("src/wikipedia/english/integrate_data.R")

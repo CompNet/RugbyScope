@@ -1,6 +1,6 @@
 ########################################################################
-# This query retrieves all the steps constituting the
-# careers of a specific rugby player from Wikidata.
+# This query retrieves all the stints constituting the
+# career of a specific rugby player from Wikidata.
 # 
 # It is designed to be called from R, after replacing "QQQQQQ" by the
 # player's proper Wikidata ID.

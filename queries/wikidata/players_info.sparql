@@ -1,6 +1,6 @@
 ########################################################################
 # This query retrieves the information describing a specific rugby 
-# union player described on Wikidata.
+# union player available on Wikidata.
 # 
 # It is designed to be called from R, after replacing "QQQQQQ" by the
 # player's proper Wikidata ID.

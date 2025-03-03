@@ -249,8 +249,8 @@ write.csv(x = teams, file = file.path(table_folder, "teams.csv"), row.names = FA
 
 
 ########################################################################
-# extraction of player careers
-tlog("Retrieving players' careers (may take a while)\n")
+# extraction of player stints
+tlog("Retrieving players' stints (may take a while)\n")
 col_names <- c(
   "playerId",
   "teamId",
@@ -258,13 +258,13 @@ col_names <- c(
   "matchesPlayed", "pointsScored"
 )
 
-# init careers table
-careers <- as.data.frame(matrix(NA, nrow = 1, ncol=length(col_names)))
-colnames(careers) <- col_names
-careers <- careers[-1, , drop = FALSE]
+# init stint table
+stints <- as.data.frame(matrix(NA, nrow = 1, ncol=length(col_names)))
+colnames(stints) <- col_names
+stints <- stints[-1, , drop = FALSE]
 
 # load query file
-query <- readtext(file.path(query_folder, "career_steps.sparql"))$text
+query <- readtext(file.path(query_folder, "stints_info.sparql"))$text
 # remove the comments/spaces/newlines, otherwise the query is too long
 query <- gsub("#[^\r\n]*[\r\n]+", "\n", query)
 query <- gsub("  +", " ", query)
@@ -272,7 +272,7 @@ query <- gsub("[\r\n]+", "\n", query)
 query <- gsub(" *[\r\n] *", "\n", query)
 
 # run query for each player
-tlog.start.loop(0, length(player_ids), "Looping over player careers")
+tlog.start.loop(0, length(player_ids), "Looping over player stints")
 for (p in 1:length(player_ids)) {
   # get player ID
   player_id <- player_ids[p]
@@ -292,36 +292,36 @@ for (p in 1:length(player_ids)) {
 
   # add to table
   if (!all(is.na(rows))) {
-    comp_rows <- matrix(NA, nrow = nrow(rows), ncol = ncol(careers))
+    comp_rows <- matrix(NA, nrow = nrow(rows), ncol = ncol(stints))
     colnames(comp_rows) <- col_names
     comp_rows <- as.data.frame(comp_rows)
     cols <- intersect(colnames(rows), col_names)
     comp_rows[, cols] <- rows[, cols]
     comp_rows[, "playerId"] <- rep(player_id, nrow(comp_rows))
-    careers <- rbind(careers, comp_rows)
+    stints <- rbind(stints, comp_rows)
   }
 }
-tlog.end.loop(0, "Career loop completed")
+tlog.end.loop(0, "Stint loop completed")
 
 # display a few details for verification
-tlog("Dimension of the careers table: ", paste(dim(careers), collapse = ", "))
-tlog("Classes of the columns: ", paste(apply(careers, 2, class), collapse = ", "))
+tlog("Dimension of the stints table: ", paste(dim(stints), collapse = ", "))
+tlog("Classes of the columns: ", paste(apply(stints, 2, class), collapse = ", "))
 tlog("Top of the table:\n")
-print.data.frame(careers[1:10, ])
+print.data.frame(stints[1:10, ])
 
 # add player and team names
-idx <- match(careers[, "playerId"], players[, "playerId"])
+idx <- match(stints[, "playerId"], players[, "playerId"])
 plyr_names <- players[idx, "playerLabel"]
-idx <- match(unlist(careers[, "teamId"]), teams[, "teamId"])
+idx <- match(unlist(stints[, "teamId"]), teams[, "teamId"])
 team_names <- teams[idx, "teamLabel"]
-careers <- cbind(careers[, "playerId"], playerName = plyr_names, careers[, "teamId"], teamName = team_names, careers[,3:ncol(careers)])
-colnames(careers)[1] <- "playerId"
-colnames(careers)[3] <- "teamId"
+stints <- cbind(stints[, "playerId"], playerName = plyr_names, stints[, "teamId"], teamName = team_names, stints[,3:ncol(stints)])
+colnames(stints)[1] <- "playerId"
+colnames(stints)[3] <- "teamId"
 
 # replace empty strings by NAs
-careers <- careers %>% mutate(across(where(is.character), ~ na_if(., "")))
+stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 # export table as a CSV
-write.csv(x = careers, file = file.path(table_folder, "careers.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(x = stints, file = file.path(table_folder, "stints.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 
 

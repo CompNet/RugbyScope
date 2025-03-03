@@ -105,7 +105,7 @@ player_number = merged_table.shape[0]
 
 ########################################################################
 # init lists to store extracted data
-career_steps = []
+stint_info = []
 player_info = []
 diff_sect = [] # this is for debug
 
@@ -342,7 +342,7 @@ for _, player in merged_table.iterrows():
                 else:
                     tlog(2, f"Could not find current team")
 
-                # career steps
+                # stints
                 for section in CAREER_MAP.keys():
                     tr_elt = career_elt.find("tr", string=section)
                     if tr_elt:
@@ -435,17 +435,17 @@ for _, player in merged_table.iterrows():
                                                 points_scored = points_scored + tmp[0]
                                     points_scored = clean_score_str(points_scored)
                                 
-                                # create step
-                                step = [orig_id, orig_name, name, player_page, CAREER_MAP[section], period, team, team_url, matches_played, points_scored]
-                                career_steps.append(step)
+                                # create stint
+                                stint = [orig_id, orig_name, name, player_page, CAREER_MAP[section], period, team, team_url, matches_played, points_scored]
+                                stint_info.append(stint)
                                 has_career = True
-                                tlog(4, f"Career step: {step})")
+                                tlog(4, f"Stint: {stint})")
 
                 if not has_career:
-                    comment = "Career steps not found"
+                    comment = "No stint found"
                     tlog(2, comment)
 
-                # in case of types of career steps never seen before
+                # in case of types of stints never seen before
                 section_elts = career_elt.find_all("th", colspan="4")
                 career_sections = [elt.get_text(strip=True) for elt in section_elts]
                 diff = set(career_sections) - set(CAREER_MAP.keys()) - set(CAREER_DISC)
@@ -455,9 +455,9 @@ for _, player in merged_table.iterrows():
                     diff_df = pd.DataFrame(diff_sect)
                     diff_df.to_csv(path.join(table_folder, "debug__new_sections.csv"), index=False)
 
-            # no career found
+            # no career block found
             else:
-                comment = "Career block not found"
+                comment = "No career block found"
                 tlog(2, comment)
 
     # record player info
@@ -465,10 +465,10 @@ for _, player in merged_table.iterrows():
     player_df = pd.DataFrame(player_info, columns=["origWdId", "origName", "debugComment", "jaName", "wpPage", "birthDate", "birthPlace", "birthPlaceWP", "deathDate", "deathPlace", "deathPlaceWP", "height", "weight", "positions", "currentTeam"])
     player_df.to_csv(path.join(table_folder, "player_info.csv"), index=False)
                 
-    # record career steps
+    # record stints
     if has_career:
-        career_df = pd.DataFrame(career_steps, columns=["origWdId", "origName", "jaName", "wpPage", "stepType", "timePeriod", "teamName", "teamWP", "matchesPlayed", "pointsScored"])
-        career_df.to_csv(path.join(table_folder, "player_careers.csv"), index=False)
+        stint_df = pd.DataFrame(stint_info, columns=["origWdId", "origName", "jaName", "wpPage", "stintType", "timePeriod", "teamName", "teamWP", "matchesPlayed", "pointsScored"])
+        stint_df.to_csv(path.join(table_folder, "stint_info.csv"), index=False)
                 
     p = p + 1
 

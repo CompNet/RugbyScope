@@ -48,9 +48,9 @@ for (p1 in 1:(nrow(players) - 1)) {
   tlog.loop(2, p1, "Processing player #1 ", p1_id, " ", p1, "/", (nrow(players) - 1), " (", players[p1, "playerLabel"], ")")
   
   # only process those with enough information
-  idx1 <- which(filt_careers[, "playerId"] == p1_id)
+  idx1 <- which(filt_stints[, "playerId"] == p1_id)
   if (length(idx1) > 0) {
-    w_team <- idx1[!is.na(filt_careers[idx1, "teamId"])]
+    w_team <- idx1[!is.na(filt_stints[idx1, "teamId"])]
     if (length(w_team) > 0) {
       
       # loop over the second player
@@ -60,22 +60,22 @@ for (p1 in 1:(nrow(players) - 1)) {
         # tlog.loop(2, p2 - p1, "Processing player #2 ", p2_id, " ", p2, "/", nrow(players) - (p1 + 1), " (", players[p2, "playerLabel"], ")")
 
         # only process those with enough information
-        idx2 <- which(filt_careers[, "playerId"] == p2_id)
+        idx2 <- which(filt_stints[, "playerId"] == p2_id)
         if (length(idx2) > 0) {
-          w_team <- idx2[!is.na(filt_careers[idx2, "teamId"])]
+          w_team <- idx2[!is.na(filt_stints[idx2, "teamId"])]
           if (length(w_team) > 0) {
             
-            # compare the career steps
-            inter_teams <- intersect(filt_careers[idx1, "teamId"], filt_careers[idx2, "teamId"])
+            # compare the stints
+            inter_teams <- intersect(filt_stints[idx1, "teamId"], filt_stints[idx2, "teamId"])
             for (inter_team in inter_teams) {
               # tlog(4, "Processing common team ",inter_team, " (", teams[which(teams[, "teamId"] == inter_team), "teamLabel"], ")")
               
-              i1 <- which(filt_careers[idx1, "teamId"] == inter_team)
-              i2 <- which(filt_careers[idx2, "teamId"] == inter_team)
-              start1 <- filt_careers[idx1[i1], "startYear"]
-              end1 <- filt_careers[idx1[i1], "endYear"]
-              start2 <- filt_careers[idx2[i2], "startYear"]
-              end2 <- filt_careers[idx2[i2], "endYear"]
+              i1 <- which(filt_stints[idx1, "teamId"] == inter_team)
+              i2 <- which(filt_stints[idx2, "teamId"] == inter_team)
+              start1 <- filt_stints[idx1[i1], "startYear"]
+              end1 <- filt_stints[idx1[i1], "endYear"]
+              start2 <- filt_stints[idx2[i2], "startYear"]
+              end2 <- filt_stints[idx2[i2], "endYear"]
               overlap <- min(end1, end2) - max(start1, start2) + 1
               # tlog(6, "Temporal overlap: [", start1, ";", end1, "] vs. [", start2, ";", end2, "] >> ", overlap, " years")
               if (overlap > 0) {

@@ -26,8 +26,8 @@ cat("Raw number of teams:", nrow(teams), "\n")
 players <- read.csv(file.path(table_folder, "players.csv"))
 cat("Raw number of players:", nrow(players), "\n")
 
-careers <- read.csv(file.path(table_folder, "careers.csv"))
-cat("Raw number of career steps:", nrow(careers), "\n")
+stints <- read.csv(file.path(table_folder, "stints.csv"))
+cat("Raw number of stints:", nrow(stints), "\n")
 
 
 
@@ -59,13 +59,13 @@ dev.off()
 ########################################################################
 # number of active players by year
 
-# filter out career steps without a start year
-idx <- which(is.na(careers[, "startYear"]))
-filt_careers <- careers[-idx, ]
+# filter out stints without a start year
+idx <- which(is.na(stints[, "startYear"]))
+filt_stints <- stints[-idx, ]
 
 # get start and end years
-start_years <- as.integer(filt_careers[, "startYear"])
-end_years <- as.integer(filt_careers[, "endYear"])
+start_years <- as.integer(filt_stints[, "startYear"])
+end_years <- as.integer(filt_stints[, "endYear"])
 
 # if no end year: use the start year
 idx <- which(is.na(end_years))
@@ -80,8 +80,8 @@ all_countries <- get_merged_countries(players)
 # count them to select which countries to display later (cannot show them all)
 tt <- sort(table(all_countries), decreasing = TRUE)
 
-# match country for each career step
-idx <- match(filt_careers[, "playerId"], players[, "playerId"])
+# match country for each stint
+idx <- match(filt_stints[, "playerId"], players[, "playerId"])
 countries <- all_countries[idx]
 
 # compute overall stats

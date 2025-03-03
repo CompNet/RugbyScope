@@ -24,8 +24,8 @@ tlog(2, "Raw number of teams: ", nrow(our_teams))
 our_players <- read.csv(file.path("data", "fusion", "players_01_wd-dbp.csv"))
 tlog(2, "Raw number of players: ", nrow(our_players))
 
-our_careers <- read.csv(file.path("data", "wikidata", "tables", "careers.csv"))
-tlog(2, "Raw number of career steps: ", nrow(our_careers))
+our_stints <- read.csv(file.path("data", "wikidata", "tables", "stints.csv"))
+tlog(2, "Raw number of stints: ", nrow(our_stints))
 
 
 
@@ -38,8 +38,8 @@ wp_folder <- file.path("data", "wikipedia", "japanese", "raw")
 wp_players <- read.csv(file.path(wp_folder, "player_info.csv"))
 tlog(2, "Raw number of players: ", nrow(wp_players))
 
-wp_careers <- read.csv(file.path(wp_folder, "player_careers.csv"))
-tlog(2, "Raw number of career steps: ", nrow(wp_careers))
+wp_stints <- read.csv(file.path(wp_folder, "stint_info.csv"))
+tlog(2, "Raw number of stints: ", nrow(wp_stints))
 
 
 
@@ -51,8 +51,8 @@ tlog("Wikipedia JA stats:")
 tlog("Retrieval outcome for individual players:")
 table(wp_players[, "debugComment"])
 
-# remove players with no career steps
-idx <- which(wp_players[, "debugComment"] %in% c("Career block not found", "Career steps not found", "No WP JA page"))
+# remove players with no stints
+idx <- which(wp_players[, "debugComment"] %in% c("No career block found", "No stint found", "No WP JA page"))
 wp_players <- wp_players[-idx, ]
 
 # detect irregular values
@@ -66,19 +66,19 @@ tlog("Number of players by country:")
 idx  <- match(wp_players[, "origWdId"], our_players[, "wikidataId"])
 print(sort(table(our_players[idx, "citizenships"])))
 
-# distribution of career steps by player
-tlog("Distribution of career steps by player:")
-step_nbrs <- sapply(wp_players[, "origWdId"], function(id) {
-  length(which(wp_careers[, "origWdId"] == id) > 0)
+# distribution of stints by player
+tlog("Distribution of stints by player:")
+stint_nbrs <- sapply(wp_players[, "origWdId"], function(id) {
+  length(which(wp_stints[, "origWdId"] == id) > 0)
 })
-print(table(step_nbrs))
+print(table(stint_nbrs))
 
 
 
 
 ########################################################################
-# a few stats regarding the Wikipedia JA career table
+# a few stats regarding the Wikipedia JA stint table
 
 # detect irregular values
-sort(unique(wp_careers[, "matchesPlayed"]))
-sort(unique(wp_careers[, "pointsScored"]))
+sort(unique(wp_stints[, "matchesPlayed"]))
+sort(unique(wp_stints[, "pointsScored"]))

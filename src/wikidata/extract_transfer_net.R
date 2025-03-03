@@ -38,24 +38,24 @@ colnames(el) <- c("From", "To")
 el <- el[-1, , drop = FALSE]
 weights <- c()
 
-# init last step variables
-last_player <- filt_careers[1, "playerId"]
-last_club <- filt_careers[1, "teamId"]
-last_end <- filt_careers[1, "endYear"]
+# init last stint variables
+last_player <- filt_stints[1, "playerId"]
+last_club <- filt_stints[1, "teamId"]
+last_end <- filt_stints[1, "endYear"]
 row <- 2
 
-# loop over each career step
-while(row <= nrow(filt_careers)) {
-  tlog(2, "Processing career step ", row, "/", nrow(filt_careers))
-  player_id <- filt_careers[row, "playerId"]
-  club_id <- filt_careers[row, "teamId"]
-  start_year <- filt_careers[row, "startYear"]
-  end_year <- filt_careers[row, "endYear"]
+# loop over each stint
+while(row <= nrow(filt_stints)) {
+  tlog(2, "Processing stint ", row, "/", nrow(filt_stints))
+  player_id <- filt_stints[row, "playerId"]
+  club_id <- filt_stints[row, "teamId"]
+  start_year <- filt_stints[row, "startYear"]
+  end_year <- filt_stints[row, "endYear"]
   tlog(2, player_id, ", ", club_id)
 
-  # next step of the previous player
+  # next stint of the previous player
   if (player_id == last_player) {
-    # the new club must be different, and there must be no gap between both steps' dates
+    # the new club must be different, and there must be no gap between both stints' dates
     if (last_club != club_id && (is.na(last_end) || start_year == last_end || start_year == (last_end + 1))) {
       idx <- which(el[, "From"] == last_club & el[, "To"] == club_id)
       if (length(idx) == 0) {
