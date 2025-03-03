@@ -86,6 +86,15 @@ source("src/wikipedia/japanese/clean_tables.R")
 ########################################################################
 # merge the Wikipedia data with the previous tables
 
+# japanese wikipedia
+#source("src/wikipedia/japanese/compare_merged.R")
+# optional: generates a few stats
+source("src/wikipedia/japanese/integrate_data.R")
+# this produces the following files in folder `data/fusion/`:
+# - `players_02_ja-wp.csv`: merged list of players
+# - `teams_03_ja-wp.csv`: merged list of teams
+# - `careers_01_wd-ja-wp.csv`: merged list of career steps
+
 # english wikipedia
 source("src/wikipedia/english/integrate_data.R")
 
@@ -97,9 +106,3 @@ source("src/wikipedia/spanish/integrate_data.R")
 
 # italian wikipedia
 source("src/wikipedia/italian/integrate_data.R")
-
-# japanese wikipedia
-source("src/wikipedia/japanese/integrate_data.R")
-# this produces the following files in folder `data/fusion/`:
-# - `players_xxxxx.csv`: merged list of players
-# - `careers_xxxx.csv`: merged list of career steps

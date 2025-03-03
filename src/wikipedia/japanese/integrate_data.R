@@ -694,10 +694,17 @@ for (r in 1:length(idx)) {
   }
 }
 
-# # record merged table as a new CSV file
-# tab.file <- file.path(fusion_folder, "teams_03_ja-wp.csv")
-# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-# write.csv(our_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# record merged table as a new CSV file
+tab.file <- file.path(fusion_folder, "teams_03_ja-wp.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(our_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+
+#### manually added teams
+# 6962,NA,"Tao Samtskhe-Javakheti","Club",NA,NA,NA,NA,"Georgia","Didi 10",1,"Aspindza Field",NA,"Azpindza",NA,NA,NA,NA,NA,NA,NA,NA
+# 6963,NA,"RC Kazbegi","Club",NA,NA,NA,NA,"Georgia","Didi 10",1,"RC Kazbegi Rugby Stadium",NA,"Stephantsminda",NA,NA,NA,NA,NA,NA,NA,NA
+# 6964,"Q3028284","Dinamo Tbilisi","Club","1925-01-01",NA,NA,NA,"Georgia",NA,NA,NA,NA,"Tbilisi",NA,"Dinamo_Tbilisi",NA,NA,NA,NA,NA,NA
+# 6965,NA,"Tbilisi State University","Club","1918-01-01",NA,NA,NA,"Georgia",NA,NA,NA,NA,"Tbilisi",NA,"Tbilisi_State_University",NA,NA,NA,NA,NA,NA
+# 6966,NA,"Tbilisi State Medical University","Club",NA,NA,NA,NA,"Georgia",NA,NA,NA,NA,"Tbilisi",NA,"Tbilisi_State_Medical_University",NA,NA,NA,NA,NA,NA
 
 
 
@@ -708,7 +715,7 @@ tlog("Merging career steps")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 #### debug: directly load the file to bypass all previous processing
 #wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
-our_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
+#our_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
 #### debug: reload data table for quick testing
 #wp_careers <- read.csv(file.path(wp_folder, "careers.csv"))
 #wp_careers <- wp_careers %>% mutate(across(where(is.character), ~ na_if(., "")))
@@ -912,17 +919,6 @@ for (r in 1:nrow(wp_careers)) {
     our_careers[rr, "dataSource"] <- "jaWP"
   }
 }
-
-#### wp_careers
-#  [1] "origWdId"      "origName"      "jaName"        "wpPage"       
-#  [5] "stepType"      "timePeriod"    "teamName"      "teamWP"
-#  [9] "matchesPlayed" "pointsScored"  "startYear"     "endYear"
-# [13] "rugbyscopeId"
-
-#### our_careers
-#  [1] "playerId"      "playerName"    "teamWdId"      "teamRsId"
-#  [5] "teamName"      "startYear"     "endYear"       "matchesPlayed"
-#  [9] "pointsScored"  "dataSource"
 
 # reorder career table to respect wikidataId / names
 ids <- our_careers[, "playerId"]
