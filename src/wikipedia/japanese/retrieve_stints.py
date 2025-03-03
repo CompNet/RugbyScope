@@ -1,5 +1,5 @@
 ########################################################################
-# Retrieves player information from japanese Wikipedia infoxes.
+# Retrieves player information from Japanese Wikipedia infoxes.
 #
 # Vincent Labatut
 # 02/2025
@@ -78,7 +78,7 @@ CAREER_DISC = {SEVENS_CAREER, COACH_CAREER, REFEREE_CAREER}
 
 ########################################################################
 def clean_score_str(text):
-    """Clean strings representing points cored or matches played.
+    """Clean strings representing points scored or matches played.
 
     :param text (str): text to clean.
     :returns: input string after cleaning (can be empty).
@@ -140,7 +140,7 @@ for _, player in merged_table.iterrows():
     # no japanese wikipedia page for this player
     if pd.isnull(player_page):
         tlog(2, f"No Japanese Wikipedia page for this player")
-        comment = "No WP JA page"
+        comment = "No JA WP page"
 
     # there is a japanese wikipedia page for this player
     else:

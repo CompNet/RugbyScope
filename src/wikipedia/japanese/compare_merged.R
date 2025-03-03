@@ -52,7 +52,7 @@ tlog("Retrieval outcome for individual players:")
 table(wp_players[, "debugComment"])
 
 # remove players with no stints
-idx <- which(wp_players[, "debugComment"] %in% c("No career block found", "No stint found", "No WP JA page"))
+idx <- which(wp_players[, "debugComment"] %in% c("No career block found", "No stint found", "No JA WP page"))
 wp_players <- wp_players[-idx, ]
 
 # detect irregular values

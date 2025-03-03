@@ -37,7 +37,7 @@ stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 tlog(0, "Cleaning the player table")
 
 # filter out players with no japanese page
-idx <- which(players[, "debugComment"] == "No WP JA page")
+idx <- which(players[, "debugComment"] == "No JA WP page")
 tlog(2, "Removing players without a japanese WP page: ", length(idx), "/", nrow(players))
 players <- players[-idx, ]
 tlog(4, "Remaing players: ", nrow(players))
