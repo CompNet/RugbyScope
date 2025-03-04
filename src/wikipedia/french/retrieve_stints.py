@@ -65,25 +65,6 @@ CAREER_DISC = {COACH_CAREER, NATREF_CAREER, INTREF_CAREER}
 
 
 ########################################################################
-def clean_score_str(text):
-    """Clean strings representing points scored or matches played.
-
-    :param text (str): text to clean.
-    :returns: input string after cleaning (can be empty).
-    """
-
-    text = re.sub(r"\(?\?\)?", "?", text)
-    # text = re.sub(r"\?", "", text)
-    text = re.sub(r"\[\d+\]", "", text)
-    text = re.sub(r" +", " ", text)
-    text = text.strip()
-
-    return text
-
-
-
-
-########################################################################
 # load list of players
 merged_table = pd.read_csv(path.join("data", "fusion", "players_02_ja-wp.csv"))
 player_number = merged_table.shape[0]
@@ -102,7 +83,7 @@ diff_sect = [] # this is for debug
 ########################################################################
 # loop over players
 p = 1
-for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominici
+for player_page in ["Antoine_Dupont"]:  # Antoine_Dupont Christophe_Dominici
     orig_name = ""
     orig_id = ""
 # for _, player in merged_table.iterrows():
@@ -183,6 +164,7 @@ for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominic
                 br_elt = time_elt.find_next_siblings("br")[0]
                 a_elt = time_elt.find_next_siblings("a")[0]
                 birth_place = a_elt.get_text(strip=True)
+                birth_place_url = a_elt["href"]
                 tlog(2, f"Birth place: {birth_place}")
             else:
                 tlog(2, f"Could not find birth information")
@@ -199,6 +181,7 @@ for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominic
                 br_elt = time_elt.find_next_siblings("br")[0]
                 a_elt = time_elt.find_next_siblings("a")[0]
                 death_place = a_elt.get_text(strip=True)
+                death_place_url = a_elt["href"]
                 tlog(2, f"Death place: {death_place}")
             else:
                 tlog(2, f"Could not find death information")
@@ -227,13 +210,14 @@ for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominic
                 tlog(2, f"Could not find positions")
 
             # get career sections
-            periods = []; teams = []; urls = []; matches = []; points = []
+            stint_types = []; periods = []; teams = []; urls = []; matches = []; points = []
             table_elt = caption_elt.parent
             table_elt = table_elt.find_next_siblings()[0]
             while table_elt and table_elt.name == "table":
                 caption_elt = table_elt.find("caption")
                 section = caption_elt.get_text(strip=True)
                 if section in CAREER_MAP.keys():
+                    stint_type = CAREER_MAP[section]
                     tbody_elt = caption_elt.find_next_siblings()[0]
                     tr_elt = tbody_elt.find_all("tr")[1]  # [0] = table header
                     td_elts = tr_elt.find_all("td")
@@ -247,9 +231,13 @@ for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominic
                     r = 0
                     while r < len(periods_elt):
                         period_elt = periods_elt[r]
+                        # handle <br> elements
                         if period_elt.name is not None and period_elt.name == "br":
+                            stint_types.append(stint_type)
                             periods.append("")
+                        # otherwise, extract content
                         else:   # should be text node
+                            stint_types.append(stint_type)
                             periods.append(period_elt.strip())
                             r = r + 1   # skip next br
                         r = r + 1       # go to next row
@@ -257,12 +245,20 @@ for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominic
                     r = 0
                     while r < len(teams_elt):
                         team_elt = teams_elt[r]
+                        # possibly skip whitespaces
+                        if team_elt.name is None and team_elt.strip() == "":
+                            r = r + 1
+                            team_elt = teams_elt[r]
+                        # handle <br> elements
                         if team_elt.name is not None and team_elt.name == "br":
                             teams.append("")
+                        # otherwise, extract content
                         else:
                             if team_elt.name is not None:
                                 teams.append(team_elt.get_text(strip=True))
-                                if team_elt.name == "a":
+                                if team_elt.name == "span":
+                                    team_elt = team_elt.find("a", recursive = False) # skip flag <span>
+                                if team_elt and team_elt.name == "a":
                                     urls.append(team_elt["href"])
                                 else:
                                     urls.append("")
@@ -271,8 +267,9 @@ for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominic
                                 urls.append("")
                             r = r + 1   # skip next br
                         r = r + 1       # go to next row
+                    # check list lengths are consistent
                     if len(periods) != len(teams):
-                        comment = "Inconsistent numbers of periods/teams"
+                        raise Exception("Inconsistent numbers of periods/teams")
                     # loop over br-separated stats
                     if not stats_elt:
                         matches = [""] * len(periods)
@@ -285,65 +282,71 @@ for player_page in ["Christophe_Dominici"]:  # Antoine_Dupont Christophe_Dominic
                             if stat_elt.name is not None and stat_elt.name == "s":
                                 r = r + 1
                                 stat_elt = stats_elt[r]
+                            # possibly skip empty element
+                            if stat_elt.name is None and stat_elt.strip() == "":
+                                r = r + 1
+                                stat_elt = stats_elt[r]
                             # if <br> => no value
                             if stat_elt.name is not None and stat_elt.name == "br":
                                 matches.append("")
                                 points.append("")
+                            # otherwise, extract content
                             else:
                                 if stat_elt.name is None:
                                     str = stat_elt.strip()
                                 else:
                                     str = stat_elt.get_text(strip=True).strip()
+                                r = r + 1   # next element
                                 # possibly skip <s> element
-                                if stats_elt[r+1].name is not None and stats_elt[r+1].name == "s":
-                                    r = r + 2
+                                if r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "s":
+                                    r = r + 1
                                     stat_elt = stats_elt[r]
                                     str = str + stat_elt.strip()
-                                # retrieve values
-                                pattern = r"^(\d+)[^\d]\((\d+)\))"
-                                vals = re.findall(pattern, str)
-                                matches.append(vals[0])
-                                points.append(vals[1])
-                                # possibly skip <sup> element
-                                if stats_elt[r+1].name is not None and stats_elt[r+1].name == "sup":
                                     r = r + 1
-                            r = r + 1
+                                # retrieve values
+                                pattern = r"^(\d+)[^\d]*\((\d+)\)"
+                                vals = re.findall(pattern, str)
+                                matches.append(vals[0][0])
+                                points.append(vals[0][1])
+                                # possibly skip <sup> element
+                                if r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "sup":
+                                    r = r + 1
+                            r = r + 1       # go to next row
+                    # check list lengths are consistent
+                    if len(periods) != len(matches):
+                        raise Exception("Inconsistent numbers of periods/match numbers")
+                    if len(periods) != len(points):
+                        raise Exception("Inconsistent numbers of periods/points scored")
+
+                # in case of types of stints never seen before
+                elif section not in CAREER_DISC:
+                    tlog(4, f"New section detected in this page: " + section)
+                    diff_sect = set(diff_sect).union(section)
+                    diff_df = pd.DataFrame(diff_sect)
+                    diff_df.to_csv(path.join(table_folder, "debug__new_sections.csv"), index=False)
+
+                # turn to next section
                 table_elt = table_elt.find_next_siblings()[0]
 
-                            
             # create stint
-            stint = [orig_id, orig_name, name, player_page, CAREER_MAP[section], period, team, team_url, matches_played, points_scored]
-            stint_info.append(stint)
-            has_career = True
-            tlog(4, f"Stint: {stint})")
+            for s in range(len(periods)):
+                stint = [orig_id, orig_name, name, player_page, stint_types[s], periods[s], teams[s], urls[s], matches[s], points[s]]
+                stint_info.append(stint)
+                has_career = True
+                tlog(4, f"Stint: {stint})")
 
             if not has_career:
                 comment = "No stint found"
                 tlog(2, comment)
 
-            # in case of types of stints never seen before
-            section_elts = career_elt.find_all("th", colspan="4")
-            career_sections = [elt.get_text(strip=True) for elt in section_elts]
-            diff = set(career_sections) - set(CAREER_MAP.keys()) - set(CAREER_DISC)
-            if len(diff) > 0:
-                tlog(4, f"New sections detected in this page: " + "; ".join(diff))
-                diff_sect = set(diff_sect).union(diff)
-                diff_df = pd.DataFrame(diff_sect)
-                diff_df.to_csv(path.join(table_folder, "debug__new_sections.csv"), index=False)
-
-            # no career block found
-            else:
-                comment = "No career block found"
-                tlog(2, comment)
-
     # record player info
-    player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, weight, positions, current_team])
-    player_df = pd.DataFrame(player_info, columns=["origWdId", "origName", "debugComment", "wpPage", "birthDate", "birthPlace", "birthPlaceWP", "deathDate", "deathPlace", "deathPlaceWP", "height", "weight", "positions", "currentTeam"])
+    player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
+    player_df = pd.DataFrame(player_info, columns=["origWdId", "origName", "debugComment", "frName", "wpPage", "birthDate", "birthPlace", "birthPlaceWP", "deathDate", "deathPlace", "deathPlaceWP", "height", "positions"])
     player_df.to_csv(path.join(table_folder, "player_info.csv"), index=False)
                 
     # record stints
     if has_career:
-        stint_df = pd.DataFrame(stint_info, columns=["origWdId", "origName", "wpPage", "stintType", "timePeriod", "teamName", "teamWP", "matchesPlayed", "pointsScored"])
+        stint_df = pd.DataFrame(stint_info, columns=["origWdId", "origName", "frName", "wpPage", "stintType", "timePeriod", "teamName", "teamWP", "matchesPlayed", "pointsScored"])
         stint_df.to_csv(path.join(table_folder, "stint_info.csv"), index=False)
                 
     p = p + 1
