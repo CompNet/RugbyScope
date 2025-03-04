@@ -83,13 +83,13 @@ diff_sect = [] # this is for debug
 ########################################################################
 # loop over players
 p = 1
-for player_page in ["Fabien_Galthié"]:  # Christophe_Dominici Antoine_Dupont Fabien_Galthié
-    orig_name = ""
-    orig_id = ""
-# for _, player in merged_table.iterrows():
-#     player_page = player["wikipediaFr"]
-#     orig_name = player["fullName"]
-#     orig_id = player["wikidataId"]
+# for player_page in ["Jonathan_Sexton"]:  # Christophe_Dominici Antoine_Dupont Fabien_Galthié Jonathan_Sexton
+#     orig_name = ""
+#     orig_id = ""
+for _, player in merged_table.iterrows():
+    player_page = player["wikipediaFr"]
+    orig_name = player["fullName"]
+    orig_id = player["wikidataId"]
     tlog(0, f"Processing player {p}/{player_number}: {orig_name} ({orig_id})")
 
     has_career = False
@@ -204,7 +204,12 @@ for player_page in ["Fabien_Galthié"]:  # Christophe_Dominici Antoine_Dupont Fa
             # positions
             pos_elt = id_elt.find("th", string=POSITIONS)
             if pos_elt:
-                positions = pos_elt.find_next_siblings()[0].get_text(strip=True)
+                tmp_elt = pos_elt.find_next_siblings()[0]
+                a_elts = tmp_elt.find_all("a", recursive = False)
+                if a_elts:
+                    positions = "; ".join(a.get_text(strip=True) for a in a_elts)
+                else:
+                    positions = tmp_elt.get_text(strip=True)
                 tlog(2, f"Positions: {positions}")
             else:
                 tlog(2, f"Could not find positions")
@@ -231,13 +236,15 @@ for player_page in ["Fabien_Galthié"]:  # Christophe_Dominici Antoine_Dupont Fa
                     r = 0
                     while r < len(periods_elt):
                         period_elt = periods_elt[r]
+                        # possibly skip <s> elements
+                        if period_elt.name is not None and period_elt.name == "s":
+                            r = r + 1
+                            period_elt = periods_elt[r]
                         # handle <br> elements
                         if period_elt.name is not None and period_elt.name == "br":
-                            stint_types.append(stint_type)
                             periods.append("")
                         # otherwise, extract content
                         else:   # should be text node
-                            stint_types.append(stint_type)
                             periods.append(period_elt.strip())
                             r = r + 1   # skip next br
                         r = r + 1       # go to next row
@@ -279,10 +286,17 @@ for player_page in ["Fabien_Galthié"]:  # Christophe_Dominici Antoine_Dupont Fa
                                 teams.append(team_elt.strip())
                                 urls.append("")
                             r = r + 1   # skip next br
+                            # possibly skip empty line
+                            if len(teams_elt) > r and teams_elt[r].name is None and teams_elt[r].strip() == "":
+                                r = r + 1
                         r = r + 1       # go to next row
+                    stint_types = [stint_type] * len(teams)
                     # check list lengths are consistent
                     if len(periods) != len(teams):
-                        raise Exception("Inconsistent numbers of periods/teams")
+                        if len(periods) == 0:
+                            periods = [""] * len(teams)
+                        else:
+                            raise Exception("Inconsistent numbers of periods/teams")
                     # loop over br-separated stats
                     if not stats_elt:
                         matches = [""] * len(periods)
@@ -317,19 +331,35 @@ for player_page in ["Fabien_Galthié"]:  # Christophe_Dominici Antoine_Dupont Fa
                                     str = str + stat_elt.strip()
                                     r = r + 1
                                 # retrieve values
-                                pattern = r"^(\d+)[^\d]*\((\d+)\)"
+                                pattern = r"^(\d+|\?)[^\d]*\((\d+|\?)\)"
                                 vals = re.findall(pattern, str)
                                 matches.append(vals[0][0])
                                 points.append(vals[0][1])
                                 # possibly skip <sup> element
-                                if r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "sup":
+                                while r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "sup":
                                     r = r + 1
                             r = r + 1       # go to next row
                     # check list lengths are consistent
                     if len(periods) != len(matches):
-                        raise Exception("Inconsistent numbers of periods/match numbers")
+                        # if completely empty: complement
+                        if len(matches) == 0:
+                            matches = [""] * len(periods)
+                        # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
+                        elif len(periods) > len(matches):
+                            matches.extend([""] * (len(periods) - len(matches)))
+                        # otherwise, problem
+                        else:
+                            raise Exception("Inconsistent numbers of periods/match numbers")
                     if len(periods) != len(points):
-                        raise Exception("Inconsistent numbers of periods/points scored")
+                        # if completely empty: complement
+                        if len(points) == 0:
+                            points = [""] * len(periods)
+                        # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
+                        elif len(periods) > len(points):
+                            points.extend([""] * (len(periods) - len(points)))
+                        # otherwise, problem
+                        else:
+                            raise Exception("Inconsistent numbers of periods/points scored")
 
                 # in case of types of stints never seen before
                 elif section not in CAREER_DISC:

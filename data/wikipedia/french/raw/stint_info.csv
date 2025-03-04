@@ -1,6 +1,60 @@
 origWdId,origName,frName,wpPage,stintType,timePeriod,teamName,teamWP,matchesPlayed,pointsScored
-,,Christophe Dominici,Christophe_Dominici,Youth,1989-1991,Solliès-Pont,,,
-,,Christophe Dominici,Christophe_Dominici,Senior,1991-1993,RC La Valette,/wiki/Rugby_Club_La_Valette_Le_Revest_La_Garde_Le_Pradet_(masculine),,
-,,Christophe Dominici,Christophe_Dominici,Senior,1993-1997,RC Toulon,/wiki/Rugby_club_toulonnais,,
-,,Christophe Dominici,Christophe_Dominici,Senior,1997-2008,Stade français Paris,/wiki/Stade_fran%C3%A7ais_Paris_rugby,142,238
-,,Christophe Dominici,Christophe_Dominici,International,1998-2007,France,/wiki/%C3%89quipe_de_France_de_rugby_%C3%A0_XV,67,125
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,,Manuel Belgrano,,,
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2003-2004,US Colomiers,/wiki/Union_sportive_Colomiers_rugby,9,10
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2004-2006,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),21,5
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2006-2017,Stade toulousain,/wiki/Stade_toulousain,232,38
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2017-2018,Racing 92,/wiki/Racing_92,3,0
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2003-2013,Argentine,/wiki/%C3%89quipe_d%27Argentine_de_rugby_%C3%A0_XV,57,5
+Q18455,Ben Tune,Ben Tune,Ben_Tune,International,1995-2007,Queensland Reds,/wiki/Queensland_Reds,112,155
+Q18455,Ben Tune,Ben Tune,Ben_Tune,International,1996-2006,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,47,120
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2007,East Coast Aces,/wiki/East_Coast_Aces,3,5
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2007-2015,Queensland Reds,/wiki/Queensland_Reds,105,770
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2014-2015,Brisbane City,/wiki/Brisbane_City,3,39
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2015-2016,RC Toulon,/wiki/RC_Toulon,15,10
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2017,Queensland Reds,/wiki/Queensland_Reds,12,74
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2017-2018,Brisbane City,/wiki/Brisbane_City,13,103
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2019,Melbourne Rebels,/wiki/Melbourne_Rebels,16,116
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2019-,Kintetsu Liners,/wiki/Kintetsu_Liners,14,90
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2008,Australie -20,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV_des_moins_de_20_ans,5,46
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2008-,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,72,187
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2008-2009,Biarritz olympique,/wiki/Biarritz_olympique_Pays_basque,,
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2009-2011,North Harbour,/wiki/North_Harbour_Rugby_Union,19,168
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2011-2012,CA Périgueux,/wiki/Club_athl%C3%A9tique_P%C3%A9rigueux_Dordogne,18,208
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2012-2016,Harlequins,/wiki/Harlequin_Football_Club,95,551
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2016-2017,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,9,65
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2017-2019,US Oyonnax,/wiki/US_Oyonnax,60,687
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2019-2021,Union Bordeaux Bègles,/wiki/Union_Bordeaux_B%C3%A8gles,47,243
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2021-2023,Castres olympique,/wiki/Castres_olympique,18,105
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2023-,Soyaux Angoulême XV,/wiki/Soyaux_Angoul%C3%AAme_XV_Charente,4,34
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2007-2012,Otago,/wiki/Otago_Rugby_Football_Union,44,55
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2009-2019,Highlanders,/wiki/Highlanders,153,200
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2019-2020,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),7,0
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2009-2019,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,84,195
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2010,Nouvelle-Zélande à sept,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_sept,?,?
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2006-2017,Western Force,/wiki/Western_Force,130,25
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,"2007, 2014-2017",Perth Spirit,/wiki/Perth_Spirit,17,5
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2019-2020,Shimizu Blue Sharks,/w/index.php?title=Shimizu_Blue_Sharks&action=edit&redlink=1,7,0
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2020,Western Force,,5,0
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2021,Waratahs,/wiki/Waratahs,1,0
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2021-,Wellington,/wiki/Wellington_Rugby_Football_Union,,
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2009-2014,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,10,0
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2004-2006,Waratahs,/wiki/Waratahs,27,10
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2006-2011,Brumbies,/wiki/Brumbies,48,30
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2014-2015,Waratahs,,31,20
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2014,NSW Country Eagles,/wiki/New_South_Wales_Country_Eagles,4,5
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,,Australie à sept,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_sept,,
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2004-2008,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,16,15
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,,Pézenas,,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2002-2006,AS Béziers,/wiki/Association_sportive_de_B%C3%A9ziers_H%C3%A9rault,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2006-2007,Bayonne,/wiki/Aviron_bayonnais_rugby_pro,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2007-2009,Montauban,/wiki/Union_sportive_montalbanaise,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2009-2011,Castres,/wiki/Castres_olympique,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2011-2014,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2014-2016,Racing Métro 92,/wiki/Racing_M%C3%A9tro_92,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,?,France à sept,/wiki/%C3%89quipe_de_France_de_rugby_%C3%A0_sept,,
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2004-2005,Stade rochelais,/wiki/Stade_rochelais,,
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2005-2007,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,,
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2007-2008,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,2,0
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2008,FC Auch,/wiki/Football_club_Auch_Gers,12,62
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2009-2022,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,275,1354
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2022-2023,RC Toulon,/wiki/Rugby_club_toulonnais,27,79
