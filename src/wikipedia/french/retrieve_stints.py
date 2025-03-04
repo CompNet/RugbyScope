@@ -83,7 +83,7 @@ diff_sect = [] # this is for debug
 ########################################################################
 # loop over players
 p = 1
-for player_page in ["Antoine_Dupont"]:  # Antoine_Dupont Christophe_Dominici
+for player_page in ["Fabien_Galthié"]:  # Christophe_Dominici Antoine_Dupont Fabien_Galthié
     orig_name = ""
     orig_id = ""
 # for _, player in merged_table.iterrows():
@@ -252,13 +252,26 @@ for player_page in ["Antoine_Dupont"]:  # Antoine_Dupont Christophe_Dominici
                         # handle <br> elements
                         if team_elt.name is not None and team_elt.name == "br":
                             teams.append("")
+                            urls.append("")
                         # otherwise, extract content
                         else:
                             if team_elt.name is not None:
+                                # possibly skip flag
+                                if team_elt.name == "span" and team_elt.has_attr("class") and "flagicon" in team_elt["class"]:
+                                    r = r + 1
+                                    team_elt = teams_elt[r]
+                                # possibly skip empty line
+                                if team_elt.name is None and team_elt.strip() == "":
+                                    r = r + 1
+                                    team_elt = teams_elt[r]
+                                # retrieve team name
                                 teams.append(team_elt.get_text(strip=True))
+                                # case where url is inside a <span>
                                 if team_elt.name == "span":
-                                    team_elt = team_elt.find("a", recursive = False) # skip flag <span>
-                                if team_elt and team_elt.name == "a":
+                                    a_elt = team_elt.find("a", recursive = False) # skip flag <span>
+                                    if a_elt:
+                                        urls.append(a_elt["href"])
+                                elif team_elt and team_elt.name == "a":
                                     urls.append(team_elt["href"])
                                 else:
                                     urls.append("")
