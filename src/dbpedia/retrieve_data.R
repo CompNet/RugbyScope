@@ -445,9 +445,9 @@ write.csv(x = teams, file = file.path(table_folder, "teams.csv"), row.names = FA
 
 
 ########################################################################
-# extraction of player careers
+# extraction of stint list
 ########################################################################
-# this requires field "careerStation", but apparentiyl it is not filled for
+# this requires field "careerStation", but apparently it is not filled for
 # most rugby players (only a handful of exceptions), whereas I've seen it
 # filled for football players. Here is an example of query to run on
 # https://dbpedia.org/sparql
