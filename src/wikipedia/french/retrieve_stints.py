@@ -40,10 +40,13 @@ base_url = "https://fr.wikipedia.org/wiki/{}"
 ########################################################################
 # init HTML constants
 IDENTITY = "Fiche d'identité"
+BIOGRAPHY = "Biographie"
+MISC_INFO = "Autres informations"
 BIRTH = "Naissance"
 DEATH = "Décès"
 HEIGHT = "Taille"
-POSITIONS = "Poste"
+POSITIONS1 = "Poste"
+POSITIONS2 = "Position"
 
 # relevant info sections
 YOUTH_CAREER = "Carrière en junior"
@@ -140,6 +143,8 @@ for _, player in merged_table.iterrows():
                 infobox_elt = temp[0]
             else:
                 tlog(2, f"Could not find any infobox: skipping the rest of the extraction process")
+                comment = "No infobox found"
+                p = p + 1
                 continue
 
             # player name
@@ -150,6 +155,13 @@ for _, player in merged_table.iterrows():
             else:
                 tlog(2, f"Could not find the name (rugby probably not the main activity)")
             caption_elt = infobox_elt.find("caption", string=IDENTITY)
+            if caption_elt is None:     # alternate section name
+                caption_elt = infobox_elt.find("caption", string=BIOGRAPHY)
+            if caption_elt is None:
+                tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
+                comment = "Infobox format problem"
+                p = p + 1
+                continue
             id_elt = caption_elt.find_next_siblings()[0]
 
             # birth information
@@ -161,8 +173,12 @@ for _, player in merged_table.iterrows():
                 birth_date = time_elt["datetime"]
                 tlog(2, f"Birth date: {birth_date}")
                 # birth place
-                br_elt = time_elt.find_next_siblings("br")[0]
-                a_elt = time_elt.find_next_siblings("a")[0]
+                br_elts = time_elt.find_next_siblings("br")
+                if len(br_elts) == 0:   # different type of infobox
+                    br_elts = time_elt.parent.find_next_siblings("br")
+                    a_elt = br_elts[0].find_next_siblings()[0].find_all("a")[0]
+                else:
+                    a_elt = br_elts[0].find_next_siblings("a")[0]
                 birth_place = a_elt.get_text(strip=True)
                 birth_place_url = a_elt["href"]
                 tlog(2, f"Birth place: {birth_place}")
@@ -178,13 +194,34 @@ for _, player in merged_table.iterrows():
                 death_date = time_elt["datetime"]
                 tlog(2, f"Death date: {death_date}")
                 # death place
-                br_elt = time_elt.find_next_siblings("br")[0]
-                a_elt = time_elt.find_next_siblings("a")[0]
-                death_place = a_elt.get_text(strip=True)
-                death_place_url = a_elt["href"]
+                br_elts = time_elt.find_next_siblings("br")
+                if len(br_elts) == 0:       # different type of infobox
+                    br_elts = time_elt.parent.find_next_siblings("br")
+                    if len(br_elts) == 0:   # no death place
+                        a_elt = None
+                    else:
+                        a_elt = br_elts[0].find_next_siblings()[0].find_all("a")[0]
+                else:
+                    a_elt = br_elts[0].find_next_siblings("a")[0]
+                if a_elt:
+                    death_place = a_elt.get_text(strip=True)
+                    death_place_url = a_elt["href"]
+                else:
+                    tlog(2, f"Could not find death information")
                 tlog(2, f"Death place: {death_place}")
             else:
                 tlog(2, f"Could not find death information")
+
+            # possibly go to a different section
+            if caption_elt.get_text(strip=True) == BIOGRAPHY:
+                caption_elt = infobox_elt.find("caption", string=MISC_INFO)
+                if caption_elt:
+                    id_elt = caption_elt.find_next_siblings()[0]
+                else:
+                    tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
+                    comment = "Infobox format problem"
+                    p = p + 1
+                    continue
 
             # height
             height_elt = id_elt.find("th", string=HEIGHT)
@@ -192,7 +229,7 @@ for _, player in merged_table.iterrows():
                 height = height_elt.find_next_siblings()[0].get_text(strip=True)
                 height = height.replace(u"\xa0", u" ")
                 height = height.replace(",", ".")
-                pattern = r"(\d.?\d\d?) ?c?m.*"
+                pattern = r"(\d.?\d\d?) *c?m.*"
                 vals = re.findall(pattern, height)
                 height = vals[0]
                 if "." in height:
@@ -202,27 +239,38 @@ for _, player in merged_table.iterrows():
                 tlog(2, f"Could not find height")
 
             # positions
-            pos_elt = id_elt.find("th", string=POSITIONS)
+            pos_elt = id_elt.find("th", string=POSITIONS1)
             if pos_elt:
-                tmp_elt = pos_elt.find_next_siblings()[0]
-                a_elts = tmp_elt.find_all("a", recursive = False)
+                td_elt = pos_elt.find_next_siblings()[0]
+                a_elts = td_elt.find_all("a", recursive = False)
                 if a_elts:
                     positions = "; ".join(a.get_text(strip=True) for a in a_elts)
                 else:
-                    positions = tmp_elt.get_text(strip=True)
+                    positions = td_elt.get_text(strip=True)
                 tlog(2, f"Positions: {positions}")
+            # different type of infobox
             else:
-                tlog(2, f"Could not find positions")
+                pos_elt = id_elt.find("th", string=POSITIONS2)
+                if pos_elt:
+                    td_elt = pos_elt.find_next_siblings()[0]
+                    a_elts = td_elt.find_all("a", title=lambda t: t != "Voir et modifier les données sur Wikidata", recursive = True)
+                    if a_elts:
+                        positions = "; ".join(a.get_text(strip=True) for a in a_elts)
+                    else:
+                        positions = td_elt.get_text(strip=True)
+                else:
+                    tlog(2, f"Could not find positions")
 
             # get career sections
-            stint_types = []; periods = []; teams = []; urls = []; matches = []; points = []
             table_elt = caption_elt.parent
             table_elt = table_elt.find_next_siblings()[0]
             while table_elt and table_elt.name == "table":
                 caption_elt = table_elt.find("caption")
                 section = caption_elt.get_text(strip=True)
                 if section in CAREER_MAP.keys():
+                    stint_types = []; periods = []; teams = []; urls = []; matches = []; points = []
                     stint_type = CAREER_MAP[section]
+                    
                     tbody_elt = caption_elt.find_next_siblings()[0]
                     tr_elt = tbody_elt.find_all("tr")[1]  # [0] = table header
                     td_elts = tr_elt.find_all("td")
@@ -237,7 +285,7 @@ for _, player in merged_table.iterrows():
                     while r < len(periods_elt):
                         period_elt = periods_elt[r]
                         # possibly skip <s> elements
-                        if period_elt.name is not None and period_elt.name == "s":
+                        while period_elt.name is not None and period_elt.name == "s":
                             r = r + 1
                             period_elt = periods_elt[r]
                         # handle <br> elements
@@ -245,15 +293,39 @@ for _, player in merged_table.iterrows():
                             periods.append("")
                         # otherwise, extract content
                         else:   # should be text node
-                            periods.append(period_elt.strip())
-                            r = r + 1   # skip next br
+                            old_per = "x"
+                            per = ""
+                            while r < len(periods_elt) and old_per != per:
+                                old_per = per
+                                period_elt = periods_elt[r]
+                                # regular case: year is plain text
+                                if period_elt.name is None:
+                                    per = per + period_elt.strip()
+                                    r = r + 1
+                                # but sometimes, year is hyperlinked
+                                elif periods_elt[r].name is not None and periods_elt[r].name == "a":
+                                    per = per + period_elt.get_text(strip=True)
+                                    r = r + 1
+                            periods.append(per)
+                        # possibly skip <s> element
+                        while r < len(periods_elt) and periods_elt[r].name is not None and periods_elt[r].name == "s":
+                            r = r + 1
                         r = r + 1       # go to next row
                     # loop over br-separated teams
+                    skip_rows = []
                     r = 0
                     while r < len(teams_elt):
                         team_elt = teams_elt[r]
+                        # possibly skip <s> element
+                        if team_elt.name is not None and team_elt.name == "s":
+                            r = r + 1
+                            team_elt = teams_elt[r]
                         # possibly skip whitespaces
                         if team_elt.name is None and team_elt.strip() == "":
+                            r = r + 1
+                            team_elt = teams_elt[r]
+                        # possibly skip <s> element
+                        if team_elt.name is not None and team_elt.name == "s":
                             r = r + 1
                             team_elt = teams_elt[r]
                         # handle <br> elements
@@ -267,6 +339,19 @@ for _, player in merged_table.iterrows():
                                 if team_elt.name == "span" and team_elt.has_attr("class") and "flagicon" in team_elt["class"]:
                                     r = r + 1
                                     team_elt = teams_elt[r]
+                                # possible skip arrow
+                                if team_elt.name == "span" and team_elt.has_attr("title") and team_elt["title"] == "Prêté à":
+                                    r = r + 1
+                                    team_elt = teams_elt[r]
+                                # possibly skip empty line
+                                if team_elt.name is None and team_elt.strip() == "":
+                                    r = r + 1
+                                    team_elt = teams_elt[r]
+                                # possibly skip title in italics
+                                if team_elt.name == "i":
+                                    skip_rows.append(len(teams) + len(skip_rows))  # list of rows to skip in periods and stats too
+                                    r = r + 2   # skip <i> and <br/>
+                                    team_elt = teams_elt[r]
                                 # possibly skip empty line
                                 if team_elt.name is None and team_elt.strip() == "":
                                     r = r + 1
@@ -278,6 +363,8 @@ for _, player in merged_table.iterrows():
                                     a_elt = team_elt.find("a", recursive = False) # skip flag <span>
                                     if a_elt:
                                         urls.append(a_elt["href"])
+                                    else:
+                                        urls.append("")
                                 elif team_elt and team_elt.name == "a":
                                     urls.append(team_elt["href"])
                                 else:
@@ -285,7 +372,7 @@ for _, player in merged_table.iterrows():
                             else:   # should be text node
                                 teams.append(team_elt.strip())
                                 urls.append("")
-                            r = r + 1   # skip next br
+                            r = r + 1   # skip next <br>
                             # possibly skip empty line
                             if len(teams_elt) > r and teams_elt[r].name is None and teams_elt[r].strip() == "":
                                 r = r + 1
@@ -295,6 +382,9 @@ for _, player in merged_table.iterrows():
                     if len(periods) != len(teams):
                         if len(periods) == 0:
                             periods = [""] * len(teams)
+                        elif len(skip_rows) > 0:
+                            for index in sorted(skip_rows, reverse=True):
+                                del periods[index]
                         else:
                             raise Exception("Inconsistent numbers of periods/teams")
                     # loop over br-separated stats
@@ -305,12 +395,16 @@ for _, player in merged_table.iterrows():
                         r = 0
                         while r < len(stats_elt):
                             stat_elt = stats_elt[r]
-                            # possibly skip <s> elements
+                            # possibly skip <s> element
                             if stat_elt.name is not None and stat_elt.name == "s":
                                 r = r + 1
                                 stat_elt = stats_elt[r]
                             # possibly skip empty element
                             if stat_elt.name is None and stat_elt.strip() == "":
+                                r = r + 1
+                                stat_elt = stats_elt[r]
+                            # possibly skip <s> element
+                            while stat_elt.name is not None and stat_elt.name == "s":
                                 r = r + 1
                                 stat_elt = stats_elt[r]
                             # if <br> => no value
@@ -331,12 +425,15 @@ for _, player in merged_table.iterrows():
                                     str = str + stat_elt.strip()
                                     r = r + 1
                                 # retrieve values
-                                pattern = r"^(\d+|\?)[^\d]*\((\d+|\?)\)"
+                                pattern = r"^(\d+|\?|-)[^\d]*\((\d+|\?|-)\)"
                                 vals = re.findall(pattern, str)
                                 matches.append(vals[0][0])
                                 points.append(vals[0][1])
-                                # possibly skip <sup> element
+                                # possibly skip <sup> elements
                                 while r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "sup":
+                                    r = r + 1
+                                # possibly skip empty text
+                                if r < len(stats_elt) and stats_elt[r].name is None and stats_elt[r].strip() == "":
                                     r = r + 1
                             r = r + 1       # go to next row
                     # check list lengths are consistent
@@ -344,6 +441,10 @@ for _, player in merged_table.iterrows():
                         # if completely empty: complement
                         if len(matches) == 0:
                             matches = [""] * len(periods)
+                        # if rows to skip, delete superfluous entries
+                        elif len(skip_rows) > 0:
+                            for index in sorted(skip_rows, reverse=True):
+                                del matches[index]
                         # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
                         elif len(periods) > len(matches):
                             matches.extend([""] * (len(periods) - len(matches)))
@@ -354,12 +455,25 @@ for _, player in merged_table.iterrows():
                         # if completely empty: complement
                         if len(points) == 0:
                             points = [""] * len(periods)
+                        # if rows to skip, delete superfluous entries
+                        elif len(skip_rows) > 0:
+                            for index in sorted(skip_rows, reverse=True):
+                                del points[index]
                         # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
                         elif len(periods) > len(points):
                             points.extend([""] * (len(periods) - len(points)))
                         # otherwise, problem
                         else:
                             raise Exception("Inconsistent numbers of periods/points scored")
+
+                    # create stints
+                    if len(periods) > 0:
+                        tlog(4, f"Stints in section '{section}'")
+                    for s in range(len(periods)):
+                        stint = [orig_id, orig_name, name, player_page, stint_types[s], periods[s], teams[s], urls[s], matches[s], points[s]]
+                        stint_info.append(stint)
+                        has_career = True
+                        tlog(6, f"{stint})")
 
                 # in case of types of stints never seen before
                 elif section not in CAREER_DISC:
@@ -370,13 +484,6 @@ for _, player in merged_table.iterrows():
 
                 # turn to next section
                 table_elt = table_elt.find_next_siblings()[0]
-
-            # create stint
-            for s in range(len(periods)):
-                stint = [orig_id, orig_name, name, player_page, stint_types[s], periods[s], teams[s], urls[s], matches[s], points[s]]
-                stint_info.append(stint)
-                has_career = True
-                tlog(4, f"Stint: {stint})")
 
             if not has_career:
                 comment = "No stint found"

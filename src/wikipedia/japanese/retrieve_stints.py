@@ -171,6 +171,8 @@ for _, player in merged_table.iterrows():
                 infobox_elt = temp[0]
             else:
                 tlog(2, f"Could not find any infobox: skipping the rest of the extraction process")
+                comment = "No infobox found"
+                p = p + 1
                 continue
 
             # player name

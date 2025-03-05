@@ -1,23 +1,23 @@
 origWdId,origName,frName,wpPage,stintType,timePeriod,teamName,teamWP,matchesPlayed,pointsScored
-Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,,Manuel Belgrano,,,
-Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2003-2004,US Colomiers,/wiki/Union_sportive_Colomiers_rugby,9,10
-Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2004-2006,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),21,5
-Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2006-2017,Stade toulousain,/wiki/Stade_toulousain,232,38
-Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2017-2018,Racing 92,/wiki/Racing_92,3,0
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,Youth,,Manuel Belgrano,,,
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,Senior,2003-2004,US Colomiers,/wiki/Union_sportive_Colomiers_rugby,9,10
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,Senior,2004-2006,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),21,5
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,Senior,2006-2017,Stade toulousain,/wiki/Stade_toulousain,232,38
+Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,Senior,2017-2018,Racing 92,/wiki/Racing_92,3,0
 Q7571,Patricio Albacete,Patricio Albacete,Patricio_Albacete,International,2003-2013,Argentine,/wiki/%C3%89quipe_d%27Argentine_de_rugby_%C3%A0_XV,57,5
-Q18455,Ben Tune,Ben Tune,Ben_Tune,International,1995-2007,Queensland Reds,/wiki/Queensland_Reds,112,155
+Q18455,Ben Tune,Ben Tune,Ben_Tune,Senior,1995-2007,Queensland Reds,/wiki/Queensland_Reds,112,155
 Q18455,Ben Tune,Ben Tune,Ben_Tune,International,1996-2006,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,47,120
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2007,East Coast Aces,/wiki/East_Coast_Aces,3,5
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2007-2015,Queensland Reds,/wiki/Queensland_Reds,105,770
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2014-2015,Brisbane City,/wiki/Brisbane_City,3,39
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2015-2016,RC Toulon,/wiki/RC_Toulon,15,10
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2017,Queensland Reds,/wiki/Queensland_Reds,12,74
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2017-2018,Brisbane City,/wiki/Brisbane_City,13,103
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2019,Melbourne Rebels,/wiki/Melbourne_Rebels,16,116
-Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2019-,Kintetsu Liners,/wiki/Kintetsu_Liners,14,90
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2007,East Coast Aces,/wiki/East_Coast_Aces,3,5
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2007-2015,Queensland Reds,/wiki/Queensland_Reds,105,770
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2014-2015,Brisbane City,/wiki/Brisbane_City,3,39
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2015-2016,RC Toulon,/wiki/RC_Toulon,15,10
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2017,Queensland Reds,/wiki/Queensland_Reds,12,74
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2017-2018,Brisbane City,/wiki/Brisbane_City,13,103
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2019,Melbourne Rebels,/wiki/Melbourne_Rebels,16,116
+Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,Senior,2019-,Kintetsu Liners,/wiki/Kintetsu_Liners,14,90
 Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2008,Australie -20,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV_des_moins_de_20_ans,5,46
 Q26037,Quade Cooper,Quade Cooper,Quade_Cooper,International,2008-,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,72,187
-Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2008-2009,Biarritz olympique,/wiki/Biarritz_olympique_Pays_basque,,
+Q29880,Ben Botica,Ben Botica,Ben_Botica,Youth,2008-2009,Biarritz olympique,/wiki/Biarritz_olympique_Pays_basque,,
 Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2009-2011,North Harbour,/wiki/North_Harbour_Rugby_Union,19,168
 Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2011-2012,CA Périgueux,/wiki/Club_athl%C3%A9tique_P%C3%A9rigueux_Dordogne,18,208
 Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2012-2016,Harlequins,/wiki/Harlequin_Football_Club,95,551
@@ -26,35 +26,365 @@ Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2017-2019,US Oyonnax,/wiki/US_Oyo
 Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2019-2021,Union Bordeaux Bègles,/wiki/Union_Bordeaux_B%C3%A8gles,47,243
 Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2021-2023,Castres olympique,/wiki/Castres_olympique,18,105
 Q29880,Ben Botica,Ben Botica,Ben_Botica,Senior,2023-,Soyaux Angoulême XV,/wiki/Soyaux_Angoul%C3%AAme_XV_Charente,4,34
-Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2007-2012,Otago,/wiki/Otago_Rugby_Football_Union,44,55
-Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2009-2019,Highlanders,/wiki/Highlanders,153,200
-Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2019-2020,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),7,0
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),Senior,2007-2012,Otago,/wiki/Otago_Rugby_Football_Union,44,55
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),Senior,2009-2019,Highlanders,/wiki/Highlanders,153,200
+Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),Senior,2019-2020,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),7,0
 Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2009-2019,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,84,195
 Q31193,Ben Smith,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),International,2010,Nouvelle-Zélande à sept,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_sept,?,?
-Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2006-2017,Western Force,/wiki/Western_Force,130,25
-Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,"2007, 2014-2017",Perth Spirit,/wiki/Perth_Spirit,17,5
-Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2019-2020,Shimizu Blue Sharks,/w/index.php?title=Shimizu_Blue_Sharks&action=edit&redlink=1,7,0
-Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2020,Western Force,,5,0
-Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2021,Waratahs,/wiki/Waratahs,1,0
-Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2021-,Wellington,/wiki/Wellington_Rugby_Football_Union,,
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,Senior,2006-2017,Western Force,/wiki/Western_Force,130,25
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,Senior,"2007, 2014-2017",Perth Spirit,/wiki/Perth_Spirit,17,5
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,Senior,2019-2020,Shimizu Blue Sharks,/w/index.php?title=Shimizu_Blue_Sharks&action=edit&redlink=1,7,0
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,Senior,2020,Western Force,,5,0
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,Senior,2021,Waratahs,/wiki/Waratahs,1,0
+Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,Senior,2021-,Wellington,/wiki/Wellington_Rugby_Football_Union,,
 Q46171,Pekahou Cowan,Pekahou Cowan,Pekahou_Cowan,International,2009-2014,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,10,0
-Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2004-2006,Waratahs,/wiki/Waratahs,27,10
-Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2006-2011,Brumbies,/wiki/Brumbies,48,30
-Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2014-2015,Waratahs,,31,20
-Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2014,NSW Country Eagles,/wiki/New_South_Wales_Country_Eagles,4,5
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,Senior,2004-2006,Waratahs,/wiki/Waratahs,27,10
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,Senior,2006-2011,Brumbies,/wiki/Brumbies,48,30
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,Senior,2014-2015,Waratahs,,31,20
+Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,Senior,2014,NSW Country Eagles,/wiki/New_South_Wales_Country_Eagles,4,5
 Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,,Australie à sept,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_sept,,
 Q46223,Stephen Hoiles,Stephen Hoiles,Stephen_Hoiles,International,2004-2008,Australie,/wiki/%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV,16,15
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,,Pézenas,,,
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2002-2006,AS Béziers,/wiki/Association_sportive_de_B%C3%A9ziers_H%C3%A9rault,,
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2006-2007,Bayonne,/wiki/Aviron_bayonnais_rugby_pro,,
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2007-2009,Montauban,/wiki/Union_sportive_montalbanaise,,
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2009-2011,Castres,/wiki/Castres_olympique,,
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2011-2014,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,,
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,2014-2016,Racing Métro 92,/wiki/Racing_M%C3%A9tro_92,,
-Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,?,France à sept,/wiki/%C3%89quipe_de_France_de_rugby_%C3%A0_sept,,
-Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2004-2005,Stade rochelais,/wiki/Stade_rochelais,,
-Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2005-2007,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,Youth,,Pézenas,,,
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,Senior,2002-2006,AS Béziers,/wiki/Association_sportive_de_B%C3%A9ziers_H%C3%A9rault,64,110
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,Senior,2006-2007,Bayonne,/wiki/Aviron_bayonnais_rugby_pro,24,35
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,Senior,2007-2009,Montauban,/wiki/Union_sportive_montalbanaise,49,70
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,Senior,2009-2011,Castres,/wiki/Castres_olympique,52,70
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,Senior,2011-2014,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,55,55
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,Senior,2014-2016,Racing Métro 92,/wiki/Racing_M%C3%A9tro_92,18,5
+Q46393,Yoan Audrin,Yoan Audrin,Yoan_Audrin,International,,France,/wiki/%C3%89quipe_de_France_masculine_de_rugby_%C3%A0_sept,,
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Youth,2004-2005,Stade rochelais,/wiki/Stade_rochelais,,
+Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Youth,2005-2007,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,,
 Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2007-2008,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,2,0
 Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2008,FC Auch,/wiki/Football_club_Auch_Gers,12,62
 Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2009-2022,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,275,1354
 Q46396,Benoît Paillaugue,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,Senior,2022-2023,RC Toulon,/wiki/Rugby_club_toulonnais,27,79
+Q56812,Thomas Combezou,Thomas Combezou,Thomas_Combezou,Youth,-2004,US Ussel,/wiki/Union_sportive_usselloise,,
+Q56812,Thomas Combezou,Thomas Combezou,Thomas_Combezou,Youth,2004-2006,ASM Clermont,/wiki/ASM_Clermont_Auvergne,,
+Q56812,Thomas Combezou,Thomas Combezou,Thomas_Combezou,Senior,2006-2009,ASM Clermont,/wiki/ASM_Clermont_Auvergne,15,10
+Q56812,Thomas Combezou,Thomas Combezou,Thomas_Combezou,Senior,2009-2011,Stade rochelais,/wiki/Stade_rochelais,52,65
+Q56812,Thomas Combezou,Thomas Combezou,Thomas_Combezou,Senior,2011-2014,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,76,40
+Q56812,Thomas Combezou,Thomas Combezou,Thomas_Combezou,Senior,2014-2023,Castres olympique,/wiki/Castres_olympique,193,215
+Q56822,Gerhard Vosloo,Gerhard Vosloo,Gerhard_Vosloo,Senior,2004-2006,Lions,/wiki/Lions_(rugby_%C3%A0_XV),15,10
+Q56822,Gerhard Vosloo,Gerhard Vosloo,Gerhard_Vosloo,Senior,2005,Golden Lions,/wiki/Golden_Lions,11,10
+Q56822,Gerhard Vosloo,Gerhard Vosloo,Gerhard_Vosloo,Senior,2006-2008,Castres olympique,/wiki/Castres_olympique,43,20
+Q56822,Gerhard Vosloo,Gerhard Vosloo,Gerhard_Vosloo,Senior,2008-2011,CA Brive,/wiki/Club_athl%C3%A9tique_Brive_Corr%C3%A8ze_Limousin,67,45
+Q56822,Gerhard Vosloo,Gerhard Vosloo,Gerhard_Vosloo,Senior,2011-2014,ASM Clermont,/wiki/ASM_Clermont_Auvergne,61,65
+Q56822,Gerhard Vosloo,Gerhard Vosloo,Gerhard_Vosloo,Senior,2014-2015,RC Toulon,/wiki/Rugby_club_toulonnais,14,5
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Youth,1989-2000,USA Mirande,,,
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Youth,2000-2001,CS Lannemezan,/wiki/Cercle_amical_lannemezanais,,
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Youth,2001-2002,Lannemezan Tarbes,/wiki/Stado_Tarbes_Pyr%C3%A9n%C3%A9es_rugby,,
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Youth,2002-2003,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),,
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Senior,2003-2007,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),61,26
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Senior,2007-2010,Biarritz olympique,/wiki/Biarritz_olympique_Pays_basque,30,28
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Senior,2010-2012,RC Toulon,/wiki/Rugby_club_toulonnais,17,19
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Senior,2012-2013,Lyon OU,/wiki/Lyon_olympique_universitaire_rugby,25,20
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Senior,2013-2017,Oyonnax Rugby,/wiki/Oyonnax_Rugby,38,15
+Q56824,Fabien Cibray,Fabien Cibray,Fabien_Cibray,Senior,2017-2018,Provence Rugby,/wiki/Provence_Rugby,18,10
+Q72185,Manu Tuilagi,Manu Tuilagi,Manu_Tuilagi,Senior,2009-2020,Leicester Tigers,/wiki/Leicester_Tigers,128,205
+Q72185,Manu Tuilagi,Manu Tuilagi,Manu_Tuilagi,Senior,2020-2024,Sale Sharks,/wiki/Sale_Sharks,38,15
+Q72185,Manu Tuilagi,Manu Tuilagi,Manu_Tuilagi,Senior,2024-,Aviron bayonnais,/wiki/Aviron_bayonnais_rugby_pro,3,0
+Q72185,Manu Tuilagi,Manu Tuilagi,Manu_Tuilagi,International,2011-,Angleterre,/wiki/%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV,60,100
+Q72185,Manu Tuilagi,Manu Tuilagi,Manu_Tuilagi,International,2013,Lions,/wiki/%C3%89quipe_des_Lions_britanniques_et_irlandais_de_rugby_%C3%A0_XV,1,0
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,Youth,,Université de Dschang,,,
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,Senior,2005-2006,Stade aurillacois,/wiki/Stade_aurillacois_Cantal_Auvergne,26,5
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,Senior,2006-2007,UA Gaillac,/wiki/Union_athl%C3%A9tique_gaillacoise,26,10
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,Senior,2007-2008,FC Auch Gers,/wiki/Football_club_Auch_Gers,18,0
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,Senior,2008-2009,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,9,0
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,Senior,2009-2013,USA Perpignan,/wiki/Union_sportive_arlequins_perpignanais,89,10
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,Senior,2013-2017,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,92,15
+Q75573,Robins Tchale-Watchou,Robins Tchale-Watchou,Robins_Tchale-Watchou,International,,Cameroun,/wiki/%C3%89quipe_du_Cameroun_de_rugby_%C3%A0_XV,,
+Q76869,Toby Flood,Toby Flood,Toby_Flood,Senior,2004-2008,Newcastle Falcons,/wiki/Newcastle_Falcons,76,263
+Q76869,Toby Flood,Toby Flood,Toby_Flood,Senior,2008-2014,Leicester Tigers,/wiki/Leicester_Tigers,121,1336
+Q76869,Toby Flood,Toby Flood,Toby_Flood,Senior,2014-2017,Stade toulousain,/wiki/Stade_toulousain,60,337
+Q76869,Toby Flood,Toby Flood,Toby_Flood,Senior,2017-2021,Newcastle Falcons,/wiki/Newcastle_Falcons,72,374
+Q76869,Toby Flood,Toby Flood,Toby_Flood,International,2006-2013,Angleterre,/wiki/%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV,60,301
+Q77848,Sascha Fischer,Sascha Fischer,Sascha_Fischer,Senior,????-1996,DSV 1878 Hanovre,,?,?
+Q77848,Sascha Fischer,Sascha Fischer,Sascha_Fischer,Senior,1996-2003,CS Bourgoin-Jallieu,/wiki/Club_sportif_Bourgoin-Jallieu_rugby,?,?
+Q77848,Sascha Fischer,Sascha Fischer,Sascha_Fischer,Senior,2003-2006,CA Périgueux,/wiki/Club_athl%C3%A9tique_P%C3%A9rigueux_Dordogne,6,0
+Q77848,Sascha Fischer,Sascha Fischer,Sascha_Fischer,Senior,2006-2008,Bugue AC,/wiki/Bugue_Athletic_Club,17,0
+Q77848,Sascha Fischer,Sascha Fischer,Sascha_Fischer,International,2006-2008,Allemagne,/wiki/%C3%89quipe_d%27Allemagne_de_rugby_%C3%A0_XV,27,0
+Q80607,George Pisi,George Pisi,George_Pisi,Senior,2005-2009,North Harbour,/wiki/North_Harbour_Rugby_Union,50,45
+Q80607,George Pisi,George Pisi,George_Pisi,Senior,2006-2010,Blues,/wiki/Blues_(rugby_%C3%A0_XV),18,0
+Q80607,George Pisi,George Pisi,George_Pisi,Senior,2010,ASM Clermont,/wiki/ASM_Clermont,7,15
+Q80607,George Pisi,George Pisi,George_Pisi,Senior,2010-2011,Taranaki,/wiki/Taranaki_Rugby_Union,17,20
+Q80607,George Pisi,George Pisi,George_Pisi,Senior,2011-2017,Northampton Saints,/wiki/Northampton_Saints,137,145
+Q80607,George Pisi,George Pisi,George_Pisi,Senior,2017,North Harbour,,0,0
+Q80607,George Pisi,George Pisi,George_Pisi,Senior,2018,Western Force,/wiki/Western_Force,4,0
+Q80607,George Pisi,George Pisi,George_Pisi,International,2010-2016,Samoa,/wiki/%C3%89quipe_des_Samoa_de_rugby_%C3%A0_XV,21,20
+Q82942,Farid Sid,Farid Sid,Farid_Sid,Senior,1997-2003,USA Perpignan,/wiki/Union_sportive_arlequins_perpignanais,41,35
+Q82942,Farid Sid,Farid Sid,Farid_Sid,Senior,2003-2004,US Colomiers,/wiki/Union_sportive_Colomiers_rugby,10,15
+Q82942,Farid Sid,Farid Sid,Farid_Sid,Senior,2004-2008,CA Brive,/wiki/Club_athl%C3%A9tique_Brive_Corr%C3%A8ze_Limousin,86,90
+Q82942,Farid Sid,Farid Sid,Farid_Sid,Senior,2008-2013,USA Perpignan,/wiki/Union_sportive_arlequins_perpignanais,110,130
+Q82942,Farid Sid,Farid Sid,Farid_Sid,Senior,2014-2015,FC Lézignan XIII,/wiki/FC_L%C3%A9zignan_XIII,4,0
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,Youth,1990-2001,SC Neuenheim,/wiki/SC_Neuenheim,,
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,Senior,2001-2004,SC Neuenheim,/wiki/SC_Neuenheim,-,-
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,Senior,2005,Stoke RFC,/w/index.php?title=Stoke_RFC&action=edit&redlink=1,-,-
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,Senior,2006-09,RC Orléans,/wiki/Rugby_club_Orl%C3%A9ans,47,50
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,Senior,2009-2012,Cavalieri Prato,/wiki/Rugby_Club_I_Cavalieri_Prato,53,75
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,Senior,2012-2013,US Dax,/wiki/Union_sportive_dacquoise,12,5
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,Senior,2013-2014,Cavalieri Prato,/wiki/Rugby_Club_I_Cavalieri_Prato,19,40
+Q86108,Clemens von Grumbkow,Clemens von Grumbkow,Clemens_von_Grumbkow,International,2003-2018,Allemagne,/wiki/%C3%89quipe_d%27Allemagne_de_rugby_%C3%A0_XV,48,45
+Q87794,Robert Mohr,Robert Mohr,Robert_Mohr,Senior,1992-1999,DSV 78 Hanovre,/wiki/DSV_78_Hanovre,,
+Q87794,Robert Mohr,Robert Mohr,Robert_Mohr,Senior,1999-2002,CS Bourgoin-Jallieu,/wiki/Club_sportif_Bourgoin-Jallieu_rugby,8,0
+Q87794,Robert Mohr,Robert Mohr,Robert_Mohr,Senior,2002-2012,Stade rochelais,/wiki/Atlantique_stade_rochelais,288,25
+Q87794,Robert Mohr,Robert Mohr,Robert_Mohr,Senior,2012-2013,Stade niortais,/wiki/Stade_niortais_rugby,16,0
+Q87794,Robert Mohr,Robert Mohr,Robert_Mohr,Senior,2013-2014,DSV 78 Hanovre,/wiki/DSV_78_Hanovre,,
+Q87794,Robert Mohr,Robert Mohr,Robert_Mohr,Senior,2014,Heidelberger RK,/wiki/Heidelberger_Ruderklub_1872_e.V.,,
+Q87794,Robert Mohr,Robert Mohr,Robert_Mohr,International,2008-2015,Allemagne,/wiki/%C3%89quipe_d%27Allemagne_de_rugby_%C3%A0_XV,20,10
+Q90321,Erwin Thiesies,Erwin Thiesies,Erwin_Thiesies,Senior,????-????,Tennis Borussia Berlin,/wiki/Tennis_Borussia_Berlin,?,?
+Q90321,Erwin Thiesies,Erwin Thiesies,Erwin_Thiesies,Senior,????-????,BSV 92 Berlin,/wiki/BSV_92_Berlin,?,?
+Q90321,Erwin Thiesies,Erwin Thiesies,Erwin_Thiesies,International,1936-1940,Allemagne,/wiki/%C3%89quipe_d%27Allemagne_de_rugby_%C3%A0_XV,10,3
+Q94780,Joe Rokocoko,Joe Rokocoko,Joe_Rokocoko,Senior,2003-2011,Blues,/wiki/Blues_(rugby_%C3%A0_XV),96,195
+Q94780,Joe Rokocoko,Joe Rokocoko,Joe_Rokocoko,Senior,2004-2011,Auckland Rugby,/wiki/Auckland_Rugby_Football_Union,38,80
+Q94780,Joe Rokocoko,Joe Rokocoko,Joe_Rokocoko,Senior,2011-2015,Aviron bayonnais,/wiki/Aviron_bayonnais_rugby_pro,98,120
+Q94780,Joe Rokocoko,Joe Rokocoko,Joe_Rokocoko,Senior,2015-2019,Racing 92,/wiki/Racing_92,90,65
+Q94780,Joe Rokocoko,Joe Rokocoko,Joe_Rokocoko,International,2003-2010,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,68,230
+Q94814,Ronnie Cooke,Ronnie Cooke,Ronnie_Cooke,Senior,????-2005,Leopards,/wiki/Leopards_(rugby),11,35
+Q94814,Ronnie Cooke,Ronnie Cooke,Ronnie_Cooke,Senior,????-2007,Central Cheetahs,/wiki/Central_Cheetahs,24,25
+Q94814,Ronnie Cooke,Ronnie Cooke,Ronnie_Cooke,Senior,2006-2007,Griquas,/wiki/Griqualand_West_Griquas,13,15
+Q94814,Ronnie Cooke,Ronnie Cooke,Ronnie_Cooke,Senior,2007-2012,CA Brive,/wiki/Club_athl%C3%A9tique_Brive_Corr%C3%A8ze_Limousin,121,80
+Q94814,Ronnie Cooke,Ronnie Cooke,Ronnie_Cooke,Senior,2012,FC Grenoble,/wiki/Football_club_de_Grenoble_rugby,7,2
+Q94814,Ronnie Cooke,Ronnie Cooke,Ronnie_Cooke,Senior,2013,Southern Kings,/wiki/Southern_Kings,15,10
+Q94814,Ronnie Cooke,Ronnie Cooke,Ronnie_Cooke,Senior,2013-2015,Eastern Province Kings,/wiki/Eastern_Province_Kings,22,10
+Q113526,Adriaan Strauss,Adriaan Strauss,Adriaan_Strauss,Senior,2005-2006,Blue Bulls,/wiki/Blue_Bulls,11,10
+Q113526,Adriaan Strauss,Adriaan Strauss,Adriaan_Strauss,Senior,2006,Bulls,/wiki/Bulls_(rugby),7,0
+Q113526,Adriaan Strauss,Adriaan Strauss,Adriaan_Strauss,Senior,2007-2015,Free State Cheetahs,/wiki/Free_State_Cheetahs,52,50
+Q113526,Adriaan Strauss,Adriaan Strauss,Adriaan_Strauss,Senior,2007-2015,Cheetahs,/wiki/Cheetahs,100,45
+Q113526,Adriaan Strauss,Adriaan Strauss,Adriaan_Strauss,Senior,2015-2018,Bulls,/wiki/Bulls_(rugby),51,55
+Q113526,Adriaan Strauss,Adriaan Strauss,Adriaan_Strauss,International,2008-2016,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,66,30
+Q127613,Patrick Lambie,Patrick Lambie,Patrick_Lambie,Youth,,Jonsson College Rovers,,,
+Q127613,Patrick Lambie,Patrick Lambie,Patrick_Lambie,Senior,2009-2017,Natal Sharks,/wiki/Natal_Sharks,29,325
+Q127613,Patrick Lambie,Patrick Lambie,Patrick_Lambie,Senior,2010-2017,Sharks,/wiki/Sharks_(rugby_%C3%A0_XV),56,571
+Q127613,Patrick Lambie,Patrick Lambie,Patrick_Lambie,Senior,2017-2019,Racing 92,/wiki/Racing_92,18,60
+Q127613,Patrick Lambie,Patrick Lambie,Patrick_Lambie,International,2010-2016,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,56,153
+Q128407,Martín Bustos Moyano,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,Youth,1999-2009,Córdoba Athletic Club,,,
+Q128407,Martín Bustos Moyano,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,Senior,2009-2010,Pampas XV,/wiki/Pampas_XV,5,31
+Q128407,Martín Bustos Moyano,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,Senior,2010-2013,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,66,713
+Q128407,Martín Bustos Moyano,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,Senior,2013-2019,Aviron bayonnais,/wiki/Aviron_bayonnais_rugby_pro,125,1011
+Q128407,Martín Bustos Moyano,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,International,2008-2013,Argentine,/wiki/%C3%89quipe_d%27Argentine_de_rugby_%C3%A0_XV,4,43
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2001,Malborough,/wiki/Marlborough_Rugby_Union,7,0
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2003-2008,Wellington,/wiki/Wellington_Rugby_Football_Union,47,50
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2004-2009,Crusaders,/wiki/Crusaders,45,40
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2009-2011,Bayonne,/wiki/Aviron_bayonnais_rugby_pro,43,25
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2011-2012,London Wasps,/wiki/Wasps,17,15
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2012-2014,Wellington,/wiki/Wellington_Rugby_Football_Union,16,49
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2013-2015,Chiefs,/wiki/Chiefs_(rugby_%C3%A0_XV),7,0
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2015-2016,Racing Métro 92,/wiki/Racing_92,8,0
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2016,Hawke's Bay,/wiki/Hawke%27s_Bay_Rugby_Union,6,0
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,Senior,2017-2018,Coca Cola Red Sparks,/wiki/Coca_Cola_Red_Sparks,2,0
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,International,2005-2008,Māori de NlleZélande,/wiki/%C3%89quipe_des_M%C4%81ori_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,7,0
+Q131895,Ross Filipo,Ross Filipo,Ross_Filipo,International,2007-2008,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,4,0
+Q135385,Israel Dagg,Israel Dagg,Israel_Dagg,Senior,2006-2015,Hawke's Bay,/wiki/Hawke%27s_Bay_Rugby_Union,50,86
+Q135385,Israel Dagg,Israel Dagg,Israel_Dagg,Senior,2009-2010,Highlanders,/wiki/Highlanders,25,133
+Q135385,Israel Dagg,Israel Dagg,Israel_Dagg,Senior,2011-2018,Crusaders,/wiki/Crusaders,89,140
+Q135385,Israel Dagg,Israel Dagg,Israel_Dagg,Senior,2018,Canon Eagles,/wiki/Canon_Eagles,3,0
+Q135385,Israel Dagg,Israel Dagg,Israel_Dagg,International,2010-2017,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,66,138
+Q138586,Gurthrö Steenkamp,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,Senior,2002-2004,Free State Cheetahs,/wiki/Free_State_Cheetahs,23,10
+Q138586,Gurthrö Steenkamp,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,Senior,2003-2004,Cats,/wiki/Lions_(rugby),9,5
+Q138586,Gurthrö Steenkamp,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,Senior,2005-2011,Bulls,/wiki/Bulls_(rugby),60,5
+Q138586,Gurthrö Steenkamp,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,Senior,2008-2010,Blue Bulls,/wiki/Blue_Bulls,21,25
+Q138586,Gurthrö Steenkamp,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,Senior,2011-2017,Stade toulousain,/wiki/Stade_toulousain,128,5
+Q138586,Gurthrö Steenkamp,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,Senior,2017-2018,Stade français Paris,/wiki/Stade_fran%C3%A7ais_Paris_rugby,10,0
+Q138586,Gurthrö Steenkamp,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,International,2004-2014,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,53,30
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,,Clubs et provinces,,,
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2001-2003,Counties Manukau,/wiki/Counties_Manukau_Rugby_Union,22,175
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2004-2011,Waikato,/wiki/Waikato_Rugby_Union,57,489
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2011-2013,Bath Rugby,/wiki/Bath_Rugby,34,169
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2013-2015,Mitsubishi Dynaboars,/wiki/Mitsubishi_Dynaboars,,
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2015-2016,Waikato,/wiki/Waikato_Rugby_Union,3,5
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2016-2017,Suntory Sungoliath,/wiki/Suntory_Sungoliath,4,5
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2017,Counties Manukau,/wiki/Counties_Manukau_Rugby_Union,9,28
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2017-2018,Toshiba Brave Lupus,/wiki/Toshiba_Brave_Lupus,5,5
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2018-2020,NEC Green Rockets,/wiki/NEC_Green_Rockets,11,28
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,,Franchise,,,
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2005-2011,Chiefs,/wiki/Chiefs_(rugby_%C3%A0_XV),85,857
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,Senior,2016-2019,Chiefs,/wiki/Chiefs_(rugby_%C3%A0_XV),21,29
+Q138722,Stephen Donald,Stephen Donald,Stephen_Donald,International,2008-2011,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,23,98
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,Youth,,Palmerston North HS Old Boys' RFC,,,
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,Senior,2008-2023,Canterbury,/wiki/Canterbury_Rugby_Football_Union,21,15
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,Senior,2010-2023,Crusaders,/wiki/Crusaders,180,45
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,Senior,2020,Panasonic Wild Knights,/wiki/Panasonic_Wild_Knights,5,0
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,Senior,2023-2024,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),13,10
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,International,2007,Nouvelle-Zélande -19,,4,0
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,International,2008,Nouvelle-Zélande -20,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV_des_moins_de_20_ans,5,5
+Q151533,Sam Whitelock,Sam Whitelock,Sam_Whitelock,International,2010-2023,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,153,35
+Q151572,Victor Vito,Victor Vito,Victor_Vito,Senior,2006-2015,Wellington,/wiki/Wellington_Rugby_Football_Union,62,55
+Q151572,Victor Vito,Victor Vito,Victor_Vito,Senior,2009-2016,Hurricanes,/wiki/Hurricanes,100,60
+Q151572,Victor Vito,Victor Vito,Victor_Vito,Senior,2016-2022,Stade rochelais,/wiki/Stade_rochelais,134,80
+Q151572,Victor Vito,Victor Vito,Victor_Vito,International,2005,Nouvelle-Zélande -19,,5,5
+Q151572,Victor Vito,Victor Vito,Victor_Vito,International,2007-2009,Nouvelle-Zélande à sept,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_sept,34,160
+Q151572,Victor Vito,Victor Vito,Victor_Vito,International,2009,Junior All Blacks,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,4,10
+Q151572,Victor Vito,Victor Vito,Victor_Vito,International,2010-2015,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,33,20
+Q163452,Tom James,Tom James,Tom_James_(rugby_%C3%A0_XV),Senior,2006-2013,Cardiff Blues,/wiki/Cardiff_Blues,113,190
+Q163452,Tom James,Tom James,Tom_James_(rugby_%C3%A0_XV),Senior,2013-2015,Exeter Chiefs,/wiki/Exeter_Chiefs,38,40
+Q163452,Tom James,Tom James,Tom_James_(rugby_%C3%A0_XV),Senior,2015-2019,Cardiff Blues,/wiki/Cardiff_Blues,49,105
+Q163452,Tom James,Tom James,Tom_James_(rugby_%C3%A0_XV),Senior,2019,Scarlets,/wiki/Scarlets,2,0
+Q163452,Tom James,Tom James,Tom_James_(rugby_%C3%A0_XV),International,2007-2016,Pays de Galles,/wiki/%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV,12,10
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2001-2007,Auckland,/wiki/Auckland_Rugby_Football_Union,31,20
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2002-2007,Blues,/wiki/Blues_(rugby_%C3%A0_XV),52,5
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2008,Crusaders,/wiki/Crusaders,15,15
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2009-2013,Blues,/wiki/Blues_(rugby_%C3%A0_XV),50,5
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2011,Nottingham RFC,/wiki/Nottingham_Rugby_Football_Club,3,0
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2012,Auckland,/wiki/Auckland_Rugby_Football_Union,3,0
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2013-2015,RC Toulon,/wiki/Rugby_club_toulonnais,42,15
+Q165701,Ali Williams,Ali Williams,Ali_Williams,Senior,2016-2017,Racing 92,/wiki/Racing_92,10,0
+Q165701,Ali Williams,Ali Williams,Ali_Williams,International,2002-2012,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,77,35
+Q166094,Zane Kirchner,Zane Kirchner,Zane_Kirchner,Senior,2003-2007,Griquas,/wiki/Griqualand_West_Griquas,58,177
+Q166094,Zane Kirchner,Zane Kirchner,Zane_Kirchner,Senior,2007-2013,Blue Bulls,/wiki/Blue_Bulls,43,34
+Q166094,Zane Kirchner,Zane Kirchner,Zane_Kirchner,Senior,2008-2013,Bulls,/wiki/Bulls_(rugby),82,105
+Q166094,Zane Kirchner,Zane Kirchner,Zane_Kirchner,Senior,2013-2017,Leinster,/wiki/Leinster_Rugby,87,65
+Q166094,Zane Kirchner,Zane Kirchner,Zane_Kirchner,Senior,2017-2019,Dragons,/wiki/Dragons_(rugby_%C3%A0_XV),25,24
+Q166094,Zane Kirchner,Zane Kirchner,Zane_Kirchner,Senior,2018,Bristol Bears,/wiki/Bristol_Bears,3,0
+Q166094,Zane Kirchner,Zane Kirchner,Zane_Kirchner,International,2009-2015,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,31,25
+Q168675,Francois Pienaar,Francois Pienaar,Francois_Pienaar,Senior,1989-1996,Transvaal,/wiki/Golden_Lions,100,?
+Q168675,Francois Pienaar,Francois Pienaar,Francois_Pienaar,Senior,1996,Lions du Transvaal,/wiki/Lions_(rugby_%C3%A0_XV),11,10
+Q168675,Francois Pienaar,Francois Pienaar,Francois_Pienaar,Senior,1997-2000,Saracens,/wiki/Saracens,58,75
+Q168675,Francois Pienaar,Francois Pienaar,Francois_Pienaar,International,1993-1996,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,29,15
+Q169368,Jean Monribot,Jean Monribot,Jean_Monribot,Youth,-2002,US Lalinde,,,
+Q169368,Jean Monribot,Jean Monribot,Jean_Monribot,Youth,2002-2005,SU Agen,/wiki/Sporting_union_Agen_Lot-et-Garonne,,
+Q169368,Jean Monribot,Jean Monribot,Jean_Monribot,Senior,2005-2013,SU Agen,/wiki/Sporting_union_Agen_Lot-et-Garonne,142,95
+Q169368,Jean Monribot,Jean Monribot,Jean_Monribot,Senior,2013-2017,Aviron bayonnais,/wiki/Aviron_bayonnais_rugby_pro,88,60
+Q169368,Jean Monribot,Jean Monribot,Jean_Monribot,Senior,2017-2019,RC Toulon,/wiki/Rugby_club_toulonnais,29,5
+Q169368,Jean Monribot,Jean Monribot,Jean_Monribot,Senior,2019-2023,Aviron bayonnais,/wiki/Aviron_bayonnais_rugby_pro,50,30
+Q169397,Hugo Bonneval,Hugo Bonneval,Hugo_Bonneval,Youth,2005-2009,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,,
+Q169397,Hugo Bonneval,Hugo Bonneval,Hugo_Bonneval,Senior,2009-2017,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,110,122
+Q169397,Hugo Bonneval,Hugo Bonneval,Hugo_Bonneval,Senior,2017-2020,RC Toulon,/wiki/Rugby_club_toulonnais,40,27
+Q169397,Hugo Bonneval,Hugo Bonneval,Hugo_Bonneval,Senior,2020-2021,Section paloise,/wiki/Section_paloise_(rugby_%C3%A0_XV),7,5
+Q169397,Hugo Bonneval,Hugo Bonneval,Hugo_Bonneval,International,2014-2018,France,/wiki/%C3%89quipe_de_France_de_rugby_%C3%A0_XV,11,20
+Q176596,Clive Rowlands,Clive Rowlands,Clive_Rowlands,Senior,????-????,Abercrave RFC,,?,?
+Q176596,Clive Rowlands,Clive Rowlands,Clive_Rowlands,Senior,????-????,Pontypool RFC,/wiki/Pontypool_RFC,?,?
+Q176596,Clive Rowlands,Clive Rowlands,Clive_Rowlands,Senior,????-????,Llanelli RFC,/wiki/Llanelli_RFC,?,?
+Q176596,Clive Rowlands,Clive Rowlands,Clive_Rowlands,Senior,1965-1968,Swansea RFC,/wiki/Swansea_RFC,84,23
+Q176596,Clive Rowlands,Clive Rowlands,Clive_Rowlands,International,1963-1965,Pays de Galles,/wiki/%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV,14,3
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2006-2009,Natal Sharks,/wiki/Natal_Sharks,18,70
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2009-2012,Racing 92,/wiki/Racing_92,59,159
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2012-2014,Natal Sharks,/wiki/Natal_Sharks,2,0
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2014-2015,Toshiba Brave Lupus,/wiki/Toshiba_Brave_Lupus,11,47
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2015-2016,Toshiba Brave Lupus,/wiki/Toshiba_Brave_Lupus,10,65
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2016-2020,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,102,228
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2020-2023,Free State Cheetahs,/wiki/Free_State_Cheetahs,18,87
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2006-2009,Sharks,/wiki/Sharks_(rugby_%C3%A0_XV),38,78
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2012-2014,Sharks,/wiki/Sharks_(rugby_%C3%A0_XV),30,167
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2015,Sharks,/wiki/Sharks_(rugby_%C3%A0_XV),7,38
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,Senior,2020-2023,Cheetahs,/wiki/Cheetahs,6,0
+Q181263,François Steyn,François Steyn,Fran%C3%A7ois_Steyn,International,2006-2022,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,78,165
+Q188309,Sergio Parisse,Sergio Parisse,Sergio_Parisse,Youth,2001-2003,Benetton Trévise,/wiki/Benetton_Rugby_Tr%C3%A9vise,,
+Q188309,Sergio Parisse,Sergio Parisse,Sergio_Parisse,Senior,2002-2005,Benetton Trévise,/wiki/Benetton_Rugby_Tr%C3%A9vise,47,65
+Q188309,Sergio Parisse,Sergio Parisse,Sergio_Parisse,Senior,2005-2019,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,265,238
+Q188309,Sergio Parisse,Sergio Parisse,Sergio_Parisse,Senior,2019-2023,RC Toulon,/wiki/Rugby_club_toulonnais,65,45
+Q188309,Sergio Parisse,Sergio Parisse,Sergio_Parisse,International,2002-2019,Italie,/wiki/%C3%89quipe_d%27Italie_de_rugby_%C3%A0_XV,142,83
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2008-2016,Manawatu,/wiki/Manawatu_Rugby_Union,33,277
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2010-2011,Hurricanes,/wiki/Hurricanes,25,146
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2012-2017,Chiefs,/wiki/Chiefs_(rugby_%C3%A0_XV),89,682
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2017-2019,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,47,154
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2020,Chiefs,/wiki/Chiefs_(rugby_%C3%A0_XV),11,39
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2021-2022,Kobelco Steelers,/wiki/Kobe_Steel_Kobelco_Steelers,13,100
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2022-2023,Tokyo Sungoliath,/wiki/Tokyo_Sungoliath,?,?
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,Senior,2023-,Waikato,/wiki/Waikato_Rugby_Union,9,48
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,International,2009,Nouvelle-Zélande -20,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV_des_moins_de_20_ans,4,35
+Q193926,Aaron Cruden,Aaron Cruden,Aaron_Cruden,International,2010-2017,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,50,322
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,Senior,2000-2012,Southland,/wiki/Southland_Rugby,101,98
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,Senior,2014-2015,Tasman,/wiki/Tasman_Rugby_Union,23,40
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,Senior,2016,Southland,/wiki/Southland_Rugby,10,8
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,Senior,2003-2012,Highlanders,/wiki/Highlanders,108,50
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,Senior,2015,Blues,/wiki/Blues_(rugby_%C3%A0_XV),14,5
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,Senior,2012-2014,Gloucester,/wiki/Gloucester_Rugby_Football_Club,38,5
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,International,2002-2003,Nouvelle-Zélande -21,,10,20
+Q194026,Jimmy Cowan,Jimmy Cowan,Jimmy_Cowan,International,2004-2011,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,51,35
+Q200427,Dimitri Szarzewski,Dimitri Szarzewski,Dimitri_Szarzewski,Youth,????-2002,AS Béziers,/wiki/Association_sportive_de_B%C3%A9ziers_H%C3%A9rault,,
+Q200427,Dimitri Szarzewski,Dimitri Szarzewski,Dimitri_Szarzewski,Senior,2002-2005,AS Béziers,/wiki/Association_sportive_de_B%C3%A9ziers_H%C3%A9rault,57,45
+Q200427,Dimitri Szarzewski,Dimitri Szarzewski,Dimitri_Szarzewski,Senior,2005-2012,Stade français,/wiki/Stade_fran%C3%A7ais_Paris_rugby,131,110
+Q200427,Dimitri Szarzewski,Dimitri Szarzewski,Dimitri_Szarzewski,Senior,2012-2019,Racing 92,/wiki/Racing_92,151,90
+Q200427,Dimitri Szarzewski,Dimitri Szarzewski,Dimitri_Szarzewski,International,2004-2015,France,/wiki/%C3%89quipe_de_France_de_rugby_%C3%A0_XV,83,35
+Q200837,Anthony Tuitavake,Anthony Tuitavake,Anthony_Tuitavake,Senior,2001-2009,North Harbour,/wiki/North_Harbour_Rugby_Union,82,140
+Q200837,Anthony Tuitavake,Anthony Tuitavake,Anthony_Tuitavake,Senior,2005,Highlanders,/wiki/Highlanders,10,0
+Q200837,Anthony Tuitavake,Anthony Tuitavake,Anthony_Tuitavake,Senior,2006-2010,Blues,/wiki/Blues_(rugby_%C3%A0_XV),45,80
+Q200837,Anthony Tuitavake,Anthony Tuitavake,Anthony_Tuitavake,Senior,2010-2013,NEC Green Rockets,/wiki/NEC_Green_Rockets,37,30
+Q200837,Anthony Tuitavake,Anthony Tuitavake,Anthony_Tuitavake,Senior,2013-2016,Montpellier HR,/wiki/Montpellier_H%C3%A9rault_rugby,72,10
+Q200837,Anthony Tuitavake,Anthony Tuitavake,Anthony_Tuitavake,Senior,2016-2018,Racing 92,/wiki/Racing_92,34,5
+Q200837,Anthony Tuitavake,Anthony Tuitavake,Anthony_Tuitavake,International,2008,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,6,5
+Q205288,Zinzan Brooke,Zinzan Brooke,Zinzan_Brooke,Senior,1986-1997,Auckland,/wiki/Auckland_Rugby_Football_Union,140,393
+Q205288,Zinzan Brooke,Zinzan Brooke,Zinzan_Brooke,Senior,1996-1997,Blues,/wiki/Blues_(rugby_%C3%A0_XV),22,42
+Q205288,Zinzan Brooke,Zinzan Brooke,Zinzan_Brooke,Senior,1997-2001,Harlequins,/wiki/Harlequins_(rugby),35,25
+Q205288,Zinzan Brooke,Zinzan Brooke,Zinzan_Brooke,Senior,2002-2003,Coventry RFC,/wiki/Coventry_RFC,,
+Q205288,Zinzan Brooke,Zinzan Brooke,Zinzan_Brooke,International,1986-1994,Māori de NlleZélande,/wiki/%C3%89quipe_des_M%C4%81ori_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,22,49
+Q205288,Zinzan Brooke,Zinzan Brooke,Zinzan_Brooke,International,1987-1997,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,58,89
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,1992-1997,Racing club de France,/wiki/Racing_92,,
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,1997-1998,USA Limoges,/wiki/Limoges_rugby,,
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,1998-1999,US Oyonnax,/wiki/Oyonnax_rugby,,
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,1999-2000,RC Orléans,/wiki/Rugby_club_Orl%C3%A9ans,,
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,2000-2001,CA Périgueux,/wiki/Club_athl%C3%A9tique_P%C3%A9rigueux_Dordogne,,
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,2001-2002,CS Bourgoin-Jallieu,/wiki/Club_sportif_Bourgoin-Jallieu_rugby,13,0
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,2002-2005,RC Toulon,/wiki/Rugby_club_toulonnais,,
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,2005-2006,ASVEL rugby,/wiki/Association_sportive_de_Villeurbanne_et_de_l%27%C3%89veil_lyonnais_rugby,,
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,2006-2007,RC Nîmes,/wiki/Rugby_club_N%C3%AEmes_Gard,13,0
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,2007-2008,Stade montois,/wiki/Stade_montois_(rugby_%C3%A0_XV),2,0
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,Senior,2008-2010,RC Carqueiranne-Hyères,/wiki/Rugby_club_Carqueiranne-Hy%C3%A8res,15,0
+Q209358,André Silva,André da Silva,Andr%C3%A9_Da_Silva,International,2000-2007,Portugal,/wiki/%C3%89quipe_du_Portugal_de_rugby_%C3%A0_XV,15,0
+Q209365,Richie Gray,Richie Gray,Richie_Gray,Senior,2008-2012,Glasgow Warriors,/wiki/Glasgow_Warriors,47,20
+Q209365,Richie Gray,Richie Gray,Richie_Gray,Senior,2012-2013,Sale Sharks,/wiki/Sale_Sharks,16,5
+Q209365,Richie Gray,Richie Gray,Richie_Gray,Senior,2013-2016,Castres olympique,/wiki/Castres_olympique,63,10
+Q209365,Richie Gray,Richie Gray,Richie_Gray,Senior,2016-2020,Stade toulousain,/wiki/Stade_toulousain,50,5
+Q209365,Richie Gray,Richie Gray,Richie_Gray,Senior,2020-2024,Glasgow Warriors,/wiki/Glasgow_Warriors,68,5
+Q209365,Richie Gray,Richie Gray,Richie_Gray,Senior,2024-,Toyota Verblitz,/wiki/Toyota_Verblitz,,
+Q209365,Richie Gray,Richie Gray,Richie_Gray,International,2008-2009,Écosse -20,/wiki/%C3%89quipe_d%27%C3%89cosse_de_rugby_%C3%A0_XV_des_moins_de_20_ans,12,0
+Q209365,Richie Gray,Richie Gray,Richie_Gray,International,2010-,Écosse,/wiki/%C3%89quipe_d%27%C3%89cosse_de_rugby_%C3%A0_XV,77,15
+Q209365,Richie Gray,Richie Gray,Richie_Gray,International,2013,Lions,/wiki/%C3%89quipe_des_Lions_britanniques_et_irlandais_de_rugby_%C3%A0_XV,1,0
+Q250054,Mark Donaldson,Mark Donaldson,Mark_Donaldson_(rugby_%C3%A0_XV),Senior,1974,Manawatu,/wiki/Manawatu_Rugby_Union,1,4
+Q250054,Mark Donaldson,Mark Donaldson,Mark_Donaldson_(rugby_%C3%A0_XV),Senior,1975,Hawke's Bay,/wiki/Hawke%27s_Bay_Rugby_Union,9,0
+Q250054,Mark Donaldson,Mark Donaldson,Mark_Donaldson_(rugby_%C3%A0_XV),Senior,1976-1985,Manawatu,/wiki/Manawatu_Rugby_Union,109,91
+Q250054,Mark Donaldson,Mark Donaldson,Mark_Donaldson_(rugby_%C3%A0_XV),International,1974-1976,Nouvelle-Zélande -21,,9,0
+Q250054,Mark Donaldson,Mark Donaldson,Mark_Donaldson_(rugby_%C3%A0_XV),International,1977-1981,Nouvelle-Zélande,/wiki/%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV,13,4
+Q250144,Irakli Giorgadze,Irakli Giorgadze,Irakli_Giorgadze,Youth,,RC Toulon,/wiki/Rugby_club_toulonnais,,
+Q250144,Irakli Giorgadze,Irakli Giorgadze,Irakli_Giorgadze,Senior,2004-2007,CS Bourgoin-Jallieu,/wiki/Club_sportif_Bourgoin-Jallieu_rugby,27,0
+Q250144,Irakli Giorgadze,Irakli Giorgadze,Irakli_Giorgadze,Senior,2007-2009,US Dax,/wiki/Union_sportive_dacquoise,14,0
+Q250144,Irakli Giorgadze,Irakli Giorgadze,Irakli_Giorgadze,Senior,2009-2010,SO Chambéry,/wiki/Stade_olympique_chamb%C3%A9rien_rugby,14,0
+Q250144,Irakli Giorgadze,Irakli Giorgadze,Irakli_Giorgadze,International,2001-2011,Géorgie,/wiki/%C3%89quipe_de_G%C3%A9orgie_de_rugby_%C3%A0_XV,41,16
+Q261176,Geoff Evans,Geoff Evans,"Geoff_Evans_(rugby_%C3%A0_XV,_1950)",Senior,? - ?,Coventry RFC,/wiki/Coventry_RFC,?,?
+Q261176,Geoff Evans,Geoff Evans,"Geoff_Evans_(rugby_%C3%A0_XV,_1950)",Senior,1972-1974,Barbarians,/wiki/Barbarians,7,26
+Q261176,Geoff Evans,Geoff Evans,"Geoff_Evans_(rugby_%C3%A0_XV,_1950)",International,1972-1974,Angleterre,/wiki/%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV,9,7
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,Senior,1988-1996,Neath RFC,/wiki/Neath_RFC,116,24
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,Senior,1996-2000,Harlequins,/wiki/Harlequins_(rugby),100,20
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,Senior,2000-2003,Neath RFC,/wiki/Neath_RFC,66,10
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,Senior,2003-2004,Neath-Swansea Ospreys,/wiki/Neath-Swansea_Ospreys,6,0
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,Senior,2004,Swansea RFC,/wiki/Swansea_RFC,2,5
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,Senior,2004-2005,RC Narbonne,/wiki/Racing_club_de_Narbonne_M%C3%A9diterran%C3%A9e,20,0
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,Senior,2005-2008,Bristol Rugby,/wiki/Bristol_Rugby,56,15
+Q261477,Gareth Llewellyn,Gareth Llewellyn,Gareth_Llewellyn,International,1989-2004,Pays de Galles,/wiki/%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV,92,24
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,Senior,2007,Suva Highlanders,,-,-
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,Senior,2007,Fiji Warriors,/wiki/Fiji_Warriors,-,-
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,Senior,2007-2009,London Welsh,/wiki/London_Welsh_RFC,-,-
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,Senior,2009-2016,RC Narbonne,/wiki/Racing_club_de_Narbonne_M%C3%A9diterran%C3%A9e,175,30
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,Senior,2016-2018,AS Mâcon,/wiki/Association_sportive_m%C3%A2connaise,33,30
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,Senior,2019-2021,CO Le Creusot,/wiki/Club_olympique_Creusot_Bourgogne,-,-
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,Senior,2021-,AS Mâcon,,8,5
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,International,2005-2017,Fidji,/wiki/%C3%89quipe_des_Fidji_de_rugby_%C3%A0_XV,58,15
+Q261702,Sunia Koto,Sunia Koto Vuli,Sunia_Koto,International,2008,Pacific Islanders,/wiki/%C3%89quipe_des_Pacific_Islanders_de_rugby_%C3%A0_XV,2,0
+Q266062,Gareth John Williams,Gareth Williams,"Gareth_Williams_(rugby_%C3%A0_XV,_1978)",Senior,1999-2000,Pontypridd RFC,/wiki/Pontypridd_RFC,?,?
+Q266062,Gareth John Williams,Gareth Williams,"Gareth_Williams_(rugby_%C3%A0_XV,_1978)",Senior,2001-2003,Bridgend RFC,/wiki/Bridgend_RFC,?,?
+Q266062,Gareth John Williams,Gareth Williams,"Gareth_Williams_(rugby_%C3%A0_XV,_1978)",Senior,2003-2011,Cardiff Blues,/wiki/Cardiff_Blues,149,40
+Q266062,Gareth John Williams,Gareth Williams,"Gareth_Williams_(rugby_%C3%A0_XV,_1978)",International,2003-2010,Pays de Galles,/wiki/%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV,9,0
+Q276102,Jean de Villiers,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),Senior,2001-2009,Western Province,/wiki/Western_Province_(rugby_%C3%A0_XV),37,125
+Q276102,Jean de Villiers,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),Senior,2005-2009,Stormers,/wiki/Stormers,53,90
+Q276102,Jean de Villiers,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),Senior,2009-2010,Munster Rugby,/wiki/Munster_Rugby,23,40
+Q276102,Jean de Villiers,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),Senior,2010-2015,Western Province,,13,25
+Q276102,Jean de Villiers,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),Senior,2011-2015,Stormers,,52,50
+Q276102,Jean de Villiers,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),Senior,2015-2016,Leicester Tigers,/wiki/Leicester_Tigers,2,5
+Q276102,Jean de Villiers,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),International,2002-2015,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,109,135
+Q281187,George Chuter,George Chuter,George_Chuter,Senior,1996-2000,Saracens,/wiki/Saracens,68,35
+Q281187,George Chuter,George Chuter,George_Chuter,Senior,2000-2014,Leicester,/wiki/Leicester_Tigers,274,85
+Q281187,George Chuter,George Chuter,George_Chuter,International,2006-2010,Angleterre,/wiki/%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV,24,5
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,,,,,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,1996-1998,,,,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,1999-2000,Falcons,/wiki/Falcons_(rugby_%C3%A0_XV),,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,2001-2007,Blue Bulls,/wiki/Blue_Bulls,,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,,,,,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,1998,,,,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,2002-2007,Bulls,/wiki/Bulls_(rugby),,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,,,,,
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,2007-2008,,,12,0
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,Senior,2008-2009,Bourgoin-Jallieu,/wiki/Club_sportif_Bourgoin-Jallieu_rugby,26,0
+Q281715,Wessel Roux,Wessel Roux,Wessel_Roux,International,2002,Afrique du Sud,/wiki/%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV,3,0
+Q281871,Tom Kiernan,Tom Kiernan,Tom_Kiernan,Senior,1958-1973,Munster Rugby,/wiki/Munster_Rugby,,
+Q281871,Tom Kiernan,Tom Kiernan,Tom_Kiernan,International,1960-1973,Irlande,/wiki/%C3%89quipe_d%27Irlande_de_rugby_%C3%A0_XV,54,158
+Q281871,Tom Kiernan,Tom Kiernan,Tom_Kiernan,International,1962-1968,Lions,/wiki/%C3%89quipe_des_Lions_britanniques_et_irlandais_de_rugby_%C3%A0_XV,5,35
