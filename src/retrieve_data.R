@@ -58,13 +58,19 @@ source("src/wikidata/integrate_reference.R")
 ########################################################################
 # retrieve the raw data from Wikipedia by looping over the players listed in the above table
 
-# english wikipedia
-# TODO
-source("src/wikipedia/english/clean_tables.R")
+# japanese wikipedia
+system("python src/wikipedia/japanese/retrieve_stints.pys")
+# this produces the raw files in folder `data/wikipedia/japanese/raw/`
+source("src/wikipedia/japanese/clean_tables.R")
+# this produces the clean files in folder `data/wikipedia/japanese/`
 
 # french wikipedia
 # TODO
 source("src/wikipedia/french/clean_tables.R")
+
+# english wikipedia
+# TODO
+source("src/wikipedia/english/clean_tables.R")
 
 # spanish wikipedia
 # TODO
@@ -73,12 +79,6 @@ source("src/wikipedia/spanish/clean_tables.R")
 # italian wikipedia
 # TODO
 source("src/wikipedia/italian/clean_tables.R")
-
-# japanese wikipedia
-system("python src/wikipedia/japanese/retrieve_stints.pys")
-# this produces the raw files in folder `data/wikipedia/japanese/raw/`
-source("src/wikipedia/japanese/clean_tables.R")
-# this produces the clean files in folder `data/wikipedia/japanese/`
 
 
 
@@ -95,11 +95,11 @@ source("src/wikipedia/japanese/integrate_data.R")
 # - `teams_03_ja-wp.csv`: merged list of teams
 # - `stints_01_wd-ja-wp.csv`: merged list of stints
 
-# english wikipedia
-source("src/wikipedia/english/integrate_data.R")
-
 # french wikipedia
 source("src/wikipedia/french/integrate_data.R")
+
+# english wikipedia
+source("src/wikipedia/english/integrate_data.R")
 
 # spanish wikipedia
 source("src/wikipedia/spanish/integrate_data.R")
