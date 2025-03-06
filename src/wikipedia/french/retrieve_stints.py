@@ -176,11 +176,21 @@ for _, player in merged_table.iterrows():
                 br_elts = time_elt.find_next_siblings("br")
                 if len(br_elts) == 0:   # different type of infobox
                     br_elts = time_elt.parent.find_next_siblings("br")
-                    a_elt = br_elts[0].find_next_siblings()[0].find_all("a")[0]
+                    if len(br_elts) == 0:   # no birth place
+                        a_elt = None
+                    else:
+                        a_elt = br_elts[0].find_next_siblings()[0].find_all("a")[0]
                 else:
-                    a_elt = br_elts[0].find_next_siblings("a")[0]
-                birth_place = a_elt.get_text(strip=True)
-                birth_place_url = a_elt["href"]
+                    tmp_elt = br_elts[0].find_next_siblings()[0]
+                    if tmp_elt.name == "span":
+                        a_elt = tmp_elt.find_all("a")[0]
+                    else:
+                        a_elt = br_elts[0].find_next_siblings("a")[0]
+                if a_elt:
+                    birth_place = a_elt.get_text(strip=True)
+                    birth_place_url = a_elt["href"]
+                else:
+                    tlog(2, f"Could not find birth place")
                 tlog(2, f"Birth place: {birth_place}")
             else:
                 tlog(2, f"Could not find birth information")
@@ -202,12 +212,16 @@ for _, player in merged_table.iterrows():
                     else:
                         a_elt = br_elts[0].find_next_siblings()[0].find_all("a")[0]
                 else:
-                    a_elt = br_elts[0].find_next_siblings("a")[0]
+                    tmp_elt = br_elts[0].find_next_siblings()[0]
+                    if tmp_elt.name == "span":
+                        a_elt = tmp_elt.find_all("a")[0]
+                    else:
+                        a_elt = br_elts[0].find_next_siblings("a")[0]
                 if a_elt:
                     death_place = a_elt.get_text(strip=True)
                     death_place_url = a_elt["href"]
                 else:
-                    tlog(2, f"Could not find death information")
+                    tlog(2, f"Could not find death place")
                 tlog(2, f"Death place: {death_place}")
             else:
                 tlog(2, f"Could not find death information")
@@ -229,7 +243,7 @@ for _, player in merged_table.iterrows():
                 height = height_elt.find_next_siblings()[0].get_text(strip=True)
                 height = height.replace(u"\xa0", u" ")
                 height = height.replace(",", ".")
-                pattern = r"(\d.?\d\d?) *c?m.*"
+                pattern = r"(\d.?\d?\d?) *c?m.*"
                 vals = re.findall(pattern, height)
                 height = vals[0]
                 if "." in height:
@@ -286,6 +300,10 @@ for _, player in merged_table.iterrows():
                         period_elt = periods_elt[r]
                         # possibly skip <s> elements
                         while period_elt.name is not None and period_elt.name == "s":
+                            r = r + 1
+                            period_elt = periods_elt[r]
+                        # possibly skip whitespaces
+                        if period_elt.name is None and period_elt.strip() == "":
                             r = r + 1
                             period_elt = periods_elt[r]
                         # handle <br> elements
@@ -376,6 +394,9 @@ for _, player in merged_table.iterrows():
                             # possibly skip empty line
                             if len(teams_elt) > r and teams_elt[r].name is None and teams_elt[r].strip() == "":
                                 r = r + 1
+                            # possibly skip additional info in italic
+                            if len(teams_elt) > r and teams_elt[r].name is not None and teams_elt[r].name == "i":
+                                r = r + 1
                         r = r + 1       # go to next row
                     stint_types = [stint_type] * len(teams)
                     # check list lengths are consistent
@@ -403,7 +424,7 @@ for _, player in merged_table.iterrows():
                             if stat_elt.name is None and stat_elt.strip() == "":
                                 r = r + 1
                                 stat_elt = stats_elt[r]
-                            # possibly skip <s> element
+                            # possibly skip <s> elements
                             while stat_elt.name is not None and stat_elt.name == "s":
                                 r = r + 1
                                 stat_elt = stats_elt[r]
@@ -419,16 +440,24 @@ for _, player in merged_table.iterrows():
                                     str = stat_elt.get_text(strip=True).strip()
                                 r = r + 1   # next element
                                 # possibly skip <s> element
-                                if r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "s":
+                                seen_s = False
+                                while r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "s":
                                     r = r + 1
                                     stat_elt = stats_elt[r]
+                                    seen_s = True
+                                if seen_s and stat_elt.name is None:
                                     str = str + stat_elt.strip()
                                     r = r + 1
                                 # retrieve values
-                                pattern = r"^(\d+|\?|-)[^\d]*\((\d+|\?|-)\)"
-                                vals = re.findall(pattern, str)
-                                matches.append(vals[0][0])
-                                points.append(vals[0][1])
+                                str = str.replace(u"\xa0", u" ")
+                                if str == "?":
+                                    matches.append("")
+                                    points.append("")
+                                else:
+                                    pattern = r"^(\d+\+?|\?+|-)[^\d]*\((\d? ?\d+\+?|\?+|-)\)"
+                                    vals = re.findall(pattern, str)
+                                    matches.append(vals[0][0])
+                                    points.append(vals[0][1])
                                 # possibly skip <sup> elements
                                 while r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "sup":
                                     r = r + 1
