@@ -288,47 +288,40 @@ for _, player in merged_table.iterrows():
                     tbody_elt = caption_elt.find_next_siblings()[0]
                     tr_elt = tbody_elt.find_all("tr")[1]  # [0] = table header
                     td_elts = tr_elt.find_all("td")
+
                     # init elements containing info
                     periods_elt = td_elts[0].find("span").contents
                     teams_elt = td_elts[1].find("span").contents
                     stats_elt = None
                     if len(td_elts) > 2:
                         stats_elt = td_elts[2].contents
+
                     # loop over br-separated periods
                     r = 0
                     while r < len(periods_elt):
-                        period_elt = periods_elt[r]
+                        period_str = ""
                         # possibly skip <s> elements
-                        while period_elt.name is not None and period_elt.name == "s":
+                        while r < len(periods_elt) and periods_elt[r].name is not None and periods_elt[r].name == "s":
                             r = r + 1
-                            period_elt = periods_elt[r]
-                        # possibly skip whitespaces
-                        if period_elt.name is None and period_elt.strip() == "":
+                        # concatenate text and hyperlink content
+                        while r < len(periods_elt) and (periods_elt[r].name is None or periods_elt[r].name == "a"):
+                            if periods_elt[r].name is None:
+                                period_str = period_str.strip() + " " + periods_elt[r].strip()
+                            else:
+                                period_str = period_str.strip() + " " + periods_elt[r].get_text(strip=True)
                             r = r + 1
-                            period_elt = periods_elt[r]
-                        # handle <br> elements
-                        if period_elt.name is not None and period_elt.name == "br":
-                            periods.append("")
-                        # otherwise, extract content
-                        else:   # should be text node
-                            old_per = "x"
-                            per = ""
-                            while r < len(periods_elt) and old_per != per:
-                                old_per = per
-                                period_elt = periods_elt[r]
-                                # regular case: year is plain text
-                                if period_elt.name is None:
-                                    per = per + period_elt.strip()
-                                    r = r + 1
-                                # but sometimes, year is hyperlinked
-                                elif periods_elt[r].name is not None and periods_elt[r].name == "a":
-                                    per = per + period_elt.get_text(strip=True)
-                                    r = r + 1
-                            periods.append(per)
                         # possibly skip <s> element
                         while r < len(periods_elt) and periods_elt[r].name is not None and periods_elt[r].name == "s":
                             r = r + 1
-                        r = r + 1       # go to next row
+                        # handle <br> elements
+                        if r < len(periods_elt) and periods_elt[r].name is not None and periods_elt[r].name == "br":
+                            r = r + 1
+                        # clean final string
+                        period_str = period_str.replace(" -", "-")
+                        period_str = period_str.replace("- ", "-")
+                        period_str = period_str.strip()
+                        periods.append(period_str)
+                    
                     # loop over br-separated teams
                     skip_rows = []
                     r = 0
@@ -405,6 +398,7 @@ for _, player in merged_table.iterrows():
                                 r = r + 1
                         r = r + 1       # go to next row
                     stint_types = [stint_type] * len(teams)
+
                     # check list lengths are consistent
                     if len(periods) != len(teams):
                         if len(periods) == 0:
@@ -416,6 +410,7 @@ for _, player in merged_table.iterrows():
                                 raise Exception("Inconsistent numbers of periods/teams")
                         else:
                             raise Exception("Inconsistent numbers of periods/teams")
+                    
                     # loop over br-separated stats
                     if not stats_elt:
                         matches = [""] * len(periods)
@@ -473,6 +468,7 @@ for _, player in merged_table.iterrows():
                                 if r < len(stats_elt) and stats_elt[r].name is None and stats_elt[r].strip() == "":
                                     r = r + 1
                             r = r + 1       # go to next row
+                    
                     # check list lengths are consistent
                     if len(periods) != len(matches):
                         # if completely empty: complement
