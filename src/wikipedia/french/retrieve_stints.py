@@ -375,7 +375,7 @@ for _, player in merged_table.iterrows():
                                     r = r + 1
                                     team_elt = teams_elt[r]
                                 # retrieve team name
-                                teams.append(team_elt.get_text(strip=True))
+                                team_name = team_elt.get_text(strip=True)
                                 # case where url is inside a <span>
                                 if team_elt.name == "span":
                                     a_elt = team_elt.find("a", recursive = False) # skip flag <span>
@@ -383,14 +383,20 @@ for _, player in merged_table.iterrows():
                                         urls.append(a_elt["href"])
                                     else:
                                         urls.append("")
-                                elif team_elt and team_elt.name == "a":
+                                elif team_elt.name == "a":
                                     urls.append(team_elt["href"])
                                 else:
                                     urls.append("")
                             else:   # should be text node
-                                teams.append(team_elt.strip())
+                                team_name = team_elt.strip()
                                 urls.append("")
                             r = r + 1   # skip next <br>
+                            # possibly get the rest of the name
+                            while len(teams_elt) > r and teams_elt[r].name is None and teams_elt[r].strip() != "":
+                                team_elt = teams_elt[r]
+                                team_name = team_name + " " + team_elt.strip()
+                                r = r + 1
+                            teams.append(team_name)
                             # possibly skip empty line
                             if len(teams_elt) > r and teams_elt[r].name is None and teams_elt[r].strip() == "":
                                 r = r + 1
@@ -406,6 +412,8 @@ for _, player in merged_table.iterrows():
                         elif len(skip_rows) > 0:
                             for index in sorted(skip_rows, reverse=True):
                                 del periods[index]
+                            if len(periods) != len(teams):
+                                raise Exception("Inconsistent numbers of periods/teams")
                         else:
                             raise Exception("Inconsistent numbers of periods/teams")
                     # loop over br-separated stats
@@ -474,6 +482,8 @@ for _, player in merged_table.iterrows():
                         elif len(skip_rows) > 0:
                             for index in sorted(skip_rows, reverse=True):
                                 del matches[index]
+                            if len(periods) != len(matches):
+                                raise Exception("Inconsistent numbers of periods/match numbers")
                         # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
                         elif len(periods) > len(matches):
                             matches.extend([""] * (len(periods) - len(matches)))
@@ -488,6 +498,8 @@ for _, player in merged_table.iterrows():
                         elif len(skip_rows) > 0:
                             for index in sorted(skip_rows, reverse=True):
                                 del points[index]
+                            if len(periods) != len(points):
+                                raise Exception("Inconsistent numbers of periods/points scored")
                         # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
                         elif len(periods) > len(points):
                             points.extend([""] * (len(periods) - len(points)))
