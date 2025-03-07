@@ -313,90 +313,54 @@ for _, player in merged_table.iterrows():
                         # possibly skip <s> element
                         while r < len(periods_elt) and periods_elt[r].name is not None and periods_elt[r].name == "s":
                             r = r + 1
-                        # handle <br> elements
-                        if r < len(periods_elt) and periods_elt[r].name is not None and periods_elt[r].name == "br":
-                            r = r + 1
                         # clean final string
                         period_str = period_str.replace(" -", "-")
                         period_str = period_str.replace("- ", "-")
                         period_str = period_str.strip()
                         periods.append(period_str)
+                        r = r + 1   # next row
                     
                     # loop over br-separated teams
                     skip_rows = []
                     r = 0
                     while r < len(teams_elt):
+                        team_str = ""
+                        url_str = ""
                         team_elt = teams_elt[r]
-                        # possibly skip <s> element
-                        if team_elt.name is not None and team_elt.name == "s":
+                        # possibly skip whitespaces, <s> and <i> elements, flags, arrows
+                        while r < len(teams_elt) and (teams_elt[r].name is None and teams_elt[r].strip() == "" or
+                                                      teams_elt[r].name is not None and (teams_elt[r].name == "s" or 
+                                                                                         teams_elt[r].name == "i" or
+                                                                                         teams_elt[r].name == "span" and teams_elt[r].has_attr("class") and "flagicon" in teams_elt[r]["class"] or
+                                                                                         teams_elt[r].name == "span" and teams_elt[r].has_attr("title") and teams_elt[r]["title"] == "Prêté à")):
+                            if teams_elt[r].name is not None and teams_elt[r].name == "i":
+                                skip_rows.append(len(teams))  # list of rows to skip in periods and stats too
                             r = r + 1
-                            team_elt = teams_elt[r]
-                        # possibly skip whitespaces
-                        if team_elt.name is None and team_elt.strip() == "":
-                            r = r + 1
-                            team_elt = teams_elt[r]
-                        # possibly skip <s> element
-                        if team_elt.name is not None and team_elt.name == "s":
-                            r = r + 1
-                            team_elt = teams_elt[r]
-                        # handle <br> elements
-                        if team_elt.name is not None and team_elt.name == "br":
-                            teams.append("")
-                            urls.append("")
-                        # otherwise, extract content
-                        else:
-                            if team_elt.name is not None:
-                                # possibly skip flag
-                                if team_elt.name == "span" and team_elt.has_attr("class") and "flagicon" in team_elt["class"]:
-                                    r = r + 1
-                                    team_elt = teams_elt[r]
-                                # possible skip arrow
-                                if team_elt.name == "span" and team_elt.has_attr("title") and team_elt["title"] == "Prêté à":
-                                    r = r + 1
-                                    team_elt = teams_elt[r]
-                                # possibly skip empty line
-                                if team_elt.name is None and team_elt.strip() == "":
-                                    r = r + 1
-                                    team_elt = teams_elt[r]
-                                # possibly skip title in italics
-                                if team_elt.name == "i":
-                                    skip_rows.append(len(teams) + len(skip_rows))  # list of rows to skip in periods and stats too
-                                    r = r + 2   # skip <i> and <br/>
-                                    team_elt = teams_elt[r]
-                                # possibly skip empty line
-                                if team_elt.name is None and team_elt.strip() == "":
-                                    r = r + 1
-                                    team_elt = teams_elt[r]
-                                # retrieve team name
-                                team_name = team_elt.get_text(strip=True)
-                                # case where url is inside a <span>
-                                if team_elt.name == "span":
-                                    a_elt = team_elt.find("a", recursive = False) # skip flag <span>
+                        # retrieve team name
+                        while r < len(teams_elt) and (teams_elt[r].name is None or teams_elt[r].name != "br"):
+                            if teams_elt[r].name is None:
+                                team_str = team_str.strip() + " " + teams_elt[r].strip()
+                            else:
+                                team_str = team_str.strip() + " " + teams_elt[r].get_text(strip=True)
+                                # case where url is inside <span>
+                                if teams_elt[r].name == "span":
+                                    a_elt = teams_elt[r].find("a", recursive = False) # skip flag <span>
                                     if a_elt:
-                                        urls.append(a_elt["href"])
-                                    else:
-                                        urls.append("")
-                                elif team_elt.name == "a":
-                                    urls.append(team_elt["href"])
-                                else:
-                                    urls.append("")
-                            else:   # should be text node
-                                team_name = team_elt.strip()
-                                urls.append("")
-                            r = r + 1   # skip next <br>
-                            # possibly get the rest of the name
-                            while len(teams_elt) > r and teams_elt[r].name is None and teams_elt[r].strip() != "":
-                                team_elt = teams_elt[r]
-                                team_name = team_name + " " + team_elt.strip()
-                                r = r + 1
-                            teams.append(team_name)
-                            # possibly skip empty line
-                            if len(teams_elt) > r and teams_elt[r].name is None and teams_elt[r].strip() == "":
-                                r = r + 1
-                            # possibly skip additional info in italic
-                            if len(teams_elt) > r and teams_elt[r].name is not None and teams_elt[r].name == "i":
-                                r = r + 1
-                        r = r + 1       # go to next row
+                                        url_str = a_elt["href"]
+                                # case where url is inside <a>
+                                elif teams_elt[r].name == "a":
+                                    url_str = teams_elt[r]["href"]
+                            r = r + 1
+                        # clean final string
+                        team_str = team_str.replace("  ", " ")
+                        team_str = team_str.strip()
+                        teams.append(team_str)
+                        urls.append(url_str)
+                        r = r + 1   # next row
+                    if len(skip_rows) > 0:
+                        for index in sorted(skip_rows, reverse=True):
+                            del teams[index]
+                            del urls[index]
                     stint_types = [stint_type] * len(teams)
 
                     # check list lengths are consistent
