@@ -1,293 +1,56 @@
-origWdId,origName,debugComment,frName,wpPage,birthDate,birthPlace,birthPlaceWP,deathDate,deathPlace,deathPlaceWP,height,positions
-Q5809,Ernesto Guevara,No stint found,Ernesto « Che » Guevara,Che_Guevara,1928-06-14,Rosario,/wiki/Rosario,1967-10-09,La Higuera,/wiki/La_Higuera_(Bolivie),176,
-Q7571,Patricio Albacete,,Patricio Albacete,Patricio_Albacete,1981-02-09,Buenos Aires,/wiki/Buenos_Aires,,,,200,
-Q18455,Ben Tune,,Ben Tune,Ben_Tune,1976-12-28,Brisbane,/wiki/Brisbane,,,,185,
-Q26037,Quade Cooper,,Quade Cooper,Quade_Cooper,1988-04-05,Tokoroa,/wiki/Tokoroa,,,,186,Demi d'ouverture
-Q29880,Ben Botica,,Ben Botica,Ben_Botica,1989-10-07,Takapuna,/wiki/Takapuna,,,,178,Demi d'ouverture; centre
-Q31193,Ben Smith,,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),1986-06-01,Dunedin,/wiki/Dunedin,,,,186,Arrière; ailier; centre
-Q46171,Pekahou Cowan,,Pekahou Cowan,Pekahou_Cowan,1986-06-02,Wellington,/wiki/Wellington,,,,185,Pilier
-Q46223,Stephen Hoiles,,Stephen Hoiles,Stephen_Hoiles,1981-10-13,Sydney,/wiki/Sydney,,,,190,
-Q46393,Yoan Audrin,,Yoan Audrin,Yoan_Audrin,1981-08-14,Pézenas,/wiki/P%C3%A9zenas,,,,179,
-Q46396,Benoît Paillaugue,,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,1987-11-17,La Rochelle,/wiki/La_Rochelle,,,,172,Demi de mêlée; demi d'ouverture
-Q56812,Thomas Combezou,,Thomas Combezou,Thomas_Combezou,1987-01-26,Tulle,/wiki/Tulle,,,,181,
-Q56822,Gerhard Vosloo,,Gerhard Vosloo,Gerhard_Vosloo,1979-05-10,Pretoria,/wiki/Pretoria,,,,188,
-Q56824,Fabien Cibray,,Fabien Cibray,Fabien_Cibray,1985-10-15,Auch,/wiki/Auch,,,,178,
-Q71268,Hugo Betting,No FR WP page,,,,,,,,,,
-Q72185,Manu Tuilagi,,Manu Tuilagi,Manu_Tuilagi,1991-05-18,Fogapoa,/w/index.php?title=Fogapoa&action=edit&redlink=1,,,,183,Centre
-Q75480,Marco Platania,No FR WP page,,,,,,,,,,
-Q75573,Robins Tchale-Watchou,,Robins Tchale-Watchou,Robins_Tchale-Watchou,1983-05-10,Dschang,/wiki/Dschang,,,,198,
-Q76869,Toby Flood,,Toby Flood,Toby_Flood,1985-08-08,Frimley,/wiki/Frimley,,,,188,
-Q77848,Sascha Fischer,,Sascha Fischer,Sascha_Fischer,1971-12-24,Stuttgart,/wiki/Stuttgart,,,,208,
-Q80607,George Pisi,,George Pisi,George_Pisi,1986-06-29,Apia,/wiki/Apia,,,,188,Centre; arrière
-Q82942,Farid Sid,,Farid Sid,Farid_Sid,1979-03-27,Perpignan,/wiki/Perpignan,,,,176,Ailier (à XIII); ailier (à XV)
-Q86108,Clemens von Grumbkow,,Clemens von Grumbkow,Clemens_von_Grumbkow,1983-07-22,Leimen,/wiki/Leimen,,,,191,
-Q87794,Robert Mohr,,Robert Mohr,Robert_Mohr,1978-08-25,Hanovre,/wiki/Hanovre,,,,194,
-Q90321,Erwin Thiesies,,Erwin Thiesies,Erwin_Thiesies,1908-08-22,Berlin,/wiki/Berlin,1993-02-18,Hennigsdorf,/wiki/Hennigsdorf,,Deuxième ligne
-Q94144,Massimo Ravazzolo,No stint found,Massimo Ravazzolo,Massimo_Ravazzolo,1972-09-05,Calvisano,/wiki/Calvisano,,,,190,Arrière
-Q94780,Joe Rokocoko,,Joe Rokocoko,Joe_Rokocoko,1983-06-06,Nadi,/wiki/Nadi_(Fidji),,,,189,
-Q94814,Ronnie Cooke,,Ronnie Cooke,Ronnie_Cooke,1984-04-05,Pretoria,/wiki/Pretoria,,,,183,
-Q98252,Manuel Wilhelm,No FR WP page,,,,,,,,,,
-Q101586,Rudolf Finsterer,No FR WP page,,,,,,,,,,
-Q111624,Shinjirō Honryō,No FR WP page,,,,,,,,,,
-Q113526,Adriaan Strauss,,Adriaan Strauss,Adriaan_Strauss,1985-11-18,Bloemfontein,/wiki/Bloemfontein,,,,184,
-Q127613,Patrick Lambie,,Patrick Lambie,Patrick_Lambie,1990-10-17,Durban,/wiki/Durban,,,,178,Demi d'ouverture; centre; arrière
-Q127618,Chris Ashton,No stint found,Chris Ashton,Chris_Ashton,1987-03-29,Wigan,/wiki/Wigan,,,,183,Ailier
-Q128407,Martín Bustos Moyano,,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,1985-07-12,Córdoba,/wiki/C%C3%B3rdoba_(Argentine),,,,186,Ailier; arriere
-Q131895,Ross Filipo,,Ross Filipo,Ross_Filipo,1979-04-14,Lower Hutt,/wiki/Lower_Hutt,,,,196,
-Q135385,Israel Dagg,,Israel Dagg,Israel_Dagg,1988-06-06,Marton,/wiki/Marton_(Nouvelle-Z%C3%A9lande),,,,186,Arrière; ailier
-Q138586,Gurthrö Steenkamp,,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,1981-06-12,Paarl,/wiki/Paarl,,,,189,
-Q138722,Stephen Donald,,Stephen Donald,Stephen_Donald,1983-12-03,Papakura,/wiki/Papakura,,,,190,
-Q151533,Sam Whitelock,,Sam Whitelock,Sam_Whitelock,1988-10-12,Palmerston North,/wiki/Palmerston_North,,,,202,Deuxième ligne
-Q151572,Victor Vito,,Victor Vito,Victor_Vito,1987-03-27,Wellington,/wiki/Wellington,,,,192,Troisième ligne centre; Troisième ligne aile
-Q163452,Tom James,,Tom James,Tom_James_(rugby_%C3%A0_XV),1987-04-17,Merthyr Tydfil,/wiki/Merthyr_Tydfil,,,,187,
-Q165701,Ali Williams,,Ali Williams,Ali_Williams,1981-04-30,Auckland,/wiki/Auckland,,,,202,
-Q166094,Zane Kirchner,,Zane Kirchner,Zane_Kirchner,1984-06-16,George,/wiki/George_(Afrique_du_Sud),,,,184,Arrière
-Q168675,Francois Pienaar,,Francois Pienaar,Francois_Pienaar,1967-01-02,Vereeniging,/wiki/Vereeniging,,,,190,
-Q169368,Jean Monribot,,Jean Monribot,Jean_Monribot,1987-10-11,Lalinde,/wiki/Lalinde,,,,184,
-Q169397,Hugo Bonneval,,Hugo Bonneval,Hugo_Bonneval,1990-11-19,Toulouse,/wiki/Toulouse,,,,185,Arrière; ailier
-Q174294,Ian James Clarke,No stint found,Ian Clarke,Ian_Clarke,1931-03-05,Kaponga,/wiki/Kaponga,1997-06-29,Morrinsville,/wiki/Morrinsville,,Pilier
-Q176596,Clive Rowlands,,Clive Rowlands,Clive_Rowlands,1938-05-14,Upper Cwmtwrch,/wiki/Cwmtwrch,2023-07-29,,,175,
-Q181263,François Steyn,,François Steyn,Fran%C3%A7ois_Steyn,1987-05-14,Aliwal North,/wiki/Aliwal_North,,,,191,
-Q188309,Sergio Parisse,,Sergio Parisse,Sergio_Parisse,1983-09-12,La Plata,/wiki/La_Plata,,,,196,
-Q193926,Aaron Cruden,,Aaron Cruden,Aaron_Cruden,1989-01-08,Palmerston North,/wiki/Palmerston_North,,,,178,Demi d'ouverture; centre
-Q194026,Jimmy Cowan,,Jimmy Cowan,Jimmy_Cowan,1982-03-06,Gore,/wiki/Gore_(Nouvelle-Z%C3%A9lande),,,,182,
-Q200427,Dimitri Szarzewski,,Dimitri Szarzewski,Dimitri_Szarzewski,1983-01-26,Narbonne,/wiki/Narbonne,,,,181,
-Q200837,Anthony Tuitavake,,Anthony Tuitavake,Anthony_Tuitavake,1982-02-12,Auckland,/wiki/Auckland,,,,182,
-Q205288,Zinzan Brooke,,Zinzan Brooke,Zinzan_Brooke,1965-02-14,Waiuku,/wiki/Waiuku,,,,190,
-Q207709,Roland Garros,No stint found,Roland Garros,Roland_Garros,1888-10-06,Saint-Denis de la Réunion,/wiki/Saint-Denis_(La_R%C3%A9union),1918-10-05,Saint-Morel,/wiki/Saint-Morel,,
-Q209358,André Silva,,André da Silva,Andr%C3%A9_Da_Silva,1975-02-09,Paris,/wiki/Paris,,,,174,
-Q209365,Richie Gray,,Richie Gray,Richie_Gray,1989-08-24,Rutherglen,/wiki/Rutherglen_(%C3%89cosse),,,,206,Deuxième ligne
-Q221074,Bud Spencer,No stint found,Bud Spencer,Bud_Spencer,1929-10-31,Naples,/wiki/Naples,2016-06-27,Rome,/wiki/Rome,192,
-Q250054,Mark Donaldson,,Mark Donaldson,Mark_Donaldson_(rugby_%C3%A0_XV),1955-11-06,Palmerston North,/wiki/Palmerston_North,,,,175,
-Q250144,Irakli Giorgadze,,Irakli Giorgadze,Irakli_Giorgadze,1982-12-17,Koutaïssi,/wiki/Kouta%C3%AFssi,,,,190,
-Q261176,Geoff Evans,,Geoff Evans,"Geoff_Evans_(rugby_%C3%A0_XV,_1950)",1950-12-10,Coventry,/wiki/Coventry,,,,178,
-Q261477,Gareth Llewellyn,,Gareth Llewellyn,Gareth_Llewellyn,1969-02-27,Cardiff,/wiki/Cardiff,,,,199,
-Q261702,Sunia Koto,,Sunia Koto Vuli,Sunia_Koto,1980-04-15,Suva,/wiki/Suva,,,,178,
-Q266062,Gareth John Williams,,Gareth Williams,"Gareth_Williams_(rugby_%C3%A0_XV,_1978)",1978-12-19,Bridgend,/wiki/Bridgend,,,,173,
-Q276102,Jean de Villiers,,Jean de Villiers,Jean_de_Villiers_(rugby_%C3%A0_XV),1981-02-24,Paarl,/wiki/Paarl,,,,190,"centre, ailier"
-Q281187,George Chuter,,George Chuter,George_Chuter,1976-07-09,Greenwich,/wiki/Greenwich_(Angleterre),,,,180,
-Q281715,Wessel Roux,,Wessel Roux,Wessel_Roux,1976-10-18,Bothaville,/wiki/Bothaville,,,,183,
-Q281871,Tom Kiernan,,Tom Kiernan,Tom_Kiernan,1939-01-07,Cork,/wiki/Cork,2022-02-03,,,,
-Q282219,Nikki Walker,,Nikki Walker,Nikki_Walker,1982-03-05,Aberdeen,/wiki/Aberdeen,,,,193,
-Q282754,Josh Taumalolo,,Josh Taumalolo,Josh_Taumalolo,1976-07-08,Nukuʻalofa,/wiki/Nuku%CA%BBalofa,,,,178,
-Q283441,Alexander Widiker,,Alexander Widiker,Alexander_Widiker,1982-04-27,Koustanaï,/wiki/Koustana%C3%AF,,,,171,
-Q284846,Schalk Willem Petrus Burger,,Schalk Burger,Schalk_Burger,1983-04-13,Port Elizabeth,/wiki/Port_Elizabeth,,,,193,
-Q284926,George Whitelock,,George Whitelock,George_Whitelock,1986-03-27,Palmerston North,/wiki/Palmerston_North,,,,190,Troisième ligne aile; Troisième ligne centre
-Q285258,Ron Waldron,,Ron Waldron,Ron_Waldron,1933-12-14,Neath Abbey,/wiki/Neath_Abbey,,,,,
-Q285739,Valentin Ursache,,Valentin Ursache,Valentin_Ursache,1985-08-12,Târgu Neamț,/wiki/T%C3%A2rgu_Neam%C8%9B,,,,188,
-Q286258,Yannick Jauzion,,Yannick Jauzion,Yannick_Jauzion,1978-07-28,Castres,/wiki/Castres,,,,193,
-Q287936,Joe Launchbury,,Joe Launchbury,Joe_Launchbury,1991-04-12,Exeter,/wiki/Exeter,,,,199,Deuxième ligne
-Q289223,Jerry Collins,,Jerry Collins,Jerry_Collins,1980-11-04,Apia,/wiki/Apia,2015-06-05,Béziers,/wiki/B%C3%A9ziers,191,
-Q289332,George Travers,,Twyber Travers,Twyber_Travers,1877-06-09,Newport,/wiki/Newport_(pays_de_Galles),1945-12-26,Newport,/wiki/Newport_(pays_de_Galles),,
-Q301081,Jamie Salmon,No stint found,Jamie Salmon,Jamie_Salmon,1959-10-16,Hong Kong,/wiki/Hong_Kong,,,,183,Centre
-Q302330,Aaron Mauger,,Aaron Mauger,Aaron_Mauger,1980-11-29,Christchurch,/wiki/Christchurch,,,,183,
-Q311569,Michael Hester,No stint found,Michael Hester,Michael_Hester,1972-05-02,Sydney,/wiki/Sydney,,,,181,
-Q318920,Jonny Wilkinson,,Jonny Wilkinson,Jonny_Wilkinson,1979-05-25,Frimley,/wiki/Frimley,,,,178,
-Q319318,William Webb Ellis,No stint found,William Webb Ellis,William_Webb_Ellis,1806-11-24,Salford,/wiki/Salford,1872-02-24,Menton,/wiki/Menton_(Alpes-Maritimes),,
-Q323192,Saïmoni Vaka,,Saïmoni Vaka,Sa%C3%AFmoni_Vaka,1987-06-02,Suva,/wiki/Suva,,,,183,
-Q325033,Jannie du Plessis,,Jannie du Plessis,Jannie_du_Plessis,1982-11-16,Bethlehem,/wiki/Bethlehem_(Afrique_du_Sud),,,,188,
-Q325881,Hugh Llewellyn Glyn Hughes,No FR WP page,,,,,,,,,,
-Q327770,John Roe,No stint found,John Roe,John_Roe,1977-04-10,Brisbane,/wiki/Brisbane,,,,187,Troisième ligne centre
-Q329393,David Auradou,,David Auradou,David_Auradou,1973-11-13,Harfleur,/wiki/Harfleur,,,,2,
-Q335197,Bryan Habana,,Bryan Habana,Bryan_Habana,1983-06-12,Benoni,/wiki/Benoni,,,,180,
-Q335238,Rahul Bose,No stint found,Rahul Bose,Rahul_Bose,1967-07-27,Bangalore,/wiki/Bangalore,,,,,Ailier
-Q338006,Jean-Baptiste Élissalde,,Jean-Baptiste Élissalde,Jean-Baptiste_%C3%89lissalde,1977-11-23,La Rochelle,/wiki/La_Rochelle,,,,172,
-Q339938,Chris Budgen,,Chris Budgen,Chris_Budgen,1973-01-21,Hamilton,/wiki/Hamilton_(Nouvelle-Z%C3%A9lande),,,,175,
-Q348855,Pat Sanderson,,Pat Sanderson,Pat_Sanderson,1977-09-06,Chester,/wiki/Chester_(Angleterre),,,,188,
-Q348867,Ian Kirkpatrick,,Ian Kirkpatrick,"Ian_Kirkpatrick_(rugby_%C3%A0_XV,_1946)",1946-05-24,Gisborne,/wiki/Gisborne_(ville),,,,190,
-Q350686,Adam Rhys Jones,,Adam Jones,Adam_Jones_(rugby_%C3%A0_XV),1981-03-08,Abercrave,/w/index.php?title=Abercrave&action=edit&redlink=1,,,,183,
-Q350967,Luke McAlister,,Luke McAlister,Luke_McAlister,1983-08-28,Waitara,/wiki/Waitara,,,,177,
-Q351157,Adam Whitelock,,Adam Whitelock,Adam_Whitelock,1987-04-17,Palmerston North,/wiki/Palmerston_North,,,,185,Centre; ailier
-Q352068,Carl Hayman,,Carl Hayman,Carl_Hayman,1979-11-14,Opunake,/wiki/Opunake,,,,193,
-Q353833,Hosea Gear,,Hosea Gear,Hosea_Gear,1984-03-16,Gisborne,/wiki/Gisborne_(ville),,,,188,
-Q356460,Dick Spring,,Dick Spring,Dick_Spring,1950-08-29,Tralee,/wiki/Tralee,,,,,Arrière
-Q360694,Charlie Hodgson,,Charlie Hodgson,Charlie_Hodgson,1980-11-12,Halifax,/wiki/Halifax_(Angleterre),,,,178,
-Q361549,David Bortolussi,,David Bortolussi,David_Bortolussi,1981-06-21,Auch,/wiki/Auch,,,,188,
-Q361732,Brian Ashton,,Brian Ashton,Brian_Ashton,1946-09-03,Leigh,/wiki/Leigh_(Grand_Manchester),,,,,
-Q363717,Jonah Lomu,,Jonah Lomu,Jonah_Lomu,1975-05-12,Auckland,/wiki/Auckland,2015-11-18,Auckland,/wiki/Auckland,196,
-Q364461,Josh Lewsey,,Josh Lewsey,Josh_Lewsey,1976-11-30,Bromley,/wiki/Bromley,,,,180,
-Q364694,Lote Tuqiri,No stint found,Lote Tuqiri,Lote_Tuqiri,1979-09-23,Suva,/wiki/Suva,,,,191,
-Q364941,Matt Burke,,Matt Burke,Matt_Burke,1973-03-26,Sydney,/wiki/Sydney,,,,,
-Q365677,Adolphe Bousquet,,Adolphe Bousquet,Adolphe_Bousquet,1899-08-14,Maraussan,/wiki/Maraussan,1972-03-17,Béziers,/wiki/B%C3%A9ziers,168,
-Q365731,Michael Lynagh,,Michael Lynagh,Michael_Lynagh,1963-10-25,Brisbane,/wiki/Brisbane,,,,178,
-Q365879,Brian Lima,,Brian Lima,Brian_Lima,1972-01-25,Apia,/wiki/Apia,,,,186,
-Q366237,Jeff Wilson,,Jeff Wilson,Jeff_Wilson,1973-10-24,Invercargill,/wiki/Invercargill,,,,180,
-Q367554,John Gwilliam,,John Gwilliam,John_Gwilliam,1923-02-28,Pontypridd,/wiki/Pontypridd,2016-12-21,Deganwy,/w/index.php?title=Deganwy&action=edit&redlink=1,188,
-Q369607,Salvatore Perugini,,Salvatore Perugini,Salvatore_Perugini,1978-03-06,Pontelandolfo,/wiki/Pontelandolfo,,,,183,
-Q369619,Gavin Johnson,,Gavin Johnson,Gavin_Johnson,1966-10-17,Louis Trichardt,/wiki/Louis_Trichardt_(ville),,,,188,
-Q370059,George Smith,,George Smith,George_Smith_(rugby_%C3%A0_XV),1980-07-14,Manly,/wiki/Manly_(Sydney),,,,180,
-Q371377,Gheorghe Benția,No FR WP page,,,,,,,,,,
-Q371503,André Béhotéguy,,André Béhotéguy,Andr%C3%A9_B%C3%A9hot%C3%A9guy,1900-10-19,Bayonne,/wiki/Bayonne,1960-07-14,Nice,/wiki/Nice,166,
-Q371838,William Cail,No FR WP page,,,,,,,,,,
-Q372362,Mike Teague,No stint found,Mike Teague,Mike_Teague,1960-10-08,Gloucester,/wiki/Gloucester,,,,190,Troisième ligne aile
-Q372453,Marcelo Loffreda,,Marcelo Loffreda,Marcelo_Loffreda,1959-05-17,Buenos Aires,/wiki/Buenos_Aires,,,,,
-Q372734,Adrian Cashmore,,Adrian Cashmore,Adrian_Cashmore,1973-07-23,Tokoroa,/wiki/Tokoroa,,,,183,
-Q373384,Noel Purcell,No FR WP page,,,,,,,,,,
-Q373771,Mark Ella,,Mark Ella,Mark_Ella,1959-06-05,La Perouse,/wiki/La_Perouse_(Australie),,,,,
-Q374376,De Wet Barry,,De Wet Barry,De_Wet_Barry,1978-06-24,Ceres,/wiki/Ceres_(Afrique_du_Sud),,,,188,
-Q374524,Sean Lynch,No stint found,Sean Lynch,Sean_Lynch_(rugby_%C3%A0_XV),1942-09-22,,,,,,,Pilier
-Q375081,Pablo Canavosio,,Pablo Canavosio,Pablo_Canavosio,1981-12-26,Cordoba,/wiki/C%C3%B3rdoba_(Argentine),,,,175,
-Q375259,Alex Burdon,,Alex Burdon,Alex_Burdon,1879-03-31,Glebe,/wiki/Glebe,1943-12-13,Branxton,/w/index.php?title=Branxton&action=edit&redlink=1,,Pilier
-Q375493,Jim Williams,,Jim Williams,Jim_Williams,1968-12-08,Young,/wiki/Young_(Australie),,,,193,
-Q375894,Andrea De Marchi,,Andrea De Marchi,Andrea_de_Marchi,1988-11-19,Montebelluna,/wiki/Montebelluna,,,,187,
-Q376378,David Humphreys,,David Humphreys,David_Humphreys,1971-09-10,Belfast,/wiki/Belfast,,,,177,
-Q376397,Japie Mulder,,Japie Mulder,Japie_Mulder,1969-10-18,Springs,/wiki/Springs,,,,184,
-Q376430,Mike Blair,,Mike Blair,Mike_Blair,1981-04-20,Édimbourg,/wiki/%C3%89dimbourg,,,,181,
-Q377052,William Téchoueyres,,William Téchoueyres,William_T%C3%A9choueyres,1966-02-12,Bordeaux,/wiki/Bordeaux,,,,183,
-Q377476,Peter Winterbottom,,Peter Winterbottom,Peter_Winterbottom,1960-05-31,Otley,/wiki/Otley_(Yorkshire_de_l%27Ouest),,,,183,
-Q377498,Thierry de Martel,No stint found,Thierry de Martel,Thierry_de_Martel,1875-03-07,Maxéville,/wiki/Max%C3%A9ville,1940-06-14,16e arrondissement de Paris,/wiki/16e_arrondissement_de_Paris,,
-Q378444,Rod Kafer,,Rod Kafer,Rod_Kafer,1971-06-25,Newcastle,/wiki/Newcastle_(Australie),,,,176,
-Q380388,Frik du Preez,,Frik du Preez,Frik_du_Preez,1935-11-28,Rustenburg,/wiki/Rustenburg_(Afrique_du_Sud),,,,188,
-Q381641,Girvan Dempsey,,Girvan Dempsey,Girvan_Dempsey,1975-10-02,Dublin,/wiki/Dublin,,,,182,
-Q381649,Gareth Cooper,,Gareth Cooper,Gareth_Cooper,1979-05-07,Bridgend,/wiki/Bridgend,,,,171,
-Q382731,John Warlow,,John Warlow,John_Warlow,1939-02-13,Dafen,/w/index.php?title=Dafen_(Pays_de_Galles)&action=edit&redlink=1,,,,,Pilier
-Q383727,Giovanbattista Venditti,,Giovanbattista Venditti,Giovanbattista_Venditti,1990-03-27,Avezzano,/wiki/Avezzano,,,,188,Ailier
-Q383886,Fourie du Preez,,Fourie du Preez,Fourie_du_Preez,1982-03-24,Pretoria,/wiki/Pretoria,,,,182,
-Q384650,Paul Carozza,No stint found,Paul Carozza,Paul_Carozza,1966-04-14,Brisbane,/wiki/Brisbane,,,,168,
-Q385574,Jim Webb,,Jim Webb,Jim_Webb_(rugby),1882-11-23,Coleford,/wiki/Coleford_(Gloucestershire),1955-01-29,Upper Soudley,/wiki/Soudley,,Pilier; deuxième ligne; troisième ligne aile; Talonneur; deuxième ligne; pilier
-Q385611,Brodie Henderson,,Brodie Henderson,Brodie_Henderson,1983-12-12,Vancouver,/wiki/Vancouver,,,,185,
-Q385839,Clive Sullivan,No stint found,Clive Sullivan,Clive_Sullivan,1943-04-09,Cardiff,/wiki/Cardiff,1985-10-08,Kingston upon Hull,/wiki/Kingston_upon_Hull,,ailier
-Q387450,Franck Montanella,,Franck Montanella,Franck_Montanella,1982-03-26,Cannes,/wiki/Cannes,,,,185,
-Q387525,"Wavell Wakefield, 1st Baron Wakefield of Kendal",No stint found,Wavell Wakefield,Wavell_Wakefield,1898-03-10,Londres,/wiki/Londres,1983-08-12,Kendal,/wiki/Kendal,186,Troisième ligne aile
-Q387669,John Robbie,No stint found,John Robbie,John_Robbie,1955-11-17,Dublin,/wiki/Dublin,,,,175,Demi de mêlée
-Q387758,John Rudd,No stint found,John Rudd,John_Rudd,1981-05-26,Londres,/wiki/Londres,,,,,Ailier
-Q389714,Imanol Harinordoquy,,Imanol Harinordoquy,Imanol_Harinordoquy,1980-02-20,Bayonne,/wiki/Bayonne,,,,192,
-Q390102,Darren Crompton,,Darren Crompton,Darren_Crompton,1972-09-12,Exeter,/wiki/Exeter,,,,188,
-Q399410,Agustín Pichot,,Agustín Pichot,Agust%C3%ADn_Pichot,1974-08-22,Buenos Aires,/wiki/Buenos_Aires,,,,175,
-Q405431,Aiman Abdallah,No FR WP page,,,,,,,,,,
-Q406125,Benjamin Dambielle,,Benjamin Dambielle,Benjamin_Dambielle,1985-07-15,Auch,/wiki/Auch,,,,183,
-Q406132,Romain Cabannes,,Romain Cabannes,Romain_Cabannes,1984-12-02,Mont-de-Marsan,/wiki/Mont-de-Marsan,,,,183,
-Q406142,Rémi Lamerat,,Rémi Lamerat,R%C3%A9mi_Lamerat,1990-01-14,Sainte-Foy-la-Grande,/wiki/Sainte-Foy-la-Grande,,,,184,Centre
-Q406148,Jean-Marc Mazzonetto,,Jean-Marc Mazzonetto,Jean-Marc_Mazzonetto,1983-10-07,Agen,/wiki/Agen,2018-01-09,Gaillères,/wiki/Gaill%C3%A8res,180,
-Q406385,Rémi Tales,,Rémi Talès,R%C3%A9mi_Tal%C3%A8s,1984-05-02,Mont-de-Marsan,/wiki/Mont-de-Marsan,,,,186,
-Q406422,Julien Fritz,,Julien Fritz,Julien_Fritz,1990-01-10,Sens,/wiki/Sens_(Yonne),,,,189,Centre; arrière
-Q406431,Armand Battle,,Armand Batlle,Armand_Batlle,1987-04-12,Perpignan,/wiki/Perpignan,,,,188,Ailier; Arrière
-Q406610,Julien Audy,,Julien Audy,Julien_Audy,1984-11-21,Tulle,/wiki/Tulle,,,,171,
-Q406616,Rabah Slimani,,Rabah Slimani,Rabah_Slimani,1989-10-18,Sarcelles,/wiki/Sarcelles,,,,178,Pilier droit
-Q406637,Yohann Vivalda,,Yohann Vivalda,Yohann_Vivalda,1988-12-09,Agen,/wiki/Agen,,,,200,deuxième ligne
-Q425547,Gonzalo Longo,,Gonzalo Longo,Gonzalo_Longo,1974-03-14,San Isidro,/wiki/San_Isidro_(Buenos_Aires),,,,193,
-Q425576,Michael Lipman,,Michael Lipman,Michael_Lipman,1980-01-16,Londres,/wiki/Londres,,,,185,
-Q425580,Sitiveni Sivivatu,,Sitiveni Sivivatu,Sitiveni_Sivivatu,1982-04-19,Suva,/wiki/Suva,,,,185,
-Q427291,Gavin Hastings,,Gavin Hastings,Gavin_Hastings,1962-01-03,Édimbourg,/wiki/%C3%89dimbourg,,,,188,
-Q428564,Dan Drysdale,,Dan Drysdale,Dan_Drysdale,1901-05-18,Kippen,/wiki/Kippen,1987-10-15,Yeovil,/wiki/Yeovil,,
-Q429847,Mircea Paraschiv,,Mircea Paraschiv,Mircea_Paraschiv,1954-12-14,Bucarest,/wiki/Bucarest,,,,,Demi de mêlée
-Q431135,Ron Cribb,,Ron Cribb,Ron_Cribb,1976-07-07,Wanganui,/wiki/Wanganui,,,,194,
-Q432098,Tom Richards,,Tom Richards,Tom_Richards,1882-04-29,Australie,/wiki/Australie,1935-09-25,Brisbane,/wiki/Brisbane,,avant
-Q432329,Paul Sackey,,Paul Sackey,Paul_Sackey,1979-11-08,Londres,/wiki/Londres,,,,183,
-Q433258,Ian McGeechan,,Ian McGeechan,Ian_McGeechan,1946-10-30,Leeds,/wiki/Leeds,,,,174,
-Q433324,Lee Mears,,Lee Mears,Lee_Mears,1979-03-05,Torquay,/wiki/Torquay,,,,,
-Q433334,Phil Vickery,,Phil Vickery,Phil_Vickery,1976-03-14,Barnstaple,/wiki/Barnstaple,,,,190,
-Q433339,Andrew Sheridan,,Andrew Sheridan,Andrew_Sheridan,1979-11-01,Bromley,/wiki/Bromley,,,,195,
-Q433539,Nick Easter,,Nick Easter,Nick_Easter,1978-08-15,Epsom,/wiki/Epsom_(Royaume-Uni),,,,193,
-Q433546,Steve Borthwick,,Steve Borthwick,Steve_Borthwick,1979-10-12,Carlisle,/wiki/Carlisle_(Cumbrie),,,,198,
-Q433551,Lewis Moody,,Lewis Moody,Lewis_Moody,1978-06-12,Ascot,/wiki/Ascot_(Berkshire),,,,195,
-Q433555,Danny Care,,Danny Care,Danny_Care,1987-01-02,Leeds,/wiki/Leeds,,,,173,Demi de mêlée; Demi d'ouverture
-Q433643,Simon Shaw,,Simon Shaw,Simon_Shaw,1973-09-01,Nairobi,/wiki/Nairobi,,,,202,
-Q433670,Dumitru Armășel,No FR WP page,,,,,,,,,,
-Q433780,Mathew Tait,,Mathew Tait,Mathew_Tait,1986-02-06,Shotley Bridge,/w/index.php?title=Shotley_Bridge&action=edit&redlink=1,,,,183,
-Q433791,Mark Cueto,,Mark Cueto,Mark_Cueto,1979-12-26,Workington,/wiki/Workington,,,,183,
-Q433797,Danny Cipriani,,Danny Cipriani,Danny_Cipriani,1987-11-02,Roehampton,/wiki/Roehampton,,,,183,
-Q434398,Jerry Flannery,,Jerry Flannery,Jerry_Flannery,1978-10-17,Galway,/wiki/Galway,,,,180,
-Q434427,David Wallace,,David Wallace,David_Wallace,1976-07-08,Limerick,/wiki/Limerick_(Irlande),,,,188,
-Q434652,Simon Webster,,Simon Webster,Simon_Webster,1981-03-08,Hartlepool,/wiki/Hartlepool,,,,184,
-Q438506,John Yapp,,John Yapp,John_Yapp,1983-04-09,Cardiff,/wiki/Cardiff,,,,188,
-Q438515,Dafydd Jones,,Dafydd Jones,Dafydd_Jones,1979-06-24,Aberystwyth,/wiki/Aberystwyth,,,,198,
-Q439015,Riki Flutey,,Riki Flutey,Riki_Flutey,1980-02-10,Featherston,/wiki/Featherston,,,,180,
-Q439025,Donncha O'Callaghan,,Donncha O'Callaghan,Donncha_O%27Callaghan,1979-03-24,Cork,/wiki/Cork,,,,198,
-Q439402,Tommy Bowe,,Tommy Bowe,Tommy_Bowe,1984-02-22,Comté de Monaghan,/wiki/Comt%C3%A9_de_Monaghan,,,,191,
-Q439413,Harry Ellis,,Harry Ellis,Harry_Ellis,1982-05-17,Wigston,/wiki/Wigston,,,,178,
-Q439453,Keith Earls,,Keith Earls,Keith_Earls,1987-10-02,Limerick,/wiki/Limerick_(Irlande),,,,180,Centre; ailier; arrière
-Q439487,Tomás O'Leary,,Tomás O'Leary,Tom%C3%A1s_O%27Leary,1983-10-22,Cork,/wiki/Cork,,,,174,
-Q439747,Theodor Haag,No FR WP page,,,,,,,,,,
-Q439867,Mark Regan,,Mark Regan,Mark_Regan,1972-01-28,Bristol,/wiki/Bristol_(Royaume-Uni),,,,177,
-Q439880,Joe Worsley,,Joe Worsley,Joe_Worsley,1977-06-14,Redbridge,/wiki/Redbridge_(quartier),,,,195,
-Q440131,Jamie Heaslip,,Jamie Heaslip,Jamie_Heaslip,1983-12-15,Tibériade,/wiki/Tib%C3%A9riade,,,,193,
-Q440625,Martin Corry,,Martin Corry,Martin_Corry,1973-10-12,Birmingham,/wiki/Birmingham,,,,195,
-Q441286,Tom Croft,,Tom Croft,Tom_Croft,1985-04-07,Basingstoke,/wiki/Basingstoke,,,,196,
-Q441972,Tendai Mtawarira,,Tendai Mtawarira,Tendai_Mtawarira,1985-08-01,Harare,/wiki/Harare,,,,183,
-Q443117,Tim Payne,,Tim Payne,Tim_Payne_(rugby_%C3%A0_XV),1979-04-29,Swindon,/wiki/Swindon,,,,185,
-Q446193,Norman Slater,No FR WP page,,,,,,,,,,
-Q446200,Colby Slater,No stint found,Colby Slater,Colby_Slater,1896-04-30,Berkeley,/wiki/Berkeley_(Californie),1965-01-30,Clarksburg,/wiki/Clarksburg_(Californie),191,deuxième ligne
-Q446520,Dudley DeGroot,No FR WP page,,,,,,,,,,
-Q446789,Dai Young,,David Young,David_Young_(rugby),1967-07-26,Aberdare,/wiki/Aberdare_(pays_de_Galles),,,,185,
-Q447937,Jack Kyle,,Jack Kyle,Jack_Kyle,1926-01-10,Belfast,/wiki/Belfast,2014-11-27,Irlande du Nord,/wiki/Irlande_du_Nord,,
-Q447949,Bryn Meredith,,Bryn Meredith,Bryn_Meredith,1930-11-21,Cwmbran,/wiki/Cwmbran,,,,180,
-Q447961,Alun Wyn Jones,,Alun Wyn Jones,Alun_Wyn_Jones,1985-09-19,Swansea,/wiki/Swansea,,,,198,
-Q448009,Jim Telfer,,Jim Telfer,Jim_Telfer,1940-03-17,Pathhead,/wiki/Pathhead_(Midlothian),,,,188,
-Q448172,Syd Millar,,Syd Millar,Syd_Millar,1934-05-23,Ballymena,/wiki/Ballymena,2023-12-10,,,,
-Q448182,Jeremy Guscott,,Jeremy Guscott,Jeremy_Guscott,1965-07-07,Bath,/wiki/Bath,,,,185,
-Q448212,Bobby Windsor,,Bobby Windsor,Bobby_Windsor,1948-01-31,Newport,/wiki/Newport_(pays_de_Galles),,,,175,
-Q448312,Willie John McBride,,Willie-John McBride,Willie-John_McBride,1940-08-06,Toomebridge,/w/index.php?title=Toomebridge&action=edit&redlink=1,,,,194,
-Q448441,Tony O'Reilly,,Tony O'Reilly,Tony_O%27Reilly,1936-05-07,Dublin,/wiki/Dublin,2024-05-18,Dublin,/wiki/Dublin,,
-Q448515,David Nash,No FR WP page,,,,,,,,,,
-Q448825,Will Greenwood,,Will Greenwood,Will_Greenwood,1972-10-20,Blackburn,/wiki/Blackburn,,,,193,
-Q449012,Jamie Roberts,,Jamie Roberts,Jamie_Roberts,1986-11-08,Newport,/wiki/Newport_(pays_de_Galles),,,,193,
-Q449131,Luke Charteris,,Luke Charteris,Luke_Charteris,1983-03-09,Camborne,/wiki/Camborne,,,,210,
-Q452051,Graham Mourie,,Graham Mourie,Graham_Mourie,1952-09-08,Opunake,/wiki/Opunake,,,,183,
-Q452373,Sid Going,,Sid Going,Sid_Going,1943-08-19,Kawakawa,/wiki/Kawakawa,2024-05-17,Maromaku,/wiki/Maromaku,170,
-Q452384,Julien Dupuy,,Julien Dupuy,Julien_Dupuy,1983-12-19,Périgueux,/wiki/P%C3%A9rigueux,,,,178,
-Q453066,Władysław Komar,No stint found,Władysław Komar,W%C5%82adys%C5%82aw_Komar,1940-04-11,Kaunas,/wiki/Kaunas,1998-08-17,Przybiernów,/wiki/Przybiern%C3%B3w,196,
-Q454123,Rob Kearney,,Rob Kearney,Rob_Kearney,1986-03-26,Comté de Louth,/wiki/Comt%C3%A9_de_Louth,,,,185,
-Q455124,Wilson Whineray,,Wilson Whineray,Wilson_Whineray,1935-07-10,Auckland,/wiki/Auckland,2012-10-22,Auckland,/wiki/Auckland,183,
-Q460627,Sam Warburton,,Sam Warburton,Sam_Warburton,1988-10-05,Cardiff,/wiki/Cardiff,,,,188,Troisième ligne aile
-Q460637,Jonathan Davies,,Jonathan Davies,"Jonathan_Davies_(rugby_%C3%A0_XV,_1988)",1988-04-05,Solihull,/wiki/Solihull,,,,186,Centre
-Q460934,Morgan Stoddart,,Morgan Stoddart,Morgan_Stoddart,1984-09-23,Trealaw,/wiki/Trealaw,,,,186,
-Q463531,Jean-Baptiste Charcot,No stint found,Jean-Baptiste Charcot,Jean-Baptiste_Charcot,1867-07-15,Neuilly-sur-Seine,/wiki/Neuilly-sur-Seine,1936-09-16,Islande,/wiki/Islande,,Pilier
-Q465470,Sébastien Chabal,,Sébastien Chabal,S%C3%A9bastien_Chabal,1977-12-08,Valence,/wiki/Valence_(Dr%C3%B4me),,,,191,
-Q469706,Percy Montgomery,,Percy Montgomery,Percy_Montgomery,1974-03-15,Walvis Bay,/wiki/Walvis_Bay,,,,183,
-Q472853,Alan Quinlan,,Alan Quinlan,Alan_Quinlan,1974-07-13,Tipperary,/wiki/Tipperary,,,,190,
-Q474788,Matthew Rees,,Matthew Rees,Matthew_Rees,1980-12-09,Tonyrefail,/wiki/Tonyrefail,,,,188,
-Q475438,Vincent Clerc,,Vincent Clerc,Vincent_Clerc,1981-05-07,Échirolles,/wiki/%C3%89chirolles,,,,178,
-Q496505,Heyneke Meyer,,Heyneke Meyer,Heyneke_Meyer,1967-10-06,Nelspruit,/wiki/Nelspruit,,,,,Entraîneur
-Q500156,Andreas Reckewerth,No FR WP page,,,,,,,,,,
-Q501604,Florian Faure,,Florian Faure,Florian_Faure,1983-03-26,La Tronche,/wiki/La_Tronche,,,,194,
-Q501628,Olivier Chaplain,,Olivier Chaplain,Olivier_Chaplain,1982-01-06,Paris,/wiki/Paris,,,,191,
-Q501868,Mathieu Nicolas,,Matthieu Nicolas,Mathieu_Nicolas,1987-02-11,Valence,/wiki/Valence_(Dr%C3%B4me),,,,180,
-Q501873,Lucas Dupont,,Lucas Dupont,Lucas_Dupont,1990-03-19,Échirolles,/wiki/%C3%89chirolles,,,,178,Ailier
-Q501877,Clément Darbo,,Clément Darbo,Cl%C3%A9ment_Darbo,1986-01-13,Pau,/wiki/Pau,,,,176,demi de mêlée
-Q502251,Massimiliano Capuzzoni,No FR WP page,,,,,,,,,,
-Q503407,James Haskell,,James Haskell,James_Haskell,1985-04-02,Windsor,/wiki/Windsor_(Berkshire),,,,193,
-Q503493,John Bevan,,John Bevan,John_Bevan_(rugby_%C3%A0_XV),1948-03-12,Neath,/wiki/Neath,1986-06-05,Port Talbot,/wiki/Port_Talbot,173,
-Q503776,Andrew Bishop,,Andrew Bishop,Andrew_Bishop,1985-08-07,Llantrisant,/wiki/Llantrisant,,,,183,
-Q504581,Andrew Ellis,,Andy Ellis,Andy_Ellis,1984-02-21,Christchurch,/wiki/Christchurch,,,,182,
-Q505193,Andrew Hore,,Andrew Hore,Andrew_Hore,1978-09-13,Dunedin,/wiki/Dunedin,,,,183,
-Q506299,Andrew Mehrtens,,Andrew Mehrtens,Andrew_Mehrtens,1973-04-28,Durban,/wiki/Durban,,,,178,
-Q506434,Luke Fitzgerald,,Luke Fitzgerald,Luke_Fitzgerald,1987-09-13,Comté de Wicklow,/wiki/Comt%C3%A9_de_Wicklow,,,,185,
-Q506917,Marcos Ayerza,,Marcos Ayerza,Marcos_Ayerza,1983-01-12,Buenos Aires,/wiki/Buenos_Aires,,,,186,
-Q507506,Fabio Staibano,,Fabio Staibano,Fabio_Staibano,1983-04-20,Eboli,/wiki/Eboli,,,,183,
-Q508105,Andrew Trimble,,Andrew Trimble,Andrew_Trimble,1984-10-20,Coleraine,/wiki/Coleraine_(Irlande_du_Nord),,,,188,
-Q508342,André Venter,,André Venter,Andr%C3%A9_Venter,1970-11-14,Vereeniging,/wiki/Vereeniging,,,,195,
-Q509518,Teddy Sadaoui,,Teddy Sadaoui,Teddy_Sadaoui,1983-04-18,Carcassonne,/wiki/Carcassonne,,,,190,Deuxième ligne; centre; ailier
-Q510441,Steve Bainbridge,No stint found,Steve Bainbridge,Steve_Bainbridge,1956-10-07,Newcastle upon Tyne,/wiki/Newcastle_upon_Tyne,,,,200,Deuxième ligne
-Q512161,Juan Severino Somoza,,Juan Severino,Juan_Severino,1981-09-16,,,,,,185,
-Q512413,J. J. Williams,,J. J. Williams,J._J._Williams,1948-04-01,Nantyffyllon,/w/index.php?title=Nantyffyllon&action=edit&redlink=1,2020-10-29,,,175,
-Q513201,Ken Jones,,Ken Jones,"Ken_Jones_(rugby_%C3%A0_XV,_1921)",1921-12-30,Blaenavon,/wiki/Blaenavon,2006-04-18,Newport,/wiki/Newport_(pays_de_Galles),,Ailier
-Q513355,Gert Smal,No FR WP page,,,,,,,,,,
-Q515485,Ricky Januarie,,Enrico Januarie,Enrico_Januarie,1982-02-01,Hopefield,/w/index.php?title=Hopefield_(Afrique_du_Sud)&action=edit&redlink=1,,,,168,
-Q517519,Norm Maxwell,,Norm Maxwell,Norm_Maxwell,1976-03-05,Rawene,/w/index.php?title=Rawene&action=edit&redlink=1,,,,198,
-Q517812,Craig Green,,Craig Green,Craig_Green,1961-03-23,Christchurch,/wiki/Christchurch,,,,178,
-Q517871,Frederick Maurice Watson Harvey,No stint found,Fred Harvey,Frederick_Maurice_Watson_Harvey,1888-09-01,Athboy,/wiki/Athboy,1980-08-24,Fort Macleod,/wiki/Fort_Macleod,,Demi d'ouverture
-Q518014,Laurent Bénézech,,Laurent Bénézech,Laurent_B%C3%A9n%C3%A9zech,1966-12-19,Pamiers,/wiki/Pamiers,,,,183,
-Q518349,Gary Botha,,Gary Botha,Gary_Botha,1981-10-12,Pretoria,/wiki/Pretoria,,,,181,
-Q519164,Wenceslas Lauret,,Wenceslas Lauret,Wenceslas_Lauret,1989-03-28,Tarbes,/wiki/Tarbes,,,,188,troisième ligne aile
-Q519358,Alex Cuthbert,,Alex Cuthbert,Alex_Cuthbert,1990-04-05,Gloucester,/wiki/Gloucester,,,,198,Ailier
-Q519589,Mike Phillips,,Michael Phillips,Michael_Phillips_(rugby_%C3%A0_XV),1982-08-29,Carmarthen,/wiki/Carmarthen,,,,191,
-Q519903,Gavin Hume,,Gavin Hume,Gavin_Hume,1980-03-25,Riversdale,/wiki/Riversdale_(Afrique_du_Sud),,,,187,
-Q521927,Brad Thorn,No stint found,Brad Thorn,Brad_Thorn,1975-02-03,Mosgiel,/wiki/Mosgiel,,,,195,Deuxième ligne
-Q522429,Ned Haig,No stint found,Ned Haig,Ned_Haig,1858-12-07,Jedburgh,/wiki/Jedburgh_(%C3%89cosse),1939-03-29,Melrose,/wiki/Melrose_(%C3%89cosse),,Demi de mêlée
-Q525873,Shane Williams,,Shane Williams,Shane_Williams,1977-02-26,Swansea,/wiki/Swansea,,,,170,
-Q526295,Andy Irvine,,Andy Irvine,Andy_Irvine,1951-09-16,Édimbourg,/wiki/%C3%89dimbourg,,,,177,
-Q527084,Andy Powell,,Andy Powell,Andy_Powell,1981-08-23,Brecon,/wiki/Brecon,,,,193,Troisième ligne centre
-Q528784,Wynand Olivier,,Wynand Olivier,Wynand_Olivier,1983-06-11,Welkom,/wiki/Welkom,,,,186,
-Q531221,Emyr Wyn Lewis,No FR WP page,,,,,,,,,,
-Q532570,Wyatt Crockett,,Wyatt Crockett,Wyatt_Crockett,1983-01-24,Christchurch,/wiki/Christchurch,,,,193,Pilier
-Q533038,William Renwick,No stint found,William Renwick,William_Renwick,1914-11-29,Édimbourg,/wiki/%C3%89dimbourg,1944-06-15,Bolsena,/wiki/Bolsena,,
-Q534779,Tony Spreadbury,No stint found,Tony Spreadbury,Tony_Spreadbury,1962-03-28,Bath,/wiki/Bath,,,,,
-Q537512,Michel Yachvili,,Michel Yachvili,Michel_Yachvili,1946-09-25,Tulle,/wiki/Tulle,,,,178,
-Q537574,Oscar Collodo,No stint found,Oscar Collodo,Oscar_Collodo,1958-08-16,Berne,/wiki/Berne,,,,,Demi d'ouverture
-Q537903,Levan Datunashvili,,Levan Datunashvili,Levan_Datunashvili,1983-01-18,Tbilissi,/wiki/Tbilissi,,,,196,Deuxième ligne; entraîneur
-Q537933,Joe Warbrick,No stint found,Joe Warbrick,Joe_Warbrick,1862-01-01,Rotorua,/wiki/Rotorua,1903-08-30,Waimungu,/w/index.php?title=Waimungu&action=edit&redlink=1,,trois quart
-Q538355,Nelson Dalzell,,Nelson Dalzell,Nelson_Dalzell,1921-04-26,Rotherham,/wiki/Rotherham_(Nouvelle-Z%C3%A9lande),1989-04-30,Christchurch,/wiki/Christchurch,188,Deuxième ligne
-Q539740,Joe Ward,,Joe Ward,Joe_Ward,1980-06-03,Dannevirke,/wiki/Dannevirke,,,,183,
-Q540060,Ken Kennedy,,Ken Kennedy,Ken_Kennedy_(rugby_%C3%A0_XV),1941-05-10,Rochester,/wiki/Rochester_(Kent),2022-07-14,,,182,
-Q540685,Stu Wilson,,Stu Wilson,Stu_Wilson,1954-07-22,Gore,/wiki/Gore_(Nouvelle-Z%C3%A9lande),,,,183,
+origWdId,origName,debugComment,frName,wpPage,birthDate,birthPlace,deathDate,deathPlace,height,positions
+Q5809,Ernesto Guevara,No stint found,Ernesto « Che » Guevara,Che_Guevara,1928-06-14,Rosario (Argentine),1967-10-09,La Higuera,176,
+Q7571,Patricio Albacete,,Patricio Albacete,Patricio_Albacete,1981-02-09,Buenos Aires (Argentine),,,200,
+Q18455,Ben Tune,,Ben Tune,Ben_Tune,1976-12-28,Brisbane (Australie),,,185,
+Q26037,Quade Cooper,,Quade Cooper,Quade_Cooper,1988-04-05,Tokoroa (Nouvelle-Zélande),,,186,
+Q29880,Ben Botica,,Ben Botica,Ben_Botica,1989-10-07,Takapuna (Nouvelle-Zélande),,,178,
+Q31193,Ben Smith,,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),1986-06-01,Dunedin (Nouvelle-Zélande),,,186,
+Q46171,Pekahou Cowan,,Pekahou Cowan,Pekahou_Cowan,1986-06-02,Wellington (Nouvelle-Zélande),,,185,
+Q46223,Stephen Hoiles,,Stephen Hoiles,Stephen_Hoiles,1981-10-13,Sydney (Australie),,,190,
+Q46393,Yoan Audrin,,Yoan Audrin,Yoan_Audrin,1981-08-14,Pézenas (France),,,179,
+Q46396,Benoît Paillaugue,,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,1987-11-17,La Rochelle (France),,,172,
+Q56812,Thomas Combezou,,Thomas Combezou,Thomas_Combezou,1987-01-26,Tulle (France),,,181,
+Q56822,Gerhard Vosloo,,Gerhard Vosloo,Gerhard_Vosloo,1979-05-10,Pretoria (Afrique du Sud),,,188,
+Q56824,Fabien Cibray,,Fabien Cibray,Fabien_Cibray,1985-10-15,Auch (France),,,178,
+Q71268,Hugo Betting,No FR WP page,,,,,,,,
+Q72185,Manu Tuilagi,,Manu Tuilagi,Manu_Tuilagi,1991-05-18,Fogapoa (Samoa),,,183,
+Q75480,Marco Platania,No FR WP page,,,,,,,,
+Q75573,Robins Tchale-Watchou,,Robins Tchale-Watchou,Robins_Tchale-Watchou,1983-05-10,Dschang (Cameroun),,,198,
+Q76869,Toby Flood,,Toby Flood,Toby_Flood,1985-08-08,Frimley (Angleterre),,,188,
+Q77848,Sascha Fischer,,Sascha Fischer,Sascha_Fischer,1971-12-24,Stuttgart (Allemagne de l'Ouest),,,208,
+Q80607,George Pisi,,George Pisi,George_Pisi,1986-06-29,Apia (Samoa),,,188,
+Q82942,Farid Sid,,Farid Sid,Farid_Sid,1979-03-27,Perpignan  (France),,,176,Ailier (à XIII); ailier (à XV)
+Q86108,Clemens von Grumbkow,,Clemens von Grumbkow,Clemens_von_Grumbkow,1983-07-22,Leimen (Allemagne),,,191,
+Q87794,Robert Mohr,,Robert Mohr,Robert_Mohr,1978-08-25,Hanovre (Allemagne de l'Ouest),,,194,
+Q90321,Erwin Thiesies,,Erwin Thiesies,Erwin_Thiesies,1908-08-22,Berlin (Empire allemand),1993-02-18,Hennigsdorf,,
+Q94144,Massimo Ravazzolo,No stint found,Massimo Ravazzolo,Massimo_Ravazzolo,1972-09-05,Calvisano,,,190,Arrière
+Q94780,Joe Rokocoko,,Joe Rokocoko,Joe_Rokocoko,1983-06-06,Nadi (Fidji),,,189,
+Q94814,Ronnie Cooke,,Ronnie Cooke,Ronnie_Cooke,1984-04-05,Pretoria (Afrique du Sud),,,183,
+Q98252,Manuel Wilhelm,No FR WP page,,,,,,,,
+Q101586,Rudolf Finsterer,No FR WP page,,,,,,,,
+Q111624,Shinjirō Honryō,No FR WP page,,,,,,,,
+Q113526,Adriaan Strauss,,Adriaan Strauss,Adriaan_Strauss,1985-11-18,Bloemfontein (Afrique du Sud),,,184,
+Q127613,Patrick Lambie,,Patrick Lambie,Patrick_Lambie,1990-10-17,Durban (Afrique du Sud),,,178,
+Q127618,Chris Ashton,No stint found,Chris Ashton,Chris_Ashton,1987-03-29,Wigan (Angleterre),,,183,
+Q128407,Martín Bustos Moyano,,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,1985-07-12,Córdoba (Argentine),,,186,
+Q131895,Ross Filipo,,Ross Filipo,Ross_Filipo,1979-04-14,Lower Hutt (Nouvelle-Zélande),,,196,
+Q135385,Israel Dagg,,Israel Dagg,Israel_Dagg,1988-06-06,Marton (Nouvelle-Zélande),,,186,
+Q138586,Gurthrö Steenkamp,,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,1981-06-12,Paarl (Afrique du Sud),,,189,
+Q138722,Stephen Donald,,Stephen Donald,Stephen_Donald,1983-12-03,Papakura (Nouvelle-Zélande),,,190,
+Q151533,Sam Whitelock,,Sam Whitelock,Sam_Whitelock,1988-10-12,Palmerston North (Nouvelle-Zélande),,,202,
+Q151572,Victor Vito,,Victor Vito,Victor_Vito,1987-03-27,Wellington (Nouvelle-Zélande),,,192,
+Q163452,Tom James,,Tom James,Tom_James_(rugby_%C3%A0_XV),1987-04-17,Merthyr Tydfil (Pays de Galles),,,187,
+Q165701,Ali Williams,,Ali Williams,Ali_Williams,1981-04-30,Auckland (Nouvelle-Zélande),,,202,
+Q166094,Zane Kirchner,,Zane Kirchner,Zane_Kirchner,1984-06-16,George (Afrique du Sud),,,184,
+Q168675,Francois Pienaar,,Francois Pienaar,Francois_Pienaar,1967-01-02,Vereeniging (Afrique du Sud),,,190,
+Q169368,Jean Monribot,,Jean Monribot,Jean_Monribot,1987-10-11,Lalinde (France),,,184,
+Q169397,Hugo Bonneval,,Hugo Bonneval,Hugo_Bonneval,1990-11-19,Toulouse (France),,,185,
+Q174294,Ian James Clarke,No stint found,Ian Clarke,Ian_Clarke,1931-03-05,Kaponga,1997-06-29,Morrinsville,,Pilier
+Q176596,Clive Rowlands,,Clive Rowlands,Clive_Rowlands,1938-05-14,Upper Cwmtwrch (pays de Galles),2023-07-29,,175,
+Q181263,François Steyn,,François Steyn,Fran%C3%A7ois_Steyn,1987-05-14,Aliwal North (Afrique du Sud),,,191,
+Q188309,Sergio Parisse,,Sergio Parisse,Sergio_Parisse,1983-09-12,La Plata (Argentine),,,196,
+Q193926,Aaron Cruden,,Aaron Cruden,Aaron_Cruden,1989-01-08,Palmerston North (Nouvelle-Zélande),,,178,
+Q194026,Jimmy Cowan,,Jimmy Cowan,Jimmy_Cowan,1982-03-06,Gore (Nouvelle-Zélande),,,182,
+Q200427,Dimitri Szarzewski,,Dimitri Szarzewski,Dimitri_Szarzewski,1983-01-26,Narbonne (France),,,181,
+Q200837,Anthony Tuitavake,,Anthony Tuitavake,Anthony_Tuitavake,1982-02-12,Auckland (Nouvelle-Zélande),,,182,
+Q205288,Zinzan Brooke,,Zinzan Brooke,Zinzan_Brooke,1965-02-14,Waiuku (Nouvelle-Zélande),,,190,

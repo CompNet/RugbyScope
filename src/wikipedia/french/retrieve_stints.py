@@ -170,28 +170,41 @@ for _, player in merged_table.iterrows():
                 td_elt = birth_elt.find_next_siblings()[0]
                 # birth date
                 time_elt = td_elt.find("time")
-                birth_date = time_elt["datetime"]
+                if time_elt:
+                    birth_date = time_elt["datetime"]
+                else:
+                    birth_date = td_elt.contents[0].strip()
                 tlog(2, f"Birth date: {birth_date}")
-                # birth place
                 br_elts = time_elt.find_next_siblings("br")
+                # birth place
                 if len(br_elts) == 0:   # different type of infobox
                     br_elts = time_elt.parent.find_next_siblings("br")
                     if len(br_elts) == 0:   # no birth place
                         a_elt = None
                     else:
-                        a_elt = br_elts[0].find_next_siblings()[0].find_all("a")[0]
+                        tmp_elts = br_elts[0].find_next_siblings()
+                        if len(tmp_elts) > 0: 
+                            a_elt = tmp_elts[0].find_all("a")[0]
+                        else:   # no url
+                            birth_place = br_elts[0].next_sibling.strip()
                 else:
-                    tmp_elt = br_elts[0].find_next_siblings()[0]
-                    if tmp_elt.name == "span":
-                        a_elt = tmp_elt.find_all("a")[0]
-                    else:
-                        a_elt = br_elts[0].find_next_siblings("a")[0]
+                    tmp_elts = br_elts[0].find_next_siblings()
+                    if len(tmp_elts) > 0: 
+                        tmp_elt = tmp_elts[0]
+                        if tmp_elt.name == "span":
+                            a_elt = tmp_elt.find_all("a")[0]
+                        else:
+                            a_elt = br_elts[0].find_next_siblings("a")[0]
+                    else:   # no url
+                        birth_place = br_elts[0].next_sibling.strip()                    
                 if a_elt:
                     birth_place = a_elt.get_text(strip=True)
                     birth_place_url = a_elt["href"]
-                else:
+                # display value
+                if birth_place == "":
                     tlog(2, f"Could not find birth place")
-                tlog(2, f"Birth place: {birth_place}")
+                else:
+                    tlog(2, f"Birth place: {birth_place} ({birth_place_url})")
             else:
                 tlog(2, f"Could not find birth information")
 
@@ -210,19 +223,29 @@ for _, player in merged_table.iterrows():
                     if len(br_elts) == 0:   # no death place
                         a_elt = None
                     else:
-                        a_elt = br_elts[0].find_next_siblings()[0].find_all("a")[0]
+                        tmp_elts = br_elts[0].find_next_siblings()
+                        if len(tmp_elts) > 0: 
+                            a_elt = tmp_elts[0].find_all("a")[0]
+                        else:   # no url
+                            death_place = br_elts[0].next_sibling.strip()
                 else:
-                    tmp_elt = br_elts[0].find_next_siblings()[0]
-                    if tmp_elt.name == "span":
-                        a_elt = tmp_elt.find_all("a")[0]
-                    else:
-                        a_elt = br_elts[0].find_next_siblings("a")[0]
+                    tmp_elts = br_elts[0].find_next_siblings()
+                    if len(tmp_elts) > 0: 
+                        tmp_elt = tmp_elts[0]
+                        if tmp_elt.name == "span":
+                            a_elt = tmp_elt.find_all("a")[0]
+                        else:
+                            a_elt = br_elts[0].find_next_siblings("a")[0]
+                    else:   # no url
+                        death_place = br_elts[0].next_sibling.strip()
                 if a_elt:
                     death_place = a_elt.get_text(strip=True)
                     death_place_url = a_elt["href"]
-                else:
+                # display value
+                if death_place == "":
                     tlog(2, f"Could not find death place")
-                tlog(2, f"Death place: {death_place}")
+                else:
+                    tlog(2, f"Death place: {death_place} ({death_place_url})")
             else:
                 tlog(2, f"Could not find death information")
 
@@ -327,13 +350,14 @@ for _, player in merged_table.iterrows():
                         team_str = ""
                         url_str = ""
                         team_elt = teams_elt[r]
-                        # possibly skip whitespaces, <s> and <i> elements, flags, arrows
+                        # possibly skip whitespaces, <s> <i> and <b> elements, flags, arrows
                         while r < len(teams_elt) and (teams_elt[r].name is None and teams_elt[r].strip() == "" or
                                                       teams_elt[r].name is not None and (teams_elt[r].name == "s" or 
                                                                                          teams_elt[r].name == "i" or
+                                                                                         teams_elt[r].name == "b" or
                                                                                          teams_elt[r].name == "span" and teams_elt[r].has_attr("class") and "flagicon" in teams_elt[r]["class"] or
                                                                                          teams_elt[r].name == "span" and teams_elt[r].has_attr("title") and teams_elt[r]["title"] == "Prêté à")):
-                            if teams_elt[r].name is not None and teams_elt[r].name == "i":
+                            if teams_elt[r].name is not None and (teams_elt[r].name == "i" or teams_elt[r].name == "b"):
                                 skip_rows.append(len(teams))  # list of rows to skip in periods and stats too
                             r = r + 1
                         # retrieve team name
@@ -442,13 +466,11 @@ for _, player in merged_table.iterrows():
                         elif len(skip_rows) > 0:
                             for index in sorted(skip_rows, reverse=True):
                                 del matches[index]
-                            if len(periods) != len(matches):
-                                raise Exception("Inconsistent numbers of periods/match numbers")
                         # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
-                        elif len(periods) > len(matches):
+                        if len(periods) > len(matches):
                             matches.extend([""] * (len(periods) - len(matches)))
                         # otherwise, problem
-                        else:
+                        elif len(periods) < len(matches):
                             raise Exception("Inconsistent numbers of periods/match numbers")
                     if len(periods) != len(points):
                         # if completely empty: complement
@@ -458,13 +480,11 @@ for _, player in merged_table.iterrows():
                         elif len(skip_rows) > 0:
                             for index in sorted(skip_rows, reverse=True):
                                 del points[index]
-                            if len(periods) != len(points):
-                                raise Exception("Inconsistent numbers of periods/points scored")
                         # if missing values, we assume that the last ones are missing (makes sense graphically speaking)
-                        elif len(periods) > len(points):
+                        if len(periods) > len(points):
                             points.extend([""] * (len(periods) - len(points)))
                         # otherwise, problem
-                        else:
+                        elif len(periods) < len(points):
                             raise Exception("Inconsistent numbers of periods/points scored")
 
                     # create stints
