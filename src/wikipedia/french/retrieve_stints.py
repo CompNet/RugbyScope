@@ -47,6 +47,7 @@ DEATH = "Décès"
 HEIGHT = "Taille"
 POSITIONS1 = "Poste"
 POSITIONS2 = "Position"
+POSITIONS3 = "Poste (XV)"
 
 # relevant info sections
 YOUTH_CAREER = "Carrière en junior"
@@ -172,10 +173,11 @@ for _, player in merged_table.iterrows():
                 time_elt = td_elt.find("time")
                 if time_elt:
                     birth_date = time_elt["datetime"]
+                    br_elts = time_elt.find_next_siblings("br")
                 else:
                     birth_date = td_elt.contents[0].strip()
+                    br_elts = td_elt.find_all("br")
                 tlog(2, f"Birth date: {birth_date}")
-                br_elts = time_elt.find_next_siblings("br")
                 # birth place
                 if len(br_elts) == 0:   # different type of infobox
                     br_elts = time_elt.parent.find_next_siblings("br")
@@ -184,7 +186,10 @@ for _, player in merged_table.iterrows():
                     else:
                         tmp_elts = br_elts[0].find_next_siblings()
                         if len(tmp_elts) > 0: 
-                            a_elt = tmp_elts[0].find_all("a")[0]
+                            if tmp_elts[0].name is not None and tmp_elts[0].name == "a":
+                                a_elt = tmp_elts[0]
+                            else:
+                                a_elt = tmp_elts[0].find_all("a")[0]
                         else:   # no url
                             birth_place = br_elts[0].next_sibling.strip()
                 else:
@@ -225,7 +230,10 @@ for _, player in merged_table.iterrows():
                     else:
                         tmp_elts = br_elts[0].find_next_siblings()
                         if len(tmp_elts) > 0: 
-                            a_elt = tmp_elts[0].find_all("a")[0]
+                            if tmp_elts[0].name is not None and tmp_elts[0].name == "a":
+                                a_elt = tmp_elts[0]
+                            else:
+                                a_elt = tmp_elts[0].find_all("a")[0]
                         else:   # no url
                             death_place = br_elts[0].next_sibling.strip()
                 else:
@@ -276,7 +284,7 @@ for _, player in merged_table.iterrows():
                 tlog(2, f"Could not find height")
 
             # positions
-            pos_elt = id_elt.find("th", string=POSITIONS1)
+            pos_elt = id_elt.find("th", string=lambda text: text in [POSITIONS1, POSITIONS3])
             if pos_elt:
                 td_elt = pos_elt.find_next_siblings()[0]
                 a_elts = td_elt.find_all("a", recursive = False)
@@ -316,6 +324,7 @@ for _, player in merged_table.iterrows():
                     periods_elt = td_elts[0].find("span").contents
                     teams_elt = td_elts[1].find("span").contents
                     stats_elt = None
+                    skip_rows = []
                     if len(td_elts) > 2:
                         stats_elt = td_elts[2].contents
 
@@ -323,14 +332,17 @@ for _, player in merged_table.iterrows():
                     r = 0
                     while r < len(periods_elt):
                         period_str = ""
-                        # possibly skip <s> elements
-                        while r < len(periods_elt) and periods_elt[r].name is not None and periods_elt[r].name == "s":
+                        # possibly skip whitespaces, <s> <i> and <b> elements
+                        while r < len(periods_elt) and (periods_elt[r].name is None and periods_elt[r].strip() == "" or
+                                                        periods_elt[r].name is not None and (periods_elt[r].name in ["s", "i", "b"])):
+                            if periods_elt[r].name is not None and periods_elt[r].name in ["i", "b"]:
+                                skip_rows.append(len(teams))  # list of rows to skip in teams and stats too
                             r = r + 1
                         # concatenate text and hyperlink content
-                        while r < len(periods_elt) and (periods_elt[r].name is None or periods_elt[r].name == "a"):
+                        while r < len(periods_elt) and (periods_elt[r].name is None or periods_elt[r].name in ["a", "sup"]):
                             if periods_elt[r].name is None:
                                 period_str = period_str.strip() + " " + periods_elt[r].strip()
-                            else:
+                            elif periods_elt[r].name != "sup":
                                 period_str = period_str.strip() + " " + periods_elt[r].get_text(strip=True)
                             r = r + 1
                         # possibly skip <s> element
@@ -341,20 +353,20 @@ for _, player in merged_table.iterrows():
                         period_str = period_str.replace("- ", "-")
                         period_str = period_str.strip()
                         periods.append(period_str)
-                        r = r + 1   # next row
+                        if r < len(periods_elt): 
+                            r = r + 1   # next row
+                    # possibly add a last one
+                    if len(periods_elt) > 0 and periods_elt[r-1].name is not None and periods_elt[r-1].name == "br":
+                        periods.append("")
                     
                     # loop over br-separated teams
-                    skip_rows = []
                     r = 0
                     while r < len(teams_elt):
                         team_str = ""
                         url_str = ""
-                        team_elt = teams_elt[r]
                         # possibly skip whitespaces, <s> <i> and <b> elements, flags, arrows
                         while r < len(teams_elt) and (teams_elt[r].name is None and teams_elt[r].strip() == "" or
-                                                      teams_elt[r].name is not None and (teams_elt[r].name == "s" or 
-                                                                                         teams_elt[r].name == "i" or
-                                                                                         teams_elt[r].name == "b" or
+                                                      teams_elt[r].name is not None and (teams_elt[r].name in ["s", "i", "b"] or
                                                                                          teams_elt[r].name == "span" and teams_elt[r].has_attr("class") and "flagicon" in teams_elt[r]["class"] or
                                                                                          teams_elt[r].name == "span" and teams_elt[r].has_attr("title") and teams_elt[r]["title"] == "Prêté à")):
                             if teams_elt[r].name is not None and (teams_elt[r].name == "i" or teams_elt[r].name == "b"):
@@ -380,7 +392,14 @@ for _, player in merged_table.iterrows():
                         team_str = team_str.strip()
                         teams.append(team_str)
                         urls.append(url_str)
-                        r = r + 1   # next row
+                        if r < len(teams_elt): 
+                            r = r + 1   # next row
+                    # possibly add a last one
+                    if len(teams_elt) > 0 and teams_elt[r-1].name is not None and teams_elt[r-1].name == "br":
+                        teams.append("")
+                        urls.append("")
+                    
+                    # possibly remove superfluous entries (titles in the infobox)                        
                     if len(skip_rows) > 0:
                         for index in sorted(skip_rows, reverse=True):
                             del teams[index]
@@ -406,56 +425,39 @@ for _, player in merged_table.iterrows():
                     else:
                         r = 0
                         while r < len(stats_elt):
-                            stat_elt = stats_elt[r]
-                            # possibly skip <s> element
-                            if stat_elt.name is not None and stat_elt.name == "s":
+                            stat_str = ""
+                            # possibly skip whitespaces, <s> elements
+                            while r < len(stats_elt) and (stats_elt[r].name is None and stats_elt[r].strip() == "" or
+                                                        stats_elt[r].name is not None and stats_elt[r].name == "s"):
                                 r = r + 1
-                                stat_elt = stats_elt[r]
-                            # possibly skip empty element
-                            if stat_elt.name is None and stat_elt.strip() == "":
+                            # retrieve stat string
+                            while r < len(stats_elt) and (stats_elt[r].name is None or stats_elt[r].name != "br"):
+                                # if text: add to string
+                                if stats_elt[r].name is None:
+                                    stat_str = stat_str.strip() + " " + stats_elt[r].strip()
+                                # anything else but <s> or <sup>: also add to string
+                                elif stats_elt[r].name not in ["s", "sup"]:
+                                    stat_str = stat_str.strip() + " " + stats_elt[r].get_text(strip=True).strip()
                                 r = r + 1
-                                stat_elt = stats_elt[r]
-                            # possibly skip <s> elements
-                            while stat_elt.name is not None and stat_elt.name == "s":
-                                r = r + 1
-                                stat_elt = stats_elt[r]
-                            # if <br> => no value
-                            if stat_elt.name is not None and stat_elt.name == "br":
+                            # clean final string
+                            stat_str = stat_str.replace(u"\xa0", u" ")
+                            stat_str = stat_str.strip()
+                            stat_str = stat_str.replace("  ", " ")
+                            # retrieve values
+                            if stat_str in ["", "?", "-", "–"]:
                                 matches.append("")
                                 points.append("")
-                            # otherwise, extract content
                             else:
-                                if stat_elt.name is None:
-                                    str = stat_elt.strip()
-                                else:
-                                    str = stat_elt.get_text(strip=True).strip()
-                                r = r + 1   # next element
-                                # possibly skip <s> element
-                                seen_s = False
-                                while r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "s":
-                                    r = r + 1
-                                    stat_elt = stats_elt[r]
-                                    seen_s = True
-                                if seen_s and stat_elt.name is None:
-                                    str = str + stat_elt.strip()
-                                    r = r + 1
-                                # retrieve values
-                                str = str.replace(u"\xa0", u" ")
-                                if str == "?":
-                                    matches.append("")
-                                    points.append("")
-                                else:
-                                    pattern = r"^(\d+\+?|\?+|-)[^\d]*\((\d? ?\d+\+?|\?+|-)\)"
-                                    vals = re.findall(pattern, str)
-                                    matches.append(vals[0][0])
-                                    points.append(vals[0][1])
-                                # possibly skip <sup> elements
-                                while r < len(stats_elt) and stats_elt[r].name is not None and stats_elt[r].name == "sup":
-                                    r = r + 1
-                                # possibly skip empty text
-                                if r < len(stats_elt) and stats_elt[r].name is None and stats_elt[r].strip() == "":
-                                    r = r + 1
-                            r = r + 1       # go to next row
+                                pattern = r"^(\d+\+?|\?+|-)[^\d]*\((\d? ?\d+\+?|\?+|-)\)"
+                                vals = re.findall(pattern, stat_str)
+                                matches.append(vals[0][0])
+                                points.append(vals[0][1])
+                            if r < len(stats_elt): 
+                                r = r + 1   # next row
+                        # possibly add a last one
+                        if len(stats_elt) > 0 and stats_elt[r-1].name is not None and stats_elt[r-1].name == "br":
+                            matches.append("")
+                            points.append("")
                     
                     # check list lengths are consistent
                     if len(periods) != len(matches):

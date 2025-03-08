@@ -1,56 +1,11 @@
-origWdId,origName,debugComment,frName,wpPage,birthDate,birthPlace,deathDate,deathPlace,height,positions
-Q5809,Ernesto Guevara,No stint found,Ernesto « Che » Guevara,Che_Guevara,1928-06-14,Rosario (Argentine),1967-10-09,La Higuera,176,
-Q7571,Patricio Albacete,,Patricio Albacete,Patricio_Albacete,1981-02-09,Buenos Aires (Argentine),,,200,
-Q18455,Ben Tune,,Ben Tune,Ben_Tune,1976-12-28,Brisbane (Australie),,,185,
-Q26037,Quade Cooper,,Quade Cooper,Quade_Cooper,1988-04-05,Tokoroa (Nouvelle-Zélande),,,186,
-Q29880,Ben Botica,,Ben Botica,Ben_Botica,1989-10-07,Takapuna (Nouvelle-Zélande),,,178,
-Q31193,Ben Smith,,Ben Smith,Ben_Smith_(rugby_%C3%A0_XV),1986-06-01,Dunedin (Nouvelle-Zélande),,,186,
-Q46171,Pekahou Cowan,,Pekahou Cowan,Pekahou_Cowan,1986-06-02,Wellington (Nouvelle-Zélande),,,185,
-Q46223,Stephen Hoiles,,Stephen Hoiles,Stephen_Hoiles,1981-10-13,Sydney (Australie),,,190,
-Q46393,Yoan Audrin,,Yoan Audrin,Yoan_Audrin,1981-08-14,Pézenas (France),,,179,
-Q46396,Benoît Paillaugue,,Benoît Paillaugue,Beno%C3%AEt_Paillaugue,1987-11-17,La Rochelle (France),,,172,
-Q56812,Thomas Combezou,,Thomas Combezou,Thomas_Combezou,1987-01-26,Tulle (France),,,181,
-Q56822,Gerhard Vosloo,,Gerhard Vosloo,Gerhard_Vosloo,1979-05-10,Pretoria (Afrique du Sud),,,188,
-Q56824,Fabien Cibray,,Fabien Cibray,Fabien_Cibray,1985-10-15,Auch (France),,,178,
-Q71268,Hugo Betting,No FR WP page,,,,,,,,
-Q72185,Manu Tuilagi,,Manu Tuilagi,Manu_Tuilagi,1991-05-18,Fogapoa (Samoa),,,183,
-Q75480,Marco Platania,No FR WP page,,,,,,,,
-Q75573,Robins Tchale-Watchou,,Robins Tchale-Watchou,Robins_Tchale-Watchou,1983-05-10,Dschang (Cameroun),,,198,
-Q76869,Toby Flood,,Toby Flood,Toby_Flood,1985-08-08,Frimley (Angleterre),,,188,
-Q77848,Sascha Fischer,,Sascha Fischer,Sascha_Fischer,1971-12-24,Stuttgart (Allemagne de l'Ouest),,,208,
-Q80607,George Pisi,,George Pisi,George_Pisi,1986-06-29,Apia (Samoa),,,188,
-Q82942,Farid Sid,,Farid Sid,Farid_Sid,1979-03-27,Perpignan  (France),,,176,Ailier (à XIII); ailier (à XV)
-Q86108,Clemens von Grumbkow,,Clemens von Grumbkow,Clemens_von_Grumbkow,1983-07-22,Leimen (Allemagne),,,191,
-Q87794,Robert Mohr,,Robert Mohr,Robert_Mohr,1978-08-25,Hanovre (Allemagne de l'Ouest),,,194,
-Q90321,Erwin Thiesies,,Erwin Thiesies,Erwin_Thiesies,1908-08-22,Berlin (Empire allemand),1993-02-18,Hennigsdorf,,
-Q94144,Massimo Ravazzolo,No stint found,Massimo Ravazzolo,Massimo_Ravazzolo,1972-09-05,Calvisano,,,190,Arrière
-Q94780,Joe Rokocoko,,Joe Rokocoko,Joe_Rokocoko,1983-06-06,Nadi (Fidji),,,189,
-Q94814,Ronnie Cooke,,Ronnie Cooke,Ronnie_Cooke,1984-04-05,Pretoria (Afrique du Sud),,,183,
-Q98252,Manuel Wilhelm,No FR WP page,,,,,,,,
-Q101586,Rudolf Finsterer,No FR WP page,,,,,,,,
-Q111624,Shinjirō Honryō,No FR WP page,,,,,,,,
-Q113526,Adriaan Strauss,,Adriaan Strauss,Adriaan_Strauss,1985-11-18,Bloemfontein (Afrique du Sud),,,184,
-Q127613,Patrick Lambie,,Patrick Lambie,Patrick_Lambie,1990-10-17,Durban (Afrique du Sud),,,178,
-Q127618,Chris Ashton,No stint found,Chris Ashton,Chris_Ashton,1987-03-29,Wigan (Angleterre),,,183,
-Q128407,Martín Bustos Moyano,,Martín Bustos Moyano,Mart%C3%ADn_Bustos_Moyano,1985-07-12,Córdoba (Argentine),,,186,
-Q131895,Ross Filipo,,Ross Filipo,Ross_Filipo,1979-04-14,Lower Hutt (Nouvelle-Zélande),,,196,
-Q135385,Israel Dagg,,Israel Dagg,Israel_Dagg,1988-06-06,Marton (Nouvelle-Zélande),,,186,
-Q138586,Gurthrö Steenkamp,,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,1981-06-12,Paarl (Afrique du Sud),,,189,
-Q138722,Stephen Donald,,Stephen Donald,Stephen_Donald,1983-12-03,Papakura (Nouvelle-Zélande),,,190,
-Q151533,Sam Whitelock,,Sam Whitelock,Sam_Whitelock,1988-10-12,Palmerston North (Nouvelle-Zélande),,,202,
-Q151572,Victor Vito,,Victor Vito,Victor_Vito,1987-03-27,Wellington (Nouvelle-Zélande),,,192,
-Q163452,Tom James,,Tom James,Tom_James_(rugby_%C3%A0_XV),1987-04-17,Merthyr Tydfil (Pays de Galles),,,187,
-Q165701,Ali Williams,,Ali Williams,Ali_Williams,1981-04-30,Auckland (Nouvelle-Zélande),,,202,
-Q166094,Zane Kirchner,,Zane Kirchner,Zane_Kirchner,1984-06-16,George (Afrique du Sud),,,184,
-Q168675,Francois Pienaar,,Francois Pienaar,Francois_Pienaar,1967-01-02,Vereeniging (Afrique du Sud),,,190,
-Q169368,Jean Monribot,,Jean Monribot,Jean_Monribot,1987-10-11,Lalinde (France),,,184,
-Q169397,Hugo Bonneval,,Hugo Bonneval,Hugo_Bonneval,1990-11-19,Toulouse (France),,,185,
-Q174294,Ian James Clarke,No stint found,Ian Clarke,Ian_Clarke,1931-03-05,Kaponga,1997-06-29,Morrinsville,,Pilier
-Q176596,Clive Rowlands,,Clive Rowlands,Clive_Rowlands,1938-05-14,Upper Cwmtwrch (pays de Galles),2023-07-29,,175,
-Q181263,François Steyn,,François Steyn,Fran%C3%A7ois_Steyn,1987-05-14,Aliwal North (Afrique du Sud),,,191,
-Q188309,Sergio Parisse,,Sergio Parisse,Sergio_Parisse,1983-09-12,La Plata (Argentine),,,196,
-Q193926,Aaron Cruden,,Aaron Cruden,Aaron_Cruden,1989-01-08,Palmerston North (Nouvelle-Zélande),,,178,
-Q194026,Jimmy Cowan,,Jimmy Cowan,Jimmy_Cowan,1982-03-06,Gore (Nouvelle-Zélande),,,182,
-Q200427,Dimitri Szarzewski,,Dimitri Szarzewski,Dimitri_Szarzewski,1983-01-26,Narbonne (France),,,181,
-Q200837,Anthony Tuitavake,,Anthony Tuitavake,Anthony_Tuitavake,1982-02-12,Auckland (Nouvelle-Zélande),,,182,
-Q205288,Zinzan Brooke,,Zinzan Brooke,Zinzan_Brooke,1965-02-14,Waiuku (Nouvelle-Zélande),,,190,
+origWdId,origName,debugComment,frName,wpPage,birthDate,birthPlace,birthPlaceWP,deathDate,deathPlace,deathPlaceWP,height,positions
+Q2419858,Gaston Lane,,Gaston Lane,Gaston_Lane,1883-01-23,Paris,/wiki/Paris,1914-09-23,Lironville,/wiki/Lironville,168,Ailier; centre
+Q2420452,Dean Richards,,Dean Richards,Dean_Richards,1963-07-11,Nuneaton,/wiki/Nuneaton,,,,191,troisième ligne centre
+Q2420532,Mathurin Barbier,,Mathurin Barbier,Mathurin_Barbier,1981-07-16,Chenôve,/wiki/Chen%C3%B4ve,,,,184,Ailier; arrière
+Q2421296,Vickus Liebenberg,,Vickus Liebenberg,Vickus_Liebenberg,1985-02-20,Upington,/wiki/Upington,,,,198,Deuxième ligne
+Q2421605,Jo Maso,,Jo Maso,Jo_Maso,1944-12-27,Toulouse,/wiki/Toulouse,,,,178,centre; demi d'ouverture
+Q2421928,Geraint Lewis,,Geraint Lewis,Geraint_Lewis,1974-01-12,Pontypridd,/wiki/Pontypridd,,,,190,Troisième ligne aile; troisième ligne centre
+Q2423674,George Parsons,,George Parsons,George_Parsons,1926-04-21,Newbridge,/w/index.php?title=Newbridge_(pays_de_Galles)&action=edit&redlink=1,2009-11-24,Llangynidr,/wiki/Llangynidr,,Pilier; Deuxième ligne
+Q2424180,Robert Barbieri,,Robert Barbieri,Robert_Barbieri,1984-06-05,Toronto,/wiki/Toronto,,,,185,Troisième ligne aile; troisième ligne centre
+Q2440114,Tom Smith,,Tom Smith,"Tom_Smith_(rugby_%C3%A0_XV,_1971)",1971-10-31,Londres,/wiki/Londres,2022-04-06,Libourne,/wiki/Libourne,177,pilier
+Q2442574,Tony Gray,No FR WP page,,,,,,,,,,
