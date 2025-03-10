@@ -1,11 +1,976 @@
 origWdId,origName,debugComment,frName,wpPage,birthDate,birthPlace,birthPlaceWP,deathDate,deathPlace,deathPlaceWP,height,positions
-Q2419858,Gaston Lane,,Gaston Lane,Gaston_Lane,1883-01-23,Paris,/wiki/Paris,1914-09-23,Lironville,/wiki/Lironville,168,Ailier; centre
-Q2420452,Dean Richards,,Dean Richards,Dean_Richards,1963-07-11,Nuneaton,/wiki/Nuneaton,,,,191,troisième ligne centre
-Q2420532,Mathurin Barbier,,Mathurin Barbier,Mathurin_Barbier,1981-07-16,Chenôve,/wiki/Chen%C3%B4ve,,,,184,Ailier; arrière
-Q2421296,Vickus Liebenberg,,Vickus Liebenberg,Vickus_Liebenberg,1985-02-20,Upington,/wiki/Upington,,,,198,Deuxième ligne
-Q2421605,Jo Maso,,Jo Maso,Jo_Maso,1944-12-27,Toulouse,/wiki/Toulouse,,,,178,centre; demi d'ouverture
-Q2421928,Geraint Lewis,,Geraint Lewis,Geraint_Lewis,1974-01-12,Pontypridd,/wiki/Pontypridd,,,,190,Troisième ligne aile; troisième ligne centre
-Q2423674,George Parsons,,George Parsons,George_Parsons,1926-04-21,Newbridge,/w/index.php?title=Newbridge_(pays_de_Galles)&action=edit&redlink=1,2009-11-24,Llangynidr,/wiki/Llangynidr,,Pilier; Deuxième ligne
-Q2424180,Robert Barbieri,,Robert Barbieri,Robert_Barbieri,1984-06-05,Toronto,/wiki/Toronto,,,,185,Troisième ligne aile; troisième ligne centre
-Q2440114,Tom Smith,,Tom Smith,"Tom_Smith_(rugby_%C3%A0_XV,_1971)",1971-10-31,Londres,/wiki/Londres,2022-04-06,Libourne,/wiki/Libourne,177,pilier
-Q2442574,Tony Gray,No FR WP page,,,,,,,,,,
+Q47456232,Manuel Leindekar,,Manuel Leindekar,Manuel_Leindekar,1997-04-23,Montevideo,/wiki/Montevideo,,,,202,Deuxième ligne
+Q47463673,Clinton Stringfellow,No FR WP page,,,,,,,,,,
+Q47463746,Conor McKeon,No FR WP page,,,,,,,,,,
+Q47464174,Abe Munro,No FR WP page,,,,,,,,,,
+Q47464970,Solomon T-Pole,No FR WP page,,,,,,,,,,
+Q47464979,Alex Woonton,No FR WP page,,,,,,,,,,
+Q47464984,Shin Dong-won,No FR WP page,,,,,,,,,,
+Q47464991,Ryuichiro Fukutsubo,No FR WP page,,,,,,,,,,
+Q47465010,Youichi Fujita Tarrig,No FR WP page,,,,,,,,,,
+Q47465012,Josh Gordon,No FR WP page,,,,,,,,,,
+Q47465042,Wang Su-yeok,No FR WP page,,,,,,,,,,
+Q47465056,Nick Ross,No FR WP page,,,,,,,,,,
+Q47465077,Liam Dunne,No FR WP page,,,,,,,,,,
+Q47466566,Robert Lindsay-Watson,No FR WP page,,,,,,,,,,
+Q47468632,Bert Grenside,No FR WP page,,,,,,,,,,
+Q47468702,Alexandre Pilati,,Alexandre Pilati,Alexandre_Pilati,1996-01-24,Bordeaux,/wiki/Bordeaux,,,,178,Arrière; Ailier
+Q47470199,Harry Jones,No FR WP page,,,,,,,,,,
+Q47477040,Levi Douglas,,Levi Douglas,Levi_Douglas,1995-09-01,Greenwich,/wiki/Greenwich_(Londres),,,,196,Deuxième ligne
+Q47482450,Alexi Balès,,Alexi Balès,Alexi_Bal%C3%A8s,1990-05-30,Fumel,/wiki/Fumel,,,,174,Demi de mêlée
+Q47483003,Yusuke Niwai,No FR WP page,,,,,,,,,,
+Q47483034,Mick Cossey,No FR WP page,,,,,,,,,,
+Q47483978,Matthys Basson,No FR WP page,,,,,,,,,,
+Q47484012,Ruben van Heerden,No FR WP page,,,,,,,,,,
+Q47484014,Hendré Stassen,,Hendré Stassen,Hendr%C3%A9_Stassen,1997-12-29,Boksburg,/wiki/Boksburg,,,,2,Deuxième ligne; troisième ligne aile
+Q47484016,Aston Fortuin,No FR WP page,,,,,,,,,,
+Q47487395,Terry Reid,No FR WP page,,,,,,,,,,
+Q47488393,Cedate Gomes Sa,,Cedate Gomes Sa,Cedate_Gomes_Sa,1993-08-07,Canchungo,/wiki/Canchungo,,,,185,Pilier
+Q47489113,Alec Hepburn,,Alec Hepburn,Alec_Hepburn,1993-03-30,Perth,/wiki/Perth_(Australie-Occidentale),,,,185,Pilier gauche
+Q47490703,Aaron Wainwright,,Aaron Wainwright,Aaron_Wainwright,1997-09-25,Newport,/wiki/Newport_(pays_de_Galles),,,,188,Troisième ligne aile; troisième ligne centre
+Q47490719,Jared Rosser,No FR WP page,,,,,,,,,,
+Q47490721,Arwel Robson,No FR WP page,,,,,,,,,,
+Q47498739,Barry Thomas,No FR WP page,,,,,,,,,,
+Q47498945,Kerron van Vuuren,No FR WP page,,,,,,,,,,
+Q47499040,Wian Vosloo,No FR WP page,,,,,,,,,,
+Q47499654,Mick Bremner,No FR WP page,,,,,,,,,,
+Q47500960,Iñaki Laskurain,No FR WP page,,,,,,,,,,
+Q47501393,Gordon Rimmer,No FR WP page,,,,,,,,,,
+Q47507807,Jordan Olowofela,No FR WP page,,,,,,,,,,
+Q47510814,Bertrand Perez,No FR WP page,,,,,,,,,,
+Q47523496,Ronald Rankin,No FR WP page,,,,,,,,,,
+Q47526576,Adrien Pélissié,,Adrien Pélissié,Adrien_P%C3%A9lissi%C3%A9,1990-08-07,Septfonds,/wiki/Septfonds,,,,180,talonneur
+Q47528441,Hacjivah Dayimani,,Hacjivah Dayimani,Hacjivah_Dayimani,1997-09-23,Le Cap,/wiki/Le_Cap,,,,188,Troisième ligne centre; troisième ligne aile
+Q47528443,Rhyno Herbst,No FR WP page,,,,,,,,,,
+Q47528471,Aphiwe Dyantyi,,Aphiwe Dyantyi,Aphiwe_Dyantyi,1994-08-26,East London,/wiki/East_London,,,,182,Ailier; centre
+Q47528473,Len Massyn,No FR WP page,,,,,,,,,,
+Q47528475,Willie Engelbrecht,No FR WP page,,,,,,,,,,
+Q47537821,Christian Scotland-Williamson,No FR WP page,,,,,,,,,,
+Q47538622,Seilala Lam,,Seilala Lam,Seilala_Lam,1989-02-18,Hamilton,/wiki/Hamilton_(Nouvelle-Z%C3%A9lande),,,,183,Talonneur; troisième ligne aile
+Q47541613,Ian Harvey,No FR WP page,,,,,,,,,,
+Q47541989,Adam Parker,No FR WP page,,,,,,,,,,
+Q47542030,Scott Lawrence,No FR WP page,,,,,,,,,,
+Q47542201,Atsushi Koga,No FR WP page,,,,,,,,,,
+Q47542695,John Dalziel,No FR WP page,,,,,,,,,,
+Q47545596,Naoto Nakamura,No FR WP page,,,,,,,,,,
+Q47545601,Greg Smith,No FR WP page,,,,,,,,,,
+Q47545629,Brian O'Donnell,No FR WP page,,,,,,,,,,
+Q47545723,George Norton,No FR WP page,,,,,,,,,,
+Q47546458,John Major,No FR WP page,,,,,,,,,,
+Q47546477,Graham Williams,No FR WP page,,,,,,,,,,
+Q47546734,Doug Wilson,No FR WP page,,,,,,,,,,
+Q47580967,Corey Thomas,No FR WP page,,,,,,,,,,
+Q47581016,Nicolas Kraska,,Nicolas Kraska,Nicolas_Kraska,1989-06-17,,,,,,177,Ailier; centre
+Q47581634,Eito Tamura,No FR WP page,,,,,,,,,,
+Q47582059,Yūsuke Hamazato,No FR WP page,,,,,,,,,,
+Q47582250,Benjamin Saunders,No FR WP page,,,,,,,,,,
+Q47582301,Joe Iongi,No FR WP page,,,,,,,,,,
+Q47582433,Masaki Kawabata,No FR WP page,,,,,,,,,,
+Q47582529,Shōta Saiguchi,No FR WP page,,,,,,,,,,
+Q47582787,Lee Jin-seok,No FR WP page,,,,,,,,,,
+Q47582855,George Risale,No FR WP page,,,,,,,,,,
+Q47583020,Yoshimi Watanabe,No FR WP page,,,,,,,,,,
+Q47583083,Ierome Jeffrey Tsuyoshi,No FR WP page,,,,,,,,,,
+Q47713291,Kevon Williams,No FR WP page,,,,,,,,,,
+Q48185083,Jonny McPhillips,No FR WP page,,,,,,,,,,
+Q48193407,Juarno Augustus,,Juarno Augustus,Juarno_Augustus,1997-12-09,Alexander Bay,/wiki/Alexander_Bay_(Afrique_du_Sud),,,,185,Troisième ligne centre
+Q48193418,Eduard Zandberg,No FR WP page,,,,,,,,,,
+Q48193436,Teti Tela,,Teti Tela,Teti_Tela,1991-03-07,Levuka,/wiki/Levuka,,,,176,Demi d'ouverture; centre; arrière
+Q48194207,Paul de Wet,No FR WP page,,,,,,,,,,
+Q48194217,Craig Barry,No FR WP page,,,,,,,,,,
+Q48249423,Simon Garrouteigt,,Simon Garrouteigt,Simon_Garrouteigt,1996-05-07,Dax,/wiki/Dax,,,,173,Demi de mêlée
+Q48308192,Gaëtan Robert,,Gaëtan Robert,Ga%C3%ABtan_Robert,1997-07-13,Dax,/wiki/Dax,,,,180,Demi d'ouverture
+Q48317950,Guillaume Mathy,No FR WP page,,,,,,,,,,
+Q48452237,Ben Glynn,No FR WP page,,,,,,,,,,
+Q48471804,Etene Nanai-Seturo,,Etene Nanai-Seturo,Etene_Nanai-Seturo,1999-08-20,Auckland,/wiki/Auckland,,,,186,Ailier; arrière
+Q48472477,Ben Landry,,Ben Landry,Ben_Landry,1991-03-26,Pewaukee (Wisconsin),/wiki/Pewaukee_(Wisconsin),,,,198,Deuxième ligne; troisième ligne
+Q48534468,John Poland,No FR WP page,,,,,,,,,,
+Q48639077,Mathieu Babillot,,Mathieu Babillot,Mathieu_Babillot,1993-09-09,Chartres,/wiki/Chartres,,,,190,Troisième ligne aile
+Q48644216,Marney Cunningham,No FR WP page,,,,,,,,,,
+Q48689154,Harry Johnson-Holmes,,Harry Johnson-Holmes,Harry_Johnson-Holmes,1997-03-02,Cowra,/wiki/Cowra,,,,186,Pilier
+Q48689241,Maclean Jones,No FR WP page,,,,,,,,,,
+Q48689260,Nick Palmer,No FR WP page,,,,,,,,,,
+Q48689292,Irae Simone,,Irae Simone,Irae_Simone,1995-07-10,Auckland,/wiki/Auckland,,,,193,Centre
+Q48689293,Lachlan Swinton,,Lachlan Swinton,Lachlan_Swinton,1997-01-16,Sydney,/wiki/Sydney,,,,195,Troisième ligne aile; deuxième ligne
+Q48689296,Kelly Meafua,No FR WP page,,,,,,,,,,
+Q48718276,Taliaʻuli Liavaʻa,No FR WP page,,,,,,,,,,
+Q48720254,Taipaleti Tuʻuta,No FR WP page,,,,,,,,,,
+Q48752374,Thierry Fournier,,Thierry Fournier,Thierry_Fournier_(rugby_%C3%A0_XV),1959-10-08,Alger,/wiki/Alger,,,,,
+Q48759436,Jean-Philippe Cassan,,Jean-Philippe Cassan,Jean-Philippe_Cassan,1989-02-27,Aurillac,/wiki/Aurillac,,,,177,Centre
+Q48761090,Emersen Tamura,No FR WP page,,,,,,,,,,
+Q48761091,Patrice Péron,,Patrice Péron,Patrice_P%C3%A9ron,1949-06-20,Colombes,/wiki/Colombes,,,,183,Troisième ligne aile
+Q48761097,Gérard Rousset,,Gérard Rousset,G%C3%A9rard_Rousset_(rugby_%C3%A0_XV),1953-01-31,Bourg-lès-Valence,/wiki/Bourg-l%C3%A8s-Valence,,,,192,Troisième ligne aile
+Q48761640,Finau Tupa,No FR WP page,,,,,,,,,,
+Q48761710,Michael Bond,,Michael Bond,Michael_Bond_(rugby_%C3%A0_XV),1987-01-27,,,,,,179,Centre
+Q48761842,Lee Myung-jun,No FR WP page,,,,,,,,,,
+Q48761904,Havili Richard Arthur,No FR WP page,,,,,,,,,,
+Q48762053,Ryūto Kosugi,No FR WP page,,,,,,,,,,
+Q48762188,Franklin Calugay,No FR WP page,,,,,,,,,,
+Q48762243,Jack Cornelsen,,Jack Cornelsen,Jack_Cornelsen,1994-10-13,Gold Coast,/wiki/Gold_Coast,,,,195,Deuxième ligne; troisième ligne aile; troisième ligne centre
+Q48762375,Amanaki Saumaki,,Amanaki Saumaki,Amanaki_Saumaki,1997-03-08,,,,,,191,Deuxième ligne; troisième ligne aile; troisième ligne centre
+Q48762687,Daniel Ricky Kucia,No FR WP page,,,,,,,,,,
+Q48762774,Joseph Tupe,No FR WP page,,,,,,,,,,
+Q48762965,Son Young-ki,No FR WP page,,,,,,,,,,
+Q48763160,Songeta Tomashi,No FR WP page,,,,,,,,,,
+Q48763255,Malietoa Hingano,,Malietoa Hingano,Malietoa_Hingano,1992-01-27,Manly,/wiki/Manly_(Sydney),,,,184,Centre; ailier
+Q48763277,Tarōma Tōgō,No FR WP page,,,,,,,,,,
+Q48763282,Ittetsu Sasaki,No FR WP page,,,,,,,,,,
+Q48763390,Kazushi Nakamura,No FR WP page,,,,,,,,,,
+Q48763433,Naoya Toyoshima,No FR WP page,,,,,,,,,,
+Q48763556,Kuniya Sonoki,No FR WP page,,,,,,,,,,
+Q48763652,Takahisa Ono,No FR WP page,,,,,,,,,,
+Q48763823,Yūta Matsui,No FR WP page,,,,,,,,,,
+Q48763886,Akihiro Fujita,No FR WP page,,,,,,,,,,
+Q48763982,Akihiro Tagawa,No FR WP page,,,,,,,,,,
+Q48764057,Kazuto Ozawa,No FR WP page,,,,,,,,,,
+Q48764220,Shōhei Ozawa,No FR WP page,,,,,,,,,,
+Q48764267,Naoki Tomatani,No FR WP page,,,,,,,,,,
+Q48764418,Shogo Shinoda,No FR WP page,,,,,,,,,,
+Q48764638,Ryo Motegi,No FR WP page,,,,,,,,,,
+Q48764661,Kōta Yamane,No FR WP page,,,,,,,,,,
+Q48764808,Kentarō Uemura,No FR WP page,,,,,,,,,,
+Q48764892,Yūki Go,No FR WP page,,,,,,,,,,
+Q48765074,Makoto Tsuchiya,No FR WP page,,,,,,,,,,
+Q48765156,Haruka Ōkubo,No FR WP page,,,,,,,,,,
+Q48765279,Takehiro Kimura,No FR WP page,,,,,,,,,,
+Q48765324,Toshiyuki Shōji,No FR WP page,,,,,,,,,,
+Q48765491,Takehiro Nishimura,No FR WP page,,,,,,,,,,
+Q48765515,Jun'ya Ri,No FR WP page,,,,,,,,,,
+Q48765612,Taiki Kurogi,No FR WP page,,,,,,,,,,
+Q48765655,Ryōya Sakamoto,No FR WP page,,,,,,,,,,
+Q48778144,John Welch,,John Welch,John_Welch,1947-08-26,Llanelli,/wiki/Llanelli,,,,170,Demi de mêlée
+Q48780679,Kōhei Kichijō,No FR WP page,,,,,,,,,,
+Q48781090,Yūsuke Tokota,No FR WP page,,,,,,,,,,
+Q48789074,Marco Riccioni,,Marco Riccioni,Marco_Riccioni,1997-10-19,Teramo,/wiki/Teramo,,,,183,Pilier droit
+Q48792294,Will Jordan,,Will Jordan,Will_Jordan,1998-02-24,Christchurch,/wiki/Christchurch,,,,188,Arrière; ailier
+Q48803865,Caleb Clarke,,Caleb Clarke,Caleb_Clarke,1999-03-29,Auckland,/wiki/Auckland,,,,189,Ailier
+Q48804099,Josh McKay,,Josh McKay,Josh_McKay,1997-10-10,Christchurch,/wiki/Christchurch,,,,184,Arrière; ailier
+Q48804101,James Blackwell,No FR WP page,,,,,,,,,,
+Q48815536,James Moore,,James Moore,James_Moore_(rugby_%C3%A0_XV),1993-06-11,Brisbane,/wiki/Brisbane,,,,195,Deuxième ligne; troisième ligne aile
+Q48815774,Max Williams,No FR WP page,,,,,,,,,,
+Q48817533,Harry Simmons,No FR WP page,,,,,,,,,,
+Q48853751,Javier Díaz,No FR WP page,,,,,,,,,,
+Q48853754,Nicolás Leiva,No FR WP page,,,,,,,,,,
+Q48913616,Andrea Di Giandomenico,No FR WP page,,,,,,,,,,
+Q48977772,Dewi Cross,No FR WP page,,,,,,,,,,
+Q49150651,Anthony Bouthier,,Anthony Bouthier,Anthony_Bouthier,1992-06-19,Pouillon,/wiki/Pouillon_(Landes),,,,182,arrière; demi d'ouverture
+Q49168334,Ryan Matyas,No FR WP page,,,,,,,,,,
+Q49497665,Adrian Tinca,No FR WP page,,,,,,,,,,
+Q49497821,Jean-Claude Lafon,,Jean-Claude Lafon,Jean-Claude_Lafon,1942-10-02,Arcachon,/wiki/Arcachon,,,,175,Demi d'ouverture; centre; arrière
+Q49561403,Darren Yapp,No FR WP page,,,,,,,,,,
+Q49776852,JP Sauni,No FR WP page,,,,,,,,,,
+Q49777766,Mitch Short,No FR WP page,,,,,,,,,,
+Q49780208,Carlü Sadie,,Carlü Sadie,Carl%C3%BC_Sadie,1997-05-07,Bellville,/wiki/Bellville_(Afrique_du_Sud),,,,182,Pilier
+Q49789714,Kitione Ratu,No FR WP page,,,,,,,,,,
+Q49789738,Sama Malolo,,Sama Malolo,Sama_Malolo,1998-02-19,Mount Wellington,/wiki/Mount_Wellington_(Auckland),,,,183,Talonneur; troisième ligne centre; troisième ligne aile
+Q49793783,David Manako,No FR WP page,,,,,,,,,,
+Q49988437,Cameron Stones,No stint found,Cameron Stones,Cameron_Stones,1992-01-05,,,,,,191,
+Q50030127,Florian Vialelle,,Florian Vialelle,Florian_Vialelle,1993-10-05,Castres,/wiki/Castres,,,,185,centre; ailier
+Q50043147,Swin Hadley,No FR WP page,,,,,,,,,,
+Q50067797,Antonio Kiri Kiri,No FR WP page,,,,,,,,,,
+Q50095865,Bill Hadley,No FR WP page,,,,,,,,,,
+Q50124849,Callum Chick,,Callum Chick,Callum_Chick,1996-11-25,Newcastle upon Tyne,/wiki/Newcastle_upon_Tyne,,,,192,Troisième ligne centre
+Q50128589,Liviu Hodorcă,No FR WP page,,,,,,,,,,
+Q50135522,Bogdan Voicu,No FR WP page,,,,,,,,,,
+Q50136223,Jérôme Bosviel,,Jérôme Bosviel,J%C3%A9r%C3%B4me_Bosviel,1990-04-07,,,,,,185,Arrière; demi d'ouverture
+Q50136662,Cristian Podea,No FR WP page,,,,,,,,,,
+Q50137956,Marius Pantelimon,No FR WP page,,,,,,,,,,
+Q50141033,Marius Niculai,No FR WP page,,,,,,,,,,
+Q50190760,Iulian Andrei,No FR WP page,,,,,,,,,,
+Q50202967,Hanco Germishuys,,Hanco Germishuys,Hanco_Germishuys,1996-08-24,Kimberley,/wiki/Kimberley_(Afrique_du_Sud),,,,188,Troisième ligne aile; troisième ligne centre
+Q50214295,Marco van Staden,,Marco van Staden,Marco_van_Staden,1995-08-25,Krugersdorp,/wiki/Krugersdorp,,,,184,Troisième ligne aile
+Q50220611,Pone Fa’amuasili,,Pone Fa'amausili,Pone_Fa%27amausili,1997-02-26,Melbourne,/wiki/Melbourne,,,,196,Pilier
+Q50232224,Mihai Ciolacu,No FR WP page,,,,,,,,,,
+Q50261880,Emori Katalau,No FR WP page,,,,,,,,,,
+Q50264233,Alasika Taufa,No FR WP page,,,,,,,,,,
+Q50282176,Brett Gillespie,No FR WP page,,,,,,,,,,
+Q50285530,Kalivati Tawake,,Kalivati Tawake,Kalivati_Tawake,1988-11-16,,,,,,182,pilier
+Q50286736,Itsuki Ōnishi,No FR WP page,,,,,,,,,,
+Q50286760,Kaisei Kasahara,No FR WP page,,,,,,,,,,
+Q50286790,Jyonon Kim,No FR WP page,,,,,,,,,,
+Q50286799,Kyō Yoshida,No FR WP page,,,,,,,,,,
+Q50286817,Yūki Okada,No FR WP page,,,,,,,,,,
+Q50286824,Keita Suzuki,No FR WP page,,,,,,,,,,
+Q50289665,Mark Bakewell,No FR WP page,,,,,,,,,,
+Q50301733,Lucio López Fleming,No FR WP page,,,,,,,,,,
+Q50308995,Max Crumpton,No FR WP page,,,,,,,,,,
+Q50313518,Derek Jelley,No FR WP page,,,,,,,,,,
+Q50315235,Daniel Chiriac,No FR WP page,,,,,,,,,,
+Q50321982,Corey Baldwin,No FR WP page,,,,,,,,,,
+Q50349416,Antonin Psurny,No FR WP page,,,,,,,,,,
+Q50358624,Akuila Mafi,No FR WP page,,,,,,,,,,
+Q50364699,Dimitri Vaotoa,,Dimitri Vaotoa,Dimitri_Vaotoa,1989-05-17,Nouméa,/wiki/Noum%C3%A9a,,,,190,Troisième ligne centre
+Q50364705,Pierre Bourgarit,,Pierre Bourgarit,Pierre_Bourgarit,1997-09-12,Gimont,/wiki/Gimont,,,,184,Talonneur
+Q50364785,Théo Dachary,,Théo Dachary,Th%C3%A9o_Dachary,1997-03-26,Mont-de-Marsan,/wiki/Mont-de-Marsan,,,,184,Centre
+Q50365542,Sam Moore,No FR WP page,,,,,,,,,,
+Q50365644,Steve Moore,No FR WP page,,,,,,,,,,
+Q50365652,Grant Williams,,Grant Williams,Grant_Williams_(rugby_%C3%A0_XV),1996-07-22,Paarl,/wiki/Paarl,,,,174,Demi de mêlée; ailier
+Q50368975,Anacleto Altigieri,No FR WP page,,,,,,,,,,
+Q50372078,Vilimoni Koroi,No FR WP page,,,,,,,,,,
+Q50385516,Marius Simionescu,No FR WP page,,,,,,,,,,
+Q50390208,Gordon Kinvig,No FR WP page,,,,,,,,,,
+Q50394056,Will Rowlands,,Will Rowlands,Will_Rowlands,1991-09-19,Hammersmith,/wiki/Hammersmith_(Londres),,,,202,Deuxième ligne
+Q50504606,Ștefan Demici,No FR WP page,,,,,,,,,,
+Q50505281,Psalm Wooching,No FR WP page,,,,,,,,,,
+Q50506058,Joe Simmonds,,Joe Simmonds,Joe_Simmonds,1996-12-19,Torquay,/wiki/Torquay,,,,183,Demi d'ouverture
+Q50555150,Connal McInerney,No FR WP page,,,,,,,,,,
+Q50567755,Salmaan Moerat,,Salmaan Moerat,Salmaan_Moerat,1998-03-06,Paarl,/wiki/Paarl,,,,2,Deuxième ligne
+Q50571065,Bruce Craig,No FR WP page,,,,,,,,,,
+Q50572184,Frank O'Driscoll,No FR WP page,,,,,,,,,,
+Q50572263,Barry O'Driscoll,No FR WP page,,,,,,,,,,
+Q50601946,Mahe Vailanu,No FR WP page,,,,,,,,,,
+Q50630459,Jules Gimbert,,Jules Gimbert,Jules_Gimbert,1998-03-02,Bordeaux,/wiki/Bordeaux,,,,170,demi de mêlée
+Q50640639,Tetuhi Roberts,No FR WP page,,,,,,,,,,
+Q50640664,Daichi Akiyama,No FR WP page,,,,,,,,,,
+Q50640760,Brodi McCurran,No FR WP page,,,,,,,,,,
+Q50640807,Kyō Furuta,No FR WP page,,,,,,,,,,
+Q50640908,Ryūsei Katō,No FR WP page,,,,,,,,,,
+Q50640947,Shota Fukui,No FR WP page,,,,,,,,,,
+Q50641003,Nobuhisa Takahashi,No FR WP page,,,,,,,,,,
+Q50641040,Yūichi Hisadomi,No FR WP page,,,,,,,,,,
+Q50641155,Shōtarō Hirai,No FR WP page,,,,,,,,,,
+Q50641176,Tomoki Saita,No FR WP page,,,,,,,,,,
+Q50641270,Daiki Satō,No FR WP page,,,,,,,,,,
+Q50641313,Kōhei Kire,No FR WP page,,,,,,,,,,
+Q50641387,Yuki Ikeda,No FR WP page,,,,,,,,,,
+Q50641531,Ryōma Nakamura,No FR WP page,,,,,,,,,,
+Q50641560,Shuta Fukushi,No FR WP page,,,,,,,,,,
+Q50641618,Nobutaka Kanto,No FR WP page,,,,,,,,,,
+Q50641645,Yūjirō Sasaki,No FR WP page,,,,,,,,,,
+Q50641694,Atsushi Minami,No FR WP page,,,,,,,,,,
+Q50641761,Shūta Ujiie,No FR WP page,,,,,,,,,,
+Q50641889,Gōsuke Kawakami,No FR WP page,,,,,,,,,,
+Q50641905,Yūki Hiyane,No FR WP page,,,,,,,,,,
+Q50642042,Tatsuki Tsuchiya,No FR WP page,,,,,,,,,,
+Q50642100,Yoshiki Hika,No FR WP page,,,,,,,,,,
+Q50772610,Michelangelo Biondelli,No FR WP page,,,,,,,,,,
+Q50807539,Tudor Butnariu,No FR WP page,,,,,,,,,,
+Q50807587,Daniel Plai,No FR WP page,,,,,,,,,,
+Q50809406,Anzor Sitchinava,No FR WP page,,,,,,,,,,
+Q50810842,Julien Bartoli,No FR WP page,,,,,,,,,,
+Q50825747,Cody Melphy,No FR WP page,,,,,,,,,,
+Q50875012,Jordan Lay,,Jordan Lay,Jordan_Lay,1992-11-05,Moto'otua,/wiki/Apia,,,,184,Pilier
+Q50875088,Tadhg Leader,No FR WP page,,,,,,,,,,
+Q50894788,Brian Tuilagi,,Brian Tuilagi,Brian_Tuilagi,1994-03-16,Apia,/wiki/Apia,,,,191,troisième ligne aile
+Q51078800,Pierre Huguet,,Pierre Huguet,Pierre_Huguet_(rugby_%C3%A0_XV),1995-11-05,Châtellerault,/wiki/Ch%C3%A2tellerault,,,,194,Troisième ligne aile
+Q51093703,James Grayson,No FR WP page,,,,,,,,,,
+Q51095507,Will Allman,No FR WP page,,,,,,,,,,
+Q51128579,Jeff Thwaites,No FR WP page,,,,,,,,,,
+Q51128813,Baylin Sullivan,No FR WP page,,,,,,,,,,
+Q51128814,Karl Tu’inukuafe,,Karl Tuʻinukuafe,Karl_Tu%CA%BBinukuafe,1993-02-21,Auckland,/wiki/Auckland,,,,182,Pilier
+Q51129066,Brett Cameron,,Brett Cameron,Brett_Cameron,1996-10-04,Wanganui,/wiki/Wanganui,,,,171,Demi d'ouverture
+Q51159679,Boris Palu,,Boris Palu,Boris_Palu,1996-02-04,Toulouse,/wiki/Toulouse,,,,193,Troisième ligne aile; deuxième ligne
+Q51166179,Ippei Yamamoto,No FR WP page,,,,,,,,,,
+Q51166283,Kazan Watanabe,No FR WP page,,,,,,,,,,
+Q51166305,Shintarō Yasui,No FR WP page,,,,,,,,,,
+Q51166359,Mapei Tabata,No FR WP page,,,,,,,,,,
+Q51166381,Sōichirō Tanahashi,No FR WP page,,,,,,,,,,
+Q51166472,Takehiro Kitsuki,No FR WP page,,,,,,,,,,
+Q51166495,Yūki Yamada,No FR WP page,,,,,,,,,,
+Q51166586,Kazuto Tokunaga,No FR WP page,,,,,,,,,,
+Q51166602,Kōtarō Hirohata,No FR WP page,,,,,,,,,,
+Q51166702,Kazuma Hirata,No FR WP page,,,,,,,,,,
+Q51166765,Wataru Obara,No FR WP page,,,,,,,,,,
+Q51166815,Kōtarō Komori,No FR WP page,,,,,,,,,,
+Q51166833,Kōtarō Nakao,No FR WP page,,,,,,,,,,
+Q51166882,Daisuke Kodama,No FR WP page,,,,,,,,,,
+Q51166898,Mitsuaki Motomura,No FR WP page,,,,,,,,,,
+Q51167001,Katsuya Yoshida,No FR WP page,,,,,,,,,,
+Q51167009,Noriaki Nakazuru,No FR WP page,,,,,,,,,,
+Q51167035,Yuma Fujino,No FR WP page,,,,,,,,,,
+Q51167051,Hyōsuke Watanabe,No FR WP page,,,,,,,,,,
+Q51167088,Ken Mizuno,No FR WP page,,,,,,,,,,
+Q51167103,Gō Maeda,No FR WP page,,,,,,,,,,
+Q51275869,André Bester,No stint found,André Bester,Andr%C3%A9_Bester,1965-10-26,,,,,,,Talonneur
+Q51325049,William Edward Ashley Cummins,No FR WP page,,,,,,,,,,
+Q51448373,Marino Mikaele-Tu’u,,Marino Mikaele-Tu'u,Marino_Mikaele-Tu%27u,1997-06-11,Miramar,/wiki/Miramar_(Nouvelle-Z%C3%A9lande),,,,191,Troisième ligne centre; troisième ligne aile
+Q51485768,Bernard Lavigne,,Bernard Lavigne,Bernard_Lavigne_(1894-1926),1894-03-27,Lévignacq,/wiki/L%C3%A9vignacq,1926-06-01,Lévignacq,/wiki/L%C3%A9vignacq,170,Centre
+Q51530260,Orbyn Leger,No FR WP page,,,,,,,,,,
+Q51530476,Richard Judd,No FR WP page,,,,,,,,,,
+Q51555363,Ciaran Gaffney,No FR WP page,,,,,,,,,,
+Q51573468,Morgan Morris,No FR WP page,,,,,,,,,,
+Q51574120,Yōsuke Sano,No FR WP page,,,,,,,,,,
+Q51574180,Shinsuke Iseki,No FR WP page,,,,,,,,,,
+Q51574242,Hirofumi Onoda,No FR WP page,,,,,,,,,,
+Q51574353,Kōki Satō,No FR WP page,,,,,,,,,,
+Q51574401,Keiji Ikeda,No FR WP page,,,,,,,,,,
+Q51574413,Takahiro Ōyama,No FR WP page,,,,,,,,,,
+Q51574459,Masato Ura,No FR WP page,,,,,,,,,,
+Q51574492,Shintaro Urakawa,No FR WP page,,,,,,,,,,
+Q51574556,Kazuto Yamashita,No FR WP page,,,,,,,,,,
+Q51574598,Kazuma Nishi,No FR WP page,,,,,,,,,,
+Q51594292,Victor Delmas,,Victor Delmas,Victor_Delmas,1991-05-31,,,,,,189,Pilier
+Q51603965,Mark Roche,No FR WP page,,,,,,,,,,
+Q51624644,Jordan Petaia,,Jordan Petaia,Jordan_Petaia,2000-03-14,Werribee,/wiki/Werribee,,,,190,Ailier; centre; arrière
+Q51625455,Douglas Jackson,No FR WP page,,,,,,,,,,
+Q51670976,Donald Brighouse,No FR WP page,,,,,,,,,,
+Q51719838,Ballie Wahl,No FR WP page,,,,,,,,,,
+Q51720640,Wilfrid Lowry,No FR WP page,,,,,,,,,,
+Q51754360,Ben Cima,No FR WP page,,,,,,,,,,
+Q51754491,Fred Tuilagi,No FR WP page,,,,,,,,,,
+Q51754686,Max Denmark,No FR WP page,,,,,,,,,,
+Q51767718,Conán O'Donnell,No FR WP page,,,,,,,,,,
+Q51828390,Michael Oakman-Hunt,No FR WP page,,,,,,,,,,
+Q51834770,Heino Bezuidenhout,No FR WP page,,,,,,,,,,
+Q51835421,Ryan Oosthuizen,No stint found,Ryan Oosthuizen,Ryan_Oosthuizen,1995-05-22,,,,,,,Centre
+Q51846054,Tevita Va`enuku,No FR WP page,,,,,,,,,,
+Q51879436,Ben Nee-Nee,No FR WP page,,,,,,,,,,
+Q51879437,Jordan Hyland,No FR WP page,,,,,,,,,,
+Q51882540,Matheus da Cruz Daniel,No FR WP page,,,,,,,,,,
+Q51884231,Ernst Stapelberg,No FR WP page,,,,,,,,,,
+Q51914670,Ryuji Yonemura,No FR WP page,,,,,,,,,,
+Q51914691,Kōhei Horigome,No FR WP page,,,,,,,,,,
+Q51914993,Takuya Shima,No FR WP page,,,,,,,,,,
+Q51915164,Ryōta Nakanishi,No FR WP page,,,,,,,,,,
+Q51925631,Isaac Miller,,Isaac Miller,Isaac_Miller,1994-06-21,Edimbourg,/wiki/Edimbourg,,,,178,Talonneur
+Q51955043,Cornel Popescu,No FR WP page,,,,,,,,,,
+Q52081439,Louis Birkett,No FR WP page,,,,,,,,,,
+Q52083950,Guy Thompson,No FR WP page,,,,,,,,,,
+Q52084542,Dylan Moss,No FR WP page,,,,,,,,,,
+Q52084553,Kieran Williams,No FR WP page,,,,,,,,,,
+Q52084831,James Ratti,,James Ratti,James_Ratti,1997-10-14,Swansea,/wiki/Swansea,,,,193,Deuxième ligne; troisième ligne centre; troisième ligne aile
+Q52084834,Dewi Lake,,Dewi Lake,Dewi_Lake,1999-05-16,Bridgend,/wiki/Bridgend,,,,185,Talonneur
+Q52084835,Tiaan Thomas-Wheeler,No FR WP page,,,,,,,,,,
+Q52106763,Nate Brakeley,,Nate Brakeley,Nate_Brakeley,1989-08-31,Marblehead,/wiki/Marblehead,,,,198,Deuxième ligne; troisième ligne
+Q52106765,Dylan Fawsitt,,Dylan Fawsitt,Dylan_Fawsitt,1990-07-24,Wexford,/wiki/Wexford,,,,183,Talonneur
+Q52145502,Harrison Allan,No FR WP page,,,,,,,,,,
+Q52145503,Tumua Manu,,Tumua Manu,Tumua_Manu,1993-04-18,Apia,/wiki/Apia,,,,183,Centre; ailier
+Q52145620,AJ Alatimu,,AJ Alatimu,AJ_Alatimu,1993-03-25,Apia,/wiki/Apia,,,,173,Demi d'ouverture; centre
+Q52145974,Tim Sampson,No FR WP page,,,,,,,,,,
+Q52261009,Harry Hoopert,No FR WP page,,,,,,,,,,
+Q52321066,Pouvalu Latukefu,No FR WP page,,,,,,,,,,
+Q52324417,Cameron Woki,,Cameron Woki,Cameron_Woki,1998-11-07,Saint-Denis,/wiki/Saint-Denis_(Seine-Saint-Denis),,,,196,Troisième ligne aile; deuxième ligne
+Q52324886,Iban Etcheverry,,Iban Etcheverry,Iban_Etcheverry,1998-10-23,Bayonne,/wiki/Bayonne,,,,178,Ailier; Arrière
+Q52339077,Tito Cicciò,No FR WP page,,,,,,,,,,
+Q52376741,Genki Kitamura,No FR WP page,,,,,,,,,,
+Q52419550,Nicolae Vereș,No FR WP page,,,,,,,,,,
+Q52419853,Jacopo Giangrande,No FR WP page,,,,,,,,,,
+Q52450934,Cillian Gallagher,No FR WP page,,,,,,,,,,
+Q52607318,Jesse Parete,No FR WP page,,,,,,,,,,
+Q52621185,Ehren Painter,No FR WP page,,,,,,,,,,
+Q52637787,Malon Al-Jiboori,,Malon Al-Jiboori,Malon_Al-Jiboori,1997-09-04,Tulsa,/wiki/Tulsa,,,,188,Troisième ligne
+Q52662095,Pete Laverick,No FR WP page,,,,,,,,,,
+Q52662099,Tom Lawday,No FR WP page,,,,,,,,,,
+Q52662105,Ed Holmes,No FR WP page,,,,,,,,,,
+Q52662112,Tom Hendrickson,No FR WP page,,,,,,,,,,
+Q52663654,Santiago Medrano,,Santiago Medrano,Santiago_Medrano,1996-05-06,Bella Vista,/w/index.php?title=Bella_Vista_(Buenos_Aires)&action=edit&redlink=1,,,,185,Pilier
+Q52673451,Josh Bayliss,,Josh Bayliss,Josh_Bayliss,1997-09-18,Tiverton,/wiki/Tiverton_(Devon),,,,192,Troisième ligne aile; troisième ligne centre
+Q52673458,Darren Atkins,No FR WP page,,,,,,,,,,
+Q52675654,Terrence Hepetema,,Terrence Hepetema,Terrence_Hepetema,1992-01-03,Angleterre,/wiki/Angleterre,,,,183,Centre
+Q52697015,Louis Carbonel,,Louis Carbonel,Louis_Carbonel,1999-02-04,Toulon,/wiki/Toulon,,,,180,Demi d'ouverture
+Q52710159,Takau Lutua,No FR WP page,,,,,,,,,,
+Q52770133,Muller du Plessis,No FR WP page,,,,,,,,,,
+Q52770627,Lyndon Dunshea,No FR WP page,,,,,,,,,,
+Q52781784,Nelson Babrow,No FR WP page,,,,,,,,,,
+Q52818720,Billy Keast,No FR WP page,,,,,,,,,,
+Q52919912,Tom Seabrook,No FR WP page,,,,,,,,,,
+Q52983419,Jacob Botica,No FR WP page,,,,,,,,,,
+Q53010140,Lasha Macharashvili,,Lasha Macharashvili,Lasha_Macharashvili,1998-11-13,Dedoplistsqaro,/wiki/Dedoplistsqaro,,,,183,Pilier droit
+Q53010147,Luka Japaridze,,Luka Japaridze,Luka_Japaridze,1998-09-06,Mestia,/wiki/Mestia,,,,181,Pilier droit
+Q53010152,Tengiz Zamtaradze,No FR WP page,,,,,,,,,,
+Q53010938,Beka Saghinadze,,Beka Saghinadze,Beka_Saghinadze,1998-10-29,Bolnissi,/wiki/Bolnissi,,,,191,Troisième ligne
+Q53096939,Sandro Svanidze,,Sandro Svanidze,Sandro_Svanidze,1998-10-27,Koutaïssi,/wiki/Kouta%C3%AFssi,,,,192,Centre; Ailier
+Q53097451,Demur Tapladze,,Demur Tapladze,Demur_Tapladze,2000-03-18,Koutaïssi,/wiki/Kouta%C3%AFssi,,,,191,Centre; ailier
+Q53211155,Tima Fainga'anuku,,Tima Fainga'anuku,Tima_Fainga%27anuku,1997-04-26,Nuku'alofa,/wiki/Nuku%27alofa,,,,188,Ailier
+Q53212908,Siaosi Mahoni,,Siaosi Mahoni,Siaosi_Mahoni,1997-01-29,East Palo Alto,/wiki/East_Palo_Alto,,,,202,Deuxième ligne
+Q53567201,Ray Ofisa,No FR WP page,,,,,,,,,,
+Q53567679,Eroni Sau,,Eroni Sau,Eroni_Sau,1990-02-05,Yasawa,/wiki/Yasawa_(%C3%AEle),,,,185,Ailier
+Q53567735,Dylan Audsley,No FR WP page,,,,,,,,,,
+Q53673514,Giorgi Kharaishvili,,Gia Kharaishvili,Gia_Kharaishvili,1999-02-13,Khachouri,/wiki/Khachouri,,,,180,Pilier
+Q53679203,Mark McDermott,No FR WP page,,,,,,,,,,
+Q53756727,Johan Heunis,No FR WP page,,,,,,,,,,
+Q53764880,Tatsuhiro Nagai,No FR WP page,,,,,,,,,,
+Q53764890,Kazuma Nakagawa,No FR WP page,,,,,,,,,,
+Q53764897,Takato Okabe,No FR WP page,,,,,,,,,,
+Q53764920,Takumi Adachi,No FR WP page,,,,,,,,,,
+Q53764927,Yokoyama Yōsuke,No FR WP page,,,,,,,,,,
+Q53764945,Atomu Shirai,No FR WP page,,,,,,,,,,
+Q53764947,Yūdai Kameyama,No FR WP page,,,,,,,,,,
+Q53764961,Yūji Shimogama,No FR WP page,,,,,,,,,,
+Q53764963,Chikara Morita,No FR WP page,,,,,,,,,,
+Q53764979,Kruger Latu,No FR WP page,,,,,,,,,,
+Q53764988,Taihei Kusaka,No FR WP page,,,,,,,,,,
+Q53765009,Keito Moribayashi,No FR WP page,,,,,,,,,,
+Q53765018,Raku Yamaoka,No FR WP page,,,,,,,,,,
+Q53844732,Gheorghe Gajion,,Gheorghe Gajion,Gheorghe_Gajion,1992-11-13,Chișinău,/wiki/Chi%C8%99in%C4%83u,,,,190,Pilier
+Q53844819,Lesley Klim,,Lesley Klim,Lesley_Klim,1995-01-16,Keetmanshoop,/wiki/Keetmanshoop,,,,187,Ailier; centre
+Q53870639,Ilia Spanderashvili,No FR WP page,,,,,,,,,,
+Q53870692,Matt Matich,No FR WP page,,,,,,,,,,
+Q53870718,Badri Liparteliani,No FR WP page,,,,,,,,,,
+Q53871261,Cameron Redpath,,Cameron Redpath,Cameron_Redpath,1999-12-23,Narbonne,/wiki/Narbonne,,,,185,Centre; arrière; demi d'ouverture
+Q53871272,Ben Earl,,Ben Earl,Ben_Earl,1998-01-07,Redhill,/wiki/Redhill_(Surrey),,,,186,Troisième ligne aile; troisième ligne centre
+Q53871491,James Venter,No FR WP page,,,,,,,,,,
+Q53911655,Tom Cruse,No FR WP page,,,,,,,,,,
+Q54007307,Gaston Cortes,No FR WP page,,,,,,,,,,
+Q54010250,Jan-Louis la Grange,No FR WP page,,,,,,,,,,
+Q54010320,Siya Masuku,No FR WP page,,,,,,,,,,
+Q54010342,Manuel Rass,No FR WP page,,,,,,,,,,
+Q54079004,Guram Shengelia,No FR WP page,,,,,,,,,,
+Q54102694,Jonny Murphy,No FR WP page,,,,,,,,,,
+Q54142651,Alberto Saccardo,No FR WP page,,,,,,,,,,
+Q54223672,Morgan Crowe,No FR WP page,,,,,,,,,,
+Q54257514,Benjamin Erb,No FR WP page,,,,,,,,,,
+Q54268303,Lachlan Grant,No FR WP page,,,,,,,,,,
+Q54290819,Ryōma Nishimura,No FR WP page,,,,,,,,,,
+Q54291518,Tornike Jalaghonia,,Tornike Jalagonia,Tornike_Jalagonia,1998-12-12,Tbilissi,/wiki/Tbilissi,,,,188,Troisième ligne centre; troisième ligne aile
+Q54292236,Taumua Naeata,No FR WP page,,,,,,,,,,
+Q54292354,Katsuya Ōkuma,No FR WP page,,,,,,,,,,
+Q54292417,Sohn Seunggi,No FR WP page,,,,,,,,,,
+Q54292597,Ryōma Kuhara,No FR WP page,,,,,,,,,,
+Q54292756,Ataru Nishikawa,No FR WP page,,,,,,,,,,
+Q54292840,Hiroki Hanada,No FR WP page,,,,,,,,,,
+Q54292975,Hisanori Mimata,No FR WP page,,,,,,,,,,
+Q54293023,Genta Hoshino,No FR WP page,,,,,,,,,,
+Q54293066,Shōtarō Tsuoka,No FR WP page,,,,,,,,,,
+Q54293115,Taishi Nakamura,No FR WP page,,,,,,,,,,
+Q54293242,Hayato Akahira,No FR WP page,,,,,,,,,,
+Q54293268,Takumi Fujii,No FR WP page,,,,,,,,,,
+Q54293463,Akito Fujinami,No FR WP page,,,,,,,,,,
+Q54293504,Ryō Furuta,No FR WP page,,,,,,,,,,
+Q54358365,Ruben de Haas,,Ruben de Haas,Ruben_de_Haas,1998-10-09,George,/wiki/George_(Afrique_du_Sud),,,,183,Demi de mêlée
+Q54366169,Mikheil Alania,,Mikheil Alania,Mikheil_Alania,2000-11-19,Tbilissi,/wiki/Tbilissi,,,,177,Demi de mêlée
+Q54481171,Frederick Maxwell,No FR WP page,,,,,,,,,,
+Q54818218,Will Safe,No FR WP page,,,,,,,,,,
+Q54859732,Harry Walker,No FR WP page,,,,,,,,,,
+Q54859879,Eric MacKay,No FR WP page,,,,,,,,,,
+Q54861061,Leroy Van Dam,No FR WP page,,,,,,,,,,
+Q54861308,Dan Babos,No FR WP page,,,,,,,,,,
+Q54861310,Taine Basham,,Taine Basham,Taine_Basham,1999-11-02,Newport,/wiki/Newport_(pays_de_Galles),,,,183,Troisième ligne aile; Troisième ligne centre
+Q54861418,Reinach Venter,No FR WP page,,,,,,,,,,
+Q54861609,Senitiki Nayalo,No FR WP page,,,,,,,,,,
+Q54861677,Oliver Zono,No FR WP page,,,,,,,,,,
+Q54862542,Sione Tahaafe,No FR WP page,,,,,,,,,,
+Q54867534,Kanta Watanabe,No FR WP page,,,,,,,,,,
+Q54867541,Shinsuke Igoshi,No FR WP page,,,,,,,,,,
+Q54867549,Norifumi Hashimoto,No FR WP page,,,,,,,,,,
+Q54867555,Masayoshi Takezawa,No FR WP page,,,,,,,,,,
+Q54867569,Yuki Ishii,No FR WP page,,,,,,,,,,
+Q54867573,Han Jyon Mun,No FR WP page,,,,,,,,,,
+Q54867580,Kōtarō Furukawa,No FR WP page,,,,,,,,,,
+Q54867590,Joe Kamana,No FR WP page,,,,,,,,,,
+Q54867634,Kim Seon-Gyu,No FR WP page,,,,,,,,,,
+Q54867641,Shun Sasaki,No FR WP page,,,,,,,,,,
+Q54867650,Na Kwang-young,No FR WP page,,,,,,,,,,
+Q54867685,Tomoya Yamamura,No FR WP page,,,,,,,,,,
+Q54867703,Kenta Fukuda,,Kenta Fukuda福田 健太,Kenta_Fukuda,1996-12-19,Misato,/wiki/Misato_(Saitama),,,,173,Demi de mêlée
+Q54868524,Fritz Grunebaum,No FR WP page,,,,,,,,,,
+Q54869096,Alexandre Lacaze,,Alexandre Lacaze,Alexandre_Lacaze,1989-07-24,,,,,,185,centre; demi d'ouverture
+Q54887000,Tristan Labouteley,,Tristan Labouteley,Tristan_Labouteley,1995-04-12,Mont-Saint-Martin,/wiki/Mont-Saint-Martin_(Meurthe-et-Moselle),,,,202,Deuxième ligne
+Q54913837,Salvatore Bonetti,No FR WP page,,,,,,,,,,
+Q54995092,Leva Fifita,,Leva Fifita,Leva_Fifita,1989-07-29,Vava'u,/wiki/Vava%27u,,,,195,Deuxième ligne
+Q55050536,Shingo Satō,No FR WP page,,,,,,,,,,
+Q55062286,Vivian Weston,No FR WP page,,,,,,,,,,
+Q55080950,Joel Bennett Ringer,No FR WP page,,,,,,,,,,
+Q55081020,Hannes Huisamen,No FR WP page,,,,,,,,,,
+Q55081024,Vazha Kapanadze,No FR WP page,,,,,,,,,,
+Q55081112,Rowan Gouws,No FR WP page,,,,,,,,,,
+Q55081123,Giosuè Zilocchi,,Giosuè Zilocchi,Giosu%C3%A8_Zilocchi,1997-01-15,Fiorenzuola d'Arda,/wiki/Fiorenzuola_d%27Arda,,,,189,Pilier droit
+Q55081163,Zack Henry,,Zack Henry,Zack_Henry,1994-10-01,Brighton,/wiki/Brighton,,,,182,Demi d'ouverture; arrière
+Q55081193,Harlon Klaasen,No FR WP page,,,,,,,,,,
+Q55081253,Arthur Coville,,Arthur Coville,Arthur_Coville,1998-02-04,Versailles,/wiki/Versailles,,,,178,Demi de mêlée
+Q55081398,William A. Munro,No FR WP page,,,,,,,,,,
+Q55081476,Cherif Traorè,,Cherif Traorè,Cherif_Traor%C3%A8,1994-04-10,Kindia,/wiki/Kindia,,,,182,Pilier gauche
+Q55081547,Terry Garnett,No FR WP page,,,,,,,,,,
+Q55092450,Jack Singleton,,Jack Singleton,Jack_Singleton,1996-05-14,Dacorum,/wiki/Dacorum,,,,180,Talonneur
+Q55092457,Theo Jansen van Rensburg,,Theo van Rensburg,Theo_van_Rensburg,1967-08-26,Carletonville,/wiki/Carletonville,,,,177,Arrière; demi d'ouverture
+Q55103545,Daniel Brennan,,Daniel Brennan,Daniel_Brennan_(rugby_%C3%A0_XV),1998-09-23,Dublin,/wiki/Dublin,,,,192,Pilier
+Q55104736,Ivan Prishchepenko,No FR WP page,,,,,,,,,,
+Q55138411,Giorgi Nutsubidze,,Giorgi Nutsubidze,Giorgi_Nutsubidze,1998-11-11,Borjomi,/wiki/Borjomi,,,,178,Pilier
+Q55183501,Todd Gleave,No FR WP page,,,,,,,,,,
+Q55183571,Ben Hurst,No FR WP page,,,,,,,,,,
+Q55214960,Demba Bamba,,Demba Bamba,Demba_Bamba,1998-03-17,Saint-Denis,/wiki/Saint-Denis_(Seine-Saint-Denis),,,,185,Pilier droit
+Q55217211,Setariki Tuicuvu,,Setariki Tuicuvu,Setariki_Tuicuvu,1995-09-07,,,,,,179,Arrière; centre; ailier
+Q55238050,Nakai Penny,No FR WP page,,,,,,,,,,
+Q55264830,Stirling Peart,No FR WP page,,,,,,,,,,
+Q55267677,Clément Lavenant,No FR WP page,,,,,,,,,,
+Q55268057,Thomas Curutchet,,Thomas Curutchet,Thomas_Curutchet,1995-06-26,Bayonne,/wiki/Bayonne,,,,177,Demi d'ouverture; Centre
+Q55268183,Sylvère Reteau,,Sylvère Reteau,Sylv%C3%A8re_Reteau,1997-11-06,Dax,/wiki/Dax,,,,185,Demi de mêlée; Centre
+Q55268378,Vladimir Susler,No FR WP page,,,,,,,,,,
+Q55268606,Théo Sentucq,No FR WP page,,,,,,,,,,
+Q55268771,Romain Pouyleau,No FR WP page,,,,,,,,,,
+Q55314800,Christopher Cassen,No FR WP page,,,,,,,,,,
+Q55314873,Jacob Pierce,No FR WP page,,,,,,,,,,
+Q55314932,Mattieu Bidau,,Mattieu Bidau,Mattieu_Bidau,1996-01-16,Pessac,/wiki/Pessac,,,,202,Deuxième ligne
+Q55315030,Théo Trémeau,No FR WP page,,,,,,,,,,
+Q55315081,Benjamin Puntous,,Benjamin Puntous,Benjamin_Puntous,1999-09-17,Dax,/wiki/Dax,,,,179,Centre
+Q55315111,Théo Gatelier,,Théo Gatelier,Th%C3%A9o_Gatelier,1998-03-31,Dax,/wiki/Dax,,,,179,Arrière; Ailier
+Q55315223,Alexis Neisen,No FR WP page,,,,,,,,,,
+Q55315291,Jimmy Scholz,No FR WP page,,,,,,,,,,
+Q55315310,Yann Tivoli,,Yann Tivoli,Yann_Tivoli,1992-01-23,Cannes,/wiki/Cannes,,,,195,Deuxième ligne
+Q55315326,Charlie Arraté,No FR WP page,,,,,,,,,,
+Q55315390,Rémy Chies,No FR WP page,,,,,,,,,,
+Q55316442,Clément Adami,No FR WP page,,,,,,,,,,
+Q55316488,Kévin Boukechiche,No FR WP page,,,,,,,,,,
+Q55316801,Jan-Lou Hary,No FR WP page,,,,,,,,,,
+Q55316970,Pierre Garcia,No FR WP page,,,,,,,,,,
+Q55317006,Rémi Vignau,No FR WP page,,,,,,,,,,
+Q55356898,Mornay Smith,No FR WP page,,,,,,,,,,
+Q55362440,Bill Nicholson,No FR WP page,,,,,,,,,,
+Q55362481,James O'Reilly,No FR WP page,,,,,,,,,,
+Q55362628,Mark Irwin,No FR WP page,,,,,,,,,,
+Q55362658,Toby Salmon,No FR WP page,,,,,,,,,,
+Q55362661,Jack Innard,No FR WP page,,,,,,,,,,
+Q55362790,Lasha Lomidze,No FR WP page,,,,,,,,,,
+Q55363744,Allen Clarke,No FR WP page,,,,,,,,,,
+Q55363787,Jack Hart,No FR WP page,,,,,,,,,,
+Q55363808,Terry Kennedy,No FR WP page,,,,,,,,,,
+Q55364019,Pat Crowley,No FR WP page,,,,,,,,,,
+Q55366511,Jack Warren,No FR WP page,,,,,,,,,,
+Q55366608,Bill Agnew,No FR WP page,,,,,,,,,,
+Q55366623,Jerry Foster,No FR WP page,,,,,,,,,,
+Q55366654,James Arrell,No FR WP page,,,,,,,,,,
+Q55366658,Deke Gard,No FR WP page,,,,,,,,,,
+Q55367929,Alexander Moon,,Alexander Moon,Alexander_Moon,1996-09-06,Ipswich,/wiki/Ipswich,,,,202,Deuxième ligne
+Q55368082,Doug Smith,No FR WP page,,,,,,,,,,
+Q55375288,Peter Malcolm,No FR WP page,,,,,,,,,,
+Q55375304,Paddy Ryan,No FR WP page,,,,,,,,,,
+Q55381516,Frédéric Tauzin,,Frédéric Tauzin,Fr%C3%A9d%C3%A9ric_Tauzin,1972-09,,,,,,181,centre
+Q55386850,Neil Cronin,No FR WP page,,,,,,,,,,
+Q55424332,Lucas Sotteau,,Lucas Sotteau,Lucas_Sotteau,1993-08-30,,,,,,186,Pilier
+Q55433204,Tjaart Marais,No FR WP page,,,,,,,,,,
+Q55433815,Hakatoa Tupou,No FR WP page,,,,,,,,,,
+Q55433833,Kini Fotu,No FR WP page,,,,,,,,,,
+Q55456020,Frank Sholl Scott,No FR WP page,,,,,,,,,,
+Q55524708,Kōki Imamura,No FR WP page,,,,,,,,,,
+Q55530234,Naoto Saito,,Naoto Saito齋藤直人,Naoto_Saito,1997-08-26,Préfecture de Kanagawa,/wiki/Pr%C3%A9fecture_de_Kanagawa,,,,165,Demi de mêlée
+Q55539610,Jone Naikabula,No FR WP page,,,,,,,,,,
+Q55583887,Liueli Fusimalohi,No FR WP page,,,,,,,,,,
+Q55583920,Soane Asi,No FR WP page,,,,,,,,,,
+Q55584132,Max Llewellyn,,Max Llewellyn,Max_Llewellyn,1999-01-13,Kingston upon Thames,/wiki/Kingston_upon_Thames,,,,196,Centre; ailier
+Q55584141,Jason Harries,No FR WP page,,,,,,,,,,
+Q55584143,Kieran Hardy,,Kieran Hardy,Kieran_Hardy,1995-11-30,Carmarthen,/wiki/Carmarthen,,,,186,Demi de mêlée
+Q55584452,Takai Makisi,No FR WP page,,,,,,,,,,
+Q55584550,Rio Dyer,,Rio Dyer,Rio_Dyer,1999-12-21,Newport,/wiki/Newport_(pays_de_Galles),,,,186,Ailier
+Q55584573,Lennon Greggains,No FR WP page,,,,,,,,,,
+Q55584576,Connor Edwards,No FR WP page,,,,,,,,,,
+Q55584580,Joe Goodchild,No FR WP page,,,,,,,,,,
+Q55584584,Will Talbot-Davies,No FR WP page,,,,,,,,,,
+Q55584692,Maliu Filise,No FR WP page,,,,,,,,,,
+Q55584710,Herschel Jantjies,,Herschel Jantjies,Herschel_Jantjies,1996-04-22,Stellenbosch,/wiki/Stellenbosch,,,,167,Demi de mêlée
+Q55585113,Johan Grobbelaar,No FR WP page,,,,,,,,,,
+Q55585120,Ruan Nortjé,,Ruan Nortjé,Ruan_Nortj%C3%A9,1998-07-25,Pretoria,/wiki/Pretoria,,,,2,Deuxième ligne; troisième ligne aile
+Q55585129,Boeta Hamman,No FR WP page,,,,,,,,,,
+Q55585192,Samiu Mohi,No FR WP page,,,,,,,,,,
+Q55585247,Sione Havili,,Sione Havili Talitui,Sione_Havili_Talitui,1998-01-25,Nukuʻalofa,/wiki/Nuku%CA%BBalofa,,,,187,Troisième ligne aile; troisième ligne centre
+Q55589659,Jimi Maximin,,Jimi Maximin,Jimi_Maximin,1999-04-03,Paris,/wiki/Paris,,,,204,Deuxième ligne
+Q55589663,Serge Marsolan,,Serge Marsolan,Serge_Marsolan,1945-04-22,Samatan,/wiki/Samatan_(Gers),,,,170,
+Q55589665,Gay,No stint found,Gay,Gay_(joueur_de_rugby_%C3%A0_XV),1898,,,,,,,Demi d'ouverture
+Q55589666,Valès,No stint found,Valès,Val%C3%A8s_(joueur_de_rugby_%C3%A0_XV),1899,,,,,,,Deuxième ligne
+Q55589668,Jean-Noël Spitzer,,Jean-Noël Spitzer,Jean-No%C3%ABl_Spitzer,1974-03-07,,,,,,,Troisième ligne aile
+Q55589672,Enzo Forletta,,Enzo Forletta,Enzo_Forletta,1994-06-15,Perpignan,/wiki/Perpignan,,,,175,Pilier gauche
+Q55589678,Raphaël Carbou,,Raphaël Carbou,Rapha%C3%ABl_Carbou,1992-09-06,Narbonne,/wiki/Narbonne,,,,185,Talonneur
+Q55589680,Alan Brazo,,Alan Brazo,Alan_Brazo,1992-05-21,Ploërmel,/wiki/Plo%C3%ABrmel,,,,192,Troisième ligne aile
+Q55589687,Lucas Bachelier,,Lucas Bachelier,Lucas_Bachelier,1995-03-26,,,,,,188,Troisième ligne aile
+Q55589688,Romuald Séguy,,Romuald Séguy,Romuald_S%C3%A9guy,1996-02-05,Narbonne,/wiki/Narbonne,,,,178,Demi d'ouverture
+Q55589689,Julien Farnoux,,Julien Farnoux,Julien_Farnoux,1993-04-24,Clermont-Ferrand,/wiki/Clermont-Ferrand,,,,185,Arrière; ailier
+Q55589691,Lucas Tauzin,,Lucas Tauzin,Lucas_Tauzin,1998-05-21,Mont-de-Marsan,/wiki/Mont-de-Marsan,,,,187,Ailier; centre
+Q55589692,Berend Botha,,Berend Botha,Berend_Botha,1988-03-11,Springs,/wiki/Springs,,,,196,Deuxième ligne
+Q55589693,Shahn Eru,,Shahn Eru,Shahn_Eru,1989-09-20,Hamilton,/wiki/Hamilton_(Nouvelle-Z%C3%A9lande),,,,196,Deuxième ligne; troisième ligne aile
+Q55590010,Cyril Deligny,,Cyril Deligny,Cyril_Deligny,1992-06-22,Castres,/wiki/Castres,,,,181,Talonneur
+Q55590014,Clément Laporte,,Clément Laporte,Cl%C3%A9ment_Laporte,1998-01-07,Pessac,/wiki/Pessac,,,,180,Arrière; ailier
+Q55590015,Arthur Vincent,,Arthur Vincent,Arthur_Vincent,1999-09-30,Montpellier,/wiki/Montpellier,,,,183,Centre; ailier
+Q55590016,Pierre-Henri Azagoh,,Pierre-Henri Azagoh,Pierre-Henri_Azagoh,1998-07-25,Nîmes,/wiki/N%C3%AEmes,,,,198,Deuxième ligne; troisième ligne aile
+Q55590017,Charlie Francoz,,Charlie Francoz,Charlie_Francoz,1998-06-03,,,,,,195,Troisième ligne; deuxième ligne
+Q55590018,Jordan Joseph,,Jordan Joseph,Jordan_Joseph,2000-07-31,Garges-lès-Gonesse,/wiki/Garges-l%C3%A8s-Gonesse,,,,190,Troisième ligne centre
+Q55590019,Yassine Maamry,,Yassine Maamry,Yassine_Maamry,1993-07-08,,,,,,198,Deuxième ligne
+Q55590020,Killian Geraci,,Killian Geraci,Killian_Geraci,1999-03-25,Grenoble,/wiki/Grenoble,,,,200,Deuxième ligne
+Q55590021,Benoît Lazzarotto,,Benoît Lazzarotto,Beno%C3%AEt_Lazzarotto,1988-01-21,,,,,,175,Ailier
+Q55590022,Maxime Marty,,Maxime Marty,Maxime_Marty,1998-02-27,Toulouse,/wiki/Toulouse,,,,182,Ailier
+Q55590023,Antonin Berruyer,,Antonin Berruyer,Antonin_Berruyer,1998-09-08,Saint-Martin-d'Hères,/wiki/Saint-Martin-d%27H%C3%A8res,,,,187,Troisième ligne aile; troisième ligne centre
+Q55590024,Gervais Cordin,,Gervais Cordin,Gervais_Cordin,1998-12-10,Dijon,/wiki/Dijon,,,,172,Arrière; ailier
+Q55603584,Alex Thomson,No FR WP page,,,,,,,,,,
+Q55603596,Alexander Stevenson,No FR WP page,,,,,,,,,,
+Q55603941,Andrew Stevenson,No FR WP page,,,,,,,,,,
+Q55605198,Ben Murphy,No FR WP page,,,,,,,,,,
+Q55607561,Christian Coleman,No FR WP page,,,,,,,,,,
+Q55609160,David Watson,No FR WP page,,,,,,,,,,
+Q55609840,Donald Grant,No FR WP page,,,,,,,,,,
+Q55610489,Ed Kennedy,No FR WP page,,,,,,,,,,
+Q55612499,George Aitchison,No FR WP page,,,,,,,,,,
+Q55614796,Jack Willis,,Jack Willis,Jack_Willis,1996-12-24,Reading,/wiki/Reading_(Royaume-Uni),,,,190,Troisième ligne aile
+Q55614885,James Murphy,No FR WP page,,,,,,,,,,
+Q55614906,James Woodburn,No FR WP page,,,,,,,,,,
+Q55615201,John Junor,No FR WP page,,,,,,,,,,
+Q55623028,Mick Lane,No FR WP page,,,,,,,,,,
+Q55623135,Miles Reid,No FR WP page,,,,,,,,,,
+Q55628200,Owen Hills,No FR WP page,,,,,,,,,,
+Q55629998,Pieter Jansen,No FR WP page,,,,,,,,,,
+Q55631619,Rhodri Davies,No FR WP page,,,,,,,,,,
+Q55631860,Robert Whitworth,No FR WP page,,,,,,,,,,
+Q55632002,Ross Wright,No FR WP page,,,,,,,,,,
+Q55632419,Sam Skinner,,Sam Skinner,Sam_Skinner,1995-01-31,Exeter,/wiki/Exeter,,,,196,Deuxième ligne; troisième ligne aile
+Q55634126,Stuart Townsend,No FR WP page,,,,,,,,,,
+Q55635743,Thomas Gordon,No FR WP page,,,,,,,,,,
+Q55635980,Tom Hudson,No FR WP page,,,,,,,,,,
+Q55635992,Tom Wright,,Tom Wright,Tom_Wright_(rugby_%C3%A0_XV),1997-07-21,Randwick,/wiki/Randwick,,,,186,Ailier; centre; arrière; Demi d'ouverture; arrière
+Q55637754,William Thomson,No FR WP page,,,,,,,,,,
+Q55640105,James Egan Moulton Jnr,No FR WP page,,,,,,,,,,
+Q55641261,Nick White,No FR WP page,,,,,,,,,,
+Q55705915,Iges Lapé,,Iges Lapé,Iges_Lap%C3%A9,1996-09-06,,,,,,181,pilier
+Q55753466,John Cleeve,No FR WP page,,,,,,,,,,
+Q55753468,Wilf Auty,No FR WP page,,,,,,,,,,
+Q55755223,Bastien Berenguel,,Bastien Berenguel,Bastien_Berenguel,1994-01-18,,,,,,192,Troisième ligne aile
+Q55759706,Vasile Ilcă,No FR WP page,,,,,,,,,,
+Q55760048,Thomasau Forbes,No FR WP page,,,,,,,,,,
+Q55760065,Roderique Victor,No FR WP page,,,,,,,,,,
+Q55760070,Christo van der Merwe,No FR WP page,,,,,,,,,,
+Q55760073,Mahepisa Tjeriko,No FR WP page,,,,,,,,,,
+Q55760077,Max Katjijeko,,Max Katjijeko,Max_Katjijeko,1995-04-08,Windhoek,/wiki/Windhoek,,,,195,Deuxième ligne; troisième ligne
+Q55760089,TC Kisting,,Helarius Kisting,Helarius_Kisting,1994-01-13,Mariental,/wiki/Mariental,,,,175,Demi de mêlée
+Q55760094,Des Sethie,No FR WP page,,,,,,,,,,
+Q55760182,Adriaan Booysen,No FR WP page,,,,,,,,,,
+Q55760183,Obert Nortjé,No FR WP page,,,,,,,,,,
+Q55760185,Niël van Vuuren,No FR WP page,,,,,,,,,,
+Q55760187,PW Steenkamp,No FR WP page,,,,,,,,,,
+Q55760192,Justin Newman,No FR WP page,,,,,,,,,,
+Q55760202,Cliven Loubser,,Cliven Loubser,Cliven_Loubser,1997-02-24,Rehoboth,/wiki/Rehoboth_(Namibie),,,,176,Demi d'ouverture; arrière
+Q55760214,Nelius Theron,No FR WP page,,,,,,,,,,
+Q55760219,André Rademeyer,No FR WP page,,,,,,,,,,
+Q55760255,Francois Esterhuyzen,No FR WP page,,,,,,,,,,
+Q55760385,Emilian Necula,No FR WP page,,,,,,,,,,
+Q55819381,Mike Doneghan,No FR WP page,,,,,,,,,,
+Q55819484,Erich de Jager,No FR WP page,,,,,,,,,,
+Q55819497,Robbie Petzer,No FR WP page,,,,,,,,,,
+Q55819561,Sebastian Siataga,No FR WP page,,,,,,,,,,
+Q55819626,Ross Doneghan,No FR WP page,,,,,,,,,,
+Q55820283,Alan Dymock,No FR WP page,,,,,,,,,,
+Q55846638,Alandré van Rooyen,No FR WP page,,,,,,,,,,
+Q55956046,Fololisi Masila,No FR WP page,,,,,,,,,,
+Q55972865,Jack McPhee,No FR WP page,,,,,,,,,,
+Q55979183,Wal Mackney,No FR WP page,,,,,,,,,,
+Q56043406,Daniel Maartens,No FR WP page,,,,,,,,,,
+Q56051808,Louis Fajfrowski,,Louis Fajfrowski,Louis_Fajfrowski,1996-12-06,Abidjan,/wiki/Abidjan,2018-08-10,Aurillac,/wiki/Aurillac,183,ailier
+Q56154436,Ratu Naisa Narukutabua,,Ratu Naisa Narukutabua,Ratu_Naisa_Narukutabua,1982-03-11,Fidji,/wiki/Fidji,,,,185,centre; ailier
+Q56164015,Mihai Wusek,,Mihai Wusek,Mihai_Wusek,1938-09-21,Bucarest,/wiki/Bucarest,2008-10-23,Lucé,/wiki/Luc%C3%A9_(Eure-et-Loir),170,Centre; arrière
+Q56164637,George Tilsley,,George Tilsley,George_Tilsley,1992-02-27,,,,,,196,Ailier; centre; arrière
+Q56179554,Iwan Jones,No FR WP page,,,,,,,,,,
+Q56180185,A R Lewis,No FR WP page,,,,,,,,,,
+Q56223216,André Swarts,No FR WP page,,,,,,,,,,
+Q56223220,Jan-Henning Campher,No FR WP page,,,,,,,,,,
+Q56223230,Pieter Jansen van Vuren,,Pieter Jansen van Vuren,Pieter_Jansen_van_Vuren,1991-04-02,Pretoria,/wiki/Pretoria,,,,194,Deuxième ligne
+Q56223232,Marko Janse van Rensburg,No FR WP page,,,,,,,,,,
+Q56223240,Kyle Steyn,,Kyle Steyn,Kyle_Steyn,1994-01-29,Johannesbourg,/wiki/Johannesbourg,,,,183,Ailier; centre
+Q56223244,FP Pelser,No FR WP page,,,,,,,,,,
+Q56223274,Theo Maree,No FR WP page,,,,,,,,,,
+Q56223313,Leighton van Wyk,No FR WP page,,,,,,,,,,
+Q56223331,Nicolaas Immelman,No FR WP page,,,,,,,,,,
+Q56223347,Michael Kumbirai,No FR WP page,,,,,,,,,,
+Q56223875,Dian Badenhorst,No FR WP page,,,,,,,,,,
+Q56223877,Carel-Jan Coetzee,No FR WP page,,,,,,,,,,
+Q56223879,Johan Kotze,No FR WP page,,,,,,,,,,
+Q56223889,Sibabalo Qoma,No FR WP page,,,,,,,,,,
+Q56223897,Marnus van der Merwe,No FR WP page,,,,,,,,,,
+Q56232526,Filipo Nakosi,,Filipo Nakosi,Filipo_Nakosi,1992-04-08,Votua,/w/index.php?title=Votua&action=edit&redlink=1,,,,183,Ailier; arrière
+Q56248386,Jimmy O'Brien,,Jimmy O'Brien,Jimmy_O%27Brien,1996-11-27,Eadestown,/wiki/Eadestown,,,,183,Arrière; ailier; centre
+Q56248430,Johan Retief,No FR WP page,,,,,,,,,,
+Q56248711,James Voss,No FR WP page,,,,,,,,,,
+Q56248759,Tom Hardwick,No FR WP page,,,,,,,,,,
+Q56250188,Estéban Meneses,No FR WP page,,,,,,,,,,
+Q56250234,Godfrey Ramaboea,No FR WP page,,,,,,,,,,
+Q56250240,Ruan Kramer,No FR WP page,,,,,,,,,,
+Q56250243,Zak Burger,No FR WP page,,,,,,,,,,
+Q56250245,Wilmar Arnoldi,No FR WP page,,,,,,,,,,
+Q56250248,HP van Schoor,No FR WP page,,,,,,,,,,
+Q56250249,PJ Steenkamp,No FR WP page,,,,,,,,,,
+Q56250251,Wandisile Simelane,,Wandisile Simelane,Wandisile_Simelane,1998-03-21,Soweto,/wiki/Soweto,,,,179,Centre; ailier; arrière
+Q56250253,Le Roux Roets,No FR WP page,,,,,,,,,,
+Q56250254,Jeandré Rudolph,No FR WP page,,,,,,,,,,
+Q56250259,Jo-Hanko de Villiers,No FR WP page,,,,,,,,,,
+Q56250260,Tythan Adams,No FR WP page,,,,,,,,,,
+Q56250263,Enver Brandt,No FR WP page,,,,,,,,,,
+Q56250265,Stephan Janse van Rensburg,No FR WP page,,,,,,,,,,
+Q56250268,Jeremy Jordaan,No FR WP page,,,,,,,,,,
+Q56250271,Kevin Kaba,No FR WP page,,,,,,,,,,
+Q56250276,Andrew du Plessis,No FR WP page,,,,,,,,,,
+Q56250279,Bandisa Ndlovu,No FR WP page,,,,,,,,,,
+Q56250280,Tyrone Green,,Tyrone Green,Tyrone_Green,1998-03-05,Klerksdorp,/wiki/Klerksdorp,,,,179,Arrière; ailier
+Q56250282,Vincent Tshituka,,Vincent Tshituka,Vincent_Tshituka,1998-09-10,,,,,,195,Troisième ligne aile
+Q56253222,Tatsuya Kakimoto,No FR WP page,,,,,,,,,,
+Q56254126,Joe Joyce,No FR WP page,,,,,,,,,,
+Q56254238,Matthew Rea,,Matty Rea,Matty_Rea,1993-09-21,Ballymena,/wiki/Ballymena,,,,193,Troisième ligne aile
+Q56254240,Johnny Stewart,No FR WP page,,,,,,,,,,
+Q56254377,Josh Larsen,No FR WP page,,,,,,,,,,
+Q56254566,Chris Smith,No FR WP page,,,,,,,,,,
+Q56255393,Khutha Mchunu,No FR WP page,,,,,,,,,,
+Q56255401,Aphelele Fassi,,Aphelele Fassi,Aphelele_Fassi,1998-01-23,King William's Town,/wiki/King_William%27s_Town,,,,189,Arrière; ailier
+Q56255404,Ernst van Rhyn,No FR WP page,,,,,,,,,,
+Q56255408,Hans de Goede,No FR WP page,,,,,,,,,,
+Q56255414,Morné van den Berg,No FR WP page,,,,,,,,,,
+Q56255418,Nico du Plessis,No FR WP page,,,,,,,,,,
+Q56255422,Ruben de Villiers,No FR WP page,,,,,,,,,,
+Q56255424,Michal Haznar,No FR WP page,,,,,,,,,,
+Q56256021,Miroslav Šafařík,No FR WP page,,,,,,,,,,
+Q56279175,Ross Young,No FR WP page,,,,,,,,,,
+Q56281792,Max Green,No FR WP page,,,,,,,,,,
+Q56282644,Andrew Evans,No FR WP page,,,,,,,,,,
+Q56283997,Grant Anderson,No FR WP page,,,,,,,,,,
+Q56290445,Alex Davies,No FR WP page,,,,,,,,,,
+Q56309565,Pierre Boudehent,,Pierre Boudehent,Pierre_Boudehent,1998-02-06,,,,,,196,Centre; ailier
+Q56309591,Tavite Veredamu,,Tavite Veredamu,Tavite_Veredamu,1989-09-01,,,,,,188,Ailier (rugby à XV)
+Q56311452,Tudor Stroe,,Tudor Stroe,Tudor_Stroe,1993-09-06,Auch,/wiki/Auch,,,,185,Pilier gauche
+Q56311829,Eugeniu Stefan,,Eugeniu Ștefan,Eugeniu_%C8%98tefan,1953-06-15,Slatina,/wiki/Slatina_(Olt),,,,185,Pilier
+Q56312468,Gilles Galvin,,Gilles Galvin,Gilles_Galvin,1969-02-24,Tulle,/wiki/Tulle,,,,187,Troisième ligne aile
+Q56328452,Jonathan Moffett,No FR WP page,,,,,,,,,,
+Q56351231,Big Mike,No FR WP page,,,,,,,,,,
+Q56372595,Charles Bouldoire,,Charles Bouldoire,Charles_Bouldoire,1993-06-08,,,,,,184,Arrière; Centre
+Q56410339,Camille Bonnet,,Camille Bonnet,Camille_Bonnet,1918-08-31,Loubédat,/wiki/Loub%C3%A9dat,2020-11-17,Valence,/wiki/Valence_(Dr%C3%B4me),170,Centre; demi d'ouverture; arrière
+Q56434079,Michael Botha,No FR WP page,,,,,,,,,,
+Q56434088,Lupumlo Mguca,No FR WP page,,,,,,,,,,
+Q56434164,Sione Vailanu,,Sione Vailanu,Sione_Vailanu,1995-01-27,Tofoa,/wiki/Tongatapu,,,,185,Troisième ligne centre
+Q56434168,Louis Conradie,No FR WP page,,,,,,,,,,
+Q56434171,Jannes Snyman,No FR WP page,,,,,,,,,,
+Q56434179,Walt Steenkamp,No FR WP page,,,,,,,,,,
+Q56434180,Reinhard Nothnagel,No FR WP page,,,,,,,,,,
+Q56434188,Gavin Coombes,,Gavin Coombes,Gavin_Coombes,1997-12-11,Skibbereen,/wiki/Skibbereen,,,,198,Troisième ligne centre; troisième ligne aile; deuxième ligne
+Q56486294,Max Malins,,Max Malins,Max_Malins,1997-01-07,Cambridge,/wiki/Cambridge,,,,181,Ailier; arrière; demi d'ouverture
+Q56486456,Mfundo Ndhlovu,No FR WP page,,,,,,,,,,
+Q56486462,Marco Labuschagné,No FR WP page,,,,,,,,,,
+Q56486572,Pote Human,No FR WP page,,,,,,,,,,
+Q56486603,Nafe Tufui,No FR WP page,,,,,,,,,,
+Q56486620,Robbie Louw,No FR WP page,,,,,,,,,,
+Q56486631,Chaney Willemse,No FR WP page,,,,,,,,,,
+Q56486632,Steven Moir,No FR WP page,,,,,,,,,,
+Q56486633,Steph Vermeulen,No FR WP page,,,,,,,,,,
+Q56486636,Andrew Kuhn,No FR WP page,,,,,,,,,,
+Q56486639,Marco Mason,No FR WP page,,,,,,,,,,
+Q56486644,Ilunga Mukendi,No FR WP page,,,,,,,,,,
+Q56486674,Falanisi Manukia,No FR WP page,,,,,,,,,,
+Q56486703,Taipe 'Isitolo,No FR WP page,,,,,,,,,,
+Q56486708,Unuoi Va`enuku,No FR WP page,,,,,,,,,,
+Q56490199,John Collins,No FR WP page,,,,,,,,,,
+Q56513287,Neal Brendel,No FR WP page,,,,,,,,,,
+Q56543991,Sione Faletau,No FR WP page,,,,,,,,,,
+Q56543993,Nemani Nagusa,,Nemani Nagusa,Nemani_Nagusa,1988-07-21,Nadi,/wiki/Nadi_(Fidji),,,,188,Troisième ligne centre; troisième ligne aile
+Q56543999,Pedro Bettencourt,,Pedro Bettencourt,Pedro_Bettencourt,1994-11-18,Porto,/wiki/Porto,,,,187,Centre; ailier; arrière
+Q56544002,Stephen Bhasera,No FR WP page,,,,,,,,,,
+Q56544008,Farai Mudariki,,Farai Mudariki,Farai_Mudariki,1995-02-13,Harare,/wiki/Harare,,,,184,Pilier
+Q56561658,Michael Faleafa,,Michael Faleafa,Michael_Faleafa,1992-02-03,Auckland,/wiki/Auckland,,,,189,Troisième ligne centre; troisième ligne aile
+Q56582699,Facundo Soler,No FR WP page,,,,,,,,,,
+Q56583968,Étienne Loiret,,Étienne Loiret,%C3%89tienne_Loiret,1996-06-30,Canberra,/wiki/Canberra,,,,200,Deuxième ligne
+Q56584898,Luigi Dias,,Luigi Dias,Luigi_Dias,1998-02-14,Dax,/wiki/Dax,,,,189,Troisième ligne centre
+Q56585711,Tim Jaubert,,Tim Jaubert,Tim_Jaubert,1992-12-17,,,,,,184,Ailier
+Q56585840,Victor Pisano,No FR WP page,,,,,,,,,,
+Q56586333,Vincent Hollet,No FR WP page,,,,,,,,,,
+Q56599237,Brice Ferrer,,Brice Ferrer,Brice_Ferrer,1994-04-12,,,,,,192,Troisième ligne aile; Troisième ligne centre
+Q56599249,Hugo Cerisier,,Hugo Cerisier,Hugo_Cerisier,1998-07-08,,,,,,184,Demi d'ouverture; Arrière
+Q56600129,Flippie van der Merwe,No FR WP page,,,,,,,,,,
+Q56630977,Nardus Erasmus,No FR WP page,,,,,,,,,,
+Q56630983,Morné Joubert,No FR WP page,,,,,,,,,,
+Q56630990,Henko Marais,No FR WP page,,,,,,,,,,
+Q56641617,Gianni Lombard,No FR WP page,,,,,,,,,,
+Q56641621,Rhys Carré,,Rhys Carré,Rhys_Carr%C3%A9,1998-02-08,Cardiff,/wiki/Cardiff,,,,191,Pilier gauche
+Q56641624,Kabous van Schalkwyk,No FR WP page,,,,,,,,,,
+Q56641625,Hanno Snyman,No FR WP page,,,,,,,,,,
+Q56641627,Xandré Vos,No FR WP page,,,,,,,,,,
+Q56651214,Monty Ioane,,Monty Ioane,Monty_Ioane,1994-10-30,Melbourne,/wiki/Melbourne,,,,180,Ailier
+Q56678393,Joe Heyes,,Joe Heyes,Joe_Heyes,1999-04-13,Nottingham,/wiki/Nottingham,,,,191,Pilier droit
+Q56690562,Manaaki Selby-Rickit,No FR WP page,,,,,,,,,,
+Q56690563,Beaudein Waaka,No FR WP page,,,,,,,,,,
+Q56690588,Diarmuid Barron,,Diarmuid Barron,Diarmuid_Barron,1998-08-06,Cashel,/wiki/Cashel_(comt%C3%A9_de_Tipperary),,,,183,Talonneur
+Q56690610,Morgan Naudé,No FR WP page,,,,,,,,,,
+Q56702369,Vili Tolutaʻu,No FR WP page,,,,,,,,,,
+Q56702813,Tomoyuki Ochiai,No FR WP page,,,,,,,,,,
+Q56702845,Lisala Siosifa,No FR WP page,,,,,,,,,,
+Q56702906,Yang Dae,No FR WP page,,,,,,,,,,
+Q56810131,Vernon Fredericks,No FR WP page,,,,,,,,,,
+Q56810143,Blair Prinsep,No FR WP page,,,,,,,,,,
+Q56810144,Ray Niuia,,Ray Niuia,Ray_Niuia,1991-06-19,Ōtāhuhu,/wiki/%C5%8Ct%C4%81huhu,,,,176,Talonneur
+Q56812156,Saili Fe`ao,No FR WP page,,,,,,,,,,
+Q56812192,Guido Volpi,No FR WP page,,,,,,,,,,
+Q56858109,Marcel Rusu,No FR WP page,,,,,,,,,,
+Q56864026,Raúl Taquini,No FR WP page,,,,,,,,,,
+Q56876909,Josh Whippy,No FR WP page,,,,,,,,,,
+Q56877128,Huluholo Moungaloa,No FR WP page,,,,,,,,,,
+Q56884089,Joseph McKim,No FR WP page,,,,,,,,,,
+Q57017132,Ryan Coxon,No FR WP page,,,,,,,,,,
+Q57017208,Henry Joynt,No FR WP page,,,,,,,,,,
+Q57017604,Jeremy Pugh,No FR WP page,,,,,,,,,,
+Q57017815,Billy Searle,,Billy Searle,Billy_Searle,1996-03-25,Exeter,/wiki/Exeter,,,,178,Demi d'ouverture
+Q57086436,Rupena Parkinson,No FR WP page,,,,,,,,,,
+Q57239159,Eduardo Morgan,No FR WP page,,,,,,,,,,
+Q57242321,Leicester Fainga'anuku,,Leicester Fainga'anuku,Leicester_Fainga%27anuku,1999-10-11,Nuku'alofa,/wiki/Nuku%27alofa,,,,188,Ailier; centre
+Q57242334,Jack Grooby,No FR WP page,,,,,,,,,,
+Q57293504,Chergin Fillies,No FR WP page,,,,,,,,,,
+Q57314394,Shneil Singh,No FR WP page,,,,,,,,,,
+Q57314723,Seijun Kawasaki,No FR WP page,,,,,,,,,,
+Q57314769,Kotetsu Nishikawa,No FR WP page,,,,,,,,,,
+Q57496145,Edmund Linwood Strong,No FR WP page,,,,,,,,,,
+Q57541918,Robin Williams,No FR WP page,,,,,,,,,,
+Q57585120,Vunipola Fifita,No FR WP page,,,,,,,,,,
+Q57585126,Len Ikitau,,Len Ikitau,Len_Ikitau,1998-10-01,Brisbane,/wiki/Brisbane,,,,180,Centre
+Q57585129,Noah Lolesio,,Noah Lolesio,Noah_Lolesio,1999-12-18,Auckland,/wiki/Auckland,,,,180,Demi d'ouverture; centre
+Q57585253,Julien Hériteau,,Julien Hériteau,Julien_H%C3%A9riteau,1994-09-12,Auch,/wiki/Auch,,,,184,Centre
+Q57585548,Reuben O'Neill,No FR WP page,,,,,,,,,,
+Q57586301,Cai Evans,,Cai Evans,Cai_Evans,1999-06-23,Penarth,/wiki/Penarth,,,,185,Demi d'ouverture; arrière
+Q57586429,Josh Basham,No FR WP page,,,,,,,,,,
+Q57586448,Caelan Doris,,Caelan Doris,Caelan_Doris,1998-04-02,Ballina,/wiki/Ballina_(comt%C3%A9_de_Mayo),,,,193,Troisième ligne centre
+Q57586463,Will Connors,,Will Connors,Will_Connors,1996-04-04,Donadea,/w/index.php?title=Donadea&action=edit&redlink=1,,,,195,Troisième ligne aile
+Q57586489,Hugh O'Sullivan,No FR WP page,,,,,,,,,,
+Q57586493,Ciarán Frawley,,Ciarán Frawley,Ciar%C3%A1n_Frawley,1997-12-04,Sydney,/wiki/Sydney,,,,191,Centre; demi d'ouverture; arrière
+Q57586501,Gavin Mullin,No FR WP page,,,,,,,,,,
+Q57587669,Tommy Reffell,,Tommy Reffell,Tommy_Reffell,1999-04-27,Bridgend,/wiki/Bridgend,,,,184,Troisième ligne aile
+Q57725838,Ronnie Bauser,No FR WP page,,,,,,,,,,
+Q57729517,Toski Smith,No FR WP page,,,,,,,,,,
+Q57778906,Jack Hartley,No FR WP page,,,,,,,,,,
+Q57883812,Alekisio Mafi,No FR WP page,,,,,,,,,,
+Q57955163,Dykie Lyons,No FR WP page,,,,,,,,,,
+Q57986244,Josias Daoudou,,Josias Daoudou,Josias_Daoudou,1995-10-19,,,,,,185,Ailier; arrière
+Q57986336,Lester Etien,,Lester Etien,Lester_Etien,1995-06-21,Créteil,/wiki/Cr%C3%A9teil,,,,180,Ailier; centre
+Q57986397,Guillaume Marchand,,Guillaume Marchand,Guillaume_Marchand,1998-06-05,Saint-Gaudens,/wiki/Saint-Gaudens,,,,183,Talonneur
+Q57986419,Thomas Mamou,,Thomas Mamou,Thomas_Mamou,1994-12-02,Carcassonne,/wiki/Carcassonne,,,,178,Pilier
+Q58007938,Vakh Abdaladze,,Vakhtang Abdaladze,Vakhtang_Abdaladze,1996-02-06,Koutaïssi,/wiki/Kouta%C3%AFssi,,,,188,Pilier
+Q58008359,Jimmy Tuivaiti,,Jimmy Tuivati,Jimmy_Tuivati,1988-01-02,Auckland,/wiki/Auckland,,,,185,troisième ligne aile; centre
+Q58008843,Hideo Kaneshiro,No FR WP page,,,,,,,,,,
+Q58008963,Meli Rokoua,,Meli Rokoua,Meli_Rokoua,1994-07-24,Nadi,/wiki/Nadi_(Fidji),,,,184,Centre
+Q58008967,Louis Venter,No FR WP page,,,,,,,,,,
+Q58009203,Tiaan van der Merwe,No FR WP page,,,,,,,,,,
+Q58009212,JJ van der Mescht,,JJ van der Mescht,JJ_van_der_Mescht,1999-05-04,Pretoria,/wiki/Pretoria,,,,2,Deuxième ligne; troisième ligne aile
+Q58009715,Efi Ma'afu,No FR WP page,,,,,,,,,,
+Q58010444,Ezekiel Lindenmuth,No FR WP page,,,,,,,,,,
+Q58010447,Hoskins Sotutu,,Hoskins Sotutu,Hoskins_Sotutu,1998-07-12,Auckland,/wiki/Auckland,,,,192,Troisième ligne centre; troisième ligne aile
+Q58010451,Tanielu Tele’a,No FR WP page,,,,,,,,,,
+Q58010454,Laghlan McWhannell,No FR WP page,,,,,,,,,,
+Q58010461,Ngane Punivai,No FR WP page,,,,,,,,,,
+Q58010465,Josh Iosefa-Scott,No FR WP page,,,,,,,,,,
+Q58010471,Ayden Johnstone,No FR WP page,,,,,,,,,,
+Q58010478,Folau Fakatava,,Folau Fakatava,Folau_Fakatava,1999-12-16,Nukuʻalofa,/wiki/Nuku%CA%BBalofa,,,,177,Demi de mêlée
+Q58010484,Du'Plessis Kirifi,,Du'Plessis Kirifi,Du%27Plessis_Kirifi,1997-03-03,New Plymouth,/wiki/New_Plymouth,,,,180,Troisième ligne aile
+Q58010501,Billy Proctor,No FR WP page,,,,,,,,,,
+Q58010508,Salesi Rayasi,,Salesi Rayasi,Salesi_Rayasi,1996-09-25,Wellington,/wiki/Wellington,,,,197,Ailier; arrière
+Q58010512,Ataata Moeakiola,,Ataata Moeakiola,Ataata_Moeakiola,1996-02-06,Tofoa,/wiki/Tofoa,,,,186,Ailier; centre; troisième ligne centre
+Q58010738,Jim McKendrick,No FR WP page,,,,,,,,,,
+Q58010885,Ernest Olver,No FR WP page,,,,,,,,,,
+Q58011854,Robert Lilomaiava,,Robert Lilomaiava,Robert_Lilomaiava,1992-03-28,Moto'otua,/wiki/Apia,,,,172,Centre; Ailier
+Q58085647,Larry Warke,No FR WP page,,,,,,,,,,
+Q58085712,Harvey Druitt,No FR WP page,,,,,,,,,,
+Q58099408,Aaron Sexton,No FR WP page,,,,,,,,,,
+Q58175672,James McKelvey,No FR WP page,,,,,,,,,,
+Q58193466,Noel Mahony,No FR WP page,,,,,,,,,,
+Q58215963,Liam Coombes,No FR WP page,,,,,,,,,,
+Q58309854,Denis O'Callaghan,No FR WP page,,,,,,,,,,
+Q58331972,Laird Morris,No FR WP page,,,,,,,,,,
+Q58456640,Ralph Matthews Noble,No FR WP page,,,,,,,,,,
+Q58494610,Tim Maupin,No FR WP page,,,,,,,,,,
+Q58495352,Prince ǃGaoseb,,Prince ǃGaoseb,Prince_%C7%83Gaoseb,1998-07-07,Omaruru,/wiki/Omaruru,,,,186,Troisième ligne aile; troisième ligne centre
+Q58667910,Cullen M. Taniguchi,No FR WP page,,,,,,,,,,
+Q58754522,Gannon Moore,No FR WP page,,,,,,,,,,
+Q58755834,Laurențiu Nica,No FR WP page,,,,,,,,,,
+Q58755865,Marius Iftimiciuc,,Marius Iftimiciuc,Marius_Iftimiciuc,1997-08-13,Iași,/wiki/Ia%C8%99i,,,,200,Deuxième ligne
+Q58755896,Alexandru Savin,No FR WP page,,,,,,,,,,
+Q58756056,Alex Maughan,No FR WP page,,,,,,,,,,
+Q58822115,Jean Sabathé,No FR WP page,,,,,,,,,,
+Q58972851,Devereaux Ferris,No FR WP page,,,,,,,,,,
+Q58974744,Beka Gigashvili,,Beka Gigashvili,Beka_Gigashvili,1992-02-17,Tbilissi,/wiki/Tbilissi,,,,178,Pilier
+Q59134330,Sam Chongkit,No FR WP page,,,,,,,,,,
+Q59140955,Asier Usarraga,,Asier Usarraga,Asier_Usarraga,1994-12-31,San Sebastian,/wiki/Saint-S%C3%A9bastien_(Espagne),,,,188,Troisième ligne
+Q59160484,Wendy Davis,No FR WP page,,,,,,,,,,
+Q59179885,Fraser McReight,,Fraser McReight,Fraser_McReight,1999-02-19,Buderim,/wiki/Buderim,,,,184,Troisième ligne aile
+Q59205109,Cecil Pritchard,No FR WP page,,,,,,,,,,
+Q59206992,Stanley Raubenheimer,No FR WP page,,,,,,,,,,
+Q59209574,Alulutho Tshakweni,No FR WP page,,,,,,,,,,
+Q59209798,Hamza Kaabeche,,Hamza Kaabeche,Hamza_Kaabeche,1996-09-23,Bourg-en-Bresse,/wiki/Bourg-en-Bresse,,,,189,Pilier
+Q59209806,Julien Delbouis,,Julien Delbouis,Julien_Delbouis,1999-08-04,Clamart,/wiki/Clamart,,,,184,Centre
+Q59209857,Yakine Djebbari,,Yakine Djebbari,Yakine_Djebbari,1995-12-16,Épinay-sur-Seine,/wiki/%C3%89pinay-sur-Seine,,,,194,Deuxième ligne
+Q59209880,Pierre-Louis Barassi,,Pierre-Louis Barassi,Pierre-Louis_Barassi,1998-04-22,Sélestat,/wiki/S%C3%A9lestat,,,,188,Centre
+Q59268450,Chance Wenglewski,,Chance Wenglewski,Chance_Wenglewski,1997-09-04,Tulsa,/wiki/Tulsa,,,,188,Pilier
+Q59268480,Adam Brocklebank,No FR WP page,,,,,,,,,,
+Q59306050,Kalione Nasoko,No FR WP page,,,,,,,,,,
+Q59326811,Théo Delblancu,No FR WP page,,,,,,,,,,
+Q59327005,Étienne Grelier,No FR WP page,,,,,,,,,,
+Q59327563,Frank Lomani,,Frank Lomani,Frank_Lomani,1996-04-18,Savusavu,/wiki/Savusavu,,,,180,Demi de mêlée; ailier
+Q59327751,Impi Visser,No stint found,Impi Visser,Impi_Visser,1995-05-30,,,,,,,Demi de mêlée
+Q59364847,Jérémy Helmbacher,No FR WP page,,,,,,,,,,
+Q59387209,Sevuloni Mocenacagi,No FR WP page,,,,,,,,,,
+Q59387240,Darren Adonis,No FR WP page,,,,,,,,,,
+Q59433666,Théo Duprat,,Théo Duprat,Th%C3%A9o_Duprat,2000-06-25,Dax,/wiki/Dax,,,,186,Arrière; Centre
+Q59469546,David Barrera,,David Barrera,David_Barrera,1989-07-05,Séville,/wiki/S%C3%A9ville,,,,196,Deuxième ligne
+Q59474162,Alexandre Panigaï,No FR WP page,,,,,,,,,,
+Q59548506,Ken Waters,,Ken Waters,Ken_Waters,1961-10-09,Cwmbran,/wiki/Cwmbran,,,,180,Talonneur
+Q59588635,Adderley Edward Wilkinson,No FR WP page,,,,,,,,,,
+Q59655857,Vincent Dilorenzo,No FR WP page,,,,,,,,,,
+Q59656253,Scott Penny,,Scott Penny,Scott_Penny,1999-09-22,Dublin,/wiki/Dublin,,,,182,Troisième ligne aile; troisième ligne centre
+Q59656400,Hiwi Tauroa,No FR WP page,,,,,,,,,,
+Q59656418,Alberto Blanco Alonso,,Alberto Blanco,Alberto_Blanco_(rugby_%C3%A0_XV),1990-10-18,Medina de Rioseco,/wiki/Medina_de_Rioseco,,,,183,Pilier
+Q59656532,Roland Blase,No FR WP page,,,,,,,,,,
+Q59660663,Nicolas Chauvin,No FR WP page,,,,,,,,,,
+Q59678540,Theuns Briers,No FR WP page,,,,,,,,,,
+Q59678549,Gertjie Brynard,No FR WP page,,,,,,,,,,
+Q59751424,Julián Quetglas,No FR WP page,,,,,,,,,,
+Q59751514,Lautaro Bazán Velez,,Lautaro Bazán,Lautaro_Baz%C3%A1n,1996-02-24,Córdoba,/wiki/C%C3%B3rdoba_(Argentine),,,,174,Demi de mêlée (rugby à XV); Demi de mêlée (rugby à sept)
+Q59771433,Tomás Munilla,,Tomás Munilla,Tom%C3%A1s_Munilla,1998-08-03,Marbella,/wiki/Marbella,,,,173,Demi de mêlée
+Q59772020,Facundo Munilla,,Facundo Munilla,Facundo_Munilla,1995-05-16,Buenos Aires,/wiki/Buenos_Aires,,,,178,Demi de mêlée
+Q59826634,Ignacio Contardi,,Ignacio Contardi,Ignacio_Contardi,1991-03-08,Mar del Plata,/wiki/Mar_del_Plata,,,,185,Centre; ailier; arrière
+Q59830933,James Lay,,James Lay,James_Lay,1993-12-16,Moto'otua,/wiki/Apia,,,,180,Pilier
+Q60040602,Sebastián Levaggi,No FR WP page,,,,,,,,,,
+Q60040611,Sergiu Ursache,No FR WP page,,,,,,,,,,
+Q60040614,Fernando Higgs,No FR WP page,,,,,,,,,,
+Q60048363,Mow Mitchell,No FR WP page,,,,,,,,,,
+Q60057138,Matthis Lebel,,Matthis Lebel,Matthis_Lebel,1999-03-25,Toulouse,/wiki/Toulouse,,,,184,Arrière; ailier
+Q60110461,Clément Daguin,,Clément Daguin,Cl%C3%A9ment_Daguin,1992-05-25,,,,,,178,Demi de mêlée
+Q60194679,Callum Sheedy,,Callum Sheedy,Callum_Sheedy,1995-10-28,Cardiff,/wiki/Cardiff,,,,173,Demi d'ouverture
+Q60195409,Xerom Civil,No FR WP page,,,,,,,,,,
+Q60198292,Louis Cass,No FR WP page,,,,,,,,,,
+Q60290509,Matt Worley,No FR WP page,,,,,,,,,,
+Q60315591,Baptiste Pesenti,,Baptiste Pesenti,Baptiste_Pesenti,1997-07-03,Saint-Claude,/wiki/Saint-Claude_(Jura),,,,196,Deuxième ligne; troisième ligne aile; troisième ligne centre
+Q60329570,Jean-Baptiste Gros,,Jean-Baptiste Gros,Jean-Baptiste_Gros_(rugby_%C3%A0_XV),1999-05-29,Arles,/wiki/Arles,,,,187,Pilier gauche
+Q60379491,William Darsie,No FR WP page,,,,,,,,,,
+Q60381188,Benjamin Vergniol,,Benjamin Vergniol,Benjamin_Vergniol,1993-11-25,,,,,,172,Deuxième ligne
+Q60441845,Pierre Bavozet,No stint found,Pierre Bavozet,Pierre_Bavozet,1881-06-04,,,1952-07-29,,,,
+Q60485088,Romain Lonca,,Romain Lonca,Romain_Lonca,1991-11-26,Biarritz,/wiki/Biarritz,,,,190,Demi d’ouverture; centre; arrière
+Q60524610,Elwin Hall,No FR WP page,,,,,,,,,,
+Q60528211,Lionel Bostock,No FR WP page,,,,,,,,,,
+Q60643061,David Cherry,,Dave Cherry,David_Cherry,1991-01-03,Édimbourg,/wiki/%C3%89dimbourg,,,,183,Talonneur
+Q60676133,Lucas Albornoz,No FR WP page,,,,,,,,,,
+Q60676419,Guy Voight,No FR WP page,,,,,,,,,,
+Q60693951,Kevin Quinn,No FR WP page,,,,,,,,,,
+Q60694094,Piet Uys,No FR WP page,,,,,,,,,,
+Q60696600,Hugh McLaren,No FR WP page,,,,,,,,,,
+Q60733427,Feao Fotuaika,,Feao Fotuaika,Feao_Fotuaika,1993-04-23,Gisborne,/wiki/Gisborne_(Nouvelle-Z%C3%A9lande),,,,186,Pilier
+Q60733585,Chris Talakai,No FR WP page,,,,,,,,,,
+Q60733696,Andrew Tuala,No FR WP page,,,,,,,,,,
+Q60733724,Cody Walker,No FR WP page,,,,,,,,,,
+Q60733893,Tom Ross,No FR WP page,,,,,,,,,,
+Q60733933,Shane Daly,No FR WP page,,,,,,,,,,
+Q60733948,Dan Davis,No FR WP page,,,,,,,,,,
+Q60733998,Paul Mullen,,Paul Mullen,Paul_Mullen,1991-11-16,Cill Rónáin,/wiki/Cill_R%C3%B3n%C3%A1in,,,,182,Pilier
+Q60734001,Tom Williams,No FR WP page,,,,,,,,,,
+Q60734055,Sam Lewis,No FR WP page,,,,,,,,,,
+Q60734062,Luke Morgan,No FR WP page,,,,,,,,,,
+Q60734121,Patrick Tafa,No FR WP page,,,,,,,,,,
+Q60734139,Brendan Daly,No FR WP page,,,,,,,,,,
+Q60734145,Rory Suttor,No FR WP page,,,,,,,,,,
+Q60734170,BJ Edwards,No FR WP page,,,,,,,,,,
+Q60734188,Tim O'Malley,No FR WP page,,,,,,,,,,
+Q60734283,John Allen,No FR WP page,,,,,,,,,,
+Q60734360,Harri Morgan,No FR WP page,,,,,,,,,,
+Q60734454,Max Wright,No FR WP page,,,,,,,,,,
+Q60734500,Josh Murphy,No FR WP page,,,,,,,,,,
+Q60734501,Conor O'Brien,No FR WP page,,,,,,,,,,
+Q60734508,Ben Donaldson,,Ben Donaldson,Ben_Donaldson,1999-04-04,Sydney,/wiki/Sydney,,,,183,Demi d'ouverture; arrière
+Q60734577,Ted Hill,,Ted Hill,Ted_Hill,1999-03-26,Worcester,/wiki/Worcester,,,,196,Troisième ligne aile
+Q60734617,Leo Kruger,No FR WP page,,,,,,,,,,
+Q60734660,Harry Wilson,,Harry Wilson,Harry_Wilson_(rugby_%C3%A0_XV),1999-11-22,Gunnedah,/wiki/Gunnedah,,,,195,Troisième ligne centre
+Q60734739,Tom Robinson,No FR WP page,,,,,,,,,,
+Q60734741,Harry Plummer,No FR WP page,,,,,,,,,,
+Q60734743,Liam Mitchell,No FR WP page,,,,,,,,,,
+Q60734874,Jock Campbell,No FR WP page,,,,,,,,,,
+Q60735383,Tom Rowe,No FR WP page,,,,,,,,,,
+Q60735766,Conor Fitzgerald,No FR WP page,,,,,,,,,,
+Q60735854,Mike Sheppard,No FR WP page,,,,,,,,,,
+Q60735930,Will Griffiths,No FR WP page,,,,,,,,,,
+Q60736051,Rob Brouwer,No FR WP page,,,,,,,,,,
+Q60736946,Johnny Williams,,Johnny Williams,"Johnny_Williams_(rugby_%C3%A0_XV,_1996)",1996-10-18,Weston-super-Mare,/wiki/Weston-super-Mare,,,,191,Centre
+Q60737433,Rory O'Connor,No FR WP page,,,,,,,,,,
+Q60749804,Arthur Wallis,No FR WP page,,,,,,,,,,
+Q60749880,George Merry,No FR WP page,,,,,,,,,,
+Q60749976,Gerry Quinn,No FR WP page,,,,,,,,,,
+Q60750079,Dan Smith,No FR WP page,,,,,,,,,,
+Q60750473,Harry Read,No FR WP page,,,,,,,,,,
+Q60750679,David Pigot,No FR WP page,,,,,,,,,,
+Q60751266,Charles Austin,No FR WP page,,,,,,,,,,
+Q60751599,William King,No FR WP page,,,,,,,,,,
+Q60752438,Herbert Aston,No FR WP page,,,,,,,,,,
+Q60788178,Will Harrison,No FR WP page,,,,,,,,,,
+Q60828867,Pavel Baranovsky,No FR WP page,,,,,,,,,,
+Q60832404,Conrad Miret i Musté,No stint found,Conrad Miret i Musté,Conrad_Miret_i_Must%C3%A9,1906-04-15,,,1942-02-27,,,,
+Q60832480,Pierre Pages,,Pierre Pagès,Pierre_Pag%C3%A8s,1990-05-16,Cazères,/wiki/Caz%C3%A8res,,,,180,Demi de mêlée
