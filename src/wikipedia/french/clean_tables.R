@@ -1,5 +1,5 @@
 ########################################################################
-# Loads the raw Japanese Wikipedia tables and performs some basic cleaning.
+# Loads the raw French Wikipedia tables and performs some basic cleaning.
 #
 # 02/2025 Vincent Labatut
 ########################################################################
@@ -17,9 +17,9 @@ source("src/common/norm_teams.R")
 
 
 ########################################################################
-# load JA WP tables
-tlog("Loading Wikipedia JA tables")
-folder <- file.path("data", "wikipedia", "japanese")
+# load FR WP tables
+tlog("Loading Wikipedia FR tables")
+folder <- file.path("data", "wikipedia", "french")
 
 players <- read.csv(file.path(folder, "raw", "player_info.csv"))
 tlog(2, "Raw number of players: ", nrow(players))
@@ -36,9 +36,9 @@ stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 # clean the player table
 tlog(0, "Cleaning the player table")
 
-# filter out players with no japanese page
-idx <- which(players[, "debugComment"] == "No JA WP page")
-tlog(2, "Removing players without a japanese WP page: ", length(idx), "/", nrow(players))
+# filter out players with no french page
+idx <- which(players[, "debugComment"] == "No FR WP page")
+tlog(2, "Removing players without a french WP page: ", length(idx), "/", nrow(players))
 players <- players[-idx, ]
 tlog(4, "Remaing players: ", nrow(players))
 
@@ -111,8 +111,8 @@ names(map_url2) <- temp[, "url"]
 map_url <- c(map_url, map_url2)
 # translation map
 temp <- read.csv(file.path(folder, "maps", "text2location.csv"))
-map_ja <- temp[, "location"]
-names(map_ja) <- temp[, "text"]
+map_fr <- temp[, "location"]
+names(map_fr) <- temp[, "text"]
 # clean locations
 tlog(4, "Substituting in the table")
 cols <- c("birthPlace", "deathPlace")
@@ -140,8 +140,8 @@ for (col in cols) {
         places[urls == url] <- map_url[url]
 
       # translate remaining names
-      for (ja_name in names(map_ja))
-        places[places == ja_name] <- map_ja[ja_name]
+      for (fr_name in names(map_fr))
+        places[places == fr_name] <- map_fr[fr_name]
 
       # remove duplicates
       places <- gsub(", ?", "; ", places, fixed = FALSE)
@@ -369,7 +369,7 @@ for (r in 1:nrow(new_stints)) {
         url <- gsub("\\b(.+)/wiki/.+", "\\1", url)
 
       # solve redirection
-      new_stints[r, "teamWP"] <- solve_redirections(name = url, lang = "ja")
+      new_stints[r, "teamWP"] <- solve_redirections(name = url, lang = "fr")
     }
   }
 
