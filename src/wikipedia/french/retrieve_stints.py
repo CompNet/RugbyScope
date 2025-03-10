@@ -60,10 +60,9 @@ CAREER_MAP = {
 }
 
 # irrelevant info sections
-COACH_CAREER = "Carrière d'entraîneur"
-NATREF_CAREER = "Désignations nationales"
-INTREF_CAREER = "Désignations internationales"
-CAREER_DISC = {COACH_CAREER, NATREF_CAREER, INTREF_CAREER}
+CAREER_DISC = {"Carrière d'entraîneur", "Désignations nationales", "Désignations internationales", "Œuvres principales", "Carrière enState of Origin", "Carrière en State of Origin", "Titre honorifique"}
+MODIF_ICON = "Voir et modifier les données sur Wikidata"
+ON_LOAN = "Prêté à"
 
 
 
@@ -334,7 +333,7 @@ for _, player in merged_table.iterrows():
                 pos_elt = id_elt.find("th", string=POSITIONS2)
                 if pos_elt:
                     td_elt = pos_elt.find_next_siblings()[0]
-                    a_elts = td_elt.find_all("a", title=lambda t: t != "Voir et modifier les données sur Wikidata", recursive = True)
+                    a_elts = td_elt.find_all("a", title=lambda t: t != MODIF_ICON, recursive = True)
                     if a_elts:
                         positions = "; ".join(a.get_text(strip=True) for a in a_elts)
                     else:
@@ -372,7 +371,7 @@ for _, player in merged_table.iterrows():
                         while r < len(periods_elt) and (periods_elt[r].name is None and periods_elt[r].strip() == "" or
                                                         periods_elt[r].name is not None and (periods_elt[r].name in ["s", "i", "b", "u", "span"])):
                             if periods_elt[r].name is not None and (periods_elt[r].name in ["i", "b", "u"] or
-                                                                    periods_elt[r].name == "span" and (not periods_elt[r].has_attr("title") or periods_elt[r]["title"] != "Prêté à")):
+                                                                    periods_elt[r].name == "span" and (not periods_elt[r].has_attr("title") or periods_elt[r]["title"] != ON_LOAN)):
                                 skip_periods.append(len(periods))  # list of rows to skip in teams and stats too
                             r = r + 1
                         # concatenate text and hyperlink content
@@ -404,7 +403,7 @@ for _, player in merged_table.iterrows():
                         while r < len(teams_elt) and (teams_elt[r].name is None and teams_elt[r].strip() == "" or
                                                       teams_elt[r].name is not None and (teams_elt[r].name in ["s", "i", "b", "u"] or
                                                                                          teams_elt[r].name == "span" and teams_elt[r].has_attr("class") and "flagicon" in teams_elt[r]["class"] or
-                                                                                         teams_elt[r].name == "span" and teams_elt[r].has_attr("title") and teams_elt[r]["title"] == "Prêté à")):
+                                                                                         teams_elt[r].name == "span" and teams_elt[r].has_attr("title") and teams_elt[r]["title"] == ON_LOAN)):
                             if teams_elt[r].name is not None and teams_elt[r].name in ["i", "b", "u"]:
                                 skip_teams.append(len(teams))  # list of rows to skip in periods and stats too
                             r = r + 1
@@ -566,9 +565,9 @@ for _, player in merged_table.iterrows():
 
                 # in case of types of stints never seen before
                 elif section not in CAREER_DISC:
-                    tlog(4, f"New section detected in this page: " + section)
+                    tlog(4, f"Unknown section detected in this page: " + section)
                     diff_sect = set(diff_sect).union(section)
-                    diff_df = pd.DataFrame(diff_sect)
+                    diff_df = pd.DataFrame(diff_sect, columns = ["Title"])
                     diff_df.to_csv(path.join(table_folder, "debug__new_sections.csv"), index=False)
 
                 # turn to next section
