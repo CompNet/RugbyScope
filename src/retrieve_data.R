@@ -91,9 +91,9 @@ source("src/wikipedia/italian/clean_tables.R")
 # optional: generates a few stats
 source("src/wikipedia/japanese/integrate_data.R")
 # this produces the following files in folder `data/fusion/`:
-# - `players_02_ja-wp.csv`: merged list of players
-# - `teams_03_ja-wp.csv`: merged list of teams
-# - `stints_01_wd-ja-wp.csv`: merged list of stints
+# - `players_02_jawp.csv`: merged list of players
+# - `teams_03_jawp.csv`: merged list of teams
+# - `stints_01_wd-jawp.csv`: merged list of stints
 
 # french wikipedia
 source("src/wikipedia/french/integrate_data.R")

@@ -161,7 +161,7 @@ idx <- which(fus_players[, "altNames"] == "NA")
 fus_players[idx, "altNames"] <- NA
 
 # record merged table as a new CSV file
-tab.file <- file.path(fusion_folder, "players_02_ja-wp.csv")
+tab.file <- file.path(fusion_folder, "players_02_jawp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
@@ -695,7 +695,7 @@ for (r in 1:length(idx)) {
 }
 
 # record merged table as a new CSV file
-tab.file <- file.path(fusion_folder, "teams_03_ja-wp.csv")
+tab.file <- file.path(fusion_folder, "teams_03_jawp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
@@ -715,7 +715,7 @@ tlog("Merging stints")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 #### debug: directly load the file to bypass all previous processing
 #wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
-#fus_teams <- read.csv(file.path(fusion_folder, "teams_03_ja-wp.csv"))
+#fus_teams <- read.csv(file.path(fusion_folder, "teams_03_jawp.csv"))
 #### debug: reload data table for quick testing
 #wp_stints <- read.csv(file.path(wp_folder, "stints.csv"))
 #wp_stints <- wp_stints %>% mutate(across(where(is.character), ~ na_if(., "")))
@@ -928,6 +928,6 @@ fus_stints <- fus_stints[idx, ]
 
 # record as a new CSV file
 fus_stints[,"teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
-tab.file <- file.path(fusion_folder, "stints_01_wd-ja-wp.csv")
+tab.file <- file.path(fusion_folder, "stints_01_wd-jawp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")

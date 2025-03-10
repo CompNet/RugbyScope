@@ -70,7 +70,7 @@ CAREER_DISC = {COACH_CAREER, NATREF_CAREER, INTREF_CAREER}
 
 ########################################################################
 # load list of players
-merged_table = pd.read_csv(path.join("data", "fusion", "players_02_ja-wp.csv"))
+merged_table = pd.read_csv(path.join("data", "fusion", "players_02_jawp.csv"))
 player_number = merged_table.shape[0]
 
 
@@ -139,7 +139,7 @@ for _, player in merged_table.iterrows():
             soup = BeautifulSoup(response.content, "html.parser")
 
             # get the infobox element
-            temp = soup.find_all("div", {"class": "infobox"})
+            temp = soup.find_all("div", class_=["infobox", "infobox_v3"])
             if len(temp) > 0:
                 infobox_elt = temp[0]
             else:
@@ -167,8 +167,14 @@ for _, player in merged_table.iterrows():
             # certain pages have several infoxes, only one contains personal info
             if len(tmp_elts) == 0:
                 temp = soup.find_all("table", {"class": "infobox"})
-                table_elt = temp[0]
-                id_elt = table_elt.find("tbody")
+                if len(temp) == 0:
+                    tlog(2, f"Could not find the table in the infobox: skipping the rest of the extraction process")
+                    comment = "Infobox format problem"
+                    p = p + 1
+                    continue
+                else:
+                    table_elt = temp[0]
+                    id_elt = table_elt.find("tbody")
             else:
                 id_elt = caption_elt.find_next_siblings()[0]
 
@@ -302,12 +308,14 @@ for _, player in merged_table.iterrows():
                 height = height_elt.find_next_siblings()[0].get_text(strip=True)
                 height = height.replace(u"\xa0", u" ")
                 height = height.replace(",", ".")
-                pattern = r"(\d.?\d?\d?) *c?m.*"
-                vals = re.findall(pattern, height)
-                height = vals[0]
-                if "." in height:
-                    height = int(float(height) * 100)
-                tlog(2, f"Height: {height} cm")
+                height = height.strip()
+                if height != "":
+                    pattern = r"(\d.?\d?\d?) *c?m.*"
+                    vals = re.findall(pattern, height)
+                    height = vals[0]
+                    if "." in height:
+                        height = int(float(height) * 100)
+                    tlog(2, f"Height: {height} cm")
             else:
                 tlog(2, f"Could not find height")
 
