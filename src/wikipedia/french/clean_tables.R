@@ -1,7 +1,7 @@
 ########################################################################
 # Loads the raw French Wikipedia tables and performs some basic cleaning.
 #
-# 02/2025 Vincent Labatut
+# 03/2025 Vincent Labatut
 ########################################################################
 library("stringi")
 library("stringr")
@@ -35,6 +35,10 @@ stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 ########################################################################
 # clean the player table
 tlog(0, "Cleaning the player table")
+
+# show debug message distribution
+tlog(2, "Debug messages from retrieval:")
+print(table(players[, "debugComment"]))
 
 # filter out players with no french page
 idx <- which(players[, "debugComment"] == "No FR WP page")

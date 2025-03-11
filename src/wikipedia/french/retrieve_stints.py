@@ -144,6 +144,7 @@ for _, player in merged_table.iterrows():
             else:
                 tlog(2, f"Could not find any infobox: skipping the rest of the extraction process")
                 comment = "No infobox found"
+                player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
                 p = p + 1
                 continue
 
@@ -160,6 +161,7 @@ for _, player in merged_table.iterrows():
             if caption_elt is None:
                 tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
                 comment = "Infobox format problem"
+                player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
                 p = p + 1
                 continue
             tmp_elts = caption_elt.find_next_siblings()
@@ -169,6 +171,7 @@ for _, player in merged_table.iterrows():
                 if len(temp) == 0:
                     tlog(2, f"Could not find the table in the infobox: skipping the rest of the extraction process")
                     comment = "Infobox format problem"
+                    player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
                     p = p + 1
                     continue
                 else:
@@ -297,6 +300,7 @@ for _, player in merged_table.iterrows():
                 else:
                     tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
                     comment = "Infobox format problem"
+                    player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
                     p = p + 1
                     continue
 
