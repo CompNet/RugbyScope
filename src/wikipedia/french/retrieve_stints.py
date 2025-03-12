@@ -85,6 +85,7 @@ diff_sect = [] # this is for debug
 
 ########################################################################
 # loop over players
+name = ""
 p = 1
 # for player_page in ["Jonathan_Sexton"]:  # Christophe_Dominici Antoine_Dupont Fabien_Galthié Jonathan_Sexton
 #     orig_name = ""
@@ -96,6 +97,7 @@ for _, player in merged_table.iterrows():
     tlog(0, f"Processing player {p}/{player_number}: {orig_name} ({orig_id})")
 
     has_career = False
+    name0 = name
     name = ""
     comment = ""
     birth_date = ""
@@ -153,6 +155,8 @@ for _, player in merged_table.iterrows():
             if div_elt:
                 name = div_elt.get_text(strip=True)
                 tlog(2, f"Name: '{name}'")
+                if name0 == name:
+                    tlog(4, "Same name used for two distinct players (WARNING)")
             else:
                 tlog(2, f"Could not find the name (rugby probably not the main activity)")
             caption_elt = infobox_elt.find("caption", string=IDENTITY)
