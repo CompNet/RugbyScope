@@ -51,6 +51,7 @@ tlog(2, "Normalize rugby positions")
 all_positions <- players[, "positions"]
 all_positions <- gsub("\\[\\d+\\]", "", all_positions, fixed = FALSE)
 all_positions <- gsub("、", "; ", all_positions, fixed = TRUE)
+# all_positions <- gsub(Encoding("\xa0"), "_", all_positions, fixed = FALSE)
 all_positions <- strsplit(all_positions, "; ")
 unique_positions <- sort(unique(trimws(unlist(all_positions))))
 #table(unique_positions)
@@ -62,30 +63,58 @@ names(map) <- temp[, "text"]
 for (p in 1:length(all_positions)) {
   positions <- all_positions[[p]]
 
-  if (length(positions) == 0) {
-    positions <- " "
-  } else {
+  # if (length(positions) == 0) {
+  #   positions <- " "
+  # } else {
     # normalize positions names
     for (position in names(map))
       positions[positions == position] <- map[position]
-  }
+  # }
 
   # update list
+  positions <- unique(positions[!is.na(positions)])
   all_positions[[p]] <- positions
 }
 # collapse to get strings again
 all_positions <- sapply(all_positions, function(positions) paste0(positions, collapse = "; "))
-all_positions[all_positions == "NA"] <- NA
+all_positions[all_positions == "NA" | all_positions == ""] <- NA
 names(all_positions) <- NULL
 players[, "positions"] <- all_positions
 
-# weights and heights are ok
+# heights are ok, and no weight in FR WP
 #sort(unique(players[, "height"]))
-#sort(unique(players[, "weight"]))
 
-# birth and death dates are ok
-#sort(unique(players[, "birthDate"]))
-#sort(unique(players[, "deathDate"]))
+# clean birth dates
+birth_dates <- players[, "birthDate"]
+birth_dates <- gsub("[Vv]ers] (\\d{4})-\\d{4}", "\\1-01-01", birth_dates, fixed = FALSE)
+birth_dates <- gsub("[Vv]ers (\\d{4})", "\\1-01-01", birth_dates, fixed = FALSE)
+birth_dates <- gsub("^(\\d{4})$", "\\1-01-01", birth_dates, fixed = FALSE)
+birth_dates <- gsub("^(\\d{4}-\\d{2})$", "\\1-01", birth_dates, fixed = FALSE)
+birth_dates <- gsub("Date et lieu inconnus.", "", birth_dates, fixed = TRUE)
+birth_dates <- gsub("Date inconnue", "", birth_dates, fixed = TRUE)
+birth_dates <- gsub("inconnue", "", birth_dates, fixed = TRUE)
+birth_dates <- gsub("Environ 1906-1907", "1906-01-01", birth_dates, fixed = TRUE)
+birth_dates[!is.na(birth_dates) & birth_dates == ""] <- NA
+#head(sort(unique(birth_dates)), 20)
+#tail(sort(unique(birth_dates)), 20)
+#which(!is.na(birth_dates) & is.na(as.Date(birth_dates))) 
+birth_dates <- as.Date(birth_dates)
+players[, "birthDate"] <- birth_dates
+
+# clean death dates
+death_dates <- players[, "deathDate"]
+death_dates <- gsub("[Vv]ers (\\d{4})", "\\1-01-01", death_dates, fixed = FALSE)
+death_dates <- gsub("Date inconnue", "", death_dates, fixed = TRUE)
+death_dates <- gsub("[Ii]nconnue", "", death_dates, fixed = FALSE)
+death_dates <- gsub("non connu", "", death_dates, fixed = FALSE)
+death_dates <- gsub("^(\\d{4}-\\d{2})$", "\\1-01", death_dates, fixed = FALSE)
+death_dates <- gsub("^(\\d{4})$", "\\1-01-01", death_dates, fixed = FALSE)
+death_dates[!is.na(death_dates) & death_dates == ""] <- NA
+#head(sort(unique(death_dates)), 20)
+#tail(sort(unique(death_dates)), 20)
+#which(!is.na(death_dates) & is.na(as.Date(death_dates))) 
+death_dates <- as.Date(death_dates)
+players[, "deathDate"] <- death_dates
 
 # birth and death places
 tlog(2, "Normalize birth and death places")
