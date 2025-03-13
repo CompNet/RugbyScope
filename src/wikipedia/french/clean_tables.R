@@ -97,7 +97,7 @@ birth_dates <- gsub("Environ 1906-1907", "1906-01-01", birth_dates, fixed = TRUE
 birth_dates[!is.na(birth_dates) & birth_dates == ""] <- NA
 #head(sort(unique(birth_dates)), 20)
 #tail(sort(unique(birth_dates)), 20)
-#which(!is.na(birth_dates) & is.na(as.Date(birth_dates))) 
+#which(!is.na(birth_dates) & is.na(as.Date(birth_dates)))
 birth_dates <- as.Date(birth_dates)
 players[, "birthDate"] <- birth_dates
 
@@ -118,6 +118,7 @@ players[, "deathDate"] <- death_dates
 
 # birth and death places
 tlog(2, "Normalize birth and death places")
+#### debug
 all_urls <- c(players[, "birthPlaceWP"], players[, "deathPlaceWP"])
 all_urls <- strsplit(all_urls, "; ")
 unique_urls <- sort(unique(trimws(unlist(all_urls))))
@@ -129,20 +130,23 @@ map_url <- c()
 for (i in 1:length(unique_urls)) {
   unique_url <- unique_urls[i]
   tlog(6, "Retrieving translation for \"", unique_url, "\" (", i, "/", length(unique_urls), ")")
-  title <- get_english_title(unique_url)
+  title <- get_english_title(unique_url, "fr")
   tlog(8, "Result: ", title)
   if (is.null(title))
     title <- unique_url[i]
   map_url[unique_urls[i]] <- title
 }
-# debug
-#which(is.na(map_url))
-# conversion map
+#### debug
+#write.csv(data.frame(names(map_url), map_url), file.path(folder, "automatic_url2location.csv"), row.names = FALSE)
+#length(which(is.na(map_url)))
+####
+# conversion map (url to name)
 temp <- read.csv(file.path(folder, "maps", "url2location.csv"))
 map_url2 <- temp[, "location"]
 names(map_url2) <- temp[, "url"]
-map_url <- c(map_url, map_url2)
-# translation map
+for (i in 1:length(map_url2))
+  map_url[names(map_url2)[i]] <- map_url2[i]
+# translation map (text to name)
 temp <- read.csv(file.path(folder, "maps", "text2location.csv"))
 map_fr <- temp[, "location"]
 names(map_fr) <- temp[, "text"]
@@ -162,6 +166,8 @@ for (col in cols) {
 
   # loop over table rows (ie players)
   for (p in 1:length(all_places)) {
+    if (p %% 1000 == 0)
+      tlog(8, "Processing row #", p, "/", length(all_places))
     places <- all_places[[p]]
     urls <- all_urls[[p]]
 
@@ -191,14 +197,19 @@ for (col in cols) {
   names(all_places) <- NULL
   players[, col] <- all_places
 }
-# debug
+#### debug: take a look at the normalized names
 #all_places <- c(players[, "birthPlace"], players[, "deathPlace"])
 #all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
 #all_places <- strsplit(all_places, "; ")
 #all_places <- sort(unique(unlist(all_places)))
 #print(tail(all_places))
-# debug
+#### debug: list of names without an associated URL
+#idx <- match(all_places, map_url)
+#idx <- which(is.na(idx))
+#print(all_places[idx])
+#### debug
 #print(head(players[, c("birthPlace", "deathPlace")]))
+####
 
 # rename certain columns
 tlog(2, "Rename certain columns")
@@ -374,10 +385,11 @@ for (r in 1:nrow(stints)) {
     new_stints <- rbind(new_stints, new_rows)
   }
 }
-# debug
+#### debug
 #options(warn = 0)
 #sort(unique(new_stints[, "startYear"]))
 #sort(unique(new_stints[, "endYear"]))
+####
 
 # clean team urls
 idx <- which(grepl("action=edit&redlink=1", new_stints[, "teamWP"], fixed = FALSE))

@@ -1,8 +1,8 @@
 origWdId,origName,debugComment,frName,wpPage,birthDate,birthPlace,birthPlaceWP,deathDate,deathPlace,deathPlaceWP,height,positions
-Q207,George W. Bush,No infobox found,,George_W._Bush,,,,,,,,
+Q207,George W. Bush,No infobox found,,George_W._Bush,1946-07-06,New Haven,,,,,,
 Q5809,Ernesto Guevara,No stint found,Ernesto « Che » Guevara,Che_Guevara,1928-06-14,Rosario,/wiki/Rosario,1967-10-09,La Higuera,/wiki/La_Higuera_(Bolivie),176,
 Q7571,Patricio Albacete,,Patricio Albacete,Patricio_Albacete,1981-02-09,Buenos Aires,/wiki/Buenos_Aires,,,,200,deuxième ligne
-Q12940,Jacques Chaban-Delmas,No infobox found,,Jacques_Chaban-Delmas,,,,,,,,
+Q12940,Jacques Chaban-Delmas,No infobox found,,Jacques_Chaban-Delmas,1915-03-07,Paris 13e,/wiki/13e_arrondissement_de_Paris,2000-11-10,Paris 7e,/wiki/7e_arrondissement_de_Paris,,
 Q18455,Ben Tune,,Ben Tune,Ben_Tune,1976-12-28,Brisbane,/wiki/Brisbane,,,,185,ailier; centre
 Q26037,Quade Cooper,,Quade Cooper,Quade_Cooper,1988-04-05,Tokoroa,/wiki/Tokoroa,,,,186,Demi d'ouverture
 Q29880,Ben Botica,,Ben Botica,Ben_Botica,1989-10-07,Takapuna,/wiki/Takapuna,,,,178,Demi d'ouverture; centre
@@ -41,7 +41,7 @@ Q134895,Javier Bardem,Infobox format problem,Javier Bardem,Javier_Bardem,,,,,,,,
 Q135385,Israel Dagg,,Israel Dagg,Israel_Dagg,1988-06-06,Marton,/wiki/Marton_(Nouvelle-Z%C3%A9lande),,,,186,Arrière; ailier
 Q138586,Gurthrö Steenkamp,,Gurthrö Steenkamp,Gurthr%C3%B6_Steenkamp,1981-06-12,Paarl,/wiki/Paarl,,,,189,Pilier
 Q138722,Stephen Donald,,Stephen Donald,Stephen_Donald,1983-12-03,Papakura,/wiki/Papakura,,,,190,Demi d’ouverture; centre
-Q147338,Morris Kirksey,No infobox found,,Morris_Kirksey,,,,,,,,
+Q147338,Morris Kirksey,No infobox found,,Morris_Kirksey,1895-09-13,	Waxahachie,/wiki/Waxahachie,1981-11-25,San Mateo,/wiki/San_Mateo_(Californie),,
 Q151533,Sam Whitelock,,Sam Whitelock,Sam_Whitelock,1988-10-12,Palmerston North,/wiki/Palmerston_North,,,,202,Deuxième ligne
 Q151572,Victor Vito,,Victor Vito,Victor_Vito,1987-03-27,Wellington,/wiki/Wellington,,,,192,Troisième ligne centre; Troisième ligne aile
 Q163452,Tom James,,Tom James,Tom_James_(rugby_%C3%A0_XV),1987-04-17,Merthyr Tydfil,/wiki/Merthyr_Tydfil,,,,187,Ailier
@@ -54,7 +54,7 @@ Q172174,Guy Ligier,Infobox format problem,Guy Ligier,Guy_Ligier,,,,,,,,
 Q174294,Ian James Clarke,No stint found,Ian Clarke,Ian_Clarke,1931-03-05,,,1997-06-29,,,,Pilier
 Q176596,Clive Rowlands,,Clive Rowlands,Clive_Rowlands,1938-05-14,Upper Cwmtwrch,/wiki/Cwmtwrch,2023-07-29,,,175,Demi de mêlée
 Q181263,François Steyn,,François Steyn,Fran%C3%A7ois_Steyn,1987-05-14,Aliwal North,/wiki/Aliwal_North,,,,191,Centre; arrière; demi d'ouverture; ailier
-Q182609,Jacques Rogge,No infobox found,,Jacques_Rogge,,,,,,,,
+Q182609,Jacques Rogge,No infobox found,,Jacques_Rogge,1942-05-02,Gand,/wiki/Gand,2021-08-29,Deinze,/wiki/Deinze,,
 Q188309,Sergio Parisse,,Sergio Parisse,Sergio_Parisse,1983-09-12,La Plata,/wiki/La_Plata,,,,196,Troisième ligne centre
 Q193926,Aaron Cruden,,Aaron Cruden,Aaron_Cruden,1989-01-08,Palmerston North,/wiki/Palmerston_North,,,,178,Demi d'ouverture; centre
 Q194026,Jimmy Cowan,,Jimmy Cowan,Jimmy_Cowan,1982-03-06,Gore,/wiki/Gore_(Nouvelle-Z%C3%A9lande),,,,182,Demi de mêlée
@@ -221,7 +221,7 @@ Q446193,Norman Slater,No FR WP page,,,,,,,,,,
 Q446200,Colby Slater,No stint found,Colby Slater,Colby_Slater,1896-04-30,Berkeley,/wiki/Berkeley_(Californie),1965-01-30,Clarksburg,/wiki/Clarksburg_(Californie),191,deuxième ligne
 Q446520,Dudley DeGroot,No FR WP page,,,,,,,,,,
 Q446789,Dai Young,,David Young,David_Young_(rugby),1967-07-26,Aberdare,/wiki/Aberdare_(pays_de_Galles),,,,185,pilier
-Q446877,Alfred Eluère,No infobox found,,Alfred_Elu%C3%A8re,,,,,,,,
+Q446877,Alfred Eluère,No infobox found,,Alfred_Elu%C3%A8re,1893-07-28,Saint-Clément-des-Levées,/wiki/Saint-Cl%C3%A9ment-des-Lev%C3%A9es,1985-03-12,Narrosse,/wiki/Narrosse,,
 Q447937,Jack Kyle,,Jack Kyle,Jack_Kyle,1926-01-10,Belfast,/wiki/Belfast,2014-11-27,Irlande du Nord,/wiki/Irlande_du_Nord,,Demi d'ouverture
 Q447949,Bryn Meredith,,Bryn Meredith,Bryn_Meredith,1930-11-21,Cwmbran,/wiki/Cwmbran,,,,180,Talonneur
 Q447961,Alun Wyn Jones,,Alun Wyn Jones,Alun_Wyn_Jones,1985-09-19,Swansea,/wiki/Swansea,,,,198,Deuxième ligne
@@ -318,7 +318,7 @@ Q546277,André Pretorius,,Andre Pretorius,Andre_Pretorius,1978-12-29,Johannesbou
 Q547478,Mike Campbell-Lamerton,No stint found,Mike Campbell-Lamerton,Mike_Campbell-Lamerton,1933-08-01,La Valette,/wiki/La_Valette,2005-03-17,Warwickshire,/wiki/Warwickshire,,Deuxième ligne
 Q549490,Anthony Foley,,Anthony Foley,Anthony_Foley,1973-10-30,Limerick,/wiki/Limerick_(Irlande),2016-10-16,Suresnes,/wiki/Suresnes,191,Troisième ligne centre
 Q553979,Grzegorz Kacała,,Gregory Kacala,Gregory_Kacala,1966-03-15,Gdańsk,/wiki/Gda%C5%84sk,,,,194,Troisième ligne aile
-Q568655,Joseph Roffo,No infobox found,,Joseph_Roffo,,,,,,,,
+Q568655,Joseph Roffo,No infobox found,,Joseph_Roffo,1879-01-21,Paris 10e,/wiki/10e_arrondissement_de_Paris,1933-02-05,Paris 16e,/wiki/16e_arrondissement_de_Paris,,
 Q569150,David Aucagne,,David Aucagne,David_Aucagne,1973-02-14,Vichy,/wiki/Vichy,,,,178,Demi d'ouverture
 Q570956,Antanas Bosas,No FR WP page,,,,,,,,,,
 Q573987,Dave Gallaher,,David Gallaher,Dave_Gallaher,1873-10-30,Ramelton,/wiki/R%C3%A1th_Mealtain,1917-10-04,Passchendaele,/wiki/Passchendaele,183,Voltigeur avant
@@ -402,7 +402,7 @@ Q651186,Gordon Brown,,Gordon Brown,Gordon_Brown_(rugby_%C3%A0_XV),1947-11-01,Tro
 Q651250,Dave Walder,,Dave Walder,Dave_Walder,1978-05-07,Newcastle upon Tyne,/wiki/Newcastle_upon_Tyne,,,,178,Demi d'ouverture; arrière
 Q651983,Gary Whetton,,Gary Whetton,Gary_Whetton,1959-12-15,Auckland,/wiki/Auckland,,,,198,Deuxième ligne
 Q655903,Tioti Maati Toafa,No FR WP page,,,,,,,,,,
-Q657322,Joël Jutge,No infobox found,,Jo%C3%ABl_Jutge,,,,,,,,
+Q657322,Joël Jutge,No infobox found,,Jo%C3%ABl_Jutge,1966-04-05,Lavaur,/wiki/Lavaur_(Tarn),,,,,
 Q658254,Melrick Africa,No stint found,Melrick Africa,Melrick_Africa,1978-01-18,Rehoboth,/wiki/Rehoboth_(Namibie),,,,182,Ailier
 Q660403,Jean Prat,,Jean Prat,Jean_Prat_(rugby_%C3%A0_XV),1923-08-01,Lourdes,/wiki/Lourdes,2005-02-25,Tarbes,/wiki/Tarbes,178,troisième ligne aile
 Q660800,Frederick Stokes,,Frederick Stokes,Frederick_Stokes,1850-07-12,Greenwich (Londres),/wiki/Greenwich_(Londres),1929-02-07,Baughurst,/wiki/Baughurst,,
@@ -559,7 +559,7 @@ Q925097,Stephen Larkham,,Stephen Larkham,Stephen_Larkham,1974-05-29,Canberra,/wi
 Q925823,Richard Hyland,,Dick Hyland,Richard_Hyland,1900-07-26,San Francisco,/wiki/San_Francisco,1981-07-16,Wawona,/wiki/Wawona,,Centre
 Q926351,John Eales,,John Eales,John_Eales,1970-06-27,Brisbane,/wiki/Brisbane,,,,,Deuxième ligne
 Q926984,Pedro Bordaberry,No stint found,Pedro Bordaberry,Pedro_Bordaberry,1960-04-28,,,,,,,
-Q927905,Géo André,No infobox found,,Georges_Andr%C3%A9,,,,,,,,
+Q927905,Géo André,No infobox found,,Georges_Andr%C3%A9,1889-08-13,Paris,/wiki/Paris,1943-05-04,Mateur,/wiki/Mateur,188,Trois-quarts aile
 Q928783,Gavin Kerr,,Gavin Kerr,Gavin_Kerr,1977-04-03,Newcastle upon Tyne,/wiki/Newcastle_upon_Tyne,,,,180,Pilier
 Q930461,Duncan Jones,,Duncan Jones,Duncan_Jones_(rugby_%C3%A0_XV),1978-09-18,Neath,/wiki/Neath,,,,183,pilier
 Q930496,Rodrigo Roncero,,Rodrigo Roncero,Rodrigo_Roncero,1977-02-16,Buenos Aires,/wiki/Buenos_Aires,,,,177,Pilier gauche
@@ -739,7 +739,7 @@ Q1309925,Kel Tremain,,Kelvin Tremain,Kelvin_Tremain,1938-02-21,Auckland,/wiki/Au
 Q1313045,Frank Himmer,No FR WP page,,,,,,,,,,
 Q1322456,Serge Blanco,,Serge Blanco,Serge_Blanco,1958-08-31,Caracas,/wiki/Caracas,,,,183,Arrière
 Q1333347,Robbie Deans,,Robbie Deans,Robbie_Deans,1959-09-04,Cheviot,/wiki/Cheviot_(Nouvelle-Z%C3%A9lande),,,,180,Arrière
-Q1340053,Pierre Failliot,No infobox found,,Pierre_Failliot,,,,,,,,
+Q1340053,Pierre Failliot,No infobox found,,Pierre_Failliot,1889-02-25,4e arrondissement de Paris,/wiki/4e_arrondissement_de_Paris,1935-12-31,18e arrondissement de Paris,/wiki/18e_arrondissement_de_Paris,180,Ailier
 Q1343583,Kenta Kobashi,Infobox format problem,Kenta Kobashi,Kenta_Kobashi,,,,,,,,
 Q1346897,Gavin Williams,,Gavin Williams,Gavin_Williams,1979-10-25,Auckland,/wiki/Auckland,,,,186,Centre; arrière
 Q1349233,Thierry Dusautoir,,Thierry Dusautoir,Thierry_Dusautoir,1981-11-18,Abidjan,/wiki/Abidjan,,,,188,troisième ligne aile
@@ -889,7 +889,7 @@ Q1812395,André Chilo,No stint found,André Chilo,Andr%C3%A9_Chilo,1898-07-05,,,
 Q1812429,Maurice Labeyrie,,Maurice Labeyrie,Maurice_Labeyrie,1887-10-03,Saint-Geours-de-Maremne,/wiki/Saint-Geours-de-Maremne,1969-03-10,Chelles,/wiki/Chelles,172,Deuxième ligne
 Q1812451,Édouard Bader,,Édouard Bader,%C3%89douard_Bader,1899-07-26,Ferrières-en-Brie,/wiki/Ferri%C3%A8res-en-Brie,1983-04-21,Ferrières-en-Brie,/wiki/Ferri%C3%A8res-en-Brie,172,demi de mêlée
 Q1812764,Robert Levasseur,,Robert Levasseur,Robert_Levasseur,1898-01-27,Paris,/wiki/Paris,1974-05-25,Biarritz,/wiki/Biarritz,179,deuxième ligne
-Q1812787,François Borde,No infobox found,,Fran%C3%A7ois_Borde,,,,,,,,
+Q1812787,François Borde,No infobox found,,Fran%C3%A7ois_Borde,1899-12-08,Lourdes,/wiki/Lourdes,1987-12-15,Bayonne,/wiki/Bayonne,,
 Q1812808,Alphonse Castex,,Alphonse Castex,Alphonse_Castex,1899-01-06,Dax,/wiki/Dax,1969-12-16,Saint-Paul-les-Dax,/wiki/Saint-Paul-les-Dax,,
 Q1813780,Pierre Petiteau,,Pierre Petiteau,Pierre_Petiteau,1899-05-14,La Réole,/wiki/La_R%C3%A9ole,1974-04-09,Bordeaux,/wiki/Bordeaux,,Talonneur
 Q1814785,Norman Borrett,No FR WP page,,,,,,,,,,
@@ -1057,7 +1057,7 @@ Q2383858,Charles Geli,,Charles Géli,Charles_G%C3%A9li,1987-03-26,Toulouse,/wiki
 Q2384295,Sébastien Paillat,No stint found,Sébastien Paillat,S%C3%A9bastien_Paillat,1970-09-11,,,,,,,Arrière
 Q2384407,Julien Janaudy,,Julien Janaudy,Julien_Janaudy,1989-02-21,Bourgoin-Jallieu,/wiki/Bourgoin-Jallieu,2018-04-01,Saint-Jean-de-Soudain,/wiki/Saint-Jean-de-Soudain,180,talonneur
 Q2384444,Hrishikesh Pendse,,Hrishikesh Pendse,Hrishikesh_Pendse,1986-04-08,,,,,,190,Troisième ligne aile; deuxième ligne
-Q2386451,Robert Monier,No infobox found,,Robert_Monier,,,,,,,,
+Q2386451,Robert Monier,No infobox found,,Robert_Monier,1885-02-20,Bordeaux,/wiki/Bordeaux,1944-12-06,Bordeaux,/wiki/Bordeaux,,
 Q2386745,Trevor Leota,,Trevor Leota,Trevor_Leota,1975-02-08,Auckland,/wiki/Auckland,,,,175,Talonneur
 Q2386766,Marin Moț,,Marin Moț,Marin_Mo%C8%9B,1956-07-09,Meri,"/w/index.php?title=Meri,_Teleorman&action=edit&redlink=1",,,,172,Talonneur
 Q2387382,Vassili Bost,,Vassili Bost,Vassili_Bost,1985-04-28,,,,,,196,3eligne
@@ -1134,7 +1134,7 @@ Q2505333,Bob Craig,,Bob Craig,Bob_Craig_(rugby),1881-09-01,Sydney,/wiki/Sydney,1
 Q2506103,James Davey,No FR WP page,,,,,,,,,,
 Q2509738,Charles Russell,,Boxer Russell,Boxer_Russell,1884-12-05,St Peters,/w/index.php?title=St_Peters_(Nouvelle_Galles_du_Sud)&action=edit&redlink=1,1957-05-15,Sydney,/wiki/Sydney,,Ailier
 Q2510117,Jack Hickey,,Jack Hickey,Jack_Hickey,1887-01-04,Sydney,/wiki/Sydney,1950-05-15,Sydney,/wiki/Sydney,,Centre
-Q2524252,Carlos Deltour,No infobox found,,Carlos_Deltour,,,,,,,,
+Q2524252,Carlos Deltour,No infobox found,,Carlos_Deltour,1964-04-08,Guadalajara,/wiki/Guadalajara_(Mexique),1920-05-29,Cambo-les-Bains,/wiki/Cambo-les-Bains,,
 Q2557424,Steve Hansen,,Steve Hansen,Steve_Hansen,1959-05-07,Dunedin,/wiki/Dunedin,,,,,Centre
 Q2568753,Ruan Pienaar,,Ruan Pienaar,Ruan_Pienaar,1984-03-10,Bloemfontein,/wiki/Bloemfontein,,,,187,Demi de mêlée; demi d'ouverture; arrière
 Q2578953,William Hirigoyen,,William Gayraud,William_Gayraud,1898-05-01,Laroque-Timbaut,/wiki/Laroque-Timbaut,1962-12-09,Paris9e,/wiki/9e_arrondissement_de_Paris,176,Talonneur
@@ -1146,7 +1146,7 @@ Q2619055,Erik Lund,,Erik Lund,Erik_Lund,1979-07-03,Fredrikstad,/wiki/Fredrikstad
 Q2635850,David Robertson,No infobox found,,David_Robertson_(sport),,,,,,,,
 Q2636049,Franz Albert Amrhein,,Albert Amrhein,Albert_Amrhein,1870-12-29,Francfort,/wiki/Francfort,1945-05-20,Francfort,/wiki/Francfort,,Pilier
 Q2636058,André Roosevelt,No stint found,Albert Roosevelt,Albert_Roosevelt,1879-04-24,,,1962-07-21,,,,Troisième ligne aile
-Q2636456,Jean-Guy Gautier,No infobox found,,Jean-Guy_Gautier,,,,,,,,
+Q2636456,Jean-Guy Gautier,No infobox found,,Jean-Guy_Gautier,1875-12-13,Jarnac,/wiki/Jarnac,1938-10-23,Cognac,/wiki/Cognac_(Charente),175,Trois-quarts centre; Troisième ligne centre; Pilier gauche; Seconde ligne
 Q2636650,Léon Binoche,,Léon Binoche,L%C3%A9on_Binoche,1878-08-16,Champs-sur-Yonne,/wiki/Champs-sur-Yonne,1962-08-28,Ferney-Voltaire,/wiki/Ferney-Voltaire,,Demi d'ouverture
 Q2647958,Allan Elsom,,Allan Elsom,Allan_Elsom,1925-07-18,Christchurch,/wiki/Christchurch,2010-09-25,Christchurch,/wiki/Christchurch,183,Centre; ailier
 Q2648015,Allan Muhr,,Allan Muhr,Allan_Muhr,1882-01-23,Philadelphie,/wiki/Philadelphie,1944-12-29,Neuengamme,/wiki/Neuengamme,,Deuxième ligne; troisième ligne centre
@@ -1815,7 +1815,7 @@ Q2958556,Charles Bigot,,Charles Bigot,Charles_Bigot_(rugby_%C3%A0_XV),1906-02-04
 Q2958908,Charles Dick,No stint found,Charles Dick,Charles_Dick,1913-07-01,Sevenoaks,/wiki/Sevenoaks,2004-05-19,,,,centre
 Q2959212,Charles Gimenez,,Charles Gimenez,Charles_Gimenez,1988-02-11,Pamiers,/wiki/Pamiers,,,,180,Centre; ailier
 Q2959220,Charles Givone,,Charles Givone,Charles_Givone,1988-09-05,Lyon,/wiki/Lyon,,,,177,pilier
-Q2959278,Charles Guiraist,No infobox found,,Charley_Guiraut,,,,,,,,
+Q2959278,Charles Guiraist,No infobox found,,Charley_Guiraut,1887-05-31,Bordeaux,/wiki/Bordeaux,1947-09-07,Bordeaux,/wiki/Bordeaux,,
 Q2959303,Charles Hallaran,No stint found,Charles Hallaran,Charles_Hallaran,1897-06-10,Ceylan britannique,/wiki/Ceylan_britannique,1941-03-21,Worcester,/wiki/Worcester,,Deuxième ligne
 Q2959306,Charles Hanrahan,No stint found,Charles Hanrahan,Charles_Hanrahan,,,,1969-07-28,Cork,/wiki/Cork,,Pilier
 Q2959651,Charles Lewis,,Charles Lewis,Charles_Lewis_(rugby_%C3%A0_XV),1853-08-20,Llangadog,/wiki/Llangadog,1923-05-28,Llandovery,/wiki/Llandovery,,Arrière
@@ -1879,7 +1879,7 @@ Q2965649,Christian Stewart,,Christian Stewart,Christian_Stewart,1966-10-17,Toron
 Q2965654,Christian Swierczinski,,Christian Swierczinski,Christian_Swierczinski,1946-07-28,Saint-Maime-de-Péreyrol,/wiki/Saint-Maime-de-P%C3%A9reyrol,2012-12-23,Bègles,/wiki/B%C3%A8gles,176,Talonneur
 Q2965682,Christian Vignes,,Christian Vignes,Christian_Vignes,1934-06-05,Biarritz,/wiki/Biarritz,,,,180,Demi de mêlée; Centre
 Q2966033,Christo Bezuidenhout,,Christo Bezuidenhout,Christo_Bezuidenhout,1970-05-14,Tenerife,/wiki/Tenerife,,,,187,Pilier
-Q2966105,Christophe Berdos,No infobox found,,Christophe_Berdos,,,,,,,,
+Q2966105,Christophe Berdos,No infobox found,,Christophe_Berdos,1970-04-17,,,,,,,
 Q2966155,Christophe Clarac,,Christophe Clarac,Christophe_Clarac,1985-01-05,Auch,/wiki/Auch,,,,173,Demi de mêlée
 Q2966177,Christophe Dasque,,Christophe Dasque,Christophe_Dasque,1987-01-05,,,,,,186,Arrière
 Q2966182,Christophe David,,Christophe David,Christophe_David_(rugby_%C3%A0_XV),1991-07-31,,,,,,178,Talonneur
@@ -2330,7 +2330,7 @@ Q3052543,Emmanuel Amapakabo,,Emmanuel Amapakabo,Emmanuel_Amapakabo,1973-12-23,Or
 Q3052694,Emmanuel Felsina,,Emmanuel Felsina,Emmanuel_Felsina,1985-02-22,Créteil,/wiki/Cr%C3%A9teil,,,,190,Pilier gauche
 Q3052768,Emmanuel Lunardi,,Emmanuel Lunardi,Emmanuel_Lunardi,1974-06-26,Montélimar,/wiki/Mont%C3%A9limar,,,,198,deuxième ligne
 Q3052774,Emmanuel Maignien,,Emmanuel Maignien,Emmanuel_Maignien,1982-01-05,Montélimar,/wiki/Mont%C3%A9limar,,,,184,talonneur
-Q3052806,Emmanuel Ngom Priso,No infobox found,,Emmanuel_Ngom_Priso,,,,,,,,
+Q3052806,Emmanuel Ngom Priso,No infobox found,,Emmanuel_Ngom_Priso,1984-12-15,Nkongsamba,/wiki/Nkongsamba,,,,182,Centre; Ailier
 Q3052921,Emmanuel Étien,,Emmanuel Étien,Emmanuel_%C3%89tien,1981-03-14,Vichy,/wiki/Vichy,,,,187,Troisième ligne aile
 Q3053432,Emyr Lewis,,Emyr Lewis,Emyr_Lewis,1968-08-29,Carmarthen,/wiki/Carmarthen,,,,193,Troisième ligne aile; troisième ligne centre
 Q3054643,Enrico Patrizio,,Enrico Patrizio,Enrico_Patrizio,1985-01-15,Camposampiero,/wiki/Camposampiero,,,,182,Centre; ailier
@@ -2455,7 +2455,7 @@ Q3081582,Francis Mas,,Francis Mas,Francis_Mas,1938-11-08,Cazouls-lès-Béziers,/
 Q3081620,Francis Ntamack,,Francis Ntamack,Francis_Ntamack,1972-11-15,Lyon,/wiki/Lyon,,,,188,Troisième ligne centre
 Q3081669,Francis Rui,,Francis Rui,Francis_Rui,1959-02-23,Gimont,/wiki/Gimont,2001-09-21,Toulouse,/wiki/Toulouse,180,Demi d'ouverture
 Q3081691,Francis Sénac,,Francis Sénac,Francis_S%C3%A9nac,1953-08-10,Tostat,/wiki/Tostat,,,,193,deuxième ligne
-Q3081722,Francis Vals,No infobox found,,Francis_Vals,,,,,,,,
+Q3081722,Francis Vals,No infobox found,,Francis_Vals,1910-01-09,Leucate,/wiki/Leucate,1974-06-26,Luxembourg,/wiki/Luxembourg_(ville),,
 Q3081810,Francisco Bosch,,Francisco Bosch,Francisco_Bosch_(rugby_%C3%A0_XV),1982-12-31,Buenos Aires,/wiki/Buenos_Aires,,,,182,ailier
 Q3081871,Francisco Lecot,,Francisco Lecot,Francisco_Lecot,1979-05-27,Catamarca,/wiki/San_Fernando_del_Valle_de_Catamarca,,,,182,Pilier
 Q3081875,Francisco Leonelli,,Francisco Leonelli,Francisco_Leonelli,1978-05-03,Santa Cruz de la Sierra,/wiki/Santa_Cruz_de_la_Sierra,,,,188,Arrière; ailier
@@ -2477,7 +2477,7 @@ Q3082210,Franck Membrado,No FR WP page,,,,,,,,,,
 Q3082223,Franck Mesnel,,Franck Mesnel,Franck_Mesnel,1961-06-30,Carrières-sur-Seine,/wiki/Carri%C3%A8res-sur-Seine,,,,181,Demi d'ouverture; centre
 Q3082255,Franck Rimet,,Franck Rimet,Franck_Rimet,1971-03-07,,,,,,184,Centre; Ailier
 Q3082306,Franck Tournaire,,Franck Tournaire,Franck_Tournaire,1972-12-04,Narbonne,/wiki/Narbonne,,,,181,Pilier droit
-Q3082313,Franck Villaz,,Franck Villaz,Franck_Villaz,1986-04-14,France,/wiki/%C3%89quipe_de_France_de_rugby_%C3%A0_XV,,,,185,pilier
+Q3082313,Franck Villaz,,Franck Villaz,Franck_Villaz,1986-04-14,Béziers,/wiki/B%C3%A9ziers,,,,185,pilier
 Q3082356,Franco Bargelli,,Franco Bargelli,Franco_Bargelli,1954-10-04,Frascati,/wiki/Frascati,,,,,Troisième ligne aile
 Q3082390,Franco Properzi,,Franco Properzi-Curti,Franco_Properzi-Curti,1965-11-04,Dehradun,/wiki/Dehradun,,,,187,Pilier
 Q3082393,Franco Sbaraglini,,Franco Sbaraglini,Franco_Sbaraglini,1982-12-03,Mar del Plata,/wiki/Mar_del_Plata,,,,179,Talonneur
@@ -3473,7 +3473,7 @@ Q3184545,Joseph Augé,,Joseph Augé,Joseph_Aug%C3%A9,1904-03-19,Dax,/wiki/Dax,19
 Q3184580,Joseph Bavozet,,Joseph Bavozet,Joseph_Bavozet,1887-05-26,Lyon2e,/wiki/2e_arrondissement_de_Lyon,1967-05-15,Lyon7e,/wiki/7e_arrondissement_de_Lyon,175,troisième ligne aile
 Q3184758,Joseph Choy,No stint found,Joseph Choy,Joseph_Choy,1905-08-19,,,1990-06-01,,,,Pilier
 Q3184798,Joseph Crespo,,Joseph Crespo,Joseph_Crespo,1925-01-01,Elne,/wiki/Elne,2004-05-07,Mably,/wiki/Mably_(Loire),172,Demi de mêlée
-Q3184842,Joseph Desclaux,No infobox found,,Joseph_Desclaux,,,,,,,,
+Q3184842,Joseph Desclaux,No infobox found,,Joseph_Desclaux,1912-02-01,Collioure,/wiki/Collioure,1988-03-26,Collioure,/wiki/Collioure,168,Trois-quarts centre; Demi d'ouverture
 Q3184985,Joseph Galy,No stint found,Joseph Galy,Joseph_Galy,1929-12-22,,,1997-06-26,,,,Centre
 Q3185148,Joseph Jourdain de Muizon,No stint found,Joseph Jourdain de Muizon,Joseph_Jourdain_de_Muizon,1890-12-29,,,1958-10-23,,,,Ailier
 Q3185316,Joseph Marmayou,,Joseph Marmayou,Joseph_Marmayou,1898-10-02,Perpignan,/wiki/Perpignan,1978-10-20,Vichy,/wiki/Vichy,170,Arrière
@@ -3798,7 +3798,7 @@ Q3260391,Louis-Bernard Dancausse,No stint found,Louis-Bernard Dancausse,Louis-Be
 Q3260585,Louis-Henry Destel,No stint found,Louis-Henry Destel,Louis-Henry_Destel,1885-10-03,,,1962-08-29,,,,
 Q3260969,Louis Acosta,,Louis Acosta,Louis_Acosta,1991-05-25,Verdun,/wiki/Verdun_(Meuse),,,,182,Talonneur
 Q3261102,Louis Armary,,Louis Armary,Louis_Armary,1963-07-24,Betpouey,/wiki/Betpouey,,,,183,pilier
-Q3261118,Louis Attrill,No infobox found,,Louis_Attrill,,,,,,,,
+Q3261118,Louis Attrill,No infobox found,,Louis_Attrill,1975-03-05,,,,,,,
 Q3261267,Louis Bilbao,,Louis Bilbao,Louis_Bilbao,1956-09-14,Saint-Jean-de-Luz,/wiki/Saint-Jean-de-Luz,,,,185,Ailier
 Q3261281,Louis Blanc,,Louis Blanc,Louis_Blanc_(rugby_%C3%A0_XV),1933-07-19,Montauban,/wiki/Montauban,2018-12-17,Caussade,/wiki/Caussade_(Tarn-et-Garonne),178,Troisième ligne centre; Pilier gauche
 Q3261431,Louis Carrère,,Louis Carrère,Louis_Carr%C3%A8re,1914-10-10,Sainte-Marie,/wiki/Sainte-Marie-la-Mer,1979-03-19,Sainte-Marie,/wiki/Sainte-Marie-la-Mer,175,Pilier
@@ -3814,7 +3814,7 @@ Q3262118,Louis Guinle,,Louis Guinle,Louis_Guinle,1928-04-25,Lourdes,/wiki/Lourde
 Q3262390,Louis Junquas,No stint found,Louis Junquas,Louis_Junquas,1920-09-11,,,2002-05-22,,,,Centre
 Q3262400,Louis Koen,,Louis Koen,Louis_Koen,1975-07-07,Le Cap,/wiki/Le_Cap,,,,180,Demi d'ouverture
 Q3262521,Louis Lepatey,,Louis Lepatey,Louis_Lepatey,1898-08-29,Moussan,/wiki/Moussan,1975-09-04,Narbonne,/wiki/Narbonne,181,Pilier gauche
-Q3262565,Louis Luyt,No infobox found,,Louis_Luyt,,,,,,,,
+Q3262565,Louis Luyt,No infobox found,,Louis_Luyt,1932-06-18,,,,,,,
 Q3262584,Louis Magee,No stint found,Louis Magee,Louis_Magee,1874-05-01,,,1945-04-04,,,,Demi d'ouverture
 Q3262657,Louis Massabeau,No stint found,Louis Massabeau,Louis_Massabeau,1976-01-26,,,,,,,Troisième ligne aile
 Q3262891,Lou Phillips,,Louis Phillips,Louis_Phillips,1878-02-24,Newport,/wiki/Newport_(pays_de_Galles),1916-03-04,Cambrin,/wiki/Cambrin,168,Demi de mêlée
@@ -3839,7 +3839,7 @@ Q3265182,Lucian Sîrbu,,Lucian Sîrbu,Lucian_S%C3%AErbu,1976-10-16,Bucarest,/wik
 Q3265216,Luciano Orquera,,Luciano Orquera,Luciano_Orquera,1981-10-12,Córdoba,/wiki/C%C3%B3rdoba_(Argentine),,,,171,demi d'ouverture
 Q3265331,Lucien Abadie,No stint found,Lucien Abadie,Lucien_Abadie,1937-08-17,,,1983-10-18,,,,Pilier
 Q3265350,Lucien Augras,No stint found,Lucien Augras,Lucien_Augras,1912-08-13,,,1989-08-06,,,,Ailier
-Q3265377,Lucien Besset,No infobox found,,Lucien_Besset,,,,,,,,
+Q3265377,Lucien Besset,No infobox found,,Lucien_Besset,1892-01-04,10e arrondissement de Paris,/wiki/10e_arrondissement_de_Paris,1975-04-22,12e arrondissement de Paris,/wiki/12e_arrondissement_de_Paris,168,Demi d'ouverture; Centre
 Q3265638,Lucien Mias,,Lucien Mias,Lucien_Mias,1930-09-28,Saint-Germain-de-Calberte,/wiki/Saint-Germain-de-Calberte,2024-05-13,Mazamet,/wiki/Mazamet,189,Deuxième ligne
 Q3265666,Lucien Pariès,,Lucien Pariès,Lucien_Pari%C3%A8s,1947-07-04,Anglet,/wiki/Anglet,1998-01-28,Aix-les-Bains,/wiki/Aix-les-Bains,172,Demi d'ouverture
 Q3265700,Lucien Rouffia,,Lucien Rouffia,Lucien_Rouffia,1924-01-06,Narbonne,/wiki/Narbonne,1980-03-08,Romans-sur-Isère,/wiki/Romans-sur-Is%C3%A8re,168,Arrière
@@ -3924,7 +3924,7 @@ Q3288001,Marc Etcheverry,No stint found,Marc Etcheverry,Marc_Etcheverry,1942-08-
 Q3288069,Marc Giacardy,,Marc Giacardy,Marc_Giacardy,1881-02-15,Bordeaux,/wiki/Bordeaux,1917-08-28,Louvemont-Côte-du-Poivre,/wiki/Louvemont-C%C3%B4te-du-Poivre,175,Pilier; demi d'ouverture; talonneur; deuxième ligne
 Q3288070,Marc Giraud,,Marc Giraud,Marc_Giraud_(rugby_%C3%A0_XV),1986-02-27,Toulouse,/wiki/Toulouse,,,,196,Troisième ligne aile
 Q3288158,Marc Laffon,,Marc Laffon,Marc_Laffon,1982-08-19,,,,,,179,talonneur
-Q3288245,Marc Maury,Infobox format problem,Marc Maury,Marc_Maury,,,,,,,,
+Q3288245,Marc Maury,Infobox format problem,Marc Maury,Marc_Maury,1957-10-21,,,,,,,
 Q3288329,Marc Pujolle,No stint found,Marc Pujolle,Marc_Pujolle,1962-09-18,,,,,,,Pilier
 Q3288332,Marc Raynaud,,Marc Raynaud,Marc_Raynaud,1973-03-19,Narbonne,/wiki/Narbonne,,,,185,troisième ligne centre
 Q3288375,Marc Sallefranque,No stint found,Marc Sallefranque,Marc_Sallefranque,1960-04-06,,,,,,,Demi d'ouverture
@@ -4190,7 +4190,7 @@ Q3310866,Michel Sitjar,,Michel Sitjar,Michel_Sitjar,1942-09-13,Toulouse,/wiki/To
 Q3310882,Michel Sorondo,No stint found,Michel Sorondo,Michel_Sorondo,1919-07-16,,,1976-07-24,,,,Centre
 Q3310932,Michel Tachdjian,No stint found,Michel Tachdjian,Michel_Tachdjian,1962-06-06,,,,,,,Deuxième ligne
 Q3310933,Michel Taffary,No stint found,Michel Taffary,Michel_Taffary,1950-04-25,,,,,,,Arrière
-Q3310983,Michel Tonon,No infobox found,,Michel_Tonon,,,,,,,,
+Q3310983,Michel Tonon,No infobox found,,Michel_Tonon,1957-10-16,Nuits-Saint-Georges,/wiki/Nuits-Saint-Georges,,,,,
 Q3310992,Michel Trilles,No stint found,Michel Trilles,Michel_Trilles,1916-05-23,,,1970-07-22,,,,
 Q3311016,Michel Urtizverea,No stint found,Michel Urtizverea,Michel_Urtizverea,1950-07-14,,,,,,,Pilier
 Q3311043,Michel Vannier,,Michel Vannier,Michel_Vannier,1931-07-21,Étain,/wiki/%C3%89tain,1991-06-28,Fragnes,/wiki/Fragnes_(Sa%C3%B4ne-et-Loire),178,Arrière
@@ -4746,7 +4746,7 @@ Q3418991,Ranji Wilson,,Ranji Wilson,Ranji_Wilson,1886-05-18,Christchurch,/wiki/C
 Q3419125,Raoul Barrière,,Raoul Barrière,Raoul_Barri%C3%A8re,1928-03-03,Béziers,/wiki/B%C3%A9ziers,2019-03-08,Béziers,/wiki/B%C3%A9ziers,171,pilier
 Q3419132,Raoul Bonamy,No stint found,Raoul Bonamy,Raoul_Bonamy,1905-12-13,,,1993-04-21,,,,Troisième ligne aile
 Q3419208,Raoul Jonathan Larson,,Raoul Jonathan,Raoul_Jonathan_Larson,1984-05-14,Katima Mulilo,/wiki/Katima_Mulilo,,,,185,Pilier
-Q3419243,Raoul Paoli,No infobox found,,Raoul_Paoli,,,,,,,,
+Q3419243,Raoul Paoli,No infobox found,,Raoul_Paoli,1887-11-24,Courtalain,/wiki/Courtalain,1960-03-23,Paris 14e,/wiki/14e_arrondissement_de_Paris,187,
 Q3419402,Raphaël Bastide,,Raphaël Bastide,Rapha%C3%ABl_Bastide,1977-11-24,Bilbao,/wiki/Bilbao,,,,187,Ailier
 Q3419415,Raphaël Chanal,,Raphaël Chanal,Rapha%C3%ABl_Chanal,1975-07-30,Rosières,/wiki/Rosi%C3%A8res_(Haute-Loire),,,,182,Centre
 Q3419417,Raphaël Chaume,,Raphaël Chaume,Rapha%C3%ABl_Chaume,1989-04-29,Valréas,/wiki/Valr%C3%A9as,,,,180,pilier
@@ -5214,7 +5214,7 @@ Q3487208,Kenneth Svenson,,Snowy Svenson,Snowy_Svenson,1898-12-06,Toowoomba,/wiki
 Q3487291,Soane Toevalu,,Soane Toevalu,Soane_Toevalu,1982-10-26,France,/wiki/France,,,,192,Troisième ligne aile
 Q3487294,Soane Tonga'uiha,,Soane Tonga'uiha,Soane_Tonga%27uiha,1982-06-21,Houma,/w/index.php?title=Houma_(Tonga)&action=edit&redlink=1,,,,191,pilier
 Q3488842,Sofiane Guitoune,,Sofiane Guitoune,Sofiane_Guitoune,1989-03-27,Alger,/wiki/Alger,,,,184,Ailier; arrière; centre
-Q3488863,Sofiene Chaari,Infobox format problem,Sofiène Chaâri,Sofi%C3%A8ne_Cha%C3%A2ri,,,,,,,,
+Q3488863,Sofiene Chaari,Infobox format problem,Sofiène Chaâri,Sofi%C3%A8ne_Cha%C3%A2ri,1962-07-31,,,2011-08-22,La Marsa,/wiki/La_Marsa,,
 Q3489527,Solly Tyibilika,,Solly Tyibilika,Solly_Tyibilika,1979-06-23,Port Elizabeth,/wiki/Port_Elizabeth,2011-11-13,Nyanga,/wiki/Nyanga_(Le_Cap),189,Troisième ligne aile
 Q3490044,Sona Taumalolo,,Sona Taumalolo,Sona_Taumalolo,1981-11-13,Tonga,/wiki/Tonga,,,,185,Pilier
 Q3490638,Sonny Falconetti,,Sonny Falconetti,Sonny_Falconetti,1990-01-31,Ollioules,/wiki/Ollioules,,,,180,Arrière; ailier
@@ -5715,7 +5715,7 @@ Q3573375,Yvan Manhès,,Yvan Manhès,Yvan_Manh%C3%A8s,1975-05-23,Aurillac,/wiki/A
 Q3573381,Yvan Roux,No stint found,Yvan Roux,Yvan_Roux,1965-04-04,,,,,,,Deuxième ligne
 Q3573394,Yvan Watremez,,Yvan Watremez,Yvan_Watremez,1989-04-21,Foix,/wiki/Foix,,,,187,Pilier gauche
 Q3573482,Yves Bergougnan,,Yves Bergougnan,Yves_Bergougnan,1924-05-08,Toulouse,/wiki/Toulouse,2006-04-15,Toulouse,/wiki/Toulouse,178,Demi de mêlée
-Q3573517,Yves Bressy,No infobox found,,Yves_Bressy,,,,,,,,
+Q3573517,Yves Bressy,No infobox found,,Yves_Bressy,1943-03-23,Monteux,/wiki/Monteux_(Vaucluse),,,,,Deuxième ligne; Troisième ligne centre
 Q3573520,Yves Brunet,No stint found,Yves Brunet,Yves_Brunet,1950-08-25,,,,,,,Talonneur
 Q3573626,Yves Donguy,,Yves Donguy,Yves_Donguy,1982-01-01,Daloa,/wiki/Daloa,,,,181,Ailier
 Q3573627,Yves Duffaut,No stint found,Yves Duffaut,Yves_Duffaut,1932-12-24,,,,,,,Troisième ligne aile
@@ -5762,7 +5762,7 @@ Q3595057,Charles Graham,No FR WP page,,,,,,,,,,
 Q3603065,Aaron Cowie,No FR WP page,,,,,,,,,,
 Q3604979,Adam Byrnes,No FR WP page,,,,,,,,,,
 Q3604991,Adam M. Jones,No FR WP page,,,,,,,,,,
-Q3605497,Adolphe Klingelhoefer,No infobox found,,Adolphe_Klingelhoeffer,,,,,,,,
+Q3605497,Adolphe Klingelhoefer,No infobox found,,Adolphe_Klingelhoeffer,1880-05-02,16e arrondissement de Paris,/wiki/16e_arrondissement_de_Paris,1956-12-19,Courbevoie,/wiki/Courbevoie,,Centre
 Q3605612,Adrian Donald,No FR WP page,,,,,,,,,,
 Q3606810,Agostino Puppo,No FR WP page,,,,,,,,,,
 Q3606939,Agustín Cavalieri,No FR WP page,,,,,,,,,,
@@ -5992,7 +5992,7 @@ Q4120947,Craig Gilroy,,Craig Gilroy,Craig_Gilroy,1991-03-11,Belfast,/wiki/Belfas
 Q4120957,Simon Zebo,,Simon Zebo,Simon_Zebo,1990-03-16,Cork,/wiki/Cork,,,,188,Ailier; arrière
 Q4160419,Kingsley Jones,No FR WP page,,,,,,,,,,
 Q4179196,Greg Jeloudev,No FR WP page,,,,,,,,,,
-Q4208918,George Cakobau,No infobox found,,George_Cakobau,,,,,,,,
+Q4208918,George Cakobau,No infobox found,,George_Cakobau,1912-11-06,Nabouwalu,,1989-11-25,Suva,,,Demi d'ouverture
 Q4242734,Sergey Leonidovich Kryksa,No FR WP page,,,,,,,,,,
 Q4249759,Nahuel Lobo,,Nahuel Lobo,Nahuel_Lobo,1991-08-27,Chajarí,/wiki/Chajar%C3%AD,,,,180,Pilier
 Q4283258,Charlie Marshall,No FR WP page,,,,,,,,,,
@@ -6275,7 +6275,7 @@ Q4759320,Andries Pretorius,No FR WP page,,,,,,,,,,
 Q4759325,Andries Strauss,No FR WP page,,,,,,,,,,
 Q4759327,Andries Venter,No FR WP page,,,,,,,,,,
 Q4760062,André Schlechter,No FR WP page,,,,,,,,,,
-Q4760139,Andrés Allamand,No infobox found,,Andr%C3%A9s_Allamand,,,,,,,,
+Q4760139,Andrés Allamand,No infobox found,,Andr%C3%A9s_Allamand,1956-02-07,Santiago,/wiki/Santiago,,,,,
 Q4760358,Andy Allen,No FR WP page,,,,,,,,,,
 Q4760565,Andy Currier,No FR WP page,,,,,,,,,,
 Q4760660,Andy Fenby,No FR WP page,,,,,,,,,,
@@ -11789,7 +11789,7 @@ Q16250246,Niwa Kawha,No FR WP page,,,,,,,,,,
 Q16263565,Shinobu Aoki,No FR WP page,,,,,,,,,,
 Q16266566,Robert Raynal,,Robert Raynal,Robert_Raynal,1936-07-27,Perpignan,/wiki/Perpignan,2010-10-29,Marseille9e,/wiki/9e_arrondissement_de_Marseille,175,Demi d'ouverture
 Q16266576,Jacques Gourgues,,Jacques Gourgues,Jacques_Gourgues,1937-03-27,Saint-Pierre-du-Mont,/wiki/Saint-Pierre-du-Mont_(Landes),2016-05-05,Mont-de-Marsan,/wiki/Mont-de-Marsan,175,arrière
-Q16266660,Laurent Spanghero,Infobox format problem,Laurent Spanghero,Laurent_Spanghero,,,,,,,,
+Q16266660,Laurent Spanghero,Infobox format problem,Laurent Spanghero,Laurent_Spanghero,1939-06-12,Bram,/wiki/Bram,,,,,
 Q16266738,Jean-Pierre Clar,,Jean-Pierre Clar,Jean-Pierre_Clar,1942-02-27,Hanoï,/wiki/Hano%C3%AF,,,,180,Pilier
 Q16303182,Eric Maroni,No FR WP page,,,,,,,,,,
 Q16320191,Elijah Niko,,Elijah Niko,Elijah_Niko,1990-09-11,Wellington,/wiki/Wellington,,,,192,Ailier
@@ -14182,7 +14182,7 @@ Q25051076,José Morganti,No FR WP page,,,,,,,,,,
 Q25160410,Rhyno Smith,No FR WP page,,,,,,,,,,
 Q25171780,James Robertson,No FR WP page,,,,,,,,,,
 Q25172032,Paul Dearlove,,Paul Dearlove,Paul_Dearlove,1979-02-06,,,,,,,Troisième ligne aile
-Q25172075,Thibault Giroud,No infobox found,,Thibault_Giroud,,,,,,,,
+Q25172075,Thibault Giroud,No infobox found,,Thibault_Giroud,1974-03-09,Grenoble,/wiki/Grenoble,,,,178,
 Q25184191,Henry Talbot,No FR WP page,,,,,,,,,,
 Q25184588,Harry Higgins,No FR WP page,,,,,,,,,,
 Q25189771,Taniela Tupou,No FR WP page,,,,,,,,,,
@@ -16256,7 +16256,7 @@ Q47500960,Iñaki Laskurain,No FR WP page,,,,,,,,,,
 Q47501393,Gordon Rimmer,No FR WP page,,,,,,,,,,
 Q47507807,Jordan Olowofela,No FR WP page,,,,,,,,,,
 Q47510814,Bertrand Perez,No FR WP page,,,,,,,,,,
-Q47511405,René Cavally,No infobox found,,Ren%C3%A9_Cavally,,,,,,,,
+Q47511405,René Cavally,No infobox found,,Ren%C3%A9_Cavally,1870-02-13,Paris 9e arrondissement,/wiki/9e_arrondissement_de_Paris,1946-03-22,Saint-Maur-des-Fossés,/wiki/Saint-Maur-des-Foss%C3%A9s,,
 Q47523496,Ronald Rankin,No FR WP page,,,,,,,,,,
 Q47526576,Adrien Pélissié,,Adrien Pélissié,Adrien_P%C3%A9lissi%C3%A9,1990-08-07,Septfonds,/wiki/Septfonds,,,,180,talonneur
 Q47528441,Hacjivah Dayimani,,Hacjivah Dayimani,Hacjivah_Dayimani,1997-09-23,Le Cap,/wiki/Le_Cap,,,,188,Troisième ligne centre; troisième ligne aile
@@ -16291,7 +16291,7 @@ Q47582855,George Risale,No FR WP page,,,,,,,,,,
 Q47583020,Yoshimi Watanabe,No FR WP page,,,,,,,,,,
 Q47583083,Ierome Jeffrey Tsuyoshi,No FR WP page,,,,,,,,,,
 Q47713291,Kevon Williams,No FR WP page,,,,,,,,,,
-Q47843689,Gustave Duchamps,No infobox found,,Gustave_Duchamps,,,,,,,,
+Q47843689,Gustave Duchamps,No infobox found,,Gustave_Duchamps,1871-12-19,Bruxelles,/wiki/Bruxelles,,,,,
 Q48185083,Jonny McPhillips,No FR WP page,,,,,,,,,,
 Q48193407,Juarno Augustus,,Juarno Augustus,Juarno_Augustus,1997-12-09,Alexander Bay,/wiki/Alexander_Bay_(Afrique_du_Sud),,,,185,Troisième ligne centre
 Q48193418,Eduard Zandberg,No FR WP page,,,,,,,,,,
@@ -16316,7 +16316,7 @@ Q48689296,Kelly Meafua,No FR WP page,,,,,,,,,,
 Q48718276,Taliaʻuli Liavaʻa,No FR WP page,,,,,,,,,,
 Q48720254,Taipaleti Tuʻuta,No FR WP page,,,,,,,,,,
 Q48752374,Thierry Fournier,,Thierry Fournier,Thierry_Fournier_(rugby_%C3%A0_XV),1959-10-08,Alger,/wiki/Alger,,,,,
-Q48759061,Charles Robert,No infobox found,,Charles_Robert,,,,,,,,
+Q48759061,Charles Robert,No infobox found,,Charles_Robert,1877-03-26,Bordeaux,/wiki/Bordeaux,,,,,Arrière
 Q48759436,Jean-Philippe Cassan,,Jean-Philippe Cassan,Jean-Philippe_Cassan,1989-02-27,Aurillac,/wiki/Aurillac,,,,177,Centre
 Q48761090,Emersen Tamura,No FR WP page,,,,,,,,,,
 Q48761091,Patrice Péron,,Patrice Péron,Patrice_P%C3%A9ron,1949-06-20,Colombes,/wiki/Colombes,,,,183,Troisième ligne aile
@@ -17195,7 +17195,7 @@ Q60788178,Will Harrison,No FR WP page,,,,,,,,,,
 Q60828867,Pavel Baranovsky,No FR WP page,,,,,,,,,,
 Q60832404,Conrad Miret i Musté,No stint found,Conrad Miret i Musté,Conrad_Miret_i_Must%C3%A9,1906-04-15,,,1942-02-27,,,,
 Q60832480,Pierre Pages,,Pierre Pagès,Pierre_Pag%C3%A8s,1990-05-16,Cazères,/wiki/Caz%C3%A8res,,,,180,Demi de mêlée
-Q60833181,Pierre Arrambide,Infobox format problem,Pierre Arrambide,Pierre_Arrambide,,,,,,,,
+Q60833181,Pierre Arrambide,Infobox format problem,Pierre Arrambide,Pierre_Arrambide,,,,,,,,Demi d'ouverture
 Q60835548,Jaime O'Farrell,No stint found,Jaime O'Farrell,Jaime_O%27Farrell,,,,,,,,Pilier; troisième ligne aile
 Q60836274,Arnaud Bartès,,Arnaud Bartès,Arnaud_Bart%C3%A8s,1990-08-13,,,,,,187,"Pilier, centre"
 Q60836358,Grégory Alldritt,,Grégory Alldritt,Gr%C3%A9gory_Alldritt,1997-03-23,Toulouse,/wiki/Toulouse,,,,191,Troisième ligne centre; aile
@@ -17276,7 +17276,7 @@ Q61984698,Jérémie Foissac,No FR WP page,,,,,,,,,,
 Q61984795,Justin Wring,No FR WP page,,,,,,,,,,
 Q61985154,Mikaël Balat,No FR WP page,,,,,,,,,,
 Q61985189,Thomas Mège,No FR WP page,,,,,,,,,,
-Q61987083,Guillaume Labbé,Infobox format problem,Guillaume Labbé,Guillaume_Labb%C3%A9,,,,,,,,
+Q61987083,Guillaume Labbé,Infobox format problem,Guillaume Labbé,Guillaume_Labb%C3%A9,1983-01-26,,,,,,,
 Q61987105,Julien Rivier,No FR WP page,,,,,,,,,,
 Q61987112,Morgan Souply,No FR WP page,,,,,,,,,,
 Q61987176,Arthur Garrigue,No FR WP page,,,,,,,,,,
