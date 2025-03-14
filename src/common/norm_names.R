@@ -49,7 +49,7 @@ solve_redirections <- function(name, lang = "ja") {
     response <- tryCatch({GET(url, query = params)}, error = function(e) {tlog("Server error: ", e$message); NA})
     if (all(is.na(response))) {
       Sys.sleep(2)
-      tlog("Server error: retrying")
+      tlog("Server error: retrying ", url)
     }
     else
       go_on <- FALSE
@@ -107,7 +107,7 @@ get_english_title <- function(name, lang = "ja") {
     response <- tryCatch({GET(url, query = params)}, error = function(e) {tlog("Server error: ", e$message); NA})
     if (all(is.na(response))) {
       Sys.sleep(2)
-      tlog("Server error: retrying")
+      tlog("Server error: retrying ", url)
     }
     else
       go_on <- FALSE
