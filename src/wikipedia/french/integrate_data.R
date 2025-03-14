@@ -1,8 +1,8 @@
 ########################################################################
-# Loads the clean Japanese Wikipedia tables and inserts them into our
+# Loads the clean French Wikipedia tables and inserts them into our
 # merged tables.
 #
-# 02/2025 Vincent Labatut
+# 03/2025 Vincent Labatut
 ########################################################################
 library("stringi")
 library("stringr")
@@ -21,7 +21,7 @@ source("src/common/norm_teams.R")
 
 ########################################################################
 # paths
-wp_folder <- file.path("data", "wikipedia", "japanese")
+wp_folder <- file.path("data", "wikipedia", "french")
 #
 fusion_folder <- file.path("data", "fusion")
 
@@ -30,7 +30,7 @@ fusion_folder <- file.path("data", "fusion")
 
 ########################################################################
 # start logging
-start.rec.log("IntegrationJaWP")
+start.rec.log("IntegrationFrWP")
 
 
 
@@ -39,48 +39,21 @@ start.rec.log("IntegrationJaWP")
 # load previously merged tables
 tlog("Loading merged tables")
 
-fus_teams <- read.csv(file.path(fusion_folder, "teams_02_ref.csv"))
+fus_teams <- read.csv(file.path(fusion_folder, "teams_03_jawp.csv"))
 tlog(2, "Raw number of teams: ", nrow(fus_teams))
 
-fus_players <- read.csv(file.path(fusion_folder, "players_01_wd-dbp.csv"))
+fus_players <- read.csv(file.path(fusion_folder, "players_02_jawp.csv"))
 tlog(2, "Raw number of players: ", nrow(fus_players))
 
-fus_stints <- read.csv(file.path("data", "wikidata", "tables", "stints.csv"))
+fus_stints <- read.csv(file.path(fusion_folder, "stints_01_wd-jawp.csv"))
 tlog(2, "Raw number of stints: ", nrow(fus_stints))
 
 
 
 
 ########################################################################
-# must adjust alternative names in team table
-tlog("Must adjust alternative names in merged team table")
-alt_names <- strsplit(fus_teams[, "altNames"], ";")
-for (r in 1:nrow(fus_teams)) {
-  fn <- fus_teams[r, "fullName"]
-  an <- trimws(alt_names[[r]])
-  if (!all(is.na(an))) {
-    an <- setdiff(an, fn)
-    an_str <- paste0(an, collapse = "; ")
-    if (an_str != fus_teams[r, "altNames"]) {
-      tlog(2, "Changed name for team ", r, "/", nrow(fus_teams), ":")
-      tlog(4, "Original: ", fus_teams[r, "altNames"])
-      tlog(4, "Revised:  ", an_str)
-      fus_teams[r, "altNames"] <- an_str
-    }
-  }
-}
-
-# must add missing player names in stint table
-idx <- which(grepl("Q\\d+", fus_stints[, "playerName"], fixed = FALSE))
-mm <- match(fus_stints[idx, "playerId"], fus_players[, "wikidataId"])
-fus_stints[idx, "playerName"] <- fus_players[mm, "fullName"]
-
-
-
-
-########################################################################
-# load JA WP tables
-tlog("Loading Wikipedia JA tables")
+# load FR WP tables
+tlog("Loading Wikipedia FR tables")
 
 wp_players <- read.csv(file.path(wp_folder, "players.csv"))
 tlog(2, "Raw number of players: ", nrow(wp_players))
@@ -94,15 +67,11 @@ wp_stints <- wp_stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 
 ########################################################################
-# clean certain team names
-wp_stints[, "teamName"] <- gsub("（英語版）", "", wp_stints[, "teamName"], fixed = TRUE)    # "english version" (of a team name)
-wp_stints[, "teamName"] <- gsub("（フランス語版）", "", wp_stints[, "teamName"], fixed = TRUE) # "french version"
-
-# remove stints with empty team
+# remove stints without a team
 idx <- which(is.na(wp_stints[, "teamName"]))
 if (length(idx) > 0)
   wp_stints <- wp_stints[-idx, ]
-
+tlog(2, "Removed ", length(idx), " stints without a team")
 
 
 
@@ -119,7 +88,7 @@ fus_players[, "deathDate"] %<>%  as.Date()
 
 # match players from WP to the merged list
 idx <- match(wp_players[, "wikidataId"], fus_players[, "wikidataId"])
-tlog(2, "Successful matches: ", length(which(!is.na(idx))), "/", nrow(wp_players))
+tlog(2, "Successful player matches: ", length(which(!is.na(idx))), "/", nrow(wp_players))
 
 # insert WP info if field is empty in the merged table
 map <- c()  # merged <- wp
@@ -128,7 +97,6 @@ map["birthPlaces"] <- "birthPlace"
 map["deathDate"] <- "deathDate"
 map["deathPlaces"] <- "deathPlace"
 map["fullName"] <- "fullName"
-map["weights"] <- "weight"
 map["heights"] <- "height"
 map["positions"] <- "positions"
 tlog(2, "Merging regular fields")
@@ -149,22 +117,22 @@ tlog(2, "Total numbers of changes: ", sum(total_changes))
 tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
 
-# only keep WP name as alt name, if it does not match current fullname
+# only keep WP name as alt name, and only if it does not match current fullname
 tlog(2, "Copying WP names into alt name list")
 total_changes <- c(total_changes, 0)
 names(total_changes)[length(total_changes)] <- "altNames"
 full_names <- fus_players[, "fullName"]
 alt_names <- strsplit(fus_players[, "altNames"], "; ")
-ja_names <- wp_players[, "jaName"]
+fr_names <- wp_players[, "frName"]
 # loop over players to copy WP data
 for (p in 1:length(idx)) {
-  if (!is.na(ja_names[p]) && ja_names[p] != full_names[idx[p]]) {
+  if (!is.na(fr_names[p]) && fr_names[p] != full_names[idx[p]]) {
     # possibly complement list of alt names
     if (all(is.na(alt_names[[idx[p]]])))
-      a_names <- ja_names[p]
+      a_names <- fr_names[p]
     else
-      a_names <- union(alt_names[[idx[p]]], ja_names[p])
-
+      a_names <- union(alt_names[[idx[p]]], fr_names[p])
+    
     # update in table
     alt_names_new <- paste(a_names, collapse = "; ")
     if (is.na(fus_players[idx[p], "altNames"]) || alt_names_new != fus_players[idx[p], "altNames"]) {
@@ -181,7 +149,7 @@ tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
 
 # record merged table as a new CSV file
-tab.file <- file.path(fusion_folder, "players_02_jawp.csv")
+tab.file <- file.path(fusion_folder, "players_03_frwp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
@@ -319,7 +287,7 @@ for (i in 1:length(idx)) {
   team_url <- trimws(wp_teams[idx[i], "teamWP"])
   # if(!grepl("redlink=1", team_url, fixed = TRUE) && !startsWith(team_url, "#")) {
   tlog(4, "Retrieving translation for \"", team_url, "\" (", i, "/", length(idx), ")")
-  title <- get_english_title(team_url, lang = "ja")
+  title <- get_english_title(team_url, lang = "fr")
   #tlog(6, "Result: ", title)
   if (is.null(title))
     failed <- c(failed, team_url)
@@ -365,9 +333,9 @@ for (i in 1:length(map_ids)) {
       supp[r, "rugbyscopeId"] <- rsid
       wp_teams[wp_idx[i], "rugbyscopeId"] <- rsid
       rsid <- rsid + 1
-      supp[r, "wikipediaJa"] <- names(map_ids)[i]
+      supp[r, "wikipediaFr"] <- names(map_ids)[i]
       supp[r, "wikidataId"] <- map_ids[i]
-      supp[r, "countries"] <- "Japan"
+      supp[r, "countries"] <- "France"
       supp[r, "fullName"] <- map_names[map_ids[i]]
       supp[r, "altNames"] <- wp_teams[matches[i], "altNames"]
       r <- r + 1
@@ -405,8 +373,8 @@ for (i in 1:length(map_names)) {
   supp[r, "rugbyscopeId"] <- rsid
   wp_teams[wp_idx[i], "rugbyscopeId"] <- rsid
   rsid <- rsid + 1
-  supp[r, "wikipediaJa"] <- names(map_names)[i]
-  supp[r, "countries"] <- "Japan"
+  supp[r, "wikipediaFr"] <- names(map_names)[i]
+  supp[r, "countries"] <- "France"
   supp[r, "fullName"] <- map_names[i]
   supp[r, "altNames"] <- wp_teams[wp_idx[i], "altNames"]
   r <- r + 1
@@ -485,19 +453,19 @@ for (i in 1:nrow(tab)) {
   supp[r, "rugbyscopeId"] <- rsid
   wp_teams[wp_idx[i], "rugbyscopeId"] <- rsid
   rsid <- rsid + 1
-  supp[r, "wikipediaJa"] <- tab[i, "teamWP"]
-  supp[r, "countries"] <- "Japan"
+  supp[r, "wikipediaFr"] <- tab[i, "teamWP"]
+  supp[r, "countries"] <- "France"
   names <- strsplit(tab[i, "altNames"], "; ")[[1]]
   en_name <- NA
-  ja_names <- c()
+  fr_names <- c()
   for (name in names) {
     if (grepl("[A-Za-z]+", name, fixed = FALSE) && is.na(en_name))
       en_name <- name
     else
-      ja_names <- c(ja_names, name)
+      fr_names <- c(fr_names, name)
   }
   supp[r, "fullName"] <- en_name
-  supp[r, "altNames"] <- paste0(ja_names, collapse = "; ")
+  supp[r, "altNames"] <- paste0(fr_names, collapse = "; ")
   r <- r + 1
 }
 # update certain teams' countries based on name2country.csv map
@@ -523,10 +491,10 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 ## we now switch to names only, as the remaining WP teams do not have a URL
 
 # use manually defined map to match certain teams
-tlog(2, "Use manually defined map to match certain teams based on their japanese name")
+tlog(2, "Use manually defined map to match certain teams based on their french name")
 temp <- read.csv(file.path(wp_folder, "maps", "name2id.csv"))
 map_names <- temp[, "rugbyscopeId"]
-names(map_names) <- temp[, "jaName"]
+names(map_names) <- temp[, "frName"]
 # remove teams associated with name NA
 idx <- match(names(map_names), wp_teams[, "altNames"])
 idx_rem <- which(is.na(map_names))
@@ -550,7 +518,7 @@ wp_teams[idx, "rugbyscopeId"] <- map_names
 # translate all remaining names to english using polyglotr
 idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))                      # 422
 en_names <- c()
-ja_names <- c()
+fr_names <- c()
 for (r in 1:length(idx_noid)) {
   tlog(4, "Translating name ", r, "/", length(idx_noid))
   orig <- wp_teams[idx_noid[r], "altNames"]
@@ -570,13 +538,13 @@ for (r in 1:length(idx_noid)) {
 
   tlog(6, "\"", orig, "\" >> \"", translation, "\"")
   en_names <- c(en_names, translation)
-  ja_names <- c(ja_names, orig)
+  fr_names <- c(fr_names, orig)
   #Sys.sleep(1)
 }
 unique_names <- sort(unique(en_names))                                    # 383
 #### debug: export translated names, for visualization
 #tab <- cbind(unique_names, wp_teams[idx_noid[match(unique_names, en_names)], "altNames"], rep("", length(unique_names)))
-#colnames(tab) <- c("fullName", "jaName", "teamId")
+#colnames(tab) <- c("fullName", "fr_names", "teamId")
 #write.csv(tab, file.path(wp_folder, "remaining_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
 # filter out remaining high schools
@@ -584,7 +552,7 @@ idx_uhs <- which(grepl("[Hh]igh [Ss]chool", unique_names, fixed = FALSE)) # 167
 idx_ehs <- which(en_names %in% unique_names[idx_uhs])                     # 181
 unique_names <- unique_names[-idx_uhs]                                    # 210
 en_names <- en_names[-idx_ehs]                                            # 229
-ja_names <- ja_names[-idx_ehs]                                            # 229
+fr_names <- fr_names[-idx_ehs]                                            # 229
 removed_teams <- c(removed_teams, wp_teams[idx_noid[idx_ehs], "altNames"])
 wp_teams <- wp_teams[-(idx_noid[idx_ehs]), ]                              # 1172
 idx_noid <- which(is.na(wp_teams[, "rugbyscopeId"]))                      # 229
@@ -611,8 +579,8 @@ idx_em <- which(en_names %in% unique_names[idx_um])
 map <- match(en_names[idx_em], unique_names[idx_um])
 tlog(4, "Could match ", length(idx_um), " teams based on English name")
 #### debug (check matches)
-#tab <- cbind(wp_teams[idx_noid[idx_em], "altNames"], ja_names[idx_em], en_names[idx_em], fus_names[result[idx_um]][map], fus_teams[result[idx_um][map], "rugbyscopeId"], wp_teams[idx_noid[idx_em], "teamWP"])
-#colnames(tab) <- c("altNames", "jaName", "enName", "fullName", "rugbyscopeId", "teamWp")
+#tab <- cbind(wp_teams[idx_noid[idx_em], "altNames"], fr_names[idx_em], en_names[idx_em], fus_names[result[idx_um]][map], fus_teams[result[idx_um][map], "rugbyscopeId"], wp_teams[idx_noid[idx_em], "teamWP"])
+#colnames(tab) <- c("altNames", "frName", "enName", "fullName", "rugbyscopeId", "teamWp")
 #write.csv(tab, file.path(wp_folder, "successful_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### this file is used to visually verify that the matches obtained above are correct
 #### errors can be corrected by complementing the name2id.csv file used before, to force manual matching
@@ -622,9 +590,9 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 #### debug
 #idx_um <- which(is.na(result))
 #idx_em <- which(en_names %in% unique_names[idx_um])
-#idx_plyr <- match(ja_names[idx_em], wp_stints[, "teamName"])
-#tab <- cbind(en_names[idx_em], ja_names[idx_em], rep(NA, length(idx_em)), wp_stints[idx_plyr, "wpPage"])
-#colnames(tab) <- c("fullName", "jaName", "rugbyscopeId", "playerWP")
+#idx_plyr <- match(fr_names[idx_em], wp_stints[, "teamName"])
+#tab <- cbind(en_names[idx_em], fr_names[idx_em], rep(NA, length(idx_em)), wp_stints[idx_plyr, "wpPage"])
+#colnames(tab) <- c("fullName", "frName", "rugbyscopeId", "playerWP")
 #idx <- order(en_names[idx_em])
 #write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### at this stage, it was not possible to match the remaining teams automatically
@@ -645,10 +613,10 @@ for (r in 1:nrow(tab)) {
   supp[r, "altNames"] <- tab[r, "altNames"]
   supp[r, "type"] <- tab[r, "type"]
   # update WP team table
-  ja_name <- tab[r, "altNames"]
-  idx <- which(wp_teams[, "altNames"] == ja_name)
+  fr_name <- tab[r, "altNames"]
+  idx <- which(wp_teams[, "altNames"] == fr_name)
   if (length(idx) == 0)
-    stop("Could not find entry ", r, " (", ja_name, ")")
+    stop("Could not find entry ", r, " (", fr_name, ")")
   wp_teams[idx, "rugbyscopeId"] <- rsid
   rsid <- rsid + 1
   r <- r + 1
@@ -662,7 +630,7 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 #idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
 #write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
-# add merged table name to JA entry, for visual verification
+# add merged table name to FR entry, for visual verification
 idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
 wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 
@@ -679,14 +647,14 @@ wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 #  ii <- which(wp_teams[, "rugbyscopeId"] == i)
 #  print(wp_teams[ii, ])
 #}
-#### there are many cases: it is expected, there are many slightly different japanese names
+#### there are many cases: it is expected, there are many slightly different french names
 
 # record final WP team table as a new CSV file, for verification
 tab.file <- file.path(wp_folder, "teams.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
-# complement alternative names in merged table, using japanese names
+# complement alternative names in merged table, using french names
 tlog("Complement alternative names in merged team table")
 idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
 fus_full_names <- fus_teams[idx, "fullName"]
@@ -699,7 +667,7 @@ for (r in 1:length(idx)) {
     oan <- c()
   # wp altnames
   wan <- trimws(wp_alt_names[[r]])
-  ii <- which(sapply(wan, function(w) grepl("[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3400-\u4dbf]+", w, fixed = FALSE))) # check if the string contains at least two japanese characters
+  ii <- which(sapply(wan, function(w) grepl("[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3400-\u4dbf]+", w, fixed = FALSE))) # check if the string contains at least two french characters
   # combine altnames
   an <- setdiff(union(oan, wan[ii]), ofn)
   if (all(is.na(an)) || length(an) == 0)
@@ -715,16 +683,9 @@ for (r in 1:length(idx)) {
 }
 
 # record merged table as a new CSV file
-tab.file <- file.path(fusion_folder, "teams_03_jawp.csv")
+tab.file <- file.path(fusion_folder, "teams_04_frwp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
-
-#### manually added teams
-# 6962,NA,"Tao Samtskhe-Javakheti","Club",NA,NA,NA,NA,"Georgia","Didi 10",1,"Aspindza Field",NA,"Azpindza",NA,NA,NA,NA,NA,NA,NA,NA
-# 6963,NA,"RC Kazbegi","Club",NA,NA,NA,NA,"Georgia","Didi 10",1,"RC Kazbegi Rugby Stadium",NA,"Stephantsminda",NA,NA,NA,NA,NA,NA,NA,NA
-# 6964,"Q3028284","Dinamo Tbilisi","Club","1925-01-01",NA,NA,NA,"Georgia",NA,NA,NA,NA,"Tbilisi",NA,"Dinamo_Tbilisi",NA,NA,NA,NA,NA,NA
-# 6965,NA,"Tbilisi State University","Club","1918-01-01",NA,NA,NA,"Georgia",NA,NA,NA,NA,"Tbilisi",NA,"Tbilisi_State_University",NA,NA,NA,NA,NA,NA
-# 6966,NA,"Tbilisi State Medical University","Club",NA,NA,NA,NA,"Georgia",NA,NA,NA,NA,"Tbilisi",NA,"Tbilisi_State_Medical_University",NA,NA,NA,NA,NA,NA
 
 
 
@@ -735,7 +696,7 @@ tlog("Merging stints")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 #### debug: directly load the file to bypass all previous processing
 #wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
-#fus_teams <- read.csv(file.path(fusion_folder, "teams_03_jawp.csv"))
+#fus_teams <- read.csv(file.path(fusion_folder, "teams_04_frwp.csv"))
 #### debug: reload data table for quick testing
 #wp_stints <- read.csv(file.path(wp_folder, "stints.csv"))
 #wp_stints <- wp_stints %>% mutate(across(where(is.character), ~ na_if(., "")))
@@ -919,7 +880,7 @@ for (r in 1:nrow(wp_stints)) {
         # add WP as source if agreement on any non-NA field 
         changes <- fus_stints[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] != c(start_year, end_year, matches_played, points_scored)
         if (!all(is.na(changes)) && any(changes, na.rm = TRUE))
-          fus_stints[idx3, "dataSource"] <- paste0(fus_stints[idx3, "dataSource"], "; jaWP")
+          fus_stints[idx3, "dataSource"] <- paste0(fus_stints[idx3, "dataSource"], "; frWP")
       }
     }
   }
@@ -936,7 +897,7 @@ for (r in 1:nrow(wp_stints)) {
     fus_stints[rr, "endYear"] <- wp_stints[r, "endYear"]
     fus_stints[rr, "matchesPlayed"] <- wp_stints[r, "matchesPlayed"]
     fus_stints[rr, "pointsScored"] <- wp_stints[r, "pointsScored"]
-    fus_stints[rr, "dataSource"] <- "jaWP"
+    fus_stints[rr, "dataSource"] <- "frWP"
   }
 }
 
@@ -948,7 +909,7 @@ fus_stints <- fus_stints[idx, ]
 
 # record as a new CSV file
 fus_stints[,"teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
-tab.file <- file.path(fusion_folder, "stints_01_wd-jawp.csv")
+tab.file <- file.path(fusion_folder, "stints_02_frwp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 

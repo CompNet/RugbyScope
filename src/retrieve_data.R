@@ -4,6 +4,12 @@
 # extract various types of networks. The corresponding CSV files are
 # stored in folder`data/tables`. See the individual scripts for details.
 #
+# Important: these scripts extract data from *live* repositories such as
+# DBpedia, Wikidata, and Wikipedia. They all function correctly at the
+# time of writing this comment, but it is likely that the evolution of
+# these datasource will break them, and that they do not work anymore
+# at the time of reading these lines.
+#
 # Vincent Labatut
 # 01/2025
 #
@@ -60,13 +66,15 @@ source("src/wikidata/integrate_reference.R")
 
 # japanese wikipedia
 system("python src/wikipedia/japanese/retrieve_stints.pys")
-# this produces the raw files in folder `data/wikipedia/japanese/raw/`
+# this produces the raw CSV files in folder `data/wikipedia/japanese/raw/`
 source("src/wikipedia/japanese/clean_tables.R")
-# this produces the clean files in folder `data/wikipedia/japanese/`
+# this produces the clean CSV files in folder `data/wikipedia/japanese/`
 
 # french wikipedia
-# TODO
+system("python src/wikipedia/french/retrieve_stints.pys")
+# this produces the raw CSV files in folder `data/wikipedia/french/raw/`
 source("src/wikipedia/french/clean_tables.R")
+# this produces the clean CSV files in folder `data/wikipedia/french/`
 
 # english wikipedia
 # TODO
@@ -97,6 +105,10 @@ source("src/wikipedia/japanese/integrate_data.R")
 
 # french wikipedia
 source("src/wikipedia/french/integrate_data.R")
+# this produces the following files in folder `data/fusion/`:
+# - `players_03_frwp.csv`: merged list of players
+# - `teams_04_frwp.csv`: merged list of teams
+# - `stints_02_frwp.csv`: merged list of stints
 
 # english wikipedia
 source("src/wikipedia/english/integrate_data.R")
