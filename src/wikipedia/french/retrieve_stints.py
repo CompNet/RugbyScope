@@ -109,7 +109,6 @@ for _, player in merged_table.iterrows():
     height = ""
     weight = ""
     positions = ""
-    current_team = ""
 
     # no french wikipedia page for this player
     if pd.isnull(player_page):
@@ -467,6 +466,7 @@ for _, player in merged_table.iterrows():
                     # possibly remove these superfluous entries
                     for index in sorted(skip_rows, reverse=True):
                         del teams[index]
+                        del urls[index]
                         del periods[index]
                     # complete stint types list
                     stint_types = [stint_type] * len(teams)

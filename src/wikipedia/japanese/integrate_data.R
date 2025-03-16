@@ -219,6 +219,7 @@ for (r in 1:nrow(wp_stints)) {
     # none found: new entry
     if (length(idx) == 0) {
       wp_teams <- rbind(wp_teams, c(NA, NA, NA))
+      colnames(wp_teams) <- cn
       alt_names <- c(alt_names, list(team_name))
     }
     # otherwise: nothing to do
