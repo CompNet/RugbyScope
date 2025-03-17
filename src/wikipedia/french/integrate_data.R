@@ -163,6 +163,7 @@ removed_teams <- c()
 
 # clean team names
 wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
+wp_stints[, "teamName"] <- gsub("→", "", wp_stints[, "teamName"], fixed = TRUE)
 wp_stints[, "teamName"] <- trimws(wp_stints[, "teamName"])
 
 # load url conversion map (to fix certain errors in the original data)
@@ -264,6 +265,8 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 tab.file <- file.path(wp_folder, "teams.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+#### "Otago","[^O\d\?-]
+#### "[^S\d][^"]*","Stade_fran%C3%A7ais_Paris_rugby
 
 #### debug: check teams with the same name but a different URL (some URLs are incorrect)
 #dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
