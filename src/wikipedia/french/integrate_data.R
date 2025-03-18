@@ -164,6 +164,7 @@ removed_teams <- c()
 # clean team names
 wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub("→", "", wp_stints[, "teamName"], fixed = TRUE)
+wp_stints[, "teamName"] <- gsub("(prêt)", "", wp_stints[, "teamName"], fixed = TRUE)
 wp_stints[, "teamName"] <- trimws(wp_stints[, "teamName"])
 
 # load url conversion map (to fix certain errors in the original data)
