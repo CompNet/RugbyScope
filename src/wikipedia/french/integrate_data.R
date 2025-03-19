@@ -229,11 +229,11 @@ tlog(4, "Found ", nrow(wp_teams), " unique teams")
 wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
 #### debug: take a look at teams with multiple names, some are associated to very generic url
 #### and should not be merged (ex. NZ url associated to NZ, U20 NZ, U21 NZ...)
-#idx <- which(sapply(alt_names, length) > 1)
-#tab <- wp_teams[idx,]
-#tab.file <- file.path(wp_folder, "teams.csv")
-#tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-#write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+idx <- which(sapply(alt_names, length) > 1)
+tab <- wp_teams[idx,]
+tab.file <- file.path(wp_folder, "duplicate_names.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(tab, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 #### "Otago","[^O\d\?-]
 #### "[^S\d][^"]*","Stade_fran%C3%A7ais_Paris_rugby
 #### we use the above file to manually correct stints.csv by disambiguating URLs
