@@ -224,50 +224,19 @@ for (r in 1:nrow(wp_stints)) {
       alt_names[[idx]] <- nn
     }
   }
-# print(alt_names)
-# readline(prompt="Press [enter] to continue")
-# if(any(sapply(alt_names,length) > 1))
-#   {print(r);print(alt_names[sapply(alt_names,length) > 1])}
-# if(r==192)
-# stop("")
 }
 tlog(4, "Found ", nrow(wp_teams), " unique teams")
 wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
 #### debug: take a look at teams with multiple names, some are associated to very generic url
 #### and should not be merged (ex. NZ url associated to NZ, U20 NZ, U21 NZ...)
-#idx <- which(grepl(";", wp_teams[, "altNames"], fixed = TRUE) & !is.na(wp_teams[, "teamWP"]))
-#tab <- cbind(wp_teams[idx, ], paste0("http://ja.wikipedia.org/wiki/", wp_teams[idx, "teamWP"]))
-#colnames(tab)[ncol(tab)] <- "fullUrl"
-#tab <- cbind(rep(NA, nrow(tab)), tab)
-#colnames(tab)[1] <- "translation"
-#for (r in 1:nrow(tab)) {
-#   tlog(4, "Translating name ", r, "/", nrow(tab))
-#   orig <- tab[r, "altNames"]
-#   go_on <- TRUE
-#   while (go_on) {
-#     response <- tryCatch({create_translation_table(words = orig, languages = "en")}, error = function(e) {tlog("Server error: ", e$message); NA})
-#     if (all(is.na(response))) {
-#       Sys.sleep(2)
-#       tlog("Server error: retrying")
-#     } else {
-#       go_on <- FALSE
-#       tab[r, "translation"] <- response[1, "en"]
-#     }
-#   }
-#}
-#write.csv(tab, file.path(wp_folder, "multiple_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-#### we use the above file to manually correct stints.csv by disambiguating URLs
-
-    idx <- which(sapply(alt_names,length)>1)
-    wp_teams <- wp_teams[idx,]
-
-
-#### debug: record team table for visualizing
-tab.file <- file.path(wp_folder, "teams.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+#idx <- which(sapply(alt_names, length) > 1)
+#tab <- wp_teams[idx,]
+#tab.file <- file.path(wp_folder, "teams.csv")
+#tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+#write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 #### "Otago","[^O\d\?-]
 #### "[^S\d][^"]*","Stade_fran%C3%A7ais_Paris_rugby
+#### we use the above file to manually correct stints.csv by disambiguating URLs
 
 #### debug: check teams with the same name but a different URL (some URLs are incorrect)
 #dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
