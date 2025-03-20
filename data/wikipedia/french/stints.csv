@@ -1364,9 +1364,9 @@
 "Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","Senior","2011-2018","Cardiff Blues","Cardiff_Rugby","115","230","2011","2018"
 "Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","Senior","2018-2021","Exeter Chiefs","Exeter_Chiefs","32","30","2018","2021"
 "Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","Senior","2021-2024","Ospreys","Ospreys","18","20","2021","2024"
-"Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","International","2009-2011","Pays de Galles",NA,NA,NA,"2009","2011"
-"Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","International","2011-2023","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","57","85","2011","2023"
-"Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","International","2013-2013","Lions",NA,"1","5","2013","2013"
+"Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","International","2009-2011","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept",NA,NA,"2009","2011"
+"Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","International","2011-2023","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","57","85","2011","2023"
+"Q519358","Alex Cuthbert","Alex Cuthbert","Alex_Cuthbert","International","2013-2013","Lions","%C3%89quipe_des_Lions_britanniques_et_irlandais_de_rugby_%C3%A0_XV","1","5","2013","2013"
 "Q519589","Mike Phillips","Michael Phillips","Michael_Phillips_(rugby_%C3%A0_XV)","Senior","2003-2005","Llanelli Scarlets","Scarlets","5","0","2003","2005"
 "Q519589","Mike Phillips","Michael Phillips","Michael_Phillips_(rugby_%C3%A0_XV)","Senior","2005-2007","Cardiff Blues","Cardiff_Rugby","48","40","2005","2007"
 "Q519589","Mike Phillips","Michael Phillips","Michael_Phillips_(rugby_%C3%A0_XV)","Senior","2007-2011","Ospreys","Ospreys","60","25","2007","2011"
@@ -13250,15 +13250,15 @@
 "Q3155478","Isoa Domolailai","Isoa Domolailai","Isoa_Domolailai","Senior","2006-2007","RC Toulon","Rugby_club_toulonnais","15","5","2006","2007"
 "Q3155478","Isoa Domolailai","Isoa Domolailai","Isoa_Domolailai","Senior","2007-2018","Tarbes PR","Stado_Tarbes_Pyr%C3%A9n%C3%A9es_rugby","210","30","2007","2018"
 "Q3155478","Isoa Domolailai","Isoa Domolailai","Isoa_Domolailai","International","2001-2008","Fidji","%C3%89quipe_des_Fidji_de_rugby_%C3%A0_XV","18","0","2001","2008"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2007-2008","Melbourne",NA,"53","154","2007","2008"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2009-2010","Brisbane","Melbourne_Storm","39","148","2009","2010"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2020-2020","Dragons Catalans","Brisbane_Broncos","0","0","2020","2020"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2011-2012","Greater Western Sydney","Dragons_catalans","13","2","2011","2012"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2013-2019","Waratahs",NA,"96","303","2013","2019"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2021-NA","NTT Communications (Japon)",NA,NA,NA,"2021",NA
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","International","2007-2009","Australie",NA,"8","24","2007","2009"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","International","2013-2019","Australie","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XIII","73","185","2013","2019"
-"Q3155646","Israel Folau","Israel Folau","Israel_Folau","International","2022-NA","Tonga",NA,"1","0","2022",NA
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2007-2008","Melbourne","Melbourne_Storm","53","154","2007","2008"
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2009-2010","Brisbane","Brisbane_Broncos","39","148","2009","2010"
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2020-2020","Dragons Catalans","Dragons_catalans","0","0","2020","2020"
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2011-2012","Greater Western Sydney","Greater_Western_Sydney_Football_Club","13","2","2011","2012"
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2013-2019","Waratahs","Waratahs","96","303","2013","2019"
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","Senior","2021-NA","NTT Communications (Japon)","NTT_Shining_Arcs",NA,NA,"2021",NA
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","International","2007-2009","Australie","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XIII","8","24","2007","2009"
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","International","2013-2019","Australie","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV","73","185","2013","2019"
+"Q3155646","Israel Folau","Israel Folau","Israel_Folau","International","2022-NA","Tonga","%C3%89quipe_des_Tonga_de_rugby_%C3%A0_XV","1","0","2022",NA
 "Q3156026","Iulian Dumitraș","Iulian Dumitraș","Iulian_Dumitra%C8%99","Youth","NA-NA","RC Strasbourg","Rugby_Club_Strasbourg",NA,NA,NA,NA
 "Q3156026","Iulian Dumitraș","Iulian Dumitraș","Iulian_Dumitra%C8%99","Senior","2001-2002","CA Pontarlier",NA,"?","?","2001","2002"
 "Q3156026","Iulian Dumitraș","Iulian Dumitraș","Iulian_Dumitra%C8%99","Senior","2002-2004","US Dax","Union_sportive_dacquoise","?","?","2002","2004"
@@ -20697,12 +20697,12 @@
 "Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2002-2005","Nelson Bays",NA,"28","95","2002","2005"
 "Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2006-2015","Tasman","Tasman_Rugby_Union","102","125","2006","2015"
 "Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2017-2017","Tasman","Tasman_Rugby_Union","2","0","2017","2017"
-"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2018-2018","Buller",NA,"7","25","2018","2018"
-"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2007-2009","Crociati Parma","Buller_Rugby_Union","27","35","2007","2009"
-"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2012-2013","Rugby Reggio",NA,"16","30","2012","2013"
-"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2014-2014","CR & FC","Rugby_Parma_Football_Club_1931","15","30","2014","2014"
-"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2015-2015","Enisey-STM","Rugby_Reggio_Associazione_Sportiva","3","0","2015","2015"
-"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2016-2017","Mystic River",NA,"6","5","2016","2017"
+"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2018-2018","Buller","Buller_Rugby_Union","7","25","2018","2018"
+"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2007-2009","Crociati Parma","Rugby_Parma_Football_Club_1931","27","35","2007","2009"
+"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2012-2013","Rugby Reggio","Rugby_Reggio_Associazione_Sportiva","16","30","2012","2013"
+"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2014-2014","CR & FC",NA,"15","30","2014","2014"
+"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2015-2015","Enisey-STM","Enisey-STM","3","0","2015","2015"
+"Q3434290","Robbie Malneek","Robbie Malneek","Robbie_Malneek","Senior","2016-2017","Mystic River","Mystic_River_Rugby_Club","6","5","2016","2017"
 "Q3434525","Robert Basauri","Robert Basauri","Robert_Basauri","Senior","NA-NA","Stade hendayais","Stade_hendayais_rugby",NA,NA,NA,NA
 "Q3434525","Robert Basauri","Robert Basauri","Robert_Basauri","Senior","NA-NA","SC Albi","Sporting_Club_albigeois",NA,NA,NA,NA
 "Q3434525","Robert Basauri","Robert Basauri","Robert_Basauri","International","1954-1954","France","%C3%89quipe_de_France_de_rugby_%C3%A0_XV","1","0","1954","1954"
@@ -23277,9 +23277,9 @@
 "Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","Senior","2012-2017","Newport Gwent Dragons","Dragons_RFC","93","447","2012","2017"
 "Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","Senior","2017-2021","Scarlets","Scarlets","33","43","2017","2021"
 "Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","Senior","2021-2022","Bath Rugby","Bath_Rugby","7","10","2021","2022"
-"Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","International","2011-2011","Pays de Galles",NA,"17","20","2011","2011"
-"Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","International","2010-2018","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","7","10","2010","2018"
-"Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","International","2012-2012","Pays de Galles -20",NA,"4","61","2012","2012"
+"Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","International","2011-2011","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","17","20","2011","2011"
+"Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","International","2010-2018","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","7","10","2010","2018"
+"Q3530852","Tom Prydie","Tom Prydie","Tom_Prydie","International","2012-2012","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans","4","61","2012","2012"
 "Q3530858","Tom Rees","Tom Rees","Tom_Rees","Senior","2003-2012","London Wasps","Wasps","110","100","2003","2012"
 "Q3530858","Tom Rees","Tom Rees","Tom_Rees","International","2006-2010","Angleterre A","%C3%89quipe_d%27Angleterre_A_de_rugby_%C3%A0_XV",NA,NA,"2006","2010"
 "Q3530858","Tom Rees","Tom Rees","Tom_Rees","International","2007-2008","Angleterre","%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV","15","5","2007","2008"
@@ -26419,14 +26419,14 @@
 "Q6211415","Joe Moody","Joe Moody","Joe_Moody","Senior","2013-NA","Crusaders","Crusaders","97","15","2013",NA
 "Q6211415","Joe Moody","Joe Moody","Joe_Moody","International","2014-2021","Nouvelle-Zélande","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV","57","25","2014","2021"
 "Q6211415","Joe Moody","Joe Moody","Joe_Moody","International","2015-NA","Māori de NlleZélande","%C3%89quipe_des_M%C4%81ori_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV",NA,NA,"2015",NA
-"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2005-2011","Wigan",NA,"149","192","2005","2011"
+"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2005-2011","Wigan","Wigan_Warriors_Rugby_League_Football_Club","149","192","2005","2011"
 "Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2014-2018","Wigan","Wigan_Warriors_Rugby_League_Football_Club","75","56","2014","2018"
-"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2018-2019","Hull Kingston Rovers","Wigan_Warriors_Rugby_League_Football_Club","29","24","2018","2019"
-"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2020-2021","Dragons Catalans","Hull_Kingston_Rovers","2","0","2020","2021"
-"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2022-NA","Leigh","Dragons_catalans","0","0","2022",NA
-"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2011-2014","Saracens","Leigh_Leopards","45","40","2011","2014"
-"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","International","2010-2014","Angleterre",NA,"6","4","2010","2014"
-"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","International","2013-2013","Angleterre","%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XIII","3","0","2013","2013"
+"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2018-2019","Hull Kingston Rovers","Hull_Kingston_Rovers","29","24","2018","2019"
+"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2020-2021","Dragons Catalans","Dragons_catalans","2","0","2020","2021"
+"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2022-NA","Leigh","Leigh_Leopards","0","0","2022",NA
+"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","Senior","2011-2014","Saracens","Saracens","45","40","2011","2014"
+"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","International","2010-2014","Angleterre","%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XIII","6","4","2010","2014"
+"Q6214051","Joel Tomkins","Joel Tomkins","Joel_Tomkins","International","2013-2013","Angleterre","%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV","3","0","2013","2013"
 "Q6216222","Johann Sadie","Johann Sadie","Johann_Sadie","Senior","2011-2011","Stormers","Stormers","6","10","2011","2011"
 "Q6216222","Johann Sadie","Johann Sadie","Johann_Sadie","Senior","2012-2012","Bulls","Bulls_(rugby_%C3%A0_XV)","10","0","2012","2012"
 "Q6216222","Johann Sadie","Johann Sadie","Johann_Sadie","Senior","2013-2015","Cheetahs","Cheetahs","41","40","2013","2015"
@@ -27422,7 +27422,7 @@
 "Q7321829","Rhys Patchell","Rhys Patchell","Rhys_Patchell","Senior","2011-2016","Cardiff Blues","Cardiff_Rugby","83","614","2011","2016"
 "Q7321829","Rhys Patchell","Rhys Patchell","Rhys_Patchell","Senior","2016-2023","Scarlets","Scarlets","86","409","2016","2023"
 "Q7321829","Rhys Patchell","Rhys Patchell","Rhys_Patchell","Senior","2024-NA","Highlanders","Highlanders",NA,NA,"2024",NA
-"Q7321829","Rhys Patchell","Rhys Patchell","Rhys_Patchell","International","2011-2012","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","28","68","2011","2012"
+"Q7321829","Rhys Patchell","Rhys Patchell","Rhys_Patchell","International","2011-2012","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","28","68","2011","2012"
 "Q7321829","Rhys Patchell","Rhys Patchell","Rhys_Patchell","International","2013-NA","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","22","82","2013",NA
 "Q7321837","Rhys Ruddock","Rhys Ruddock","Rhys_Ruddock","Senior","2008-2009","Swansea RFC","Swansea_Rugby_Football_Club","3","0","2008","2009"
 "Q7321837","Rhys Ruddock","Rhys Ruddock","Rhys_Ruddock","Senior","2009-NA","Leinster","Leinster_Rugby","221","75","2009",NA
@@ -29768,13 +29768,13 @@
 "Q16235155","Ihaia West","Ihaia West","Ihaia_West","Senior","2023-NA","Stade rochelais","Stade_rochelais","31","15","2023",NA
 "Q16235155","Ihaia West","Ihaia West","Ihaia_West","International","2012-2012","Nouvelle-Zélande -20","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV_des_moins_de_20_ans","5","40","2012","2012"
 "Q16235155","Ihaia West","Ihaia West","Ihaia_West","International","2013-2017","Māori All Blacks","%C3%89quipe_des_M%C4%81ori_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV","10","63","2013","2017"
-"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2013-2013","Parramatta",NA,"6","12","2013","2013"
-"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2014-2014","Newcastle","Parramatta_Eels","0","0","2014","2014"
-"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2015-2016","Manly","Newcastle_Knights","23","28","2015","2016"
-"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2017-2019","Dragons Catalans","Manly-Warringah_Sea_Eagles","77","140","2017","2019"
-"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2020-2021","St. George Illawarra","Dragons_catalans","17","24","2020","2021"
-"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2021-2022","USA Perpignan","St._George_Illawarra_Dragons","1","0","2021","2022"
-"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2023-2023","New Zealand",NA,"2","0","2023","2023"
+"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2013-2013","Parramatta","Parramatta_Eels","6","12","2013","2013"
+"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2014-2014","Newcastle","Newcastle_Knights","0","0","2014","2014"
+"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2015-2016","Manly","Manly-Warringah_Sea_Eagles","23","28","2015","2016"
+"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2017-2019","Dragons Catalans","Dragons_catalans","77","140","2017","2019"
+"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2020-2021","St. George Illawarra","St._George_Illawarra_Dragons","17","24","2020","2021"
+"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2021-2022","USA Perpignan","Union_sportive_arlequins_perpignanais","1","0","2021","2022"
+"Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","Senior","2023-2023","New Zealand","New_Zealand_Warriors","2","0","2023","2023"
 "Q16235159","Brayden Wiliame","Brayden Wiliame","Brayden_Wiliame","International","2015-2019","Fidji à XIII","%C3%89quipe_des_Fidji_de_rugby_%C3%A0_XIII","9","16","2015","2019"
 "Q16235302","Santiago Cordero","Santiago Cordero","Santiago_Cordero","Senior","2013-2015","Pampas XV","Pampas_(rugby_%C3%A0_XV)","7","20","2013","2015"
 "Q16235302","Santiago Cordero","Santiago Cordero","Santiago_Cordero","Senior","2013-2015","Regatas de Bella Vista","Club_Regatas_de_Bella_Vista","24","166","2013","2015"
@@ -33045,7 +33045,7 @@
 "Q21623324","Tomos Williams","Tomos Williams","Tomos_Williams","Senior","2024-NA","Gloucester Rugby","Gloucester_Rugby","11","30","2024",NA
 "Q21623324","Tomos Williams","Tomos Williams","Tomos_Williams","International","2014-2015","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans","18","15","2014","2015"
 "Q21623324","Tomos Williams","Tomos Williams","Tomos_Williams","International","2018-NA","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","63","70","2018",NA
-"Q21623324","Tomos Williams","Tomos Williams","Tomos_Williams","International","2014-2015","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","29","87","2014","2015"
+"Q21623324","Tomos Williams","Tomos Williams","Tomos_Williams","International","2014-2015","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","29","87","2014","2015"
 "Q21634423","Gérald Bastide","Gérald Bastide","G%C3%A9rald_Bastide","Senior","1992-1994","USA Perpignan","Union_sportive_Arlequins_perpignanais",NA,NA,"1992","1994"
 "Q21634423","Gérald Bastide","Gérald Bastide","G%C3%A9rald_Bastide","Senior","1994-1995","Montpellier HR","Montpellier_H%C3%A9rault_Rugby",NA,NA,"1994","1995"
 "Q21634423","Gérald Bastide","Gérald Bastide","G%C3%A9rald_Bastide","Senior","1995-1999","USA Perpignan","Union_sportive_Arlequins_perpignanais",NA,NA,"1995","1999"
@@ -35657,9 +35657,9 @@
 "Q43797252","Renato Giammarioli","Renato Giammarioli","Renato_Giammarioli","International","2017-NA","Italie","%C3%89quipe_d%27Italie_de_rugby_%C3%A0_XV","8","0","2017",NA
 "Q43847981","Owen Lane","Owen Lane","Owen_Lane","Senior","2015-2024","Cardiff Blues","Cardiff_Rugby","90","215","2015","2024"
 "Q43847981","Owen Lane","Owen Lane","Owen_Lane","Senior","2024-NA","Valence Romans DR","Valence_Romans_Dr%C3%B4me_Rugby","10","10","2024",NA
-"Q43847981","Owen Lane","Owen Lane","Owen_Lane","International","2016-NA","Pays de Galles",NA,"21","10","2016",NA
-"Q43847981","Owen Lane","Owen Lane","Owen_Lane","International","2017-2017","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","5","0","2017","2017"
-"Q43847981","Owen Lane","Owen Lane","Owen_Lane","International","2019-NA","Pays de Galles",NA,"5","5","2019",NA
+"Q43847981","Owen Lane","Owen Lane","Owen_Lane","International","2016-NA","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","21","10","2016",NA
+"Q43847981","Owen Lane","Owen Lane","Owen_Lane","International","2017-2017","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans","5","0","2017","2017"
+"Q43847981","Owen Lane","Owen Lane","Owen_Lane","International","2019-NA","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","5","5","2019",NA
 "Q44042503","Brandon Paenga-Amosa","Brandon Paenga-Amosa","Brandon_Paenga-Amosa","Senior","2015-2017","Southern Districts","Southern_Districts_Rugby_Club","43","70","2015","2017"
 "Q44042503","Brandon Paenga-Amosa","Brandon Paenga-Amosa","Brandon_Paenga-Amosa","Senior","2016-2016","Greater Sydney Rams","Greater_Sydney_Rams","7","36","2016","2016"
 "Q44042503","Brandon Paenga-Amosa","Brandon Paenga-Amosa","Brandon_Paenga-Amosa","Senior","2017-2017","NSW Country Eagles","New_South_Wales_Country_Eagles","8","25","2017","2017"
@@ -36689,7 +36689,7 @@
 "Q54861310","Taine Basham","Taine Basham","Taine_Basham","International","2017-2017","Pays de Galles -18",NA,NA,NA,"2017","2017"
 "Q54861310","Taine Basham","Taine Basham","Taine_Basham","International","2018-2019","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans","12","25","2018","2019"
 "Q54861310","Taine Basham","Taine Basham","Taine_Basham","International","2021-NA","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","17","15","2021",NA
-"Q54861310","Taine Basham","Taine Basham","Taine_Basham","International","2018-2018","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","12","5","2018","2018"
+"Q54861310","Taine Basham","Taine Basham","Taine_Basham","International","2018-2018","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","12","5","2018","2018"
 "Q54867703","Kenta Fukuda","Kenta Fukuda福田 健太","Kenta_Fukuda","Senior","2021-2024","Toyota Verblitz","Toyota_Verblitz","29","40","2021","2024"
 "Q54867703","Kenta Fukuda","Kenta Fukuda福田 健太","Kenta_Fukuda","Senior","2024-NA","Tokyo Sungoliath","Tokyo_Sungoliath",NA,NA,"2024",NA
 "Q54867703","Kenta Fukuda","Kenta Fukuda福田 健太","Kenta_Fukuda","International","2023-NA","Japon","%C3%89quipe_du_Japon_de_rugby_%C3%A0_XV","1","0","2023",NA
@@ -36861,7 +36861,7 @@
 "Q55584550","Rio Dyer","Rio Dyer","Rio_Dyer","Senior","2018-NA","Dragons","Dragons_RFC","75","110","2018",NA
 "Q55584550","Rio Dyer","Rio Dyer","Rio_Dyer","International","2018-2019","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans","7","10","2018","2019"
 "Q55584550","Rio Dyer","Rio Dyer","Rio_Dyer","International","2022-NA","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","24","40","2022",NA
-"Q55584550","Rio Dyer","Rio Dyer","Rio_Dyer","International","2019-2020","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","24","35","2019","2020"
+"Q55584550","Rio Dyer","Rio Dyer","Rio_Dyer","International","2019-2020","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","24","35","2019","2020"
 "Q55584710","Herschel Jantjies","Herschel Jantjies","Herschel_Jantjies","Youth","2012-2017","Western Province","Western_Province_(rugby_%C3%A0_XV)",NA,NA,"2012","2017"
 "Q55584710","Herschel Jantjies","Herschel Jantjies","Herschel_Jantjies","Senior","2016-NA","Western Province","Western_Province_(rugby_%C3%A0_XV)","26","25","2016",NA
 "Q55584710","Herschel Jantjies","Herschel Jantjies","Herschel_Jantjies","Senior","2017-2017","Scarlets","Scarlets","1","0","2017","2017"
@@ -37817,10 +37817,10 @@
 "Q61450736","James Botham","James Botham","James_Botham","Senior","2016-NA","Cardiff RFC","Cardiff_Rugby_Football_Club",NA,NA,"2016",NA
 "Q61450736","James Botham","James Botham","James_Botham","Senior","2016-NA","Cardiff Rugby","Cardiff_Rugby","61","70","2016",NA
 "Q61450736","James Botham","James Botham","James_Botham","Senior","2016-2018","Cardiff Blues A",NA,"4","5","2016","2018"
-"Q61450736","James Botham","James Botham","James_Botham","International","2017-2017","Pays de Galles",NA,"7","10","2017","2017"
-"Q61450736","James Botham","James Botham","James_Botham","International","2016-2016","Pays de Galles -18","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept",NA,NA,"2016","2016"
-"Q61450736","James Botham","James Botham","James_Botham","International","2017-2018","Pays de Galles -20",NA,"10","15","2017","2018"
-"Q61450736","James Botham","James Botham","James_Botham","International","2020-NA","Pays de Galles",NA,"18","15","2020",NA
+"Q61450736","James Botham","James Botham","James_Botham","International","2017-2017","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","7","10","2017","2017"
+"Q61450736","James Botham","James Botham","James_Botham","International","2016-2016","Pays de Galles -18",NA,NA,NA,"2016","2016"
+"Q61450736","James Botham","James Botham","James_Botham","International","2017-2018","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans","10","15","2017","2018"
+"Q61450736","James Botham","James Botham","James_Botham","International","2020-NA","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","18","15","2020",NA
 "Q61590346","Cristian Chirică","Cristian Chirică","Cristian_Chiric%C4%83","Youth","2011-2015","RC Bârlad",NA,NA,NA,"2011","2015"
 "Q61590346","Cristian Chirică","Cristian Chirică","Cristian_Chiric%C4%83","Senior","2015-2020","CSM Baia Mare","CSM_Baia_Mare","33","50","2015","2020"
 "Q61590346","Cristian Chirică","Cristian Chirică","Cristian_Chiric%C4%83","Senior","2020-2022","SC Pamiers","Sporting_Club_appam%C3%A9en","19","30","2020","2022"
@@ -38400,7 +38400,7 @@
 "Q65029330","Tom Rogers","Tom Rogers","Tom_Rogers","Senior","2017-NA","Scarlets","Scarlets","62","85","2017",NA
 "Q65029330","Tom Rogers","Tom Rogers","Tom_Rogers","International","2018-2018","Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans","4","10","2018","2018"
 "Q65029330","Tom Rogers","Tom Rogers","Tom_Rogers","International","2021-NA","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","8","5","2021",NA
-"Q65029330","Tom Rogers","Tom Rogers","Tom_Rogers","International","2019-2019","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","39","60","2019","2019"
+"Q65029330","Tom Rogers","Tom Rogers","Tom_Rogers","International","2019-2019","Pays de Galles à sept","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_sept","39","60","2019","2019"
 "Q65030096","Sam Nixon","Sam Nixon","Sam_Nixon","Senior","2017-2020","Bath Rugby","Bath_Rugby","18","0","2017","2020"
 "Q65030096","Sam Nixon","Sam Nixon","Sam_Nixon","Senior","2017-2017","Rotherham Titans","Rotherham_Rugby_Union_Football_Club","3","0","2017","2017"
 "Q65030096","Sam Nixon","Sam Nixon","Sam_Nixon","Senior","2019-2019","Leeds Tykes","Leeds_Tykes","3","0","2019","2019"
