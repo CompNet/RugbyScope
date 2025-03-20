@@ -238,6 +238,9 @@ write.csv(tab, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 #### "[^S\d][^"]*","Stade_fran%C3%A7ais_Paris_rugby
 #### we use the above file to manually correct stints.csv by disambiguating URLs
 
+
+# TODO: virer "Youth","NA-NA" si même 1er club Senior
+
 #### debug: check teams with the same name but a different URL (some URLs are incorrect)
 #dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
 #tab <- wp_teams[-(1:nrow(wp_teams)), ]
