@@ -322,9 +322,10 @@ if (length(idx) > 0)
 #print(length(which(!is.na(stints[, "teamWP"]))))  # 41,334/46,999 non-NAs
 
 # solve wikipedia redirections
+old_urls <- stints[, "teamWP"]
 for (r in 1:nrow(stints)) {
   url <- stints[r, "teamWP"]
-  if (r %% 100 == 0)
+  # if (r %% 100 == 0)
     tlog(4, "Solving redirections for entry ", r, "/", nrow(stints), " (", url, ")")
 
   if (!is.na(url)) {
@@ -338,6 +339,7 @@ for (r in 1:nrow(stints)) {
   if (!is.na(url) && is.na(stints[r, "teamWP"]))
     tlog(6, "Difference: ", r)
 }
+#print(length(which(!is.na(old_urls) & is.na(stints[, "teamWP"]))))
 #print(length(which(!is.na(stints[, "teamWP"]))))  # 41,334/46,999 non-NAs
 
 
