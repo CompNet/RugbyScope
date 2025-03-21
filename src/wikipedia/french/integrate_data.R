@@ -231,15 +231,12 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 #### and should not be merged (ex. NZ url associated to NZ, U20 NZ, U21 NZ...)
 #idx <- which(sapply(alt_names, length) > 1)
 #tab <- wp_teams[idx,]
-#tab.file <- file.path(wp_folder, "duplicate_names.csv")
+#tab.file <- file.path(wp_folder, "duplicate_urls.csv")
 #tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 #write.csv(tab, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 #### "Otago","[^O\d\?-]
 #### "[^S\d][^"]*","Stade_fran%C3%A7ais_Paris_rugby
 #### we use the above file to manually correct stints.csv by disambiguating URLs
-
-
-# TODO: virer "Youth","NA-NA" si même 1er club Senior
 
 #### debug: check teams with the same name but a different URL (some URLs are incorrect)
 #dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
@@ -252,7 +249,7 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 #### the above code was used to define the url2url.csv map, allowing to solve specific cases of
 #### the same team being associated to several distinct URLs. the map associates an incorrect url
 #### to a correct one, and the substitution is made in the loop that builds the wp_teams table
-#### Note: a few duplicates remain, but these are highschools, which are removed later
+#### Note: a few duplicates remain, but they correspond to teams that are removed later (highschools, rugby league, etc.)
 
 # we first focus on teams possessing a URL, as they are easier to match
 # match teams using WP URLs
