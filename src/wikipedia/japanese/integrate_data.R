@@ -292,10 +292,11 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 #### Note: a few duplicates remain, but these are highschools, which are removed later
 
 # we first focus on teams possessing a URL, as they are easier to match
+
 # match teams using WP URLs
 tlog(2, "Match WP teams to merged table based on urls")
 non_na <- which(!is.na(wp_teams[, "teamWP"]))
-tlog(4, "Found ", length(non_na), "/", nrow(wp_teams), " WP teams  with a URL")
+tlog(4, "Found ", length(non_na), "/", nrow(wp_teams), " WP teams with a URL")
 unique_urls <- trimws(wp_teams[non_na, "teamWP"])
 unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
 unique_urls <- unique_urls[!startsWith(unique_urls, "#")]

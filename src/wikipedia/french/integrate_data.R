@@ -229,33 +229,84 @@ tlog(4, "Found ", nrow(wp_teams), " unique teams")
 wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
 #### debug: take a look at teams with multiple names, some are associated to very generic url
 #### and should not be merged (ex. NZ url associated to NZ, U20 NZ, U21 NZ...)
-#idx <- which(sapply(alt_names, length) > 1)
-#tab <- wp_teams[idx,]
-#tab.file <- file.path(wp_folder, "duplicate_urls.csv")
-#tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-#write.csv(tab, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+idx <- which(sapply(alt_names, length) > 1)
+tab <- wp_teams[idx,]
+tab.file <- file.path(wp_folder, "duplicate_urls.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(tab, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 #### "Otago","[^O\d\?-]
 #### "[^S\d][^"]*","Stade_fran%C3%A7ais_Paris_rugby
 #### we use the above file to manually correct stints.csv by disambiguating URLs
 
 #### debug: check teams with the same name but a different URL (some URLs are incorrect)
-#dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
-#tab <- wp_teams[-(1:nrow(wp_teams)), ]
-#for (dupp_name in dup_names) {
-#  idx <- which(wp_teams[, "altNames"] == dupp_name)
-#  tab <- rbind(tab, wp_teams[idx, ])
-#}
-#write.csv(tab, file.path(wp_folder, "duplicate_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
+tab <- wp_teams[-(1:nrow(wp_teams)), ]
+for (dupp_name in dup_names) {
+ idx <- which(wp_teams[, "altNames"] == dupp_name)
+ tab <- rbind(tab, wp_teams[idx, ])
+}
+write.csv(tab, file.path(wp_folder, "duplicate_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### the above code was used to define the url2url.csv map, allowing to solve specific cases of
 #### the same team being associated to several distinct URLs. the map associates an incorrect url
 #### to a correct one, and the substitution is made in the loop that builds the wp_teams table
 #### Note: a few duplicates remain, but they correspond to teams that are removed later (highschools, rugby league, etc.)
 
+# remove sevens teams
+tlog(2, "Removing rugby sevens teams")
+idx <- which(grepl("\\bsept\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.]sept[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
+#write.csv(wp_teams[idx, ], file.path(wp_folder, "temp.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+urls <- wp_teams[idx, "teamWP"]
+nms <- wp_teams[idx, "altNames"]
+nms <- nms[is.na(urls)]
+urls <- urls[!is.na(urls)]
+idx2 <- which(wp_stints[, "teamWP"] %in% urls | wp_stints[, "teamName"] %in% nms)
+wp_stints <- wp_stints[-idx2, ]
+wp_teams <- wp_teams[-idx, ]
+tlog(4, "Deleted ", length(idx), "/", nrow(wp_teams), " teams from the team table")
+tlog(4, "Deleted ", length(idx2), "/", nrow(wp_stints), " matching stints")
+
+# remove rugby league teams
+tlog(2, "Removing rugby league teams")
+#### debug: code used to detect rugby league teams
+#idx <- which(grepl("\\b[Xx][Ii]{3}\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][Xx][Ii]{3}[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE) |
+#          grepl("\\b[Ll]eague\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][Ll]eague[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
+#tab <- wp_teams[idx, ]  # 89 teams detected
+#idx <- order(tab[, "altNames"])
+#write.csv(tab[idx, -1], file.path(wp_folder, "rugby_league_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### this list was then completed manually and used below
+list_rleague <- read.csv(file.path(wp_folder, "maps", "rugby_league_teams.csv"))
+idx <- which(wp_teams[, "teamWP"] %in% list_rleague[!is.na(list_rleague[, "url"]), "url"] | wp_teams[, "altNames"] %in% list_rleague[!is.na(list_rleague[, "name"]) & is.na(list_rleague[, "url"]), "name"])
+urls <- wp_teams[idx, "teamWP"]
+nms <- wp_teams[idx, "altNames"]
+nms <- nms[is.na(urls)]
+urls <- urls[!is.na(urls)]
+idx2 <- which(wp_stints[, "teamWP"] %in% urls | wp_stints[, "teamName"] %in% nms)
+wp_stints <- wp_stints[-idx2, ]
+wp_teams <- wp_teams[-idx, ]
+tlog(4, "Deleted ", length(idx), "/", nrow(wp_teams), " teams from the team table")
+tlog(4, "Deleted ", length(idx2), "/", nrow(wp_stints), " matching stints")
+
+# remove women's teams
+# TODO
+      
+      
+      
+############## debug     
+          tab.file <- file.path(wp_folder, "teams.csv")
+          tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+          write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+          #
+          tab.file <- file.path(fusion_folder, "stints_02_frwp.csv")
+          tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+          write.csv(wp_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+##############
+
 # we first focus on teams possessing a URL, as they are easier to match
+
 # match teams using WP URLs
 tlog(2, "Match WP teams to merged table based on urls")
 non_na <- which(!is.na(wp_teams[, "teamWP"]))
-tlog(4, "Found ", length(non_na), "/", nrow(wp_teams), " WP teams  with a URL")
+tlog(4, "Found ", length(non_na), "/", nrow(wp_teams), " WP teams with a URL")
 unique_urls <- trimws(wp_teams[non_na, "teamWP"])
 unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
 unique_urls <- unique_urls[!startsWith(unique_urls, "#")]
@@ -271,30 +322,10 @@ tlog(4, "Could match directly ", length(idx), "/", length(unique_urls), " non-NA
 wp_teams[non_na, "rugbyscopeId"] <- fus_teams[mm, "rugbyscopeId"]
 #length(which(!is.na(wp_teams[, "rugbyscopeId"])))
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
-
-# use the URLs to retrieve from WP the English names of unmatched teams
-tlog(2, "Retrieving missing English team names")
-idx <- which(!is.na(wp_teams[, "teamWP"]) & is.na(wp_teams[, "rugbyscopeId"]))
-failed <- c()
-for (i in 1:length(idx)) {
-  team_url <- trimws(wp_teams[idx[i], "teamWP"])
-  # if(!grepl("redlink=1", team_url, fixed = TRUE) && !startsWith(team_url, "#")) {
-  tlog(4, "Retrieving translation for \"", team_url, "\" (", i, "/", length(idx), ")")
-  title <- get_english_title(team_url, lang = "fr")
-  #tlog(6, "Result: ", title)
-  if (is.null(title))
-    failed <- c(failed, team_url)
-  else
-    alt_names[[idx[i]]] <- union(alt_names[[idx[i]]], list(title))
-  # Sys.sleep(1)
-}
-tlog(4, "Could retrieve the name associated to ", (length(idx) - length(failed)), "/", length(idx), " unmatched teams possessing a URL")
-tlog(4, "Still missing the name associated to ", length(failed), "/", length(idx), " unmatched teams possessing a URL")
-wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
-#### debug
-#write.csv(failed, file.path(wp_folder, "no-name_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-#### at this stage, we use the above file to define manually the url2id.csv and url2name.csv map files
-#### each no-name url must be associated to an id (if team present in merged table) or a WP page title (otherwise)
+#### debug: record the list of unmatched teams with a URL
+idx <- which(is.na(mm))
+write.csv(unique_urls[idx], file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### we use the above file to define the url2id map manually, which is used below
 
 # use url2id map to match the remaining cases based on their URL
 tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
@@ -901,7 +932,7 @@ idx <- order(ids, fus_stints[, "playerName"], fus_stints[, "startYear"], fus_sti
 fus_stints <- fus_stints[idx, ]
 
 # record as a new CSV file
-fus_stints[,"teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
+fus_stints[, "teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
 tab.file <- file.path(fusion_folder, "stints_02_frwp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")

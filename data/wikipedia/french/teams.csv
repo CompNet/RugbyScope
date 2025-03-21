@@ -1,265 +1,3292 @@
 "rugbyscopeId","altNames","teamWP"
-NA,"US Colomiers; Colomiers rugby","Colomiers_Rugby"
-NA,"Section paloise; Section Paloise","Section_paloise_(rugby_%C3%A0_XV)"
-NA,"Stade toulousain; Toulouse; SOE Toulouse","Stade_toulousain"
-NA,"Racing 92; Racing Métro 92; Racing club de France; RC France; Racing CF; Racing Club de France; Racing-Paris; Métro Racing 92","Racing_92"
-NA,"Queensland Reds; Queensland","Queensland_Reds"
+NA,"Manuel Belgrano",NA
+NA,"US Colomiers; Colomiers rugby; Colomiers Rugby","Colomiers_Rugby"
+NA,"Section paloise; Section Paloise; Pau; Section paloise rés.","Section_paloise_(rugby_%C3%A0_XV)"
+NA,"Stade toulousain; Toulouse; SOE Toulouse; SOEVS Toulouse; Stade Toulousain","Stade_toulousain"
+NA,"Racing 92; Racing Métro 92; Racing club de France; RC France; Racing CF; Racing Club de France; Racing-Paris; Métro Racing 92; Racing Metro; Racing Métro; Racing Metro 92; RC de France; Racing C.F.; Racing Club; Racing métro 92; Métro Racing","Racing_92"
+NA,"Argentine","%C3%89quipe_d%27Argentine_de_rugby_%C3%A0_XV"
+NA,"Queensland Reds; Queensland; Reds; Queensland Rugby Union; Queensland RU","Queensland_Reds"
 NA,"Australie; Australia","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV"
+NA,"East Coast Aces; Queensland Country","Queensland_Country"
 NA,"Brisbane City; Ballymore Tornadoes","Brisbane_City_(rugby_%C3%A0_XV)"
-NA,"RC Toulon; Rugby club toulonnais; Toulon","Rugby_club_toulonnais"
+NA,"RC Toulon; Rugby club toulonnais; Toulon; R.C. Toulon","Rugby_club_toulonnais"
 NA,"Melbourne Rebels; Rebels","Melbourne_Rebels"
-NA,"Biarritz olympique; Biarritz","Biarritz_olympique_Pays_basque"
-NA,"Harlequins; Harlequins FC; Harlequin FC","Harlequin_Football_Club"
-NA,"Montpellier HR; Montpellier; Montpellier RC","Montpellier_H%C3%A9rault_Rugby"
-NA,"US Oyonnax; Oyonnax Rugby; US Oyonnax Rugby; Oyonnax rugby","Oyonnax_Rugby"
-NA,"Union Bordeaux Bègles; Bordeaux Bègles; Union Bordeaux-Bègles","Union_Bordeaux_B%C3%A8gles"
+NA,"Kintetsu Liners; Kintetsu; Hanazono Kintetsu Liners","Hanazono_Kintetsu_Liners"
+NA,"Australie -20","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Biarritz olympique; Biarritz; Biarritz Stade; Biarritz Olympique; Biarritz stade; Biarriz olympique","Biarritz_olympique_Pays_basque"
+NA,"North Harbour","North_Harbour_Rugby_Union"
+NA,"CA Périgueux; CA Perigueux","Club_athl%C3%A9tique_P%C3%A9rigueux_Dordogne"
+NA,"Harlequins; Harlequins FC; Harlequin FC; Harlequin Football Club","Harlequin_Football_Club"
+NA,"Montpellier HR; Montpellier; Montpellier RC; Montpellier HRC; Stade montpelliérain; Montpellier Hérault rugby","Montpellier_H%C3%A9rault_Rugby"
+NA,"US Oyonnax; Oyonnax Rugby; US Oyonnax Rugby; Oyonnax rugby; Oyonnax","Oyonnax_Rugby"
+NA,"Union Bordeaux Bègles; Bordeaux Bègles; Union Bordeaux-Bègles; U. Bordeaux Bègles; Union SB-CABBG; Bordeaux-Bègles","Union_Bordeaux_B%C3%A8gles"
 NA,"Castres olympique; Castres; Castres Olympique","Castres_olympique"
-NA,"Otago; Otago RFU","Otago_Rugby_Football_Union"
-NA,"Nouvelle-Zélande à sept; Nouvelle-Zélande sept; Nouvelle-Zélande; Nouvelle-Zélande 7","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_sept"
-NA,"Waratahs; New South Wales; NSW Waratahs; New South Wales Waratahs","Waratahs"
-NA,"Wellington; Wellington Lions; Wellington RFU","Wellington_Rugby_Football_Union"
-NA,"Brumbies; ACT Brumbies","Brumbies"
+NA,"Soyaux Angoulême XV; Soyaux Angoulême; Soyaux-Angoulême; SA XV Charente; Soyaux-Angoulême XV; RC Soyaux","Soyaux_Angoul%C3%AAme_XV_Charente"
+NA,"Otago; Otago RFU; Otago Rugby","Otago_Rugby_Football_Union"
+NA,"Highlanders; Otago Highlanders","Highlanders"
+NA,"Nouvelle-Zélande; Nouvelle-Zélande XV","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV"
+NA,"Western Force","Western_Force"
+NA,"Perth Spirit","Perth_Spirit"
+NA,"Shimizu Blue Sharks","Shimizu_Koto_Blue_Sharks"
+NA,"Waratahs; New South Wales; NSW Waratahs; New South Wales Waratahs; Nouvelle-Galles du sud; New South Wales Rugby Union; Nouvelle-Galles du Sud; Nouvelles-Galles du Sud","Waratahs"
+NA,"Wellington; Wellington Lions; Wellington RFU; Wellington Rugby Football Union; Wellington B","Wellington_Rugby_Football_Union"
+NA,"Brumbies; ACT Brumbies; Brumbies Runners","Brumbies"
 NA,"NSW Country Eagles; Country Eagles","New_South_Wales_Country_Eagles"
-NA,"Australie à sept; Australie","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_sept"
-NA,"AS Béziers; AS Béziers Hérault; Béziers","Association_sportive_de_B%C3%A9ziers_H%C3%A9rault"
-NA,"Bayonne; Aviron bayonnais","Aviron_bayonnais_rugby_pro"
-NA,"Montauban; US Montauban; Montauban TGXV","Union_sportive_montalbanaise"
-NA,"France; France olympique","%C3%89quipe_de_France_de_rugby_%C3%A0_XV"
-NA,"Stade rochelais; Atlantique Stade rochelais","Stade_rochelais"
-NA,"Stade français; Stade français Paris; Stade Francais; Stade français CASG","Stade_fran%C3%A7ais_Paris_rugby"
-NA,"FC Auch; FC Auch Gers","Football_Club_Auch_Gers"
-NA,"ASM Clermont; AS Montferrand; ASM Clermont Auvergne; Clermont","ASM_Clermont_Auvergne"
+NA,"Pézenas",NA
+NA,"AS Béziers; AS Béziers Hérault; Béziers; A.S. Béziers","Association_sportive_de_B%C3%A9ziers_H%C3%A9rault"
+NA,"Bayonne; Aviron bayonnais; Aviron Bayonnais","Aviron_bayonnais_rugby_pro"
+NA,"Montauban; US Montauban; Montauban TGXV; Montauban TG XV","Union_sportive_montalbanaise"
+NA,"Stade rochelais; Atlantique Stade rochelais; La Rochelle; Atlantique stade rochelais","Stade_rochelais"
+NA,"Stade français; Stade français Paris; Stade Francais; Stade français CASG; Stade Français; Stade français Paris CASG; Stade Français Paris","Stade_fran%C3%A7ais_Paris_rugby"
+NA,"FC Auch; FC Auch Gers; F.C. Auch","Football_Club_Auch_Gers"
+NA,"US Ussel; US Usselloise","Union_sportive_usselloise"
+NA,"ASM Clermont; AS Montferrand; ASM Clermont Auvergne; Clermont; Clermont Auvergne; AS Monferrand; A.S. Montferrand","ASM_Clermont_Auvergne"
 NA,"Lions; Cats; Lions du Transvaal","Lions_(rugby_%C3%A0_XV)"
-NA,"Golden Lions; Transvaal; Gauteng Lions; Golden Lions U20","Golden_Lions"
-NA,"CA Brive; Brive; C.A. Brive","Club_athl%C3%A9tique_Brive_Corr%C3%A8ze_Limousin"
-NA,"CS Lannemezan; CA Lannemezan","Cercle_amical_lannemezanais"
-NA,"Lannemezan Tarbes; Tarbes Pyrénées; Tarbes PR; Stadoceste tarbais; Tarbes Pyrénées rugby; Stado Tarbes Pyrénées; Stadoceste Tarbais; Lannemezan-Tarbes","Stado_Tarbes_Pyr%C3%A9n%C3%A9es_rugby"
-NA,"Lyon OU; LOU Rugby","Lyon_olympique_universitaire_rugby"
-NA,"Provence Rugby; RC Pays d'Aix; Pays d'Aix rugby club; Pays d'Aix RC; Provence rugby; Pays D’Aix Rugby; Aix RC","Provence_Rugby"
+NA,"Golden Lions; Transvaal; Gauteng Lions; Golden Lions U20; Transvaal / Golden Lions; MTM Lions; Xerox Golden Lions","Golden_Lions"
+NA,"CA Brive; Brive; C.A. Brive; CA Brive Corrèze; CA Brives","Club_athl%C3%A9tique_Brive_Corr%C3%A8ze_Limousin"
+NA,"USA Mirande",NA
+NA,"CS Lannemezan; CA Lannemezan; C.A. Lannemezanais","Cercle_amical_lannemezanais"
+NA,"Lannemezan Tarbes; Tarbes Pyrénées; Tarbes PR; Stadoceste tarbais; Tarbes Pyrénées rugby; Stado Tarbes Pyrénées; Stadoceste Tarbais; Lannemezan-Tarbes; Stado Tarbes PR; Lannemezan Tarbes 65; Tarbes; Tarbes-Lannemezan HP; Lannemezan-Tarbes HP; Stade Tarbes PR; Stado Tarbes; Stadoceste tarbais rés.","Stado_Tarbes_Pyr%C3%A9n%C3%A9es_rugby"
+NA,"Lyon OU; LOU Rugby; LOU; LOU rugby; Lyon O.U.","Lyon_olympique_universitaire_rugby"
+NA,"Provence Rugby; RC Pays d'Aix; Pays d'Aix rugby club; Pays d'Aix RC; Provence rugby; Pays D’Aix Rugby; Aix RC; Pays d'Aix; Paix d'Aix RC; Pays d'Aix R.C.","Provence_Rugby"
 NA,"Leicester Tigers; Leicester","Leicester_Tigers"
-NA,"Sale Sharks; Sale; Sale RFC","Sale_Sharks"
+NA,"Sale Sharks; Sale; Sale RFC; Sale FC","Sale_Sharks"
+NA,"Angleterre","%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV"
 NA,"Lions; Lions britanniques","%C3%89quipe_des_Lions_britanniques_et_irlandais_de_rugby_%C3%A0_XV"
-NA,"CS Bourgoin-Jallieu; Bourgoin-Jallieu; CS Bourgoin-Jailleu; CS Bourgoin","Club_sportif_Bourgoin-Jallieu_rugby"
+NA,"Université de Dschang",NA
+NA,"Stade aurillacois; Stade Aurillacois; Aurillac","Stade_aurillacois_Cantal_Auvergne"
+NA,"UA Gaillac","Union_athl%C3%A9tique_gaillacoise"
+NA,"USA Perpignan; Perpignan; U.S.A. Perpignan; AC Perpignan; USAP","Union_sportive_Arlequins_perpignanais"
+NA,"Cameroun","%C3%89quipe_du_Cameroun_de_rugby_%C3%A0_XV"
+NA,"Newcastle Falcons; Newcastle; Newcastle Academy","Newcastle_Falcons"
+NA,"DSV 1878 Hanovre",NA
+NA,"CS Bourgoin-Jallieu; Bourgoin-Jallieu; CS Bourgoin-Jailleu; CS Bourgoin; Bourgoin; CS Bourgoin Jallieu; Bourgoin Jallieu; C.S. Bergusien","Club_sportif_Bourgoin-Jallieu_rugby"
 NA,"Bugue AC; Le Bugue","Bugue_Athletic_Club"
+NA,"Allemagne","%C3%89quipe_d%27Allemagne_de_rugby_%C3%A0_XV"
 NA,"Blues; Auckland Blues","Blues_(rugby_%C3%A0_XV)"
-NA,"Taranaki; Taranaki RU; Taranaki RFU","Taranaki_Rugby_Football_Union"
+NA,"Taranaki; Taranaki RU; Taranaki RFU; Taranaki Rugby","Taranaki_Rugby_Football_Union"
 NA,"Northampton Saints; Northampton","Northampton_Saints"
-NA,"FC Lézignan XIII; Lézignan; FC Lézignan","Football_club_L%C3%A9zignan-Corbi%C3%A8res_rugby_league"
+NA,"Samoa","%C3%89quipe_des_Samoa_de_rugby_%C3%A0_XV"
+NA,"SC Neuenheim","SC_Neuenheim"
+NA,"Stoke RFC",NA
+NA,"RC Orléans","Rugby_Club_Orl%C3%A9ans"
 NA,"Cavalieri Prato; I Cavalieri Prato; RC I Cavalieri Prato","Rugby_Club_I_Cavalieri_Prato"
-NA,"Stade niortais; Niort RC","Niort_Rugby_Club"
+NA,"US Dax; Dax; U.S. Dax","Union_sportive_dacquoise"
+NA,"DSV 78 Hanovre","DSV_78_Hanovre"
+NA,"Stade niortais; Niort RC; Stade niortais rugby; Niort rugby club; Niort Rugby Club","Niort_Rugby_Club"
 NA,"Heidelberger RK; Heidelberg RK","Heidelberger_Ruderklub_1872_e.V."
-NA,"Auckland Rugby; Auckland; Auckland RFU","Auckland_Rugby_Football_Union"
-NA,"Central Cheetahs; Cheetahs","Cheetahs"
-NA,"Griquas; Griqualand West Griquas; GWK Griquas","Griqualand_West_Griquas"
-NA,"FC Grenoble; Grenoble","Football_Club_de_Grenoble_rugby"
-NA,"Eastern Province Kings; Mighty Elephants; Eastern Province","Eastern_Province_Elephants"
-NA,"Blue Bulls; Northern Transvaal","Blue_Bulls"
-NA,"Bulls; Northern Bulls; Northern Transvaal","Bulls_(rugby_%C3%A0_XV)"
-NA,"Free State Cheetahs; Free State; Orange Free State; FS Cheetahs","Free_State_Cheetahs"
-NA,"Natal Sharks; Natal","Natal_Sharks"
-NA,"Malborough; Marlborough","Marlborough_Rugby_Union"
+NA,"Tennis Borussia Berlin","Tennis_Borussia_Berlin"
+NA,"BSV 92 Berlin","BSV_92_Berlin"
+NA,"Auckland Rugby; Auckland; Auckland RFU; Auckland RFC","Auckland_Rugby_Football_Union"
+NA,"Leopards; North West Leopards; Western Transvaal; North West; Leopard; ?","Leopards_(rugby_%C3%A0_XV)"
+NA,"Central Cheetahs; Cheetahs; Free State; Griquas / Cheetahs","Cheetahs"
+NA,"Griquas; Griqualand West Griquas; GWK Griquas; Wildeklawer Griquas; Griqualand West; West Griquas","Griqualand_West_Griquas"
+NA,"FC Grenoble; Grenoble; FC Grenoble rugby; F.C. Grenoble","Football_Club_de_Grenoble_rugby"
+NA,"Southern Kings","Southern_Kings"
+NA,"Eastern Province Kings; Mighty Elephants; Eastern Province; Mighty Elefants; EP Kings; Eastern Kings; EP Elephants","Eastern_Province_Elephants"
+NA,"Blue Bulls; Northern Transvaal; Bulls; Northern Tranvaal; Northern Transval; Northern transvaal","Blue_Bulls"
+NA,"Bulls; Northern Bulls; Northern Transvaal; Blue Bulls / Bulls","Bulls_(rugby_%C3%A0_XV)"
+NA,"Free State Cheetahs; Free State; Orange Free State; FS Cheetahs; Cheetahs","Free_State_Cheetahs"
+NA,"Afrique du Sud","%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV"
+NA,"Jonsson College Rovers",NA
+NA,"Natal Sharks; Natal; Natal Wildebeeste; Natal Sharks -21; Sharks; Sharks Academy","Natal_Sharks"
+NA,"Sharks","Sharks_(rugby_%C3%A0_XV)"
+NA,"Córdoba Athletic Club","C%C3%B3rdoba_Athletic_Club"
+NA,"Pampas XV; Pampas","Pampas_(rugby_%C3%A0_XV)"
+NA,"Malborough; Marlborough; Marlborough RU","Marlborough_Rugby_Union"
 NA,"Crusaders; Canterbury Crusaders","Crusaders"
-NA,"London Wasps; Wasps; Wasps RFC; Wasps FC","Wasps"
+NA,"London Wasps; Wasps; Wasps RFC; Wasps FC; Wasps Academy","Wasps"
 NA,"Chiefs; Waikato Chiefs","Chiefs_(rugby_%C3%A0_XV)"
-NA,"Hawke's Bay; Hawke's Bay RU","Hawke%27s_Bay_Rugby_Union"
+NA,"Hawke's Bay; Hawke's Bay RU; Hawkes Bay","Hawke%27s_Bay_Rugby_Union"
+NA,"Coca Cola Red Sparks; Coca Cola West Red Sparks; West Red Sparks; Red Sparks","Coca_Cola_Red_Sparks"
 NA,"Māori de NlleZélande; Māori All Blacks; Nouvelle-Zélande Māori","%C3%89quipe_des_M%C4%81ori_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV"
+NA,"Canon Eagles; Yokohama Canon Eagles; Yokohama Eagles","Yokohama_Canon_Eagles"
+NA,"Counties Manukau; Counties Manaukau; Manukau RU; Counties Manuaku","Counties_Manukau_Rugby_Union"
+NA,"Waikato; Waikato RU; Waikato Rugby Union","Waikato_Rugby_Union"
 NA,"Bath Rugby; Bath","Bath_Rugby"
-NA,"Mitsubishi Dynaboars; Sagamihara Dynaboars","Mitsubishi_Sagamihara_Dynaboars"
-NA,"Suntory Sungoliath; Tokyo Sungoliath","Tokyo_Sungoliath"
-NA,"Toshiba Brave Lupus; Toshiba Fuchu","Toshiba_Brave_Lupus_Tokyo"
-NA,"Canterbury; Canterbury RFU","Canterbury_Rugby_Football_Union"
-NA,"Panasonic Wild Knights; Sanyo Wild Knights; Wild Knights","Saitama_Wild_Knights"
-NA,"Cardiff Blues; Cardiff","Cardiff_Rugby"
+NA,"Mitsubishi Dynaboars; Sagamihara Dynaboars; Mitsubishi Sagamihara","Mitsubishi_Sagamihara_Dynaboars"
+NA,"Suntory Sungoliath; Tokyo Sungoliath; Suntory RFC","Tokyo_Sungoliath"
+NA,"Toshiba Brave Lupus; Toshiba Fuchu; Brave Lupus Tokyo; Toshiba Brave Lupus Tokyo","Toshiba_Brave_Lupus_Tokyo"
+NA,"NEC Green Rockets; NEC Green Rockets Tokatsu; Green Rockets Tokatsu","NEC_Green_Rockets_Tokatsu"
+NA,"Palmerston North HS Old Boys' RFC",NA
+NA,"Canterbury; Canterbury RFU; Canterbury RFC; Canterbury RUFC","Canterbury_Rugby_Football_Union"
+NA,"Panasonic Wild Knights; Sanyo Wild Knights; Wild Knights; Sanyo; Saitama Wild Knights; Sanyo Electric","Saitama_Wild_Knights"
+NA,"Nouvelle-Zélande -19",NA
+NA,"Nouvelle-Zélande -20","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Hurricanes; Wellington Hurricanes","Hurricanes"
+NA,"Junior All Blacks; All Blacks XV","All_Blacks_XV"
+NA,"Cardiff Blues; Cardiff; Cardiff Rugby","Cardiff_Rugby"
 NA,"Exeter Chiefs; Exeter","Exeter_Chiefs"
 NA,"Scarlets; Llanelli Scarlets","Scarlets"
-NA,"Nottingham RFC; Nottingham","Nottingham_Rugby_Football_Club"
-NA,"Leinster; Leinster Rugby","Leinster_Rugby"
-NA,"Dragons; Newport Gwent Dragons; Newport Dragons","Dragons_RFC"
+NA,"Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV"
+NA,"Nottingham RFC; Nottingham; Nottingham RFU; Nottingham Rugby","Nottingham_Rugby_Football_Club"
+NA,"Leinster; Leinster Rugby; Leinster A","Leinster_Rugby"
+NA,"Dragons; Newport Gwent Dragons; Newport Dragons; Dragons RFC","Dragons_RFC"
 NA,"Bristol Bears; Bristol Rugby; Bristol; Bristol Shoguns; Bristol FC","Bristol_Bears"
-NA,"SU Agen; Agen","Sporting_Union_Agen_Lot-et-Garonne"
+NA,"Saracens","Saracens"
+NA,"US Lalinde",NA
+NA,"SU Agen; Agen; S.U. Agen; SU Agenais","Sporting_Union_Agen_Lot-et-Garonne"
+NA,"France; France olympique","%C3%89quipe_de_France_de_rugby_%C3%A0_XV"
+NA,"Abercrave RFC",NA
+NA,"Pontypool RFC; Pontypool","Pontypool_Rugby_Football_Club"
+NA,"Llanelli RFC; Llanelli","Llanelli_Rugby_Football_Club"
 NA,"Swansea RFC; Swansea","Swansea_Rugby_Football_Club"
-NA,"Benetton Trévise; Benetton Rugby Trévise; Benetton Trevise; Benetton; Benneton Trévise","Benetton_Rugby_Tr%C3%A9vise"
-NA,"Kobelco Steelers; Kobe Steelers; Kobe Steel Kobelco; Kobe Steel","Kobelco_Kobe_Steelers"
-NA,"Tasman; Tasman RU; Nelson Bay","Tasman_Rugby_Union"
+NA,"Benetton Trévise; Benetton Rugby Trévise; Benetton Trevise; Benetton; Benneton Trévise; Trévise","Benetton_Rugby_Tr%C3%A9vise"
+NA,"Italie","%C3%89quipe_d%27Italie_de_rugby_%C3%A0_XV"
+NA,"Manawatu; Manawatu Turbos","Manawatu_Rugby_Union"
+NA,"Kobelco Steelers; Kobe Steelers; Kobe Steel Kobelco; Kobe Steel; Kobelco Kobe Steelers; Kobe Steel Kobelco Steelers","Kobelco_Kobe_Steelers"
+NA,"Southland; Southland Rugby; Southland RFU","Southland_Rugby_Football_Union"
+NA,"Tasman; Tasman RU; Nelson Bay; Tasman Makos; Tasman Mako","Tasman_Rugby_Union"
+NA,"Gloucester; Gloucester Rugby; Gloucester RFC","Gloucester_Rugby"
+NA,"Nouvelle-Zélande -21",NA
 NA,"Coventry RFC; Coventry","Coventry_Rugby_Football_Club"
-NA,"USA Limoges; Limoges rugby; Limoges Rugby","Union_sportive_athl%C3%A9tique_de_Limoges"
-NA,"ASVEL rugby; ASVEL; AS Villeurbanne","Association_sportive_de_Villeurbanne_et_de_l%27%C3%89veil_lyonnais_rugby"
-NA,"RC Carqueiranne-Hyères; RCCH; RC Hyères; RC Hyères-Carqueiranne","Rugby_Club_Hy%C3%A8res_Carqueiranne_La_Crau"
-NA,"Glasgow Warriors; Glasgow; Glasgow Rugby","Glasgow_Warriors"
+NA,"USA Limoges; Limoges rugby; Limoges Rugby; UA Limoges; Limoges","Union_sportive_athl%C3%A9tique_de_Limoges"
+NA,"ASVEL rugby; ASVEL; AS Villeurbanne; ASVEL Rugby","Association_sportive_de_Villeurbanne_et_de_l%27%C3%89veil_lyonnais_rugby"
+NA,"RC Nîmes; Rugby club nîmois; Nîmes; RC Nîmes (Rassemblement Elite Gard); RC Nîmois","Rugby_club_n%C3%AEmois"
+NA,"Stade montois; Stade Montois; Mont-de-Marsan; Stade montois rugby","Stade_montois_rugby"
+NA,"RC Carqueiranne-Hyères; RCCH; RC Hyères; RC Hyères-Carqueiranne; RC Hyères-C-C; Carqueiranne-Hyères; RC Carqueiranne Hyères; RC Hyères Carq. Crau; RCHCC; RC Hyères Carqueiranne; Hyères; RC Carqueiranne; RRC Hyères-Carq.-La Crau; RC Hyères Carq. La Crau; RC Hyères Carqueiranne La Crau; Hyères-Carqueiranne; RC Hyères CC","Rugby_Club_Hy%C3%A8res_Carqueiranne_La_Crau"
+NA,"Portugal","%C3%89quipe_du_Portugal_de_rugby_%C3%A0_XV"
+NA,"Glasgow Warriors; Glasgow; Glasgow Rugby; Glasgow Caledonians; Glasgow Caledonian","Glasgow_Warriors"
+NA,"Toyota Verblitz","Toyota_Verblitz"
+NA,"Écosse -20","%C3%89quipe_d%27%C3%89cosse_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Écosse","%C3%89quipe_d%27%C3%89cosse_de_rugby_%C3%A0_XV"
+NA,"SO Chambéry; SOC Chambéry","Stade_olympique_de_Chamb%C3%A9ry_rugby"
+NA,"Géorgie","%C3%89quipe_de_G%C3%A9orgie_de_rugby_%C3%A0_XV"
+NA,"Barbarians","Barbarians"
 NA,"Neath RFC; Neath","Neath_Rugby_Football_Club"
 NA,"Neath-Swansea Ospreys; Ospreys","Ospreys"
-NA,"RC Narbonne; Narbonne; Racing Club de Narbonne","Racing_Club_narbonnais"
-NA,"London Welsh; London Welsh RFC","London_Welsh_Rugby_Football_Club"
-NA,"CO Le Creusot; CO Creusot","Club_olympique_Creusot_Bourgogne"
+NA,"RC Narbonne; Narbonne; Racing Club de Narbonne; RC Narbonnne; RC Narbonne rés.; R.C. Narbonne","Racing_Club_narbonnais"
+NA,"Suva Highlanders",NA
+NA,"Fiji Warriors; Fidji Warriors","Fiji_Warriors"
+NA,"London Welsh; London Welsh RFC; Londres Welsh","London_Welsh_Rugby_Football_Club"
+NA,"AS Mâcon; AS Macon; A.S. Mâcon","Association_sportive_m%C3%A2connaise"
+NA,"CO Le Creusot; CO Creusot; C.O. Le Creusot","Club_olympique_Creusot_Bourgogne"
+NA,"Fidji","%C3%89quipe_des_Fidji_de_rugby_%C3%A0_XV"
+NA,"Pacific Islanders","%C3%89quipe_des_Pacific_Islanders_de_rugby_%C3%A0_XV"
 NA,"Pontypridd RFC; Pontypridd","Pontypridd_Rugby_Football_Club"
-NA,"Bridgend RFC; Bridgend","Bridgend_Rugby_Football_Club"
-NA,"Munster Rugby; Munster","Munster_Rugby"
-NA,"Édimbourg Rugby; Edinburgh Rugby; Édimbourg; Edinburgh","%C3%89dimbourg_Rugby"
+NA,"Bridgend RFC; Bridgend; Bridgend Ravens","Bridgend_Rugby_Football_Club"
+NA,"Western Province; Western Province -21 ans; WP Academy","Western_Province_(rugby_%C3%A0_XV)"
+NA,"Stormers; Western Stormers; Western Province / Stormers","Stormers"
+NA,"Munster Rugby; Munster; Munster A","Munster_Rugby"
+NA,"Falcons; Valke","Falcons_(rugby_%C3%A0_XV)"
+NA,"Irlande","%C3%89quipe_d%27Irlande_de_rugby_%C3%A0_XV"
+NA,"Hawick RFC","Hawick_Rugby_Football_Club"
+NA,"Border Reivers","Border_Reivers_(rugby_%C3%A0_XV)"
+NA,"Worcester Warriors; Worcester Rugby; Worcester","Worcester_Warriors"
+NA,"Édimbourg Rugby; Edinburgh Rugby; Édimbourg; Edinburgh; Edinburgh Reivers; Édimbourg Gunners","%C3%89dimbourg_Rugby"
 NA,"Ebbw Vale; Ebbw Vale RFC","Ebbw_Vale_Rugby_Football_Club"
+NA,"Tonga","%C3%89quipe_des_Tonga_de_rugby_%C3%A0_XV"
+NA,"Heidelberg",NA
+NA,"Palmerston North High School Old Boys' RFC",NA
+NA,"Ciorogarla RC",NA
+NA,"CSU Arad","CSU_Aurel_Vlaicu_Arad"
+NA,"CSU AV Arad",NA
 NA,"RC Steaua Bucarest; Steaua Bucarest","Rugby_club_Steaua_Bucarest"
-NA,"CSM Baia Mare; Remin Baia Mare","CSM_Baia_Mare"
+NA,"CSM Baia Mare; Remin Baia Mare; Baia Mare","CSM_Baia_Mare"
+NA,"Roumanie","%C3%89quipe_de_Roumanie_de_rugby_%C3%A0_XV"
+NA,"SC Graulhet; SC Graulhetois","Sporting_Club_graulhetois"
+NA,"Exmouth RFC",NA
+NA,"Horsham RUFC",NA
+NA,"Barns Green",NA
+NA,"Worthing RFC","Worthing_RFC"
 NA,"Rosslyn Park; Rosslyn Park FC","Rosslyn_Park_Football_Club"
 NA,"Angleterre -20; Angleterre -20 ans","%C3%89quipe_d%27Angleterre_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
-NA,"Yamaha Júbilo; Yamaha Jubilo","Shizuoka_Blue_Revs"
+NA,"Yamaha Júbilo; Yamaha Jubilo; Yamaha Motors; Shizuoka Blue Revs","Shizuoka_Blue_Revs"
+NA,"Mountain Ash RFC",NA
 NA,"Newport RFC; Newport","Newport_Rugby_Football_Club"
-NA,"Stade cadurcien; Cahors rugby","Cahors_Rugby"
-NA,"Birmingham Solihull; Pertemps Bees","Birmingham_and_Solihull_Rugby_Football_Club"
+NA,"Pill Harriers RFC","Pill_Harriers_RFC"
+NA,"Farnham RUFC",NA
+NA,"Stade cadurcien; Cahors rugby; Cahors Rugby; Cahors","Cahors_Rugby"
+NA,"Birmingham Solihull; Pertemps Bees; Birmingham RFC; Birmingham & Solihull RFC; Birmingham and Solihull RFC","Birmingham_and_Solihull_Rugby_Football_Club"
+NA,"Preston Grasshoppers","Preston_Grasshoppers_Rugby_Football_Club"
 NA,"Poverty Bay Rugby; Poverty Bay","Poverty_Bay_Rugby_Football_Union"
-NA,"Honda Heat; Honda Motor","Mie_Honda_Heat"
-NA,"CA Bordeaux Bègles; CA Bordeaux-Bègles; CA Bègles; CA Bègles Bordeaux; Bordeaux-Bègles; CA Bègles-Bordeaux","Club_athl%C3%A9tique_Bordeaux_B%C3%A8gles_Gironde"
-NA,"Orrell RUFC; Orrell","Orrell_Rugby_Union_Football_Club"
-NA,"Rugby Rome; Roma Olimpic; Rome","Rugby_Roma_Olimpic_Club_1930"
-NA,"Amatori Rugby Milan; Amatori Milan; Milan Rugby","Amatori_Rugby_Milan"
-NA,"Marseille Vitrolles; Stade phocéen; Marseille Provence XV","Stade_phoc%C3%A9en_Marseille_Vitrolles"
-NA,"Gloucester; Gloucester Rugby; Gloucester RFC","Gloucester_Rugby"
+NA,"Silverdale",NA
+NA,"Sabah Rugby",NA
+NA,"Avenir de Bizanos; Avenir Bizanos","Avenir_de_Bizanos"
+NA,"Honda Heat; Honda Motor; Mie Honda Heat","Mie_Honda_Heat"
+NA,"East Coast","East_Coast_Rugby_Football_Union"
+NA,"London Irish","London_Irish"
+NA,"CA Bordeaux Bègles; CA Bordeaux-Bègles; CA Bègles; CA Bègles Bordeaux; Bordeaux-Bègles; CA Bègles-Bordeaux; CABBG; Bègles-Bordeaux; CA Béglais; CA Bégles Bordeaux","Club_athl%C3%A9tique_Bordeaux_B%C3%A8gles_Gironde"
+NA,"JS Riscle","Jeunesse_sportive_riscloise"
+NA,"France -21",NA
+NA,"Lancashire",NA
+NA,"Tyldesley",NA
+NA,"Fylde",NA
+NA,"Orrell RUFC; Orrell; Orrell RFC","Orrell_Rugby_Union_Football_Club"
+NA,"Rugby Rome; Roma Olimpic; Rome; Rugby Roma","Rugby_Roma_Olimpic_Club_1930"
+NA,"CUS Milano Rugby",NA
+NA,"Amatori Rugby Milan; Amatori Milan; Milan Rugby; Milan; Amatori & Calvisano Rugby; Ambrosiana Milan; AC Milan Rugby; Amatori Milano","Amatori_Rugby_Milan"
+NA,"Marseille Vitrolles; Stade phocéen; Marseille Provence XV; Marseille Vitrolles rugby; Marseille-Vitrolles rugby; Marseille Provence; Marseille","Stade_phoc%C3%A9en_Marseille_Vitrolles"
+NA,"Stade piscénois; Stade piscenois","P%C3%A9zenas"
+NA,"Secom",NA
+NA,"Edinburgh Wanderers",NA
 NA,"L'Aquila Rugby; L'Aquila","L%27Aquila_Rugby"
 NA,"Rugby Calvisano; Ghial Calvisano; Calvisano","Rugby_Calvisano"
 NA,"Aironi Rugby; Aironi","Aironi_Rugby"
-NA,"Zebre; Zebre Rugby; Zèbre; Zebre RC","Zebre_Parma"
-NA,"San Isidro Club; San Isidro","San_Isidro_Club"
-NA,"Randwick; Randwick RUFC","Randwick_District_Rugby_Union_Football_Club"
+NA,"Zebre; Zebre Rugby; Zèbre; Zebre RC; Zebre Parma; Zebre Parme","Zebre_Parma"
+NA,"Manly RUFC; Manly; Manly RFC; Manly Marlins","Manly_Rugby_Football_Club"
+NA,"US Cognac","Union_sportive_cogna%C3%A7aise"
+NA,"San Isidro Club; San Isidro; S.I.C.","San_Isidro_Club"
+NA,"Bay of Plenty; Bay of Plenty RU","Bay_of_Plenty_Rugby_Union"
+NA,"Randwick; Randwick RUFC; Randwick DRUFC; Randwick District RUFC","Randwick_District_Rugby_Union_Football_Club"
 NA,"Club La Tablada; La Tablada RC","Club_La_Tablada"
-NA,"Rovigo; Rugby Rovigo","Rugby_Rovigo"
-NA,"Rugby Viadana; Viadana; Arix Viadana","Rugby_Viadana"
-NA,"Australie; Australia","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XIII"
-NA,"Rugby I Medicei; I Medicei","Rugby_Club_I_Medicei"
+NA,"Rovigo; Rugby Rovigo; Rovigo Delta; Rugby Rovigo Delta","Rugby_Rovigo"
+NA,"Rugby Viadana; Viadana; Arix Viadana; Aryx Viadana; Casa Montepaschi Viadana","Rugby_Viadana"
+NA,"Glebe RU",NA
+NA,"Sydney RU",NA
+NA,"Rugby I Medicei; I Medicei; RC I Medicei","Rugby_Club_I_Medicei"
 NA,"Ulster; Ulster Rugby","Ulster_Rugby"
 NA,"Leeds Tykes; Headingley; Leeds; Leeds Carnegie; Yorkshire Carnegie","Leeds_Tykes"
-NA,"Stade bordelais; SBUC; Stade bordelais UC","Stade_bordelais_(rugby_%C3%A0_XV)"
-NA,"St Helens RLFC; St Helens RFC; St Helens","St_Helens_Rugby_League_Football_Club"
-NA,"Widnes; Widnes Vikings","Widnes_Vikings_Rugby_League_Football_Club"
-NA,"Rochdale; Rochdale Hornets","Rochdale_Hornets"
-NA,"Grande-Bretagne; Grande Bretagne","%C3%89quipe_de_Grande-Bretagne_de_rugby_%C3%A0_XIII"
-NA,"GRAN Parme Rugby; GRAN Rugby Parme; GRAN Parme; SKG Gran Parme; Gran Rugby Parme; Gran Parme Rugby; Gran Parme; Gran Rugby Parma; Rugby Parme","SKG_GRAN_Parma_Rugby"
+NA,"Stade bordelais; SBUC; Stade bordelais UC; Stade Bordeaux UC; Stade bordelais U.C.","Stade_bordelais_(rugby_%C3%A0_XV)"
+NA,"Union sportive testerine; US La Teste","Union_sportive_testerine"
+NA,"Pencoed RFC","Pencoed_RFC"
+NA,"Celtic Warriors","Celtic_Warriors"
+NA,"Avezzano Rugby",NA
+NA,"UR Capitolina; Capitolina; Unione Rugby Capitolina","Unione_Rugby_Capitolina"
+NA,"Académie FIR; Academia FIR","F%C3%A9d%C3%A9ration_italienne_de_rugby_%C3%A0_XV"
+NA,"GRAN Parme Rugby; GRAN Rugby Parme; GRAN Parme; SKG Gran Parme; Gran Rugby Parme; Gran Parme Rugby; Gran Parme; Gran Rugby Parma; Rugby Parme; Gran Parma Rugby; SKG GRAN Parma Rugby; SKG GRAN Parma; GRAN Parma; Gran Parma; GranDucato Parma; GranDucato Parme; Gran Ducato","SKG_GRAN_Parma_Rugby"
+NA,"Abertillery RFC","Abertillery_RFC"
+NA,"Canada","%C3%89quipe_du_Canada_de_rugby_%C3%A0_XV"
+NA,"RC Cannes Mandelieu; RC Cannes; RC Mandelieu","Rugby_club_Cannes_Mandelieu"
 NA,"RRC Nice; RCC Nice","Racing_Rugby_Club_de_Nice"
+NA,"RC Strasbourg; Rugby club Strasbourg; FC Kronenbourg","Rugby_Club_Strasbourg"
+NA,"US Garazi","Union_sportive_Garazi"
 NA,"Richmond; Richmond FC; Richmond RFC","Richmond_Football_Club"
-NA,"Hartpury College; Hartpury University RFC","Hartpury_University_Rugby_Football_Club"
-NA,"CASI; CA San Isidro","Club_Atl%C3%A9tico_San_Isidro"
+NA,"Hartpury College; Hartpury University RFC; Hartpury College RFC; Hartpury University; Hartpury RFC","Hartpury_University_Rugby_Football_Club"
+NA,"CASI; CA San Isidro; Club Atlético San Isidro","Club_Atl%C3%A9tico_San_Isidro"
+NA,"France -18",NA
+NA,"France -19",NA
+NA,"France -20; France -20 ans","%C3%89quipe_de_France_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"US Lectoure",NA
+NA,"SA Saint-Sever; S.A. Saint-Sever; US Saint-Sever","Sport_athl%C3%A9tique_saint-s%C3%A9verin_rugby"
+NA,"RC pays de Roquefort",NA
+NA,"Barbarians français","Barbarians_fran%C3%A7ais"
+NA,"Rugby club Ordon",NA
 NA,"Saint Médard rugby club; Saint-Médard RC; Saint Médard RC","Saint-M%C3%A9dard_Rugby_Club"
-NA,"France sept; France à sept","%C3%89quipe_de_France_masculine_de_rugby_%C3%A0_sept"
-NA,"Cambridge University; Cambridge URUFC; Cambridge; Cambridge University RFC","Cambridge_University_Rugby_Union_Football_Club"
+NA,"Stade niçois; Stade niçois rugby","Stade_ni%C3%A7ois_rugby"
+NA,"CO Berre XV","Berre-l%27%C3%89tang"
+NA,"Sporting Club Amateur Rivesaltais",NA
+NA,"AAS Sarcelles Rugby",NA
+NA,"Foyer Laïque du Haut-Vernet",NA
+NA,"Wesley College; Wesley College, Auckland","Wesley_College_(Auckland)"
+NA,"Cambridge University; Cambridge URUFC; Cambridge; Cambridge University RFC; Université de Cambridge RFC; Cambridge University RUFC; Cambridge RUFC","Cambridge_University_Rugby_Union_Football_Club"
 NA,"Watsonians RFC; Watsonian FC","Watsonian_Football_Club"
+NA,"Auckland University",NA
+NA,"Heriot's RC; Heriot's Rugby Club","Heriot%27s_Rugby_Club"
 NA,"London Scottish; London Scottish FC","London_Scottish_Football_Club"
-NA,"Oxford University; Oxford URFC","Oxford_University_Rugby_Football_Club"
-NA,"England Saxons; Angleterre B; Angleterre A","%C3%89quipe_d%27Angleterre_A_de_rugby_%C3%A0_XV"
-NA,"Connacht; Connacht Rugby","Connacht_Rugby"
+NA,"Edinburgh University; Université d'Édimbourg RFC","Edinburgh_University_Rugby_Football_Club"
+NA,"Oxford University; Oxford URFC; Oxford University RFC; Oxford URF","Oxford_University_Rugby_Football_Club"
+NA,"Sportul Studenţesc; Sportul Studențesc Bucarest; Știința București; Sportul Studențesc","CS_Sportul_Studen%C8%9Besc_Bucarest"
+NA,"Dinamo Bucarest","Dinamo_Bucarest_(rugby_%C3%A0_XV)"
+NA,"Sandbach",NA
+NA,"Altrincham Kersal",NA
+NA,"Angleterre -16",NA
+NA,"Angleterre -19",NA
+NA,"England Saxons; Angleterre B; Angleterre A; Angleterre XV","%C3%89quipe_d%27Angleterre_A_de_rugby_%C3%A0_XV"
+NA,"Connacht; Connacht Rugby; Connacht Eagles","Connacht_Rugby"
 NA,"Cardiff RFC; Cardiff","Cardiff_Rugby_Football_Club"
-NA,"Ricoh Black Rams; Black Rams","Black_Rams_Tokyo"
-NA,"Leeds; Leeds Rhinos","Leeds_Rhinos_Rugby_League_Club"
-NA,"Salford; Salford City Reds","Salford_Red_Devils_Rugby_League_Club"
-NA,"Pays de Galles; Galles; Galles XIII; Pays de Galles à XIII","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XIII"
+NA,"Ricoh Black Rams; Black Rams; Black Rams Tokyo","Black_Rams_Tokyo"
+NA,"Old Glory DC","Old_Glory_DC"
+NA,"Queen's University",NA
+NA,"North of Ireland FC",NA
+NA,"Devon",NA
+NA,"SW Counties",NA
+NA,"Pays de Galles -20","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Melrose RFC; Southern Knights","Melrose_Rugby_Football_Club"
+NA,"Ballymena RFC; Ballymena","Ballymena_Rugby_Football_Club"
 NA,"Cross Keys RFC; Cross Keys","Cross_Keys_Rugby_Football_Club"
+NA,"Old Belvedere; Old Belvedere RFC","Old_Belvedere_Rugby_Football_Club"
+NA,"Waterloo RFC","Waterloo_Rugby_Football_Club"
 NA,"Northland; North Auckland","Northland_Rugby_Union"
+NA,"France A; France XV","%C3%89quipe_de_France_A_de_rugby_%C3%A0_XV"
 NA,"Wairarapa Bush; Wairarapa RFU; Wairarapa","Wairarapa_Bush_Rugby_Football_Union"
 NA,"Mid Canterbury; Mid-Canterbury","Mid-Canterbury_Rugby_Football_Union"
-NA,"Massy; RC Massy; RC Massy Essonne","Rugby_Club_Massy_Essonne"
+NA,"Glamorgan Wanderers","Glamorgan_Wanderers_Rugby_Football_Club"
+NA,"Beauvallon",NA
+NA,"Valence sportif; Valence Sportif","Valence_sportif"
+NA,"Balmain Wolves",NA
+NA,"Shannon RFC; Shannon","Shannon_Rugby_Football_Club"
+NA,"Massy; RC Massy; RC Massy Essonne; Rugby club Massy Essonne; Massy Essonne","Rugby_Club_Massy_Essonne"
+NA,"AL Echirolles",NA
+NA,"Etoile sportive Lembeye",NA
 NA,"Aberavon RFC; Aberavon","Aberavon_Rugby_Football_Club"
-NA,"Rugby New York; RU New York; Rugby United New York","Rugby_New_York"
-NA,"Rugby Parme; Overmach Rugby Parme; Parme; Overmarch Parme","Rugby_Parma_Football_Club_1931"
-NA,"Lyons Plaisance; Rugby Lyons","Rugby_Lyons_Piacenza"
-NA,"Carcassonne; AS Carcassonne; A.S. Carcassonne","Association_sportive_Carcassonne_XIII"
-NA,"Union Treiziste Catalane; XIII Catalan","Saint-Est%C3%A8ve_XIII_catalan"
+NA,"Rugby New York; RU New York; Rugby United New York; New York","Rugby_New_York"
+NA,"Rugby Battipaglia",NA
+NA,"Rugby Sannio",NA
+NA,"Rugby Parme; Overmach Rugby Parme; Parme; Overmarch Parme; Overmach Parme; Crociati Parma; Crociati RFC","Rugby_Parma_Football_Club_1931"
+NA,"Petrarca Padoue; Petrarca; Petrarca Rugby Padoue; Petrarca Rugby","Petrarca_Rugby_Padoue"
+NA,"Lyons Plaisance; Rugby Lyons; Rugby Lyons Piacenza; Piacenza","Rugby_Lyons_Piacenza"
+NA,"Amatori Capoterra",NA
+NA,"Arechi Rugby",NA
+NA,"Amatori Parme",NA
+NA,"Deportiva Francesa; Asociación Deportiva Francesa","Asociaci%C3%B3n_Deportiva_Francesa"
+NA,"Académica de Coimbra","Associa%C3%A7%C3%A3o_Acad%C3%A9mica_de_Coimbra_(rugby_%C3%A0_XV)"
 NA,"Agronomia; AEIS Agronomia","Associa%C3%A7%C3%A3o_de_Estudantes_do_Instituto_Superior_Agronomia"
+NA,"Reggio; Rugby Reggio; Reggio Emilia; Valorugby Emilia","Rugby_Reggio_Associazione_Sportiva"
 NA,"UA Santboiana; UE Santboiana; UE Santboaia","Uni%C3%B3_Esportiva_Santboiana"
-NA,"Wigan Warriors (XIII); Wigan Warriors; Wigan","Wigan_Warriors_Rugby_League_Football_Club"
+NA,"Blaenavon RFC",NA
+NA,"Talywain RFC","Talywain_RFC"
+NA,"RAC Châteauroux",NA
+NA,"Rugby Casale",NA
+NA,"SC Pamiers","Sporting_Club_appam%C3%A9en"
+NA,"USC Pouyastruc",NA
+NA,"Hucclecote RFC",NA
+NA,"Westbury-on-Severn RFC",NA
+NA,"Nelson College","Nelson_College"
+NA,"Burnside",NA
+NA,"SC Tulle; Sporting club tulliste","Sporting_Club_Tulle_Corr%C3%A8ze"
+NA,"Saint-Céré sports; Saint-Céré Sports; Saint-Céré rugby","Saint-C%C3%A9r%C3%A9_Rugby"
 NA,"Sporting Club decazevillois; SC Decazeville","Sporting_Club_decazevillois"
-NA,"Saint-Nazaire; Sporting nazairien","Sporting_nazairien_rugby"
-NA,"Montluçon rugby; Montluçon","Montlu%C3%A7on_Rugby"
-NA,"Warrington Wolves; Warrington Wolves (XIII)","Warrington_Wolves_Rugby_League_Football_Club"
+NA,"Saint-Nazaire; Sporting nazairien; Saint Nazaire; Sporting nazairien rugby; Saint-Nazaire RLA; Saint Nazaire Rugby; Saint-Nazaire rugby; SC Saint-Nazaire","Sporting_nazairien_rugby"
+NA,"SA Vierzon",NA
+NA,"Montluçon rugby; Montluçon; Montluçon Rugby","Montlu%C3%A7on_Rugby"
+NA,"GS Figeac; CS Figeac; Groupe sportif figeacois","Groupe_sportif_figeacois"
+NA,"Stade langonnais","Stade_langonnais"
+NA,"Dublin Blues",NA
+NA,"Gateshead Thunder","Newcastle_Thunder"
+NA,"Hull FC","Hull_Football_Club"
+NA,"Newcastle Knights; Newcastle","Newcastle_Knights"
+NA,"Jaguares; Jaguars; Jaguares XV","Jaguares_(rugby_%C3%A0_XV)"
+NA,"UA Gujan-Mestras","Union_athl%C3%A9tique_Gujan-Mestras"
 NA,"Eastwood Rugby Club; Eastwood Rugby; Eastwood; Eastwood RC","Eastwood_Rugby_Club"
-NA,"Eastern Suburbs; Sydney Roosters; Eastern Suburbs (XIII)","Sydney_Roosters"
-NA,"Paris université club; Paris UC","Paris_universit%C3%A9_club_(rugby_%C3%A0_XV)"
-NA,"El Salvador Rugby; El Salvador","El_Salvador_Rugby"
-NA,"AC Bobigny; AC Bobigny 93","Athletic_Club_de_Bobigny_93_rugby"
-NA,"Saint-Jean-de-Luz OR; Saint-Jean-de-Luz","Saint-Jean-de-Luz_olympique_rugby"
-NA,"Union Cognac St-Jean-A.; Cognac St-Jean-d'Angély","Union_Cognac_Saint-Jean-d%27Ang%C3%A9ly"
-NA,"ES catalane; ES Argèles; ES argelésienne; ES Catalane","%C3%89toile_sportive_catalane"
-NA,"Balmain; Balmain Tigers","Balmain_Tigers"
-NA,"RC Chalon; RC Chalon-Sur-Saône","Racing_Club_chalonnais"
-NA,"RCM Timișoara; RCM Timişoara","SCM_Rugby_Timi%C8%99oara"
-NA,"ROC La Voulte Valence; ROC La Voulte-Valence","Rh%C3%B4ne_ovalie_club_La_Voulte_Valence"
-NA,"CS Vienne; RC Vienne","Club_sportif_de_Vienne_rugby"
-NA,"Shokki Shuttles; Toyota Industries Shuttles","Toyota_Industries_Shuttles"
-NA,"Glamorgan; Glamorgan County RFC; Glamorgan RFC","Glamorgan_County_Rugby_Football_Club"
-NA,"Namibië Koedoes; Namibia Welwitschias","Namibia_Welwitschias"
-NA,"Boland Cavaliers; Boland","Boland_Cavaliers"
+NA,"US Carcassonne; US carcassonne; U.S. Carcassonne; US Carcasonne","Union_sportive_carcassonnaise_XV"
+NA,"Pologne","%C3%89quipe_de_Pologne_de_rugby_%C3%A0_XV"
+NA,"RC Vichy; RC Vichy rugby","Racing_Club_Vichy_rugby"
+NA,"Paris université club; Paris UC; PUC; Paris Université Club","Paris_universit%C3%A9_club_(rugby_%C3%A0_XV)"
+NA,"Guy's Hospital","Guy%27s,_Kings_and_St._Thomas%27_Rugby_Football_Club"
+NA,"El Salvador Rugby; El Salvador; CR El Salvador","El_Salvador_Rugby"
+NA,"AC Bobigny; AC Bobigny 93; Bobigny; AC Bobigny rugby","Athletic_Club_de_Bobigny_93_rugby"
+NA,"Saint-Jean-de-Luz OR; Saint-Jean-de-Luz; Saint-Jean-de-Luz olympique; St-Jean-de-Luz olympique; Saint-Jean-de-Luz ol.; Saint-Jean de Luz ol.; SLJO; St-Jean-de-Luz ol.; St-Jean-de-Luz olymp.","Saint-Jean-de-Luz_olympique_rugby"
+NA,"Vuaki",NA
+NA,"Nadroga",NA
+NA,"US Romans Péage; US Romans-Péage","Union_sportive_romanaise_et_p%C3%A9ageoise"
+NA,"RAC angérien; RAC Angérien; RAC Saint-Jean-d'Angély","Rugby_Athletic_Club_ang%C3%A9rien"
+NA,"Union Cognac St-Jean-A.; Cognac St-Jean-d'Angély; Union Cognac S.J.Angély; Union Cognac St-J.-d'Angély; Cognac Saint-Jean-d'Angély; Union Cognac-SJA; Union Cognac S.Angély; Union Cognac-SJDA; Cognac St.J.Angély; Cognac St-Jean d'Angély; Union Cognac St-J.A.; Cognac-St-Jean-d'Angély; Union Cognac St-J.Angély","Union_Cognac_Saint-Jean-d%27Ang%C3%A9ly"
+NA,"SA Rochefort","Rochefort_Football_Club"
+NA,"RC Seyssins","Seyssins"
+NA,"ES catalane; ES Argèles; ES argelésienne; ES Catalane; Étoile sportive catalane; Grenouille sportive Argelésienne; ES Argelès","%C3%89toile_sportive_catalane"
+NA,"Le Chesnay",NA
+NA,"Penrith; Penrith Panthers","Penrith_Panthers"
+NA,"Sudamérica XV",NA
+NA,"RC Chalon; RC Chalon-Sur-Saône; RC Chalon-sur-Saône; RC Châlon; ASR Chalon; ASRC Chalon","Racing_Club_chalonnais"
+NA,"Stade dijonnais; Stade Dijonnais","Stade_dijonnais"
+NA,"Club Newman","Club_Newman"
+NA,"CS Clichy",NA
+NA,"Locomotiva Bucarest",NA
+NA,"RCM Timișoara; RCM Timişoara; RCM Timisoara; SCM Timișoara; Timișoara Saracens; Timisoara Saracens; SCM Rugby Timișoara","SCM_Rugby_Timi%C8%99oara"
+NA,"US Cublac Terrasson",NA
+NA,"ROC La Voulte Valence; ROC La Voulte-Valence; RCO La Voulte Valence","Rh%C3%B4ne_ovalie_club_La_Voulte_Valence"
+NA,"CS Vienne; RC Vienne; CS Vienne rugby; C.S. Vienne; A.S.C. Vienne","Club_sportif_de_Vienne_rugby"
+NA,"Rugby Livourne 1931",NA
+NA,"Gabardan AS",NA
+NA,"ER Pic Saint-Loup","Saint-Cl%C3%A9ment-de-Rivi%C3%A8re"
+NA,"Afrique du Sud -20","%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Shokki Shuttles; Toyota Industries Shuttles; Toyota Shokki; Toyota Shokki Shuttles; Toyota Industries Shuttles Aichi","Toyota_Industries_Shuttles"
+NA,"Holt RFC",NA
+NA,"Glamorgan; Glamorgan County RFC; Glamorgan RFC; Glamorgan County","Glamorgan_County_Rugby_Football_Club"
+NA,"Selvazzano Rugby",NA
+NA,"Express de Sacramento","Express_de_Sacramento"
+NA,"Rugby Vicence; Rangers Rugby Vicenza","Rangers_Rugby_Vicenza"
+NA,"Saluzzo Roosters","Saluzzo_Roosters"
+NA,"Namibië Koedoes; Namibia Welwitschias; Welwitschias; Namibie","Namibia_Welwitschias"
+NA,"Boland Cavaliers; Boland; Boland Kavaliers","Boland_Cavaliers"
 NA,"Border Bulldogs; Border","Border_Bulldogs"
-NA,"Eagles; SWD Eagles","Eagles_(rugby_%C3%A0_XV)"
-NA,"US Bressane; US bressane","Union_sportive_bressane_Pays_de_l%27Ain"
+NA,"Border Bullsdogs",NA
+NA,"Rotherham Titans; Rotherham RUFC","Rotherham_Rugby_Union_Football_Club"
+NA,"Sheffield Tigers",NA
+NA,"Namibie","%C3%89quipe_de_Namibie_de_rugby_%C3%A0_XV"
+NA,"Wanganui; Whanganui","Wanganui_Rugby_Football_Union"
+NA,"Eagles; SWD Eagles; South Western Districts; SW Districts","Eagles_(rugby_%C3%A0_XV)"
+NA,"US Bressane; US bressane; Bourg-en-Bresse; US Bresanne; US bressanne","Union_sportive_bressane_Pays_de_l%27Ain"
 NA,"Bective Rangers RFC; Bective Rangers","Bective_Rangers_Rugby_Football_Club"
-NA,"Western Sydney Rams; Greater Sydney Rams; Sydney Rams","Greater_Sydney_Rams"
+NA,"CSM Suceava",NA
+NA,"Contactoare Buzău",NA
+NA,"Sambenedettese",NA
+NA,"FC Lourdes; F.C. Lourdes; Lourdes; FC Lourdes XV","Football_club_lourdais_XV_Hautes-Pyr%C3%A9n%C3%A9es"
+NA,"Western Sydney Rams; Greater Sydney Rams; Sydney Rams; Western Sydney","Greater_Sydney_Rams"
+NA,"South Leicester RFC",NA
 NA,"Bedford Blues; Bedford RUFC","Bedford_Blues"
-NA,"Eastern Suburbs; Eastern Suburbs RFC","Eastern_Suburbs_Rugby_Union_Football_Club"
+NA,"Eastern Suburbs; Eastern Suburbs RFC; Eastern Suburbs RUFC","Eastern_Suburbs_Rugby_Union_Football_Club"
+NA,"Sydney Fleet; Sydney Stars","Sydney_Stars"
+NA,"CA Rosario; Atlético del Rosario; Rosario","Atl%C3%A9tico_del_Rosario"
+NA,"GPS Rugby","GPS_Rugby"
+NA,"King Country","King_Country_Rugby_Football_Union"
+NA,"Broughton; Broughton Rangers","Broughton_Rangers"
+NA,"Hindú Club","Hind%C3%BA_Club"
+NA,"Angleterre -18 ans",NA
+NA,"Angleterre -21 ans",NA
+NA,"Avenir aturin","Avenir_aturin_rugby"
+NA,"SC Mazamet; S.C. Mazamet","Sporting_Club_mazam%C3%A9tain"
+NA,"AS Tournefeuille","Association_sportive_Tournefeuille_rugby"
 NA,"West of Scotland RFC; West of Scotland FC; West of Scotland","West_of_Scotland_Football_Club"
-NA,"Blackheath RC; Blackheath FC","Blackheath_Football_Club"
-NA,"Afrique du Sud 7; Afrique du Sud à sept; Afrique du Sud à 7","%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_sept"
-NA,"Auckland Warriors XIII; Auckland Warriors","New_Zealand_Warriors"
-NA,"Pia XIII; SM Pia (XIII); US Issoire","XIII_Baroudeur_de_Pia"
-NA,"Cronulla Sharks; Cronulla Sharks (XIII); Cronulla","Cronulla-Sutherland_Sharks"
-NA,"Queensland Country; East Coast Aces","Queensland_Country"
-NA,"Stade domontois RC; Stade domontois","Stade_domontois_rugby_club"
-NA,"UCD RFC; University College Dublin; UCD","University_College_Dublin_Rugby_Football_Club"
-NA,"Perpignan XIII; XIII Catalan","XIII_Catalan"
-NA,"EV Malemort BO; Brive olympique","Entente_vigilante_Malemort_Brive_olympique"
-NA,"TOEC; Toulouse OEC","Toulouse_olympique_employ%C3%A9s_club_(rugby_%C3%A0_XV)"
-NA,"Canterbury Bulldogs; Bulldogs; Canterbury-Bankstown","Canterbury-Bankstown_Bulldogs"
-NA,"Nouvelle-Zélande; Nouvelle-Zélande XIII","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XIII"
+NA,"Blackheath RC; Blackheath FC; Blackheath; Blackheath Football Club","Blackheath_Football_Club"
+NA,"Coastal Stallions","Coastal_Stallions"
+NA,"US Bergerac","Union_sportive_Bergerac_rugby_vall%C3%A9e_de_la_Dordogne"
+NA,"Bourges XV","Bourges"
+NA,"sélection olympique",NA
+NA,"Gala RFC","Gala_Rugby_Football_Club"
+NA,"Kawaishi Seawaves",NA
+NA,"Legion de San Diego; San Diego Legion","Legion_de_San_Diego"
+NA,"Harlequins de Pretoria",NA
+NA,"CSM Genneviliers; Gennevilliers; CSM Gennevilliers","Club_sportif_multisport_gennevillois_rugby"
+NA,"La Voulte sportif; La Voulte Sportif","La_Voulte_sportif"
+NA,"Lautoka",NA
+NA,"Broncos de Santa Clara","Broncos_de_Santa_Clara"
+NA,"États-Unis","%C3%89quipe_des_%C3%89tats-Unis_de_rugby_%C3%A0_XV"
+NA,"Auckland Marist; Marist Brothers Old Boys; Marist RFC","Marist_Brothers_Old_Boys_Rugby_Football_Club"
+NA,"Old Boys University",NA
+NA,"Kubota Spears","Kubota_Spears_Funabashi_Tokyo-Bay"
+NA,"St Mary's Hospital",NA
+NA,"Tondu RFC",NA
+NA,"Canberra Vikings","Canberra_Vikings"
+NA,"CASG Paris; CASG; C.A.S.G. Paris; C.A.S.G.","Club_athl%C3%A9tique_des_sports_g%C3%A9n%C3%A9raux_(rugby_%C3%A0_XV)"
+NA,"France olympique",NA
+NA,"Lansdowne RFC; Lansdowne FC; Lansdowne Football Club; Lansdowne","Lansdowne_Football_Club"
+NA,"UC Cork; University College Cork RFC; University College Cork","University_College_Cork_Rugby_Football_Club"
+NA,"Gordon RFC","Gordon_Rugby_Football_Club"
+NA,"Wakefield RFC; Wakefield","Wakefield_Rugby_Football_Club"
+NA,"Écosse -19",NA
+NA,"CRC Madrid; CRC Pozuelo","CRC_Pozuelo"
+NA,"Stade domontois RC; Stade domontois; Domont RC; Stade Domontois","Stade_domontois_rugby_club"
+NA,"Ciencias RC; Cajasol Ciencias; Real Ciencias RC; Real Ciencias; Real Ciencias Rugby Club","Real_Ciencias_Rugby_Club"
+NA,"RCA Cergy-Pontoise; RC Pontoise; RC Cergy-Pontoise","Rugby_Club_de_l%27agglom%C3%A9ration_de_Cergy-Pontoise"
+NA,"Espagne","%C3%89quipe_d%27Espagne_de_rugby_%C3%A0_XV"
+NA,"Ampthill RUFC; Ampthill; Ampthill Rugby","Ampthill_Rugby_Union_Football_Club"
+NA,"Toronto Welsh","Toronto_Welsh_Rugby_Football_Club"
+NA,"Balmy Beach",NA
+NA,"Rugby Créteil - Choisy","Choisy-le-Roi"
+NA,"Cosmopolitan Club",NA
+NA,"Dundee HSFP; Dundee","Dundee_HSFP"
+NA,"Natacion y Gimnasia; Natación y Gimnasia","Club_Natacion_y_Gimnasia"
+NA,"Banco Nacion",NA
+NA,"Tullow RFC",NA
+NA,"UCD RFC; University College Dublin; UCD; UC Dublin; University College Dublin RFC","University_College_Dublin_Rugby_Football_Club"
+NA,"EV Malemort BO; Brive olympique; Entente Malemort Brive; EV Malemort Brive; EVMBO","Entente_vigilante_Malemort_Brive_olympique"
+NA,"Cefneithin RFC",NA
+NA,"Grange Stars RFC",NA
+NA,"TOEC; Toulouse OEC; T.O.E.C.; FCTT; Toulouse O.E.C.","Toulouse_olympique_employ%C3%A9s_club_(rugby_%C3%A0_XV)"
+NA,"Stade beaumontois","Stade_beaumontois_Lomagne_rugby"
+NA,"Morriston RFC",NA
+NA,"Thames Valley","Thames_Valley_Rugby_Football_Union"
+NA,"Entente Canet-Sainte-Marie",NA
+NA,"La Salanque Côte-Radieuse",NA
+NA,"RC Lapalisse",NA
+NA,"Canterbury Bulldogs; Bulldogs; Canterbury-Bankstown; Canterbury","Canterbury-Bankstown_Bulldogs"
+NA,"Leonessa Rugby","Leonessa_Rugby"
+NA,"UR Prato Sesto",NA
 NA,"West Harbour; West Harbour RFC","West_Harbour_Rugby_Football_Club"
+NA,"USO Nevers; USON Nevers; US Nevers; Nevers Rugby; Nevers rugby; USON Nevers Rugby","USON_Nevers_Rugby"
+NA,"ES Viry Chatillon",NA
+NA,"Sénégal","%C3%89quipe_du_S%C3%A9n%C3%A9gal_de_rugby_%C3%A0_XV"
+NA,"FCS Rumilly","Football_club_sportif_Rumilly"
+NA,"Côte d'Ivoire","%C3%89quipe_de_C%C3%B4te_d%27Ivoire_de_rugby_%C3%A0_XV"
+NA,"Fylde RC",NA
+NA,"Blackpool",NA
+NA,"Autres Nationalités; Autres nationalités","Autres_Nationalit%C3%A9s"
 NA,"Blackrock College; Blackrock College RFC","Blackrock_College_Rugby_Football_Club"
 NA,"Banco Nación; Banco Nacion","Club_Atl%C3%A9tico_Banco_de_la_Naci%C3%B3n_Argentina"
-NA,"OMBAC RFC; Old Mission Beach AC","Old_Mission_Beach_Athletic_Club_Rugby_Football_Club"
+NA,"Wolf Pack du Nevada","Wolf_Pack_du_Nevada"
+NA,"OMBAC RFC; Old Mission Beach AC; Old Mission Bay AC","Old_Mission_Beach_Athletic_Club_Rugby_Football_Club"
+NA,"NTT Shining Arcs; Urayasu D-Rocks; NTT Communications (Japon); Tokyo-Bay Urayasu","Urayasu_D-Rocks"
+NA,"Austin Elite; Gilgronis d'Austin; Elite d'Austin; Austin Gilgronis","Gilgronis_d%27Austin"
+NA,"Kyuden Voltex","Kyuden_Voltex"
+NA,"Loughborough Students RUFC; Loughborough Students","Loughborough_Students_RUFC"
+NA,"RC Vannes; Rugby club vannetais","Rugby_club_vannetais"
+NA,"Giltinis de Los Angeles; LA Giltinis; Los Angeles Giltinis","Giltinis_de_Los_Angeles"
+NA,"Solliès-Pont",NA
+NA,"RC La Valette; RC valettois revestois; RC Valettois Revestois; RC Valette Revest; XV du Coudon","XV_du_Coudon"
+NA,"Rugby Livourne",NA
 NA,"Cardinal de Stanford; Indians de Stanford; Indian de Stanford","Cardinal_de_Stanford"
-NA,"Venise Mestre Rugby; Venezia Mestre; Venise Mestre","Venise_Mestre_Rugby"
-NA,"RC Rouen; Stade rouennais","Rouen_Normandie_Rugby"
-NA,"Fiamme Oro Rugby; Fiamme Oro Roma","Fiamme_Oro_Rugby"
-NA,"South Sydney; South Sydney Rabbitohs","South_Sydney_Rabbitohs"
-NA,"Manly Sea Eagles; Manly-Warringah Sea Eagles","Manly-Warringah_Sea_Eagles"
+NA,"Stade français","Stade_fran%C3%A7ais"
+NA,"Lombez Samatan club; CS Lombez-Samatan; Lombez Samatan; Lombez-Samatan club; Lombez Samatan Club","Lombez_Samatan_club"
+NA,"SC Rieumes; Sporting club rieumois","Rieumes"
+NA,"Venise Mestre Rugby; Venezia Mestre; Venise Mestre; Venise","Venise_Mestre_Rugby"
+NA,"Vérone Rugby",NA
+NA,"Queen Victoria School","Queen_Victoria_School_(Fiji)"
+NA,"Fidji -19",NA
+NA,"Fidji -20","%C3%89quipe_des_Fidji_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Caledonia Reds","Caledonia_Reds"
+NA,"RC Rouen; Stade rouennais; Rouen Normandie; Rouen NR; Stade rouennais rugby <; RNR","Rouen_Normandie_Rugby"
+NA,"République tchèque; Tchéquie","%C3%89quipe_de_Tch%C3%A9quie_de_rugby_%C3%A0_XV"
+NA,"Fiamme Oro Rugby; Fiamme Oro Roma; Fiamme Oro","Fiamme_Oro_Rugby"
+NA,"Italie -20 ans; Italie -20","%C3%89quipe_d%27Italie_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Italie B",NA
+NA,"RCP Meyssac",NA
+NA,"Jockey Club; Jockey Club Córdoba","Jockey_Club_C%C3%B3rdoba"
+NA,"Manly Sea Eagles; Manly-Warringah Sea Eagles; Manly; Manly-Warringah","Manly-Warringah_Sea_Eagles"
+NA,"North Queensland; North Queensland Cowboys","North_Queensland_Cowboys"
+NA,"Los Angeles AC",NA
+NA,"Université Stanford","Universit%C3%A9_Stanford"
+NA,"St George","St_George_rugby"
+NA,"Bowen Brothers",NA
+NA,"Glebe Dirty Reds",NA
+NA,"North of Ireland",NA
+NA,"Liceo Naval","Liceo_Naval"
+NA,"Melbourne Storm; Melbourne; Storm","Melbourne_Storm"
+NA,"Blues","Blues"
+NA,"Tbilissi",NA
+NA,"Petrolul Bucarest",NA
+NA,"Locomotiva PTT",NA
+NA,"Bruff RFC",NA
 NA,"Rugby Nice CA; Nice","Rugby_Nice_C%C3%B4te_d%27Azur"
-NA,"Rugby Mogliano; San Marco RC; Mogliano SSD","Mogliano_Rugby_SSD"
-NA,"Pumas; Steval Pumas","Pumas_(rugby_%C3%A0_XV)"
+NA,"Viadana","Viadana"
+NA,"Club San Luis","Club_San_Luis_(rugby_%C3%A0_XV)"
+NA,"Angleterre -21",NA
+NA,"Kidwelly RFC",NA
+NA,"Loughborough College",NA
+NA,"FC Saint-Claude; F.C. Saint-Claude","Football_club_de_Saint-Claude"
+NA,"AC Boulogne-Billancourt; ACBB rugby","Athletic_Club_de_Boulogne-Billancourt_(rugby_%C3%A0_XV)"
+NA,"West Coast","West_Coast_Rugby_Football_Union"
+NA,"Estudiantes de Paraná","Estudiantes_de_Paran%C3%A1"
+NA,"Horowhenua-Kapiti; Horowhenua","Horowhenua-Kapiti_Rugby_Football_Union"
+NA,"Rugby Mogliano; San Marco RC; Mogliano SSD; San Marco Rugby; Mogliano; Mogliano Rugby; Mogliano Rugby SSD; Mogliano Veneto Rugby; Mogliano Veneto","Mogliano_Rugby_SSD"
+NA,"RC Aubenas; RC Aubenas Vals","Rugby_Club_Aubenas_Vals"
+NA,"AS Bédarrides; AS Bédarrides-Châteauneuf; AS Bédarrides Châteauneuf; AS Bédarrides Chât.; A.S. Bédarrides","Avenir_sportif_de_B%C3%A9darrides_Ch%C3%A2teauneuf-du-Pape"
+NA,"Avenir valencien; Valence-d'Agen; Valence d'Agen","Avenir_valencien"
+NA,"Central Vikings; Central Vinkings","Central_Vikings_Rugby_Union"
+NA,"Japon","%C3%89quipe_du_Japon_de_rugby_%C3%A0_XV"
+NA,"Pumas; Steval Pumas; Mpumalanga Puma","Pumas_(rugby_%C3%A0_XV)"
+NA,"US Dole",NA
+NA,"US Thuir; Thuir; U.S. Thuir","Union_sportive_thuirinoise"
+NA,"NTT Docomo Red Hurricanes; Red Hurricanes; Osaka Red Hurricanes; NTT Red Hurricanes","NTT-Docomo_Red_Hurricanes_Osaka"
+NA,"Rush de San Francisco","Rush_de_San_Francisco_(rugby_%C3%A0_XV)"
+NA,"Cornish Pirates; Penzance and Newlyn RFC","Cornish_Pirates"
 NA,"Parramatta; Parramatta Two Blues","Parramatta_Two_Blues"
-NA,"Edinburgh Academicals; Edinburgh Academical FC","Edinburgh_Academical_Football_Club"
+NA,"Preston Lodge",NA
+NA,"Edinburgh Academicals; Edinburgh Academical FC; Edinburgh Academical; Edinburgh Accies","Edinburgh_Academical_Football_Club"
+NA,"Calgary Mavericks","Calgary_Mavericks"
+NA,"CO Saint-Lary",NA
+NA,"US Tours; U.S. Tours","Union_sportive_Tours_rugby"
+NA,"Croatie","%C3%89quipe_de_Croatie_de_rugby_%C3%A0_XV"
+NA,"US Oujda","Union_sportive_de_Oujda_(rugby_%C3%A0_XV)"
+NA,"Maroc","%C3%89quipe_du_Maroc_de_rugby_%C3%A0_XV"
+NA,"Cadeneaux-Vitrolles",NA
+NA,"Wellington Secondary Schools",NA
+NA,"Wellington -19",NA
+NA,"Castelnaudary",NA
+NA,"SA Trélissac; SA Trelissac; SAT Trélissac","Sport_athl%C3%A9tique_tr%C3%A9lissacois"
+NA,"RC Saint-Sulpice",NA
+NA,"Te Awamutu College Rugby Club",NA
+NA,"Esher RFC; Esher","Esher_Rugby_Football_Club"
+NA,"Canterbury RFC",NA
+NA,"Garryowen FC; Garryowen; Garryowen Football Club","Garryowen_Football_Club"
+NA,"UA Saverdun","Union_athl%C3%A9tique_saverdunoise"
+NA,"Léopards africains","%C3%89quipe_des_L%C3%A9opards_africains_de_rugby_%C3%A0_XV"
+NA,"Galles -19",NA
+NA,"Santiago Lawn Tennis Club","Santiago_Lawn_Tennis_Club"
+NA,"Seattle Seawolves; Seawolves de Seattle","Seawolves_de_Seattle"
+NA,"Ourimbah",NA
+NA,"Berkleyvale HS",NA
 NA,"Northern Suburbs; Northern Suburbs RFC","Northern_Suburbs_Rugby_Football_Club"
-NA,"Dewsbury; Dewsbury Rams","Dewsbury_Rams_Rugby_League_Football_Club"
 NA,"Central Coast Rays; Sydney Rays; North Harbour Rays","Sydney_Rays"
+NA,"Kurita Water Gush","Kurita_Water_Gush_Akishima"
 NA,"CUBA; CU Buenos Aires","Club_Universitario_de_Buenos_Aires"
+NA,"Canterbury Colts",NA
+NA,"JS illibérienne",NA
+NA,"Rugby Noceto FC",NA
+NA,"London French",NA
+NA,"Rugby Colorno","Rugby_Colorno"
+NA,"Skewen RFC",NA
+NA,"Sevens Sisters RFC",NA
+NA,"Pays de Galles -21",NA
+NA,"Pucarà",NA
 NA,"SC Albi; S.C. Albi; Sporting club albigeois","Sporting_Club_albigeois"
+NA,"Melbourne Rising; Melbourne Rebels","Melbourne_Rising"
+NA,"Australie -19",NA
+NA,"Australie -21",NA
+NA,"Manurewa",NA
+NA,"Ardmore",NA
 NA,"Saint-Paul sports; Saint-Paul SR","Saint-Paul_sports_rugby"
+NA,"Harrogate RFC",NA
+NA,"AS Montfort",NA
+NA,"JA Isle","Jeunesse_athl%C3%A9tique_d%27Isle_(football)"
+NA,"RA Épinal-Golbey",NA
+NA,"SO Givors",NA
+NA,"RC Le Palais-sur-Vienne",NA
+NA,"Mendoza RC",NA
+NA,"Barking",NA
+NA,"US Vic-en-Bigorre",NA
+NA,"Belgrano Athletic; Belgrano Athletic Club; Belgrano AC","Belgrano_Athletic_Club"
+NA,"Capoterra",NA
+NA,"Valladolid RAC","Valladolid_Rugby_Asociaci%C3%B3n_Club"
+NA,"RC Concarneau",NA
+NA,"Golden Lions U21",NA
+NA,"Bramley",NA
 NA,"Golden Bears; Golden Bears de la Californie","Golden_Bears_de_la_Californie"
-NA,"SA Bordelais; SA Mérignac; AS Mérignac","Association_sportive_M%C3%A9rignac_rugby"
-NA,"RC France; Racing Club de France","Racing_Club_de_France"
-NA,"Sydney University FC; Sydney University","Sydney_University_Football_Club"
-NA,"Blagnac SCR; Blagnac Rugby; SC Blagnac; Blagnac rugby; Blagnac SC","Blagnac_Sporting_Club_rugby"
-NA,"Rugby San Donà; Amatori San Donà","Amatori_Rugby_San_Don%C3%A0"
-NA,"Lazio & Primavera Rugby; SS Lazio","Polisportiva_SS_Lazio_Rugby_1927"
+NA,"San Francisco OC",NA
+NA,"Olympic Club","Olympic_Club_Rugby"
+NA,"Boucau Stade; Boucau Tarnos stade; Boucau stade; Boucau; Boucau Tarnos; Boucau Tarnos Stade","Boucau_Tarnos_stade"
+NA,"Stade saint-gaudinois","Stade_saint-gaudinois"
+NA,"SA Bordelais; S.A. Bordeaux; SA Bordeaux; S.A. Bordelais","Sport_athl%C3%A9tique_bordelais_rugby"
+NA,"RC France; Racing Club de France; Racing CF","Racing_Club_de_France"
+NA,"SS Primevères",NA
+NA,"AS Bourse",NA
+NA,"Olympique","Olympique_(rugby_%C3%A0_XV,_1895)"
+NA,"Souths Rugby; Souths Magpies","Souths_Rugby"
+NA,"Wainuiomata Lions",NA
+NA,"Zimbabwe; Rhodésie; Zimbabwe Rugby Academy","%C3%89quipe_du_Zimbabwe_de_rugby_%C3%A0_XV"
+NA,"Afrique du Sud -19",NA
+NA,"Afrique du Sud -21",NA
+NA,"Dallas ARC",NA
+NA,"Breakers de San Diego; San Diego","Breakers_de_San_Diego"
+NA,"Mazères Cassagne Sports",NA
+NA,"Sainte-Croix-Volvestre","Sainte-Croix-Volvestre"
+NA,"Saint-Girons","Saint-Girons_(Ari%C3%A8ge)"
+NA,"RC sablais",NA
+NA,"Afrique du Sud A","%C3%89quipe_d%27Afrique_du_Sud_A_de_rugby_%C3%A0_XV"
+NA,"Moana Pasifika","Moana_Pasifika"
+NA,"Australie A","Australia_A_national_rugby_union_team"
+NA,"Oatley & Georges River College",NA
+NA,"Southern Districts; Southern District; Southern Disctricts; Southern Districts Rebels; Southern Districts RC","Southern_Districts_Rugby_Club"
+NA,"Raptors du Colorado; American Raptors; Raptors de Glendale; Glendale Raptors; Colorado Raptors","American_Raptors"
+NA,"Sydney University FC; Sydney University; Sydney University Club","Sydney_University_Football_Club"
+NA,"Blagnac SCR; Blagnac Rugby; SC Blagnac; Blagnac rugby; Blagnac SC; Blagnac sporting club rugby; Blagnac; Blagnac SRC","Blagnac_Sporting_Club_rugby"
+NA,"St. Joseph's Nudgee College",NA
+NA,"Rugby San Donà; Amatori San Donà; Rugby San Dona; Amatori Rugby San Donà; San Donà","Amatori_Rugby_San_Don%C3%A0"
+NA,"Givors","Givors"
+NA,"Stellenbosch; Maties","Universit%C3%A9_de_Stellenbosch"
+NA,"Saint-Savin; Saint-Savin sportif","Saint-Savin_(Is%C3%A8re)"
+NA,"Amatori Catane; Amatori Catania","Amatori_Catane"
+NA,"Rugby Bologne; Rugby Bologne 1928","Rugby_Bologne_1928"
+NA,"Lazio & Primavera Rugby; SS Lazio; Lazio Rugby; Lazio Rome; Lazio; SS Lazio Rugby; SS Lazio 1927","Polisportiva_SS_Lazio_Rugby_1927"
+NA,"Bangor RFC",NA
+NA,"US Morlaàs","Union_sportive_Morla%C3%A0s_rugby"
+NA,"RC Louey Marquisat",NA
+NA,"Pucará Club",NA
+NA,"False Bay RFC",NA
+NA,"RC Roustavi Kharebi; Rustavi Kharebi; RC Rustavi Kharebi","Rugby_Club_Rustavi_Kharebi"
+NA,"Arles-sur-Tech",NA
+NA,"France U",NA
+NA,"US Égletons",NA
+NA,"Valence Romans DR; Valence Romans; Valence-Romans DR","Valence_Romans_Dr%C3%B4me_Rugby"
+NA,"Irlande A","Ireland_Wolfhounds"
+NA,"Secom Rugguts","Secom_Rugguts"
+NA,"Liverpool FC; Liverpool St Helens FC; Liverpool St Helens; Liverpool RC","Liverpool_St_Helens_Football_Club"
+NA,"Drummoyne DRFC",NA
+NA,"Sunwolves","Sunwolves"
+NA,"Barcelona Universitari Club",NA
+NA,"Teachers Eastern Auckland",NA
+NA,"MARU",NA
+NA,"UBC Old Boy Ravens",NA
+NA,"Northampton Old Scouts",NA
+NA,"Kings Hospital School Dublin",NA
+NA,"Dublin University FC; Trinity College; Trinity College Dublin; Dublin University","Dublin_University_Football_Club"
 NA,"RO Grasse; Rugby Olympique de Grasse","Rugby_olympique_de_Grasse"
-NA,"AS Lavaur; ASV Lavaur","Amicale_sportive_vaur%C3%A9enne"
-NA,"Lille MR; Lille MRC; Lille","Lille_M%C3%A9tropole_rugby"
-NA,"CS Cluj-Napoca; U Cluj","CS_Universitatea_Cluj-Napoca_(rugby_%C3%A0_XV)"
-NA,"CA Saint-Étienne; CA Saint-Etienne","Club_athl%C3%A9tique_de_Saint-%C3%89tienne_Loire_sud_rugby"
-NA,"CS Lons; CS Lons-le-Saunier","Club_sportif_Lons_Jura"
-NA,"AS Roanne XV; N.A.C. Roanne","Association_sportive_roannaise_XV"
+NA,"Viry-Châtillon; Viry-Châtillon RC","Viry-Ch%C3%A2tillon"
+NA,"AS Lavaur; ASV Lavaur; Amicale sportive vauréenne; Association sportive vauréenne; Lavaur","Amicale_sportive_vaur%C3%A9enne"
+NA,"SC Leucate","Leucate"
+NA,"Hong Kong Scottish","Hong_Kong_Scottish"
+NA,"North Shore RFC",NA
+NA,"Inde","%C3%89quipe_d%27Inde_de_rugby_%C3%A0_XV"
+NA,"Bridgend Blue Bulls",NA
+NA,"Wasps Dubai",NA
+NA,"Locomotiva Cluj",NA
+NA,"Rapid Bucarest","Rapid_Bucarest"
+NA,"Stade bagnérais","Stade_bagn%C3%A9rais"
+NA,"Avenir moissagais","Moissac"
+NA,"Lille MR; Lille MRC; Lille; Lille Métropole rugby","Lille_M%C3%A9tropole_rugby"
+NA,"Belgique","%C3%89quipe_de_Belgique_de_rugby_%C3%A0_XV"
+NA,"Old Aldwinians",NA
+NA,"CS Cluj-Napoca; U Cluj; CS Universitatea Cluj-Napoca; CSU Cluj-Napoca; Știința Cluj","CS_Universitatea_Cluj-Napoca_(rugby_%C3%A0_XV)"
+NA,"AS Monfort",NA
+NA,"Wanderers FC; Wanderers; Wanderers F.C. Dublin; Wanderers RFC","Wanderers_Football_Club_(rugby_%C3%A0_XV)"
+NA,"Stade nantais; Stade Nantais UC; Stade nantais UC; Stade nantais rugby","Stade_nantais"
+NA,"FCS Rumilly; RCS Rumilly; RC Rumilly; RC Savoie Rumilly","Rugby_club_Savoie_Rumilly"
+NA,"Thurrock RFC",NA
+NA,"RC Arras; Rugby club d'Arras","Rugby_Club_Arras"
+NA,"CA Sarlat; Sarlat Rugby","Club_athl%C3%A9tique_sarladais_P%C3%A9rigord_noir"
+NA,"CA Saint-Étienne; CA Saint-Etienne; Saint-Etienne","Club_athl%C3%A9tique_de_Saint-%C3%89tienne_Loire_sud_rugby"
+NA,"Buenos Aires; URBA","Uni%C3%B3n_de_Rugby_de_Buenos_Aires"
+NA,"CO Cessenon",NA
+NA,"CS Lons; CS Lons-le-Saunier; CS Lons Jura; CS Lons-Le-Saunier","Club_sportif_Lons_Jura"
+NA,"Stade clermontois","Stade_clermontois_rugby"
+NA,"US Issoire","Union_sportive_issoirienne_rugby"
+NA,"Bay of Plenty","Baie_de_l%27Abondance_(r%C3%A9gion)"
+NA,"Ginestas",NA
+NA,"FC Oloron","Football_Club_oloronais"
+NA,"Entente Vallée de l'Escou",NA
+NA,"VVA Podmoskovye; VVA Podmoskovie; VA Podmoskovie; VVA Podmoskovie II; VVA Podvoskovie","VVA_Podmoskovye"
+NA,"Russie","%C3%89quipe_de_Russie_de_rugby_%C3%A0_XV"
+NA,"AS Bois-Colombes",NA
+NA,"AS Roanne XV; N.A.C. Roanne; Sporting Club roannais; A.S. Roanne; AS Roanne","Association_sportive_roannaise_XV"
+NA,"CA Ribérac; CA ribéracois","Club_athl%C3%A9tique_rib%C3%A9racois_rugby"
+NA,"France -19 ans",NA
+NA,"JS Rion",NA
+NA,"Rion Morcenx CR",NA
+NA,"Newbridge RFC",NA
+NA,"Yeomen",NA
 NA,"SC 1880 Frankfurt; SC Frankfurt","SC_1880_Frankfurt"
-NA,"Manchester RC; Manchester","Manchester_Rugby_Club"
-NA,"CS Beaune; C.S. Beaune","Club_sportif_beaunois"
-NA,"RC bassin d'Arcachon; RCB Arcachon","Rugby_Club_bassin_d%27Arcachon"
-NA,"Stade Rodez; Stade Rodez Aveyron","Stade_Rodez_Aveyron"
-NA,"US Marmande; UR Marmande Casteljaloux","Union_sportive_Marmande_rugby"
+NA,"RC Metz","Rugby_Club_Metz_Moselle"
+NA,"Kandy SC",NA
+NA,"Toronto Wolfpack; Wolfpack de Toronto","Wolfpack_de_Toronto"
+NA,"Newtown Rugby Union",NA
+NA,"Newtown Rugby; Newtown Jets","Newtown_Jets"
+NA,"New Zealand Marist XV",NA
+NA,"Curupayti",NA
+NA,"Manchester RC; Manchester; Manchester FC; Manchester Rugby Club","Manchester_Rugby_Club"
+NA,"Sedgley Park; Sedgley Park RUFC","Sedgley_Park_R.U.F.C."
+NA,"Norvège","%C3%89quipe_de_Norv%C3%A8ge_de_rugby_%C3%A0_XV"
+NA,"SC Francfort 1880",NA
+NA,"Albion Club",NA
+NA,"SCUF","Sporting_Club_universitaire_de_France"
+NA,"USFSA","Union_des_soci%C3%A9t%C3%A9s_fran%C3%A7aises_de_sports_athl%C3%A9tiques"
+NA,"US Coarraze Nay; Stade nayais; U.S. Coarraze Nay","Union_sportive_Coarraze_Nay_rugby"
+NA,"CDU Porto; CDUP","Centro_Desportivo_Universit%C3%A1rio_do_Porto"
+NA,"SL Benfica; Sport Lisboa e Benfica","Sport_Lisboa_e_Benfica_(rugby_%C3%A0_XV)"
+NA,"Lelo Saracens Tbilissi; Lelo Saracens","Lelo_Saracens_Tbilissi"
+NA,"AS Saint-Junien","Association_sportive_Saint-Junien_rugby"
+NA,"RC Guéret","Gu%C3%A9ret"
+NA,"GD Direito; Grupo Desportivo Direito","Grupo_Desportivo_Direito_de_Lisboa"
+NA,"Yokogawa Atlastars","Yokogawa_Musashino_Atlastars"
+NA,"Glasgow HSFP; Glasgow High School","Glasgow_High_School_Former_Pupils"
+NA,"?",NA
+NA,"Brantford Harlequins",NA
+NA,"Plymouth Albion; Plymouth Albion RFC","Plymouth_Albion_Rugby_Football_Club"
+NA,"Doncaster Knights; Doncaster","Doncaster_Knights"
+NA,"Amatori Rugby Capoterra",NA
+NA,"CO Casablanca","Club_Olympique_de_Casablanca_(Omnisports)"
+NA,"Vallée du Girou; Entente de la vallée du Girou XV","Entente_de_la_vall%C3%A9e_du_Girou_XV"
+NA,"Saint-Girons SCC; Saint-Girons SC","Saint-Girons_sporting_club_Couserans"
+NA,"Le Havre AC","Le_Havre_Athletic_Club_rugby"
+NA,"SCUF; Sporting Club Universitaire de France","Sporting_Club_universitaire_de_France_rugby"
+NA,"CS Beaune; C.S. Beaune; Club sportif beaunois; CS beaunois","Club_sportif_beaunois"
+NA,"Chimia Năvodari",NA
+NA,"Farul Constanța; RCJ Farul Constanta; RCJ Farul Constanța","RCJ_Farul_Constan%C8%9Ba"
+NA,"Universitatea Timișoara",NA
+NA,"RC Soisy Andilly Margency",NA
+NA,"RC bassin d'Arcachon; RCB Arcachon; RC Bassin d'Arcachon; Arcachon","Rugby_Club_bassin_d%27Arcachon"
+NA,"Stade Rodez; Stade Rodez Aveyron; Stade ruthénois","Stade_Rodez_Aveyron"
+NA,"US Marmande; UR Marmande Casteljaloux; Marmande","Union_sportive_Marmande_rugby"
+NA,"RC Sainte-Bazeille",NA
+NA,"Balma Olympique","Balma"
+NA,"JSI-Elne",NA
+NA,"RO Agde; RO agathois; Agde; Rugby olympique agathois","Rugby_olympique_agathois"
+NA,"Lieuran XV",NA
+NA,"US Annecy","Union_sportive_Annecy_rugby"
+NA,"Gimnasia y Tiro","Club_de_Gimnasia_y_Tiro"
+NA,"Boulou sportif XV","Le_Boulou"
+NA,"AS Perpignan","Association_sportive_perpignanaise"
+NA,"RC Locomotive Tbilissi; Lokomotiv Tbilissi; Locomotive Tbilissi; RC Locomotive","Rugby_Club_Locomotive_Tbilissi"
+NA,"CS Meaux",NA
+NA,"France -18 ans",NA
+NA,"Ottawa Irish",NA
+NA,"Moseley RFC; Moseley; Birmingham-Moseley; Birmingham Moseley RFC","Birmingham_Moseley_Rugby_Football_Club"
+NA,"RC Douala",NA
+NA,"UA Libourne; Union athlétique libournaise","Union_athl%C3%A9tique_libournaise"
+NA,"SA Montpon",NA
+NA,"Saint-Astier",NA
+NA,"US Fumel Libos; US Fumel; U.S. Fumel","Union_sportive_Fumel_Libos"
 NA,"Montchanin; Stade montchaninois","Stade_montchaninois_Bourgogne"
-NA,"Avignon; USAP 84","Entente_sportive_Avignon_Saint-Saturnin"
-NA,"US seynoise; US La Seyne; US La Seyne-sur-Mer","Union_sportive_seynoise"
+NA,"Avignon; USAP 84; US Avignon-Le Pontet 84; Avignon RC; ES Avignon Saint-Saturnin","Entente_sportive_Avignon_Saint-Saturnin"
+NA,"FC Aix-les-Bains","Football_Club_Aix-les-Bains_rugby"
+NA,"Union Sportive vicquoise XV",NA
+NA,"Kelso RFC; Wigan","Kelso_Rugby_Football_Club"
+NA,"ASUB Waterloo; ASUB","ASUB_Rugby_Waterloo"
+NA,"Rugby Club Soignies; RC Soignies","Rugby_club_Soignies"
+NA,"Belgique -18",NA
+NA,"Belgique -20","%C3%89quipe_de_Belgique_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Irvine RFC",NA
+NA,"Jockey Club Rosario; JC Rosario","Jockey_Club_Rosario"
+NA,"Alumni Athletic Club; Asociación Alumni; Alumni; Alumni AC","Alumni_Athletic_Club"
+NA,"Stade lavelanétien; Rugby du Pays d'Olmes","Stade_lavelan%C3%A9tien"
+NA,"Pueyrredón RC; Pueyrredón","Pueyrred%C3%B3n_Rugby_Club"
+NA,"False Bay",NA
+NA,"Roca RC",NA
+NA,"San Fernando",NA
+NA,"Conegliano",NA
+NA,"CUS Pavia",NA
+NA,"US seynoise; US La Seyne; US La Seyne-sur-Mer; US Seynoise; Union sportive seynoise","Union_sportive_seynoise"
 NA,"RC Châteaurenard; RC Chateaurenard","Rugby_Club_Ch%C3%A2teaurenard"
-NA,"CS Villefranche-sur-Saône; CS Villefranche","Cercle_sportif_Villefranche-sur-Sa%C3%B4ne_rugby"
-NA,"Peyrehorade SR; Peyrehorade sports","Peyrehorade_sports_rugby_Pays_d%27Orthe"
-NA,"US Tyrosse; Tyrosse","Union_sportive_Tyrosse_rugby_C%C3%B4te_sud"
-NA,"Alcobendas; Club Alcobendas rugby","Club_Alcobendas_rugby"
+NA,"CO Le Puy",NA
+NA,"Achères",NA
+NA,"France -17",NA
+NA,"CS Villefranche-sur-Saône; CS Villefranche; CS Villefranche Rugby","Cercle_sportif_Villefranche-sur-Sa%C3%B4ne_rugby"
+NA,"CA Pontarlier",NA
+NA,"Peyrehorade SR; Peyrehorade sports; Aspremontoise; Peyrehorade","Peyrehorade_sports_rugby_Pays_d%27Orthe"
+NA,"Stade poitevin; Stade poitevin rugby","Stade_poitevin_rugby"
+NA,"Chinnor RFC","Chinnor_R.F.C."
+NA,"Entente gourdonnaise; Gourdon XV; Gourdon XV Bouriane","Gourdon_XV_Bouriane"
+NA,"Algérie","%C3%89quipe_d%27Alg%C3%A9rie_de_rugby_%C3%A0_XV"
+NA,"US Tyrosse; Tyrosse; Tyrosse RCS","Union_sportive_Tyrosse_rugby_C%C3%B4te_sud"
+NA,"Caerphilly RFC; Caerphilly","Caerphilly_Rugby_Football_Club"
+NA,"Tokyo Gas","Tokyo_Gas"
+NA,"North Otago","North_Otago_Rugby_Football_Union"
+NA,"Rugby club sablais",NA
+NA,"Navy SC","Sri_Lanka_Navy_Sports_Club_(rugby_union)"
+NA,"South Canterbury","South_Canterbury_Rugby_Football_Union"
+NA,"Maesteg RFC","Maesteg_Rugby_Football_Club"
+NA,"Penarth RFC","Penarth_Rugby_Football_Club"
+NA,"Rennes EC; Rennes Étudiants Club","Rennes_%C3%89tudiants_Club_rugby"
+NA,"RCP Saint-Yrieix",NA
+NA,"Llanelli Wanderers RFC",NA
+NA,"Llangennech RFC",NA
+NA,"Tucumán Lawn Tennis","Tucum%C3%A1n_Lawn_Tennis_Club"
+NA,"US Rugby Benevento; US Benevento","U.S._Rugby_Benevento"
+NA,"Barcelona UC",NA
+NA,"Alcobendas; Club Alcobendas rugby; Club Alcobendas; Sanitas Alcobendas","Club_Alcobendas_rugby"
+NA,"AS bortoise; Amicale sportive bortoise; AS Bort-les-Orgues","Amicale_sportive_bortoise"
+NA,"Aviator Kiev",NA
+NA,"VVA Moscou",NA
+NA,"Madrid 2012",NA
+NA,"Barcelone UC",NA
 NA,"FC Barcelone; Barcelone","FC_Barcelone_(rugby_%C3%A0_XV)"
-NA,"University of Queensland RC; Université du Queensland RC","University_of_Queensland_Rugby_Club"
-NA,"US Saint Sulpice; US Saint-Sulpice","Union_sportive_saint-sulpicienne_rugby"
-NA,"Krasny Yar Krasnoïarsk; Krasny Yar Krasnojarsk","Krasny_Yar_Krasnojarsk"
-NA,"U.S. Quillan; US Quillan","Union_sportive_Quillan_Haute_vall%C3%A9e"
-NA,"U.S. Lyon-Villeurbanne; Lyon-Villeurbanne","Lyon-Villeurbanne_Rh%C3%B4ne_XIII"
-NA,"SA Mauléon; SAM Mauléon","Sport_athl%C3%A9tique_maul%C3%A9onais"
-NA,"Rugby Chartres; C' Chartres Rugby","C%27_Chartres_Rugby"
+NA,"Australie -19 ans",NA
+NA,"Australie -21 ans",NA
+NA,"Western Suburbs Magpies","Western_Suburbs_Magpies"
+NA,"Parramatta Eels; Parramatta","Parramatta_Eels"
+NA,"Connacht","Connacht"
+NA,"Kamaishi Seawaves","Kamaishi_Seawaves"
+NA,"St. George Dragons; St. George","St._George_Dragons"
+NA,"East Coast Aces","Wiki/East_Coast_Aces"
+NA,"US Mugron",NA
+NA,"SA Mérignac; AS Mérignac","Association_sportive_M%C3%A9rignac_rugby"
+NA,"SC Angoulême; Sporting Club d'Angoulême","Sporting_Club_d%27Angoul%C3%AAme"
+NA,"SC Vaugirard; Olympique; Sporting Club de Vaugirard","Olympique_(rugby_%C3%A0_XV,_1897)"
+NA,"Griffons","Griffons_(rugby_%C3%A0_XV)"
+NA,"Olympic Cuxac-d'Aude",NA
+NA,"US Métro","Union_sportive_m%C3%A9tropolitaine_des_transports_(rugby_%C3%A0_XV)"
+NA,"ES Gimont","%C3%89toile_sportive_gimontoise_rugby"
+NA,"île du Nord",NA
+NA,"Ormskirk RUFC",NA
+NA,"West Park RFC",NA
+NA,"University of Queensland RC; Université du Queensland RC; University of Queensland; University; Queensland University","University_of_Queensland_Rugby_Club"
+NA,"Écosse A","%C3%89quipe_d%27%C3%89cosse_A_de_rugby_%C3%A0_XV"
+NA,"Camborne RFC","Camborne_RFC"
+NA,"Ballynahinch RFC","Ballynahinch_Rugby_Football_Club"
+NA,"US Montmélian","Union_sportive_Montm%C3%A9lian_rugby"
+NA,"Blanzat-Châteaugay",NA
+NA,"South Queensland Crushers; South Queenslandt","South_Queensland_Crushers"
+NA,"US Argelès",NA
+NA,"AS Fleurance","Association_sportive_fleurantine"
+NA,"RC Auch","Rugby_club_Auch"
+NA,"RC Uzès",NA
+NA,"Uzès Rugby",NA
+NA,"Football Club Villefranchois; Football club villefranchois; FC Villefranche; FC Villefranche-de-Lauragais; FC Villefranchois; Villefranche-de-Lauragais","Football_club_villefranchois"
+NA,"US Saint Sulpice; US Saint-Sulpice; US Saint-Sulpice-sur-Lèze","Union_sportive_saint-sulpicienne_rugby"
+NA,"AS Layrac","Layrac_(Lot-et-Garonne)"
+NA,"Caussade","Caussade_(Tarn-et-Garonne)"
+NA,"Limoux",NA
+NA,"R.C. Carcassonne",NA
+NA,"U.S. Cheminot Carcassonne",NA
+NA,"RC Le Mans",NA
+NA,"Avenir castanéen; Avenir castanéen rugby; Castanet","Avenir_castan%C3%A9en_rugby"
+NA,"ES Arudy",NA
+NA,"Ienisseï Krasnoïarsk; Enisey-STM; Ienisseï-STM","Enisey-STM"
+NA,"RC Novokouznetsk; Metallurg Novokouznetsk; Metallourg Novokouznetsk","Novokouznetsk_Rugby"
+NA,"Krasny Yar Krasnoïarsk; Krasny Yar Krasnojarsk; Krasny Yar; Krasny Iar Krasnoïarsk; Krasny Iar","Krasny_Yar_Krasnojarsk"
+NA,"Kazakhstan","%C3%89quipe_du_Kazakhstan_de_rugby_%C3%A0_XV"
+NA,"Anglet ORC; Anglet olympique","Anglet_olympique_rugby_club"
+NA,"RC Suresnes","Rugby_Club_Suresnes_Hauts-de-Seine"
+NA,"FC Toulousain",NA
+NA,"U.S. Quillan; US Quillan; Quillan","Union_sportive_Quillan_Haute_vall%C3%A9e"
+NA,"Kaneka",NA
+NA,"Universitario Tucumán",NA
+NA,"Fleury Olympique","Fleury_(Aude)"
+NA,"Valence Sportif",NA
+NA,"Arrêt",NA
+NA,"AS Bayonne; AS Bayonnaise; A.S. Bayonne; A.S. Bayonnaise; AS Côte basque","Association_sportive_bayonnaise"
+NA,"SA Mauléon; SAM Mauléon; SA Mauléonais","Sport_athl%C3%A9tique_maul%C3%A9onais"
+NA,"US Caussade - Septfonds","Septfonds"
+NA,"RC Langeac",NA
+NA,"SC Brioude","Sporting_Club_brivadois"
+NA,"Aviron gruissanais","Gruissan"
+NA,"Harlequins Club",NA
+NA,"Olympique de Marseille (football)",NA
+NA,"US Nérac","N%C3%A9rac"
+NA,"Bathurst & Lismore",NA
+NA,"Oldham",NA
+NA,"Clifton RFC","Clifton_Rugby"
+NA,"Ravenscourt Park",NA
+NA,"UMS Pontault-Combault",NA
+NA,"Crumlin RFC",NA
+NA,"Army RU; Armée de terre britannique; Army","F%C3%A9d%C3%A9ration_de_l%27Arm%C3%A9e_de_terre_britannique_de_rugby_%C3%A0_XV"
+NA,"Samoa -20","%C3%89quipe_des_Samoa_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Rugby Chartres; C' Chartres Rugby; Entente chartraine","C%27_Chartres_Rugby"
+NA,"Alberton Rugby Club",NA
+NA,"Jersey Reds; Jersey RFC","Jersey_Reds"
+NA,"Cork Constitution FC; Cork Constitution RFC; Cork Constitution; Cork Constituion RFC","Cork_Constitution_Football_Club"
+NA,"Llandovery RFC; Llandovery","Llandovery_Rugby_Football_Club"
+NA,"JA Saumur",NA
+NA,"FC Toac Toec Rugby",NA
+NA,"Argentine -19",NA
+NA,"Argentine -20","%C3%89quipe_d%27Argentine_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
 NA,"Brisbane; Brisbane Broncos","Brisbane_Broncos"
-NA,"Oldham RFC; Oldham RLFC","Oldham_Roughyeds_Rugby_League_Football_Club"
+NA,"Bishop's Stortford RFC",NA
+NA,"Old Georgians",NA
+NA,"Durham City",NA
+NA,"The Owls",NA
+NA,"The Titans RFC",NA
+NA,"PS Tartas",NA
+NA,"SA Hagetmau","Sport_athl%C3%A9tique_hagetmautien"
+NA,"US Orthez; JS Orthez","Union_sportive_Orthez_rugby"
+NA,"Aramits","Aramits"
+NA,"Stade niortais","Stade_niortais"
+NA,"Stade hendayais; Stade Hendayais","Stade_hendayais_rugby"
+NA,"US Beaurepaire; Beaurepaire; Union sportive beaurepairoise","Union_sportive_beaurepairoise"
+NA,"RC Dijon",NA
+NA,"Saint-Marcellin Sport",NA
+NA,"US Metro","Union_sportive_m%C3%A9tropolitaine_des_transports"
+NA,"Union Barbezieux Jonzac",NA
+NA,"RC Puilboreau",NA
+NA,"False Bay College",NA
+NA,"Ruggers Tarvisium",NA
+NA,"Keebra Park",NA
+NA,"St. George Illawarra; St. George; St. George Illawarra Dragons; Saint-George Dragons","St._George_Illawarra_Dragons"
+NA,"RC Montauban","Montauban"
+NA,"ESC BAC Espira",NA
+NA,"SCA Rivesaltes",NA
+NA,"Clontarf FC; Clontarf; Clontarf RFC; Clontarf Football Club","Clontarf_Football_Club"
+NA,"A.S.R.V. Ascrum",NA
+NA,"Sociedad Sportiva",NA
+NA,"Richmond Rovers","Richmond_Rovers"
+NA,"UA Laloubère",NA
+NA,"US Cluny",NA
+NA,"Felinfoel RFC",NA
+NA,"Kilmarnock RFC",NA
+NA,"Suva",NA
+NA,"Fiji Barbarians","Fiji_Barbarians"
+NA,"Queen's University RFC",NA
+NA,"Wrexham RFC",NA
+NA,"New Brighton",NA
+NA,"Abergavenny RFC",NA
+NA,"Lancashire County",NA
+NA,"St. Peters RFC","St._Peters_RFC"
+NA,"Langholm RFC",NA
+NA,"Gowerton RFC",NA
+NA,"Devonport RFC",NA
+NA,"Royal Navy",NA
+NA,"A. St James RFC",NA
+NA,"RC Brăila",NA
+NA,"SC Nègrepelisse",NA
+NA,"RC Meaux",NA
+NA,"RD Congo; R.D.C.","%C3%89quipe_de_la_r%C3%A9publique_d%C3%A9mocratique_du_Congo_de_rugby_%C3%A0_XV"
+NA,"RC Bonneval",NA
+NA,"AS Apt",NA
+NA,"SU Cavaillon; Stade union cavaillonnais","Stade_union_cavaillonnais"
+NA,"RC Annemasse","Annemasse"
+NA,"Hottentots Holland HS",NA
+NA,"Diggers RFC",NA
+NA,"Somerset West RFC",NA
+NA,"Piacenza RC",NA
+NA,"Cross Keys",NA
+NA,"Bohemian RFC","Bohemian_Rugby_Football_Club"
+NA,"Grand Rapids Gazelles",NA
+NA,"Suisse","%C3%89quipe_de_Suisse_de_rugby_%C3%A0_XV"
+NA,"Liberton club",NA
+NA,"Boroughmuir RFC; Boroughmuir; Boroughmuir Bears","Boroughmuir_Rugby_Football_Club"
+NA,"Hastings Boys High School",NA
+NA,"Sandal RFC",NA
+NA,"Dungannon RFC","Dungannon_Rugby_Football_Club"
+NA,"Pontymister RFC",NA
+NA,"Fukuoka Sanix Blues; Fukuoka Sanix Bombs; Munakata Sanix Blues","Munakata_Sanix_Blues"
+NA,"Écosse -21",NA
+NA,"Sud Bassin AR",NA
+NA,"CS Grésivaudan Belledonne; CS Villard-Bonnot","Cercle_sportif_Gr%C3%A9sivaudan_Belledonne"
+NA,"US Perpignan; AS Perpignan; U.S. Perpignan","Union_sportive_perpignanaise"
+NA,"Olympique de Marseille","Olympique_de_Marseille_(rugby_%C3%A0_XV)"
+NA,"France universitaire",NA
+NA,"Vigo RC","Vigo_Rugby_Club"
+NA,"CSM Bucarest","CSM_Bucarest_(rugby_%C3%A0_XV)"
+NA,"Crociati Parme; Crociati RFC","Crociati_Rugby_Football_Club"
+NA,"Real Oviedo Rugby","Real_Oviedo_Rugby"
+NA,"Bucarest Wolves; Bucarest Rugby; Bucarest Wolfes","Romanian_Wolves"
+NA,"Glyncoch RFC",NA
+NA,"Galles -21",NA
+NA,"Pays de Galles A",NA
+NA,"CR La Vila","Club_de_Rugby_La_Vila"
+NA,"Madrid Gatos; Vacceos; Vacceos Cavaliers; Gatos de Madrid; Basque Korsarioak","Liga_Superib%C3%A9rica"
+NA,"Olympus XV",NA
+NA,"Tatami Rugby Club",NA
+NA,"Santa Monica",NA
+NA,"Chicago Lions","Lions_de_Chicago"
+NA,"Pays-Bas","%C3%89quipe_des_Pays-Bas_de_rugby_%C3%A0_XV"
+NA,"Stadoceste nîmois",NA
+NA,"SU Lorrain","Stade_lorrain_universit%C3%A9_club_Nancy"
+NA,"Ruabon RFC",NA
+NA,"RCU Marseille",NA
+NA,"RC Ottignies; Rugby Ottignies","Rugby_Ottignies_Club"
+NA,"US Mouguerre",NA
+NA,"Hernani CRE",NA
+NA,"Sale FC","Sale_FC_Rugby_Club"
+NA,"Southport RFC","Southport_RFC"
+NA,"Belmont Shore; Belmont Shore RFC; Belmont Shore RC","Belmont_Shore_Rugby_Club"
+NA,"Aix Université Club Rugby",NA
+NA,"US Berry",NA
+NA,"US Roquefort",NA
+NA,"I.T. Saitama",NA
+NA,"AS Villemur",NA
+NA,"CSM Clamart; Clamart Rugby 92","Clamart_Rugby_92"
+NA,"US Portet-sur-Garonne",NA
+NA,"US Habas",NA
+NA,"France juniors",NA
+NA,"France militaires",NA
+NA,"Torreilles Rugby",NA
+NA,"AS Olonzac","Olonzac"
+NA,"RC naborien",NA
+NA,"URC Dumbéa","Union_Rugby_Club_de_Dumb%C3%A9a"
+NA,"Olympique marcquois","Olympique_marcquois_rugby"
+NA,"University of Galway RFC",NA
+NA,"St. Mary's College RFC; St Mary's College RFC; St. Mary's College; St. Mary's","St._Mary%27s_College_Rugby_Football_Club"
+NA,"North Sydney; North Sydney Bears","North_Sydney_Bears"
+NA,"CA Castelsarrasin; Castelsarrasin","Cercle_athl%C3%A9tique_castelsarrasinois"
+NA,"Gan olympique","Gan_(Pyr%C3%A9n%C3%A9es-Atlantiques)"
+NA,"SA Auterive","Auterive_(Haute-Garonne)"
+NA,"RO Castelnaudary","Castelnaudary"
+NA,"AS Bram",NA
+NA,"RC Les Mureaux",NA
+NA,"Canberra Raiders; Canberra","Canberra_Raiders"
+NA,"TOEC TOAC FCT; TOEC; TOAC TOEC; FC TOAC TOEC; FCTT Rugby; FCTT rugby; FCTT","TOEC_TOAC_FCT_Rugby"
+NA,"Pôle espoirs d'Ussel","Ussel_(Corr%C3%A8ze)"
+NA,"Instonians RFC","Instonians_Rugby_Football_Club"
+NA,"Edmonton",NA
+NA,"Irlande -20; Irlande -20 ans","%C3%89quipe_d%27Irlande_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Avenir de Bizanos","Bizanos"
+NA,"Politehnica Iași",NA
+NA,"Meraloma Rugby","Meraloma_Rugby"
+NA,"Selkirk RFC","Selkirk_Rugby_Football_Club"
+NA,"WA Reds","WA_Reds"
+NA,"Stewart's Melville; Stewart's Melville RFC","Stewart%27s_Melville_Rugby_Football_Club"
+NA,"Merthyr RFC","Merthyr_RFC"
+NA,"Berwick RFC",NA
+NA,"ARC Saint-Yrieix",NA
+NA,"CR Los Tilos","Club_de_Rugby_Los_Tilos"
+NA,"La Plata RC","La_Plata_Rugby_Club"
+NA,"Chili","%C3%89quipe_du_Chili_de_rugby_%C3%A0_XV"
+NA,"CF Os Belenenses","Clube_de_Futebol_Os_Belenenses_(omnisports)"
+NA,"RSCA-Rugby; RSC Anderlecht","RSCA-Rugby"
+NA,"Levézou Ségala Aveyron XV",NA
+NA,"France universitaires",NA
+NA,"Châteauneuf Orange RC",NA
+NA,"Céret sportif; Céret Sportif; Céret","C%C3%A9ret_sportif_Vallespir"
+NA,"CS Ozon",NA
+NA,"CS Annonay","Annonay"
+NA,"RC Bretenoux-Biars-Vayrac",NA
+NA,"GAOB",NA
+NA,"RC Digne",NA
+NA,"James Bay AA",NA
+NA,"St. Davids",NA
+NA,"Grangetown",NA
+NA,"Cardiff Harlequins",NA
+NA,"Hibernian FC",NA
+NA,"Leigh RLFC; Leigh Centurions; Leigh; Leigh Leopards","Leigh_Leopards"
+NA,"Treherbert RFC",NA
+NA,"Aberdare RFC",NA
+NA,"Merthyr Tydfil RLFC",NA
+NA,"Rhigos RFC",NA
+NA,"Bourges",NA
+NA,"Bond University; Gold Coast Breakers; Bond University Rugby Club; Bond University RC","Bond_University_Rugby_Club"
+NA,"US Montayral",NA
+NA,"UBC Old Boys Ravens",NA
+NA,"Niagara Thunder","Niagara_Thunder_Rugby_Football_Club"
+NA,"Oakville Crusaders",NA
+NA,"Rugby Olympique Lunellois","Rugby_olympique_lunellois"
+NA,"UA Mimizan; U.S. Mimizan","Union_athl%C3%A9tique_mimizannaise"
+NA,"Stourbridge RFC","Stourbridge_R.F.C."
+NA,"US Cavaillon",NA
+NA,"SC Surgères",NA
+NA,"UMS Montélimar; US Montélimar","Union_montilienne_sportive_rugby"
+NA,"Bera Bera Rugby; Bera Bera","Bera_Bera_Rugby"
+NA,"Nelson Bays",NA
+NA,"Rabastens","Rabastens"
+NA,"Toulouse OEC; T.O.E.C.; TOEC","Toulouse_olympique_employ%C3%A9s_club"
+NA,"Gaillac","Gaillac"
+NA,"Mazda",NA
+NA,"Nuneaton RFC",NA
+NA,"High School Old Boys RFC",NA
+NA,"Boston Irish Wolfhounds; Irish Wolfhounds","Boston_Irish_Wolfhounds"
+NA,"Springfield",NA
+NA,"Columbus Hawks",NA
+NA,"Stade montluçonnais","Stade_montlu%C3%A7onnais"
+NA,"Meraloma RFC",NA
+NA,"Université de Sydney","Universit%C3%A9_de_Sydney"
+NA,"Beauvais RC",NA
+NA,"US Mourillon",NA
+NA,"Easts Tigers; Brisbane Easts; Easts Tigers Rugby Union","Easts_Tigers_Rugby_Union"
+NA,"Rugby Livorno",NA
+NA,"Bergamo",NA
+NA,"AS Asasp-Arros",NA
+NA,"Évreux A.C Rugby",NA
+NA,"Souths RFC, Brisbane",NA
+NA,"Grenade Sports",NA
+NA,"Université de Victoria","Universit%C3%A9_de_Victoria"
+NA,"Westoe club",NA
+NA,"NNK",NA
+NA,"RC Mauriac",NA
+NA,"RC Arpajon-Veinazès",NA
+NA,"France -16",NA
+NA,"US Thouars","Thouars"
+NA,"Vincennes",NA
+NA,"ASPTT; ASPTT Paris","ASPTT_Paris_%C3%8Ele-de-France"
+NA,"Malone RFC","Malone_Rugby_Football_Club"
+NA,"Tredegar RFC",NA
+NA,"Castaway Wanderers; Castaway Wanderers RFC","Castaway_Wanderers_Rugby_Football_Club"
+NA,"Dunbar RFC",NA
+NA,"Haddington RFC",NA
+NA,"Rhodésie",NA
+NA,"Brothers Old Boys","Brothers_Old_Boys"
+NA,"Winnington Park",NA
+NA,"Ferndale RFC",NA
+NA,"Penygraig RFC",NA
+NA,"Mountain Ash",NA
+NA,"US Souillac","Souillac"
+NA,"SO Millau; Stade olympique millavois","Stade_olympique_millavois_rugby_Aveyron"
+NA,"Carrasco Polo Club; Carrasco Polo","Carrasco_Polo_Club"
+NA,"Uruguay","%C3%89quipe_d%27Uruguay_de_rugby_%C3%A0_XV"
+NA,"Jaguars d'Am. du Sud","%C3%89quipe_des_Jaguars_d%27Am%C3%A9rique_du_Sud_de_rugby_%C3%A0_XV"
+NA,"Tala RC; Tala Rugby Club","Tala_Rugby_Club"
+NA,"Asociación Alumni","Asociaci%C3%B3n_Alumni"
+NA,"Burleigh Bears","Burleigh_Bears"
+NA,"CF Os Belenenses; Belenenses; Os Belenenses","Clube_de_Futebol_Os_Belenenses_(rugby_%C3%A0_XV)"
+NA,"Clapham Rovers","Clapham_Rovers_Football_Club"
+NA,"Saint-Denis US","Saint-Denis_Union_Sports"
+NA,"Écosse B",NA
+NA,"Marist St Pats",NA
+NA,"Aviators de l'Ohio","Aviators_de_l%27Ohio"
+NA,"Percy Park",NA
+NA,"Melville",NA
+NA,"Marist College",NA
+NA,"CSAR",NA
+NA,"US Portsmouth",NA
+NA,"Newbury",NA
+NA,"University of St Andrews RFC","University_of_St_Andrews_Rugby_Football_Club"
+NA,"CAS Gerzatois",NA
+NA,"USO Massif Central",NA
+NA,"RC français",NA
+NA,"Yougoslavie","%C3%89quipe_de_Yougoslavie_de_rugby_%C3%A0_XV"
+NA,"Bosnie-Herzégovine","%C3%89quipe_de_Bosnie-Herz%C3%A9govine_de_rugby_%C3%A0_XV"
+NA,"Wellington City Dukes",NA
+NA,"Hutt Valley Dolphins",NA
+NA,"IBM Big Blue","IBM_Big_Blue_(rugby_union)"
+NA,"Monkstown FC",NA
+NA,"Middlesex Wanderers",NA
+NA,"Olympique miélanais; Miélan-Mirande; Entente Astarac Bigorre XV; Entente Astarac Bigorre; Ent. Astarac Bigorre","Entente_Astarac_Bigorre_XV"
+NA,"RC Teillois",NA
+NA,"Union Montilienne",NA
+NA,"RC Le Teil",NA
+NA,"Carmarthen Athletic RFC","Carmarthen_Athletic_RFC"
+NA,"UN Córdoba","Universit%C3%A9_nationale_de_C%C3%B3rdoba"
+NA,"Warringah RC; Warringah; Warringah Rugby Club","Warringah_Rugby_Club"
+NA,"Tahiti","%C3%89quipe_de_Tahiti_de_rugby_%C3%A0_XV"
+NA,"Tynedale",NA
+NA,"Galwegians RFC; Galwegians","Galwegians_Rugby_Football_Club"
+NA,"Fylde RFC","Fylde_RFC"
+NA,"Equipe de l'armée française JO 1924, Paris",NA
+NA,"Western Suburbs",NA
+NA,"RC Mendoza",NA
+NA,"Union sportive Montréjeau; US Montréjeau; US Montréjeau G.-P.","Union_sportive_Montr%C3%A9jeau_Gourdan-Polignan_XV"
+NA,"SO Ugine-Albertville",NA
+NA,"universitaire",NA
+NA,"RC motterain",NA
+NA,"Côte Vermeille",NA
+NA,"Jockey Club Cordoba",NA
+NA,"Riom",NA
+NA,"Lomas Athletic Club; Lomas AC","Lomas_Athletic_Club"
+NA,"Los Tordos RC","Los_Tordos_Rugby_Club"
+NA,"Plaisance RC",NA
+NA,"Italie A","Italy_A_national_rugby_union_team"
+NA,"Marist",NA
+NA,"Lomaiviti",NA
+NA,"Tarvisium","Ruggers_Tarvisium"
+NA,"ES Lambeye",NA
+NA,"US Argelès-Gazost",NA
+NA,"Stejarul Buzău",NA
+NA,"Nor'Westers",NA
+NA,"AES Annecy",NA
+NA,"US Meyzieu",NA
+NA,"CR Bella Vista; Regatas Bella Vista; Club Regatas de Bella Vista; Regatas de Bella Vista","Club_Regatas_de_Bella_Vista"
+NA,"Rugby Leonessa 1928",NA
+NA,"US Vinay","Union_sportive_de_Vinay"
+NA,"UA Vicoise",NA
+NA,"AS saint-martinoise",NA
+NA,"Marsilly RC",NA
+NA,"CA Lormont","Club_athl%C3%A9tique_Lormont_Hauts_de_Garonne"
+NA,"US Bellegarde-Coupy; US Bellegarde Coupy","Bellegarde-sur-Valserine"
+NA,"US Carmaux; Union sportive carmausine; U.S. Carmaux","Union_sportive_carmausine"
+NA,"Saint-Germain-en-Laye",NA
+NA,"SO Voiron; Stade olympique voironnais","Stade_olympique_voironnais"
+NA,"Rugby Frascati",NA
+NA,"Rugby Reggio Calabria",NA
+NA,"Burton",NA
+NA,"Wiveliscombe RFC",NA
+NA,"Somerset",NA
+NA,"Machen RFC",NA
+NA,"Gabarret AS",NA
+NA,"Jeunesses illibériennes",NA
+NA,"Louvie sports",NA
+NA,"F.C. Lyon; FC Lyon","Football_Club_de_Lyon_(rugby_%C3%A0_XV)"
+NA,"Annonay",NA
+NA,"Washington RFC",NA
+NA,"Belmont Shore RFC",NA
+NA,"Pontnewydd RFC",NA
+NA,"Hartlepool Rovers",NA
+NA,"RC Sablais",NA
+NA,"MJC Carcassonne",NA
+NA,"R.C. Trèbes",NA
+NA,"CA Bédarieux",NA
+NA,"US Objat",NA
+NA,"Villeneuve-de-Marc","Villeneuve-de-Marc"
+NA,"Saint-Jean-de-Bournay","Saint-Jean-de-Bournay"
+NA,"US La Ravoire","La_Ravoire"
+NA,"CFR Pașcani",NA
+NA,"Northern Sharks",NA
+NA,"Poli Iași",NA
+NA,"Edinburgh Institute FP",NA
+NA,"Llanharan RFC",NA
+NA,"Ynysybwl",NA
+NA,"Taupo",NA
+NA,"St Mary's College High School","Saint_Mary%27s_College_High_School"
+NA,"Jed-Forest","Jed-Forest_Rugby_Football_Club"
+NA,"Rockwell College",NA
+NA,"Leinster","Leinster"
+NA,"Urú Curé RC",NA
+NA,"Argentine A; Argentine XV; Jaguars","%C3%89quipe_d%27Argentine_XV_de_rugby_%C3%A0_XV"
+NA,"Montevideo",NA
+NA,"Colorno Rugby",NA
+NA,"Modena Rugby",NA
+NA,"Pôle espoir de Tours","P%C3%B4le_espoirs_(rugby_%C3%A0_XV)"
+NA,"Irlande -19",NA
+NA,"Irlande -21",NA
+NA,"Mumbles RFC",NA
+NA,"Buller","Buller_Rugby_Union"
+NA,"RC Compiègne",NA
+NA,"RC Beauvais; Beauvais RC","Beauvais"
+NA,"Llandeilo RFC","Llandeilo_RFC"
+NA,"Rugby Melun-Combs",NA
+NA,"SA Vierzon Rugby",NA
+NA,"RC Issoudun",NA
+NA,"SC rieumois",NA
+NA,"Rugby Segni",NA
+NA,"Plaisance Rugby",NA
+NA,"Asti Rugby",NA
+NA,"Rugby Alexandrie",NA
+NA,"Miélan",NA
+NA,"Universitatii Timisoara",NA
+NA,"Mirano Rugby 1957; Rugby Mirano","Rugby_Mirano_1957"
+NA,"US Izeaux",NA
+NA,"Évreux AC","%C3%89vreux_Athletic_Club"
+NA,"RC Draguignan","Draguignan"
+NA,"RC Blois",NA
+NA,"RC Academy Tbilissi; RC Akademia Tbilissi","Rugby_Club_Akademia_Tbilissi"
+NA,"TSU Lomebi",NA
+NA,"Géorgie -20","%C3%89quipe_de_G%C3%A9orgie_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"James Bay Athletic Association","James_Bay_Athletic_Association"
+NA,"Derry",NA
+NA,"RC Batoumi","Rugby_Club_Batoumi"
+NA,"Marista RC",NA
+NA,"CDU Lisbonne; CDUL; CDU Lisboa","Centro_Desportivo_Universitario_Lisboa"
+NA,"Pocomo RFC",NA
+NA,"Launceston",NA
+NA,"Moscou",NA
+NA,"Penza; Imperia-Dynamo","Imperia-Dynamo"
+NA,"ES Lembeye",NA
+NA,"FC Tournon-Tain",NA
+NA,"Stade navarrais",NA
+NA,"FC Moulins",NA
+NA,"CM Floirac",NA
+NA,"Beauvoisin",NA
+NA,"La Tour du Pin",NA
+NA,"France Universitaire",NA
+NA,"U.S. Souillac",NA
+NA,"SC L'Honor-de-Cos",NA
+NA,"Pézilla-la-Rivière",NA
+NA,"Avenir muretain XV",NA
+NA,"Stade foyen","Sainte-Foy-la-Grande"
+NA,"CO Sigean",NA
+NA,"North Eastern Cape",NA
+NA,"Cats","Lions_Lions_(rugby_%C3%A0_XV)"
+NA,"Windsor School",NA
+NA,"Afrique du Sud -23",NA
+NA,"Llanelli",NA
+NA,"Victoria",NA
+NA,"Oakdale RFC",NA
+NA,"Trinant RFC",NA
+NA,"US Murviel-lès-Béziers",NA
+NA,"France scolaire",NA
+NA,"C.A.Pontacq",NA
+NA,"TUC; Toulouse UC","Toulouse_Universit%C3%A9_Club"
+NA,"Waikato University",NA
+NA,"Glasgow Academicals RFC; Glasgow Academicals","Glasgow_Academicals_Rugby_Football_Club"
+NA,"Chūō University RFC",NA
+NA,"St Barts",NA
+NA,"Jordanhill RFC",NA
+NA,"World Fighting Bull",NA
+NA,"CO Le Puy rugby","Le_Puy-en-Velay"
+NA,"SC Le Rheu","Sporting_Club_Le_Rheu"
+NA,"Contor Arad",NA
+NA,"CS Triumf Bucarest",NA
+NA,"Rugby club auxerrois","Auxerre"
+NA,"RAC Chateauroux",NA
+NA,"Gaunavou",NA
+NA,"Burotic Abidjan",NA
+NA,"Greater Western Sydney","Greater_Western_Sydney_Giants"
+NA,"Visol Kochebi",NA
+NA,"Armia Tbilissi; RC Armia; Rugby Club Armia","Rugby_Club_Armia"
+NA,"RC Kochebi","Rugby_Club_Kochebi"
+NA,"Black Lion","Black_Lion"
+NA,"Llandaff RFC",NA
+NA,"Christ Collegen",NA
+NA,"Monmouthshire",NA
+NA,"Bradford FC","Bradford_Park_Avenue_Association_Football_Club"
+NA,"ASB Labatut",NA
+NA,"Bordeaux EC; BEC; Bordeaux E.C.; Bordeaux Étudiants Club","Bordeaux_%C3%89tudiants_Club_(omnisports)"
+NA,"Sallèles-d'Aude",NA
+NA,"Bataillon de Joinville","Bataillon_de_Joinville"
+NA,"US Côte Vermeille","Union_sportive_C%C3%B4te_Vermeille"
+NA,"Pakuranga United",NA
+NA,"Ealing Trailfinders; Ealing Trailfinders RC","Ealing_Trailfinders_Rugby_Club"
+NA,"Falcons","Falcons"
+NA,"Bicester RC",NA
+NA,"Stirling County; Stirling County RFC; Stirling Coutny RFC; Stirling Wolves","Stirling_County_Rugby_Football_Club"
+NA,"Old Albanian",NA
+NA,"Lincoln RFC",NA
+NA,"Slavia Prague",NA
+NA,"Dunedin Pirates",NA
+NA,"RC Říčany",NA
+NA,"University",NA
+NA,"RC Havirov",NA
+NA,"Wheatmen",NA
+NA,"Regatas Bella Vista",NA
+NA,"CR Resistencia",NA
+NA,"Paris UC; PUC; Paris université club","Paris_universit%C3%A9_club"
+NA,"France -21 ans",NA
+NA,"France militaire",NA
+NA,"Hyères",NA
+NA,"US L'Isle-Jourdain; US l'Isloise; US lisloise; US l'isloise; L'Isle-Jourdain; US L'Isloise; U.S. L'Isle-Jourdain","Union_sportive_lisloise_rugby"
+NA,"Cuxac-d'Aude; Cuxac d’Aude","Cuxac-d%27Aude"
+NA,"RC Espalion","Espalion"
+NA,"Ouveillan","Ouveillan"
+NA,"SA Condom","Soci%C3%A9t%C3%A9_athl%C3%A9tique_condomoise"
+NA,"JO Prades","Jeunesse_olympique_prad%C3%A9enne_Conflent_Canigou_rugby"
+NA,"AS Bages",NA
+NA,"Duras 13",NA
+NA,"France junior",NA
+NA,"AS Capestang",NA
+NA,"Cholet",NA
+NA,"Cambo-les-Bains","Cambo-les-Bains"
+NA,"SA Monein","Monein"
+NA,"Riwaka RFC",NA
+NA,"Union Sigean-Port-la-Nouvelle","Union_Sigean_Port-la-Nouvelle"
+NA,"US Pouillon",NA
+NA,"Coquelicots de Pau","Lyc%C3%A9e_Louis-Barthou"
+NA,"Biscarosse olympique",NA
+NA,"Saint-Jacques de Carca.",NA
+NA,"US Berthelot",NA
+NA,"S.C. Tarare",NA
+NA,"A.S. Salies",NA
+NA,"Cadillac-Preignac",NA
+NA,"C.A. Villeneuve",NA
+NA,"AS Soustons","Association_sportive_soustonnaise_rugby"
+NA,"Brussels British SC",NA
+NA,"Rugby club Français",NA
+NA,"RC Rillieux",NA
+NA,"Fredericton Loyalists",NA
+NA,"Newfoundland Rock; Atlantic Rock","Newfoundland_Rock_Rugby_Football_Club"
+NA,"Belovula",NA
+NA,"Geckos, Nadroga",NA
+NA,"Abu Dhabi Harlequins","Abu_Dhabi_Harlequins"
+NA,"Penicuik RFC",NA
+NA,"RC Jacou",NA
+NA,"Old Boys; Old Boys Club","Old_Boys_%26_Old_Girls_Club"
+NA,"Los Tilos",NA
+NA,"Toronto Arrows; Arrows de Toronto; Ontario Arrows","Arrows_de_Toronto"
+NA,"Tuggeranong Vikings","Tuggeranong_Vikings"
+NA,"Barbarians de NZ; Barbarians de la Nouvelle-Zélande","Barbarians_de_la_Nouvelle-Z%C3%A9lande"
+NA,"Nouvelle-Zélande B",NA
+NA,"Empire britannique",NA
+NA,"Oriental Rongotai",NA
+NA,"Waitemata",NA
+NA,"East Rugby Club",NA
+NA,"Bradford PA",NA
+NA,"Heckmondwike",NA
+NA,"Aukland Trialist",NA
+NA,"Kelson Hight School",NA
+NA,"Ponsonby","Ponsonby_(Nouvelle-Z%C3%A9lande)"
+NA,"US Nafarroa","Union_sportive_Nafarroa"
+NA,"Bay Side RFC",NA
+NA,"Whitecraigs RFC",NA
+NA,"Glasgow Hutchesons Aloysians RFC; GHA Rugby Football Club","Glasgow_Hutchesons_Aloysians_Rugby_Football_Club"
+NA,"RC Romans Péage",NA
+NA,"Auch Gers",NA
+NA,"Stade nantais; Stade nantais UC; Nantes UC","Stade_nantais_universit%C3%A9_club"
+NA,"Istres Sport Rugby",NA
+NA,"Avenir sportif perpignanais",NA
+NA,"Collioure sportif; Collioure S XV","Collioure"
+NA,"Sélection Catalane",NA
+NA,"C.A.O. Esperaza",NA
+NA,"Newport Breakers",NA
+NA,"Warringah",NA
+NA,"Leonessa Brescia; Rugby Leonessa; Rugby Brescia; Rugby Leonessa 1928","Rugby_Brescia"
+NA,"Mounts Bay RFC","Mounts_Bay_RFC"
+NA,"Huirapuca",NA
+NA,"CRC Madrid Noroeste",NA
+NA,"Desterro Rugby Clube","Desterro_Rugby_Clube"
+NA,"Brésil","%C3%89quipe_du_Br%C3%A9sil_de_rugby_%C3%A0_XV"
+NA,"Los Matreros",NA
+NA,"Duendes RC; Duendes Rugby Club; Duendes","Duendes_Rugby_Club"
+NA,"Aparejadores Burgos",NA
+NA,"FC Béziers",NA
+NA,"A.S Maureilhan",NA
+NA,"Penrith Emus; Penrith RC; Penrith Rugby Club","Penrith_Emus_Rugby"
+NA,"Navosa",NA
+NA,"Floirac; CM Floirac","Floirac_(Gironde)"
+NA,"Kituro Rugby Club; Royal Kituro RC; Kituro RC","Royal_Kituro_Rugby_Club"
+NA,"Lille UC","Lille_Universit%C3%A9_Club"
+NA,"Iris Club lillois","Iris_Club_lillois"
+NA,"Stade laurentin",NA
+NA,"Stade métropolitain","Stade_m%C3%A9tropolitain"
+NA,"US Genlis",NA
+NA,"CS Nuits-Saint-Georges",NA
+NA,"CO Puy",NA
+NA,"Echirolles",NA
+NA,"Mazères Cassagne Sport",NA
+NA,"Tucumán RC; Tucumán Rugby Club; Tucumàn","Tucum%C3%A1n_Rugby_Club"
+NA,"RC Tala",NA
+NA,"Meythet RC",NA
+NA,"ES Villiers-sur-Marne",NA
+NA,"US Vic",NA
+NA,"Olympique Labruguière; Olympique Labruguière XV","Labrugui%C3%A8re"
+NA,"AC Labastide Beauvoir",NA
+NA,"ESC BAC ASP",NA
+NA,"Rugby Club Châteaugay",NA
+NA,"Tailevu Knights","Tailevu_Knights"
+NA,"Gold de La Nvlle-Orléans; NOLA Gold; Gold de La Nouvelle-Orléans; Gold de la Nouvelle-Orléans; Gold de la Nlle-Orléans","Gold_de_La_Nouvelle-Orl%C3%A9ans"
+NA,"Gold Coast (AFL)","Gold_Coast_Football_Club"
+NA,"RC Vairas",NA
+NA,"Lituanie","%C3%89quipe_de_Lituanie_de_rugby_%C3%A0_XV"
+NA,"Hino Motors; Hino Red Dolphins","Hino_Red_Dolphins"
+NA,"Penygroes RFC",NA
+NA,"RC Rudar Zenica",NA
+NA,"Glaswgow Warriors",NA
+NA,"New England Free Jacks; Free Jacks; Free Jacks de la Nlle-Angl.; Free Jacks de Nlle-Angleterre","Free_Jacks_de_la_Nouvelle-Angleterre"
+NA,"Moseley",NA
+NA,"Cardigan RFC",NA
+NA,"Saint Mary's",NA
+NA,"Old Puget Sound Beach; Old Puget Sound Beach RFC; Seattle Saracens; Seattle RC","Seattle_Rugby_Club"
+NA,"TSV Victoria Linden","TSV_Victoria_Linden"
+NA,"Bulava Taganrog; Boulava Taganrog","Bulava_Taganrog"
+NA,"Université Hōsei","Universit%C3%A9_H%C5%8Dsei"
+NA,"Barking RFC","Barking_RFC"
+NA,"Southend RFC","Southend_RFC"
+NA,"Rugby Benevento",NA
+NA,"Clonakilty RFC","Clonakilty_Rugby_Football_Club"
+NA,"Warriors de l'Utah; Utah Warriors","Warriors_de_l%27Utah"
+NA,"France fédérale",NA
+NA,"RC Kredo-63","RC_Kredo-63"
+NA,"US Salles","Union_sportive_de_Salles"
+NA,"RC Montceau-les-Mines",NA
+NA,"False Bay RC",NA
+NA,"Pont-de-Claix",NA
+NA,"RC Revel",NA
+NA,"RC Cherbourg-Hague",NA
+NA,"Istres SC",NA
+NA,"Avenir de Bizano",NA
+NA,"AS Pont-Long",NA
+NA,"AS Idron-Lée",NA
+NA,"AS Mont-Saint-Aignan",NA
+NA,"ASPO Brive",NA
+NA,"Istres SR; Istres sports rugby","Istres_sports_rugby"
+NA,"Uddingston RFC",NA
+NA,"Rugby club Six-Fours; RC Six Fours","Six-Fours-les-Plages"
+NA,"Bidart UC","Bidart"
+NA,"Wentworthville Magpies","Wentworthville_Magpies"
+NA,"Rotorua Boys' High School","Rotorua"
+NA,"Hautapu",NA
+NA,"Pennes Mirabeau Cadeneaux rugby",NA
+NA,"Recco Rugby","Pro_Recco_Rugby"
+NA,"Stade saint-livradais",NA
+NA,"South West Africa",NA
+NA,"Apia West",NA
+NA,"Westoe RFC",NA
+NA,"RC Arpajon",NA
+NA,"SA Verdun","Sport_athl%C3%A9tique_verdunois_rugby"
+NA,"Avenir palois",NA
+NA,"RC Boé-Bon Encontre",NA
+NA,"Pucará",NA
+NA,"Griviţa Roşie",NA
+NA,"A.S. Cheminots Narbonne",NA
+NA,"RC Clermont-Cournon",NA
+NA,"Istres Sports","Istres_sports"
+NA,"RC Tricastin","Rugby_club_Tricastin"
+NA,"RC Havířov","Hav%C3%AD%C5%99ov"
+NA,"Aigles noirs de Tarbes",NA
+NA,"Stade châteaurenardais",NA
+NA,"Devonport Services",NA
+NA,"RC Sorgues",NA
+NA,"Vaini Club",NA
+NA,"RC La Baule",NA
+NA,"SAP Parthenay",NA
+NA,"SC royannais",NA
+NA,"Lavengamalie",NA
+NA,"SO maubourguetois",NA
+NA,"AS Salies",NA
+NA,"CA Morcenx",NA
+NA,"VC Beauvais",NA
+NA,"C.O. Creusot",NA
+NA,"A.S. Police Paris",NA
+NA,"CUS Genova",NA
+NA,"Partenope Napoli","Partenope_Naples"
+NA,"CUS Milan",NA
+NA,"Amatori Modena",NA
+NA,"Espagne -19",NA
+NA,"Italie -21",NA
+NA,"Universitario de La Plata",NA
+NA,"Buenos Aires CRC","Buenos_Aires_Cricket_%26_Rugby_Club"
+NA,"Nasinu",NA
+NA,"Colleferro Rugby",NA
+NA,"Sparta Prague",NA
+NA,"Torquay United","Torquay_United_Football_Club"
+NA,"Star RC",NA
+NA,"CUS Catania",NA
+NA,"Rugby Borgo Poncarale",NA
+NA,"Amatori Alghero","Amatori_Alghero"
+NA,"Park City Haggis",NA
+NA,"Ent. Bompas-Villelongue",NA
+NA,"Villeurbanne",NA
+NA,"Capbreton",NA
+NA,"Ambérieu",NA
+NA,"ORC Argenteuil","Argenteuil_(Val-d%27Oise)"
+NA,"Old Christians Club","Old_Christians_Club"
+NA,"Queensland ’s Brisbane State High School","Brisbane"
+NA,"CR San Nicolás",NA
+NA,"RC Versailles",NA
+NA,"International de guerre",NA
+NA,"Montagnards de Bayonne",NA
+NA,"RC Matheysin",NA
+NA,"AS Loriol",NA
+NA,"Stade athlétique Perpignanais",NA
+NA,"Mar del Plata",NA
+NA,"Apia",NA
+NA,"Marist St Joseph's",NA
+NA,"Biscarrosse olympique",NA
+NA,"CA Villeneuve; C.A. Villeneuve","Villeneuve-sur-Lot"
+NA,"US Tournon",NA
+NA,"Glenfield RUSC","Glenfield_Rugby_Union_and_Sports_Club_Inc"
+NA,"internationale FIRA a 7",NA
+NA,"Rion Morcenx Club Rugby",NA
+NA,"US Le Mourillon",NA
+NA,"Syston",NA
+NA,"Université de Cambridge","Universit%C3%A9_de_Cambridge"
+NA,"Norths/QUT; North Brisbane Eagles; North Brisbane","North_Brisbane_Rugby_Club"
+NA,"Newbridge College","Newbridge_College"
+NA,"Stade pontellois",NA
+NA,"AS Lagny",NA
+NA,"Saint-Savin Sportif",NA
+NA,"Argelès-Gazost",NA
+NA,"RC Corbas",NA
+NA,"De La Salle Palmerston",NA
+NA,"Salisbury RFC",NA
+NA,"Melksham RFC",NA
+NA,"Sunshine Coast Stingrays","Sunshine_Coast_Stingrays"
+NA,"Lamorinda RFC",NA
+NA,"Denver Barbarians",NA
+NA,"West Hartlepool; West Hartlepool RFC","West_Hartlepool_Rugby_Football_Club"
+NA,"RC Aia","Rugby_Club_Aia"
+NA,"SCO Angers",NA
+NA,"Pôle Espoir d'Ussel",NA
+NA,"Bracknell",NA
+NA,"Ricany",NA
+NA,"Taupiri RFC",NA
+NA,"Saint-Raphaël; CARF","Saint-Rapha%C3%ABl_(Var)"
+NA,"Aubagne",NA
+NA,"ES Côteaux de l'Arrêt",NA
+NA,"RCHA Segré",NA
+NA,"RC Loudun",NA
+NA,"GAP Despatch",NA
+NA,"Hamiltons RC",NA
+NA,"Moray RFC",NA
+NA,"Aboyne RFC",NA
+NA,"Highland RFC",NA
+NA,"Brisbane Easts",NA
+NA,"Western Crusaders",NA
+NA,"Skopa",NA
+NA,"Complutense Cisneros; CR Cisneros","Club_de_Rugby_Complutense_Cisneros"
+NA,"Lokomotiv Penza","Lokomotiv_Penza"
+NA,"Olimpia Lions; Yacare XV","Yacare_XV"
+NA,"Northumbria University",NA
+NA,"Tynedale RFC","Tynedale_RFC"
+NA,"Bombay Gymkhana",NA
+NA,"Fidji -21",NA
+NA,"Ra",NA
+NA,"Havant RFC",NA
+NA,"Bournemouth RC",NA
+NA,"Rugby Lions","Rugby_Lions"
+NA,"Old Alleynians",NA
+NA,"Newtown School",NA
+NA,"Gorey RFC",NA
+NA,"Greystones RFC","Greystones_Rugby_Football_Club"
+NA,"WP Rugby Academy",NA
+NA,"Capilano RFC",NA
+NA,"Radley College",NA
+NA,"CUS Padoue",NA
+NA,"LPS Focșani",NA
+NA,"Draguignan",NA
+NA,"Montevideo Cricket Club","Montevideo_Cricket_Club"
+NA,"COM Bagneux","Club_olympique_multisports_de_Bagneux"
+NA,"CS Villefrance SS",NA
+NA,"Larressore","Larressore"
+NA,"ALJ Limay","Limay"
+NA,"Stade Blayais",NA
+NA,"Pays Médoc rugby; Stade pauillacais","Pays_M%C3%A9doc_Rugby"
+NA,"Nord Béarn XV",NA
+NA,"Toulouse AC",NA
+NA,"Laos","%C3%89quipe_du_Laos_de_rugby_%C3%A0_XV"
+NA,"Laos à 7",NA
+NA,"CEC Liceo Militar","CEC_Liceo_Militar"
+NA,"Cardiff University","Universit%C3%A9_de_Cardiff"
+NA,"Gorseinon RFC",NA
+NA,"Club africain","Club_africain_(rugby_%C3%A0_XV)"
+NA,"Tunisie","%C3%89quipe_de_Tunisie_de_rugby_%C3%A0_XV"
+NA,"Lycée d'Ussel",NA
+NA,"Clermont UC; Clermont Université Club","Clermont_Universit%C3%A9_Club_(basket-ball)"
+NA,"Iris Clermont-Ferrand",NA
+NA,"VS Toulouse",NA
+NA,"Velox Valhalians",NA
+NA,"Aurora Barbarians",NA
+NA,"US Valloire-Galaure",NA
+NA,"JS Villeneuve-de-Marsan",NA
+NA,"FC Trie",NA
+NA,"San Gregorio","San_Gregorio_Catania_Rugby"
+NA,"Olympus XV Madrid",NA
+NA,"Gernika Rugby Taldea; Gernika RT","Gernika_Rugby_Taldea"
+NA,"Rulmentul Bârlad",NA
+NA,"Salanque CR",NA
+NA,"Foyer Laïque Haut Vernet",NA
+NA,"Seaside Stars",NA
+NA,"RC Trignac",NA
+NA,"Liverpool CR",NA
+NA,"Bidart",NA
+NA,"Burnaby Lake RFC; Burnaby Lake RC","Burnaby_Lake_Rugby_Club"
+NA,"RC Toulon","Union_sportive_Le_Pontet_XIII"
+NA,"Stade Piscenois",NA
+NA,"Port Hacking RFC","Port_Hacking_Rugby_Football_Club"
+NA,"Dunvant",NA
+NA,"Carmarthen RFC",NA
+NA,"Stade Marseillais UC",NA
+NA,"Marlow RUFC","Marlow_RUFC"
+NA,"Toulouse Athlétique Club",NA
+NA,"Partenope Rugby","Partenope_Rugby"
+NA,"Balma ORC",NA
+NA,"South Wales",NA
+NA,"CSU Cluj-Napoca","CS_Universitatea_Cluj-Napoca"
+NA,"Stampede de Denver","Stampede_de_Denver"
+NA,"Lusitanos XV","Lusitanos_XV"
+NA,"Canberra Grammar School, A.C.T","Territoire_de_la_capitale_australienne"
+NA,"Wests Lions",NA
+NA,"Haverfordwest RFC",NA
+NA,"Poli Nena Iaşi",NA
+NA,"CSM Bucovina Suceava",NA
+NA,"FC Tournon Tain",NA
+NA,"RC Aubagne",NA
+NA,"Wanderers Newcastle",NA
+NA,"Eastern Suburbs Roosters",NA
+NA,"Old Wesley RFC","Old_Wesley_Rugby_Football_Club"
+NA,"Royal Engineers",NA
+NA,"RC Villenave",NA
+NA,"RC Vendres",NA
+NA,"RC Serignan",NA
+NA,"RC les plages d'Orb",NA
+NA,"RC Sérignan",NA
+NA,"Grenade",NA
+NA,"US vicquoise",NA
+NA,"ES Monteux","%C3%89toile_sportive_montilienne"
+NA,"( Narbonne)",NA
+NA,"SMUC Marseille; Stade Marseillais UC; Stade marseillais; Stade Marseillais Université Club; Stade Marseillais U.C.","Stade_Marseillais_Universit%C3%A9_Club"
+NA,"Stade piscenois",NA
+NA,"Entente Aramits Asasp",NA
+NA,"Toulouse CMS",NA
+NA,"Papillons de Pontacq",NA
+NA,"Fontanil OC",NA
+NA,"Hendaye","Hendaye"
+NA,"SA Thiers",NA
+NA,"Whitland RFC",NA
+NA,"Carmarthen Quins RFC; Carmarthen Quins","Carmarthen_Quins_RFC"
+NA,"A.S. Perpignanais",NA
+NA,"Celtic de Paris","Celtic_de_Paris"
+NA,"RC Castelnaudary",NA
+NA,"Saint-Estève XIII",NA
+NA,"Châteauneuf-Orange RC",NA
+NA,"Châteauneuf-Orange",NA
+NA,"ES Saint-Saturnin",NA
+NA,"Voința Cluj",NA
+NA,"Grivița Roșie","RC_Grivi%C8%9Ba_Bucure%C8%99ti"
+NA,"US Eauze",NA
+NA,"Beauvais XV Rugby Club",NA
+NA,"US Saintes",NA
+NA,"Cigognes de Tarbes",NA
+NA,"Entente Vendres-Lespignan",NA
+NA,"Salisbury",NA
+NA,"HS Old Boys RFC",NA
+NA,"Glenmark RFC",NA
+NA,"Franconville RC",NA
+NA,"Redruth R.F.C.",NA
+NA,"Currie RFC","Currie_Rugby_Football_Club"
+NA,"SA Bourg-en-Bresse",NA
+NA,"CR & FC",NA
+NA,"Mystic River","Mystic_River_Rugby_Club"
+NA,"Prague","Prague"
+NA,"RC Palavas",NA
+NA,"Manawhenua",NA
+NA,"RC Miramas",NA
+NA,"US Cornebarrieu",NA
+NA,"JS Caraman",NA
+NA,"CCA Capdenac","Capdenac"
+NA,"US Terrasson","Terrasson-Lavilledieu"
+NA,"Hirondelles d'Orthez",NA
+NA,"US Puyoô",NA
+NA,"Ibos","Ibos"
+NA,"Rugby Club teillois",NA
+NA,"RC Lons",NA
+NA,"AS Fontaine",NA
+NA,"AL Échirolles",NA
+NA,"US Saint-Léonard-de-Noblat",NA
+NA,"Marist Saint Joseph's",NA
+NA,"Trinity Grammar School",NA
+NA,"Loughor RFC",NA
+NA,"Llandovery College",NA
+NA,"UC Hospital",NA
+NA,"JS Labouheyre",NA
+NA,"RC Salvetat Plaisance",NA
+NA,"Cazères; US Cazères XV","Caz%C3%A8res"
+NA,"Université Kanto Gakuin",NA
+NA,"Real Soldevilla campétois",NA
+NA,"RC Vincennes",NA
+NA,"CA Saint-Laurent",NA
+NA,"Rugby Club Teillois",NA
+NA,"Rugby Épernay","Rugby_%C3%89pernay_Champagne"
+NA,"Dendermonde RC; Dendermondse RC","Dendermondse_Rugby_Club"
+NA,"Racing Jet Bruxelles","Racing_Jet_Bruxelles"
+NA,"BUC Saint-Josse RC","BUC_Saint-Josse_Rugby_Club"
+NA,"Belgique B",NA
+NA,"Corbières XV","Saint-Andr%C3%A9-de-Roquelongue"
+NA,"Nabua/Suva",NA
+NA,"CUS Catane",NA
+NA,"Olivos RC","Olivos_Rugby_Club"
+NA,"RC Mandelieu",NA
+NA,"GUF Torino","CUS_Torino_Rugby"
+NA,"Ginnastica Torino","Reale_Societ%C3%A0_Ginnastica_Torino"
+NA,"RC Trèbes","Tr%C3%A8bes"
+NA,"Luctonians","Luctonians"
+NA,"Moseley Colts",NA
+NA,"Biggar RFC","Biggar_Rugby_Football_Club"
+NA,"UBC Old Boys",NA
+NA,"Nawaka",NA
+NA,"Club San Martín",NA
+NA,"Wests Rugby; Wests Bulldogs; West Brisbane Bulldogs","Wests_Rugby"
+NA,"Tailevu",NA
+NA,"RC Muretain; RC muretain","Muret_(Haute-Garonne)"
+NA,"Las Vegas Blackjacks","Las_Vegas_Blackjacks_Rugby_Football_Club"
+NA,"Te Papapa Onehunga RFC",NA
+NA,"Université Teikyō","Universit%C3%A9_Teiky%C5%8D"
+NA,"Japon -19",NA
+NA,"Huddersfield RUFC","Huddersfield_R.U.F.C."
+NA,"Riviera Rugby",NA
+NA,"Lupi di Canolo",NA
+NA,"RC Abidjan",NA
+NA,"Flers",NA
+NA,"US Nantua","Nantua"
+NA,"Petone RFC",NA
+NA,"Rugby Viterbo",NA
+NA,"Silea",NA
+NA,"Daito Bunka Univ.",NA
+NA,"Stourbridge",NA
+NA,"Red Rock Qauia ( Suva )","Suva"
+NA,"GDS Cascais","Grupo_Dram%C3%A1tico_e_Sportivo_Cascais"
+NA,"Asia Pacific Dragons","Asia_Pacific_Dragons"
+NA,"Tarbes PR","Tarbes_Pyr%C3%A9n%C3%A9es_Football"
+NA,"Banbury RFC",NA
+NA,"Vierzon SAV",NA
+NA,"AS Mont-Dore",NA
+NA,"Dunvant RFC","Dunvant_RFC"
+NA,"Ystradgynlais RFC","Ystradgynlais_RFC"
+NA,"Îles Cook","%C3%89quipe_des_%C3%8Eles_Cook_de_rugby_%C3%A0_XV"
+NA,"Durham city",NA
+NA,"CUS Vérone",NA
+NA,"Oulton ARL",NA
+NA,"Boston RC",NA
+NA,"Kenilworth RFC",NA
+NA,"Beddau RFC",NA
+NA,"Angleterre U",NA
+NA,"RC Riom",NA
+NA,"US Grenade-sur-l'Adour",NA
+NA,"Union sportive Pays de Gex",NA
+NA,"US Vizille","Union_sportive_vizilloise_rugby"
+NA,"RC Livry-Gargan","Livry-Gargan"
+NA,"RC Ustaritz Jatxou",NA
+NA,"Hasparren AC","Hasparren"
+NA,"Avenir gruissanais",NA
+NA,"RC Mont-Dore",NA
+NA,"Ontario Blues","Ontario_Blues"
+NA,"Taffs Well RFC",NA
+NA,"RGS High Wycombe",NA
+NA,"Club Olympique Tuchan",NA
+NA,"OC Châteaudun",NA
+NA,"Rugby sancerrois",NA
+NA,"Rugby Melun Club",NA
+NA,"US aspoise",NA
+NA,"Nîmes",NA
+NA,"UA Vergt",NA
+NA,"Rambouillet RS",NA
+NA,"RC Frontignan-Sète",NA
+NA,"Pusignan",NA
+NA,"St. Bart's Hospital",NA
+NA,"OO Laruns",NA
+NA,"SO Rosny",NA
+NA,"Sabercats de Houston; SaberCats de Houston","SaberCats_de_Houston"
+NA,"US Métro","Union_sportive_m%C3%A9tropolitaine_(rugby_%C3%A0_XV)"
+NA,"Béarn SC","Jeanne_d%27Arc_Le_B%C3%A9arn"
+NA,"Brisbane South",NA
+NA,"Rieti",NA
+NA,"CA Saint-Raphaël Fréjus",NA
+NA,"Noceto",NA
+NA,"Ammanford RFC",NA
+NA,"Morfa Rangers",NA
+NA,"Newark RUFC",NA
+NA,"Penryn RFC",NA
+NA,"Truro RFC",NA
+NA,"Llwynypia RFC",NA
+NA,"AZS AWF Warszawa",NA
+NA,"Rugby Bénévent",NA
+NA,"Logaritmo RC",NA
+NA,"Nenagh Ormond",NA
+NA,"St Edmund's College, Canberra","Canberra"
+NA,"Université Keiō","Universit%C3%A9_Kei%C5%8D"
+NA,"Fanga club",NA
+NA,"US Joué-lès-Tours",NA
+NA,"CSŞ Constanța",NA
+NA,"Racing Club Mauriacois",NA
+NA,"CSKA Moscou; RC CSKA Moscou","RC_CSKA_Moscou"
+NA,"Valley RFC","Valley_RFC"
+NA,"Hong Kong","%C3%89quipe_de_Hong_Kong_de_rugby_%C3%A0_XV"
+NA,"Naitasiri",NA
+NA,"US Castelnau-Madiran",NA
+NA,"Lavengamalie RFC",NA
+NA,"US Cadalen",NA
+NA,"Stade Olympique Givors",NA
+NA,"Nasinu College",NA
+NA,"Naluwai RC",NA
+NA,"CAC Castelsarrasin",NA
+NA,"Coquelicots Montéchois",NA
+NA,"Rewi",NA
+NA,"Nabua",NA
+NA,"Staines",NA
+NA,"Nadera Panthers",NA
+NA,"Terrigal Sharks","Terrigal_Sharks"
+NA,"Namosi",NA
+NA,"Ovalau",NA
+NA,"RC Saint Sulpice La Pointe",NA
+NA,"Maindee FC",NA
+NA,"Stallions",NA
+NA,"ASD Rugby Casale",NA
+NA,"The King’s School, Parramatta","Parramatta"
+NA,"Durham université",NA
+NA,"Morriston",NA
+NA,"Gill College",NA
+NA,"Balma olympique",NA
+NA,"Lomipeau",NA
+NA,"AS Lagny Rugby",NA
+NA,"Tahiti Capitaine 8 matchs Océanie",NA
+NA,"SC Privas",NA
+NA,"AS Ondres",NA
+NA,"US L'Isle-Jourdain","L%27Isle-Jourdain_(Gers)"
+NA,"Arménie","%C3%89quipe_d%27Arm%C3%A9nie_de_rugby_%C3%A0_XV"
+NA,"Caen Rugby Club; Caen RC","Caen_Rugby_Club"
+NA,"Université Meiji","Universit%C3%A9_Meiji"
+NA,"US Foix","Union_sportive_fux%C3%A9enne"
+NA,"AS Corbeil-Essonnes",NA
+NA,"SC Salon-de-Provence",NA
+NA,"France espoirs",NA
+NA,"U.S. Bages",NA
+NA,"Stade Belvès","Belv%C3%A8s"
+NA,"Poneke FC",NA
+NA,"US Cazères",NA
+NA,"Saint-Florent-sur-Cher","Saint-Florent-sur-Cher"
+NA,"Rugby Noceto",NA
+NA,"Club San Patricio","Club_San_Patricio"
+NA,"RC Villeneuve-sur-Lot",NA
+NA,"Old Resian",NA
+NA,"Rugby Milano","Rugby_Milano"
+NA,"Grande Milano",NA
+NA,"Rugby Paese",NA
+NA,"RC Kouban Krasnodar; Kouban Krasnodar; RC Kuban Krasnodar","RC_Kuban_Krasnodar"
+NA,"RC Maurepas Élancourt",NA
+NA,"RC Dreux",NA
+NA,"Seapoint RFC",NA
+NA,"Corstorphine RFC","Corstorphine_RFC"
+NA,"Royal High School","Royal_High_School,_Edinburgh"
+NA,"Hunslet F.C.",NA
+NA,"Littleborough RUFC",NA
+NA,"RC Brașov",NA
+NA,"CS Metrorex",NA
+NA,"Roumanie -20","%C3%89quipe_de_Roumanie_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Hawera RFC",NA
+NA,"Durban High School","Durban_High_School"
+NA,"Munster A",NA
+NA,"Emerging Ireland; Irlande B","Emerging_Ireland"
+NA,"Hakuoh University",NA
+NA,"Prairie Wolf Pack","Prairie_Wolf_Pack"
+NA,"UP Tuks; Université de Pretoria; Tuks (Université de Pretoria); Université Pretoria TUKS; Up Tuks","Universit%C3%A9_de_Pretoria"
+NA,"TUT Vikings",NA
+NA,"Accademia FIR",NA
+NA,"Limpopo",NA
+NA,"Fijian Latui","Fijian_Latui"
+NA,"Crusaders Knights",NA
+NA,"Sunnybank; Sunnybank Rugby","Sunnybank_Rugby"
+NA,"Angleterre -18",NA
+NA,"Union Bordeaux Bègles","HUnion_Bordeaux_B%C3%A8gles"
+NA,"Old Miltonians RFC",NA
+NA,"Hartpury College RFC",NA
+NA,"Irlande -18",NA
+NA,"Emerging Irland",NA
+NA,"Tonga -20","%C3%89quipe_des_Tonga_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Bradford & Bingley",NA
+NA,"Bracknell RFC","Bracknell_RFC"
+NA,"Otago","Otago"
+NA,"Jackals de Dallas","Jackals_de_Dallas"
+NA,"Balmain Ryde-Eastwood",NA
+NA,"Oxford Harlequins",NA
+NA,"RFC Los Angeles","Rugby_Football_Club_Los_Angeles"
+NA,"UJ; Université de Johannesbourg","Universit%C3%A9_de_Johannesbourg"
+NA,"Namibie -20","%C3%89quipe_de_Namibie_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Atlantic Rock","Atlantic_Rock"
+NA,"Noordelikes",NA
+NA,"Mwamba RFC","Mwamba_RFC"
+NA,"Kenya","%C3%89quipe_du_Kenya_de_rugby_%C3%A0_XV"
+NA,"ACS Tomitanii Constanța",NA
+NA,"NWU Pukke; Université du Nord-Ouest","Universit%C3%A9_du_Nord-Ouest"
+NA,"La Valette-du-Var",NA
+NA,"Stoke-on-Trent RUFC",NA
+NA,"Longton Rugby Club",NA
+NA,"Dolphin RFC","Dolphin_Rugby_Football_Club"
+NA,"UL Bohemians",NA
+NA,"Belfast Harlequins","Belfast_Harlequins_Rugby_Football_Club"
+NA,"Ikey Tigers ( Université du Cap )","Universit%C3%A9_du_Cap"
+NA,"Pembroke RFC",NA
+NA,"Tautahi Gold","Tautahi_Gold"
+NA,"Marist Apifo’ou",NA
+NA,"Argentine -21",NA
+NA,"Aldershot Services",NA
+NA,"Kelso",NA
+NA,"Hull KR",NA
+NA,"Darlington Mowden Park RFC; Darlington Mowden Park; Darlington MP RFC","Darlington_Mowden_Park_R.F.C."
+NA,"Bloemfontein RFC",NA
+NA,"North of Ireland F.C.",NA
+NA,"Howe Of Fife",NA
+NA,"Newark Rugby Club",NA
+NA,"Shore School","Sydney_Church_of_England_Grammar_School"
+NA,"Havelock",NA
+NA,"Université Nihon","Universit%C3%A9_Nihon"
+NA,"Saskatoon Wild Oats RFC",NA
+NA,"B. S. de Valparaíso",NA
+NA,"PWCC Santiago","Prince_of_Wales_Country_Club_(Rugby)"
+NA,"Ulster","Ulster"
+NA,"Westcliff RFC","Westcliff_RFC"
+NA,"Université Waseda","Universit%C3%A9_Waseda"
+NA,"Tel Aviv Heat","Tel_Aviv_Heat"
+NA,"Palmyra",NA
+NA,"Tokyo Gas; Tokyo Gas Rugby","%E6%9D%B1%E4%BA%AC%E3%82%AC%E3%82%B9%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%83%A8"
+NA,"Woonona Shamrocks",NA
+NA,"Yamba Buccaneers",NA
+NA,"Haywards Heath RFC",NA
+NA,"Hull Kingston Rovers; Hull KR","Hull_Kingston_Rovers"
+NA,"Penzance Newlyn",NA
+NA,"Monmouthshire County RFC",NA
+NA,"Cornwall",NA
+NA,"Birkenhead Park",NA
+NA,"Kenfig Hill RFC",NA
+NA,"Titans; Gold Coast Titans","Gold_Coast_Titans"
+NA,"Souths Logan Magpies","Souths_Logan_Magpies"
+NA,"Chorley Panthers",NA
+NA,"Wigan St. Patricks",NA
+NA,"Blackpool Panthers",NA
+NA,"Bridgend Sports RFC","Bridgend_Sports_RFC"
+NA,"Université Kyoto Sangyo",NA
+NA,"Loughborough",NA
+NA,"Tonmawr RFC","Tonmawr_RFC"
+NA,"Old Collegians RC",NA
+NA,"Shimizu Koto Blue Sharks",NA
+NA,"Central Coast Waves","Central_Coast_Waves"
+NA,"Terrigal Trojans",NA
+NA,"Blaydon RFC","Blaydon_RFC"
+NA,"Canada -20","%C3%89quipe_du_Canada_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Niue","%C3%89quipe_de_Niue_de_rugby_%C3%A0_XV"
+NA,"Hunter Mariners","Hunter_Mariners"
+NA,"Japon -20","%C3%89quipe_du_Japon_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"RC Gura Humorului",NA
+NA,"Hunter Wildfires","Hunter_Wildfires"
+NA,"Trimsaran RFC",NA
+NA,"Nadroga Rugby",NA
+NA,"Pays de Galles -18",NA
+NA,"Tsumeb Gimnasium",NA
+NA,"Hoërskool Monument","Ho%C3%ABrskool_Monument"
+NA,"Namibie -18",NA
+NA,"Grafton",NA
+NA,"Ponsonby RFC","Ponsonby_RFC"
+NA,"Kelston Boys' High School",NA
+NA,"Queanbeyan",NA
+NA,"Chaminuka RFC",NA
+NA,"Durbanville-Bellville",NA
+NA,"Auckland Vulcans","Auckland_Vulcans"
+NA,"Junior Kiwis","Junior_Kiwis"
+NA,"San Francisco Golden Gate; San Francisco Golden Gate RFC","San_Francisco_Golden_Gate_Rugby_Football_Club"
+NA,"Papouasie-Nouvelle-Guinée","%C3%89quipe_de_Papouasie-Nouvelle-Guin%C3%A9e_de_rugby_%C3%A0_XV"
+NA,"Université Dōshisha; Collège Dōshisha","Universit%C3%A9_D%C5%8Dshisha"
+NA,"RC Hilversum","Rugby_Club_Hilversum"
+NA,"Australie -18 ans",NA
+NA,"Iles Cook -20",NA
+NA,"Connemara RFC","Connemara_Rugby_Football_Club"
+NA,"TSV Handschuhsheim","TSV_Handschuhsheim"
+NA,"Reading RFC",NA
+NA,"Maccesfield RUFC","Macclesfield_R.U.F.C."
+NA,"Sharks de Miami","Sharks_de_Miami"
+NA,"Moata'a",NA
+NA,"Henley Hawks","Henley_Hawks"
+NA,"Moldavie","%C3%89quipe_de_Moldavie_de_rugby_%C3%A0_XV"
+NA,"Zvezda Tachkent",NA
+NA,"Empils Rostov-sur-le-Don",NA
+NA,"Vest-Zvezda Kaliningrad",NA
+NA,"Queanbeyan Whites",NA
+NA,"RC CERN",NA
+NA,"Stade Lausanne","Stade_Lausanne_Rugby_Club"
+NA,"SC Genève",NA
+NA,"RC Berne",NA
+NA,"Uruguay -20","%C3%89quipe_d%27Uruguay_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Tunbridge Wells RFC",NA
+NA,"kituro Schaerbeek",NA
+NA,"RFC Liège","Royal_Football_Club_li%C3%A9geois_rugby"
+NA,"Pogoń Siedlce","Pogo%C5%84_Siedlce"
+NA,"AZS-AWF Varsovie","AZS-AWF_Warszawa_(rugby)"
+NA,"Pogon Siedlce",NA
+NA,"Budowlani Łódź","Budowlani_%C5%81%C3%B3d%C5%BA_(rugby_%C3%A0_XV)"
+NA,"UA Vic-Fezensac",NA
+NA,"US Albi","Union_sportive_albigeoise"
+NA,"Servette Genève","Servette_Rugby_Club"
+NA,"Namosi RFU",NA
+NA,"Uni Tucumán",NA
+NA,"Académie Mirano",NA
+NA,"Académie FIR Tirrenia",NA
+NA,"Université Tenri","Universit%C3%A9_de_Tenri"
+NA,"Melbourne RFU",NA
+NA,"Redruth RFC",NA
+NA,"Bradford RFC",NA
+NA,"Scariff RFC",NA
+NA,"Young Munster; Young Munster RFC","Young_Munster_Rugby_Football_Club"
+NA,"SAC Condom",NA
+NA,"Puteaux",NA
+NA,"Barbezieux SCR",NA
+NA,"BC islois",NA
+NA,"Wigan","Wigan_Warriors"
+NA,"LinceRC",NA
+NA,"Harrogate",NA
+NA,"York",NA
+NA,"NMMU Madibaz","Universit%C3%A9_m%C3%A9tropolitaine_Nelson-Mandela"
+NA,"SARU",NA
+NA,"Bigua RC",NA
+NA,"Slava Moscou","Slava_Moscou"
+NA,"Cumnock RFC",NA
+NA,"Ayr RFC; Ayrshire Bulls; Ayrshire RFC","Ayr_Rugby_Football_Club"
+NA,"Lechia Gdańsk; RC Lechia Gdańsk","Rugby_Club_Lechia_Gda%C5%84sk"
+NA,"Akita Northern Bullets",NA
+NA,"Falaleu Marist",NA
+NA,"Hull RUFC",NA
+NA,"Wanderers RC","Wanderers_Rugby_Club"
+NA,"Capbreton Hossegor R.",NA
+NA,"Namibie -19",NA
+NA,"BBRFC Celtic",NA
+NA,"Sila Pelu Ua",NA
+NA,"Toa-ko-Ma’afu",NA
+NA,"Karaka RFC",NA
+NA,"Brighton Secondary School","Brighton_Secondary_School"
+NA,"Christian Brothers SS Youghal",NA
+NA,"Cork Institute of Technology","Cork_Institute_of_Technology"
+NA,"Boston RFC","Boston_Rugby_Football_Club"
+NA,"New York AC; New York Athletic Club RFC; NYAC RFC; New York Athletic Club","New_York_Athletic_Club_Rugby_Football_Club"
+NA,"Glendale Merlins","Glendale_Merlins"
+NA,"Hobart Harlequins",NA
+NA,"Ballina RFC",NA
+NA,"Buccaneers RFC; Buccaneers","Buccaneers_Rugby_Football_Club"
+NA,"Douglas RFC",NA
+NA,"Sundays Well RFC",NA
+NA,"Chichester RFC","Chichester_RFC"
+NA,"Australian Rugby Union’s National Academy",NA
+NA,"RC Drancy","Rugby_Club_de_Drancy"
+NA,"St Peter's College, Auckland","St_Peter%27s_College_(Auckland)"
+NA,"Écosse -18",NA
+NA,"Luctonians SC",NA
+NA,"Massey High School","Massey_High_School"
+NA,"Hawke's Bay Unicorns",NA
+NA,"Brisbane Tigers",NA
+NA,"Australian Barbarians",NA
+NA,"ES Montignac",NA
+NA,"Bretenoux Biars",NA
+NA,"Bassoues",NA
+NA,"RC Flandre Littoral",NA
+NA,"Stade caennais",NA
+NA,"US Joué",NA
+NA,"RC Combronde",NA
+NA,"Southern Beaches Rugby",NA
+NA,"AS Rugby Rovato",NA
+NA,"US Dôle",NA
+NA,"Stade nabeulien","Stade_nabeulien_(rugby_%C3%A0_XV)"
+NA,"US Tremblade",NA
+NA,"SA Parthenay",NA
+NA,"OC Montluçon",NA
+NA,"Esl rugby",NA
+NA,"Parentis SR",NA
+NA,"Korea Army",NA
+NA,"Corée du Sud","%C3%89quipe_de_Cor%C3%A9e_du_Sud_de_rugby_%C3%A0_XV"
+NA,"Fighting Irish de Notre-Dame","Fighting_Irish_de_Notre_Dame"
+NA,"Falkirk RFC","Falkirk_RFC"
+NA,"Lincoln University",NA
+NA,"FC Haguenau",NA
+NA,"RC Haguenau",NA
+NA,"Fijian Drua","Fijian_Drua"
+NA,"Écosse -18 ans",NA
+NA,"Écosse -19 ans",NA
+NA,"Écosse Club XV",NA
+NA,"TV Pforzheim","TV_Pforzheim"
+NA,"Battersea Ironsides",NA
+NA,"New Ross RFC","New_Ross_RFC"
+NA,"Université Tōkai","Universit%C3%A9_T%C5%8Dkai"
+NA,"Hounds de Chicago; Chicago; Chicago Hounds","Hounds_de_Chicago_(rugby_%C3%A0_XV)"
+NA,"Life Running Eagles; Running Eagles de Life; Life U Running Eagles","Running_Eagles_de_Life_University"
+NA,"États-Unis -20","%C3%89quipe_des_%C3%89tats-Unis_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Hills Sports High Scholl",NA
+NA,"Université de Tsukuba","Universit%C3%A9_de_Tsukuba"
+NA,"Tyee High School","Tyee_High_School"
+NA,"Seattle Vikings RC",NA
+NA,"Lalinde","Lalinde"
+NA,"Los Matreros RC",NA
+NA,"US Casteljaloux",NA
+NA,"RC bazeillais",NA
+NA,"MKS Pogoń Siedlce",NA
+NA,"Windsor Wolves","Windsor_Wolves"
+NA,"VPC Andorra XV",NA
+NA,"Kenya Harlequins",NA
+NA,"Burdekin Canetoads",NA
+NA,"Wicklow Rugby Club",NA
+NA,"Sedgley RUFC",NA
+NA,"Saint-Pée UC",NA
+NA,"Entente de La Nivelle",NA
+NA,"De La Salle College",NA
+NA,"Aston Old Edwardians",NA
+NA,"Rugby Badia",NA
+NA,"*",NA
+NA,"CS lédonien",NA
+NA,"ASR Milan",NA
+NA,"UKZN Impi","Universit%C3%A9_du_KwaZulu-Natal"
+NA,"High School of Dundee",NA
+NA,"Strathallan School",NA
+NA,"Glasgow Hawks; Glasgow Hawks RFC","Glasgow_Hawks_Rugby_Football_Club"
+NA,"Rion Morcenx RC",NA
+NA,"Kagifa Samoa; Manuma Samoa","Manuma_Samoa"
+NA,"Selknam","Selknam_(rugby_%C3%A0_XV)"
+NA,"Leonorso Rugby Udine","Rugby_Udine_Union_FVG"
+NA,"Santiago Lawn TC",NA
+NA,"Ovalau Rugby Club",NA
+NA,"Box Hill",NA
+NA,"Appia Rugby",NA
+NA,"F.I.R. Academy",NA
+NA,"UA Lycée Michelet de Vanves",NA
+NA,"Saint Girons SC",NA
+NA,"AS Monaco; AS Monaco rugby","Association_sportive_de_Monaco"
+NA,"AC Soissons",NA
+NA,"Malton and Norton RUFC",NA
+NA,"Old Albanian RFC","Old_Albanian_RFC"
+NA,"Saracens Academy",NA
+NA,"Servian Boujan Rugby",NA
+NA,"Galway Corinthians","Galway_Corinthians_Rugby_Football_Club"
+NA,"Old Hararians RFC",NA
+NA,"Old Georgians RC",NA
+NA,"Chippenham RFC","Chippenham_RFC"
+NA,"Kanto Gakuin University",NA
+NA,"École de rugby de Krasnoïarsk",NA
+NA,"RC Khimik Dzerjinsk",NA
+NA,"Sydney Harlequins RFC",NA
+NA,"Entente de la Nivelle",NA
+NA,"Molsheim",NA
+NA,"Yamacia Rugby",NA
+NA,"Géorgie -18",NA
+NA,"St Mary's Old Boys",NA
+NA,"Leinster A",NA
+NA,"Aberdeen GSFP; Aberdeen Grammar","Aberdeen_GSFP_Rugby_Football_Club"
+NA,"RC castelpontin",NA
+NA,"Australian Schoolboys",NA
+NA,"RC Redon",NA
+NA,"Mount Hagen",NA
+NA,"Port Moresby",NA
+NA,"Philippines","%C3%89quipe_des_Philippines_de_rugby_%C3%A0_XV"
+NA,"CP Les Abelles","Club_Polideportivo_Les_Abelles"
+NA,"Antony Métro 92",NA
+NA,"Magnoac FC","Castelnau-Magnoac"
+NA,"Red Star olympique",NA
+NA,"Stadoceste toulousain",NA
+NA,"Tbilissi Caucasians","Tbilissi_Caucasians"
+NA,"RC Jiki; RC Jiki Gori","Rugby_Club_Jiki"
+NA,"Armazi Tbilisi",NA
+NA,"Géorgie -16",NA
+NA,"Scarlets A",NA
+NA,"Galles -16",NA
+NA,"CR Évora","Clube_de_Rugby_de_%C3%89vora"
+NA,"RC Armazi; Rugby Club Armazi","Rugby_Club_Armazi"
+NA,"Géorgie -17",NA
+NA,"Lanzac",NA
+NA,"Antony",NA
+NA,"Université de Nottingham RUC","Universit%C3%A9_de_Nottingham"
+NA,"Howe of Fife RFC",NA
+NA,"RC Grimaud Ste-Maxime",NA
+NA,"RAC Castelroussin",NA
+NA,"Rugby Touraine Plus",NA
+NA,"St Anne de Bellevue",NA
+NA,"Canada A",NA
+NA,"Afrique du Sud -18",NA
+NA,"Huirapuca SC",NA
+NA,"Université Chūō","Universit%C3%A9_Ch%C5%AB%C5%8D"
+NA,"Hanazono University",NA
+NA,"Ordizia RE; Ordizia Rugby Elkartea","Ordizia_Rugby_Elkartea"
+NA,"Espérance Saint-Léger",NA
+NA,"Windhoek High School","Windhoek_High_School"
+NA,"Naitasiri Rugby Union",NA
+NA,"Fire RC",NA
+NA,"Lobos RC",NA
+NA,"RC Valpolicella",NA
+NA,"Peñarol Rugby; Peñarol","Pe%C3%B1arol_Rugby"
+NA,"Rugby ATL","Rugby_ATL"
+NA,"Los Cuervos",NA
+NA,"RC baulois","La_Baule-Escoublac"
+NA,"Walvis Bay High School",NA
+NA,"Paarl Boys' High School; Paarl HS","Paarl_Boys%27_High_School"
+NA,"Université du Cap-Occidental","Universit%C3%A9_du_Cap-Occidental"
+NA,"Strela Kazan; Strela-Agro Kazan; AgroUniversity Kazan","Strela_Kazan"
+NA,"Canada -17",NA
+NA,"Jelgavs Alni",NA
+NA,"Lettonie","%C3%89quipe_de_Lettonie_de_rugby_%C3%A0_XV"
+NA,"Western Suburbs RC",NA
+NA,"USEFS Blumarine Chișinău",NA
+NA,"Rugby Toucy PF",NA
+NA,"RC Auxerre",NA
+NA,"ABCD XV",NA
+NA,"RC Bagnolet",NA
+NA,"AS Chalampé",NA
+NA,"Paraná RC",NA
+NA,"Suntory Foods Sundelphis","%E3%82%B5%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E3%83%95%E3%83%BC%E3%82%BA%E3%82%B5%E3%83%B3%E3%83%87%E3%83%AB%E3%83%95%E3%82%A3%E3%82%B9"
+NA,"Monivea",NA
+NA,"RGC 1404","RGC_1404"
+NA,"Carmarthen Athletic",NA
+NA,"Pontyclun RFC",NA
+NA,"Moorabbin RFC",NA
+NA,"St Ives RFC",NA
+NA,"Grammar TEC Rugby Club","Grammar_TEC_RC"
+NA,"Newcastle Emlyn RFC","Newcastle_Emlyn_RFC"
+NA,"Bryncethin RFC",NA
+NA,"Ospreys A",NA
+NA,"Treorchy RFC",NA
+NA,"France Militaire",NA
+NA,"France Fédérales",NA
+NA,"Skerries RFC",NA
+NA,"Club Pucará","Club_Pucar%C3%A1"
+NA,"Valsugana Rugby Padova",NA
+NA,"RC Seilh Fenouillet",NA
+NA,"Grenade sports",NA
+NA,"F.I.R Academy",NA
+NA,"Rugby Club Paris XV",NA
+NA,"Fennecs d'Amoukrouz (Mauritanie)",NA
+NA,"RCV Montmorency Soisy",NA
+NA,"Old Blue RFC","Old_Blue_Rugby_Football_Club"
+NA,"Southwest High School","Southwest_High_School_(Minnesota)"
+NA,"Eastside Banshees RC",NA
+NA,"Golden Gophers du Minnesota","Golden_Gophers_du_Minnesota"
+NA,"Crosshaven RFC",NA
+NA,"Grizzlies du Montana","Grizzlies_du_Montana"
+NA,"Mazda Blue Zoomers",NA
+NA,"Rivesaltes Bompas XV",NA
+NA,"CS Nuiton; CS nuiton","Nuits-Saint-Georges"
+NA,"Ruffec AC",NA
+NA,"Cinderford R.F.C.",NA
+NA,"Southern Districts Rugby Club Melbourne",NA
+NA,"St Kevin's College","St_Kevin%27s_College,_Melbourne"
+NA,"Ulster A",NA
+NA,"Zimbabwe -20","%C3%89quipe_du_Zimbabwe_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Westville Boys' High School","Westville_Boys%27_High_School"
+NA,"Cougars de BYU","Cougars_de_BYU"
+NA,"Clifton",NA
+NA,"Junior Valley",NA
+NA,"Merchant Taylors' School","Merchant_Taylors%27_School"
+NA,"Université de Leeds","Universit%C3%A9_de_Leeds"
+NA,"Otley RFC; Otley RUFC","Otley_Rugby_Union_Football_Club"
+NA,"Tokatoka Westfield Dragons",NA
+NA,"Lince RC",NA
+NA,"Takushoku Université; Université de Takushoku","Universit%C3%A9_de_Takushoku"
+NA,"Police SC",NA
+NA,"Argentine -18",NA
+NA,"Hoerskool Florida",NA
+NA,"Cherry Creek High School","Cherry_Creek_High_School"
+NA,"Rams de Colorado State","Rams_de_Colorado_State"
+NA,"Colegio Craighouse","Colegio_Craighouse"
+NA,"COBS; Craighouse Old Boys","Craighouse_Old_Boys"
+NA,"Bengals d'Idaho State","Bengals_d%27Idaho_State"
+NA,"OGE Montmorency",NA
+NA,"Stade Laurentin",NA
+NA,"US Lavardac Barbaste",NA
+NA,"Junior Japan","%C3%89quipe_du_Japon_XV_de_rugby_%C3%A0_XV"
+NA,"Stow-on-the-Wold",NA
+NA,"Cheltenham College","Cheltenham_College"
+NA,"US Renage Rives",NA
+NA,"Cardiff Met University","Cardiff_Metropolitan_University_RFC"
+NA,"Kenya Commercial Bank Sports Club","Kenya_Commercial_Bank_Sports_Club"
+NA,"Zimbabwe -18",NA
+NA,"Université de Ritsumeikan","Universit%C3%A9_de_Ritsumeikan"
+NA,"Hillfoots",NA
+NA,"Darlington RFC",NA
+NA,"Grey College",NA
+NA,"CUT Ixias","Universit%C3%A9_de_technologie_centrale"
+NA,"JS Gramat",NA
+NA,"Ent.St-CéréBretenoux",NA
+NA,"Géorgie -19",NA
+NA,"Géorgie XV",NA
+NA,"Walsall RFC","Walsall_RFC"
+NA,"RC Frameries; Rugby Club Frameries","Rugby_Club_Frameries"
+NA,"Malaisie","%C3%89quipe_de_Malaisie_de_rugby_%C3%A0_XV"
+NA,"Suburbs Rugby",NA
+NA,"Wanneroo RUC",NA
+NA,"US Verfeil Rugby",NA
+NA,"Dunfermline RFC",NA
+NA,"Université Yamanashi Gakuin",NA
+NA,"Mount Albert Grammar School","Mount_Albert_Grammar_School"
+NA,"Suburbs RFC",NA
+NA,"Pukekohe Rugby Club",NA
+NA,"Samoa A","Samoa_A_national_rugby_union_team"
+NA,"North Ribblesdale RFC",NA
+NA,"Angleterre -17",NA
+NA,"Winchester RFC","Winchester_RFC"
+NA,"Symondians","Peter_Symonds_College"
+NA,"Grasshoppers RFC",NA
+NA,"Crewe & Nantwich RUFC",NA
+NA,"Shelford RFC","Shelford_Rugby_Club"
+NA,"Wymondham RFC",NA
+NA,"RC Martigues Port-de-Bouc",NA
+NA,"Larche",NA
+NA,"CUS Padova","CUS_Padova_Rugby"
+NA,"Valsugana","Valsugana_Rugby_Padova"
+NA,"Sporting ASEM",NA
+NA,"RC Pays de Saint-Yrieix",NA
+NA,"Cathedral High School","Cathedral_High_School_(Indianapolis)"
+NA,"Hoosiers de l'Indiana","Hoosiers_de_l%27Indiana"
+NA,"Melbourne RUFC",NA
+NA,"Getxo Artea RT; Getxo RT","Getxo_Artea_Rugby_Taldea"
+NA,"CAU Rugby Valencia","CAU_Rugby_Valencia"
+NA,"Burnside RFC",NA
+NA,"Castilla y León Iberians","Castilla_y_Le%C3%B3n_Iberians"
+NA,"Belfast RFC",NA
+NA,"Marist Ma’ufanga",NA
+NA,"Ding Crusaders",NA
+NA,"Cullompton RFC",NA
+NA,"Whitgift School","Whitgift_School"
+NA,"Université d'Exeter","Universit%C3%A9_d%27Exeter"
+NA,"RC Iunkerebi; RC Junkers","Rugby_Club_Iunkerebi"
+NA,"Pentyrch RFC",NA
+NA,"Isetan RFC",NA
+NA,"Old Verulamians",NA
+NA,"Wellington College",NA
+NA,"Stewartry RFC",NA
+NA,"Entente des 4 Cantons",NA
+NA,"St Joseph's RFC","St._Joseph%27s_RFC"
+NA,"Centaurs RFC",NA
+NA,"Brighton RC",NA
+NA,"Strathaven RFC",NA
+NA,"Dalziel RFC",NA
+NA,"RCV Montmorency",NA
+NA,"AS Tournus",NA
+NA,"CO Saint-Lary-Soulan",NA
+NA,"Banbridge RFC","Banbridge_RFC"
+NA,"Marbella RC",NA
+NA,"Cambridge RUFC","Cambridge_R.U.F.C."
+NA,"Espagne -18",NA
+NA,"US Arize",NA
+NA,"CO Tauch Corbières",NA
+NA,"Touraine Plus",NA
+NA,"Regatas de San Nicolás",NA
+NA,"Narrabri Blue Boars",NA
+NA,"Gunnedah Red Devils",NA
+NA,"Université Ryutsu Keizai",NA
+NA,"AS Rugby Milano",NA
+NA,"Léognan Rugby",NA
+NA,"La Brède Rugby",NA
+NA,"Westshore RFC","Westshore_RFC"
+NA,"St. Michaels University School","St._Michaels_University_School"
+NA,"Hamilton Boys' High School","Hamilton_Boys%27_High_School"
+NA,"London Skolars",NA
+NA,"Old Brodleians RFC",NA
+NA,"Kaicolo",NA
+NA,"AS AIA Lempdes",NA
+NA,"Wattstown RFC",NA
+NA,"RC Montaigut Besse",NA
+NA,"Coarraze-Nay",NA
+NA,"AS Hossegor",NA
+NA,"Canet-Sainte-Marie",NA
+NA,"Rugby Créteil Choisy",NA
+NA,"Cranleigh School",NA
+NA,"Verona Rugby",NA
+NA,"San Martín Rugby Club",NA
+NA,"Bedwas RFC","Bedwas_Rugby_Football_Club"
+NA,"Old Beans Nouméa",NA
+NA,"Livingston RFC","Livingston_RFC"
+NA,"Miraglia Agrigente",NA
+NA,"Frascati","Rugby_Frascati_Union"
+NA,"St Joseph’s Nudgee College",NA
+NA,"Australie -18",NA
+NA,"RK Zelenograd",NA
+NA,"RC Arka Gdynia","RC_Arka_Gdynia"
+NA,"Spartak GM","Spartak_GM"
+NA,"RC Sporting ASEM",NA
+NA,"CS Politehnica Iași",NA
+NA,"Sarmat Vladikavkaz",NA
+NA,"Metallourg Novokouznetsk","Metallourg_Novokouznetsk"
+NA,"IT Saitama",NA
+NA,"Stade calédonien",NA
+NA,"Tours",NA
+NA,"AAS Sarcelles",NA
+NA,"Pirates Rugby Club",NA
+NA,"Old Grangonian Club","Old_Grangonian_Club"
+NA,"Chili -20","%C3%89quipe_du_Chili_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Carlisle RFC","Carlisle_RFC"
+NA,"Athy RFC","Athy_RFC"
+NA,"Uncas Rugby Club","Uncas_Rugby_Club"
+NA,"Ceibos; Dogos XV; Ceibos Rugby","Dogos_XV"
+NA,"Université Daito Bunka",NA
+NA,"Dynamo-Energie Kazan",NA
+NA,"Old Elthamians","Old_Elthamians"
+NA,"Saint-Front-sur-Lémance","Saint-Front-sur-L%C3%A9mance"
+NA,"RC Courbevoie",NA
+NA,"Rugby Castets Linxe",NA
+NA,"Association Côte Landes",NA
+NA,"Pewaukee High School","Pewaukee_School_District"
+NA,"U Wisconsin - Platteville","Universit%C3%A9_du_Wisconsin_%C3%A0_Platteville"
+NA,"U Wisconsin - Whitewater","Universit%C3%A9_du_Wisconsin_%C3%A0_Whitewater"
+NA,"Milwaukee Barbarians","Milwaukee_Barbarians"
+NA,"États-Unis A",NA
+NA,"FC Lyon","Football_Club_de_Lyon"
+NA,"RC Saint-Cernin",NA
+NA,"Entente Pouillon Habas",NA
+NA,"Austin Huns","Austin_Huns"
+NA,"Dumbea RC",NA
+NA,"Taunton Titans",NA
+NA,"SC Chinon",NA
+NA,"MLSGP 78 rugby",NA
+NA,"Bishopston RFC",NA
+NA,"St. John's Prep","St._John%27s_Preparatory_School_(Massachusetts)"
+NA,"Big Green de Dartmouth","Big_Green_de_Dartmouth"
+NA,"Tulsa Union High School","Union_High_School_(Tulsa,_Oklahoma)"
+NA,"Lindenwood Lions","Lindenwood_Lions_men%27s_rugby"
+NA,"RC Canton Garde Pradet",NA
+NA,"RC Kazbegi",NA
+NA,"EPA Razorbacks",NA
+NA,"Woodside High School","Woodside_High_School_(California)"
+NA,"Sacred Heart College","Sacred_Heart_College"
+NA,"Life West Gladiators","Life_West_Gladiators"
+NA,"États-Unis XV",NA
+NA,"RC Khachouri",NA
+NA,"PK de Villiers SS",NA
+NA,"NUST","Universit%C3%A9_des_sciences_et_technologies_de_Namibie"
+NA,"UNAM","Universit%C3%A9_de_Namibie"
+NA,"Tonbridge School","Tonbridge_School"
+NA,"Sevenoaks RFC","Sevenoaks_RFC"
+NA,"Little Rock RC",NA
+NA,"RC Chokhosnebi",NA
+NA,"Abersychan RFC",NA
+NA,"US bassin de Longwy",NA
+NA,"Andorre",NA
+NA,"Rugby Gossolengo",NA
+NA,"Académie Ivan Francescato",NA
+NA,"Université de Bath","Universit%C3%A9_de_Bath"
+NA,"Nadi",NA
+NA,"ASC Pessac Alouette",NA
+NA,"Ipswich RUFC",NA
+NA,"Pontyberem RFC",NA
+NA,"Risca RFC","Risca_RFC"
+NA,"Newport High School Old Boys RFC","Newport_HSOB_RFC"
+NA,"Rugby Chartres Métropole",NA
+NA,"GAOBS",NA
+NA,"Îles Cook -20",NA
+NA,"Parentis sport rugby",NA
+NA,"RC Mauguio-Carnon",NA
+NA,"Rugby Melun Combs 77",NA
+NA,"USOMC rugby","13e_arrondissement_de_Paris"
+NA,"Reading Abbey",NA
+NA,"Taunton RFC; Taunton Titans","Taunton_R.F.C."
+NA,"University of Namibia RC",NA
+NA,"Danie Joubert Combined School",NA
+NA,"Mariental High School",NA
+NA,"Windhoek Technical High School",NA
+NA,"Anthem Rugby Carolina","Anthem_Rugby_Carolina"
+NA,"RO védasien",NA
+NA,"RC Grivița Roșie",NA
+NA,"VS Chartres","V%C3%A9lo_Sport_chartrain"
+NA,"Maties Rugby Club",NA
+NA,"Naas RFC","Naas_RFC"
+NA,"Angers SCO rugby",NA
+NA,"Nakavu Rugby Club",NA
+NA,"USAP","Union_des_sports_athl%C3%A9tiques_perpignanais"
+NA,"AA Nogaro",NA
+NA,"CSȘ București",NA
+NA,"Știința Petroșani",NA
+NA,"Roumanie -19",NA
+NA,"Sport étude Ussel",NA
+NA,"Olympique de Besançon","Olympique_de_Besan%C3%A7on_rugby"
+NA,"Université Asahi",NA
+NA,"Skibbereen RFC",NA
+NA,"Bandon RFC","Bandon_R.F.C."
+NA,"Bishop's Stortford; Bishop's Stortford RFC","Bishop%27s_Stortford_RFC"
+NA,"Heritage School",NA
+NA,"St John's Prep","St._John%27s_Preparatory_School_(Harare)"
+NA,"Cordwalles Prep","Cordwalles_Preparatory_School"
+NA,"Michaelhouse","Michaelhouse"
+NA,"Varsity College","Varsity_College_(South_Africa)"
+NA,"Old Georgians RFC",NA
+NA,"Bassin Sud minervois",NA
+NA,"Cashel RFC",NA
+NA,"Cornouailles",NA
+NA,"Ent. Fleurance Lectoure",NA
+NA,"Cowbridge RFC",NA
+NA,"Clongowes; Clongowes Wood College","Clongowes_Wood_College"
+NA,"FC Tain Tournon",NA
+NA,"RC Maisons-Alfort SM","Maisons-Alfort"
+NA,"Coolmine RFC",NA
+NA,"Nawaka District School",NA
+NA,"Ratu Navula College",NA
+NA,"Nadi Jets",NA
+NA,"Laulii",NA
+NA,"RC Unirea Iași",NA
+NA,"Roumanie -18",NA
+NA,"Roumanie A",NA
+NA,"Bagrati Kutaisi",NA
+NA,"RC Sélestat Giessen","Rugby_Club_S%C3%A9lestat_Giessen"
+NA,"Espagne -21",NA
+NA,"Espagne -20","%C3%89quipe_d%27Espagne_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Independiente RC; Bathco RC","Independiente_Rugby_Club"
+NA,"Dings Crusaders","Dings_Crusaders_RFC"
+NA,"Cinderford RFC","Cinderford_R.F.C."
+NA,"Val-de-Provence",NA
+NA,"Glenstal Abbey School; Glenstal Abbey Rugby","Glenstal_Abbey_School"
+NA,"The King's Hospital","The_King%27s_Hospital"
+NA,"Houston Athletic RC",NA
+NA,"Galveston RFC",NA
+NA,"Clovelly Eagles JRFC",NA
+NA,"Waverley College","Waverley_College"
+NA,"Rams RFC","Rams_RFC"
+NA,"Union Cazères",NA
+NA,"CR Majadahonda",NA
+NA,"Club Champagnat","Club_Champagnat"
+NA,"Tucumán LT",NA
+NA,"Cardiff Blues A",NA
+NA,"RC Bârlad",NA
+NA,"SC Royans","Saint-Jean-en-Royans"
+NA,"Rugby club Morteau",NA
+NA,"US Ris-Orangis",NA
+NA,"Melbourne Harlequins","Harlequin_Rugby_Club"
+NA,"Prairie RFC",NA
+NA,"Liberty High School",NA
+NA,"Washington Loggers",NA
+NA,"États-Unis -19",NA
+NA,"SO Ugine Albertville",NA
+NA,"Warlingham RFC",NA
+NA,"Trinity College","Trinity_College_(Dublin)"
+NA,"Enniskillen RFC",NA
+NA,"XV dyonisien; XV dionysien","Saint-Denis_(La_R%C3%A9union)"
+NA,"RCSAM","Soisy-sous-Montmorency"
+NA,"RC Bocage virois",NA
+NA,"Fidji -18",NA
+NA,"Yasawa",NA
+NA,"Andover RFC",NA
+NA,"RBAI","Royal_Belfast_Academical_Institution"
+NA,"Nadroga Stallions",NA
+NA,"Rewa",NA
+NA,"Hornets RFC",NA
+NA,"Macclesfield RUFC",NA
+NA,"Suisse -18",NA
+NA,"CUS Rome",NA
+NA,"Cúcuta RC",NA
+NA,"RC Belfort-Montbéliard",NA
+NA,"Écosse -16",NA
+NA,"Ecosse -18",NA
+NA,"Old Albanians",NA
+NA,"Tycroes RFC",NA
+NA,"St Michael's College","St_Michael%27s_College,_Dublin"
+NA,"Cobras; Corinthians Rugby","Cobras"
+NA,"RC Pont-à-Mousson","Pont-%C3%A0-Mousson"
+NA,"RC Pirae",NA
+NA,"Gungahlin Eagles","Gungahlin_Eagles"
+NA,"Tumble RFC",NA
+NA,"U.S. Rugby Benevento","B%C3%A9n%C3%A9vent"
+NA,"Pujols",NA
+NA,"Club San Cirano","Club_San_Cirano"
+NA,"Aana Chiefs",NA
+NA,"Harbour RFC",NA
+NA,"AER Nvlle-Calédonie",NA
+NA,"Olympique de Nouméa",NA
+NA,"Santa Monica RC","Santa_Monica_Rugby_Club"
+NA,"Vio",NA
+NA,"Singleton RC",NA
+NA,"Kaliningrad",NA
+NA,"Saint-Petersbourg",NA
+NA,"IAM","Institut_d%27aviation_de_Moscou"
+NA,"Marino-Locomotive",NA
+NA,"Rangiora High School","Rangiora_High_School"
+NA,"Russie -20","%C3%89quipe_de_Russie_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"RC Zelenograd",NA
+NA,"RC Dynamo Moscou",NA
+NA,"Papatoetoe RFC",NA
+NA,"Tonga A",NA
+NA,"Uruguay XV",NA
+NA,"VGA Saint-Maur","VGA_Saint-Maur_Omnisports"
+NA,"Rugby Club Sucy","Sucy-en-Brie"
+NA,"Southern Polk High School",NA
+NA,"Grange School","The_Grange_School,_Santiago"
+NA,"Southland High School","Southland_Boys%27_High_School"
+NA,"Chili XV",NA
+NA,"Uluninakau RFC",NA
+NA,"RC Billère ASPTT Lescar",NA
+NA,"US Deux Ponts",NA
+NA,"Birr RFC",NA
+NA,"Ysgol Gyfun Gymraeg Glantaf","Ysgol_Gyfun_Gymraeg_Glantaf"
+NA,"East Coast Bays RFC",NA
+NA,"Buckingham RUFC",NA
+NA,"Los Tarcos RC","Los_Tarcos_Rugby_Club"
+NA,"Club Pueyrredón","Club_Pueyrred%C3%B3n"
+NA,"The Big Stones","The_Big_Stones"
+NA,"Rugby Academy MiddenOost",NA
+NA,"RC Eemland","Rugbyclub_Eemland"
+NA,"RC 't Gooi","Rugby_Club_%27t_Gooi"
+NA,"Nenagh Ormond RFC","Nenagh_Ormond"
+NA,"Hokkaido Barbarians","%E5%8C%97%E6%B5%B7%E9%81%93%E3%83%90%E3%83%BC%E3%83%90%E3%83%AA%E3%82%A2%E3%83%B3%E3%82%BA"
+NA,"Pessac Rugby",NA
+NA,"Kahuku High",NA
+NA,"Cwmtwrch RFC","Cwmtwrch_RFC"
+NA,"Amman United RFC","Amman_United_RFC"
+NA,"Swaffham RFC",NA
+NA,"Norwich School","Norwich_School"
+NA,"Entente des 4 cantons",NA
+NA,"RC Dourdan",NA
+NA,"XV Corsaire St-Malo",NA
+NA,"Voreppe RC",NA
+NA,"RC Chartreuse Néron",NA
+NA,"Northampton School for Boys","Northampton_School_for_Boys"
+NA,"Pays de Lourdes XV",NA
+NA,"Plaisir RC",NA
+NA,"Nouvelle-Calédonie","%C3%89quipe_de_Nouvelle-Cal%C3%A9donie_de_rugby_%C3%A0_XV"
+NA,"RCP Meaux",NA
+NA,"Crymych RFC",NA
+NA,"Inthalatz Larressore",NA
+NA,"RC Le Môle","Bonneville_(Haute-Savoie)"
+NA,"RC Faucigny Sallanches Mont-Blanc",NA
+NA,"Sor Agout XV","Soual"
+NA,"RC cubzaguais","Saint-Andr%C3%A9-de-Cubzac"
+NA,"Presentation Brothers College","Presentation_Brothers_College,_Cork"
+NA,"Rugby club revélois","Revel_(Haute-Garonne)"
+NA,"Accademia federale di Mogliano",NA
+NA,"Reef Raiders",NA
+NA,"Carabins","Carabins_de_l%27Universit%C3%A9_de_Montr%C3%A9al"
+NA,"Town of Mount Royal RFC",NA
+NA,"Rugby Québec","Rugby_Qu%C3%A9bec"
+NA,"Esztergomi Vitézek Rugby SE",NA
+NA,"Hongrie","%C3%89quipe_de_Hongrie_de_rugby_%C3%A0_XV"
+NA,"Sarmaty Vladikavkaz",NA
+NA,"AZS-AWF Warszawa",NA
+NA,"RCP Muzillacais",NA
+NA,"Boitsfort RC; Boitsfort Rugby Club","Boitsfort_Rugby_Club"
+NA,"Gent RFC","Gent_RFC"
+NA,"SA Châteaubriant","Ch%C3%A2teaubriant"
+NA,"RCS Brétigny","Br%C3%A9tigny-sur-Orge"
+NA,"Barbarians français 7s",NA
+NA,"CSR Pașcani",NA
+NA,"CSŞ Siromex Baia Mare",NA
+NA,"North Walsham RFC","North_Walsham_R.F.C."
+NA,"Oakham School","Oakham_School"
+NA,"Entente Aramits-Asasp",NA
+NA,"US Castillon-la-Bataille",NA
+NA,"Ovalimagne",NA
+NA,"Newbury RFC",NA
+NA,"Portugal -20","%C3%89quipe_du_Portugal_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Sanary Ovalie",NA
+NA,"XV Saint-Rémois",NA
+NA,"RC Noves-Eyragues",NA
+NA,"RO Planais",NA
+NA,"RC Noisy-le-Grand",NA
+NA,"Morcenx","Morcenx"
+NA,"Casteljaloux","Casteljaloux"
+NA,"RC Mende Lozère",NA
+NA,"Arles","Arles"
+NA,"Hoërskool Montana",NA
+NA,"Centurion RK",NA
+NA,"AAS Fresnes",NA
+NA,"Afili Rugby Futuna",NA
+NA,"Avamafoa RC",NA
+NA,"University College Dublin","University_College_Dublin"
+NA,"AS Salisienne",NA
+NA,"Avenir de Barcus",NA
+NA,"US Saint-Palais",NA
+NA,"RC Mende","Mende"
+NA,"CSȘ Triumf Bucarest",NA
+NA,"Gloria Bucarest",NA
+NA,"Energia Bucarest",NA
+NA,"Kia Toa RFC",NA
+NA,"Bièvre Saint-Geoirs RC",NA
+NA,"RMCS77","Melun"
+NA,"Club San Andrés","Club_San_Andr%C3%A9s"
+NA,"CRAB XV",NA
+NA,"RC Clermont Cournon D'Auvergne",NA
+NA,"UA La Rochefoucauld",NA
+NA,"Brighton Football Club","Brighton_Football_Club_(RFU)"
+NA,"Sussex College",NA
+NA,"A.S. Côte basque",NA
+NA,"ESCA rugby",NA
+NA,"RC Laurentin",NA
+NA,"US Millas",NA
+NA,"SCR XV",NA
+NA,"White Devils Perpignan",NA
+NA,"US Primavera","Unione_Sportiva_Primavera_Rugby"
+NA,"RASA",NA
+NA,"Courbevoie",NA
+NA,"RC Villeneuve",NA
+NA,"RC Pays six-fournais",NA
+NA,"Olympia",NA
+NA,"SA Arcachon",NA
+NA,"AS Côte basque",NA
+NA,"SN Bayonne",NA
+NA,"Saint-Cyprien",NA
+NA,"Toulouse Montaudran",NA
+NA,"Navarrenx",NA
+NA,"Stade Salisien","Salies-de-B%C3%A9arn"
+NA,"Dieppe UC",NA
+NA,"Colmar RC",NA
+NA,"Sadirac",NA
+NA,"Tullamore RFC",NA
+NA,"RC Limoux",NA
+NA,"AS Grane",NA
+NA,"RACC XV",NA
+NA,"RC Saint-Gilles","Saint-Gilles_les_Bains"
+NA,"L'Étang-Salé RC",NA
+NA,"RC Uzerche",NA
+NA,"AS Seilhac",NA
+NA,"RC Antibes",NA
+NA,"Strasbourg AR",NA
+NA,"Christians Brothers College",NA
+NA,"Irlande à 7 -18",NA
+NA,"Los Cardos",NA
+NA,"Reading Abbey R.F.C.","Reading_Abbey_R.F.C."
+NA,"Rivesaltes","Rivesaltes"
+NA,"Villeneuve-de-Marsan",NA
+NA,"Université Queen's","Universit%C3%A9_Queen%27s"
+NA,"USEP Ger Séron",NA
+NA,"Gold Coast Eagles","Gold_Coast_Eagles"
+NA,"The Southport School Rugby",NA
+NA,"Australie scolaire","Australian_Schoolboys_rugby_union_team"
+NA,"St-Martin-de-Seignanx ol.",NA
+NA,"Hong Kong FC","Hong_Kong_Football_Club"
+NA,"Crusaders International Academy",NA
+NA,"Allemagne -16",NA
+NA,"Nouvelle-Zélande -18",NA
+NA,"FC Yonnais",NA
+NA,"Bigua Rugby Club",NA
+NA,"Casale Rugby",NA
+NA,"FTGI Granducato",NA
+NA,"Angers SCO",NA
+NA,"US Canet Ste-Marie",NA
+NA,"R.C. Lupii Albi USEFS",NA
+NA,"Entente sportive Nanterre","Racing_Nanterre_Rugby"
+NA,"RC Haut Gévaudan",NA
+NA,"Good Luck RC",NA
+NA,"St. Charles College","St._Charles_College,_Pietermaritzburg"
+NA,"RC Vallée du Gapeau",NA
+NA,"Carre's Grammar School","Carre%27s_Grammar_School"
+NA,"Mazères Cassagne",NA
+NA,"US Sauveterre rugby",NA
+NA,"US Josbaig",NA
+NA,"Christchurch",NA
+NA,"Crusaders Academy",NA
+NA,"BALS",NA
+NA,"Pontardawe RFC","Pontardawe_RFC"
+NA,"Swansea Valley",NA
+NA,"Neath Athletic RFC",NA
+NA,"CD Hercesa","Club_Deportivo_Hercesa"
+NA,"Recoletas Burgos Caja Rural",NA
+NA,"Youghal RFC",NA
+NA,"Dungarvan RFC",NA
+NA,"Waterpark RFC",NA
+NA,"CRICC Caerdydd",NA
+NA,"CR Técnico","Clube_de_Rugby_do_T%C3%A9cnico"
+NA,"ASD Rugby Paese",NA
+NA,"Italie -18",NA
+NA,"Glenmore Park Brumbies",NA
+NA,"Coogee Wombats",NA
+NA,"Rainey Old Boys RFC","Rainey_RFC"
+NA,"Amatori Napoli Rugby",NA
+NA,"Académie Bénévent",NA
+NA,"Haagsche Rugby Club; Haagsche RC","Haagsche_Rugby_Club"
+NA,"Rugby Academy Zuid West",NA
+NA,"Northwood School","Northwood_School_(Durban_North,_South_Africa)"
+NA,"Aparejadores Rugby","Aparejadores_Rugby"
+NA,"Delta","Delta_(rugby_%C3%A0_XV)"
+NA,"Haagsche RC",NA
+NA,"Chicago Hounds","Hounds_de_Chicago"
+NA,"RK Budućnost","Ragbi_klub_Budu%C4%87nost"
+NA,"RK Vukovi",NA
+NA,"Monténégro","%C3%89quipe_du_Mont%C3%A9n%C3%A9gro_de_rugby_%C3%A0_XV"
+NA,"RC Aix-la-Chapelle","Rugby_Club_Aachen"
+NA,"US Forbach",NA
+NA,"Fit World Gorillák RC","Fit_World_Gorill%C3%A1k_RC"
+NA,"US Veore XV",NA
+NA,"RC The Bassets","Rugby_Club_The_Bassets"
+NA,"RFC Haarlem",NA
+NA,"TLA XV",NA
+NA,"Inthalatz rugby Larressore",NA
+NA,"Khvamli RC",NA
+NA,"Black Star Rugby Charleroi",NA
+NA,"Arcangues-Bassussarry",NA
+NA,"Antwerp RC",NA
+NA,"Covenant Brothers",NA
+NA,"Myerscough College",NA
+NA,"Université de Durham","Universit%C3%A9_de_Durham"
+NA,"Utrecht RC",NA
+NA,"Inside Running Academy",NA
+NA,"Greerton Marist RC",NA
+NA,"China Lions","China_Lions"
+NA,"Caldicot RFC","Caldicot_RFC"
+NA,"US Pomarez",NA
+NA,"US Air Force Academy","United_States_Air_Force_Academy"
+NA,"Larne RFC",NA
+NA,"Billingham RUFC",NA
+NA,"Amersham and Chiltern RFC",NA
+NA,"Stony Brook Univ.","Universit%C3%A9_d%27%C3%89tat_de_New_York_%C3%A0_Stony_Brook"
+NA,"Long Island RFC",NA
+NA,"Amicale Rugby Calais",NA
+NA,"Ecole de rugby du Daghestan",NA
+NA,"Red Star Olympique rugby","Red_Star_Olympique_rugby"
+NA,"Tavistock RFC",NA
+NA,"Narberth RFC",NA
+NA,"Prince of Wales CC","Prince_of_Wales_Country_Club"
+NA,"Mount Maunganui Sports Club",NA
+NA,"Sumner RC",NA
+NA,"Waipu RSC",NA
+NA,"São José RC","S%C3%A3o_Jos%C3%A9_Rugby_Clube"
+NA,"Universitario de Tucumán","Universitario_Rugby_Club_de_Tucum%C3%A1n"
+NA,"Loughborough Students",NA
+NA,"Université de Dublin","Universit%C3%A9_de_Dublin"
+NA,"Marr RFC","Marr_RFC"
+NA,"USQ Saints RC Toowoomba",NA
+NA,"Sévignacq Vallée du Gabas",NA
+NA,"Sandbach RUFC","Sandbach_RUFC"
+NA,"Tournay",NA
+NA,"Exideuil",NA
+NA,"Oxford RFC",NA
+NA,"Watershed College","Watershed_College"
+NA,"Beckenham RFC","Beckenham_RFC"
+NA,"UWE Bristol","Universit%C3%A9_de_l%27Ouest_de_l%27Angleterre"
+NA,"Bridgwater & Albion","Bridgwater_%26_Albion_RFC"
+NA,"New Brighton F.C.","New_Brighton_F.C._(rugby_union)"
+NA,"SC L'honor de Cos",NA
+NA,"Orsay Rugby club",NA
+NA,"RC Cestas",NA
+NA,"SAS Rugby",NA
+NA,"Club San Marcos",NA
+NA,"Bintulu RC",NA
+NA,"Sabah Osca Warriors RC",NA
+NA,"UPM Serdang Angles","Universiti_Putra_Malaysia"
+NA,"Sabah","Sabah"
+NA,"Terengganu","Terengganu"
+NA,"UWA RUFC","Universit%C3%A9_d%27Australie-Occidentale"
+NA,"Bathco RC","Club_de_Rugby_Santander"
+NA,"Chelsea RFC",NA
+NA,"Philemon Wright High School","Philemon_Wright_High_School"
+NA,"Bytown Blues",NA
+NA,"Cuvu College",NA
+NA,"St Stithians College","St_Stithians_College"
+NA,"Gordonians RFC","Gordonians_Rugby_Football_Club"
+NA,"RC Pays de Meaux",NA
+NA,"Barracudas de Saint-Barthélémy",NA
+NA,"RC du Levant",NA
+NA,"RC Diamant",NA
+NA,"Bastruc's",NA
+NA,"ROC Tourcoing","Tourcoing"
+NA,"ES Viry-Châtillon",NA
+NA,"Portugal -18",NA
+NA,"Portugal -21",NA
+NA,"Luxembourg","%C3%89quipe_du_Luxembourg_de_rugby_%C3%A0_XV"
+NA,"US Bazas","Bazas"
+NA,"RC Würenlos",NA
+NA,"Suisse -20","%C3%89quipe_de_Suisse_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Standard Chaudfontaine","Standard_rugby_club_Chaudfontaine"
+NA,"Brussels Devils","Brussels_Devils"
+NA,"Stade blayais","Blaye"
+NA,"Léognan rugby","L%C3%A9ognan"
+NA,"Prazer de Jogar Rugby",NA
+NA,"Avenir jurançonnais",NA
+NA,"Ol St-Genis-Laval",NA
+NA,"US St Pierre des Corps",NA
+NA,"Getafe Rugby",NA
+NA,"Belgique -16",NA
+NA,"RC Péruwelz",NA
+NA,"Belgique -17",NA
+NA,"Ashby RFC",NA
+NA,"C'Chartres Rugby","Chartres"
+NA,"MKS Rugby Łomianki",NA
+NA,"Brussels Barbarians","Brussels_Barbarians_Rugby_Football_Club"
+NA,"RC panonnais","Bras-Panon"
+NA,"Central Washington Wildcats","Central_Washington_Wildcats"
+NA,"CSCE Luxembourg",NA
+NA,"Hartpury College","Hartpury_University_and_Hartpury_College"
+NA,"RC rambertois","Saint-Rambert-d%27Albon"
+NA,"RC eaunois XV","Eaunes"
+NA,"Acholi Rugby Academy",NA
+NA,"Toyota Buffaloes",NA
+NA,"MTN Heathens",NA
+NA,"Kabras Sugar RFC",NA
+NA,"Ouganda","%C3%89quipe_d%27Ouganda_de_rugby_%C3%A0_XV"
+NA,"RC Mauguio Carnon",NA
+NA,"Dschang RC",NA
+NA,"GUS Genova","CUS_Genova_Rugby"
+NA,"Prince Edward School","Prince_Edward_School"
+NA,"Dale College Boys' High School","Dale_College_Boys%27_High_School"
+NA,"RC Amiens",NA
+NA,"RC amandinois","Saint-Amand-les-Eaux"
+NA,"RC Valenciennes","Valenciennes"
+NA,"North Berwick RFC",NA
+NA,"Rumney RFC",NA
+NA,"Silhillians RUFC",NA
+NA,"Leu RC","Saint-Leu_(La_R%C3%A9union)"
+NA,"AS Forgeron commentryens",NA
+NA,"US Pithiviers",NA
+NA,"Coq léguevinois","L%C3%A9guevin"
+NA,"Mastodontes Catanduva Rugby",NA
+NA,"Mastodontes Catanduva RC",NA
+NA,"Band Saracens","Bandeirantes_Rugby_Club"
+NA,"Pasteur AC","Pasteur_Athletique_Club"
+NA,"Brésil -18",NA
+NA,"Brésil -20","%C3%89quipe_du_Br%C3%A9sil_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"Brésil XV",NA
+NA,"Capbreton Hossegor Rugby",NA
+NA,"AS Bièvre Saint-Geoirs RC",NA
+NA,"RC Brezins",NA
+NA,"RC Sparta Prague","RC_Sparta_Prague"
+NA,"Vaitele","Vaitele"
+NA,"RC Clermont Cournon",NA
+NA,"Tremblay-en-France","Tremblay-en-France"
+NA,"Terres de France Rugby",NA
+NA,"New Dock Stars RFC",NA
+NA,"Bynea RFC",NA
+NA,"Burry Port RFC",NA
+NA,"USMA Ossun",NA
+NA,"EDG - Gradignan",NA
+NA,"Burdigala",NA
+NA,"Edmonton Nor'Westers Rugby Club",NA
+NA,"Edmonton Gold","Edmonton_Gold"
+NA,"Edmonton Rugby Union",NA
+NA,"Canada -18",NA
+NA,"Dorchester RFC","Dorchester_RFC"
+NA,"Jebel Ali Dragons RC",NA
+NA,"Dubai Exiles RFC",NA
+NA,"Salanque CR XV","Torreilles"
+NA,"US Martres-de-Veyre",NA
+NA,"Marista Rugby Club","Marista_Rugby_Club"
+NA,"Madras College FP",NA
+NA,"RC Bingerville",NA
+NA,"RC Yopougon",NA
+NA,"RC Saint Hilaire Océan",NA
+NA,"Cuyo RC",NA
+NA,"Suva Grammar School",NA
+NA,"Townsville Blackhawks","Townsville_Blackhawks"
+NA,"RC ajaccien",NA
+NA,"San Patricio",NA
+NA,"RC St-Sébastien B.-Goul.",NA
+NA,"South China Tigers","South_China_Tigers"
+NA,"Rugby Sud 77",NA
+NA,"Stockport RUFC",NA
+NA,"SA Auterivain",NA
+NA,"Bombo Rugby Firenze",NA
+NA,"Florentia Rugby",NA
+NA,"Cafeteros Pro","Cafeteros_Pro"
+NA,"Stirling University RFC","Stirling_University_RFC"
+NA,"Tauranga Sports Club",NA
+NA,"Dundee Eagles",NA
+NA,"Savai’i Vikings",NA
+NA,"Rhiwbina RFC","Rhiwbina_RFC"
+NA,"Whitchurch High School","Whitchurch_High_School"
+NA,"CO Gargenville",NA
+NA,"Guam RC",NA
+NA,"Simon Sanchez High School","Simon_Sanchez_High_School"
+NA,"Université de Guam","Universit%C3%A9_de_Guam"
+NA,"Guam","%C3%89quipe_de_Guam_de_rugby_%C3%A0_XV"
+NA,"Rhinos Rugby Oudenaarde","Rhinos_Rugby_Oudenaarde"
+NA,"ROC Charleville",NA
+NA,"Šiaulių",NA
+NA,"US Die",NA
+NA,"Manukau Rovers",NA
+NA,"Marist Saint",NA
+NA,"Ba",NA
+NA,"Castricum RC",NA
+NA,"Christchurch Boys' HS","Christchurch_Boys%27_High_School"
+NA,"Takapuna",NA
+NA,"Karaka RC",NA
+NA,"West Park Leeds RUFC",NA
+NA,"Glenwood High School","Glenwood_High_School_(Durban)"
+NA,"Auterive",NA
+NA,"Sud Bassin Association",NA
+NA,"Association Bourbaki","Association_Bourbaki"
+NA,"Bishop’s Stortford",NA
+NA,"RC Hyères","Rugby_Club_hy%C3%A9rois"
+NA,"FIR Academy",NA
+NA,"Peninsula Green RFC",NA
+NA,"Saint Mary's Gaels","Coll%C3%A8ge_Saint_Mary_de_Californie"
+NA,"Jesuit High School","Jesuit_High_School_(Carmichael)"
+NA,"California Golden Bears","California_Golden_Bears_rugby"
+NA,"Porthcawl RFC","Porthcawl_RFC"
+NA,"RC DIOK",NA
+NA,"King Edward’s School","King_Edward%27s_School,_Bath"
+NA,"Marist Brothers High School",NA
+NA,"Rotorua Boys High First XV",NA
+NA,"Hamilton Old Boys",NA
+NA,"SC Lasseube",NA
+NA,"Burkina Faso","%C3%89quipe_du_Burkina_Faso_de_rugby_%C3%A0_XV"
+NA,"Chester RUFC",NA
+NA,"Círculo Univ. de Quilmes",NA
+NA,"NaFor Rugby",NA
+NA,"Niterói Rugby","Niter%C3%B3i_Rugby"
+NA,"Henley College Coventry","Henley_College_Coventry"
+NA,"Sutton & Epsom RFC","Sutton_%26_Epsom_RFC"
+NA,"Rugby Napoli Afragola",NA
+NA,"Pays-Bas -20","%C3%89quipe_des_Pays-Bas_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"CR Sant Cugat","Club_de_Rugby_Sant_Cugat"
+NA,"Avenir lescarien",NA
+NA,"CGE",NA
+NA,"Hamilton Old Boys Rugby Club",NA
+NA,"Rugby Livorno 1931","Rugby_Livorno_1931"
+NA,"Eden Rugby Club","Eden_RFC"
+NA,"Bidart Union Club",NA
+NA,"Rieumes",NA
+NA,"Sainte-Foy-la-Grande",NA
+NA,"Quartier Etudiant Club",NA
+NA,"Saint-Denis",NA
+NA,"RC Villeneuve-lès-Maguelone",NA
+NA,"Guildfordians RFC",NA
+NA,"Associates Rugby Club",NA
+NA,"Girondins ASP",NA
+NA,"A.S. Facture",NA
+NA,"Ornans",NA
+NA,"AS Police Paris","Association_sportive_de_la_police_de_Paris"
+NA,"Te Kawau RFC",NA
+NA,"Coastal Rugby",NA
+NA,"AC du Fer-à-Cheval",NA
+NA,"Capendu",NA
+NA,"Guernsey Raiders","Guernsey_RFC"
+NA,"FC Saint-Claude Rugby",NA
+NA,"SA Rabastens Coufouleux",NA
+NA,"RC Haute Bresse",NA
+NA,"Falcon College","Falcon_College"
+NA,"Raiders RC",NA
+NA,"Zimbabwe Goshawks",NA
+NA,"RCO Salagou",NA
+NA,"Rexburg Yetis",NA
+NA,"43rd State Crimson Lions Rugby",NA
+NA,"Westside Ronins",NA
+NA,"Xavier HS","Xavier_High_School_(New_York_City)"
+NA,"Penn State","Nittany_Lions_de_Penn_State"
+NA,"NYAC","New_York_Athletic_Club"
+NA,"CSŞ București",NA
+NA,"RC L'Hospitalet","RC_L%27Hospitalet"
+NA,"Beauvais XV",NA
+NA,"Newbury Blues",NA
+NA,"Energia Vulcan",NA
+NA,"Metalul Bucarest",NA
+NA,"ITC Năvodari",NA
+NA,"Reggio Calabria",NA
+NA,"RO Cholet",NA
+NA,"ES Léon",NA
+NA,"Uluinakau RC",NA
+NA,"Bievre Saint Geoirs RC",NA
+NA,"RC Eaunes",NA
+NA,"Boland Dames",NA
+NA,"Hamilton Old Boys RC",NA
+NA,"S.C. Salon",NA
+NA,"AS Buzy Ogeu",NA
+NA,"Cabestany",NA
+NA,"US Montpellier",NA
+NA,"Béziers ORC",NA
+NA,"Nissan",NA
+NA,"US Nissan",NA
+NA,"SNC Biterrois",NA
+NA,"Saint-Féliu-d'Avall",NA
+NA,"Cerbère",NA
+NA,"Entente Bordelaise",NA
+NA,"Rugby Jesi 1970",NA
+NA,"Pesaro Rugby",NA
+NA,"Granducato Rugby",NA
+NA,"RC Chagny",NA
+NA,"Rugby Ovalie Lorient",NA
+NA,"Plouzané AC",NA
+NA,"Servian-Boujan Rugby",NA
+NA,"Juillan R.C.",NA
+NA,"U.S. Marmande",NA
+NA,"Vailele Rugby Club",NA
+NA,"Lauli'i Lions",NA
+NA,"Apolima",NA
+NA,"Centro de Cazadores",NA
+NA,"RC Nieuil L'Espoir",NA
+NA,"East Kilbride RFC",NA
+NA,"Hamilton RFC","Hamilton_Rugby_Football_Club"
+NA,"CREC Nouméa",NA
+NA,"US Izon",NA
+NA,"RC Castelpontin",NA
+NA,"ARC Vitré",NA
+NA,"RC Beaumont",NA
+NA,"RC Belleville Cosne",NA
+NA,"CR Liceo Francés","Club_de_Rugby_Liceo_Franc%C3%A9s"
+NA,"Bénéjacq olympique",NA
+NA,"Cill Dara RFC","Cill_Dara_RFC"
+NA,"Allemagne -18",NA
+NA,"US Véore XV",NA
+NA,"Middelburg Hoërskool",NA
+NA,"Durban Collegians","Durban_Collegians"
+NA,"College Rovers RC",NA
+NA,"Whakarewarewa RC",NA
+NA,"RC The Pink Panthers",NA
+NA,"Pays-Bas -16",NA
+NA,"Pays-Bas -18",NA
+NA,"Sierra Foothills RC",NA
+NA,"Rocklin High School","Rocklin_High_School"
+NA,"Magnolia High School","Magnolia_High_School_(Texas)"
+NA,"Berlin RC","Berliner_Rugby_Club"
+NA,"RC Belleville",NA
+NA,"SSSAR",NA
+NA,"SCM Gloria Buzău",NA
+NA,"RK Khimik Dzerjinsk",NA
+NA,"RC Dinamo Moscou",NA
+NA,"Aberystwyth RFC",NA
+NA,"Ikey Tigers","Ikey_Tigers"
+NA,"CA Villeneuvois",NA
+NA,"SA Villeneuvois",NA
+NA,"US Beauvallon",NA
+NA,"ASOP",NA
+NA,"SC Rieumois",NA
+NA,"US Capbreton",NA
+NA,"Arcol Rugby",NA
+NA,"Rugby Conflans Herblay",NA
+NA,"Brooksby Melton College","Brooksby_Melton_College"
+NA,"Juvenia Krakow","Juvenia_Cracovie"
+NA,"Pologne -20","%C3%89quipe_de_Pologne_de_rugby_%C3%A0_XV_des_moins_de_20_ans"
+NA,"US Néracaise",NA
+NA,"RC Saint-Simon",NA
+NA,"US Luzech",NA
+NA,"Edach Budowlani Lublin",NA
+NA,"Ogniwo Sopot","Ogniwo_Sopot"
+NA,"Hers Lauragais XV",NA
+NA,"CS Universidad Católica","Club_Deportivo_Universidad_Cat%C3%B3lica_(rugby)"
+NA,"RC Bagnols Marcoule",NA
+NA,"Stadiul Român",NA
+NA,"CASG Paris","Paris_Jean-Bouin"
+NA,"EDF Paris",NA
+NA,"Maroc junior",NA
+NA,"JSL de Normandie",NA
+NA,"Silverdale RFC",NA
+NA,"École Rugby Pic Saint-Loup",NA
+NA,"Saracens Amateur RFC",NA
+NA,"Oléron RC",NA
+NA,"ARCOL Rugby",NA
+NA,"Aviron castrais",NA
+NA,"Arka Gdynia",NA
+NA,"Circulo Rafaelino de Rugby",NA
+NA,"RC pays de Meaux",NA
+NA,"Rugby Club BVB",NA
+NA,"Rugby football club kastellin",NA
+NA,"Mahurangi RFC",NA
+NA,"US Cambo",NA
+NA,"Entente RCCS Brétigny",NA
+NA,"Wits University","Universit%C3%A9_du_Witwatersrand"
+NA,"US cheminots dijonnais",NA
+NA,"Hammersmith & Fulham RFC",NA
+NA,"ES Lartigue",NA
+NA,"18e RI","18e_r%C3%A9giment_d%27infanterie_(France)"
+NA,"U.S. Thuir",NA
+NA,"Basildon RFC",NA
+NA,"Waitohi RFC",NA
+NA,"USO Athis-Mons Rugby",NA
+NA,"AS Bompas XV",NA
+NA,"Lille MRCV","Stade_villeneuvois_Lille_M%C3%A9tropole"
+NA,"Esc-Bac-Asp",NA
+NA,"Broadstreet Rugby Club",NA
+NA,"Khvamli Tbilisi","Khvamli_Tbilisi"
+NA,"RC Langres",NA
+NA,"Is Alliance Rugby",NA
+NA,"Clwb Rygbi",NA
+NA,"AS Bages Villeneuve",NA
+NA,"Section paloise","Section_paloise_(rugby_à_XV)"
+NA,"CREC Rugby",NA
+NA,"RCC Montrevel-en-Bresse",NA
+NA,"Coquelicots Montéchois Rugby",NA
+NA,"Cwmllynfell RFC",NA
+NA,"Ovale du Gy",NA
+NA,"Dumfries Saints",NA
+NA,"Wahroonga Rugby Club",NA
+NA,"Alton Rugby Club",NA
+NA,"Cwmafan RFC",NA
+NA,"Upper Hutt Rams RFC",NA
+NA,"Entente Bazet Andrest",NA
+NA,"SOR Agout XV",NA
+NA,"JSL Normandie",NA
+NA,"Bude RFC",NA
+NA,"Tempe RC",NA
+NA,"Wellington FC",NA
+NA,"RC Tao",NA
+NA,"St-Quentin Yvelines R.",NA
+NA,"US Bardos",NA
+NA,"SO Maubourguet",NA
+NA,"Châteauneuf du Pape - Orange",NA
+NA,"Parisis Rugby Club",NA
+NA,"UA côtoise",NA
+NA,"Brisbane State High School",NA
+NA,"RC Annecy-le-Vieux",NA
+NA,"Market Harborough Rugby Club",NA
+NA,"AS St-Martin-de-Seignanx",NA
+NA,"Amicale rugby de Marans",NA
+NA,"ASMUR",NA
+NA,"Réveil sauvagnonnais",NA
+NA,"RC Port-de-Bouc",NA
+NA,"Nouvelle-Zélande universitaire",NA
+NA,"AS Jurançon",NA
+NA,"Pōneke Football Club",NA
+NA,"Old Elthamians RFC",NA
+NA,"Union sportive Nord-Est",NA
+NA,"Asasp",NA
+NA,"FC Oloron rés.",NA
+NA,"Cascais Rugby Linha","Cascais_Rugby_Linha"
+NA,"Universitario RC",NA
+NA,"RC Carhaix",NA
+NA,"Good Luck Rugby",NA
+NA,"AOCC Duras",NA
+NA,"Tupapa Maraerenga Panthers",NA
+NA,"RC Val de Bièvre",NA
+NA,"Bredon Star RFC",NA
+NA,"Tigres Rugby Club","Tigres_Rugby_Club"
+NA,"US Nord-Est",NA
+NA,"US Monflanquin",NA
+NA,"Fishguard RFC",NA
+NA,"Bredase Rugby Club","Bredase_Rugby_Club"
+NA,"CO Pont-du-Casse",NA
+NA,"Effingham & Leatherhead RFC",NA
+NA,"RC Diamant Martinique",NA
+NA,"Saint-Jo Ovalie",NA
+NA,"J.S. Illibérienne",NA
+NA,"U.S. Saint-Juérienne",NA
+NA,"U.S Esperaza",NA
+NA,"Stewart’s Melville College",NA
+NA,"Rugby Tango chalonnais",NA
+NA,"Sporting White Perpignan",NA
+NA,"RC Vallée de Montmorency",NA
+NA,"ES Coteaux de l'Arrêt",NA
+NA,"RC Andrezieux Boutheon",NA
+NA,"Nadroga RC",NA
+NA,"Kaiviti Silktails","Kaiviti_Silktails"
+NA,"Lugi Lions RFC",NA
+NA,"Suède","%C3%89quipe_de_Su%C3%A8de_de_rugby_%C3%A0_XV"
+NA,"US Menditte",NA
+NA,"CD Universidad Católica",NA
+NA,"Rugby club cévenol",NA
+NA,"Entente de la Têt",NA
