@@ -2585,7 +2585,7 @@
 "Q925823","Richard Hyland","Dick Hyland","Richard_Hyland","International","1924-1924","États-Unis","%C3%89quipe_des_%C3%89tats-Unis_de_rugby_%C3%A0_XV","2","12",1924,1924
 "Q926351","John Eales","John Eales","John_Eales","Senior","1996-2001","Queensland Reds","Queensland_Reds","42","402",1996,2001
 "Q926351","John Eales","John Eales","John_Eales","International","1991-2001","Australie","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV","86","173",1991,2001
-"Q927905","Géo André","Géo André","Georges_Andr%C3%A9","Senior","1906-1908","Stade français","Stade_fran%C3%A7ais",NA,NA,1906,1908
+"Q927905","Géo André","Géo André","Georges_Andr%C3%A9","Senior","1906-1908","Stade français","Stade_fran%C3%A7ais_Paris_rugby",NA,NA,1906,1908
 "Q927905","Géo André","Géo André","Georges_Andr%C3%A9","Senior","1909-1927","Racing Club de France","Racing_92",NA,NA,1909,1927
 "Q927905","Géo André","Géo André","Georges_Andr%C3%A9","International","1913-1914","France","%C3%89quipe_de_France_de_rugby_%C3%A0_XV",NA,NA,1913,1914
 "Q928783","Gavin Kerr","Gavin Kerr","Gavin_Kerr","Senior","2001-2006","Leeds Tykes","Leeds_Tykes","103","15",2001,2006
@@ -4864,7 +4864,7 @@
 "Q2401864","Peter Short","Peter Short","Peter_Short","Senior","2005-2011","Bath Rugby","Bath_Rugby","142","15",2005,2011
 "Q2401864","Peter Short","Peter Short","Peter_Short","Senior","2011-2012","Exeter Chiefs","Exeter_Chiefs","7","0",2011,2012
 "Q2401864","Peter Short","Peter Short","Peter_Short","International","2008-2008","Angleterre A","%C3%89quipe_d%27Angleterre_A_de_rugby_%C3%A0_XV",NA,NA,2008,2008
-"Q2401959","Martín Scelzo","Martín Scelzo","Mart%C3%ADn_Scelzo","Senior","1993-1999","Buenos Aires","Uni%C3%B3n_de_Rugby_de_Buenos_Aires",NA,NA,1993,1999
+"Q2401959","Martín Scelzo","Martín Scelzo","Mart%C3%ADn_Scelzo","Senior","1993-1999","Hindú Club","Hind%C3%BA_Club",NA,NA,1993,1999
 "Q2401959","Martín Scelzo","Martín Scelzo","Mart%C3%ADn_Scelzo","Senior","1999-2000","Northampton Saints","Northampton_Saints","5","0",1999,2000
 "Q2401959","Martín Scelzo","Martín Scelzo","Mart%C3%ADn_Scelzo","Senior","2001-2004","RC Narbonne","Racing_Club_narbonnais","26","15",2001,2004
 "Q2401959","Martín Scelzo","Martín Scelzo","Mart%C3%ADn_Scelzo","Senior","2004-2011","ASM Clermont","ASM_Clermont_Auvergne","120","45",2004,2011
@@ -5073,7 +5073,6 @@
 "Q2578953","William Hirigoyen","William Gayraud","William_Gayraud","International","1920-1920","France","%C3%89quipe_de_France_de_rugby_%C3%A0_XV","1","3",1920,1920
 "Q2602308","Yves du Manoir","Yves du Manoir","Yves_du_Manoir","Senior","1923-1927","Racing CF","Racing_92","106",NA,1923,1927
 "Q2602308","Yves du Manoir","Yves du Manoir","Yves_du_Manoir","International","1925-1927","France","%C3%89quipe_de_France_de_rugby_%C3%A0_XV","8","4",1925,1927
-"Q2607117","Mario Ledesma","Mario Ledesma","Mario_Ledesma","Youth","NA-NA","Buenos Aires","Uni%C3%B3n_de_Rugby_de_Buenos_Aires",NA,NA,NA,NA
 "Q2607117","Mario Ledesma","Mario Ledesma","Mario_Ledesma","Senior","1990-2001","Curupayti",NA,NA,NA,1990,2001
 "Q2607117","Mario Ledesma","Mario Ledesma","Mario_Ledesma","Senior","2001-2003","RC Narbonne","Racing_Club_narbonnais","30","10",2001,2003
 "Q2607117","Mario Ledesma","Mario Ledesma","Mario_Ledesma","Senior","2003-2005","Castres olympique","Castres_olympique","36","0",2003,2005
@@ -5108,8 +5107,7 @@
 "Q2648015","Allan Muhr","Allan Muhr","Allan_Muhr","Senior","1900-1905","Stade français","Stade_fran%C3%A7ais_Paris_rugby","?","?",1900,1905
 "Q2648015","Allan Muhr","Allan Muhr","Allan_Muhr","Senior","1900-1905","RC France","Racing_92","?","?",1900,1905
 "Q2648015","Allan Muhr","Allan Muhr","Allan_Muhr","International","1906-1907","France","%C3%89quipe_de_France_de_rugby_%C3%A0_XV","3","6",1906,1907
-"Q2701263","André Rischmann","André Rischmann","Andr%C3%A9_Rischmann","Senior","NA-NA","Cosmopolitan Club",NA,NA,NA,NA,NA
-"Q2701263","André Rischmann","André Rischmann","Andr%C3%A9_Rischmann","International","1900-1900","USFSA","Union_des_soci%C3%A9t%C3%A9s_fran%C3%A7aises_de_sports_athl%C3%A9tiques",NA,NA,1900,1900
+"Q2701263","André Rischmann","André Rischmann","Andr%C3%A9_Rischmann","Senior","1900-1900","Cosmopolitan Club",NA,NA,NA,1900,1900
 "Q2725608","Eric Tindill","Eric Tindill","Eric_Tindill","Senior","1932-1945","Wellington","Wellington_Rugby_Football_Union","?","?",1932,1945
 "Q2725608","Eric Tindill","Eric Tindill","Eric_Tindill","International","1936-1936","Nouvelle-Zélande","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV","1","0",1936,1936
 "Q2735105","François Trinh-Duc","François Trinh-Duc","Fran%C3%A7ois_Trinh-Duc","Senior","2004-2016","Montpellier HR","Montpellier_H%C3%A9rault_Rugby","201","607",2004,2016
@@ -6183,7 +6181,7 @@
 "Q2846760","Andrew Walker","Andrew Walker","Andrew_Walker","Senior","2000-2003","Brumbies","Brumbies","?","?",2000,2003
 "Q2846760","Andrew Walker","Andrew Walker","Andrew_Walker","Senior","2003-2004","Manly RUFC","Manly_Rugby_Football_Club","?","?",2003,2004
 "Q2846760","Andrew Walker","Andrew Walker","Andrew_Walker","Senior","2006-2007","UA Gaillac","Union_athl%C3%A9tique_gaillacoise","17","55",2006,2007
-"Q2846760","Andrew Walker","Andrew Walker","Andrew_Walker","Senior","2007-2007","East Coast Aces","Wiki/East_Coast_Aces","4","26",2007,2007
+"Q2846760","Andrew Walker","Andrew Walker","Andrew_Walker","Senior","2007-2007","East Coast Aces","East_Coast_Aces","4","26",2007,2007
 "Q2846760","Andrew Walker","Andrew Walker","Andrew_Walker","Senior","2007-2008","Queensland Reds","Queensland_Reds","10","22",2007,2008
 "Q2846760","Andrew Walker","Andrew Walker","Andrew_Walker","International","2000-2001","Australie","%C3%89quipe_d%27Australie_de_rugby_%C3%A0_XV","7","11",2000,2001
 "Q2846773","Andrew Wilson","Andy Wilson","Andrew_Wilson_(rugby_%C3%A0_XV)","Senior","NA-NA","Caledonia Reds","Caledonia_Reds",NA,NA,NA,NA
@@ -7574,7 +7572,7 @@
 "Q2908569","Boela du Plooy","Boela du Plooy","Boela_du_Plooy","Senior","2002-2002","Cats","Lions_(rugby_%C3%A0_XV)","3","0",2002,2002
 "Q2908569","Boela du Plooy","Boela du Plooy","Boela_du_Plooy","Senior","2002-2003","Stade montois","Stade_montois_rugby","13","0",2002,2003
 "Q2908569","Boela du Plooy","Boela du Plooy","Boela_du_Plooy","Senior","2003-2005","Cats","Lions_(rugby_%C3%A0_XV)","14","5",2003,2005
-"Q2908569","Boela du Plooy","Boela du Plooy","Boela_du_Plooy","Senior","2005-2008","Stade français","Stade_fran%C3%A7ais","52","10",2005,2008
+"Q2908569","Boela du Plooy","Boela du Plooy","Boela_du_Plooy","Senior","2005-2008","Stade français","Stade_fran%C3%A7ais_Paris_rugby","52","10",2005,2008
 "Q2908627","Bogdan Bălan","Bogdan Bălan","Bogdan_B%C4%83lan","Youth","NA-NA","RC Brăila",NA,NA,NA,NA,NA
 "Q2908627","Bogdan Bălan","Bogdan Bălan","Bogdan_B%C4%83lan","Senior","1999-2000","RCM Timişoara","SCM_Rugby_Timi%C8%99oara","?","?",1999,2000
 "Q2908627","Bogdan Bălan","Bogdan Bălan","Bogdan_B%C4%83lan","Senior","2000-2004","U Cluj","CS_Universitatea_Cluj-Napoca_(rugby_%C3%A0_XV)","?","?",2000,2004
@@ -8173,7 +8171,7 @@
 "Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2004-2006","El Salvador","El_Salvador_Rugby","?","?",2004,2006
 "Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2006-2006","Leicester Tigers","Leicester_Tigers","2","0",2006,2006
 "Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2006-2009","CRC Madrid","CRC_Pozuelo","52","276",2006,2009
-"Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2009-2009","Madrid Gatos","Liga_Superib%C3%A9rica","4","18",2009,2009
+"Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2009-2009","Madrid Gatos","Gatos_de_Madrid","4","18",2009,2009
 "Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2009-2010","Olympus XV",NA,"5","20",2009,2010
 "Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2010-2010","Montpellier HR","Montpellier_H%C3%A9rault_Rugby","2","3",2010,2010
 "Q2946998","César Sempere","César Sempere","Cesar_Sempere","Senior","2010-2011","Nottingham","Nottingham_Rugby_Football_Club","16","15",2010,2011
@@ -9882,7 +9880,7 @@
 "Q3018856","David Tait","David Tait","David_Tait","International","2009-2009","Écosse sept","%C3%89quipe_d%27%C3%89cosse_de_rugby_%C3%A0_sept","?","?",2009,2009
 "Q3018935","David Venditti","David Venditti","David_Venditti","Senior","1992-1996","CS Bourgoin-Jallieu","Club_sportif_Bourgoin-Jallieu_rugby",NA,NA,1992,1996
 "Q3018935","David Venditti","David Venditti","David_Venditti","Senior","1996-2000","CA Brive","Club_athl%C3%A9tique_Brive_Corr%C3%A8ze_Limousin",NA,NA,1996,2000
-"Q3018935","David Venditti","David Venditti","David_Venditti","Senior","2000-2002","Stade français","Stade_fran%C3%A7ais",NA,NA,2000,2002
+"Q3018935","David Venditti","David Venditti","David_Venditti","Senior","2000-2002","Stade français","Stade_fran%C3%A7ais_Paris_rugby",NA,NA,2000,2002
 "Q3018935","David Venditti","David Venditti","David_Venditti","Senior","2002-2006","CS Bourgoin-Jallieu","Club_sportif_Bourgoin-Jallieu_rugby",NA,NA,2002,2006
 "Q3018935","David Venditti","David Venditti","David_Venditti","International","1996-2000","France","%C3%89quipe_de_France_de_rugby_%C3%A0_XV","14","30",1996,2000
 "Q3018959","David Watkins","David Watkins","David_Watkins","Senior","NA-NA","Abertillery RFC",NA,NA,NA,NA,NA
@@ -10174,7 +10172,7 @@
 "Q3027456","Diego Zarzosa","Diego Zarzosa","Diego_Zarzosa","Senior","2006-2007","CRC Madrid","CRC_Pozuelo",NA,NA,2006,2007
 "Q3027456","Diego Zarzosa","Diego Zarzosa","Diego_Zarzosa","Senior","2007-2007","Harlequins","Harlequin_Football_Club",NA,NA,2007,2007
 "Q3027456","Diego Zarzosa","Diego Zarzosa","Diego_Zarzosa","Senior","2007-2009","El Salvador","El_Salvador_Rugby",NA,NA,2007,2009
-"Q3027456","Diego Zarzosa","Diego Zarzosa","Diego_Zarzosa","Senior","2009-2009","Vacceos","Liga_Superib%C3%A9rica",NA,NA,2009,2009
+"Q3027456","Diego Zarzosa","Diego Zarzosa","Diego_Zarzosa","Senior","2009-2009","Vacceos","Vacceos_Cavaliers",NA,NA,2009,2009
 "Q3027456","Diego Zarzosa","Diego Zarzosa","Diego_Zarzosa","International","1998-2009","Espagne","%C3%89quipe_d%27Espagne_de_rugby_%C3%A0_XV","46","15",1998,2009
 "Q3028108","Dimitri Basilaia","Dimitri Basilaia","Dimitri_Basilaia","Senior","2008-2009","US Morlaàs","Union_sportive_Morla%C3%A0s_rugby","3","0",2008,2009
 "Q3028108","Dimitri Basilaia","Dimitri Basilaia","Dimitri_Basilaia","Senior","2009-2010","Bugue AC","Bugue_Athletic_Club","14","0",2009,2010
@@ -10769,7 +10767,7 @@
 "Q3063722","Fabio Galloppa","Fabio Galloppa","Fabio_Galloppa","Senior","2002-2005","El Salvador","El_Salvador_Rugby","3","0",2002,2005
 "Q3063722","Fabio Galloppa","Fabio Galloppa","Fabio_Galloppa","Senior","2005-2007","Tarbes Pyrénées","Stado_Tarbes_Pyr%C3%A9n%C3%A9es_rugby","49","0",2005,2007
 "Q3063722","Fabio Galloppa","Fabio Galloppa","Fabio_Galloppa","Senior","2007-2009","El Salvador",NA,"49","0",2007,2009
-"Q3063722","Fabio Galloppa","Fabio Galloppa","Fabio_Galloppa","Senior","2009-NA","Vacceos","Liga_Superib%C3%A9rica","?","?",2009,NA
+"Q3063722","Fabio Galloppa","Fabio Galloppa","Fabio_Galloppa","Senior","2009-NA","Vacceos","Vacceos_Cavaliers","?","?",2009,NA
 "Q3063725","Fabio Gómez","Fabio Gómez","Fabio_G%C3%B3mez","Senior","1985-1992","Banco Nación","Club_Atl%C3%A9tico_Banco_de_la_Naci%C3%B3n_Argentina","?","?",1985,1992
 "Q3063725","Fabio Gómez","Fabio Gómez","Fabio_G%C3%B3mez","Senior","1992-1998","Milan","Amatori_Rugby_Milan","?","?",1992,1998
 "Q3063725","Fabio Gómez","Fabio Gómez","Fabio_G%C3%B3mez","Senior","1998-2001","Petrarca","Petrarca_Rugby_Padoue","?","?",1998,2001
@@ -11395,7 +11393,6 @@
 "Q3087147","Frederick Rawls","Frederick Rawls","Frederick_Rawls","Senior","2009-2010","Stade niortais","Niort_Rugby_Club","15","5",2009,2010
 "Q3087147","Frederick Rawls","Frederick Rawls","Frederick_Rawls","Senior","2010-2022","RC Sablais",NA,"200+","?",2010,2022
 "Q3087191","Frederico Rodriguez","Feche Rodriguez","Federico_Rodriguez","Senior","2000-2009","Pueyrredón","Pueyrred%C3%B3n_Rugby_Club",NA,NA,2000,2009
-"Q3087191","Frederico Rodriguez","Feche Rodriguez","Federico_Rodriguez","Senior","2002-2009","URBA","Uni%C3%B3n_de_Rugby_de_Buenos_Aires",NA,NA,2002,2009
 "Q3087191","Frederico Rodriguez","Feche Rodriguez","Federico_Rodriguez","Senior","2009-NA","El Salvador","El_Salvador_Rugby",NA,NA,2009,NA
 "Q3087191","Frederico Rodriguez","Feche Rodriguez","Federico_Rodriguez","International","2007-2007","Argentine","%C3%89quipe_d%27Argentine_de_rugby_%C3%A0_XV","1","5",2007,2007
 "Q3087197","Frederico Sousa","Frederico Sousa","Frederico_Sousa","Senior","NA-NA","GD Direito","Grupo_Desportivo_Direito_de_Lisboa",NA,NA,NA,NA
@@ -12662,7 +12659,7 @@
 "Q3126862","Hannes Strydom","Hannes Strydom","Hannes_Strydom","Senior","1986-1988","Eastern Province","Eastern_Province_Elephants","35","?",1986,1988
 "Q3126862","Hannes Strydom","Hannes Strydom","Hannes_Strydom","Senior","1989-1992","Northern Transvaal","Blue_Bulls","23","?",1989,1992
 "Q3126862","Hannes Strydom","Hannes Strydom","Hannes_Strydom","Senior","1993-2000","Transvaal / Golden Lions","Golden_Lions","115","?",1993,2000
-"Q3126862","Hannes Strydom","Hannes Strydom","Hannes_Strydom","Senior","1998-1999","Cats","Lions_Lions_(rugby_%C3%A0_XV)","?","?",1998,1999
+"Q3126862","Hannes Strydom","Hannes Strydom","Hannes_Strydom","Senior","1998-1999","Cats","Lions_(rugby_%C3%A0_XV)","?","?",1998,1999
 "Q3126862","Hannes Strydom","Hannes Strydom","Hannes_Strydom","International","1993-1997","Afrique du Sud","%C3%89quipe_d%27Afrique_du_Sud_de_rugby_%C3%A0_XV","21","5",1993,1997
 "Q3126934","Hans Botzong","Hans Botzong","Hans_Botzong","Senior","NA-NA","Heidelberger RK","Heidelberger_Ruderklub_1872_e.V.","?","?",NA,NA
 "Q3126934","Hans Botzong","Hans Botzong","Hans_Botzong","International","1927-1931","Allemagne","%C3%89quipe_d%27Allemagne_de_rugby_%C3%A0_XV","6","3",1927,1931
@@ -14390,7 +14387,7 @@
 "Q3180129","Joe McDonnell","Joe McDonnell","Joe_McDonnell_(rugby_%C3%A0_XV)","Senior","2004-2006","Wellington","Wellington_Rugby_Football_Union","27","0",2004,2006
 "Q3180129","Joe McDonnell","Joe McDonnell","Joe_McDonnell_(rugby_%C3%A0_XV)","Senior","2004-2006","Hurricanes","Hurricanes","31","5",2004,2006
 "Q3180129","Joe McDonnell","Joe McDonnell","Joe_McDonnell_(rugby_%C3%A0_XV)","Senior","2006-2009","Newcastle Falcons","Newcastle_Falcons","45","10",2006,2009
-"Q3180129","Joe McDonnell","Joe McDonnell","Joe_McDonnell_(rugby_%C3%A0_XV)","Senior","2009-2009","Vacceos Cavaliers","Liga_Superib%C3%A9rica","?","?",2009,2009
+"Q3180129","Joe McDonnell","Joe McDonnell","Joe_McDonnell_(rugby_%C3%A0_XV)","Senior","2009-2009","Vacceos Cavaliers","Vacceos_Cavaliers","?","?",2009,2009
 "Q3180129","Joe McDonnell","Joe McDonnell","Joe_McDonnell_(rugby_%C3%A0_XV)","International","2000-2005","Māori de NlleZélande","%C3%89quipe_des_M%C4%81ori_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV","9","5",2000,2005
 "Q3180129","Joe McDonnell","Joe McDonnell","Joe_McDonnell_(rugby_%C3%A0_XV)","International","2002-2002","Nouvelle-Zélande","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV","8","5",2002,2002
 "Q3180173","Joe Roff","Joe Roff","Joe_Roff","Senior","NA-NA","Tuggeranong Vikings",NA,"?","?",NA,NA
@@ -18350,7 +18347,7 @@
 "Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","Senior","2007-2007","Leicester Tigers","Leicester_Tigers","6","5",2007,2007
 "Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","Senior","2007-2008","Waterloo RFC","Waterloo_Rugby_Football_Club","19","25",2007,2008
 "Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","Senior","2008-2009","CRC Madrid","CRC_Pozuelo","25","40",2008,2009
-"Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","Senior","2009-2010","Gatos de Madrid","Liga_Superib%C3%A9rica","3","5",2009,2010
+"Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","Senior","2009-2010","Gatos de Madrid","Gatos_de_Madrid","3","5",2009,2010
 "Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","Senior","2010-2014","El Salvador Rugby","El_Salvador_Rugby","?","?",2010,2014
 "Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","Senior","2015-2016","Complutense Cisneros","Club_de_Rugby_Complutense_Cisneros","8","15",2015,2016
 "Q3328311","Pablo Feijoo","Pablo Feijoo","Pablo_Feijoo","International","2002-2015","Espagne","%C3%89quipe_d%27Espagne_de_rugby_%C3%A0_XV","67","100",2002,2015
@@ -19069,7 +19066,7 @@
 "Q3355837","Orene Ai'i","Orene Ai'i","Orene_Ai%27i","International","1999-2005","Nouvelle-Zélande à 7","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_sept","75","656",1999,2005
 "Q3356944","Oscar Astarloa","Oscar Astarloa","Oscar_Astarloa","Senior","1999-2005","Saint-Jean-de-Luz OR","Saint-Jean-de-Luz_olympique_rugby",NA,NA,1999,2005
 "Q3356944","Oscar Astarloa","Oscar Astarloa","Oscar_Astarloa","Senior","2004-NA","Aviron bayonnais","Aviron_bayonnais_rugby_pro",NA,NA,2004,NA
-"Q3356944","Oscar Astarloa","Oscar Astarloa","Oscar_Astarloa","Senior","2010-2010","Gatos de Madrid","Liga_Superib%C3%A9rica",NA,NA,2010,2010
+"Q3356944","Oscar Astarloa","Oscar Astarloa","Oscar_Astarloa","Senior","2010-2010","Gatos de Madrid","Gatos_de_Madrid",NA,NA,2010,2010
 "Q3356944","Oscar Astarloa","Oscar Astarloa","Oscar_Astarloa","Senior","2009-2010","Olympus XV Madrid",NA,NA,NA,2009,2010
 "Q3356944","Oscar Astarloa","Oscar Astarloa","Oscar_Astarloa","Senior","2009-2012","CRC Madrid","CRC_Pozuelo",NA,NA,2009,2012
 "Q3356944","Oscar Astarloa","Oscar Astarloa","Oscar_Astarloa","Senior","2012-NA","Gernika Rugby Taldea","Gernika_Rugby_Taldea",NA,NA,2012,NA
@@ -25010,7 +25007,7 @@
 "Q4886540","Ben Tameifuna","Ben Tameifuna","Ben_Tameifuna","Senior","2012-2015","Waikato","Waikato_Rugby_Union","21","10",2012,2015
 "Q4886540","Ben Tameifuna","Ben Tameifuna","Ben_Tameifuna","Senior","2013-2015","Chiefs","Chiefs_(rugby_%C3%A0_XV)","65","45",2013,2015
 "Q4886540","Ben Tameifuna","Ben Tameifuna","Ben_Tameifuna","Senior","2015-2020","Racing 92","Racing_92","107","20",2015,2020
-"Q4886540","Ben Tameifuna","Ben Tameifuna","Ben_Tameifuna","Senior","2020-NA","Union Bordeaux Bègles","HUnion_Bordeaux_B%C3%A8gles","79","25",2020,NA
+"Q4886540","Ben Tameifuna","Ben Tameifuna","Ben_Tameifuna","Senior","2020-NA","Union Bordeaux Bègles","Union_Bordeaux_B%C3%A8gles","79","25",2020,NA
 "Q4886540","Ben Tameifuna","Ben Tameifuna","Ben_Tameifuna","International","2011-2011","Nouvelle-Zélande -20","%C3%89quipe_de_Nouvelle-Z%C3%A9lande_de_rugby_%C3%A0_XV_des_moins_de_20_ans","4","5",2011,2011
 "Q4886540","Ben Tameifuna","Ben Tameifuna","Ben_Tameifuna","International","2017-NA","Tonga","%C3%89quipe_des_Tonga_de_rugby_%C3%A0_XV","31","20",2017,NA
 "Q4886543","Ben Tapuai","Ben Tapuai","Ben_Tapuai","Youth","2009-2011","Queensland Reds","Queensland_Reds",NA,NA,2009,2011
@@ -33060,7 +33057,7 @@
 "Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","Senior","2016-2017","Chiefs","Chiefs_(rugby_%C3%A0_XV)","25","0",2016,2017
 "Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","Senior","2017-2017","Stade français","Stade_fran%C3%A7ais_Paris_rugby","12","5",2017,2017
 "Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","Senior","2018-2018","Heidelberger RK","Heidelberger_Ruderklub_1872_e.V.","?","?",2018,2018
-"Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","Senior","2018-2019","Stade français","Stade_fran%C3%A7ais","25","10",2018,2019
+"Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","Senior","2018-2019","Stade français","Stade_fran%C3%A7ais_Paris_rugby","25","10",2018,2019
 "Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","Senior","2019-2024","Section paloise","Section_paloise_(rugby_%C3%A0_XV)","78","35",2019,2024
 "Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","Senior","2024-NA","RC Massy","Rugby_Club_Massy_Essonne",NA,NA,2024,NA
 "Q21642478","Siegfried Fisiihoi","Siegfried Fisi'ihoi","Siegfried_Fisi%27ihoi","International","2017-NA","Tonga","%C3%89quipe_des_Tonga_de_rugby_%C3%A0_XV","25","15",2017,NA
@@ -42409,7 +42406,7 @@
 "Q105989960","Anthony Alvès","Anthony Alvès","Anthony_Alv%C3%A8s","International","NA-NA","Portugal -21",NA,NA,NA,NA,NA
 "Q105989960","Anthony Alvès","Anthony Alvès","Anthony_Alv%C3%A8s","International","2010-NA","Portugal","%C3%89quipe_du_Portugal_de_rugby_%C3%A0_XV","35","5",2010,NA
 "Q106014019","Bittor Aboitiz","Bittor Aboitiz","Bittor_Aboitiz","Senior","2008-2009","Getxo RT","Getxo_Artea_Rugby_Taldea",NA,NA,2008,2009
-"Q106014019","Bittor Aboitiz","Bittor Aboitiz","Bittor_Aboitiz","Senior","2009-2009","Basque Korsarioak","Liga_Superib%C3%A9rica",NA,NA,2009,2009
+"Q106014019","Bittor Aboitiz","Bittor Aboitiz","Bittor_Aboitiz","Senior","2009-2009","Basque Korsarioak","Basque_Korsarioak",NA,NA,2009,2009
 "Q106014019","Bittor Aboitiz","Bittor Aboitiz","Bittor_Aboitiz","Senior","2009-2010","Bera Bera Rugby","Bera_Bera_Rugby",NA,NA,2009,2010
 "Q106014019","Bittor Aboitiz","Bittor Aboitiz","Bittor_Aboitiz","Senior","2010-2011","US Tours","Union_sportive_Tours_rugby","5","0",2010,2011
 "Q106014019","Bittor Aboitiz","Bittor Aboitiz","Bittor_Aboitiz","Senior","2011-2014","Getxo RT","Getxo_Artea_Rugby_Taldea",NA,NA,2011,2014
