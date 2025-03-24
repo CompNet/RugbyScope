@@ -55,9 +55,9 @@ tlog(2, "Raw number of stints: ", nrow(fus_stints))
 # load FR WP tables
 tlog("Loading Wikipedia FR tables")
 
-wp_players <- read.csv(file.path(wp_folder, "players.csv"))
-tlog(2, "Raw number of players: ", nrow(wp_players))
-wp_players <- wp_players %>% mutate(across(where(is.character), ~ na_if(., "")))
+# wp_players <- read.csv(file.path(wp_folder, "players.csv"))
+# tlog(2, "Raw number of players: ", nrow(wp_players))
+# wp_players <- wp_players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 wp_stints <- read.csv(file.path(wp_folder, "stints.csv"))
 tlog(2, "Raw number of stints: ", nrow(wp_stints))
@@ -270,7 +270,7 @@ write.csv(tab, file.path(wp_folder, "duplicate_names.csv"), row.names = FALSE, f
 # remove sevens teams
 tlog(2, "Removing rugby sevens teams")
 del_rows <- which(grepl("\\bsept\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.]sept[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
-#write.csv(wp_teams[del_rows, ], file.path(wp_folder, "temp.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#write.csv(wp_teams[del_rows, ], file.path(wp_folder, "rugby_sevens_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
 tlog(4, "Removed ", length(del_rows), " rugby sevens teams from the WP table")
@@ -400,16 +400,23 @@ tlog(4, "Could match ", length(idx), " teams based on name only")
 #tab <- cbind(wp_teams[wp_idx[idx], "altNames"], fus_names[result[idx]], fus_teams[result[idx], "rugbyscopeId"], wp_teams[wp_idx[idx], "teamWP"])
 #colnames(tab) <- c("wpName", "fusName", "rugbyscopeId", "teamWP")
 #write.csv(tab, file.path(wp_folder, "successful_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### the above file is meant for visual inspection and verification
 wp_teams[wp_idx[idx], "rugbyscopeId"] <- fus_teams[result[idx], "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
+#### debug: export the list of unmatched teams
+#idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+#tab <- wp_teams[idx, c("altNames", "rugbyscopeId")]
+#idx <- order(tab[, "altNames"])
+#tab <- tab[idx, ]
+#colnames(tab)[1] <- "teamName"
+#write.csv(tab, file.path(wp_folder, "unmatched_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### the produced file is used to complement existing maps
 
 
 
 
-# TODO: update list of removed teams
-# TODO: verif that all stints still have their club (after the removals)
-# TODO: look for teams with the same name in the team table
+# TODO: look for teams with the same name in the merged team table
 
 
 
