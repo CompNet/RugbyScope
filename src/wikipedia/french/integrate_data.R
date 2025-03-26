@@ -24,7 +24,8 @@ source("src/common/norm_teams.R")
 wp_folder <- file.path("data", "wikipedia", "french")
 #
 fusion_folder <- file.path("data", "fusion")
-
+#
+ref_folder <- file.path("data", "references")
 
 
 
@@ -283,9 +284,9 @@ tlog(2, "Removing rugby league teams")
 #          grepl("\\b[Ll]eague\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][Ll]eague[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
 #tab <- wp_teams[idx, ]  # 89 teams detected
 #idx <- order(tab[, "altNames"])
-#write.csv(tab[idx, -1], file.path(wp_folder, "rugby_league_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#write.csv(tab[idx, -1], file.path(ref_folder, "rugby_league_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### this list was then completed manually and used below
-list_rleague <- read.csv(file.path(wp_folder, "maps", "rugby_league_teams.csv"))
+list_rleague <- read.csv(file.path(ref_folder, "maps", "rugby_league_teams.csv"))
 del_rows <- which(wp_teams[, "teamWP"] %in% list_rleague[!is.na(list_rleague[, "url"]), "url"] | wp_teams[, "altNames"] %in% list_rleague[!is.na(list_rleague[, "name"]) & is.na(list_rleague[, "url"]), "name"])
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
