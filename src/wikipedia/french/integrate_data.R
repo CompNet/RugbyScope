@@ -417,7 +417,7 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 
 
 # TODO: look for teams with the same name in the merged team table
-
+# TODO remove teams containing "High school" in their name (merged table)
 
 
 
