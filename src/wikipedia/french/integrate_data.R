@@ -463,17 +463,6 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 # # merge stints
 # tlog("Merging stints")
 # removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
-# #### debug: directly load the file to bypass all previous processing
-# #wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
-# #fus_teams <- read.csv(file.path(fusion_folder, "teams_04_frwp.csv"))
-# #### debug: reload data table for quick testing
-# #wp_stints <- read.csv(file.path(wp_folder, "stints.csv"))
-# #wp_stints <- wp_stints %>% mutate(across(where(is.character), ~ na_if(., "")))
-# #wp_stints[, "teamName"] <- gsub("（英語版）", "", wp_stints[, "teamName"], fixed = TRUE)    # "english version" (of a team name)
-# #wp_stints[, "teamName"] <- gsub("（フランス語版）", "", wp_stints[, "teamName"], fixed = TRUE) # "french version"
-# #idx <- which(is.na(wp_stints[, "teamName"]))
-# #if (length(idx) > 0)
-# #   wp_stints <- wp_stints[-idx, ]
 
 # # reorder stint table to respect wikidataId / names
 # ids <- fus_stints[, "playerId"]
