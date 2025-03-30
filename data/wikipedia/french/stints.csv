@@ -9434,7 +9434,7 @@
 "Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2009-2011","US Oyonnax","Oyonnax_Rugby","15","0",2009,2011
 "Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2011-2012","SU Cavaillon","Stade_union_cavaillonnais",NA,NA,2011,2012
 "Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2012-2013","Avenir valencien","Avenir_valencien","5","0",2012,2013
-"Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2013-2015","US Cavaillon",NA,NA,NA,2013,2015
+"Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2013-2015","SU Cavaillon","Stade_union_cavaillonnais",NA,NA,2013,2015
 "Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2015-2017","RAC angérien","Rugby_Athletic_Club_ang%C3%A9rien",NA,NA,2015,2017
 "Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2017-2018","Stade niortais","Stade_niortais","10","5",2017,2018
 "Q3014185","Daniel Humbert","Daniel Humbert","Daniel_Humbert","Senior","2018-2020","SA Rochefort",NA,NA,NA,2018,2020
@@ -12708,7 +12708,6 @@
 "Q3127937","Harry Vaughan Watkins","Harry Watkins","Harry_Watkins","Senior","NA-NA","Llandovery","Llandovery_Rugby_Football_Club","?","?",NA,NA
 "Q3127937","Harry Vaughan Watkins","Harry Watkins","Harry_Watkins","Senior","NA-NA","Llanelli","Llanelli_Rugby_Football_Club","?","?",NA,NA
 "Q3127937","Harry Vaughan Watkins","Harry Watkins","Harry_Watkins","Senior","NA-NA","London Welsh","London_Welsh_Rugby_Football_Club","?","?",NA,NA
-"Q3127937","Harry Vaughan Watkins","Harry Watkins","Harry_Watkins","Senior","NA-NA","Victoria",NA,"?","?",NA,NA
 "Q3127937","Harry Vaughan Watkins","Harry Watkins","Harry_Watkins","International","1904-1906","Pays de Galles","%C3%89quipe_du_pays_de_Galles_de_rugby_%C3%A0_XV","6","3",1904,1906
 "Q3128848","Haydn Morgan","Haydn Morgan","Haydn_Morgan","Senior","NA-NA","Oakdale RFC",NA,"?","?",NA,NA
 "Q3128848","Haydn Morgan","Haydn Morgan","Haydn_Morgan","Senior","NA-NA","Trinant RFC",NA,"?","?",NA,NA
@@ -24139,7 +24138,7 @@
 "Q3570749","Xavier Naulleau","Xavier Moana Naulleau","Xavier_Naulleau","Senior","2007-2009","Bordeaux Bègles","Union_Bordeaux_B%C3%A8gles","19","0",2007,2009
 "Q3570749","Xavier Naulleau","Xavier Moana Naulleau","Xavier_Naulleau","Senior","2009-2011","Pays d'Aix RC","Provence_Rugby","50","5",2009,2011
 "Q3570749","Xavier Naulleau","Xavier Moana Naulleau","Xavier_Naulleau","Senior","2011-2014","CA Périgueux","Club_athl%C3%A9tique_P%C3%A9rigueux_Dordogne","50","0",2011,2014
-"Q3570749","Xavier Naulleau","Xavier Moana Naulleau","Xavier_Naulleau","International","2003-2006","Tahiti Capitaine 8 matchs Océanie",NA,NA,NA,2003,2006
+"Q3570749","Xavier Naulleau","Xavier Moana Naulleau","Xavier_Naulleau","International","2003-2006","Tahiti","%C3%89quipe_de_Tahiti_de_rugby_%C3%A0_XV",NA,NA,2003,2006
 "Q3570768","Xavier Plataret","Xavier Plataret","Xavier_Plataret","Youth","1990-1994","La Voulte Sportif","La_Voulte_sportif",NA,NA,1990,1994
 "Q3570768","Xavier Plataret","Xavier Plataret","Xavier_Plataret","Senior","1994-2000","RC Narbonne","Racing_Club_narbonnais",NA,NA,1994,2000
 "Q3570768","Xavier Plataret","Xavier Plataret","Xavier_Plataret","Senior","2000-2014","RC Aubenas Vals","Rugby_Club_Aubenas_Vals",NA,NA,2000,2014
@@ -38810,7 +38809,7 @@
 "Q70926672","Marcelo Torrealba","Marcelo Torrealba","Marcelo_Torrealba","International","2015-NA","Chili sept","%C3%89quipe_du_Chili_de_rugby_%C3%A0_sept",NA,NA,2015,NA
 "Q70926672","Marcelo Torrealba","Marcelo Torrealba","Marcelo_Torrealba","International","2018-NA","Chili","%C3%89quipe_du_Chili_de_rugby_%C3%A0_XV","7","15",2018,NA
 "Q70926672","Marcelo Torrealba","Marcelo Torrealba","Marcelo_Torrealba","International","2020-2020","Chili XV",NA,"3","0",2020,2020
-"Q71333541","Josua Vici","Josua Vici","Josua_Vici","Senior","2020-2020","Uluninakau RFC",NA,NA,NA,2020,2020
+"Q71333541","Josua Vici","Josua Vici","Josua_Vici","Senior","2020-2020","Uluinakau RFC",NA,NA,NA,2020,2020
 "Q71333541","Josua Vici","Josua Vici","Josua_Vici","Senior","2018-2019","Sabercats de Houston","SaberCats_de_Houston","14","40",2018,2019
 "Q71333541","Josua Vici","Josua Vici","Josua_Vici","Senior","2019-2021","Colomiers rugby","Colomiers_Rugby","32","60",2019,2021
 "Q71333541","Josua Vici","Josua Vici","Josua_Vici","Senior","2021-2022","Montpellier HR","Montpellier_H%C3%A9rault_Rugby","5","0",2021,2022
@@ -41953,7 +41952,6 @@
 "Q104873400","Ollie Smith","Ollie Smith","Ollie_Smith_(rugby_%C3%A0_XV,_2000)","International","2019-2020","Écosse -20","%C3%89quipe_d%27%C3%89cosse_de_rugby_%C3%A0_XV_des_moins_de_20_ans","9","15",2019,2020
 "Q104873400","Ollie Smith","Ollie Smith","Ollie_Smith_(rugby_%C3%A0_XV,_2000)","International","2022-NA","Écosse","%C3%89quipe_d%27%C3%89cosse_de_rugby_%C3%A0_XV","9","10",2022,NA
 "Q104873400","Ollie Smith","Ollie Smith","Ollie_Smith_(rugby_%C3%A0_XV,_2000)","International","2022-2022","Écosse A","%C3%89quipe_d%27%C3%89cosse_A_de_rugby_%C3%A0_XV","1","0",2022,2022
-"Q104884593","Matt Faessler","Matt Faessler","Matt_Faessler","Youth","NA-NA","USQ Saints RC Toowoomba",NA,NA,NA,NA,NA
 "Q104884593","Matt Faessler","Matt Faessler","Matt_Faessler","Youth","2017-2017","Queensland Reds","Queensland_Reds",NA,NA,2017,2017
 "Q104884593","Matt Faessler","Matt Faessler","Matt_Faessler","Senior","2017-NA","Brothers Old Boys","Brothers_Old_Boys",NA,NA,2017,NA
 "Q104884593","Matt Faessler","Matt Faessler","Matt_Faessler","Senior","2019-2019","Queensland Country","Queensland_Country","6","0",2019,2019
@@ -42809,8 +42807,6 @@
 "Q106528505","Killian Taofifénua","Killian Taofifénua","Killian_Taofif%C3%A9nua","Senior","2020-2022","USA Perpignan","Union_sportive_Arlequins_perpignanais","5","0",2020,2022
 "Q106528505","Killian Taofifénua","Killian Taofifénua","Killian_Taofif%C3%A9nua","Senior","2022-NA","Biarritz olympique","Biarritz_olympique_Pays_basque","29","5",2022,NA
 "Q106528505","Killian Taofifénua","Killian Taofifénua","Killian_Taofif%C3%A9nua","Senior","2022-2023","Stade niçois","Stade_ni%C3%A7ois_rugby","7","0",2022,2023
-"Q106528979","Philip Wokorach","Philip Wokorach","Philip_Wokorach","Youth","NA-NA","Acholi Rugby Academy",NA,NA,NA,NA,NA
-"Q106528979","Philip Wokorach","Philip Wokorach","Philip_Wokorach","Youth","NA-NA","Stallions",NA,NA,NA,NA,NA
 "Q106528979","Philip Wokorach","Philip Wokorach","Philip_Wokorach","Senior","2011-2012","Toyota Buffaloes",NA,NA,NA,2011,2012
 "Q106528979","Philip Wokorach","Philip Wokorach","Philip_Wokorach","Senior","2012-2016","MTN Heathens",NA,NA,NA,2012,2016
 "Q106528979","Philip Wokorach","Philip Wokorach","Philip_Wokorach","Senior","2017-2019","Kabras Sugar RFC",NA,NA,NA,2017,2019

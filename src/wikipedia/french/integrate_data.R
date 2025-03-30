@@ -56,9 +56,9 @@ tlog(2, "Raw number of stints: ", nrow(fus_stints))
 # load FR WP tables
 tlog("Loading Wikipedia FR tables")
 
-# wp_players <- read.csv(file.path(wp_folder, "players.csv"))
-# tlog(2, "Raw number of players: ", nrow(wp_players))
-# wp_players <- wp_players %>% mutate(across(where(is.character), ~ na_if(., "")))
+wp_players <- read.csv(file.path(wp_folder, "players.csv"))
+tlog(2, "Raw number of players: ", nrow(wp_players))
+wp_players <- wp_players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
 wp_stints <- read.csv(file.path(wp_folder, "stints.csv"))
 tlog(2, "Raw number of stints: ", nrow(wp_stints))
@@ -77,82 +77,82 @@ tlog(2, "Removed ", length(idx), " stints without a team")
 
 
 
-# ########################################################################
-# # merge players
-# tlog("Merging players")
+########################################################################
+# merge players
+tlog("Merging players")
 
-# # convert dob and dod into proper dates
-# wp_players[, "birthDate"] %<>%  as.Date()
-# wp_players[, "deathDate"] %<>%  as.Date()
-# fus_players[, "birthDate"] %<>%  as.Date()
-# fus_players[, "deathDate"] %<>%  as.Date()
+# convert dob and dod into proper dates
+wp_players[, "birthDate"] %<>%  as.Date()
+wp_players[, "deathDate"] %<>%  as.Date()
+fus_players[, "birthDate"] %<>%  as.Date()
+fus_players[, "deathDate"] %<>%  as.Date()
 
-# # match players from WP to the merged list
-# idx <- match(wp_players[, "wikidataId"], fus_players[, "wikidataId"])
-# tlog(2, "Successful player matches: ", length(which(!is.na(idx))), "/", nrow(wp_players))
+# match players from WP to the merged list
+idx <- match(wp_players[, "wikidataId"], fus_players[, "wikidataId"])
+tlog(2, "Successful player matches: ", length(which(!is.na(idx))), "/", nrow(wp_players))
 
-# # insert WP info if field is empty in the merged table
-# map <- c()  # merged <- wp
-# map["birthDate"] <- "birthDate"
-# map["birthPlaces"] <- "birthPlace"
-# map["deathDate"] <- "deathDate"
-# map["deathPlaces"] <- "deathPlace"
-# map["fullName"] <- "fullName"
-# map["heights"] <- "height"
-# map["positions"] <- "positions"
-# tlog(2, "Merging regular fields")
-# total_changes <- rep(0, length(map))
-# names(total_changes) <- names(map)
-# for (p in 1:nrow(wp_players)) {
-#   if (p %% 100 == 0)
-#     tlog(4, "Processing player ", p, "/", nrow(wp_players))
-#   filled_wp_cols <- which(!is.na(wp_players[p, map]))
-#   empty_fus_cols <- which(is.na(fus_players[idx[p], names(map)]))
-#   cols <- intersect(filled_wp_cols, empty_fus_cols)
-#   if (length(cols) > 0) {
-#     fus_players[idx[p], names(map)[cols]] <- wp_players[p, map[cols]]
-#     total_changes[names(map)[cols]] <- total_changes[names(map)[cols]] + rep(1, length(cols))
-#   }
-# }
-# tlog(2, "Total numbers of changes: ", sum(total_changes))
-# tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
-# print(total_changes)
+# insert WP info if field is empty in the merged table
+map <- c()  # merged <- wp
+map["birthDate"] <- "birthDate"
+map["birthPlaces"] <- "birthPlace"
+map["deathDate"] <- "deathDate"
+map["deathPlaces"] <- "deathPlace"
+map["fullName"] <- "fullName"
+map["heights"] <- "height"
+map["positions"] <- "positions"
+tlog(2, "Merging regular fields")
+total_changes <- rep(0, length(map))
+names(total_changes) <- names(map)
+for (p in 1:nrow(wp_players)) {
+  if (p %% 100 == 0)
+    tlog(4, "Processing player ", p, "/", nrow(wp_players))
+  filled_wp_cols <- which(!is.na(wp_players[p, map]))
+  empty_fus_cols <- which(is.na(fus_players[idx[p], names(map)]))
+  cols <- intersect(filled_wp_cols, empty_fus_cols)
+  if (length(cols) > 0) {
+    fus_players[idx[p], names(map)[cols]] <- wp_players[p, map[cols]]
+    total_changes[names(map)[cols]] <- total_changes[names(map)[cols]] + rep(1, length(cols))
+  }
+}
+tlog(2, "Total numbers of changes: ", sum(total_changes))
+tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
+print(total_changes)
 
-# # only keep WP name as alt name, and only if it does not match current fullname
-# tlog(2, "Copying WP names into alt name list")
-# total_changes <- c(total_changes, 0)
-# names(total_changes)[length(total_changes)] <- "altNames"
-# full_names <- fus_players[, "fullName"]
-# alt_names <- strsplit(fus_players[, "altNames"], "; ")
-# fr_names <- wp_players[, "frName"]
-# # loop over players to copy WP data
-# for (p in 1:length(idx)) {
-#   if (!is.na(fr_names[p]) && fr_names[p] != full_names[idx[p]]) {
-#     # possibly complement list of alt names
-#     if (all(is.na(alt_names[[idx[p]]])))
-#       a_names <- fr_names[p]
-#     else
-#       a_names <- union(alt_names[[idx[p]]], fr_names[p])
+# only keep WP name as alt name, and only if it does not match current fullname
+tlog(2, "Copying WP names into alt name list")
+total_changes <- c(total_changes, 0)
+names(total_changes)[length(total_changes)] <- "altNames"
+full_names <- fus_players[, "fullName"]
+alt_names <- strsplit(fus_players[, "altNames"], "; ")
+fr_names <- wp_players[, "frName"]
+# loop over players to copy WP data
+for (p in 1:length(idx)) {
+  if (!is.na(fr_names[p]) && fr_names[p] != full_names[idx[p]]) {
+    # possibly complement list of alt names
+    if (all(is.na(alt_names[[idx[p]]])))
+      a_names <- fr_names[p]
+    else
+      a_names <- union(alt_names[[idx[p]]], fr_names[p])
     
-#     # update in table
-#     alt_names_new <- paste(a_names, collapse = "; ")
-#     if (is.na(fus_players[idx[p], "altNames"]) || alt_names_new != fus_players[idx[p], "altNames"]) {
-#       total_changes["altNames"] <- total_changes["altNames"] + 1
-#       tlog(4, "(", full_names[idx[p]], ") ", fus_players[idx[p], "altNames"], " => ", alt_names_new)
-#     }
-#     fus_players[idx[p], "altNames"] <- alt_names_new
-#   }
-# }
-# idx <- which(fus_players[, "altNames"] == "NA")
-# fus_players[idx, "altNames"] <- NA
-# tlog(2, "Total numbers of changes: ", sum(total_changes))
-# tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
-# print(total_changes)
+    # update in table
+    alt_names_new <- paste(a_names, collapse = "; ")
+    if (is.na(fus_players[idx[p], "altNames"]) || alt_names_new != fus_players[idx[p], "altNames"]) {
+      total_changes["altNames"] <- total_changes["altNames"] + 1
+      tlog(4, "(", full_names[idx[p]], ") ", fus_players[idx[p], "altNames"], " => ", alt_names_new)
+    }
+    fus_players[idx[p], "altNames"] <- alt_names_new
+  }
+}
+idx <- which(fus_players[, "altNames"] == "NA")
+fus_players[idx, "altNames"] <- NA
+tlog(2, "Total numbers of changes: ", sum(total_changes))
+tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
+print(total_changes)
 
-# # record merged table as a new CSV file
-# tab.file <- file.path(fusion_folder, "players_03_frwp.csv")
-# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-# write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# record merged table as a new CSV file
+tab.file <- file.path(fusion_folder, "players_03_frwp.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -286,7 +286,7 @@ tlog(2, "Removing rugby league teams")
 #idx <- order(tab[, "altNames"])
 #write.csv(tab[idx, -1], file.path(ref_folder, "rugby_league_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### this list was then completed manually and used below
-list_rleague <- read.csv(file.path(ref_folder, "maps", "rugby_league_teams.csv"))
+list_rleague <- read.csv(file.path(ref_folder, "rugby_league_teams.csv"))
 del_rows <- which(wp_teams[, "teamWP"] %in% list_rleague[!is.na(list_rleague[, "url"]), "url"] | wp_teams[, "altNames"] %in% list_rleague[!is.na(list_rleague[, "name"]) & is.na(list_rleague[, "url"]), "name"])
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
@@ -355,7 +355,7 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 ## we now switch to names only, as the remaining WP teams do not have a URL
 
 # use manually defined map to match certain teams
-tlog(2, "Use manually defined map to match certain teams based on their french name")
+tlog(2, "Use manually defined map to match certain teams based on their name")
 temp <- read.csv(file.path(wp_folder, "maps", "name2id.csv"))
 map_names <- temp[, "rugbyscopeId"]
 names(map_names) <- temp[, "fullName"]
@@ -406,12 +406,12 @@ wp_teams[wp_idx[idx], "rugbyscopeId"] <- fus_teams[result[idx], "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 #### debug: export the list of unmatched teams
-#idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
-#tab <- wp_teams[idx, c("altNames", "rugbyscopeId")]
-#idx <- order(tab[, "altNames"])
-#tab <- tab[idx, ]
-#colnames(tab)[1] <- "teamName"
-#write.csv(tab, file.path(wp_folder, "unmatched_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+tab <- wp_teams[idx, c("altNames", "rugbyscopeId")]
+idx <- order(tab[, "altNames"])
+tab <- tab[idx, ]
+colnames(tab)[1] <- "teamName"
+write.csv(tab, file.path(wp_folder, "unmatched_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### the produced file is used to complement existing maps
 
 
@@ -423,308 +423,308 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 
 
 
-#### debug
-#idx_um <- which(is.na(result))
-#idx_em <- which(en_names %in% unique_names[idx_um])
-#idx_plyr <- match(fr_names[idx_em], wp_stints[, "teamName"])
-#tab <- cbind(en_names[idx_em], fr_names[idx_em], rep(NA, length(idx_em)), wp_stints[idx_plyr, "wpPage"])
-#colnames(tab) <- c("fullName", "frName", "rugbyscopeId", "playerWP")
-#idx <- order(en_names[idx_em])
-#write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-#### at this stage, it was not possible to match the remaining teams automatically
-#### therefore, we exported the list of remaining unmatched teams so that they could be matched manually
-#### through the map already defined in file name2id.csv (and complemetented based on the above list)
-#### the rest will be considered as new teams: created and inserted in the merged table (see above)
+# #### debug
+# #idx_um <- which(is.na(result))
+# #idx_em <- which(en_names %in% unique_names[idx_um])
+# #idx_plyr <- match(fr_names[idx_em], wp_stints[, "teamName"])
+# #tab <- cbind(en_names[idx_em], fr_names[idx_em], rep(NA, length(idx_em)), wp_stints[idx_plyr, "wpPage"])
+# #colnames(tab) <- c("fullName", "frName", "rugbyscopeId", "playerWP")
+# #idx <- order(en_names[idx_em])
+# #write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+# #### at this stage, it was not possible to match the remaining teams automatically
+# #### therefore, we exported the list of remaining unmatched teams so that they could be matched manually
+# #### through the map already defined in file name2id.csv (and complemetented based on the above list)
+# #### the rest will be considered as new teams: created and inserted in the merged table (see above)
 
 
 
 
-#### debug: check the remaining unmatched teams (should be empty)
-#idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
-#write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+# #### debug: check the remaining unmatched teams (should be empty)
+# #idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+# #write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 
-# add merged table name to FR entry, for visual verification
-idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
-wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
+# # add merged table name to FR entry, for visual verification
+# idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
+# wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 
-#### Debug: list entries from name2id.csv that refer to teams missing from the original 
-#### merged table and added during the previous steps of this script
-#idx <- which(wp_teams[, "rugbyscopeId"] == "TODO")
-#print(wp_teams[idx, ])
-#### we used this list to complement name2id.csv appropriately
+# #### Debug: list entries from name2id.csv that refer to teams missing from the original 
+# #### merged table and added during the previous steps of this script
+# #idx <- which(wp_teams[, "rugbyscopeId"] == "TODO")
+# #print(wp_teams[idx, ])
+# #### we used this list to complement name2id.csv appropriately
 
-#### debug: check RS id duplicates (several WP teams with the same id)
-#idx <- as.integer(names(which(table(wp_teams[, "rugbyscopeId"]) > 1)))
-#for (i in idx) {
-#  print("------------------------")
-#  ii <- which(wp_teams[, "rugbyscopeId"] == i)
-#  print(wp_teams[ii, ])
-#}
-#### there are many cases: it is expected, there are many slightly different french names
+# #### debug: check RS id duplicates (several WP teams with the same id)
+# #idx <- as.integer(names(which(table(wp_teams[, "rugbyscopeId"]) > 1)))
+# #for (i in idx) {
+# #  print("------------------------")
+# #  ii <- which(wp_teams[, "rugbyscopeId"] == i)
+# #  print(wp_teams[ii, ])
+# #}
+# #### there are many cases: it is expected, there are many slightly different french names
 
-# record final WP team table as a new CSV file, for verification
-tab.file <- file.path(wp_folder, "teams.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# # record final WP team table as a new CSV file, for verification
+# tab.file <- file.path(wp_folder, "teams.csv")
+# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+# write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
-# complement alternative names in merged table, using french names
-tlog("Complement alternative names in merged team table")
-idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
-fus_full_names <- fus_teams[idx, "fullName"]
-wp_alt_names <- strsplit(wp_teams[, "altNames"], ";")
-for (r in 1:length(idx)) {
-  # original alt names
-  ofn <- fus_full_names[r]
-  oan <- trimws(strsplit(fus_teams[idx[r], "altNames"], ";")[[1]])
-  if (all(is.na(oan)))
-    oan <- c()
-  # wp altnames
-  wan <- trimws(wp_alt_names[[r]])
-  ii <- which(sapply(wan, function(w) grepl("[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3400-\u4dbf]+", w, fixed = FALSE))) # check if the string contains at least two french characters
-  # combine altnames
-  an <- setdiff(union(oan, wan[ii]), ofn)
-  if (all(is.na(an)) || length(an) == 0)
-    san <- NA
-  else
-    san <- paste0(an, collapse = "; ")
-  if (!is.na(san) & !is.na(fus_teams[idx[r], "altNames"]) & san != fus_teams[idx[r], "altNames"] | !is.na(san) & is.na(fus_teams[idx[r], "altNames"])) {
-    tlog(2, "Changed name for team ", r, "/", length(idx), ":")
-    tlog(4, "Original: ", fus_teams[idx[r], "altNames"])
-    tlog(4, "Revised:  ", san)
-    fus_teams[idx[r], "altNames"] <- san
-  }
-}
+# # complement alternative names in merged table, using french names
+# tlog("Complement alternative names in merged team table")
+# idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
+# fus_full_names <- fus_teams[idx, "fullName"]
+# wp_alt_names <- strsplit(wp_teams[, "altNames"], ";")
+# for (r in 1:length(idx)) {
+#   # original alt names
+#   ofn <- fus_full_names[r]
+#   oan <- trimws(strsplit(fus_teams[idx[r], "altNames"], ";")[[1]])
+#   if (all(is.na(oan)))
+#     oan <- c()
+#   # wp altnames
+#   wan <- trimws(wp_alt_names[[r]])
+#   ii <- which(sapply(wan, function(w) grepl("[\u3040-\u309f\u30a0-\u30ff\u4e00-\u9faf\u3400-\u4dbf]+", w, fixed = FALSE))) # check if the string contains at least two french characters
+#   # combine altnames
+#   an <- setdiff(union(oan, wan[ii]), ofn)
+#   if (all(is.na(an)) || length(an) == 0)
+#     san <- NA
+#   else
+#     san <- paste0(an, collapse = "; ")
+#   if (!is.na(san) & !is.na(fus_teams[idx[r], "altNames"]) & san != fus_teams[idx[r], "altNames"] | !is.na(san) & is.na(fus_teams[idx[r], "altNames"])) {
+#     tlog(2, "Changed name for team ", r, "/", length(idx), ":")
+#     tlog(4, "Original: ", fus_teams[idx[r], "altNames"])
+#     tlog(4, "Revised:  ", san)
+#     fus_teams[idx[r], "altNames"] <- san
+#   }
+# }
 
-# record merged table as a new CSV file
-tab.file <- file.path(fusion_folder, "teams_04_frwp.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
-
-
+# # record merged table as a new CSV file
+# tab.file <- file.path(fusion_folder, "teams_04_frwp.csv")
+# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+# write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
-########################################################################
-# merge stints
-tlog("Merging stints")
-removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
-#### debug: directly load the file to bypass all previous processing
-#wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
-#fus_teams <- read.csv(file.path(fusion_folder, "teams_04_frwp.csv"))
-#### debug: reload data table for quick testing
-#wp_stints <- read.csv(file.path(wp_folder, "stints.csv"))
-#wp_stints <- wp_stints %>% mutate(across(where(is.character), ~ na_if(., "")))
-#wp_stints[, "teamName"] <- gsub("（英語版）", "", wp_stints[, "teamName"], fixed = TRUE)    # "english version" (of a team name)
-#wp_stints[, "teamName"] <- gsub("（フランス語版）", "", wp_stints[, "teamName"], fixed = TRUE) # "french version"
-#idx <- which(is.na(wp_stints[, "teamName"]))
-#if (length(idx) > 0)
-#   wp_stints <- wp_stints[-idx, ]
 
-# reorder stint table to respect wikidataId / names
-ids <- fus_stints[, "playerId"]
-ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
-idx <- order(ids, fus_stints[, "playerName"], fus_stints[, "startYear"], fus_stints[, "endYear"], fus_stints[, "teamName"])
-fus_stints <- fus_stints[idx, ]
 
-# connect WP stint to WP team tables (and so merged teams)
-tlog(2, "Matching stint teams to team table")
-wp_stints <- cbind(wp_stints, rep(NA, nrow(wp_stints)))
-colnames(wp_stints)(ncol(wp_stints)) <- "rugbyscopeId"
-del_raws <- c()
-alt_names <- strsplit(wp_teams[, "altNames"], ";")
-alt_names <- lapply(alt_names, trimws)
-for (r in 1:nrow(wp_stints)) {
-  team_name <- wp_stints[r, "teamName"]
-  tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (", team_name, ")")
-  # possibly ignore the team if it is in the ignore list
-  if (team_name %in% removed_teams)
-    del_raws <- c(del_raws, r)
-  else {
-    # try to match using exact comparison
-    idx <- which(sapply(alt_names, function(names) all(team_name == names)))
-    if (length(idx) == 0)
-      # try to match using one of the names
-      idx <- which(sapply(alt_names, function(names) team_name %in% names))
-    # multiple matches
-    if (length(idx) > 1) {
-      ids <- wp_teams[idx, "rugbyscopeId"]
-      # if they all agree on the merged team match, no pb
-      if (all(ids[1] == ids[-1]))
-        idx <- idx[1]
-      # otherwise, use URL to disambiguate
-      else {
-        team_url <- wp_stints[r, "teamWP"]
-        if (!is.na(team_url)) {
-          idx <- idx[which(wp_teams[idx, "teamWP"] == team_url)]
-          # if no match at all
-          if (length(idx) == 0) {
-              print(team_name)
-              print(team_url)
-              print(wp_teams[idx, ])
-              stop("No match, could not find the URL: ", r)
-          # if multiple matches again
-          } else if (length(idx) > 1) {
-            ids <- wp_teams[idx, "rugbyscopeId"]
-            # if they all agree on the merged team match, no pb
-            if (all(ids[1] == ids[-1]))
-              idx <- idx[1]
-            # otherwise, error
-            else {
-              print(team_name)
-              print(wp_teams[idx, ])
-              stop("Too many matches: ", r)
-            }
-          }
-        # no url to compare 
-        } else {
-          print(team_name)
-          print(wp_teams[idx, ])
-          stop("Too many matches, no URL to disambiguate: ", r)
-        }
-      }
-    } else if (length(idx) == 0) {
-      print(team_name)
-      print(wp_teams[idx, ])
-      stop("No match, could not find the name: ", r)
-    }
-    # get id
-    wp_stints[r, "rugbyscopeId"] <- wp_teams[idx, "rugbyscopeId"]
-  }
-}
+# ########################################################################
+# # merge stints
+# tlog("Merging stints")
+# removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
+# #### debug: directly load the file to bypass all previous processing
+# #wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
+# #fus_teams <- read.csv(file.path(fusion_folder, "teams_04_frwp.csv"))
+# #### debug: reload data table for quick testing
+# #wp_stints <- read.csv(file.path(wp_folder, "stints.csv"))
+# #wp_stints <- wp_stints %>% mutate(across(where(is.character), ~ na_if(., "")))
+# #wp_stints[, "teamName"] <- gsub("（英語版）", "", wp_stints[, "teamName"], fixed = TRUE)    # "english version" (of a team name)
+# #wp_stints[, "teamName"] <- gsub("（フランス語版）", "", wp_stints[, "teamName"], fixed = TRUE) # "french version"
+# #idx <- which(is.na(wp_stints[, "teamName"]))
+# #if (length(idx) > 0)
+# #   wp_stints <- wp_stints[-idx, ]
 
-# delete rows corresponding to removed teams
-tlog(2, "Delete ", length(del_raws), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
-wp_stints <- wp_stints[-del_raws, ]
+# # reorder stint table to respect wikidataId / names
+# ids <- fus_stints[, "playerId"]
+# ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
+# idx <- order(ids, fus_stints[, "playerName"], fus_stints[, "startYear"], fus_stints[, "endYear"], fus_stints[, "teamName"])
+# fus_stints <- fus_stints[idx, ]
 
-# add new column in stint table, corresponding to RS id
-rs_ids <- match(fus_stints[, "teamId"], fus_teams[, "wikidataId"])
-fus_stints <- cbind(fus_stints[, 1:3], rs_ids, fus_stints[, 4:ncol(fus_stints)])
-colnames(fus_stints)[3:4] <- c("teamWdId", "teamRsId")
-# add new column to indicate the data source of each stint
-fus_stints <- cbind(fus_stints, rep("WD", nrow(fus_stints)))
-colnames(fus_stints)[ncol(fus_stints)] <- "dataSource"
+# # connect WP stint to WP team tables (and so merged teams)
+# tlog(2, "Matching stint teams to team table")
+# wp_stints <- cbind(wp_stints, rep(NA, nrow(wp_stints)))
+# colnames(wp_stints)(ncol(wp_stints)) <- "rugbyscopeId"
+# del_raws <- c()
+# alt_names <- strsplit(wp_teams[, "altNames"], ";")
+# alt_names <- lapply(alt_names, trimws)
+# for (r in 1:nrow(wp_stints)) {
+#   team_name <- wp_stints[r, "teamName"]
+#   tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (", team_name, ")")
+#   # possibly ignore the team if it is in the ignore list
+#   if (team_name %in% removed_teams)
+#     del_raws <- c(del_raws, r)
+#   else {
+#     # try to match using exact comparison
+#     idx <- which(sapply(alt_names, function(names) all(team_name == names)))
+#     if (length(idx) == 0)
+#       # try to match using one of the names
+#       idx <- which(sapply(alt_names, function(names) team_name %in% names))
+#     # multiple matches
+#     if (length(idx) > 1) {
+#       ids <- wp_teams[idx, "rugbyscopeId"]
+#       # if they all agree on the merged team match, no pb
+#       if (all(ids[1] == ids[-1]))
+#         idx <- idx[1]
+#       # otherwise, use URL to disambiguate
+#       else {
+#         team_url <- wp_stints[r, "teamWP"]
+#         if (!is.na(team_url)) {
+#           idx <- idx[which(wp_teams[idx, "teamWP"] == team_url)]
+#           # if no match at all
+#           if (length(idx) == 0) {
+#               print(team_name)
+#               print(team_url)
+#               print(wp_teams[idx, ])
+#               stop("No match, could not find the URL: ", r)
+#           # if multiple matches again
+#           } else if (length(idx) > 1) {
+#             ids <- wp_teams[idx, "rugbyscopeId"]
+#             # if they all agree on the merged team match, no pb
+#             if (all(ids[1] == ids[-1]))
+#               idx <- idx[1]
+#             # otherwise, error
+#             else {
+#               print(team_name)
+#               print(wp_teams[idx, ])
+#               stop("Too many matches: ", r)
+#             }
+#           }
+#         # no url to compare 
+#         } else {
+#           print(team_name)
+#           print(wp_teams[idx, ])
+#           stop("Too many matches, no URL to disambiguate: ", r)
+#         }
+#       }
+#     } else if (length(idx) == 0) {
+#       print(team_name)
+#       print(wp_teams[idx, ])
+#       stop("No match, could not find the name: ", r)
+#     }
+#     # get id
+#     wp_stints[r, "rugbyscopeId"] <- wp_teams[idx, "rugbyscopeId"]
+#   }
+# }
 
-# insert WP stint in merged table
-for (r in 1:nrow(wp_stints)) {
-  player_id <- wp_stints[r, "origWdId"]
-  tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (player ", player_id, ")")
-  team_id <- wp_stints[r, "rugbyscopeId"]
-  found <- FALSE
-# print(wp_stints[r, ])
+# # delete rows corresponding to removed teams
+# tlog(2, "Delete ", length(del_raws), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
+# wp_stints <- wp_stints[-del_raws, ]
 
-  # retrieve existing stints for this player
-  idx <- which(fus_stints[, "playerId"] == player_id)
-  if (length(idx) > 0) {
-    # compare teams
-    idx2 <- idx[fus_stints[idx, "teamRsId"] == team_id]
-    if (length(idx2) > 0) {
-      start_year <- wp_stints[r, "startYear"]
-      end_year <- wp_stints[r, "endYear"]
-      matches_played <- wp_stints[r, "matchesPlayed"]
-      points_scored <- wp_stints[r, "pointsScored"]
-      update <- FALSE
+# # add new column in stint table, corresponding to RS id
+# rs_ids <- match(fus_stints[, "teamId"], fus_teams[, "wikidataId"])
+# fus_stints <- cbind(fus_stints[, 1:3], rs_ids, fus_stints[, 4:ncol(fus_stints)])
+# colnames(fus_stints)[3:4] <- c("teamWdId", "teamRsId")
+# # add new column to indicate the data source of each stint
+# fus_stints <- cbind(fus_stints, rep("WD", nrow(fus_stints)))
+# colnames(fus_stints)[ncol(fus_stints)] <- "dataSource"
 
-      if (is.na(start_year)) {
-        if (is.na(end_year)) {
-          # both start and end years contain NA > cannot be reliably matched to an existing stint
-          # > nothing more to do
-          found <- TRUE
-        } else {
-          # start year is NA and end year is not: try to match only the latter
-          idx3 <- idx2[fus_stints[idx2, "endYear"] == end_year]
-          if (length(idx3) == 1 && is.na(idx3)) {
-            idx3 <- idx2[is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
-            # both start and end years contain NA > cannot be reliably matched to an existing stint
-            found <- TRUE
-          }
-        }
-      } else {
-        if (is.na(end_year)) {
-          # start year is not NA but end year is: try to match only the former
-          idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year]
-          if (length(idx3) == 1 && is.na(idx3)) {
-            idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year]
-            # both start and end years contain NA > cannot be reliably matched to an existing stint
-            found <- TRUE
-          }
-        } else {
-          # both start and end years are non-NA: try matching both
-          idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & fus_stints[idx2, "endYear"] == end_year]
-          # remove NA (ie merged table with NA start and/or end year) only if several matches
-          if (length(idx3) > 1)
-            idx3 <- idx3[-is.na(idx)]
-          else if (length(idx3) == 1 && is.na(idx3))
-            idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year & 
-                         is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
-          # # if no match at all: consider missing years in merged table
-          # if (length(idx3) == 0)
-          #   idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & is.na(fus_stints[idx2, "endYear"])]
-          # if (length(idx3) == 0)
-          #   idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) & fus_stints[idx2, "endYear"] == end_year]
-        }
-      }
+# # insert WP stint in merged table
+# for (r in 1:nrow(wp_stints)) {
+#   player_id <- wp_stints[r, "origWdId"]
+#   tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (player ", player_id, ")")
+#   team_id <- wp_stints[r, "rugbyscopeId"]
+#   found <- FALSE
+# # print(wp_stints[r, ])
 
-      # if a single match: possibly update stats
-      if (!found && length(idx3) == 1) {
-        found <- TRUE
-        update <- TRUE
-      }
-      # if several matches: problem
-      if (!found && length(idx3) > 1) {
-        found <- TRUE
-        tlog(6, "Found several matching stints, which is not normal")
-        print(wp_stints[r, ])
-        print(fus_stints[idx3, ])
-        stop("ERROR")
-      }
+#   # retrieve existing stints for this player
+#   idx <- which(fus_stints[, "playerId"] == player_id)
+#   if (length(idx) > 0) {
+#     # compare teams
+#     idx2 <- idx[fus_stints[idx, "teamRsId"] == team_id]
+#     if (length(idx2) > 0) {
+#       start_year <- wp_stints[r, "startYear"]
+#       end_year <- wp_stints[r, "endYear"]
+#       matches_played <- wp_stints[r, "matchesPlayed"]
+#       points_scored <- wp_stints[r, "pointsScored"]
+#       update <- FALSE
+
+#       if (is.na(start_year)) {
+#         if (is.na(end_year)) {
+#           # both start and end years contain NA > cannot be reliably matched to an existing stint
+#           # > nothing more to do
+#           found <- TRUE
+#         } else {
+#           # start year is NA and end year is not: try to match only the latter
+#           idx3 <- idx2[fus_stints[idx2, "endYear"] == end_year]
+#           if (length(idx3) == 1 && is.na(idx3)) {
+#             idx3 <- idx2[is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
+#             # both start and end years contain NA > cannot be reliably matched to an existing stint
+#             found <- TRUE
+#           }
+#         }
+#       } else {
+#         if (is.na(end_year)) {
+#           # start year is not NA but end year is: try to match only the former
+#           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year]
+#           if (length(idx3) == 1 && is.na(idx3)) {
+#             idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year]
+#             # both start and end years contain NA > cannot be reliably matched to an existing stint
+#             found <- TRUE
+#           }
+#         } else {
+#           # both start and end years are non-NA: try matching both
+#           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & fus_stints[idx2, "endYear"] == end_year]
+#           # remove NA (ie merged table with NA start and/or end year) only if several matches
+#           if (length(idx3) > 1)
+#             idx3 <- idx3[-is.na(idx)]
+#           else if (length(idx3) == 1 && is.na(idx3))
+#             idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year & 
+#                          is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
+#           # # if no match at all: consider missing years in merged table
+#           # if (length(idx3) == 0)
+#           #   idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & is.na(fus_stints[idx2, "endYear"])]
+#           # if (length(idx3) == 0)
+#           #   idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) & fus_stints[idx2, "endYear"] == end_year]
+#         }
+#       }
+
+#       # if a single match: possibly update stats
+#       if (!found && length(idx3) == 1) {
+#         found <- TRUE
+#         update <- TRUE
+#       }
+#       # if several matches: problem
+#       if (!found && length(idx3) > 1) {
+#         found <- TRUE
+#         tlog(6, "Found several matching stints, which is not normal")
+#         print(wp_stints[r, ])
+#         print(fus_stints[idx3, ])
+#         stop("ERROR")
+#       }
       
-      # possibly update stats
-      if (update) {
-# print(fus_stints[idx3, ])
-        # we assume that the info already present is more reliable
-        # and update only the NA fields from the merted table
-        if (is.na(fus_stints[idx3, "startYear"]))
-          fus_stints[idx3, "startYear"] <- start_year
-        if (is.na(fus_stints[idx3, "endYear"]))
-          fus_stints[idx3, "endYear"] <- end_year
-        if (is.na(fus_stints[idx3, "matchesPlayed"]))
-          fus_stints[idx3, "matchesPlayed"] <- matches_played
-        if (is.na(fus_stints[idx3, "pointsScored"]))
-          fus_stints[idx3, "pointsScored"] <- points_scored
-        # add WP as source if agreement on any non-NA field 
-        changes <- fus_stints[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] != c(start_year, end_year, matches_played, points_scored)
-        if (!all(is.na(changes)) && any(changes, na.rm = TRUE))
-          fus_stints[idx3, "dataSource"] <- paste0(fus_stints[idx3, "dataSource"], "; frWP")
-      }
-    }
-  }
+#       # possibly update stats
+#       if (update) {
+# # print(fus_stints[idx3, ])
+#         # we assume that the info already present is more reliable
+#         # and update only the NA fields from the merted table
+#         if (is.na(fus_stints[idx3, "startYear"]))
+#           fus_stints[idx3, "startYear"] <- start_year
+#         if (is.na(fus_stints[idx3, "endYear"]))
+#           fus_stints[idx3, "endYear"] <- end_year
+#         if (is.na(fus_stints[idx3, "matchesPlayed"]))
+#           fus_stints[idx3, "matchesPlayed"] <- matches_played
+#         if (is.na(fus_stints[idx3, "pointsScored"]))
+#           fus_stints[idx3, "pointsScored"] <- points_scored
+#         # add WP as source if agreement on any non-NA field 
+#         changes <- fus_stints[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] != c(start_year, end_year, matches_played, points_scored)
+#         if (!all(is.na(changes)) && any(changes, na.rm = TRUE))
+#           fus_stints[idx3, "dataSource"] <- paste0(fus_stints[idx3, "dataSource"], "; frWP")
+#       }
+#     }
+#   }
 
-  # if no similar stint, add to merged table
-  if (!found) {
-    rr <- nrow(fus_stints) + 1
-    fus_stints[rr, "playerId"] <- player_id
-    fus_stints[rr, "playerName"] <- fus_players[fus_players[, "wikidataId"] == player_id, "fullName"]
-    fus_stints[rr, "teamWdId"] <- fus_teams[fus_teams[, "rugbyscopeId"] == team_id, "wikidataId"]
-    fus_stints[rr, "teamRsId"] <- team_id
-    fus_stints[rr, "teamName"] <- fus_teams[fus_teams[, "rugbyscopeId"] == team_id, "fullName"]
-    fus_stints[rr, "startYear"] <- wp_stints[r, "startYear"]
-    fus_stints[rr, "endYear"] <- wp_stints[r, "endYear"]
-    fus_stints[rr, "matchesPlayed"] <- wp_stints[r, "matchesPlayed"]
-    fus_stints[rr, "pointsScored"] <- wp_stints[r, "pointsScored"]
-    fus_stints[rr, "dataSource"] <- "frWP"
-  }
-}
+#   # if no similar stint, add to merged table
+#   if (!found) {
+#     rr <- nrow(fus_stints) + 1
+#     fus_stints[rr, "playerId"] <- player_id
+#     fus_stints[rr, "playerName"] <- fus_players[fus_players[, "wikidataId"] == player_id, "fullName"]
+#     fus_stints[rr, "teamWdId"] <- fus_teams[fus_teams[, "rugbyscopeId"] == team_id, "wikidataId"]
+#     fus_stints[rr, "teamRsId"] <- team_id
+#     fus_stints[rr, "teamName"] <- fus_teams[fus_teams[, "rugbyscopeId"] == team_id, "fullName"]
+#     fus_stints[rr, "startYear"] <- wp_stints[r, "startYear"]
+#     fus_stints[rr, "endYear"] <- wp_stints[r, "endYear"]
+#     fus_stints[rr, "matchesPlayed"] <- wp_stints[r, "matchesPlayed"]
+#     fus_stints[rr, "pointsScored"] <- wp_stints[r, "pointsScored"]
+#     fus_stints[rr, "dataSource"] <- "frWP"
+#   }
+# }
 
-# reorder stint table to respect wikidataId / names
-ids <- fus_stints[, "playerId"]
-ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
-idx <- order(ids, fus_stints[, "playerName"], fus_stints[, "startYear"], fus_stints[, "endYear"], fus_stints[, "teamName"])
-fus_stints <- fus_stints[idx, ]
+# # reorder stint table to respect wikidataId / names
+# ids <- fus_stints[, "playerId"]
+# ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
+# idx <- order(ids, fus_stints[, "playerName"], fus_stints[, "startYear"], fus_stints[, "endYear"], fus_stints[, "teamName"])
+# fus_stints <- fus_stints[idx, ]
 
-# record as a new CSV file
-fus_stints[, "teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
-tab.file <- file.path(fusion_folder, "stints_02_frwp.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# # record as a new CSV file
+# fus_stints[, "teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
+# tab.file <- file.path(fusion_folder, "stints_02_frwp.csv")
+# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+# write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
