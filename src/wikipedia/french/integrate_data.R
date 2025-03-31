@@ -348,7 +348,7 @@ tlog(2, "Use manually defined map to match certain teams based on their name")
 temp <- read.csv(file.path(wp_folder, "maps", "name2id.csv"))
 map_names <- temp[, "rugbyscopeId"]
 names(map_names) <- temp[, "fullName"]
-# remove teams associated with name NA
+# remove teams associated with value NA in the map
 idx <- match(names(map_names), wp_teams[, "altNames"])
 idx_rem <- which(is.na(map_names))
 if (length(idx_rem) > 0) {
@@ -474,10 +474,43 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 #close(fileConn)
 ####
 
+#### debug: list WP teams sharing a name and having different ids
+#### > this must be disambiguated before switching to players
+#alt_names <- strsplit(wp_teams[, "altNames"], "; ")
+#for (i in 1:(length(alt_names) - 1)) {
+#  for (j in (i+1):length(alt_names)) {
+#    common_names <- intersect(alt_names[[i]], alt_names[[j]])
+#    if (length(common_names) > 0 && wp_teams[i, "rugbyscopeId"] != wp_teams[j, "rugbyscopeId"]) {
+#      tlog(2, "Team ", i, " vs. ", j)
+#      tlog(4, "Common name(s): ", paste0(common_names, collapse = ", "))
+#      print(wp_teams[c(i,j), ])
+#      print("----------------------")
+#    }
+#  }
+#}
+####
+
+#### debug: check removed teams that share a name
+#### with a team still in the list
+#rem_names <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
+#alt_names <- strsplit(wp_teams[, "altNames"], "; ")
+#for (i in 1:length(rem_names)) {
+#  for (j in 1:length(alt_names)) {
+#    rn <- rem_names[i]
+#    an <- alt_names[[j]]
+#    if (rn %in% an) {
+#      idx <- which(wp_stints[, "teamName"] == rn)
+#      tlog(2, "Problem with ", rn)
+#      print(unique(wp_stints[idx, "teamWP"]))
+#    }
+#  }
+#}
+####
 
 
 
-# ########################################################################
+
+########################################################################
 # merge stints
 tlog("Merging stints")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
@@ -485,8 +518,8 @@ removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 # connect WP stint to WP team tables (and so merged teams)
 tlog(2, "Matching stint teams to team table")
 wp_stints <- cbind(wp_stints, rep(NA, nrow(wp_stints)))
-colnames(wp_stints)(ncol(wp_stints)) <- "rugbyscopeId"
-del_raws <- c()
+colnames(wp_stints)[ncol(wp_stints)] <- "rugbyscopeId"
+del_rows <- c()
 alt_names <- strsplit(wp_teams[, "altNames"], ";")
 alt_names <- lapply(alt_names, trimws)
 for (r in 1:nrow(wp_stints)) {
@@ -494,7 +527,7 @@ for (r in 1:nrow(wp_stints)) {
   tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (", team_name, ")")
   # possibly ignore the team if it is in the ignore list
   if (team_name %in% removed_teams)
-    del_raws <- c(del_raws, r)
+    del_rows <- c(del_rows, r)
   else {
     # try to match using exact comparison
     idx <- which(sapply(alt_names, function(names) all(team_name == names)))
@@ -549,8 +582,9 @@ for (r in 1:nrow(wp_stints)) {
 }
 
 # delete rows corresponding to removed teams
-tlog(2, "Delete ", length(del_raws), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
-wp_stints <- wp_stints[-del_raws, ]
+tlog(2, "Delete ", length(del_rows), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
+#print(head(wp_stints[del_rows, ]))
+wp_stints <- wp_stints[-del_rows, ]
 
 # insert WP stints in merged table
 for (r in 1:nrow(wp_stints)) {

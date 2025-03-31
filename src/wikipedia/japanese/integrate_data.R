@@ -756,8 +756,8 @@ fus_stints <- fus_stints[idx, ]
 # connect WP stint to WP team tables (and so merged teams)
 tlog(2, "Matching stint teams to team table")
 wp_stints <- cbind(wp_stints, rep(NA, nrow(wp_stints)))
-colnames(wp_stints)(ncol(wp_stints)) <- "rugbyscopeId"
-del_raws <- c()
+colnames(wp_stints)[ncol(wp_stints)] <- "rugbyscopeId"
+del_rows <- c()
 alt_names <- strsplit(wp_teams[, "altNames"], ";")
 alt_names <- lapply(alt_names, trimws)
 for (r in 1:nrow(wp_stints)) {
@@ -765,7 +765,7 @@ for (r in 1:nrow(wp_stints)) {
   tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (", team_name, ")")
   # possibly ignore the team if it is in the ignore list
   if (team_name %in% removed_teams)
-    del_raws <- c(del_raws, r)
+    del_rows <- c(del_rows, r)
   else {
     # try to match using exact comparison
     idx <- which(sapply(alt_names, function(names) all(team_name == names)))
@@ -820,8 +820,9 @@ for (r in 1:nrow(wp_stints)) {
 }
 
 # delete rows corresponding to removed teams
-tlog(2, "Delete ", length(del_raws), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
-wp_stints <- wp_stints[-del_raws, ]
+tlog(2, "Delete ", length(del_rows), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
+#print(head(wp_stints[del_rows]))
+wp_stints <- wp_stints[-del_rows, ]
 
 # add new column in stint table, corresponding to RS id
 rs_ids <- match(fus_stints[, "teamId"], fus_teams[, "wikidataId"])
