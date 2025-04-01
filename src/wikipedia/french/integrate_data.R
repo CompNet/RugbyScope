@@ -181,7 +181,7 @@ for (i in 1:length(map_urls)) {
   if (length(idx) == 0)
     tlog(4, "WARNING: did not find any team with URL ", old_url)
   else
-    wp_stints[idx, ] <- new_url
+    wp_stints[idx, "teamWP"] <- new_url
 }
 
 # remove stints without a team
@@ -582,7 +582,7 @@ for (r in 1:nrow(wp_stints)) {
 }
 
 # delete rows corresponding to removed teams
-tlog(2, "Delete ", length(del_rows), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
+tlog(2, "Deleted ", length(del_rows), "/", nrow(wp_stints), " stints corresponding to ", length(removed_teams), " removed teams")
 #print(head(wp_stints[del_rows, ]))
 wp_stints <- wp_stints[-del_rows, ]
 
@@ -670,9 +670,9 @@ for (r in 1:nrow(wp_stints)) {
           fus_stints[idx3, "startYear"] <- start_year
         if (is.na(fus_stints[idx3, "endYear"]))
           fus_stints[idx3, "endYear"] <- end_year
-        if (is.na(fus_stints[idx3, "matchesPlayed"]))
+        if (is.na(fus_stints[idx3, "matchesPlayed"]) || !is.na(matches_played) && fus_stints[idx3, "matchesPlayed"] < matches_played)
           fus_stints[idx3, "matchesPlayed"] <- matches_played
-        if (is.na(fus_stints[idx3, "pointsScored"]))
+        if (is.na(fus_stints[idx3, "pointsScored"]) || !is.na(points_scored) && fus_stints[idx3, "pointsScored"] < points_scored)
           fus_stints[idx3, "pointsScored"] <- points_scored
         # add WP as source if agreement on any non-NA field 
         changes <- fus_stints[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] != c(start_year, end_year, matches_played, points_scored)

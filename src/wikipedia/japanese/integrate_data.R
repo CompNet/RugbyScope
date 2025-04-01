@@ -920,9 +920,9 @@ for (r in 1:nrow(wp_stints)) {
           fus_stints[idx3, "startYear"] <- start_year
         if (is.na(fus_stints[idx3, "endYear"]))
           fus_stints[idx3, "endYear"] <- end_year
-        if (is.na(fus_stints[idx3, "matchesPlayed"]))
+        if (is.na(fus_stints[idx3, "matchesPlayed"]) || !is.na(matches_played) && fus_stints[idx3, "matchesPlayed"] < matches_played)
           fus_stints[idx3, "matchesPlayed"] <- matches_played
-        if (is.na(fus_stints[idx3, "pointsScored"]))
+        if (is.na(fus_stints[idx3, "pointsScored"]) || !is.na(points_scored) && fus_stints[idx3, "pointsScored"] < points_scored)
           fus_stints[idx3, "pointsScored"] <- points_scored
         # add WP as source if agreement on any non-NA field 
         changes <- fus_stints[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] != c(start_year, end_year, matches_played, points_scored)
