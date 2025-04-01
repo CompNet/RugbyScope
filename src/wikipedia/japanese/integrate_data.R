@@ -180,10 +180,10 @@ tlog(2, "Total numbers of changes: ", sum(total_changes))
 tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
 
-# record merged table as a new CSV file
-tab.file <- file.path(fusion_folder, "players_02_jawp.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# # record merged table as a new CSV file
+# tab.file <- file.path(fusion_folder, "players_02_jawp.csv")
+# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+# write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -466,6 +466,7 @@ tlog(4, "Could match ", length(idx), " teams based on English name")
 #### debug (check matches)
 #tab <- cbind(wp_teams[wp_idx[idx], "altNames"], fus_names[result[idx]], fus_teams[result[idx], "rugbyscopeId"], wp_teams[wp_idx[idx], "teamWP"])
 #write.csv(tab, file.path(wp_folder, "successful_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+####
 wp_teams[wp_idx[idx], "rugbyscopeId"] <- fus_teams[result[idx], "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
@@ -519,8 +520,8 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 #idx2 <- which(!is.na(wp_teams[, "teamWP"]))
 #idx <- intersect(idx1, idx2)
 #write.csv(wp_teams[idx, c("altNames", "teamWP")], file.path(wp_folder, "unnamed_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-# at this stage, all WP teams with a URL should have been matched
-# and therefore, the above file should be empty
+#### at this stage, all WP teams with a URL should have been matched
+#### and therefore, the above file should be empty
 
 ## we now switch to names only, as the remaining WP teams do not have a URL
 
@@ -580,6 +581,7 @@ unique_names <- sort(unique(en_names))                                    # 383
 #tab <- cbind(unique_names, wp_teams[idx_noid[match(unique_names, en_names)], "altNames"], rep("", length(unique_names)))
 #colnames(tab) <- c("fullName", "jaName", "teamId")
 #write.csv(tab, file.path(wp_folder, "remaining_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+####
 
 # filter out remaining high schools
 idx_uhs <- which(grepl("[Hh]igh [Ss]chool", unique_names, fixed = FALSE)) # 167
@@ -663,6 +665,7 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 #### debug: check the remaining unmatched teams (should be empty)
 #idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
 #write.csv(tab[idx,], file.path(wp_folder, "unmatched_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+####
 
 # add merged table name to JA entry, for visual verification
 idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
@@ -683,10 +686,10 @@ wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 #}
 #### there are many cases: it is expected, there are many slightly different japanese names
 
-# record final WP team table as a new CSV file, for verification
-tab.file <- file.path(wp_folder, "teams.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# # record final WP team table as a new CSV file, for verification
+# tab.file <- file.path(wp_folder, "teams.csv")
+# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+# write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # complement alternative names in merged table, using japanese names
 tlog("Complement alternative names in merged team table")
@@ -716,10 +719,10 @@ for (r in 1:length(idx)) {
   }
 }
 
-# record merged table as a new CSV file
-tab.file <- file.path(fusion_folder, "teams_03_jawp.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# # record merged table as a new CSV file
+# tab.file <- file.path(fusion_folder, "teams_03_jawp.csv")
+# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+# write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #### manually added teams
 # 6962,NA,"Tao Samtskhe-Javakheti","Club",NA,NA,NA,NA,"Georgia","Didi 10",1,"Aspindza Field",NA,"Azpindza",NA,NA,NA,NA,NA,NA,NA,NA
@@ -735,7 +738,7 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 # merge stints
 tlog("Merging stints")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
-#### debug: directly load the file to bypass all previous processing
+#### debug: directly load the files to bypass all previous processing
 #wp_teams  <- read.csv(file.path(wp_folder, "teams.csv"))
 #fus_teams <- read.csv(file.path(fusion_folder, "teams_03_jawp.csv"))
 #### debug: reload data table for quick testing
@@ -746,6 +749,7 @@ removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 #idx <- which(is.na(wp_stints[, "teamName"]))
 #if (length(idx) > 0)
 #   wp_stints <- wp_stints[-idx, ]
+####
 
 # reorder stint table to respect wikidataId / names
 ids <- fus_stints[, "playerId"]
@@ -753,7 +757,7 @@ ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
 idx <- order(ids, fus_stints[, "playerName"], fus_stints[, "startYear"], fus_stints[, "endYear"], fus_stints[, "teamName"])
 fus_stints <- fus_stints[idx, ]
 
-# connect WP stint to WP team tables (and so merged teams)
+# connect WP stint table to WP team table (and so, to merged teams)
 tlog(2, "Matching stint teams to team table")
 wp_stints <- cbind(wp_stints, rep(NA, nrow(wp_stints)))
 colnames(wp_stints)[ncol(wp_stints)] <- "rugbyscopeId"
@@ -881,9 +885,10 @@ for (r in 1:nrow(wp_stints)) {
           # remove NA (ie merged table with NA start and/or end year) only if several matches
           if (length(idx3) > 1)
             idx3 <- idx3[-is.na(idx)]
+          # if just one single NA: compare only the non-NA year
           else if (length(idx3) == 1 && is.na(idx3))
-            idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year & 
-                         is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
+            idx3 <- idx2[(is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year) & 
+                         (is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year)]
           # # if no match at all: consider missing years in merged table
           # if (length(idx3) == 0)
           #   idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & is.na(fus_stints[idx2, "endYear"])]
@@ -950,7 +955,7 @@ idx <- order(ids, fus_stints[, "playerName"], fus_stints[, "startYear"], fus_sti
 fus_stints <- fus_stints[idx, ]
 
 # record as a new CSV file
-fus_stints[,"teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
+fus_stints[, "teamRsId"] <- as.integer(fus_stints[,"teamRsId"])
 tab.file <- file.path(fusion_folder, "stints_01_wd-jawp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")

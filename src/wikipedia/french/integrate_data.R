@@ -515,7 +515,7 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 tlog("Merging stints")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 
-# connect WP stint to WP team tables (and so merged teams)
+# connect WP stint to WP team tables (and so, to merged teams)
 tlog(2, "Matching stint teams to team table")
 wp_stints <- cbind(wp_stints, rep(NA, nrow(wp_stints)))
 colnames(wp_stints)[ncol(wp_stints)] <- "rugbyscopeId"
@@ -634,10 +634,11 @@ for (r in 1:nrow(wp_stints)) {
           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & fus_stints[idx2, "endYear"] == end_year]
           # remove NA (ie merged table with NA start and/or end year) only if several matches
           if (length(idx3) > 1)
-            idx3 <- idx3[-is.na(idx)]
+            idx3 <- idx3[-is.na(idx3)]
+          # if just one single NA: compare only the non-NA year
           else if (length(idx3) == 1 && is.na(idx3))
-            idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year & 
-                         is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
+            idx3 <- idx2[(is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year) & 
+                         (is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year)]
           # # if no match at all: consider missing years in merged table
           # if (length(idx3) == 0)
           #   idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & is.na(fus_stints[idx2, "endYear"])]
