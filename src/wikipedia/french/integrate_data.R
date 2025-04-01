@@ -587,11 +587,11 @@ tlog(2, "Deleted ", length(del_rows), "/", nrow(wp_stints), " stints correspondi
 wp_stints <- wp_stints[-del_rows, ]
 
 # insert WP stints in merged table
-for (r in 1:nrow(wp_stints)) {
+for (r in 6524:nrow(wp_stints)) {
   player_id <- wp_stints[r, "origWdId"]
   tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (player ", player_id, ")")
   team_id <- wp_stints[r, "rugbyscopeId"]
-  found <- FALSE
+  finished <- FALSE
 # print(wp_stints[r, ])
 
   # retrieve existing stints for this player
@@ -608,53 +608,52 @@ for (r in 1:nrow(wp_stints)) {
 
       if (is.na(start_year)) {
         if (is.na(end_year)) {
-          # both start and end years contain NA > cannot be reliably matched to an existing stint
+          # both start and end WP years are NA: cannot be reliably matched to an existing stint
           # > nothing more to do
-          found <- TRUE
+          finished <- TRUE
         } else {
-          # start year is NA and end year is not: try to match only the latter
+          # start WP year is NA and end WP year is not: try to match only the latter to existing stints
           idx3 <- idx2[fus_stints[idx2, "endYear"] == end_year]
           if (length(idx3) == 1 && is.na(idx3)) {
             idx3 <- idx2[is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
-            # both start and end years contain NA > cannot be reliably matched to an existing stint
-            found <- TRUE
+            # both start and end years are NA: cannot be reliably matched to an existing stint
+            finished <- TRUE
           }
         }
       } else {
         if (is.na(end_year)) {
-          # start year is not NA but end year is: try to match only the former
+          # start WP year is not NA but end WP year is: try to match only the former to existing stints
           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year]
           if (length(idx3) == 1 && is.na(idx3)) {
             idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year]
-            # both start and end years contain NA > cannot be reliably matched to an existing stint
-            found <- TRUE
+# this looks wrong, and same above (sym case)            
+            # both start and end years are NA: cannot be reliably matched to an existing stint
+            finished <- TRUE
           }
         } else {
-          # both start and end years are non-NA: try matching both
+          # both start and end WP years are non-NA: try matching both to existing stints
           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & fus_stints[idx2, "endYear"] == end_year]
-          # remove NA (ie merged table with NA start and/or end year) only if several matches
+# if not all are NAs: remove NAs
+# if all are NAs: keep those with one matching year
+
+          # remove NAs (ie merged table with NA start and/or end year) only if several matches
           if (length(idx3) > 1)
-            idx3 <- idx3[-is.na(idx3)]
-          # if just one single NA: compare only the non-NA year
+            idx3 <- idx3[!is.na(idx3)]
+          # if just one single NA: compare only the non-NA year (we assume existing stints don't have NAs for both years)
           else if (length(idx3) == 1 && is.na(idx3))
             idx3 <- idx2[(is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year) & 
                          (is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year)]
-          # # if no match at all: consider missing years in merged table
-          # if (length(idx3) == 0)
-          #   idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & is.na(fus_stints[idx2, "endYear"])]
-          # if (length(idx3) == 0)
-          #   idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) & fus_stints[idx2, "endYear"] == end_year]
         }
       }
 
       # if a single match: possibly update stats
-      if (!found && length(idx3) == 1) {
-        found <- TRUE
+      if (!finished && length(idx3) == 1) {
+        finished <- TRUE
         update <- TRUE
       }
       # if several matches: problem
-      if (!found && length(idx3) > 1) {
-        found <- TRUE
+      if (!finished && length(idx3) > 1) {
+        finished <- TRUE
         tlog(6, "Found several matching stints, which is not normal")
         print(wp_stints[r, ])
         print(fus_stints[idx3, ])
@@ -682,8 +681,8 @@ for (r in 1:nrow(wp_stints)) {
     }
   }
 
-  # if no similar stint, add to merged table
-  if (!found) {
+  # if no similar stint, add new row to merged table
+  if (!finished) {
     rr <- nrow(fus_stints) + 1
     fus_stints[rr, "playerId"] <- player_id
     fus_stints[rr, "playerName"] <- fus_players[fus_players[, "wikidataId"] == player_id, "fullName"]

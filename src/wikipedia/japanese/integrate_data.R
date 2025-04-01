@@ -884,7 +884,7 @@ for (r in 1:nrow(wp_stints)) {
           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & fus_stints[idx2, "endYear"] == end_year]
           # remove NA (ie merged table with NA start and/or end year) only if several matches
           if (length(idx3) > 1)
-            idx3 <- idx3[-is.na(idx)]
+            idx3 <- idx3[!is.na(idx)]
           # if just one single NA: compare only the non-NA year
           else if (length(idx3) == 1 && is.na(idx3))
             idx3 <- idx2[(is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year) & 
