@@ -732,6 +732,25 @@ for (r in 1:nrow(wp_stints)) {
   #readline(prompt="Press [enter] to continue")
 }
 
+# clean both stat columns
+fus_stints[, "matchesPlayed"] <- gsub("+", "", fus_stints[, "matchesPlayed"], fixed = TRUE)
+fus_stints[, "matchesPlayed"] <- gsub("-", "", fus_stints[, "matchesPlayed"], fixed = TRUE)
+fus_stints[, "matchesPlayed"] <- gsub("\\?+", "", fus_stints[, "matchesPlayed"], fixed = FALSE)
+idx <- which(fus_stints[, "matchesPlayed"] == "")
+if (length(idx) > 0)
+  fus_stints[idx, "matchesPlayed"] <- NA
+fus_stints[, "matchesPlayed"] <- as.integer(fus_stints[, "matchesPlayed"])
+#sort(unique(fus_stints[, "matchesPlayed"]))
+fus_stints[, "pointsScored"] <- gsub("+", "", fus_stints[, "pointsScored"], fixed = TRUE)
+fus_stints[, "pointsScored"] <- gsub("-", "", fus_stints[, "pointsScored"], fixed = TRUE)
+fus_stints[, "pointsScored"] <- gsub("\\?+", "", fus_stints[, "pointsScored"], fixed = FALSE)
+fus_stints[, "pointsScored"] <- gsub(" ", "", fus_stints[, "pointsScored"], fixed = TRUE)
+idx <- which(fus_stints[, "pointsScored"] == "")
+if (length(idx) > 0)
+  fus_stints[idx, "pointsScored"] <- NA
+fus_stints[, "pointsScored"] <- as.integer(fus_stints[, "pointsScored"])
+#sort(unique(fus_stints[, "pointsScored"]))
+
 # reorder stint table to respect wikidataId / names
 ids <- fus_stints[, "playerId"]
 ids <- as.integer(substr(ids, start = 2, stop = nchar(ids)))
