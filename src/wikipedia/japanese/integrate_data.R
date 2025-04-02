@@ -180,10 +180,10 @@ tlog(2, "Total numbers of changes: ", sum(total_changes))
 tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
 
-# # record merged table as a new CSV file
-# tab.file <- file.path(fusion_folder, "players_02_jawp.csv")
-# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-# write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# record merged table as a new CSV file
+tab.file <- file.path(fusion_folder, "players_02_jawp.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -686,10 +686,10 @@ wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 #}
 #### there are many cases: it is expected, there are many slightly different japanese names
 
-# # record final WP team table as a new CSV file, for verification
-# tab.file <- file.path(wp_folder, "teams.csv")
-# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-# write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# record final WP team table as a new CSV file, for verification
+tab.file <- file.path(wp_folder, "teams.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # complement alternative names in merged table, using japanese names
 tlog("Complement alternative names in merged team table")
@@ -719,10 +719,10 @@ for (r in 1:length(idx)) {
   }
 }
 
-# # record merged table as a new CSV file
-# tab.file <- file.path(fusion_folder, "teams_03_jawp.csv")
-# tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-# write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# record merged table as a new CSV file
+tab.file <- file.path(fusion_folder, "teams_03_jawp.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #### manually added teams
 # 6962,NA,"Tao Samtskhe-Javakheti","Club",NA,NA,NA,NA,"Georgia","Didi 10",1,"Aspindza Field",NA,"Azpindza",NA,NA,NA,NA,NA,NA,NA,NA
