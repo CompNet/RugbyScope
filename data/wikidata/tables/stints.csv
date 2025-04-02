@@ -7372,7 +7372,7 @@
 "Q2384444","Hrishikesh Pendse","Q3198123","Kobelco Kobe Steelers","2011",NA,NA,NA
 "Q2386451","Robert Monier","Q518116","France national rugby union team","1911","1912",NA,"0"
 "Q2386745","Trevor Leota","Q807749","Barbarian FC",NA,NA,NA,NA
-"Q2386745","Trevor Leota","Q1138539","Samoa national rugby union team","1997","1905",NA,NA
+"Q2386745","Trevor Leota","Q1138539","Samoa national rugby union team","1997","2005",NA,NA
 "Q2386766","Marin Moț","Q967505","Romania national rugby union team","1980","1988",NA,NA
 "Q2387382","Vassili Bost","Q596985","Montpellier Hérault Rugby","2005","2012",NA,NA
 "Q2387382","Vassili Bost","Q1782908","Stade Montois","2012",NA,NA,NA
@@ -13206,7 +13206,6 @@
 "Q3086995","Freddie Burns","Q1071691","Leicester Tigers","2014","2017","54","446"
 "Q3086995","Freddie Burns","Q810786","Bath Rugby","2017","2020","47","220"
 "Q3086995","Freddie Burns","Q7830799","Toyota Industries Shuttles Aichi","2020","2021","1","9"
-"Q3086995","Freddie Burns","Q1071691","Leicester Tigers","2021","2023","32",NA
 "Q3086995","Freddie Burns","Q1071691","Leicester Tigers","2021","2023","183",NA
 "Q3086995","Freddie Burns","Q1210077","Highlanders","2023",NA,"9","18"
 "Q3087002","Freddie McLennan","Q599903","Ireland rugby union team","1977","1981",NA,NA
@@ -14645,7 +14644,7 @@
 "Q3157505","Jaco Erasmus","Q113135","Italy national rugby union team","2008",NA,NA,NA
 "Q3157583","Jacob Rauluni","Q686057","Rotherham R.U.F.C.",NA,NA,NA,NA
 "Q3157583","Jacob Rauluni","Q1360196","Leeds Tykes",NA,NA,NA,NA
-"Q3157583","Jacob Rauluni","Q1134669","Fiji national rugby union team","1995","1906",NA,NA
+"Q3157583","Jacob Rauluni","Q1134669","Fiji national rugby union team","1995","2006",NA,NA
 "Q3157631","Bees Roux","Q521129","Benetton Rugby Treviso",NA,NA,NA,NA
 "Q3157631","Bees Roux","Q297901","ASM Clermont Auvergne",NA,NA,NA,NA
 "Q3158180","Jacques Ballarin","Q634843","Tarbes Pyrénées Rugby",NA,NA,NA,NA
@@ -17143,7 +17142,7 @@
 "Q3294225","Mark Robinson","Q807749","Barbarian FC",NA,NA,NA,NA
 "Q3294225","Mark Robinson","Q586617","Chiefs","1996","1998",NA,NA
 "Q3294225","Mark Robinson","Q55801","New Zealand national rugby union team","1997","2001",NA,"15"
-"Q3294225","Mark Robinson","Q749756","Junior All Blacks","1997","1901",NA,NA
+"Q3294225","Mark Robinson","Q749756","Junior All Blacks","1997","2001",NA,NA
 "Q3294225","Mark Robinson","Q1156303","Blues","1998","2002",NA,NA
 "Q3294225","Mark Robinson","Q1201283","Northampton Saints","2003","2008",NA,NA
 "Q3294225","Mark Robinson","Q1150127","Wasps RFC","2008","2010",NA,NA
@@ -19282,7 +19281,7 @@
 "Q3423320","Reg Skrimshire","Q2481690","Blackheath F.C.",NA,NA,NA,NA
 "Q3423320","Reg Skrimshire","Q822877","Wales national rugby union team","1899","1899",NA,"0"
 "Q3423320","Reg Skrimshire","Q733600","British & Irish Lions","1903","1903",NA,NA
-"Q3423320","Reg Skrimshire","Q1521264","Newport RFC","1987","1903",NA,NA
+"Q3423320","Reg Skrimshire","Q1521264","Newport RFC","1897","1903",NA,NA
 "Q3423337","Regan King","Q55801","New Zealand national rugby union team","2002","2002","1","5"
 "Q3423337","Regan King","Q586617","Chiefs","2002","2004",NA,NA
 "Q3423337","Regan King","Q1361000","Stade Français Rugby","2004","2005",NA,NA
@@ -20035,7 +20034,7 @@
 "Q3469699","Salemane Sa","Q1865460","Union Bordeaux Bègles","2013","2015",NA,NA
 "Q3469719","Salesi Finau","Q2549837","Warrington Wolves",NA,NA,NA,NA
 "Q3469719","Salesi Finau","Q1024459","CS Bourgoin-Jallieu",NA,NA,NA,NA
-"Q3469719","Salesi Finau","Q1134659","Tonga national rugby union team","1998","1905",NA,NA
+"Q3469719","Salesi Finau","Q1134659","Tonga national rugby union team","1998","2005",NA,NA
 "Q3469720","Salesi Sika","Q964957","Castres Olympique",NA,NA,NA,NA
 "Q3469720","Salesi Sika","Q1781643","AS Béziers Hérault",NA,NA,NA,NA
 "Q3469720","Salesi Sika","Q1143805","United States national rugby union team","2003","2009",NA,NA
@@ -22043,7 +22042,7 @@
 "Q36576304","Izack Rodda","Q1368281","Queensland Reds","2017",NA,NA,NA
 "Q365879","Brian Lima","Q1361000","Stade Français Rugby",NA,NA,NA,NA
 "Q365879","Brian Lima","Q917973","Bristol Bears",NA,NA,NA,NA
-"Q365879","Brian Lima","Q1138539","Samoa national rugby union team","1990","1907",NA,NA
+"Q365879","Brian Lima","Q1138539","Samoa national rugby union team","1990","2007",NA,NA
 "Q365879","Brian Lima","Q247246","Pacific Islanders rugby union team","2004","2004",NA,NA
 "Q366237","Jeff Wilson","Q1210077","Highlanders",NA,NA,NA,NA
 "Q366237","Jeff Wilson","Q55801","New Zealand national rugby union team","1993","2001",NA,"299"
@@ -32940,7 +32939,7 @@
 "Q8064084","Zack Holmes","Q915507","Western Force",NA,NA,NA,NA
 "Q8064084","Zack Holmes","Q605245","ACT Brumbies",NA,NA,NA,NA
 "Q8070441","Zhang Zhiqiang","Q1071691","Leicester Tigers",NA,NA,NA,NA
-"Q8070441","Zhang Zhiqiang","Q2333263","China national rugby union team","1998","1900",NA,NA
+"Q8070441","Zhang Zhiqiang","Q2333263","China national rugby union team","1998","2000",NA,NA
 "Q80836930","Nicolás Solveyra","Q19870761","Jaguares",NA,NA,NA,NA
 "Q80864601","John Sullivan","Q42531020","New Orleans Gold",NA,NA,NA,NA
 "Q80864601","John Sullivan","Q24902115","All Americans rugby union team",NA,NA,NA,NA

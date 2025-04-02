@@ -587,12 +587,11 @@ tlog(2, "Deleted ", length(del_rows), "/", nrow(wp_stints), " stints correspondi
 wp_stints <- wp_stints[-del_rows, ]
 
 # insert WP stints in merged table
-for (r in 6524:nrow(wp_stints)) {
+for (r in 1:nrow(wp_stints)) {
   player_id <- wp_stints[r, "origWdId"]
   tlog(4, "Processing stint ", r, "/", nrow(wp_stints), " (player ", player_id, ")")
   team_id <- wp_stints[r, "rugbyscopeId"]
   finished <- FALSE
-# print(wp_stints[r, ])
 
   # retrieve existing stints for this player
   idx <- which(fus_stints[, "playerId"] == player_id)
@@ -606,6 +605,14 @@ for (r in 6524:nrow(wp_stints)) {
       points_scored <- wp_stints[r, "pointsScored"]
       update <- FALSE
 
+      # debug
+      #print(wp_stints[r, ])
+      #print(fus_stints[idx2, ])
+      #tlog(6, wp_stints[r, "startYear"], "-", wp_stints[r, "endYear"])
+      #for (z in idx2)
+      #  tlog(8, fus_stints[z, "startYear"], "-", fus_stints[z, "endYear"])
+
+      # compare the start/end years to find a compatible stint
       if (is.na(start_year)) {
         if (is.na(end_year)) {
           # both start and end WP years are NA: cannot be reliably matched to an existing stint
@@ -614,39 +621,56 @@ for (r in 6524:nrow(wp_stints)) {
         } else {
           # start WP year is NA and end WP year is not: try to match only the latter to existing stints
           idx3 <- idx2[fus_stints[idx2, "endYear"] == end_year]
-          if (length(idx3) == 1 && is.na(idx3)) {
-            idx3 <- idx2[is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year]
-            # both start and end years are NA: cannot be reliably matched to an existing stint
-            finished <- TRUE
+          if (length(idx3) > 0) {
+            # if at least one match: remove NAs
+            if (any(!is.na(idx3))) {
+              idx3 <- idx3[!is.na(idx3)]
+            # otherwise, all existing stints have an NA end year
+            } else {
+              # we check the start year of the existing stints, and keep those with NAs or anterior years
+              idx3 <- idx2[(is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] <= end_year) &
+                            is.na(fus_stints[idx2, "endYear"])]
+
+          # if there's only one of them, it will be merged with the WP stint
+          # if not, then there's an issue because we can't choose between them
+            }
           }
         }
       } else {
         if (is.na(end_year)) {
           # start WP year is not NA but end WP year is: try to match only the former to existing stints
           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year]
-          if (length(idx3) == 1 && is.na(idx3)) {
-            idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year]
-# this looks wrong, and same above (sym case)            
-            # both start and end years are NA: cannot be reliably matched to an existing stint
-            finished <- TRUE
+          if (length(idx3) > 0) {
+            # if at least one match: remove NAs
+            if (any(!is.na(idx3))) {
+              idx3 <- idx3[!is.na(idx3)]
+            # otherwise, all existing stints have an NA start year
+            } else {
+              # we check the end year of the existing stints, and keep those with NAs or posterior years
+              idx3 <- idx2[is.na(fus_stints[idx2, "startYear"]) &
+                          (is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] >= start_year)]
+          # if there's only one of them, it will be merged with the WP stint
+          # if not, then there's an issue because we can't choose between them
+            }
           }
         } else {
           # both start and end WP years are non-NA: try matching both to existing stints
           idx3 <- idx2[fus_stints[idx2, "startYear"] == start_year & fus_stints[idx2, "endYear"] == end_year]
-# if not all are NAs: remove NAs
-# if all are NAs: keep those with one matching year
-
-          # remove NAs (ie merged table with NA start and/or end year) only if several matches
-          if (length(idx3) > 1)
-            idx3 <- idx3[!is.na(idx3)]
-          # if just one single NA: compare only the non-NA year (we assume existing stints don't have NAs for both years)
-          else if (length(idx3) == 1 && is.na(idx3))
-            idx3 <- idx2[(is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year) & 
-                         (is.na(fus_stints[idx2, "endYear"]) | fus_stints[idx2, "endYear"] == end_year)]
+          if (length(idx3) > 0) {
+            # if at least one complete match (both years): remove NAs
+            if (any(!is.na(idx3))) {
+              idx3 <- idx3[!is.na(idx3)]
+            # otherwise, all existing stints have an NA start and/or end year
+            } else {
+              # we keep only existing stints with one year matching the WP stint
+              idx3 <- idx2[(is.na(fus_stints[idx2, "startYear"]) | fus_stints[idx2, "startYear"] == start_year) & 
+                          (is.na(fus_stints[idx2, "endYear"])   | fus_stints[idx2, "endYear"] == end_year)]
+            }
+          }
         }
       }
 
-      # if a single match: possibly update stats
+      # if there's a single match: possibly update stats
       if (!finished && length(idx3) == 1) {
         finished <- TRUE
         update <- TRUE
@@ -662,7 +686,9 @@ for (r in 6524:nrow(wp_stints)) {
       
       # possibly update stats
       if (update) {
-# print(fus_stints[idx3, ])
+        # debug
+        #tlog(6, "Updating the table")
+        
         # we assume that the info already present is more reliable
         # and update only the NA fields from the merged table
         if (is.na(fus_stints[idx3, "startYear"]))
@@ -674,15 +700,21 @@ for (r in 6524:nrow(wp_stints)) {
         if (is.na(fus_stints[idx3, "pointsScored"]) || !is.na(points_scored) && fus_stints[idx3, "pointsScored"] < points_scored)
           fus_stints[idx3, "pointsScored"] <- points_scored
         # add WP as source if agreement on any non-NA field 
-        changes <- fus_stints[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] != c(start_year, end_year, matches_played, points_scored)
-        if (!all(is.na(changes)) && any(changes, na.rm = TRUE))
+        agreements <- fus_stints[idx3, c("startYear", "endYear", "pointsScored", "pointsScored")] == c(start_year, end_year, matches_played, points_scored)
+        if (!all(is.na(agreements)) && any(agreements, na.rm = TRUE))
           fus_stints[idx3, "dataSource"] <- paste0(fus_stints[idx3, "dataSource"], "; frWP")
+
+        # debug
+        #print(fus_stints[idx3, ])
       }
     }
   }
 
   # if no similar stint, add new row to merged table
   if (!finished) {
+    # debug
+    #tlog(6, "No matching stint: creating a new one")
+
     rr <- nrow(fus_stints) + 1
     fus_stints[rr, "playerId"] <- player_id
     fus_stints[rr, "playerName"] <- fus_players[fus_players[, "wikidataId"] == player_id, "fullName"]
@@ -695,6 +727,9 @@ for (r in 6524:nrow(wp_stints)) {
     fus_stints[rr, "pointsScored"] <- wp_stints[r, "pointsScored"]
     fus_stints[rr, "dataSource"] <- "frWP"
   }
+
+  # debug
+  #readline(prompt="Press [enter] to continue")
 }
 
 # reorder stint table to respect wikidataId / names
