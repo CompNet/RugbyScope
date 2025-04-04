@@ -1,8 +1,8 @@
 ########################################################################
-# Retrieves player information from French Wikipedia infoboxes.
+# Retrieves player information from Italian Wikipedia infoboxes.
 #
 # Vincent Labatut
-# 03/2025
+# 04/2025
 ########################################################################
 import time
 import requests
@@ -20,7 +20,7 @@ from mylogging import *
 
 ########################################################################
 # start recording log
-start_rec_log("WikipediaFr")
+start_rec_log("WikipediaIt")
 
 
 
@@ -29,47 +29,53 @@ start_rec_log("WikipediaFr")
 # init file constants
 
 # folder path
-table_folder = path.join("data", "wikipedia", "french", "raw")
+table_folder = path.join("data", "wikipedia", "italian", "raw")
 
 # base url of the website
-base_url = "https://fr.wikipedia.org/wiki/{}"
+base_url = "https://it.wikipedia.org/wiki/{}"
 
 
 
 
 ########################################################################
 # init HTML constants
-IDENTITY = "Fiche d'identité"
-BIOGRAPHY = "Biographie"
+BIOGRAPHY = "Dati biografici"
+RUGBY_UNION = "Rugby a 15"
+
 MISC_INFO = "Autres informations"
-BIRTH = "Naissance"
-DEATH = "Décès"
-HEIGHT = "Taille"
-POSITIONS1 = "Poste"
-POSITIONS2 = "Position"
-POSITIONS3 = "Poste (XV)"
+COUNTRY_BIRTH = "Paese"
+HEIGHT = "Altezza"
+WEIGHT = "Peso"
+COUNTRY_SPORT = "Union"
+POSITIONS = "Ruolo"
+CUR_TEAM = "Squadra"
 
 # relevant info sections
-YOUTH_CAREER = "Carrière en junior"
-SENIOR_CAREER = "Carrière en senior"
-INTNL_CAREER = "Carrière en équipe nationale"
+CAREER = "Carriera"
+YOUTH_CAREER = "Attività giovanile"
+CLUB_CAREER = "Attività di club"
+FRAN_CAREER = "Attività in franchise"
+PROV_CAREER = "Attività provinciale"
+INTNL_CAREER = "Attività da giocatore internazionale"
 CAREER_MAP = {
     YOUTH_CAREER: "Youth",
-    SENIOR_CAREER: "Senior",
+    CLUB_CAREER: "Senior",
+    FRAN_CAREER: "Senior",
+    PROV_CAREER: "Regional",
     INTNL_CAREER: "International"
 }
 
 # irrelevant info sections
-CAREER_DISC = {"Carrière d'entraîneur", "Désignations nationales", "Désignations internationales", "Œuvres principales", "Carrière enState of Origin", "Carrière en State of Origin", "Titre honorifique"}
-MODIF_ICON = "Voir et modifier les données sur Wikidata"
-ON_LOAN = "Prêté à"
+CAREER_DISC = {"Attività da allenatore"}
+# MODIF_ICON = "Voir et modifier les données sur Wikidata"
+# ON_LOAN = "Prêté à"
 
 
 
 
 ########################################################################
 # load list of players
-merged_table = pd.read_csv(path.join("data", "fusion", "players_02_jawp.csv"))
+merged_table = pd.read_csv(path.join("data", "fusion", "players_03_frwp.csv"))
 player_number = merged_table.shape[0]
 
 
@@ -91,7 +97,7 @@ p = 1
 #     orig_name = ""
 #     orig_id = ""
 for _, player in merged_table.iterrows():
-    player_page = player["wikipediaFr"]
+    player_page = player["wikipediaIt"]
     orig_name = player["fullName"]
     orig_id = player["wikidataId"]
     tlog(0, f"Processing player {p}/{player_number}: {orig_name} ({orig_id})")
@@ -100,22 +106,19 @@ for _, player in merged_table.iterrows():
     name0 = name
     name = ""
     comment = ""
-    birth_date = ""
-    birth_place = ""
-    birth_place_url = ""
-    death_date = ""
-    death_place = ""
-    death_place_url = ""
     height = ""
     weight = ""
     positions = ""
+    birth_country = ""
+    sport_country = ""
+    current_team = ""
 
-    # no french wikipedia page for this player
+    # no italian wikipedia page for this player
     if pd.isnull(player_page):
-        tlog(2, f"No French Wikipedia page for this player")
-        comment = "No FR WP page"
+        tlog(2, f"No Italian Wikipedia page for this player")
+        comment = "No IT WP page"
 
-    # there is a french wikipedia page for this player
+    # there is a italian wikipedia page for this player
     else:
         url = base_url.format(player_page)
         tlog(2, f"Processing URL: {url}")
@@ -145,7 +148,7 @@ for _, player in merged_table.iterrows():
             else:
                 tlog(2, f"Could not find any infobox: skipping the rest of the extraction process")
                 comment = "No infobox found"
-                player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
+                player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
                 p = p + 1
                 continue
 
@@ -164,7 +167,7 @@ for _, player in merged_table.iterrows():
             if caption_elt is None:
                 tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
                 comment = "Infobox format problem"
-                player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
+                player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
                 p = p + 1
                 continue
             tmp_elts = caption_elt.find_next_siblings()
@@ -174,7 +177,7 @@ for _, player in merged_table.iterrows():
                 if len(temp) == 0:
                     tlog(2, f"Could not find the table in the infobox: skipping the rest of the extraction process")
                     comment = "Infobox format problem"
-                    player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
+                    player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
                     p = p + 1
                     continue
                 else:
@@ -303,7 +306,7 @@ for _, player in merged_table.iterrows():
                 else:
                     tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
                     comment = "Infobox format problem"
-                    player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
+                    player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
                     p = p + 1
                     continue
 
@@ -586,13 +589,13 @@ for _, player in merged_table.iterrows():
                 tlog(2, comment)
 
     # record player info
-    player_info.append([orig_id, orig_name, comment, name, player_page, birth_date, birth_place, birth_place_url, death_date, death_place, death_place_url, height, positions])
-    player_df = pd.DataFrame(player_info, columns=["origWdId", "origName", "debugComment", "frName", "wpPage", "birthDate", "birthPlace", "birthPlaceWP", "deathDate", "deathPlace", "deathPlaceWP", "height", "positions"])
+    player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
+    player_df = pd.DataFrame(player_info, columns=["origWdId", "origName", "debugComment", "itName", "wpPage", "height", "weight", "positions", "birthCountry", "sportCountry", "currentTeam"])
     player_df.to_csv(path.join(table_folder, "player_info.csv"), index=False)
                 
     # record stints
     if has_career:
-        stint_df = pd.DataFrame(stint_info, columns=["origWdId", "origName", "frName", "wpPage", "stintType", "timePeriod", "teamName", "teamWP", "matchesPlayed", "pointsScored"])
+        stint_df = pd.DataFrame(stint_info, columns=["origWdId", "origName", "itName", "wpPage", "stintType", "timePeriod", "teamName", "teamWP", "matchesPlayed", "pointsScored"])
         stint_df.to_csv(path.join(table_folder, "stint_info.csv"), index=False)
                 
     p = p + 1

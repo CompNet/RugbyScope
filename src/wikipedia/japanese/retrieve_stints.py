@@ -1,5 +1,5 @@
 ########################################################################
-# Retrieves player information from Japanese Wikipedia infoxes.
+# Retrieves player information from Japanese Wikipedia infoboxes.
 #
 # Vincent Labatut
 # 02/2025
