@@ -1,7 +1,7 @@
 ########################################################################
-# Loads the raw French Wikipedia tables and performs some basic cleaning.
+# Loads the raw Italian Wikipedia tables and performs some basic cleaning.
 #
-# 03/2025 Vincent Labatut
+# 04/2025 Vincent Labatut
 ########################################################################
 library("stringi")
 library("stringr")
@@ -17,9 +17,9 @@ source("src/common/norm_teams.R")
 
 
 ########################################################################
-# load FR WP tables
-tlog("Loading Wikipedia FR tables")
-folder <- file.path("data", "wikipedia", "french")
+# load IT WP tables
+tlog("Loading Wikipedia IT tables")
+folder <- file.path("data", "wikipedia", "italian")
 
 players <- read.csv(file.path(folder, "raw", "player_info.csv"))
 tlog(2, "Raw number of players: ", nrow(players))
@@ -40,9 +40,9 @@ tlog(0, "Cleaning the player table")
 tlog(2, "Debug messages from retrieval:")
 print(table(players[, "debugComment"]))
 
-# filter out players with no french page
-idx <- which(players[, "debugComment"] == "No FR WP page")
-tlog(2, "Removing players without a french WP page: ", length(idx), "/", nrow(players))
+# filter out players with no italian page
+idx <- which(players[, "debugComment"] == "No IT WP page")
+tlog(2, "Removing players without a italian WP page: ", length(idx), "/", nrow(players))
 players <- players[-idx, ]
 tlog(4, "Remaining players: ", nrow(players))
 
@@ -50,11 +50,9 @@ tlog(4, "Remaining players: ", nrow(players))
 tlog(2, "Normalize rugby positions")
 all_positions <- players[, "positions"]
 all_positions <- gsub("\\[\\d+\\]", "", all_positions, fixed = FALSE)
-all_positions <- gsub("、", "; ", all_positions, fixed = TRUE)
 # all_positions <- gsub(Encoding("\xa0"), "_", all_positions, fixed = FALSE)
 all_positions <- strsplit(all_positions, "; ")
 unique_positions <- sort(unique(trimws(unlist(all_positions))))
-#table(unique_positions)
 # position conversion map
 temp <- read.csv(file.path(folder, "maps", "text2position.csv"))
 map <- temp[, "position"]
@@ -81,135 +79,16 @@ all_positions[all_positions == "NA" | all_positions == ""] <- NA
 names(all_positions) <- NULL
 players[, "positions"] <- all_positions
 
-# heights are ok, and no weight in FR WP
+# heights are ok
 #sort(unique(players[, "height"]))
+# weights too
+#sort(unique(players[, "weight"]))
 
-# clean birth dates
-birth_dates <- players[, "birthDate"]
-birth_dates <- gsub("[Vv]ers] (\\d{4})-\\d{4}", "\\1-01-01", birth_dates, fixed = FALSE)
-birth_dates <- gsub("[Vv]ers (\\d{4})", "\\1-01-01", birth_dates, fixed = FALSE)
-birth_dates <- gsub("^(\\d{4})$", "\\1-01-01", birth_dates, fixed = FALSE)
-birth_dates <- gsub("^(\\d{4}-\\d{2})$", "\\1-01", birth_dates, fixed = FALSE)
-birth_dates <- gsub("Date et lieu inconnus.", "", birth_dates, fixed = TRUE)
-birth_dates <- gsub("Date inconnue", "", birth_dates, fixed = TRUE)
-birth_dates <- gsub("inconnue", "", birth_dates, fixed = TRUE)
-birth_dates <- gsub("Environ 1906-1907", "1906-01-01", birth_dates, fixed = TRUE)
-birth_dates[!is.na(birth_dates) & birth_dates == ""] <- NA
-#head(sort(unique(birth_dates)), 20)
-#tail(sort(unique(birth_dates)), 20)
-#which(!is.na(birth_dates) & is.na(as.Date(birth_dates)))
-birth_dates <- as.Date(birth_dates)
-players[, "birthDate"] <- birth_dates
-
-# clean death dates
-death_dates <- players[, "deathDate"]
-death_dates <- gsub("[Vv]ers (\\d{4})", "\\1-01-01", death_dates, fixed = FALSE)
-death_dates <- gsub("Date inconnue", "", death_dates, fixed = TRUE)
-death_dates <- gsub("[Ii]nconnue", "", death_dates, fixed = FALSE)
-death_dates <- gsub("non connu", "", death_dates, fixed = FALSE)
-death_dates <- gsub("^(\\d{4}-\\d{2})$", "\\1-01", death_dates, fixed = FALSE)
-death_dates <- gsub("^(\\d{4})$", "\\1-01-01", death_dates, fixed = FALSE)
-death_dates[!is.na(death_dates) & death_dates == ""] <- NA
-#head(sort(unique(death_dates)), 20)
-#tail(sort(unique(death_dates)), 20)
-#which(!is.na(death_dates) & is.na(as.Date(death_dates))) 
-death_dates <- as.Date(death_dates)
-players[, "deathDate"] <- death_dates
-
-# birth and death places
-tlog(2, "Normalize birth and death places")
-#### debug
-all_urls <- c(players[, "birthPlaceWP"], players[, "deathPlaceWP"])
-all_urls <- strsplit(all_urls, "; ")
-unique_urls <- sort(unique(trimws(unlist(all_urls))))
-unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
-unique_urls <- unique_urls[!startsWith(unique_urls, "#")]
-# define conversion map for locations
-tlog(4, "Building the conversion maps")
-map_url <- c()
-for (i in 1:length(unique_urls)) {
-  unique_url <- unique_urls[i]
-  tlog(6, "Retrieving translation for \"", unique_url, "\" (", i, "/", length(unique_urls), ")")
-  title <- get_english_title(unique_url, "fr")
-  tlog(8, "Result: ", title)
-  if (is.null(title))
-    title <- unique_url[i]
-  map_url[unique_urls[i]] <- title
-}
-#### debug
-#write.csv(data.frame(names(map_url), map_url), file.path(folder, "automatic_url2location.csv"), row.names = FALSE)
-#length(which(is.na(map_url)))
-####
-# conversion map (url to name)
-temp <- read.csv(file.path(folder, "maps", "url2location.csv"))
-map_url2 <- temp[, "location"]
-names(map_url2) <- temp[, "url"]
-for (i in 1:length(map_url2))
-  map_url[names(map_url2)[i]] <- map_url2[i]
-# translation map (text to name)
-temp <- read.csv(file.path(folder, "maps", "text2location.csv"))
-map_fr <- temp[, "location"]
-names(map_fr) <- temp[, "text"]
-# clean locations
-tlog(4, "Substituting in the table")
-cols <- c("birthPlace", "deathPlace")
-for (col in cols) {
-  tlog(6, "Normalizing \"", col, "\"")
-  # split place names
-  all_places <- players[, col]
-  all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
-  all_places <- strsplit(all_places, "; ")
-  # split place urls
-  all_urls <- players[, paste0(col, "WP")]
-  all_urls <- gsub("\\[.+\\]", "", all_urls, fixed = FALSE)
-  all_urls <- strsplit(all_urls, "; ")
-
-  # loop over table rows (ie players)
-  for (p in 1:length(all_places)) {
-    if (p %% 1000 == 0)
-      tlog(8, "Processing row #", p, "/", length(all_places))
-    places <- all_places[[p]]
-    urls <- all_urls[[p]]
-
-    if (length(places) == 0) {
-      places <- " "
-    } else {
-      # normalize place names
-      for (url in names(map_url))
-        places[urls == url] <- map_url[url]
-
-      # translate remaining names
-      for (fr_name in names(map_fr))
-        places[places == fr_name] <- map_fr[fr_name]
-
-      # remove duplicates
-      places <- gsub(", ?", "; ", places, fixed = FALSE)
-      places <- unique(unlist(strsplit(places, "; ")))
-    }
-
-    # update list
-    all_places[[p]] <- places
-  }
-
-  # collapse to get strings again
-  all_places <- sapply(all_places, function(places) paste0(places, collapse = "; "))
-  all_places[all_places == "NA"] <- NA
-  names(all_places) <- NULL
-  players[, col] <- all_places
-}
-#### debug: take a look at the normalized names
-#all_places <- c(players[, "birthPlace"], players[, "deathPlace"])
-#all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
-#all_places <- strsplit(all_places, "; ")
-#all_places <- sort(unique(unlist(all_places)))
-#print(tail(all_places))
-#### debug: list of names without an associated URL
-#idx <- match(all_places, map_url)
-#idx <- which(is.na(idx))
-#print(all_places[idx])
-#### debug
-#print(head(players[, c("birthPlace", "deathPlace")]))
-####
+# translating country names
+all_countries <- c(players[, "birthCountry"], players[, "sportCountry"])
+all_countries <- strsplit(all_countries, "; ")
+unique_countries <- sort(unique(trimws(unlist(all_countries))))
+# TODO: translate country names
 
 # rename certain columns
 tlog(2, "Rename certain columns")
@@ -333,7 +212,7 @@ for (r in 1:nrow(stints)) {
       stints[r, "teamWP"] <- NA
     else
       # solve redirection
-      stints[r, "teamWP"] <- solve_redirections(name = url, lang = "fr")
+      stints[r, "teamWP"] <- solve_redirections(name = url, lang = "it")
   }
 
   if (!is.na(url) && is.na(stints[r, "teamWP"]))

@@ -40,7 +40,7 @@ tlog(0, "Cleaning the player table")
 idx <- which(players[, "debugComment"] == "No JA WP page")
 tlog(2, "Removing players without a japanese WP page: ", length(idx), "/", nrow(players))
 players <- players[-idx, ]
-tlog(4, "Remaing players: ", nrow(players))
+tlog(4, "Remaining players: ", nrow(players))
 
 # normalize positions
 tlog(2, "Normalize rugby positions")
