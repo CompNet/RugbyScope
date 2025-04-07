@@ -20,7 +20,7 @@ from mylogging import *
 
 ########################################################################
 # start recording log
-start_rec_log("WikipediaJa")
+start_rec_log("RetrievalJaWP")
 
 
 

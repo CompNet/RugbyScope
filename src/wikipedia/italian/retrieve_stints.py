@@ -20,7 +20,7 @@ from mylogging import *
 
 ########################################################################
 # start recording log
-start_rec_log("WikipediaIt")
+start_rec_log("RetrievalItWP")
 
 
 
@@ -43,9 +43,10 @@ BIOGRAPHY = "Dati biografici"
 RUGBY_UNION = "Rugby a 15"
 
 COUNTRY_BIRTH = "Paese"
+COUNTRY_SPORT = "Union"
+CITIZENSHIP = "Nazionalità"
 HEIGHT = "Altezza"
 WEIGHT = "Peso"
-COUNTRY_SPORT = "Union"
 POSITIONS = "Ruolo"
 CUR_TEAM = "Squadra"
 
@@ -55,25 +56,33 @@ SECTION_TITLE = "sinottico_divisione"
 CAREER1 = "Carriera"
 CAREER2 = "Carriera rugby a 15"
 CAREER_SECTIONS = {CAREER1, CAREER2}
-YOUTH_CAREER = "Attività giovanile"
-CLUB_CAREER = "Attività di club"
+YOUTH_CAREER1 = "Attività giovanile"
+YOUTH_CAREER2 = "Giovanili"
+CLUB_CAREER1 = "Attività di club"
+CLUB_CAREER2 = "Squadre di club"
 FRAN_CAREER1 = "Attività in franchise"
 FRAN_CAREER2 = "Attività infranchise"
 PROV_CAREER = "Attività provinciale"
-INTNL_CAREER = "Attività da giocatore internazionale"
+INTNL_CAREER1 = "Attività da giocatore internazionale"
+INTNL_CAREER2 = "Nazionale"
 CAREER_MAP = {
-    YOUTH_CAREER: "Youth",
-    CLUB_CAREER: "Senior",
+    YOUTH_CAREER1: "Youth",
+    YOUTH_CAREER2: "Youth",
+    CLUB_CAREER1: "Senior",
+    CLUB_CAREER2: "Senior",
     FRAN_CAREER1: "Senior",
     FRAN_CAREER2: "Senior",
     PROV_CAREER: "Regional",
-    INTNL_CAREER: "International"
+    INTNL_CAREER1: "International",
+    INTNL_CAREER2: "International"
 }
 
 # irrelevant info sections
-CAREER_DISC = {"Attività da allenatore", "Palmarès internazionale"}
-# MODIF_ICON = "Voir et modifier les données sur Wikidata"
-# ON_LOAN = "Prêté à"
+CAREER_DISC = {
+    "Atletica leggera", "Attività da allenatore", "Attività di club (rugby a 13)", "Attività internazionale", 
+    "Carriera arbitrale", 
+    "Palmarès", "Palmarès internazionale"
+}
 
 
 
@@ -168,15 +177,15 @@ for _, player in merged_table.iterrows():
                     tlog(4, "Same name used for two distinct players (WARNING)")
             else:
                 tlog(2, f"Could not find the name (rugby probably not the main activity)")
-            bio_elt = infobox_elt.find("th", string=BIOGRAPHY)
-#            if bio_elt is None:     # alternate section name
-#                bio_elt = infobox_elt.find("caption", string=BIOGRAPHY)
-            if bio_elt is None:
-                tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
-                comment = "Infobox format problem"
-                player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
-                p = p + 1
-                continue
+#             bio_elt = infobox_elt.find("th", string=BIOGRAPHY)
+# #            if bio_elt is None:     # alternate section name
+# #                bio_elt = infobox_elt.find("caption", string=BIOGRAPHY)
+#             if bio_elt is None:
+#                 tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
+#                 comment = "Infobox format problem"
+#                 player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
+#                 p = p + 1
+#                 continue
 
             # birth country
             country_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == COUNTRY_BIRTH)
@@ -184,7 +193,12 @@ for _, player in merged_table.iterrows():
                 birth_country = country_elt.find_next_siblings()[0].get_text(strip=True)
                 tlog(2, f"Birth country: {birth_country}")
             else:
-                tlog(2, f"Could not find birth country")
+                country_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == CITIZENSHIP)
+                if country_elt:
+                    birth_country = country_elt.find_next_siblings()[0].get_text(strip=True)
+                    tlog(2, f"Citizenship: {birth_country}")
+                else:
+                    tlog(2, f"Could not find birth country or citizenship")
 
             # height
             height_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == HEIGHT)
@@ -194,7 +208,7 @@ for _, player in merged_table.iterrows():
                 height = height.replace(",", ".")
                 height = height.strip()
                 if height != "":
-                    pattern = r"(\d.?\d?\d?) *c?m.*"
+                    pattern = r"(\d.?\d?\d?)(?: ?\(.*\))?(?:\[\d+\])? *c?m.*"
                     vals = re.findall(pattern, height)
                     height = vals[0]
                     if "." in height:
@@ -210,7 +224,7 @@ for _, player in merged_table.iterrows():
                 weight = weight.replace(u"\xa0", u" ")
                 weight = weight.strip()
                 if weight != "":
-                    pattern = r"(\d+)(?:\[\d+\])? *kg.*"
+                    pattern = r"(\d+)(?: ?\(.*\))?(?:\[\d+\])? *kg.*"
                     vals = re.findall(pattern, weight)
                     weight = vals[0]
                     tlog(2, f"Weight: {weight} kg")
@@ -220,13 +234,17 @@ for _, player in merged_table.iterrows():
             # positions
             pos_elt = infobox_elt.find("th", string=lambda text: text in [POSITIONS])
             if pos_elt:
-                td_elt = pos_elt.find_next_siblings()[0]
-                a_elts = td_elt.find_all("a", recursive = False)
-                if a_elts:
-                    positions = "; ".join(a.get_text(strip=True) for a in a_elts)
+                td_elts = pos_elt.find_next_siblings()
+                if len(td_elts) > 0:
+                    td_elt = td_elts[0]
+                    a_elts = td_elt.find_all("a", recursive = False)
+                    if a_elts:
+                        positions = "; ".join(a.get_text(strip=True) for a in a_elts)
+                    else:
+                        positions = td_elt.get_text(strip=True)
+                    tlog(2, f"Positions: {positions}")
                 else:
-                    positions = td_elt.get_text(strip=True)
-                tlog(2, f"Positions: {positions}")
+                    tlog(2, f"Could not find positions")
             else:
                 tlog(2, f"Could not find positions")
 
@@ -254,7 +272,7 @@ for _, player in merged_table.iterrows():
                 if len(a_elts) > 0:
                     sport_country = "; ".join(a.get_text(strip=True) for a in a_elts)
                     if len(a_elts) > 1:
-                        tlog(2, f"WARNING: found several current teams!")
+                        tlog(2, f"WARNING: found several sport countries!")
                 else:
                     country_elt = td_elt.get_text(strip=True)
                 tlog(2, f"Sport country: {sport_country}")
@@ -262,7 +280,11 @@ for _, player in merged_table.iterrows():
                 tlog(2, f"Could not find sport country")
 
             # get career sections
-            career_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) in CAREER_SECTIONS)
+            ru_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == RUGBY_UNION)
+            if ru_elt:
+                career_elt = ru_elt.find_next(lambda tag: tag.name == "th" and tag.get_text(strip=True) in CAREER_SECTIONS)
+            else:
+                career_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) in CAREER_SECTIONS)
             if career_elt:
                 row_elt = career_elt.parent.find_next_siblings()[0]
                 while row_elt:
@@ -356,7 +378,7 @@ for _, player in merged_table.iterrows():
                         elif section not in CAREER_DISC:
                             # in case of types of stints never seen before
                             tlog(4, f"Unknown section detected in this page: " + section)
-                            diff_sect = set(diff_sect).union(section)
+                            diff_sect = set(diff_sect).union([section])
                             diff_df = pd.DataFrame(diff_sect, columns = ["Title"])
                             diff_df.to_csv(path.join(table_folder, "debug__new_sections.csv"), index=False)
 
@@ -368,6 +390,7 @@ for _, player in merged_table.iterrows():
                         row_elt = row_elts[0]
             else:
                 tlog(2, "Could not find the 'career' section")
+
             if not has_career:
                 comment = "No stint found"
                 tlog(2, comment)

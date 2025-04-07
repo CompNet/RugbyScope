@@ -20,7 +20,7 @@ from mylogging import *
 
 ########################################################################
 # start recording log
-start_rec_log("WikipediaFr")
+start_rec_log("RetrievalFrWP")
 
 
 
@@ -574,7 +574,7 @@ for _, player in merged_table.iterrows():
                 # in case of types of stints never seen before
                 elif section not in CAREER_DISC:
                     tlog(4, f"Unknown section detected in this page: " + section)
-                    diff_sect = set(diff_sect).union(section)
+                    diff_sect = set(diff_sect).union([section])
                     diff_df = pd.DataFrame(diff_sect, columns = ["Title"])
                     diff_df.to_csv(path.join(table_folder, "debug__new_sections.csv"), index=False)
 
