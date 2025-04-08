@@ -76,6 +76,12 @@ system("python src/wikipedia/french/retrieve_stints.pys")
 source("src/wikipedia/french/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/french/`
 
+# italian wikipedia
+system("python src/wikipedia/italian/retrieve_stints.pys")
+# this produces the raw CSV files in folder `data/wikipedia/italian/raw/`
+source("src/wikipedia/italian/clean_tables.R")
+# this produces the clean CSV files in folder `data/wikipedia/italian/`
+
 # english wikipedia
 # TODO
 source("src/wikipedia/english/clean_tables.R")
@@ -83,10 +89,6 @@ source("src/wikipedia/english/clean_tables.R")
 # spanish wikipedia
 # TODO
 source("src/wikipedia/spanish/clean_tables.R")
-
-# italian wikipedia
-# TODO
-source("src/wikipedia/italian/clean_tables.R")
 
 
 
@@ -110,11 +112,15 @@ source("src/wikipedia/french/integrate_data.R")
 # - `teams_04_frwp.csv`: merged list of teams
 # - `stints_02_frwp.csv`: merged list of stints
 
+# italian wikipedia
+source("src/wikipedia/italian/integrate_data.R")
+# this produces the following files in folder `data/fusion/`:
+# - `players_04_itwp.csv`: merged list of players
+# - `teams_05_itwp.csv`: merged list of teams
+# - `stints_03_itwp.csv`: merged list of stints
+
 # english wikipedia
 source("src/wikipedia/english/integrate_data.R")
 
 # spanish wikipedia
 source("src/wikipedia/spanish/integrate_data.R")
-
-# italian wikipedia
-source("src/wikipedia/italian/integrate_data.R")

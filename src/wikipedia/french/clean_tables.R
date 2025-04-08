@@ -271,7 +271,7 @@ stints[, "timePeriod"] <- gsub("^(\\d{4}-\\d{4})-$", "\\1", stints[, "timePeriod
 stints <- cbind(stints, matrix(NA, nrow = nrow(stints), ncol = 2))
 colnames(stints)[(ncol(stints) - 1):ncol(stints)] <- c("startYear", "endYear")
 
-# split rows containing multiple stints
+# split time periods
 for (r in 1:nrow(stints)) {
   if (r %% 1000 == 0)
     tlog(4, "Processing row ", r, "/", nrow(stints))
@@ -339,8 +339,10 @@ for (r in 1:nrow(stints)) {
   if (!is.na(url) && is.na(stints[r, "teamWP"]))
     tlog(6, "Difference: ", r)
 }
+#### debug: check if we lost some URL after the above processing
 #print(length(which(!is.na(old_urls) & is.na(stints[, "teamWP"]))))
 #print(length(which(!is.na(stints[, "teamWP"]))))  # 41,334/46,999 non-NAs
+####
 
 
 

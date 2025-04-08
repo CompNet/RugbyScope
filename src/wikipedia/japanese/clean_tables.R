@@ -102,9 +102,9 @@ for (i in 1:length(unique_urls)) {
     title <- unique_url[i]
   map_url[unique_urls[i]] <- title
 }
-# debug
+#### debug
 #which(is.na(map_url))
-# conversion map
+#### conversion map
 temp <- read.csv(file.path(folder, "maps", "url2location.csv"))
 map_url2 <- temp[, "location"]
 names(map_url2) <- temp[, "url"]
@@ -158,14 +158,15 @@ for (col in cols) {
   names(all_places) <- NULL
   players[, col] <- all_places
 }
-# debug
+#### debug
 #all_places <- c(players[, "birthPlace"], players[, "deathPlace"])
 #all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
 #all_places <- strsplit(all_places, "; ")
 #all_places <- sort(unique(unlist(all_places)))
 #print(tail(all_places))
-# debug
+#### debug
 #print(head(players[, c("birthPlace", "deathPlace")]))
+####
 
 # rename certain columns
 tlog(2, "Rename certain columns")
@@ -341,10 +342,11 @@ for (r in 1:nrow(stints)) {
     new_stints <- rbind(new_stints, new_rows)
   }
 }
-# debug
+#### debug: check newly created year fields
 #options(warn = 0)
 #sort(unique(new_stints[, "startYear"]))
 #sort(unique(new_stints[, "endYear"]))
+####
 
 # clean team urls
 idx <- which(grepl("action=edit&redlink=1", new_stints[, "teamWP"], fixed = FALSE))
