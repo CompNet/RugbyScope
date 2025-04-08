@@ -146,7 +146,6 @@ tlog("Extract team table from stints")
 removed_teams <- c()
 
 # clean team names
-wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub("→", "", wp_stints[, "teamName"], fixed = TRUE)
 wp_stints[, "teamName"] <- trimws(wp_stints[, "teamName"])
 idx <- which(wp_stints[, "teamName"] %in% c("?", "", "NA"))
@@ -296,7 +295,7 @@ tlog(4, "Found ", length(non_na), "/", nrow(wp_teams), " WP teams with a URL")
 unique_urls <- trimws(wp_teams[non_na, "teamWP"])
 unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
 unique_urls <- unique_urls[!startsWith(unique_urls, "#")]
-matches <- cbind(match(unique_urls, fus_teams[, "wikipediaEn"]), match(unique_urls, fus_teams[, "wikipediaIt"]), match(unique_urls, fus_teams[, "wikipediaIt"]), match(unique_urls, fus_teams[, "wikipediaEs"]), match(unique_urls, fus_teams[, "wikipediaJa"]))
+matches <- cbind(match(unique_urls, fus_teams[, "wikipediaEn"]), match(unique_urls, fus_teams[, "wikipediaFr"]), match(unique_urls, fus_teams[, "wikipediaIt"]), match(unique_urls, fus_teams[, "wikipediaEs"]), match(unique_urls, fus_teams[, "wikipediaJa"]))
 mm <- apply(matches, 1, function(row) {
   res <- unique(row[!is.na(row)])
   if (length(res) == 0)
