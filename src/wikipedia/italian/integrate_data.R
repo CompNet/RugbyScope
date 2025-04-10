@@ -25,7 +25,7 @@ wp_folder <- file.path("data", "wikipedia", "italian")
 #
 fusion_folder <- file.path("data", "fusion")
 #
-ref_folder <- file.path("data", "references")
+ref_folder <- file.path("data", "references", "league")
 
 
 
@@ -276,11 +276,19 @@ tlog(2, "Removing rugby league teams")
 #idx <- order(tab[, "altNames"])
 #write.csv(tab[idx, -1], file.path(ref_folder, "rugby_league_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### this list was then completed manually and used below
-list_rleague <- read.csv(file.path(ref_folder, "rugby_league_teams.csv"))
-del_rows <- which(wp_teams[, "teamWP"] %in% list_rleague[!is.na(list_rleague[, "url"]), "url"] | wp_teams[, "altNames"] %in% list_rleague[!is.na(list_rleague[, "name"]) & is.na(list_rleague[, "url"]), "name"])
+# use the rugby league urls
+list_rleague <- read.csv(file.path(ref_folder, "team_urls.csv"))
+del_rows <- which(wp_teams[, "teamWP"] %in% list_rleague)
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
-tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table")
+tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, based on their URL")
+tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+# use the rugby league names
+list_rleague <- read.csv(file.path(ref_folder, "team_names.csv"))
+del_rows <- which(wp_teams[, "altNames"] %in% list_rleague)
+removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
+wp_teams <- wp_teams[-del_rows, ]
+tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, based on their name")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 # remove women's teams

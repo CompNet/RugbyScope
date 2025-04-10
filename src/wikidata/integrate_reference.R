@@ -47,7 +47,7 @@ fusion_folder <- file.path("data", "fusion")
 wd_stats_folder <- file.path("data", "wikidata", "stats")
 wd_table_folder <- file.path("data", "wikidata", "tables")
 #
-ref_folder <- file.path("data", "references")
+ref_folder <- file.path("data", "references", "union")
 
 
 
