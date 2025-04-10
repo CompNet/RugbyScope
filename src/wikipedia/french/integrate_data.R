@@ -287,14 +287,14 @@ tlog(2, "Removing rugby league teams")
 #### this list was then completed manually and used below
 # use the rugby league urls
 list_rleague <- read.csv(file.path(ref_folder, "team_urls.csv"))
-del_rows <- which(wp_teams[, "teamWP"] %in% list_rleague)
+del_rows <- which(wp_teams[, "teamWP"] %in% list_rleague[, "url"])
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
 tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, based on their URL")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 # use the rugby league names
 list_rleague <- read.csv(file.path(ref_folder, "team_names.csv"))
-del_rows <- which(wp_teams[, "altNames"] %in% list_rleague)
+del_rows <- which(wp_teams[, "altNames"] %in% list_rleague[, "name"])
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
 tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, based on their name")
