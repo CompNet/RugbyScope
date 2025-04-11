@@ -608,11 +608,11 @@ for (r in 1:nrow(wp_stints)) {
       update <- FALSE
 
       # debug
-      print(wp_stints[r, ])
-      print(fus_stints[idx2, ])
-      tlog(6, wp_stints[r, "startYear"], "-", wp_stints[r, "endYear"])
-      for (z in idx2)
-       tlog(8, fus_stints[z, "startYear"], "-", fus_stints[z, "endYear"])
+      #print(wp_stints[r, ])
+      #print(fus_stints[idx2, ])
+      #tlog(6, wp_stints[r, "startYear"], "-", wp_stints[r, "endYear"])
+      #for (z in idx2)
+      # tlog(8, fus_stints[z, "startYear"], "-", fus_stints[z, "endYear"])
 
       # compare the start/end years to find a compatible stint
       if (is.na(start_year)) {
@@ -690,7 +690,7 @@ for (r in 1:nrow(wp_stints)) {
       # possibly update stats
       if (update) {
         # debug
-        tlog(6, "Updating the table")
+        #tlog(6, "Updating the table")
         
         # we assume that the info already present is more reliable
         # and update only the NA fields from the merged table
@@ -708,7 +708,7 @@ for (r in 1:nrow(wp_stints)) {
           fus_stints[idx3, "dataSource"] <- paste0(fus_stints[idx3, "dataSource"], "; itWP")
 
         # debug
-        print(fus_stints[idx3, ])
+        #print(fus_stints[idx3, ])
       }
     }
   }
@@ -716,7 +716,7 @@ for (r in 1:nrow(wp_stints)) {
   # if no similar stint, add new row to merged table
   if (!finished) {
     # debug
-    tlog(6, "No matching stint: creating a new one")
+    #tlog(6, "No matching stint: creating a new one")
 
     rr <- nrow(fus_stints) + 1
     fus_stints[rr, "playerId"] <- player_id
@@ -734,7 +734,7 @@ for (r in 1:nrow(wp_stints)) {
   # debug
   #readline(prompt="Press [enter] to continue")
 }
-stop()
+
 # clean both stat columns
 fus_stints[, "matchesPlayed"] <- gsub("+", "", fus_stints[, "matchesPlayed"], fixed = TRUE)
 fus_stints[, "matchesPlayed"] <- gsub("-", "", fus_stints[, "matchesPlayed"], fixed = TRUE)
