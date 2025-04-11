@@ -529,7 +529,7 @@
 "Q427291","Gavin Hastings","Gavin Hastings","Gavin_Hastings","Senior",NA,"London Scottish","London_Scottish_Football_Club",NA,NA,NA,NA
 "Q427291","Gavin Hastings","Gavin Hastings","Gavin_Hastings","International","1986-95","Scozia","Nazionale_maschile_di_rugby_a_15_della_Scozia","61","733","1986","1995"
 "Q427291","Gavin Hastings","Gavin Hastings","Gavin_Hastings","International","1989-93","British Lions","British_and_Irish_Lions","6","66","1989","1993"
-"Q430712","Charles William Miller","Charles Miller","Charles_William_Miller","International","1906-1906","Brasile","Nazionale_maschile_di_calcio_del_Brasile","1","0","1906","1906"
+"Q430712","Charles William Miller","Charles Miller","Charles_William_Miller","International","1906-1906","Brasile (calcio)","Nazionale_maschile_di_calcio_del_Brasile","1","0","1906","1906"
 "Q431135","Ron Cribb","Ron Cribb","Ron_Cribb","Regional","1997-2003","North Harbour","North_Harbour_Rugby_Union","41","","1997","2003"
 "Q431135","Ron Cribb","Ron Cribb","Ron_Cribb","Senior","1999-2001","Crusaders","Crusaders","15","","1999","2001"
 "Q431135","Ron Cribb","Ron Cribb","Ron_Cribb","Senior","2001-2003","Blues","Blues_(rugby_a_15)","19","20","2001","2003"
@@ -2746,7 +2746,7 @@
 "Q1988772","Tiaan Strauss","Tiaan Strauss","Tiaan_Strauss","Senior","1997-2000","Waratahs","New_South_Wales_Waratahs","33","20","1997","2000"
 "Q1988772","Tiaan Strauss","Tiaan Strauss","Tiaan_Strauss","International","1992-1994","Sudafrica","Nazionale_maschile_di_rugby_a_15_del_Sudafrica","15","20","1992","1994"
 "Q1988772","Tiaan Strauss","Tiaan Strauss","Tiaan_Strauss","International","1999-1999","Australia","Nazionale_maschile_di_rugby_a_15_dell%27Australia","11","20","1999","1999"
-"Q1989492","Nigel Barker","Nigel Barker","Nigel_Barker_(velocista)","International",NA,"Australia","Nazionale_di_atletica_leggera_dell%27Australia",NA,NA,NA,NA
+"Q1989492","Nigel Barker","Nigel Barker","Nigel_Barker_(velocista)","International",NA,"Australia (atletica)","Nazionale_di_atletica_leggera_dell%27Australia",NA,NA,NA,NA
 "Q1992030","Heinrich Reitz","Heinrich Reitz","Heinrich_Reitz","Senior",NA,"Francoforte",NA,NA,NA,NA,NA
 "Q1992038","Jacob Herrmann","Jacob Herrmann","Jacob_Herrmann","Senior",NA,"Francoforte",NA,NA,NA,NA,NA
 "Q1992089","Jean Hervé","Jean Hervé","Jean_Herv%C3%A9","Senior",NA,"Stade français","Stade_fran%C3%A7ais_Paris_rugby",NA,NA,NA,NA
@@ -3286,7 +3286,7 @@
 "Q2465068","Elvis Vermeulen","Elvis Vermeulen","Elvis_Vermeulen","Senior","1998-2001","Brive","Club_athl%C3%A9tique_Brive_Corr%C3%A8ze_Limousin",NA,NA,"1998","2001"
 "Q2465068","Elvis Vermeulen","Elvis Vermeulen","Elvis_Vermeulen","Senior","2001-","Clermont","Association_sportive_montferrandaise_Clermont_Auvergne","209","125","2001",NA
 "Q2465068","Elvis Vermeulen","Elvis Vermeulen","Elvis_Vermeulen","International","2001-","Francia","Nazionale_maschile_di_rugby_a_15_della_Francia","10","5","2001",NA
-"Q2469802","Arnold Watson Hutton","Arnold Watson Hutton","Arnold_Watson_Hutton","International","1906-1913","Argentina","Nazionale_maschile_di_calcio_dell%27Argentina","17","6","1906","1913"
+"Q2469802","Arnold Watson Hutton","Arnold Watson Hutton","Arnold_Watson_Hutton","International","1906-1913","Argentina (calcio)","Nazionale_maschile_di_calcio_dell%27Argentina","17","6","1906","1913"
 "Q2472720","Vladislav Korshunov","Vladislav Koršunov","Vladislav_Kor%C5%A1unov","Senior","-2011","VVA-Podmoskov'e","VVA-Podmoskov%27e",NA,NA,NA,"2011"
 "Q2472720","Vladislav Korshunov","Vladislav Koršunov","Vladislav_Kor%C5%A1unov","Senior","2011-12","Wasps","Wasps_Rugby_Football_Club","4","0","2011","2012"
 "Q2472720","Vladislav Korshunov","Vladislav Koršunov","Vladislav_Kor%C5%A1unov","Senior","2012-","VVA-Podmoskov'e","VVA-Podmoskov%27e",NA,NA,"2012",NA
@@ -8202,7 +8202,7 @@
 "Q3770024","Giuseppe Artuso","Giuseppe Artuso","Giuseppe_Artuso","International","1977-1987","Italia","Nazionale_maschile_di_rugby_a_15_dell%27Italia","31","4","1977","1987"
 "Q3771445","Giuseppe Sessa","Giuseppe Sessa","Giuseppe_Sessa","Senior","1925-1927","Sport Club Italia","Sport_Club_Italia","","","1925","1927"
 "Q3771445","Giuseppe Sessa","Giuseppe Sessa","Giuseppe_Sessa","Senior","1927-1928","US Milanese","Unione_Sportiva_Milanese","","","1927","1928"
-"Q3771445","Giuseppe Sessa","Giuseppe Sessa","Giuseppe_Sessa","Senior","1928-1929","Ambrosiana","Football_Club_Internazionale_Milano",NA,NA,"1928","1929"
+"Q3771445","Giuseppe Sessa","Giuseppe Sessa","Giuseppe_Sessa","Senior","1928-1929","Ambrosiana","Amatori_Rugby_Milano",NA,NA,"1928","1929"
 "Q3771445","Giuseppe Sessa","Giuseppe Sessa","Giuseppe_Sessa","Senior","1929-1934","Amatori Milano","Amatori_Rugby_Milano",NA,NA,"1929","1934"
 "Q3771445","Giuseppe Sessa","Giuseppe Sessa","Giuseppe_Sessa","International","1930-1930","Italia","Nazionale_maschile_di_rugby_a_15_dell%27Italia","1","0","1930","1930"
 "Q3778981","Guglielmo Palazzani","Guglielmo Palazzani","Guglielmo_Palazzani","Youth","2006-09","Fiumicello",NA,NA,NA,"2006","2009"
@@ -8728,7 +8728,7 @@
 "Q4019876","Will Johnson","Will Johnson","Will_Johnson_(rugbista_1984)","Senior","2012-13","Rosslyn Park","Rosslyn_Park_Football_Club","3","0","2012","2013"
 "Q4019876","Will Johnson","Will Johnson","Will_Johnson_(rugbista_1984)","International","2009-","Stati Uniti","Nazionale_maschile_di_rugby_a_15_degli_Stati_Uniti_d%27America","4","0","2009",NA
 "Q4020143","William Ryder","William Ryder","William_Ryder","Senior","2004-","Toyota Verblitz","Toyota_Verblitz",NA,NA,"2004",NA
-"Q4020143","William Ryder","William Ryder","William_Ryder","International","2005-","Figi","Nazionale_maschile_di_rugby_a_7_delle_Figi","987",NA,"2005",NA
+"Q4020143","William Ryder","William Ryder","William_Ryder","International","2005-","Figi 7","Nazionale_maschile_di_rugby_a_7_delle_Figi","987",NA,"2005",NA
 "Q4120957","Simon Zebo","Simon Zebo","Simon_Zebo","Senior","2018-","Racing 92","Racing_92","26","55","2018",NA
 "Q4120957","Simon Zebo","Simon Zebo","Simon_Zebo","Senior","2009-18","Munster","Munster_Rugby","98","180","2009","2018"
 "Q4120957","Simon Zebo","Simon Zebo","Simon_Zebo","International","2012-","Irlanda","Nazionale_maschile_di_rugby_a_15_dell%27Irlanda","35","45","2012",NA
@@ -9188,7 +9188,7 @@
 "Q5727284","Henry Pyrgos","Henry Pyrgos","Henry_Pyrgos","Senior","2010-18","Glasgow Warriors","Glasgow_Warriors","117","101","2010","2018"
 "Q5727284","Henry Pyrgos","Henry Pyrgos","Henry_Pyrgos","Senior","2018-","Edimburgo","Edinburgh_Rugby","23","5","2018",NA
 "Q5727284","Henry Pyrgos","Henry Pyrgos","Henry_Pyrgos","International","2012-","Scozia","Nazionale_maschile_di_rugby_a_15_della_Scozia","28","29","2012",NA
-"Q5727479","Henry Renny-Tailyour","Henry Renny-Tailyour","Henry_Renny-Tailyour","International","1871-1873","Scozia","Nazionale_maschile_di_calcio_della_Scozia","1","1","1871","1873"
+"Q5727479","Henry Renny-Tailyour","Henry Renny-Tailyour","Henry_Renny-Tailyour","International","1871-1873","Scozia (calcio)","Nazionale_maschile_di_calcio_della_Scozia","1","1","1871","1873"
 "Q5728379","Henry Slade","Henry Slade","Henry_Slade","Senior","2011-12","Plymouth",NA,"11","15","2011","2012"
 "Q5728379","Henry Slade","Henry Slade","Henry_Slade","Senior","2012-","Exeter","Exeter_Chiefs","155","588","2012",NA
 "Q5728379","Henry Slade","Henry Slade","Henry_Slade","International","2015-","Inghilterra","Nazionale_maschile_di_rugby_a_15_dell%27Inghilterra","60","44","2015",NA
@@ -9206,7 +9206,7 @@
 "Q5865298","Francisco Borrell","Francisco Borrell","Francisco_Borrell","Senior",NA,"Real Madrid B","Real_Madrid_Baloncesto_B",NA,NA,NA,NA
 "Q5865298","Francisco Borrell","Francisco Borrell","Francisco_Borrell","Senior",NA,"Aism. Montcada",NA,NA,NA,NA,NA
 "Q5865298","Francisco Borrell","Francisco Borrell","Francisco_Borrell","Senior",NA,"Espanyol","Reial_Club_Deportiu_Espanyol_de_Barcelona",NA,NA,NA,NA
-"Q5865298","Francisco Borrell","Francisco Borrell","Francisco_Borrell","International","1958-1959","Spagna","Nazionale_maschile_di_pallacanestro_della_Spagna","15","55","1958","1959"
+"Q5865298","Francisco Borrell","Francisco Borrell","Francisco_Borrell","International","1958-1959","Spagna (pallacanestro)","Nazionale_maschile_di_pallacanestro_della_Spagna","15","55","1958","1959"
 "Q5902440","Horacio San Martín","Horacio San Martín","Horacio_San_Mart%C3%ADn","Senior","2007-2007","Tala",NA,"","","2007","2007"
 "Q5902440","Horacio San Martín","Horacio San Martín","Horacio_San_Mart%C3%ADn","Senior","2007-2008","Amatori Catania","Amatori_Catania_Rugby","15","5","2007","2008"
 "Q5902440","Horacio San Martín","Horacio San Martín","Horacio_San_Mart%C3%ADn","Senior","2010-2010","Pampas XV","Pampas_XV","6","0","2010","2010"
@@ -10972,7 +10972,7 @@
 "Q20744800","Daniel Yakopo","Dan Yakopo","Dan_Yakopo","Senior","2011-2013","Parramatta",NA,NA,NA,"2011","2013"
 "Q20744800","Daniel Yakopo","Dan Yakopo","Dan_Yakopo","Senior","2013-14","Viadana","Rugby_Viadana","11","20","2013","2014"
 "Q20744800","Daniel Yakopo","Dan Yakopo","Dan_Yakopo","Senior","2014-2014","Parramatta",NA,NA,NA,"2014","2014"
-"Q20744800","Daniel Yakopo","Dan Yakopo","Dan_Yakopo","International","2010-2012","Australia","Nazionale_maschile_di_rugby_a_7_dell%27Australia","33","49","2010","2012"
+"Q20744800","Daniel Yakopo","Dan Yakopo","Dan_Yakopo","International","2010-2012","Australia 7","Nazionale_maschile_di_rugby_a_7_dell%27Australia","33","49","2010","2012"
 "Q20744990","Lasha Lomidze","Lasha Lomidze","Lasha_Lomidze","Youth","2012-13","Montpellier","Montpellier_H%C3%A9rault_Rugby",NA,NA,"2012","2013"
 "Q20744990","Lasha Lomidze","Lasha Lomidze","Lasha_Lomidze","Senior","2013-14","Montpellier","Montpellier_H%C3%A9rault_Rugby","7","0","2013","2014"
 "Q20744990","Lasha Lomidze","Lasha Lomidze","Lasha_Lomidze","Senior","2014-17","Béziers","Association_sportive_de_B%C3%A9ziers_H%C3%A9rault","37","25","2014","2017"
@@ -11120,7 +11120,7 @@
 "Q21623285","Owen Watkin","Owen Watkin","Owen_Watkin","International","2017-","Galles","Nazionale_maschile_di_rugby_a_15_del_Galles","22","5","2017",NA
 "Q21623324","Tomos Williams","Tomos Williams","Tomos_Williams","Senior","2013-","Cardiff Rugby","Cardiff_Rugby","64","35","2013",NA
 "Q21623324","Tomos Williams","Tomos Williams","Tomos_Williams","International","2018-","Galles","Nazionale_maschile_di_rugby_a_15_del_Galles","17","25","2018",NA
-"Q21976121","Roger Cornforth","Roger Cornforth","Roger_Cornforth","International",NA,"Australia","Nazionale_maschile_di_pallanuoto_dell%27Australia",NA,NA,NA,NA
+"Q21976121","Roger Cornforth","Roger Cornforth","Roger_Cornforth","International",NA,"Australia (pallanuoto)","Nazionale_maschile_di_pallanuoto_dell%27Australia",NA,NA,NA,NA
 "Q22007135","Joe Naufahu","Joe Naufahu","Joe_Naufahu","Senior","2002-2002","Leicester Tigers","Leicester_Tigers",NA,NA,"2002","2002"
 "Q22007135","Joe Naufahu","Joe Naufahu","Joe_Naufahu","Senior","2002-2004","Glasgow Warriors","Glasgow_Warriors",NA,NA,"2002","2004"
 "Q22007135","Joe Naufahu","Joe Naufahu","Joe_Naufahu","Senior","2004-2004","Stirling County","Stirling_County_Rugby_Football_Club",NA,NA,"2004","2004"

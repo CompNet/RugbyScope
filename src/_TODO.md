@@ -7,16 +7,13 @@
   try to fill based on next step start date?
 - missing country: use career steps that concern national teams
 
-- function to solve WP redirections
-  > apply to all URL in RS
+- merging stints:
+  - prioritize those with stats vs. NAs, even if different years
+  - if same stats and different years, prioritize shorter time span
+  - if larger time span and higher stats > prioritize that one
+  - if larger time span but lower stats > solve manually
+  - lions sometimes split by year, for some reason...
 
-- refactoring:
-  - externalize the other uses of conversion maps
-  - switch from "step" to "stint"?
-
-- WP JA: 
-  x write script to clean/normalize tables
-  - then script to merge WP JA to our data
 
 * NOTES
   - Filtering players depending on whether they played for a club: many are missed
