@@ -57,7 +57,7 @@ COUNTRY_START = "Debut"
 
 CAREER = "Trayectoria"
 
-UNKNOWN_DATE = "fecha desconocida"
+IGNORE_DATES = ["Fecha desconocida", "fecha desconocida", "Siglo", "Posterior a"]
 
 
 
@@ -178,19 +178,31 @@ for _, player in merged_table.iterrows():
                     i = i + 1
                 # edit: the page sometimes starts with the date instead of the place
                 txt = birth_elt.find_next_siblings()[0].get_text(strip=True)
-                if re.match(r"^\d", txt):
+                if txt.startswith(tuple(IGNORE_DATES)):
                     temp_elt = temp_elts[i]
-                    birth_date = temp_elt.get_text(strip=True)
-                    birth_date = birth_date.replace(u"\xa0", u" ")
-                    pattern = r"(.*\d{4})(?: \(\d+ años\))?"
-                    vals = re.findall(pattern, birth_date)
-                    birth_date = vals[0]
-                    tlog(2, f"Birth date: {birth_date}")
-                    temp_elt = temp_elt.find_next_siblings("br")
+                    birth_date = "?"
+                    temp_elts = temp_elt.find_next_siblings("br")
                     if len(temp_elts) > 0:
                         temp_elt = temp_elts[0].next_sibling
                     else:
                         temp_elt = None
+                elif re.match(r"^\d", txt):
+                    temp_elt = temp_elts[i]
+                    birth_date = temp_elt.get_text(strip=True)
+                    birth_date = birth_date.replace(u"\xa0", u" ")
+                    if re.match(r"\d{4}", birth_date):
+                        pattern = r"(.*\d{4})(?: \(\d+ años\))?"
+                        vals = re.findall(pattern, birth_date)
+                        birth_date = vals[0]
+                        tlog(2, f"Birth date: {birth_date}")
+                        temp_elts = temp_elt.find_next_siblings("br")
+                        if len(temp_elts) > 0:
+                            temp_elt = temp_elts[0].next_sibling
+                        else:
+                            temp_elt = None
+                    else:
+                        tlog(2, f"Ignored birth date (no year): {birth_date}")
+                        birth_date = "?"
                 else:
                     temp_elt = temp_elts[i]
                 # birth place
@@ -210,14 +222,14 @@ for _, player in merged_table.iterrows():
                 if birth_date == "":
                     temp_elts = temp_elt.find_next_siblings("br") 
                     temp_elt = temp_elts[0].next_sibling
-                    if temp_elt.get_text(strip=True) == UNKNOWN_DATE:
+                    if temp_elt.get_text(strip=True).startswith(tuple(IGNORE_DATES)):
                         birth_date = ""
                     else:
                         if not re.match(r"^\d", temp_elt.get_text(strip=True)):
                             temp_elt = temp_elts[1].next_sibling
                         birth_date = temp_elt.get_text(strip=True)
                         birth_date = birth_date.replace(u"\xa0", u" ")
-                        pattern = r"(.+\d{4})(?: \(\d+ años\))?"
+                        pattern = r"(.*\d{4})(?: \(\d+ años\))?"
                         vals = re.findall(pattern, birth_date)
                         birth_date = vals[0]
                         tlog(2, f"Birth date: {birth_date}")
@@ -388,49 +400,53 @@ for _, player in merged_table.iterrows():
             # get career sections
             traj_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == CAREER)
             if traj_elt:
-                has_career = True
                 tlog(2, "Club stints:")
                 career_elt = traj_elt.parent.find_next_siblings()[0]
-                ul_elt = career_elt.find_all("ul")[0]
-                li_elt = ul_elt.find_all("li")[0]
-                while li_elt:
-                    # retrieve information
-                    str = li_elt.get_text(strip=True)
-                    if ")" in str:
-                        #pattern = r"^(.+) *\((\d+|\?+)[-–]?(\d+|\?+|[Aa]ctualidad|[Aa]ct\.|[Pp]resente)?\)"
-                        # team name
-                        pattern = r"^(.+) *\((.*)\)"
-                        vals = re.findall(pattern, str)
-                        team = vals[0][0]
-                        period = vals[0][1]
-                        # period(s)
-                        pattern = r"(\d+|\?+)[-–]?(\d+|\?+|[Aa]ctualidad|[Aa]ct\.|[Pp]resente)?"
-                        vals = re.findall(pattern, period)
-                        start_years = []
-                        end_years = []
-                        for i in range(len(vals)):
-                            start_years.append(vals[i][0])
-                            end_years.append(vals[i][1])
-                    else:
-                        team = str
-                        start_years = [""]
-                        end_years = [""]
-                    a_elts = li_elt.find_all("a", recursive = False)
-                    if len(a_elts) > 0:
-                        team_url = a_elts[0]["href"]
-                    else:
-                        team_url = ""
-                    # add to stints
-                    for start_year, end_year in zip(start_years, end_years):
-                        stint = [orig_id, orig_name, name, player_page, start_year, end_year, team, team_url, "", ""]
-                        stint_info.append(stint)
-                        tlog(4, f"{stint})")
-                    # next item
-                    li_elts = li_elt.find_next_siblings("li")
-                    if len(li_elts) > 0:
-                        li_elt = li_elts[0]
-                    else:
-                        li_elt = None
+                ul_elts = career_elt.find_all("ul")
+                if len(ul_elts) > 0:
+                    has_career = True
+                    ul_elt = ul_elts[0]
+                    li_elt = ul_elt.find_all("li")[0]
+                    while li_elt:
+                        # retrieve information
+                        str = li_elt.get_text(strip=True)
+                        if ")" in str:
+                            #pattern = r"^(.+) *\((\d+|\?+)[-–]?(\d+|\?+|[Aa]ctualidad|[Aa]ct\.|[Pp]resente)?\)"
+                            # team name
+                            pattern = r"^(.+) *\((.*)\)"
+                            vals = re.findall(pattern, str)
+                            team = vals[0][0]
+                            period = vals[0][1]
+                            # period(s)
+                            pattern = r"(\d+|\?+)[-–]?(\d+|\?+|[Aa]ctualidad|[Aa]ct\.|[Pp]resente)?"
+                            vals = re.findall(pattern, period)
+                            start_years = []
+                            end_years = []
+                            for i in range(len(vals)):
+                                start_years.append(vals[i][0])
+                                end_years.append(vals[i][1])
+                        else:
+                            team = str
+                            start_years = [""]
+                            end_years = [""]
+                        a_elts = li_elt.find_all("a", recursive = False)
+                        if len(a_elts) > 0:
+                            team_url = a_elts[0]["href"]
+                        else:
+                            team_url = ""
+                        # add to stints
+                        for start_year, end_year in zip(start_years, end_years):
+                            stint = [orig_id, orig_name, name, player_page, start_year, end_year, team, team_url, "", ""]
+                            stint_info.append(stint)
+                            tlog(4, f"{stint})")
+                        # next item
+                        li_elts = li_elt.find_next_siblings("li")
+                        if len(li_elts) > 0:
+                            li_elt = li_elts[0]
+                        else:
+                            li_elt = None
+                else:
+                    tlog(2, "Could not find any stint in 'career' section")
             else:
                 tlog(2, "Could not find the 'career' section")
 
