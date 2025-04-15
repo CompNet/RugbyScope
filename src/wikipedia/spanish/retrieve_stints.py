@@ -56,6 +56,7 @@ COUNTRY_POINTS = "Puntos"
 COUNTRY_START = "Debut"
 
 CAREER = "Trayectoria"
+TEAMS = "Equipos"
 
 IGNORE_DATES = ["Fecha desconocida", "fecha desconocida", "Siglo", "Posterior a"]
 
@@ -160,6 +161,7 @@ for _, player in merged_table.iterrows():
                 th_elt = infobox_elt.find("tr", ).find("th")
                 if th_elt:
                     name = th_elt.get_text(strip=True)
+                    name = name.replace(r'"', "'")
                     tlog(2, f"Name: '{name}'")
                     if name0 == name:
                         tlog(4, "Same name used for two distinct players (WARNING)")
@@ -170,6 +172,7 @@ for _, player in merged_table.iterrows():
                 if name_elt:
                     full_name = name_elt.find_next_siblings()[0].get_text(strip=True)
                     full_name = full_name.replace(r"\[\d+\]", "")
+                    full_name = full_name.replace(r'"', "'")
                     tlog(2, f"Full name: '{full_name}'")
 
                 # birth information
@@ -402,6 +405,7 @@ for _, player in merged_table.iterrows():
 
                 # get career sections
                 traj_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == CAREER)
+                # structured list
                 if traj_elt:
                     tlog(2, "Club stints:")
                     career_elt = traj_elt.parent.find_next_siblings()[0]
@@ -451,7 +455,23 @@ for _, player in merged_table.iterrows():
                     else:
                         tlog(2, "Could not find any stint in 'career' section")
                 else:
-                    tlog(2, "Could not find the 'career' section")
+                    # <br> separated values
+                    traj_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == TEAMS)
+                    if traj_elt:
+                        td_elt = traj_elt.next_sibling
+                        temp_elts = td_elt.contents
+                        for temp_elt in temp_elts:
+                            if temp_elt.name is None or not temp_elt in ["span", "br"]:
+                                team = temp_elt.get_text(strip=True)
+                                if team != "":
+                                    team_url = ""
+                                    if not temp_elt.name is None and temp_elt.name == "a":
+                                        team_url = temp_elt["href"]
+                                    stint = [orig_id, orig_name, name, player_page, "", "", team, team_url, "", ""]
+                                    stint_info.append(stint)
+                                    tlog(4, f"{stint})")
+                    else:
+                        tlog(2, "Could not find the 'career' section")
 
             if not has_career:
                 comment = "No stint found"
@@ -478,5 +498,7 @@ end_rec_log()
 
 # TODO
 # https://es.wikipedia.org/wiki/Mat%C3%ADas_Corral
+# https://es.wikipedia.org/wiki/Santiago_Dellap%C3%A8
 # > equipos field
+
 # remove " in player names
