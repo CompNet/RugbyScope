@@ -475,3 +475,8 @@ for _, player in merged_table.iterrows():
 ########################################################################
 # stop recording log
 end_rec_log()
+
+# TODO
+# https://es.wikipedia.org/wiki/Mat%C3%ADas_Corral
+# > equipos field
+# remove " in player names
