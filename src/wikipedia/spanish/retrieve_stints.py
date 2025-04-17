@@ -171,8 +171,8 @@ for _, player in merged_table.iterrows():
                 name_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True).replace(u"\xa0", u" ") == FULL_NAME)
                 if name_elt:
                     full_name = name_elt.find_next_siblings()[0].get_text(strip=True)
-                    full_name = full_name.replace(r"\[\d+\]", "")
-                    full_name = full_name.replace(r'"', "'")
+                    full_name = re.sub(r"\[\d+\]", "", full_name)
+                    full_name = full_name.replace('"', "'")
                     tlog(2, f"Full name: '{full_name}'")
 
                 # birth information
@@ -411,7 +411,6 @@ for _, player in merged_table.iterrows():
                     career_elt = traj_elt.parent.find_next_siblings()[0]
                     ul_elts = career_elt.find_all("ul")
                     if len(ul_elts) > 0:
-                        has_career = True
                         ul_elt = ul_elts[0]
                         li_elt = ul_elt.find_all("li")[0]
                         while li_elt:
@@ -443,6 +442,7 @@ for _, player in merged_table.iterrows():
                                 team_url = ""
                             # add to stints
                             for start_year, end_year in zip(start_years, end_years):
+                                has_career = True
                                 stint = [orig_id, orig_name, name, player_page, start_year, end_year, team, team_url, "", ""]
                                 stint_info.append(stint)
                                 tlog(4, f"{stint})")
@@ -467,6 +467,7 @@ for _, player in merged_table.iterrows():
                                     team_url = ""
                                     if not temp_elt.name is None and temp_elt.name == "a":
                                         team_url = temp_elt["href"]
+                                    has_career = True
                                     stint = [orig_id, orig_name, name, player_page, "", "", team, team_url, "", ""]
                                     stint_info.append(stint)
                                     tlog(4, f"{stint})")

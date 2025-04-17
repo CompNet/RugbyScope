@@ -153,16 +153,6 @@ players <- players[, -cols]
 # clean the stint table
 tlog(0, "Cleaning the stint table")
 
-
-
-
-      stints <- read.csv(file.path(folder, "raw", "stint_info.csv"))
-      tlog(2, "Raw number of stints: ", nrow(stints))
-      stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
-
-
-
-
 #### debug: checking the point stats
 sort(unique(stints[, "pointsScored"]))
 ####

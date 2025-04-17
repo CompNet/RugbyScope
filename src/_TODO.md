@@ -13,7 +13,8 @@
   - if larger time span and higher stats > prioritize that one
   - if larger time span but lower stats > solve manually
   - lions sometimes split by year, for some reason...
-
+- extracting transfers:
+  - if 1 stint temporally included in another: assume a loan
 
 * NOTES
   - Filtering players depending on whether they played for a club: many are missed
