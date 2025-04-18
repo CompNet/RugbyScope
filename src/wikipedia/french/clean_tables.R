@@ -17,6 +17,13 @@ source("src/common/norm_teams.R")
 
 
 ########################################################################
+# start logging
+start.rec.log("CleaningFrWP")
+
+
+
+
+########################################################################
 # load FR WP tables
 tlog("Loading Wikipedia FR tables")
 folder <- file.path("data", "wikipedia", "french")
@@ -146,10 +153,6 @@ map_url2 <- temp[, "location"]
 names(map_url2) <- temp[, "url"]
 for (i in 1:length(map_url2))
   map_url[names(map_url2)[i]] <- map_url2[i]
-# translation map (text to name)
-temp <- read.csv(file.path(folder, "maps", "text2location.csv"))
-map_fr <- temp[, "location"]
-names(map_fr) <- temp[, "text"]
 # clean locations
 tlog(4, "Substituting in the table")
 cols <- c("birthPlace", "deathPlace")
@@ -177,10 +180,6 @@ for (col in cols) {
       # normalize place names
       for (url in names(map_url))
         places[urls == url] <- map_url[url]
-
-      # translate remaining names
-      for (fr_name in names(map_fr))
-        places[places == fr_name] <- map_fr[fr_name]
 
       # remove duplicates
       places <- gsub(", ?", "; ", places, fixed = FALSE)
@@ -359,3 +358,10 @@ write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 tab_file <- file.path(folder, "stints.csv")
 tlog(2, "Record stint table as: ", tab_file)
 write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+
+
+########################################################################
+# stop logging
+end.rec.log()

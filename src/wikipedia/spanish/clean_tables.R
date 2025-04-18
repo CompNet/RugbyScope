@@ -17,6 +17,13 @@ source("src/common/norm_teams.R")
 
 
 ########################################################################
+# start logging
+start.rec.log("CleaningEsWP")
+
+
+
+
+########################################################################
 # load ES WP tables
 tlog("Loading Wikipedia ES tables")
 folder <- file.path("data", "wikipedia", "spanish")
@@ -83,6 +90,165 @@ players[, "positions"] <- all_positions
 # weights too
 #sort(unique(players[, "weight"]))
 
+# convert birth/death dates
+month_map <- c(
+  "enero" = "01",
+  "febrero" = "02",
+  "marzo" = "03",
+  "abril" = "04",
+  "mayo" = "05",
+  "junio" = "06",
+  "julio" = "07",
+  "agosto" = "08",
+  "septiembre" = "09",
+  "setiembre" = "09",
+  "octubre" = "10",
+  "noviembre" = "11",
+  "diciembre" = "12"
+)
+pattern <- "(\\d+) de (.+) de (\\d+)"
+#
+# fix some specific birth dates
+dates <- players[, "birthDate"]
+idx <- which(!grepl(pattern, dates))
+#print(dates[idx])
+dates[which(dates == "?")] <- NA
+dates[which(dates == "1880 o años 1870")] <- "1880-01-01"
+dates[which(dates == "1885")] <- "1885-01-01"
+dates[which(dates == "1887")] <- "1887-01-01"
+dates[which(dates == "1894")] <- "1894-01-01"
+dates[which(dates == "1908")] <- "1908-01-01"
+dates[which(dates == "1910")] <- "1910-01-01"
+dates[which(dates == "1912")] <- "1912-01-01"
+dates[which(dates == "1919")] <- "1919-01-01"
+dates[which(dates == "1929")] <- "1929-01-01"
+dates[which(dates == "1939")] <- "1939-01-01"
+dates[which(dates == "1953")] <- "1953-01-01"
+dates[which(dates == "25/08/1985")] <- "1985-08-25"
+# just convert the regular dates
+idx <- which(grepl(pattern, dates))
+matches <- regexec(pattern, dates[idx], ignore.case = TRUE)
+components <- regmatches(dates[idx], matches)
+df <- do.call(rbind, lapply(components, function(x) x[-1]))  # Remove full match
+colnames(df) <- c("day", "month", "year")
+df[, "month"] <- month_map[df[, "month"]]
+dates[idx] <- sapply(1:nrow(df), function(i) paste(df[i, "year"], df[i, "month"], sprintf("%02d", as.integer(df[i, "day"])), sep = "-"))
+players[, "birthDate"] <- dates
+#
+# fix some specific death dates
+dates <- players[, "deathDate"]
+idx <- which(!grepl(pattern, dates) & !is.na(dates))
+#print(dates[idx])
+dates[which(dates == "1941")] <- "1941-01-01"
+dates[which(dates == "1947")] <- "1947-01-01"
+dates[which(dates == "1965")] <- "1965-01-01"
+dates[which(dates == "1968")] <- "1968-01-01"
+dates[which(dates == "1969")] <- "1969-01-01"
+dates[which(dates == "2002")] <- "2002-01-01"
+dates[which(dates == "junio de 1975")] <- "1975-06-01"
+# just convert the regular dates
+idx <- which(grepl(pattern, dates))
+matches <- regexec(pattern, dates[idx], ignore.case = TRUE)
+components <- regmatches(dates[idx], matches)
+df <- do.call(rbind, lapply(components, function(x) x[-1]))  # Remove full match
+colnames(df) <- c("day", "month", "year")
+df[, "month"] <- month_map[df[, "month"]]
+dates[idx] <- sapply(1:nrow(df), function(i) paste(df[i, "year"], df[i, "month"], sprintf("%02d", as.integer(df[i, "day"])), sep = "-"))
+players[, "deathDate"] <- dates
+#
+#### debug: check date format is correct
+#sort(unique(players[, "birthDate"]))
+#sort(unique(players[, "deathDate"]))
+####
+
+# translate birth/death places
+tlog(2, "Translate birth and death places")
+#### debug
+all_urls <- c(players[, "birthPlaceWP"], players[, "deathPlaceWP"])
+all_urls <- strsplit(all_urls, "; ")
+unique_urls <- sort(unique(trimws(unlist(all_urls))))
+unique_urls <- unique_urls[!grepl("redlink=1", unique_urls, fixed = TRUE)]
+unique_urls <- unique_urls[!startsWith(unique_urls, "#")]
+# define conversion map for locations
+tlog(4, "Building the conversion maps")
+map_url <- c()
+for (i in 1:length(unique_urls)) {
+  unique_url <- unique_urls[i]
+  tlog(6, "Retrieving translation for \"", unique_url, "\" (", i, "/", length(unique_urls), ")")
+  title <- get_english_title(unique_url, "es")
+  tlog(8, "Result: ", title)
+  if (is.null(title))
+    title <- unique_url[i]
+  map_url[unique_urls[i]] <- title
+}
+#### debug
+#write.csv(data.frame(names(map_url), map_url), file.path(folder, "automatic_url2location.csv"), row.names = FALSE)
+#length(which(is.na(map_url)))
+####
+# conversion map (url to name)
+temp <- read.csv(file.path(folder, "maps", "url2location.csv"))
+map_url2 <- temp[, "location"]
+names(map_url2) <- temp[, "url"]
+for (i in 1:length(map_url2))
+  map_url[names(map_url2)[i]] <- map_url2[i]
+# clean locations
+tlog(4, "Substituting in the table")
+cols <- c("birthPlace", "deathPlace")
+for (col in cols) {
+  tlog(6, "Normalizing \"", col, "\"")
+  # split place names
+  all_places <- players[, col]
+  all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
+  all_places <- strsplit(all_places, "; ")
+  # split place urls
+  all_urls <- players[, paste0(col, "WP")]
+  all_urls <- gsub("\\[.+\\]", "", all_urls, fixed = FALSE)
+  all_urls <- strsplit(all_urls, "; ")
+
+  # loop over table rows (ie players)
+  for (p in 1:length(all_places)) {
+    if (p %% 1000 == 0)
+      tlog(8, "Processing row #", p, "/", length(all_places))
+    places <- all_places[[p]]
+    urls <- all_urls[[p]]
+
+    if (length(places) == 0) {
+      places <- " "
+    } else {
+      # normalize place names
+      for (url in names(map_url))
+        places[urls == url] <- map_url[url]
+
+      # remove duplicates
+      places <- gsub(", ?", "; ", places, fixed = FALSE)
+      places <- unique(unlist(strsplit(places, "; ")))
+    }
+
+    # update list
+    all_places[[p]] <- places
+  }
+
+  # collapse to get strings again
+  all_places <- sapply(all_places, function(places) paste0(places, collapse = "; "))
+  all_places[all_places == "NA"] <- NA
+  names(all_places) <- NULL
+  players[, col] <- all_places
+}
+#### debug: take a look at the normalized names
+#all_places <- c(players[, "birthPlace"], players[, "deathPlace"])
+#all_places <- gsub("\\[.+\\]", "", all_places, fixed = FALSE)
+#all_places <- strsplit(all_places, "; ")
+#all_places <- sort(unique(unlist(all_places)))
+#print(head(all_places, 50))
+#print(tail(all_places, 50))
+#### debug: list of names without an associated URL
+#idx <- match(all_places, map_url)
+#idx <- which(is.na(idx))
+#print(all_places[idx])
+#### debug: visual check
+#print(head(players[, c("birthPlace", "deathPlace")]))
+####
+
 # translating country names
 #### debug: list unique countries
 #all_countries <- c(players[, "citizenship"])
@@ -91,10 +257,10 @@ players[, "positions"] <- all_positions
 #### used to constitute the text2location.csv map used below
 # translation map (text to name)
 temp <- read.csv(file.path(folder, "maps", "text2location.csv"))
-map_fr <- temp[, "location"]
-names(map_fr) <- temp[, "text"]
+map_es <- temp[, "location"]
+names(map_es) <- temp[, "text"]
 # clean locations
-tlog(4, "Substituting locations in the player table")
+tlog(4, "Substituting country names in the player table")
 cols <- c("citizenship")
 for (col in cols) {
   tlog(6, "Normalizing \"", col, "\"")
@@ -113,8 +279,8 @@ for (col in cols) {
       places <- " "
     } else {
       # translate remaining names
-      for (fr_name in names(map_fr))
-        places[places == fr_name] <- map_fr[fr_name]
+      for (es_name in names(map_es))
+        places[places == es_name] <- map_es[es_name]
 
       # remove duplicates
       places <- gsub(", ?", "; ", places, fixed = FALSE)
@@ -223,3 +389,10 @@ write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 tab_file <- file.path(folder, "stints.csv")
 tlog(2, "Record stint table as: ", tab_file)
 write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+
+
+########################################################################
+# stop logging
+end.rec.log()

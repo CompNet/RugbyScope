@@ -1,6 +1,6 @@
 origWdId,origName,debugComment,esName,esFullName,wpPage,birthDate,birthPlace,birthPlaceWP,deathDate,deathPlace,deathPlaceWP,height,weight,positions,positionsWP,citizenship
 Q207,George W. Bush,No stint found,George W. Bush,,George_W._Bush,6 de julio de 1946,New Haven,/wiki/New_Haven,,,,183,,,,
-Q5809,Ernesto Guevara,No stint found,ErnestoCheGuevara,,Che_Guevara,14 de junio de 1928,ciudad de,,9 de octubre de 1967,(39 años),,176,,,,
+Q5809,Ernesto Guevara,No stint found,ErnestoCheGuevara,,Che_Guevara,14 de junio de 1928,Rosario; Argentina,,9 de octubre de 1967,,,176,,,,
 Q7571,Patricio Albacete,,Patricio Albacete,Patricio Esteban Albacete,Patricio_Albacete,9 de febrero de 1981,Buenos Aires,/wiki/Buenos_Aires,,,,200,125,Segunda línea,,Argentina
 Q12940,Jacques Chaban-Delmas,,Jacques Chaban-Delmas,,Jacques_Chaban-Delmas,7 de marzo de 1915,XIII Distrito de París,/wiki/XIII_distrito_de_Par%C3%ADs,10 de noviembre de 2000,VII Distrito de París,/wiki/VII_distrito_de_Par%C3%ADs,,,Ala,,
 Q18455,Ben Tune,,Ben Tune,Benjamin Newman Tune,Ben_Tune,28 de diciembre de 1976,Brisbane,/wiki/Brisbane,,,,185,96,Wing; centro,,Australia
@@ -30,7 +30,7 @@ Q94780,Joe Rokocoko,,Joe Rokocoko,Josevata Taliga Rokocoko,Joe_Rokocoko,06 de ju
 Q94814,Ronnie Cooke,No ES WP page,,,,,,,,,,,,,,
 Q98252,Manuel Wilhelm,No ES WP page,,,,,,,,,,,,,,
 Q101586,Rudolf Finsterer,No ES WP page,,,,,,,,,,,,,,
-Q106775,Richard Harris,No stint found,Richard Harris,,Richard_Harris,1 de octubre de 1930,,,25 de octubre de 2002,(72 años),,185,,,,
+Q106775,Richard Harris,No stint found,Richard Harris,,Richard_Harris,1 de octubre de 1930,,,25 de octubre de 2002,,,185,,,,
 Q111624,Shinjirō Honryō,No ES WP page,,,,,,,,,,,,,,
 Q113526,Adriaan Strauss,,Adriaan Strauss,Jan Adriaan Strauss,Adriaan_Strauss,18 de noviembre de 1985,Bloemfontein,/wiki/Bloemfontein,,,,185,113,hooker,,Sudáfrica
 Q127613,Patrick Lambie,,Patrick Lambie,Patrick Jonathan Lambie,Patrick_Lambie,17 de octubre de 1990,Durban,/wiki/Durban,,,,177,87,Fullback,,Sudáfrica
@@ -61,7 +61,7 @@ Q194026,Jimmy Cowan,,Jimmy Cowan,Quinton James Cowan,Jimmy_Cowan,6 de marzo de 1
 Q200427,Dimitri Szarzewski,,Dimitri Szarzewski,,Dimitri_Szarzewski,26 de enero de 1983,Narbona,/wiki/Narbona,,,,180,102,hooker,,Francia
 Q200837,Anthony Tuitavake,No ES WP page,,,,,,,,,,,,,,
 Q205288,Zinzan Brooke,,Zinzan Brooke,Murray Zinzan Brooke,Zinzan_Brooke,14 de febrero de 1965,Región de Auckland,/wiki/Regi%C3%B3n_de_Auckland,,,,190,102,Octavo; ala,,Nueva Zelanda
-Q207709,Roland Garros,No stint found,Roland Garros,,Roland_Garros,6 de octubre de 1888,Saint-Denis,/wiki/Saint-Denis_(Reuni%C3%B3n),5 de octubre de 1918,cerca de Vouziers,,,,,,
+Q207709,Roland Garros,No stint found,Roland Garros,,Roland_Garros,6 de octubre de 1888,Saint-Denis,/wiki/Saint-Denis_(Reuni%C3%B3n),5 de octubre de 1918,Vouziers,,,,,,
 Q209358,André Silva,No ES WP page,,,,,,,,,,,,,,
 Q209365,Richie Gray,,Richie Gray,Richard James Gray,Richie_Gray,24 de agosto de 1989,Glasgow,/wiki/Glasgow,,,,206,126,Segunda línea,,"Escocia, Reino Unido"
 Q221074,Bud Spencer,,Bud Spencer,,Bud_Spencer,31 de octubre de 1929,Nápoles,/wiki/N%C3%A1poles,27 de junio de 2016,Roma,/wiki/Roma,192,125,,,
@@ -181,7 +181,7 @@ Q425580,Sitiveni Sivivatu,No ES WP page,,,,,,,,,,,,,,
 Q427291,Gavin Hastings,,Gavin Hastings,,Gavin_Hastings,3 de enero de 1962,Edimburgo,/wiki/Edimburgo,,,,188,95,Fullback,,"Escocia,Reino Unido"
 Q428564,Dan Drysdale,No ES WP page,,,,,,,,,,,,,,
 Q429847,Mircea Paraschiv,,Mircea Paraschiv,,Mircea_Paraschiv,1 de julio de 1954,Bucarest,/wiki/Bucarest,,,,175,80,Medio scrum,,Rumania
-Q430712,Charles William Miller,,Charles William Miller,,Charles_William_Miller,24 de noviembre de 1874,São Paulo,/wiki/S%C3%A3o_Paulo,30 de junio de 1953,São Paulo (Brasil),,,,guardameta; delantero,,
+Q430712,Charles William Miller,,Charles William Miller,,Charles_William_Miller,24 de noviembre de 1874,São Paulo,/wiki/S%C3%A3o_Paulo,30 de junio de 1953,São Paulo; Brazil,,,,guardameta; delantero,,
 Q431135,Ron Cribb,No ES WP page,,,,,,,,,,,,,,
 Q432098,Tom Richards,,Tom Richards,Thomas James Richards,Tom_Richards,29 de abril de 1882,Nueva Gales del Sur,/wiki/Nueva_Gales_del_Sur,25 de septiembre de 1935,Brisbane,/wiki/Brisbane,183,83,Ala,,Australia
 Q432329,Paul Sackey,,Paul Sackey,Paul Henry Sackey,Paul_Sackey,8 de septiembre de 1979,Lambeth,/wiki/Lambeth,,,,186,92,Wing,,"InglaterraInglaterra, Reino Unido"
@@ -229,16 +229,16 @@ Q448009,Jim Telfer,No infobox found,,,Jim_Telfer,,,,,,,,,,,
 Q448172,Syd Millar,,Syd Millar,John Sydney Millar,Syd_Millar,23 de mayo de 1934,Ballymena,/wiki/Ballymena,10 de diciembre de 2023,,,183,100,Pilar,,Británica
 Q448182,Jeremy Guscott,,Jeremy Guscott,Jeremy Clayton Guscott,Jeremy_Guscott,7 de julio de 1965,Bath,/wiki/Bath,,,,185,90,Centro,,"Inglaterra,Reino Unido"
 Q448212,Bobby Windsor,No ES WP page,,,,,,,,,,,,,,
-Q448312,Willie John McBride,,Willie McBride,Willie James McBride,Willie_McBride,6 de junio de 1940,"Distrito de Antrim,",,,,,192,102,Segunda línea,,"Irlanda del Norte, Reino Unido"
+Q448312,Willie John McBride,,Willie McBride,Willie James McBride,Willie_McBride,6 de junio de 1940,Antrim,,,,,192,102,Segunda línea,,"Irlanda del Norte, Reino Unido"
 Q448441,Tony O'Reilly,,Tony O'Reilly,Anthony Joseph Francis O'Reilly,Tony_O%27Reilly,7 de mayo de 1936,Dublín,/wiki/Dubl%C3%ADn,18 de mayo de 2024,Dublín,/wiki/Dubl%C3%ADn,188,90,Centro,,Irlanda
 Q448515,David Nash,No ES WP page,,,,,,,,,,,,,,
 Q448825,Will Greenwood,,Will Greenwood,William John Heaton Greenwood,Will_Greenwood,20 de octubre de 1972,Blackburn,/wiki/Blackburn,,,,193,100,Centro,,"Inglaterra,Reino Unido"
 Q449012,Jamie Roberts,,Jamie Roberts,,Jamie_Roberts,8 de noviembre de 1986,Newport,/wiki/Newport,,,,193,110,Centro; zaguero; ala,,(Reino Unido)
 Q449131,Luke Charteris,No ES WP page,,,,,,,,,,,,,,
 Q452051,Graham Mourie,,Graham Mourie,Graham Neil Kenneth Mourie,Graham_Mourie,8 de septiembre de 1952,Ōpunake,/w/index.php?title=%C5%8Cpunake&action=edit&redlink=1,,,,183,90,Ala,,Nueva Zelanda
-Q452373,Sid Going,No stint found,Sid Going,Sir Sidney Milton Going,Sid_Going,19 de agosto de 1943,Kawakawa,/wiki/Kawakawa,17 de mayo de 2024,Maromaku (,,178,81,Halfback,,Nueva ZelandaNueva Zelanda
+Q452373,Sid Going,No stint found,Sid Going,Sir Sidney Milton Going,Sid_Going,19 de agosto de 1943,Kawakawa,/wiki/Kawakawa,17 de mayo de 2024,Maromaku,,178,81,Halfback,,Nueva ZelandaNueva Zelanda
 Q452384,Julien Dupuy,,Julien Dupuy,,Julien_Dupuy,19 de diciembre de 1983,Périgueux,/wiki/P%C3%A9rigueux,,,,178,80,Medio scrum,,Francia
-Q453066,Władysław Komar,No stint found,Władysław Komar,,W%C5%82adys%C5%82aw_Komar,11 de abril de 1940,Kaunas,/wiki/Kaunas,17 de agosto de 1998,Przybiernów (,,,,,,Polaca
+Q453066,Władysław Komar,No stint found,Władysław Komar,,W%C5%82adys%C5%82aw_Komar,11 de abril de 1940,Kaunas,/wiki/Kaunas,17 de agosto de 1998,Przybiernów,,,,,,Polaca
 Q454123,Rob Kearney,,Rob Kearney,Robert Kearney,Rob_Kearney,26 de marzo de 1986,Dundalk,/wiki/Dundalk,,,,185,95,Fullback,,Irlanda
 Q455124,Wilson Whineray,,Wilson Whineray,Wilson James Whineray,Wilson_Whineray,10 de julio de 1935,Auckland,/wiki/Auckland,22 de octubre de 2012,Auckland,/wiki/Auckland,183,94,Pilar,,Nueva Zelanda
 Q460627,Sam Warburton,,Sam Warburton,Sam Kennedy Warburton,Sam_Warburton,5 de octubre de 1988,Cardiff,/wiki/Cardiff,,,,188,106,Tercera linea-Ala,,"Gales,Reino Unido"
@@ -389,7 +389,7 @@ Q639771,August Schmierer,No ES WP page,,,,,,,,,,,,,,
 Q639951,Octavio Bartolucci,,Octavio Bartolucci,,Octavio_Bartolucci,8 de marzo de 1975,Rosario,/wiki/Rosario_(Argentina),,,,196,90,Wing,,Argentina
 Q641995,Mike Barbieri,No ES WP page,,,,,,,,,,,,,,
 Q641999,Will Genia,,Will Genia,Sanchez William Genia,Will_Genia,17 de enero de 1988,Puerto Moresby,/wiki/Puerto_Moresby,,,,174,82,medio melée,,Papúa Nueva Guinea
-Q642380,Colin Meads,,Colin Meads,Colin Earl Meads,Colin_Meads,3 de junio de 1936,Cambridge,/wiki/Cambridge_(Nueva_Zelanda),20 de agosto de 2017,Te Kūiti (,,192,102,Segunda línea,,Nueva Zelanda
+Q642380,Colin Meads,,Colin Meads,Colin Earl Meads,Colin_Meads,3 de junio de 1936,Cambridge,/wiki/Cambridge_(Nueva_Zelanda),20 de agosto de 2017,Te Kūiti,,192,102,Segunda línea,,Nueva Zelanda
 Q642630,Harry Payne,No ES WP page,,,,,,,,,,,,,,
 Q644811,Robert Seddon,No ES WP page,,,,,,,,,,,,,,
 Q645540,Nicolás Fernández Miranda,,N. Fernández Miranda,Nicolás Fernández Miranda,Nicol%C3%A1s_Fern%C3%A1ndez_Miranda,25 de noviembre de 1972,Buenos Aires,/wiki/Buenos_Aires,,,,177,84,Medio scrum,,Argentina
@@ -437,7 +437,7 @@ Q704657,John McKenna,No ES WP page,,,,,,,,,,,,,,
 Q707683,Marcello Fiasconaro,No stint found,Marcello Fiasconaro,,Marcello_Fiasconaro,19 de julio de 1949,Ciudad del Cabo,/wiki/Ciudad_del_Cabo,,,,,,,,SudafricanaeItaliana
 Q715091,Jacques Fouroux,,Jacques Fouroux,,Jacques_Fouroux,24 de julio de 1947,Auch,/wiki/Auch,17 de diciembre de 2005,Auch,/wiki/Auch,163,70,Medio scrum,,Francia
 Q715492,Arturo Rodríguez,No stint found,Arturo Rodríguez Jurado,,Arturo_Rodr%C3%ADguez_Jurado,26 de mayo de 1907,San Luis,/wiki/San_Luis_(Argentina),21 de noviembre de 1982,,,,,,,Argentina
-Q716246,Peter MacKay,No stint found,Peter MacKay,,Peter_MacKay,27 de septiembre de 1965,New Glasgow (,,,,,,,,,
+Q716246,Peter MacKay,No stint found,Peter MacKay,,Peter_MacKay,27 de septiembre de 1965,New Glasgow,,,,,,,,,
 Q717879,John O'Neil,No ES WP page,,,,,,,,,,,,,,
 Q718533,Owen Farrell,,Owen Farrell,Owen Andrew Farrell,Owen_Farrell,24 de septiembre de 1991,Wigan,/wiki/Wigan,,,,188,96,Apertura; Centro,,"Inglaterra,Reino Unido"
 Q721331,Jacques Forestier,No ES WP page,,,,,,,,,,,,,,
@@ -633,7 +633,7 @@ Q961659,Nicolas Spanghero,No ES WP page,,,,,,,,,,,,,,
 Q963552,Cory Jane,,Cory Jane,Cory Steven Jane,Cory_Jane,8 de febrero de 1983,Lower Hutt,/wiki/Lower_Hutt,,,,183,91,Wing,,Nueva Zelanda
 Q963878,Shane Horgan,,Shane Horgan,Shane Patrick Horgan,Shane_Horgan,18 de julio de 1978,Bellewstown,/w/index.php?title=Bellewstown&action=edit&redlink=1,,,,193,104,Wing,,Irlanda
 Q964302,John Hayes,,John Hayes,John James Hayes,John_Hayes_(rugbista),2 de noviembre de 1973,Cappamore,/wiki/Cappamore,,,,193,128,Pilar,,Irlanda
-Q964396,Peter Sutherland,,Peter Sutherland,,Peter_Sutherland,25 de abril de 1946,Dublín,/wiki/Dubl%C3%ADn,7 de enero de 2018,Dublín (Irlanda),,,,,,
+Q964396,Peter Sutherland,,Peter Sutherland,,Peter_Sutherland,25 de abril de 1946,Dublín,/wiki/Dubl%C3%ADn,7 de enero de 2018,Dublin,,,,,,
 Q964516,Gordon D'Arcy,,Gordon D'Arcy,Gordon William D'Arcy,Gordon_D%27Arcy,10 de febrero de 1980,Wexford,/wiki/Condado_de_Wexford,,,,180,91,Centro,,Irlanda
 Q965304,Gareth Wyatt,No ES WP page,,,,,,,,,,,,,,
 Q965327,M. L. Logan,No ES WP page,,,,,,,,,,,,,,
@@ -750,13 +750,13 @@ Q1375848,Piri Weepu,,Piri Weepu,Piri Awahou Tihou Weepu,Piri_Weepu,7 de septiemb
 Q1380216,Graham Henry,,Graham Henry,Graham William Henry,Graham_Henry,8 de junio de 1946,Christchurch,/wiki/Christchurch,,,,,,,,Nueva Zelanda
 Q1380259,Lee Byrne,No ES WP page,,,,,,,,,,,,,,
 Q1380938,Stephen Jones,,Stephen Jones,Stephen Michael Jones,Stephen_Jones,8 de diciembre de 1977,Aberystwyth,/wiki/Aberystwyth,,,,185,94,Apertura,,"Gales,Reino Unido"
-Q1381032,Phil Bennett,,Phil Bennett,Jonathan James Vaughan Davies,Phil_Bennett,24 de octubre de 1948,Carmarthenshire,/wiki/Carmarthenshire,22 de junio de 2022,Felinfoel (,,170,75,Apertura,,"Inglaterra,Reino Unido"
+Q1381032,Phil Bennett,,Phil Bennett,Jonathan James Vaughan Davies,Phil_Bennett,24 de octubre de 1948,Carmarthenshire,/wiki/Carmarthenshire,22 de junio de 2022,Felinfoel,,170,75,Apertura,,"Inglaterra,Reino Unido"
 Q1381089,Gareth Edwards,,Gareth Edwards,Gareth Owen Edwards,Gareth_Edwards,12 de julio de 1947,Neath-Port Talbot,/wiki/Neath-Port_Talbot,,,,173,80,Medio scrum,,"Gales,Reino Unido"
 Q1381233,Neil Jenkins,,Neil Jenkins,Neil Roger Jenkins,Neil_Jenkins,8 de julio de 1971,Church Village,/wiki/Church_Village,,,,178,86,Apertura,,"Gales,Reino Unido"
 Q1381758,Nicky Little,,Nicky Little,Nick Tyrone Little,Nicky_Little,13 de septiembre de 1976,Tokoroa,/w/index.php?title=Tokoroa&action=edit&redlink=1,,,,183,95,Apertura,,Nueva ZelandaNueva Zelanda
 Q1381928,Lawrence Dallaglio,,Lawrence Dallaglio,Lorenzo Bruno Nero Dallaglio,Lawrence_Dallaglio,10 de agosto de 1972,Hammersmith y Fulham,/wiki/Hammersmith_y_Fulham,,,,193,112,Ala; octavo,,"Inglaterra,Reino Unido"
 Q1386045,Juan Martín Hernández,,Juan M. Hernández,Juan Martín Hernández,Juan_Mart%C3%ADn_Hern%C3%A1ndez,7 de agosto de 1982,San Nicolás,/wiki/San_Nicol%C3%A1s_de_los_Arroyos,,,,187,90,Apertura; Centro; Fullback,,argentino
-Q1386232,Owen Chadwick,,Owen Chadwick,,Owen_Chadwick,20 de mayo de 1916,Bromley (,,17 de julio de 2015,Cambridge,/wiki/Cambridge,,,Hooker,,
+Q1386232,Owen Chadwick,,Owen Chadwick,,Owen_Chadwick,20 de mayo de 1916,Bromley,,17 de julio de 2015,Cambridge,/wiki/Cambridge,,,Hooker,,
 Q1386825,Ryan Jones,,Ryan Jones,Ryan Paul Jones,Ryan_Jones,13 de marzo de 1981,Newport,/wiki/Newport,,,,196,114,Octavo; ala; segunda línea,,"Gales,Reino Unido"
 Q1386944,Mike Tindall,,Mike Tindall,Michael James Tindall,Mike_Tindall,18 de octubre de 1978,Otley,/wiki/Otley,,,,185,100,Centro,,"Inglaterra,Reino Unido"
 Q1388702,Keith Wood,,Keith Wood,Keith Gerard Mallinson Wood,Keith_Wood,27 de enero de 1972,Killaloe,/wiki/Killaloe,,,,183,106,Hooker,,Irlanda
@@ -804,13 +804,13 @@ Q1443895,Frank Oliver,No ES WP page,,,,,,,,,,,,,,
 Q1444739,Scott Johnson,No ES WP page,,,,,,,,,,,,,,
 Q1445873,Peter Stringer,,Peter Stringer,Peter Alexander Stringer,Peter_Stringer,13 de diciembre de 1977,Cork,/wiki/Cork,,,,170,73,Medio scrum,,Irlanda
 Q1451857,Andy Ripley,No ES WP page,,,,,,,,,,,,,,
-Q1452199,Fred Allen,,Fred Allen,Frederick Richard Allen,Fred_Allen_(rugbista),9 de febrero de 1920,Oamaru,/wiki/Oamaru,28 de abril de 2012,Península de Whangaparaoa,/w/index.php?title=Pen%C3%ADnsula_de_Whangaparaoa&action=edit&redlink=1,178,80,Centro,,Nueva Zelanda
+Q1452199,Fred Allen,,Fred Allen,Frederick Richard Allen,Fred_Allen_(rugbista),9 de febrero de 1920,Oamaru,/wiki/Oamaru,28 de abril de 2012,Whangaparaoa,/w/index.php?title=Pen%C3%ADnsula_de_Whangaparaoa&action=edit&redlink=1,178,80,Centro,,Nueva Zelanda
 Q1452535,Frédéric Cermeno,No ES WP page,,,,,,,,,,,,,,
 Q1455146,Massimo Giovanelli,,Massimo Giovanelli,,Massimo_Giovanelli,1 de marzo de 1967,Noceto,/wiki/Noceto,,,,185,104,Flanker,,
 Q1469095,Luke McLean,,Luke McLean,,Luke_McLean,29 de junio de 1987,Townsville,/wiki/Townsville,,,,190,95,Zaguero; ala; apertura,,Australia
 Q1496438,Gavin Henson,,Gavin Henson,Gavin Lloyd Henson,Gavin_Henson,1 de febrero de 1982,Pencoed,/wiki/Pencoed,,,,183,85,Centro,,"GalesGales, Reino Unido"
 Q1507452,George Gregan,,George Gregan,George Musarurwa Gregan,George_Gregan,19 de abril de 1973,Lusaka,/wiki/Lusaka,,,,173,79,Medio scrum,,Zambia
-Q1507984,George Nēpia,,George Nepia,,George_Nepia,25 de abril de 1905,Hawke's Bay,/wiki/Hawke%27s_Bay,27 de agosto de 1986,Ruatoria (,,175,82,Fullback,,Nueva Zelanda
+Q1507984,George Nēpia,,George Nepia,,George_Nepia,25 de abril de 1905,Hawke's Bay,/wiki/Hawke%27s_Bay,27 de agosto de 1986,Ruatoria,,175,82,Fullback,,Nueva Zelanda
 Q1533749,Goderdzi Shvelidze,No ES WP page,,,,,,,,,,,,,,
 Q1544973,Greg Rawlinson,No ES WP page,,,,,,,,,,,,,,
 Q1544987,Greg Somerville,No ES WP page,,,,,,,,,,,,,,
@@ -846,7 +846,7 @@ Q1686268,Jeff Butterfield,No ES WP page,,,,,,,,,,,,,,
 Q1700866,John Lloyd,No ES WP page,,,,,,,,,,,,,,
 Q1701635,John Ryan,No ES WP page,,,,,,,,,,,,,,
 Q1720081,Scott Quinnell,No ES WP page,,,,,,,,,,,,,,
-Q1721469,Kaino Thomsen,No stint found,Kaino Thomsen-Fuataga,,Kaino_Thomsen-Fuataga,12 de mayo de 1991,Faga'alu (,,,,,,,,,
+Q1721469,Kaino Thomsen,No stint found,Kaino Thomsen-Fuataga,,Kaino_Thomsen-Fuataga,12 de mayo de 1991,Faga'alu,,,,,,,,,
 Q1727793,Stephen Ferris,No ES WP page,,,,,,,,,,,,,,
 Q1737390,Kay Kocher,No ES WP page,,,,,,,,,,,,,,
 Q1738602,Ken Gray,No ES WP page,,,,,,,,,,,,,,
@@ -1015,7 +1015,7 @@ Q2309883,James Small,,James Small,James Terence Small,James_Small,10 de febrero 
 Q2310451,Jean-Marc Souverbie,No ES WP page,,,,,,,,,,,,,,
 Q2313220,Federico Martín Aramburú,,Federico Martín Aramburú,,Federico_Mart%C3%ADn_Arambur%C3%BA,20 de enero de 1980,La Plata,/wiki/La_Plata,19 de marzo de 2022,París,/wiki/Par%C3%ADs,,,,,Argentinayfrancesa
 Q2314505,Bernard Lapasset,No stint found,Bernard Lapasset,,Bernard_Lapasset,20 de octubre de 1947,,,3 de mayo de 2023,Louit,/wiki/Louit,,,segunda línea,,
-Q2314755,Alexander Obolensky,,Alexander Obolensky,Alexander Sergeevich Obolensky,Alexander_Obolensky,17 de febrero de 1916,Petrogrado,/wiki/San_Petersburgo,29 de marzo de 1940,RAF Martlesham Heath (,,175,80,Wing,,Imperio ruso
+Q2314755,Alexander Obolensky,,Alexander Obolensky,Alexander Sergeevich Obolensky,Alexander_Obolensky,17 de febrero de 1916,Petrogrado,/wiki/San_Petersburgo,29 de marzo de 1940,RAF Martlesham Heath,,175,80,Wing,,Imperio ruso
 Q2330070,Stanley Meads,No ES WP page,,,,,,,,,,,,,,
 Q2333026,Lionel Beauxis,,Lionel Beauxis,,Lionel_Beauxis,24 de octubre de 1985,Tarbes,/wiki/Tarbes,,,,180,86,Apertura,,Francia
 Q2333694,Rimas Álvarez Kairelis,,Rimas Álvarez,Rimas Esteban Álvarez Kairelis,Rimas_%C3%81lvarez,22 de julio de 1974,Quilmes,/wiki/Partido_de_Quilmes,,,,197,107,Segunda línea,,Argentina
@@ -1151,7 +1151,7 @@ Q2636650,Léon Binoche,No ES WP page,,,,,,,,,,,,,,
 Q2647958,Allan Elsom,No ES WP page,,,,,,,,,,,,,,
 Q2648015,Allan Muhr,No ES WP page,,,,,,,,,,,,,,
 Q2662059,Harold Thomas,No ES WP page,,,,,,,,,,,,,,
-Q2693545,Jim Stynes,No stint found,Jim Stynes,,Jim_Stynes,23 de abril de 1966,Dublín,/wiki/Dubl%C3%ADn,20 de marzo de 2012,St Kilda (,,,,,,Irlandesa
+Q2693545,Jim Stynes,No stint found,Jim Stynes,,Jim_Stynes,23 de abril de 1966,Dublín,/wiki/Dubl%C3%ADn,20 de marzo de 2012,St Kilda,,,,,,Irlandesa
 Q2700940,Hubert Lefèbvre,No ES WP page,,,,,,,,,,,,,,
 Q2701263,André Rischmann,No ES WP page,,,,,,,,,,,,,,
 Q2701355,Auguste Giroux,No ES WP page,,,,,,,,,,,,,,
@@ -1593,7 +1593,7 @@ Q2896254,Benjamin Thiéry,,Benjamin Thiéry,,Benjamin_Thi%C3%A9ry,2 de junio de 
 Q2896267,Benjamín Urdapilleta,,Benjamín Urdapilleta,,Benjam%C3%ADn_Urdapilleta,11 de marzo de 1986,Buenos Aires,/wiki/Buenos_Aires,,,,178,80,Centro; Apertura,,Argentina
 Q2896286,Benjamin de Jager,No ES WP page,,,,,,,,,,,,,,
 Q2896305,Benji Marshall,No ES WP page,,,,,,,,,,,,,,
-Q2896344,Bennie Osler,,Bennie Osler,Benjamin Louwrens Osler,Bennie_Osler,23 de noviembre de 1901,Aliwal North,/w/index.php?title=Aliwal_North&action=edit&redlink=1,28 de abril de 1962,Bellville (,,173,80,Apertura,,Sudáfrica
+Q2896344,Bennie Osler,,Bennie Osler,Benjamin Louwrens Osler,Bennie_Osler,23 de noviembre de 1901,Aliwal North,/w/index.php?title=Aliwal_North&action=edit&redlink=1,28 de abril de 1962,Bellville,,173,80,Apertura,,Sudáfrica
 Q2896418,Benoît Albert,No ES WP page,,,,,,,,,,,,,,
 Q2896429,Benoît August,No ES WP page,,,,,,,,,,,,,,
 Q2896436,Benoît Bellot,No ES WP page,,,,,,,,,,,,,,
@@ -1696,7 +1696,7 @@ Q2910477,Charles Nicholl,No ES WP page,,,,,,,,,,,,,,
 Q2910917,Boris Bouhraoua,No ES WP page,,,,,,,,,,,,,,
 Q2910921,Boris Béthéry,No ES WP page,,,,,,,,,,,,,,
 Q2911037,Boris Stankovich,No ES WP page,,,,,,,,,,,,,,
-Q2918762,Paddy Mayne,,Robert Blair Mayne,,Paddy_Mayne,11 de enero de 1915,Newtownards,/wiki/Newtownards,14 de diciembre de 1955,(40 años),,,,segunda línea,,
+Q2918762,Paddy Mayne,,Robert Blair Mayne,,Paddy_Mayne,11 de enero de 1915,Newtownards,/wiki/Newtownards,14 de diciembre de 1955,,,,,segunda línea,,
 Q2922157,Boumedienne Allam,No ES WP page,,,,,,,,,,,,,,
 Q2922979,Boy Morkel,No ES WP page,,,,,,,,,,,,,,
 Q2923186,Braam van Straaten,,Braam van Straaten,Abraham Johannes Jacobus van Straaten,Braam_van_Straaten,28 de septiembre de 1971,Pretoria,/wiki/Pretoria,,,,184,94,Apertura,,Sudáfrica
@@ -3376,7 +3376,7 @@ Q3181285,John Crabbie,No ES WP page,,,,,,,,,,,,,,
 Q3181318,John Dallas,No ES WP page,,,,,,,,,,,,,,
 Q3181321,John Daly,No ES WP page,,,,,,,,,,,,,,
 Q3181347,John Devereux,,John Devereux,John Anthony Devereux,John_Devereux,30 de marzo de 1966,Bridgend,/wiki/Bridgend,,,,188,97,Centro; wing,,"Gales,Reino Unido"
-Q3181382,John Drake,,John Drake,John Alan Drake,John_Drake,22 de enero de 1959,Auckland,/wiki/Auckland,13 de diciembre de 2008,Mount Maunganui (,,183,100,Pilar,,Nueva Zelanda
+Q3181382,John Drake,,John Drake,John Alan Drake,John_Drake,22 de enero de 1959,Auckland,/wiki/Auckland,13 de diciembre de 2008,Mount Maunganui,,183,100,Pilar,,Nueva Zelanda
 Q3181504,John Fleming,No ES WP page,,,,,,,,,,,,,,
 Q3181506,John Flett,,John Flett,John Alexander Flett,John_Flett,15 de junio de 1963,Manly,/wiki/Manly,,,,180,85,Wing,,Australia
 Q3181513,John Fogarty,No ES WP page,,,,,,,,,,,,,,
@@ -3427,7 +3427,7 @@ Q3182526,John Stewart,No ES WP page,,,,,,,,,,,,,,
 Q3182547,John Willie Sutcliffe,No ES WP page,,,,,,,,,,,,,,
 Q3182560,John Tait,No ES WP page,,,,,,,,,,,,,,
 Q3182576,John Taylor,No ES WP page,,,,,,,,,,,,,,
-Q3182601,John Thornett,,John Thornett,John Edward Thornett,John_Thornett,30 de marzo de 1935,Paddington (,,4 de enero de 2019,Batemans Bay,/wiki/Batemans_Bay,190,100,Ala,,Australiana
+Q3182601,John Thornett,,John Thornett,John Edward Thornett,John_Thornett,30 de marzo de 1935,Paddington,,4 de enero de 2019,Batemans Bay,/wiki/Batemans_Bay,190,100,Ala,,Australiana
 Q3182629,John Uzzell,No ES WP page,,,,,,,,,,,,,,
 Q3182710,John Wells,No ES WP page,,,,,,,,,,,,,,
 Q3182829,Johne Murphy,No ES WP page,,,,,,,,,,,,,,
@@ -4739,7 +4739,7 @@ Q3416191,Rachid Ourak,No ES WP page,,,,,,,,,,,,,,
 Q3417156,Radu Demian,No ES WP page,,,,,,,,,,,,,,
 Q3417243,Rafael Madero,,Rafael Madero,Rafael M. Madero,Rafael_Madero,16 de julio de 1958,Buenos Aires,/wiki/Buenos_Aires,,,,180,85,Centro,,Argentina
 Q3417306,Rafael Carballo,No ES WP page,,,,,,,,,,,,,,
-Q3418242,Ralph Caulton,No stint found,Ralph Caulton,Ralph Walter Caulton,Ralph_Caulton,10 de enero de 1937,Wellington,/wiki/Wellington,11 de junio de 2024,Stoke (,,181,77,Wing,,Nueva ZelandaNueva Zelanda
+Q3418242,Ralph Caulton,No stint found,Ralph Caulton,Ralph Walter Caulton,Ralph_Caulton,10 de enero de 1937,Wellington,/wiki/Wellington,11 de junio de 2024,Stoke,,181,77,Wing,,Nueva ZelandaNueva Zelanda
 Q3418271,Ralph Keyes,No stint found,Ralph Keyes,Ralph Patrick Keyes,Ralph_Keyes,1 de agosto de 1961,Cork,/wiki/Cork,,,,178,80,Apertura,,Irlanda
 Q3418409,Rambo Tavana,No ES WP page,,,,,,,,,,,,,,
 Q3418991,Ranji Wilson,No ES WP page,,,,,,,,,,,,,,
@@ -6646,7 +6646,7 @@ Q4977120,Bruce Battishall,No ES WP page,,,,,,,,,,,,,,
 Q4977215,Bruce Caldwell,No ES WP page,,,,,,,,,,,,,,
 Q4977222,Bruce Cameron,No ES WP page,,,,,,,,,,,,,,
 Q4977298,Bruce Cooke,No ES WP page,,,,,,,,,,,,,,
-Q4977366,Bruce Deans,,Bruce Deans,Ian Bruce Deans,Bruce_Deans,25 de noviembre de 1960,Distrito de Hurunui,/w/index.php?title=Distrito_de_Hurunui&action=edit&redlink=1,16 de agosto de 2019,,,179,80,Medio scrum,,Nueva Zelanda
+Q4977366,Bruce Deans,,Bruce Deans,Ian Bruce Deans,Bruce_Deans,25 de noviembre de 1960,Hurunui,/w/index.php?title=Distrito_de_Hurunui&action=edit&redlink=1,16 de agosto de 2019,,,179,80,Medio scrum,,Nueva Zelanda
 Q4977577,Bruce Greensill,No ES WP page,,,,,,,,,,,,,,
 Q4977616,Bruce Hamilton,No ES WP page,,,,,,,,,,,,,,
 Q4977763,Bruce Judd,No ES WP page,,,,,,,,,,,,,,
@@ -7193,7 +7193,7 @@ Q5258234,Dennis Brown,No ES WP page,,,,,,,,,,,,,,
 Q5258538,Dennis Hughes,No ES WP page,,,,,,,,,,,,,,
 Q5258575,Dennis John,No ES WP page,,,,,,,,,,,,,,
 Q5259043,Dennis Walger,No ES WP page,,,,,,,,,,,,,,
-Q5259850,Denys Dobson,,Denys Dobson,,Denys_Dobson,28 de octubre de 1880,,,10 de julio de 1916,Ngama (,,,,,,
+Q5259850,Denys Dobson,,Denys Dobson,,Denys_Dobson,28 de octubre de 1880,,,10 de julio de 1916,Ngama,,,,,,
 Q5260001,Deon Fourie,No ES WP page,,,,,,,,,,,,,,
 Q5260002,Deon Helberg,No ES WP page,,,,,,,,,,,,,,
 Q5260008,Deon Oosthuysen,No ES WP page,,,,,,,,,,,,,,
@@ -7852,7 +7852,7 @@ Q5662581,Harold Tyrie,No ES WP page,,,,,,,,,,,,,,
 Q5662716,Harold Wesley George,No ES WP page,,,,,,,,,,,,,,
 Q5663385,Harper Hamshaw,No ES WP page,,,,,,,,,,,,,,
 Q5665157,Alejandro Krancz,No stint found,Alejandro Krancz,,Alejandro_Krancz,26 de marzo de 1981,San Isidro,/wiki/San_Isidro_(Buenos_Aires),,,,179,94,3.ª Línea,,Argentina
-Q5666806,Alfonso Escobar,No stint found,Alfonso Escobar,,Alfonso_Escobar,?,9 de octubre,,,,,194,114,,,
+Q5666806,Alfonso Escobar,No stint found,Alfonso Escobar,,Alfonso_Escobar,?,,,,,,194,114,,,
 Q5666864,Harry Alexander,No ES WP page,,,,,,,,,,,,,,
 Q5667232,Harry Bedford,No ES WP page,,,,,,,,,,,,,,
 Q5667442,Harry Bowcott,No ES WP page,,,,,,,,,,,,,,
@@ -8131,7 +8131,7 @@ Q6119661,Jacobie Adriaanse,No ES WP page,,,,,,,,,,,,,,
 Q6120333,Jacques-Louis Potgieter,No ES WP page,,,,,,,,,,,,,,
 Q6120595,Jacques Engelbrecht,No ES WP page,,,,,,,,,,,,,,
 Q6120814,Jacques Potgieter,No ES WP page,,,,,,,,,,,,,,
-Q6120920,Santiago Fuenzalida,No stint found,Santiago Fuenzalida Campbell,,Santiago_Fuenzalida,27 de enero de 1989,Santiago de Chile,/wiki/Santiago_de_Chile,29 de noviembre de 2008,Santiago de Chile (Chile),,,,,,
+Q6120920,Santiago Fuenzalida,No stint found,Santiago Fuenzalida Campbell,,Santiago_Fuenzalida,27 de enero de 1989,Santiago de Chile,/wiki/Santiago_de_Chile,29 de noviembre de 2008,Santiago de Chile,,,,,,
 Q6123485,Jai Waite,No ES WP page,,,,,,,,,,,,,,
 Q6124530,Jake Abbott,No ES WP page,,,,,,,,,,,,,,
 Q6124556,Jake Ball,No ES WP page,,,,,,,,,,,,,,
@@ -9482,7 +9482,7 @@ Q7308776,Reginald Jones,No ES WP page,,,,,,,,,,,,,,
 Q7312508,Renaldo Bothma,No ES WP page,,,,,,,,,,,,,,
 Q7319134,Rex Alston,No ES WP page,,,,,,,,,,,,,,
 Q7319137,Rex Armstrong,No ES WP page,,,,,,,,,,,,,,
-Q7319261,Rex Mossop,,Rex Mossop,,Rex_Mossop,18 de febrero de 1928,Five Dock (,,17 de junio de 2011,St Leonards (Australia),,,,segunda línea,,
+Q7319261,Rex Mossop,,Rex Mossop,,Rex_Mossop,18 de febrero de 1928,Five Dock,,17 de junio de 2011,St Leonards (Australia),,,,segunda línea,,
 Q7319277,Rex Percy,No ES WP page,,,,,,,,,,,,,,
 Q7319298,Rex Richards,No ES WP page,,,,,,,,,,,,,,
 Q7319417,Rey Lee-Lo,,Rey Lee-Lo,Reynold Lee-Lo,Rey_Lee-Lo,20 de febrero de 1986,Moto'otua,/w/index.php?title=Moto%27otua&action=edit&redlink=1,,,,181,105,Centro,,Samoa Occidental
@@ -10386,7 +10386,7 @@ Q8002314,Wilhelm Steenkamp,No ES WP page,,,,,,,,,,,,,,
 Q8002355,Wilhelm van der Sluys,No ES WP page,,,,,,,,,,,,,,
 Q8002663,Will Addison,No ES WP page,,,,,,,,,,,,,,
 Q8002712,Will Bowley,No ES WP page,,,,,,,,,,,,,,
-Q8002743,Will Chambers,,Will Chambers,,Will_Chambers,26 de mayo de 1988,Gove Peninsula (,,,,,,,,,
+Q8002743,Will Chambers,,Will Chambers,,Will_Chambers,26 de mayo de 1988,Gove Peninsula,,,,,,,,,
 Q8002746,Will Chudley,No ES WP page,,,,,,,,,,,,,,
 Q8002755,Will Cliff,No ES WP page,,,,,,,,,,,,,,
 Q8002779,Will Davies,No ES WP page,,,,,,,,,,,,,,
@@ -10855,12 +10855,12 @@ Q15042381,Tony Abrahams,No ES WP page,,,,,,,,,,,,,,
 Q15052609,Bill Hayward,No ES WP page,,,,,,,,,,,,,,
 Q15054937,Joji Raqamate,No ES WP page,,,,,,,,,,,,,,
 Q15061662,Benoît Guyot,No ES WP page,,,,,,,,,,,,,,
-Q15070001,Jason Hewett,,Jason Hewett,Jason Alexander Hewett,Jason_Hewett,17 de octubre de 1968,Distrito de Otago Central,/w/index.php?title=Distrito_de_Otago_Central&action=edit&redlink=1,,,,178,83,Medio scrum,,Nueva Zelanda
+Q15070001,Jason Hewett,,Jason Hewett,Jason Alexander Hewett,Jason_Hewett,17 de octubre de 1968,Otago Central,/w/index.php?title=Distrito_de_Otago_Central&action=edit&redlink=1,,,,178,83,Medio scrum,,Nueva Zelanda
 Q15070164,John Askew,No ES WP page,,,,,,,,,,,,,,
 Q15072130,Evgeny Matveev,No ES WP page,,,,,,,,,,,,,,
 Q15076350,Kevin Schuler,No ES WP page,,,,,,,,,,,,,,
 Q15079501,Vadim Petrenchuk,No ES WP page,,,,,,,,,,,,,,
-Q15097500,Graham Purvis,,Graham Purvis,Graham Herbert Purvis,Graham_Purvis,12 de octubre de 1961,Distrito de Hauraki,/w/index.php?title=Distrito_de_Hauraki&action=edit&redlink=1,,,,183,105,Pilar,,Nueva Zelanda
+Q15097500,Graham Purvis,,Graham Purvis,Graham Herbert Purvis,Graham_Purvis,12 de octubre de 1961,Hauraki,/w/index.php?title=Distrito_de_Hauraki&action=edit&redlink=1,,,,183,105,Pilar,,Nueva Zelanda
 Q15098032,Richard Allan,No ES WP page,,,,,,,,,,,,,,
 Q15098042,Barry Fa'amausili,No ES WP page,,,,,,,,,,,,,,
 Q15098053,Hélier Thil,No ES WP page,,,,,,,,,,,,,,
@@ -12394,7 +12394,7 @@ Q18632160,William Lloyd,No ES WP page,,,,,,,,,,,,,,
 Q18632168,Jone Macilai,No ES WP page,,,,,,,,,,,,,,
 Q18632177,John McEldowney,No ES WP page,,,,,,,,,,,,,,
 Q18632179,Ash McGregor,No ES WP page,,,,,,,,,,,,,,
-Q18632181,Jon McLachlan,No stint found,Jon McLachlan,Jon Stanley McLachlan,Jon_McLachlan,23 de junio de 1949,Auckland,/wiki/Auckland,4 de diciembre de 2024,Papamoa (,,180,78,Ala,,Nueva ZelandaNueva Zelanda
+Q18632181,Jon McLachlan,No stint found,Jon McLachlan,Jon Stanley McLachlan,Jon_McLachlan,23 de junio de 1949,Auckland,/wiki/Auckland,4 de diciembre de 2024,Papamoa,,180,78,Ala,,Nueva ZelandaNueva Zelanda
 Q18632188,Richie Mo'unga,,Richie Mo'unga,Richard Fou'a Mo'unga,Richie_Mo%27unga,25 de mayo de 1994,Christchurch,/wiki/Christchurch,,,,175,80,Apertura,,Nueva Zelanda
 Q18632190,Joe Morgan,No ES WP page,,,,,,,,,,,,,,
 Q18632192,Matt Moulds,No ES WP page,,,,,,,,,,,,,,
@@ -15388,7 +15388,7 @@ Q29933344,Polo Asi,No ES WP page,,,,,,,,,,,,,,
 Q29940144,Patrick Segi,No ES WP page,,,,,,,,,,,,,,
 Q29948843,Silvio Wicht,No ES WP page,,,,,,,,,,,,,,
 Q29982240,Mikheil Gachechiladze,No ES WP page,,,,,,,,,,,,,,
-Q29982241,Yoshihito Yoshida,,Yoshihito Yoshida,吉田義人,Yoshihito_Yoshida,18 de febrero de 1969,Distrito de Ogachi,/w/index.php?title=Distrito_de_Ogachi&action=edit&redlink=1,,,,170,75,Wing,,Japón
+Q29982241,Yoshihito Yoshida,,Yoshihito Yoshida,吉田義人,Yoshihito_Yoshida,18 de febrero de 1969,Ogachi,/w/index.php?title=Distrito_de_Ogachi&action=edit&redlink=1,,,,170,75,Wing,,Japón
 Q29982372,Vincent Fepulea'i,No ES WP page,,,,,,,,,,,,,,
 Q29982388,Michael von Dincklage,No ES WP page,,,,,,,,,,,,,,
 Q29984002,Salacieli Naivilawasa,No ES WP page,,,,,,,,,,,,,,
@@ -17945,7 +17945,7 @@ Q74691590,Kurt Eklund,No ES WP page,,,,,,,,,,,,,,
 Q74698380,Devan Flanders,No ES WP page,,,,,,,,,,,,,,
 Q74698416,Pouri Rakete-Stones,No ES WP page,,,,,,,,,,,,,,
 Q74698522,Jona Nareki,No ES WP page,,,,,,,,,,,,,,
-Q74698570,Connor Garden-Bachop,No stint found,Connor Garden-Bachop,,Connor_Garden-Bachop,19 de abril de 1999,Nueva Zelanda,/wiki/Nueva_Zelanda,17 de junio de 2024,Fendalton (,,188,92,WingFullback,,Nueva ZelandaNueva Zelanda
+Q74698570,Connor Garden-Bachop,No stint found,Connor Garden-Bachop,,Connor_Garden-Bachop,19 de abril de 1999,Nueva Zelanda,/wiki/Nueva_Zelanda,17 de junio de 2024,Fendalton,,188,92,WingFullback,,Nueva ZelandaNueva Zelanda
 Q74698615,Scott Gregory,No ES WP page,,,,,,,,,,,,,,
 Q74698654,Sione Misiloi,No ES WP page,,,,,,,,,,,,,,
 Q74698691,Teariki Ben-Nicholas,No ES WP page,,,,,,,,,,,,,,
@@ -18483,7 +18483,7 @@ Q88627059,Maxence Lemardelet,No ES WP page,,,,,,,,,,,,,,
 Q88638286,David Cassels,No ES WP page,,,,,,,,,,,,,,
 Q88654582,Florian Lescadieu,No ES WP page,,,,,,,,,,,,,,
 Q88655716,Sven Bernat Girlando,No ES WP page,,,,,,,,,,,,,,
-Q88695088,Sipili Falatea,No stint found,Sipili Falatea,,Sipili_Falatea,23 de junio de 1997,Leava (,,,,,184,114,Pilar derecho,,Francés
+Q88695088,Sipili Falatea,No stint found,Sipili Falatea,,Sipili_Falatea,23 de junio de 1997,Leava,,,,,184,114,Pilar derecho,,Francés
 Q88718843,Mamoru Harada,No ES WP page,,,,,,,,,,,,,,
 Q88776810,Dylan Donnellan,No ES WP page,,,,,,,,,,,,,,
 Q88800537,Conor McGuinness,No ES WP page,,,,,,,,,,,,,,
@@ -18905,7 +18905,7 @@ Q96475077,Piston van Wyk,No ES WP page,,,,,,,,,,,,,,
 Q96482625,Claude Dufau,,Claude Dufau,,Claude_Dufau,29 de abril de 1946,Itxassou,/wiki/Itxassou,9 de junio de 2021,Dax,/wiki/Dax,,,centro,,
 Q96490401,Jacobus van Tonder,No ES WP page,,,,,,,,,,,,,,
 Q96506386,Cormac Izuchukwu,No ES WP page,,,,,,,,,,,,,,
-Q96529053,Hannes Viljoen,No stint found,Hannes Viljoen,,Hannes_Viljoen,21 de abril de 1943,"Elliot, Eastern Cape (",,13 de enero de 2021,,,,,,,
+Q96529053,Hannes Viljoen,No stint found,Hannes Viljoen,,Hannes_Viljoen,21 de abril de 1943,"Elliot, Eastern Cape",,13 de enero de 2021,,,,,,,
 Q96574729,Florian Revert,No ES WP page,,,,,,,,,,,,,,
 Q96619635,Nicolas Rey,No ES WP page,,,,,,,,,,,,,,
 Q96631006,Thibaud Rey,No ES WP page,,,,,,,,,,,,,,

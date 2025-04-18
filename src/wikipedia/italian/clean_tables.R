@@ -17,6 +17,13 @@ source("src/common/norm_teams.R")
 
 
 ########################################################################
+# start logging
+start.rec.log("CleaningItWP")
+
+
+
+
+########################################################################
 # load IT WP tables
 tlog("Loading Wikipedia IT tables")
 folder <- file.path("data", "wikipedia", "italian")
@@ -435,3 +442,10 @@ write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 tab_file <- file.path(folder, "stints.csv")
 tlog(2, "Record stint table as: ", tab_file)
 write.csv(new_stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+
+
+########################################################################
+# stop logging
+end.rec.log()

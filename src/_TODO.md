@@ -7,6 +7,8 @@
   try to fill based on next step start date?
 - missing country: use career steps that concern national teams
 
+- teams:
+  - remove under-17 and other younger teams
 - merging stints:
   - prioritize those with stats vs. NAs, even if different years
   - if same stats and different years, prioritize shorter time span
