@@ -514,11 +514,6 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 tlog("Merging stints")
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 
-
-# TODO
-# manually check the newly inserted stints that contain only a start year:
-# they may be "2015" type dates that were mistaken for "2015-"
-
 # connect WP stint to WP team tables (and so, to merged team table)
 tlog(2, "Matching stint teams to team table")
 wp_stints <- cbind(wp_stints, rep(NA, nrow(wp_stints)))
@@ -732,6 +727,12 @@ for (r in 1:nrow(wp_stints)) {
     fus_stints[rr, "matchesPlayed"] <- wp_stints[r, "matchesPlayed"]
     fus_stints[rr, "pointsScored"] <- wp_stints[r, "pointsScored"]
     fus_stints[rr, "dataSource"] <- "esWP"
+
+    # debug
+    #if (!is.na(wp_stints[r, "startYear"]) && is.na(wp_stints[r, "endYear"])) {
+    #  print(wp_stints[r, ])
+    #  readline(prompt="Press [enter] to continue")
+    #}
   }
 
   # debug
