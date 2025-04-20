@@ -14,7 +14,7 @@
   - if same stats and different years, prioritize shorter time span
   - if larger time span and higher stats > prioritize that one
   - if larger time span but lower stats > solve manually
-  - lions sometimes split by year, for some reason...
+  - B&I lions sometimes split by year, for some reason...
 - extracting transfers:
   - if 1 stint temporally included in another: assume a loan
 

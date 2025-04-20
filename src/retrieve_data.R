@@ -7,8 +7,8 @@
 # Important: these scripts extract data from *live* repositories such as
 # DBpedia, Wikidata, and Wikipedia. They all function correctly at the
 # time of writing this comment, but it is likely that the evolution of
-# these datasource will break them, and that they do not work anymore
-# at the time of reading these lines.
+# these datasource will break compatibility, and that they do not work
+# anymore at the time of reading these lines.
 #
 # Vincent Labatut
 # 01/2025
@@ -64,31 +64,33 @@ source("src/wikidata/integrate_reference.R")
 ########################################################################
 # retrieve the raw data from Wikipedia by looping over the players listed in the above table
 
-# japanese wikipedia
+# japanese Wikipedia
 system("python src/wikipedia/japanese/retrieve_stints.pys")
 # this produces the raw CSV files in folder `data/wikipedia/japanese/raw/`
 source("src/wikipedia/japanese/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/japanese/`
 
-# french wikipedia
+# french Wikipedia
 system("python src/wikipedia/french/retrieve_stints.pys")
 # this produces the raw CSV files in folder `data/wikipedia/french/raw/`
 source("src/wikipedia/french/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/french/`
 
-# italian wikipedia
+# italian Wikipedia
 system("python src/wikipedia/italian/retrieve_stints.pys")
 # this produces the raw CSV files in folder `data/wikipedia/italian/raw/`
 source("src/wikipedia/italian/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/italian/`
 
-# english wikipedia
+# spanish Wikipedia
+system("python src/wikipedia/spanish/retrieve_stints.pys")
+# this produces the raw CSV files in folder `data/wikipedia/spanish/raw/`
+source("src/wikipedia/spanish/clean_tables.R")
+# this produces the clean CSV files in folder `data/wikipedia/spanish/`
+
+# english Wikipedia
 # TODO
 source("src/wikipedia/english/clean_tables.R")
-
-# spanish wikipedia
-# TODO
-source("src/wikipedia/spanish/clean_tables.R")
 
 
 
@@ -96,7 +98,7 @@ source("src/wikipedia/spanish/clean_tables.R")
 ########################################################################
 # merge the Wikipedia data with the previous tables
 
-# japanese wikipedia
+# japanese Wikipedia
 #source("src/wikipedia/japanese/compare_merged.R")
 # optional: generates a few stats
 source("src/wikipedia/japanese/integrate_data.R")
@@ -105,22 +107,26 @@ source("src/wikipedia/japanese/integrate_data.R")
 # - `teams_03_jawp.csv`: merged list of teams
 # - `stints_01_wd-jawp.csv`: merged list of stints
 
-# french wikipedia
+# french Wikipedia
 source("src/wikipedia/french/integrate_data.R")
 # this produces the following files in folder `data/fusion/`:
 # - `players_03_frwp.csv`: merged list of players
 # - `teams_04_frwp.csv`: merged list of teams
 # - `stints_02_frwp.csv`: merged list of stints
 
-# italian wikipedia
+# italian Wikipedia
 source("src/wikipedia/italian/integrate_data.R")
 # this produces the following files in folder `data/fusion/`:
 # - `players_04_itwp.csv`: merged list of players
 # - `teams_05_itwp.csv`: merged list of teams
 # - `stints_03_itwp.csv`: merged list of stints
 
-# english wikipedia
-source("src/wikipedia/english/integrate_data.R")
-
-# spanish wikipedia
+# spanish Wikipedia
 source("src/wikipedia/spanish/integrate_data.R")
+# this produces the following files in folder `data/fusion/`:
+# - `players_05_eswp.csv`: merged list of players
+# - `teams_06_eswp.csv`: merged list of teams
+# - `stints_04_eswp.csv`: merged list of stints
+
+# english Wikipedia
+source("src/wikipedia/english/integrate_data.R")
