@@ -147,8 +147,10 @@ def add_team_url(json_data, infobox_table, car_stages=["amateur", "senior_club",
         if len(team_stints) > 0:
             for team_stint in team_stints:
                 search_term = team_stint["teams"]
+                search_term = search_term[1:] if search_term.startswith("→") else search_term
+                search_term = search_term.split("/")[0]
                 # Find the link in the infobox table that matches the team name
-                link = infobox_table.find('a', string=search_term)
+                link = infobox_table.find('a', string=re.compile(re.escape(search_term), re.IGNORECASE))
                 if link and link.get("href"):
                     # Add the href to the JSON data
                     team_stint["team_link"] = link["href"]
@@ -381,8 +383,8 @@ def extract_number(input_text, full_clean = True):
         input_text = re.sub(r'(15june2021)', '', input_text)
         input_text = re.sub(r'Twoersions', '', input_text)
         input_text = re.sub(r'manager', '', input_text)
-        input_text = re.sub(r'\(41', '41', input_text)
-        input_text = re.sub(r'41\)', '41', input_text)
+        input_text = "41" if input_text == "(41" else input_text
+        input_text = "41" if input_text == "41)" else input_text
         input_text = re.sub(r'75\u200a150', '75', input_text)
         input_text = re.sub(r'>100', '100', input_text)
         input_text = re.sub(r'1es10', '10', input_text)
@@ -395,7 +397,14 @@ def extract_number(input_text, full_clean = True):
         input_text = re.sub(r'12\(seasoninerrupeddueocovid19\)', '12', input_text)
         input_text = re.sub(r'43apps10in.n.', '43', input_text)
         input_text = re.sub(r'102T', '10', input_text)
-        input_text = re.sub(r'.', '0', input_text)
+        input_text = re.sub(r'5namens', '5', input_text)
+        input_text = re.sub(r'202nds', '20', input_text)
+        input_text = re.sub(r'n/a', '0', input_text)
+        input_text = re.sub(r'34\(\?\)', '34', input_text)
+        input_text = re.sub(r'—', '0', input_text)
+        input_text = re.sub(r'duikers', '0', input_text)
+        input_text = re.sub(r'24a', '24', input_text)
+        input_text = re.sub(r'\.', '0', input_text)
     
     # Match number in brackets first
     match_brackets = re.search(r"\((\d+)\)", input_text)
@@ -558,7 +567,7 @@ def check_car(json_data, car_stages = ["amateur","senior_club","international"])
             points = points.replace("()","")
                 
             date = car[0]["years"]
-            match = re.search(r'\d{8}', date)
+            match = re.search(r'\d{6}|\d{8}', date)
             if points == "":
                 points = "0"
                 
@@ -1205,7 +1214,7 @@ def scrape_wiki_profiles_second(first_scrape_out_dir):
     # # Display the DataFrame
     # df_str = df[df['type'] == "<class 'str'>"]
 
-def standardise_data(first_scrape_out_dir, cleaned_json_out_dir):
+def standardise_data(first_scrape_out_dir, cleaned_json_out_dir, target = "na"):
     # =============================================================================
     # Standardise the data
     # =============================================================================
@@ -1215,6 +1224,9 @@ def standardise_data(first_scrape_out_dir, cleaned_json_out_dir):
 
     files = list_files_in_directory(first_scrape_out_dir)
     files = [f for f in files if f not in ('desktop.ini')]
+    if target != "na": 
+        index = files.index(target)
+        files = files[index:] 
     for i in range(len(files)):
       # Logging progress
         # try: 

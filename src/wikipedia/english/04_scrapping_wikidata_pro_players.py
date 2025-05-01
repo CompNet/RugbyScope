@@ -7,14 +7,14 @@ Created on Fri Feb  7 12:29:55 2025
 
 from _setup import *
 
-wikidata_df = pd.read_csv("./data/wikidata/players_descr.csv")
+wikidata_df = pd.read_csv("./data/wikipedia/players_descr.csv")
 wikidata_df['url'] = "https://en.wikipedia.org/wiki/" + wikidata_df["wikipediaEn"]
 wikidata_df['name'] = wikidata_df["playerLabel"]
 wikidata_df['origWdId'] = wikidata_df["playerId"]
 wikidata_df['origName'] = wikidata_df["playerLabel"]
 
 
-output_dir = "./data/wikipedia_all_en_players/"
+output_dir = "./data/wikipedia/english/"
 # setup the folders
 create_directory(output_dir)
 first_scrape_out_dir = f"{output_dir}PP/"
@@ -29,20 +29,20 @@ scrape_wiki_profiles_first(url_df, first_scrape_out_dir)
 scrape_wiki_profiles_second(first_scrape_out_dir)
 standardise_data(first_scrape_out_dir, cleaned_json_out_dir)
 
+print("Currenly combinding all .json files together.\n\n")
 files = list_files_in_directory(cleaned_json_out_dir)
 files = [f for f in files if f != 'desktop.ini']
 files_paths = []
 for file in files:
     files_paths.append(cleaned_json_out_dir + file)
 combine_json_files(files_paths, output_json)
+print("Finished combinding all .json files together.\n")
 
 
-### add extra info from orginal url df: 
+# ### add extra info from orginal url df: 
 
-dir = "./data/wikipedia_all_en_players/"
-input_json_file = dir + "PP_combined_profile.json"
-
-
+print("Adding extra information to the datasets.\n")
+input_json_file = output_dir + "PP_combined_profile.json"
 def add_wikidata_info(json_data, wikidata_df, name_key="name"):
     # Iterate over JSON data and add the wikidata_id if a match is found
     # for i in range(10):
@@ -64,12 +64,11 @@ def add_wikidata_info(json_data, wikidata_df, name_key="name"):
         # print(f"Finished searching {i+1} of {len(json_data)}.")
     return json_data
 
- 
-
 with open(input_json_file, 'r', encoding='utf-8', errors='replace') as file:
         json_data = json.load(file)
-
 json_data_processed = add_wikidata_info(json_data, wikidata_df)
 
 with open(input_json_file, 'w') as f:
     json.dump(json_data_processed, f, indent=4)
+
+print("Finished adding extra information to the datasets.\n")
