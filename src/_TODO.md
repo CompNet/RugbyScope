@@ -18,6 +18,9 @@
 - extracting transfers:
   - if 1 stint temporally included in another: assume a loan
 
+stats:
+- evolution of players weight and height
+
 * NOTES
   - Filtering players depending on whether they played for a club: many are missed
     But if their club is not indicated... maybe they are not important enough?
