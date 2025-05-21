@@ -1,0 +1,344 @@
+"original","normalized","keep"
+"Act","Australia",FALSE
+"Akita Prefecture","Japan",TRUE
+"Alaska","U.S.A.",TRUE
+"Albania","Albania",FALSE
+"Alberta","Canada",TRUE
+"Algeria","Algeria",FALSE
+"American Samoa","American Samoa",FALSE
+"Angola","Angola",FALSE
+"Argentina","Argentina",FALSE
+"Argentine","Argentina",FALSE
+"Arizona","U.S.A.",TRUE
+"Australia","Australia",FALSE
+"Austria-Hungary","Austria-Hungary",FALSE
+"Az","U.S.A.",FALSE
+"Barcelona","Spain",TRUE
+"Belgium","Belgium",FALSE
+"Berkshire","England",TRUE
+"Bermuda","Bermuda",FALSE
+"Bombay Presidency","India",TRUE
+"Bosnia","Bosnia",FALSE
+"Botswana","Botswana",FALSE
+"Bouches-Du-Rhône","France",TRUE
+"Brazil","Brazil",FALSE
+"British Burma","Burma",FALSE
+"British Columbia","Canadia",TRUE
+"British India","India",FALSE
+"British North America","U.S.A.",FALSE
+"British Overseas Territories","United Kingdom",FALSE
+"British Raj","India",FALSE
+"Britishindia","India",FALSE
+"Brunei","Brunei",FALSE
+"Buckinghamshire","England",TRUE
+"Burkina Faso","Burkina Faso",FALSE
+"Ca","Canada",FALSE
+"Caerphilly","Wales",TRUE
+"California","U.S.A.",TRUE
+"Cambridgeshire","England",TRUE
+"Cameroon","Cameroon",FALSE
+"Canada","Canada",FALSE
+"Canada West","Canada",FALSE
+"Cape Colony","South Africa",FALSE
+"Cape Province","South Africa",TRUE
+"Cape Town","South Africa",TRUE
+"Carmarthenshire","England",TRUE
+"Ceylon","Sri Lanka",FALSE
+"Cheshire","England",TRUE
+"Chile","Chile",FALSE
+"China","China",FALSE
+"Co. Antrim","Ireland",TRUE
+"Co. Down","Ireland",TRUE
+"Colony Of Natal","South Africa",TRUE
+"Colony Of New South Wales","Australia",TRUE
+"Colony Of Victoria","Australia",TRUE
+"Colorado","U.S.A.",TRUE
+"Cook Islands","Cook Islands",FALSE
+"Cornwall","England",TRUE
+"Côte D'ivoire","Ivory Coast",FALSE
+"County Antrim","Ireland",TRUE
+"County Armagh","Ireland",TRUE
+"County Carlow","Ireland",TRUE
+"County Down","Ireland",TRUE
+"County Durhamengland","Ireland",TRUE
+"County Galway","Ireland",TRUE
+"County Kerry","Ireland",TRUE
+"County Kildareireland","Ireland",TRUE
+"County Meath","Ireland",TRUE
+"County Roscommon","Ireland",TRUE
+"County Tyrone","Ireland",TRUE
+"County Wicklow","Ireland",TRUE
+"Croatia","Croatia",FALSE
+"Cumbria","England",TRUE
+"Czechoslovakia","Czechoslovakia",FALSE
+"D.c.","U.S.A.",TRUE
+"Democratic Republic Of Congo","D.R. of the Congo",FALSE
+"Democratic Republic Of The Congo","D.R. of the Congo",FALSE
+"Denbighshire","England",TRUE
+"Devon","England",TRUE
+"Dominion Of Fiji","Fiji",FALSE
+"Dr Congo","D.R. of the Congo",FALSE
+"Drôme","France",TRUE
+"Dublin","Ireland",TRUE
+"Dutch East Indies","Indonesia",FALSE
+"East London","England",TRUE
+"East Lothian","England",TRUE
+"Eastern Cape","South Africa",TRUE
+"Eastern Province","South Africa",TRUE
+"Egypt","Egypt",FALSE
+"England","England",FALSE
+"England Uk","England",FALSE
+"España","Spain",FALSE
+"Essex","England",TRUE
+"Federation Of Rhodesia And Nyasaland","Zimbabwe",TRUE
+"Fiji","Fiji",FALSE
+"Fiji Islands","Fiji",FALSE
+"Frabce","France",FALSE
+"France","France",FALSE
+"Free State","South Africa",TRUE
+"French Algeria","Algeria",FALSE
+"French Tunisia","Tunisia",FALSE
+"Gasperich","Luxembourg",TRUE
+"Gauteng","South Africa",TRUE
+"Georgia","Georgia",FALSE
+"Georgian Ssr","Georgia",FALSE
+"German-Occupied France","France",FALSE
+"German Empire","Germany",FALSE
+"Germany","Germany",FALSE
+"Gers","France",TRUE
+"Ghana","Ghana",FALSE
+"Glamorgan","Wales",TRUE
+"Gloucestershire","England",TRUE
+"Great Britain","United Kingdom",FALSE
+"Greater Manchester","England",TRUE
+"Guam","Guam",FALSE
+"Guernsey","Guernsey",FALSE
+"Guinea","Guinea",FALSE
+"Guinea-Bissau","Guinea-Bissau",FALSE
+"Haiti","Haiti",FALSE
+"Hampshire","England",TRUE
+"Havering","England",TRUE
+"Hawaii","U.S.A.",TRUE
+"Hérault","France",TRUE
+"Hertfordshire","England",TRUE
+"Illinois","U.S.A.",TRUE
+"India","India",FALSE
+"Indiana","U.S.A.",TRUE
+"Indonesia","Indonesia",FALSE
+"Inmoldova","Moldova",FALSE
+"Iowa","U.S.A.",TRUE
+"Iran","Iran",FALSE
+"Ireland","Ireland",FALSE
+"Ireland.","Ireland",FALSE
+"Irish Free State","Ireland",FALSE
+"Israel","Israel",FALSE
+"Italy","Italy",FALSE
+"Ivory Coast","Ivory Coast",FALSE
+"Jamaica","Jamaica",FALSE
+"Japan","Japan",FALSE
+"Jersey","Jersey",FALSE
+"Kadavu","Fiji",TRUE
+"Karas Region","Namibia",TRUE
+"Kazakhstan","Kazakhstan",FALSE
+"Kent","England",TRUE
+"Kenya","Kenya",FALSE
+"Kenya Colony","Kenya",FALSE
+"Kingdom Of Romania","Romania",FALSE
+"Kingdom Of Württemberg","Germany",FALSE
+"Kwazulu-Natal","South Africa",TRUE
+"Lancashire","England",TRUE
+"Landes","France",TRUE
+"Latvian Ssr","Latvia",FALSE
+"Leicestershire","England",TRUE
+"Libya","Libya",FALSE
+"Limerick","Ireland",TRUE
+"Limpopo","South Africa",TRUE
+"Lincolnshire","England",TRUE
+"Lithuania","Lithuania",FALSE
+"Lombardy","Italy",TRUE
+"London","England",TRUE
+"Macedonia","Macedonia",FALSE
+"Madagascar","Madagascar",FALSE
+"Malawi","Malawi",FALSE
+"Malaysia","Malaysia",FALSE
+"Malta","Malta",FALSE
+"Manchester","England",TRUE
+"Manitoba","Canada",TRUE
+"Martinique","France",TRUE
+"Maryland","U.S.A.",TRUE
+"Massachusetts","U.S.A.",TRUE
+"Mauritius","Mauritius",FALSE
+"Merionethshire","England",TRUE
+"Merseyside","England",TRUE
+"Mexico","Mexico",FALSE
+"Midlothian","Scotland",TRUE
+"Minnesota","U.S.A.",TRUE
+"Missouri","U.S.A.",TRUE
+"Miyagi","Japan",TRUE
+"Moldova","Moldova",FALSE
+"Monaco","Monaco",FALSE
+"Monmouthshire","England",TRUE
+"Morocco","Morocco",FALSE
+"Mpumalanga","South Africa",TRUE
+"Myanmar","Myanmar",FALSE
+"N.ireland","Ireland",FALSE
+"Nadi","Fiji",TRUE
+"Nadroga","Fiji",TRUE
+"Namibia","Namibia",FALSE
+"Natal","South Africa",TRUE
+"Netherland","Netherlands",FALSE
+"Netherlands","Netherlands",FALSE
+"New Brunswick","Canada",TRUE
+"New Caledonia","France",TRUE
+"New Guinea","Papua New Guinea",FALSE
+"New South Wales","Australia",TRUE
+"New York","U.S.A.",TRUE
+"New Zealand","New Zealand",FALSE
+"Newfoundland And Labrador","Canada",TRUE
+"Nigeria","Nigeria",FALSE
+"Norfolk","England",TRUE
+"North German Confederation","Germany",FALSE
+"North London","England",TRUE
+"North West","South Africa",TRUE
+"North Yorkshire","England",TRUE
+"Northamptonshire","England",TRUE
+"Northern Cape","South Africa",TRUE
+"Northern Ireland","Ireland",FALSE
+"Northern Rhodesia","Zimbabwe",FALSE
+"Northern Territory","Australia",TRUE
+"Northumberland","England",TRUE
+"Norway","Norway",FALSE
+"Nsw","Australa",TRUE
+"Nz","NEw Zealand",FALSE
+"Okavango Region","Botswana",TRUE
+"Oklahoma","U.S.A.",TRUE
+"Ontario","Canada",TRUE
+"Orange River Colony","South Africa",TRUE
+"Osaka","Japan",TRUE
+"Otago","New Zealand",TRUE
+"Oxfordshire","England",TRUE
+"Oxon","English",FALSE
+"Pakistan","Pakistan",FALSE
+"Papua New Guinea","Papua New Guinea",FALSE
+"Paris","France",TRUE
+"Pembrokeshire","England",TRUE
+"Pennsylvania","U.S.A.",TRUE
+"Perthshire","Scotland",TRUE
+"Peru","Peru",FALSE
+"Philippines","Philippines",FALSE
+"Png","Papua New Guinea",FALSE
+"Poland","Poland",FALSE
+"Portugal","Portugal",FALSE
+"Portuguese Mozambique","Mozambique",FALSE
+"Province Of Rovigo","Italy",TRUE
+"Punjab","India",TRUE
+"Qld","Australian",TRUE
+"Quebec","Canada",TRUE
+"Queensland","Australia",TRUE
+"Republic Ireland","Ireland",FALSE
+"Republic Of Ireland","Ireland",FALSE
+"Republic Of South Africa","South Africa",FALSE
+"Réunion","France",TRUE
+"Rhodesia","Zimbabwe",FALSE
+"Rhône","France",TRUE
+"Romania","Romania",FALSE
+"Romănia","Romania",FALSE
+"Rsa","South Africa",FALSE
+"Russia","Russia",FALSE
+"Russian Federation","Russia",FALSE
+"Rutland","England",TRUE
+"Saint Lucia","Saint Lucia",FALSE
+"Samoa","Samoa",FALSE
+"Saskatchewan","Canada",TRUE
+"Saudi Arabia","Saudi Arabia",FALSE
+"Scotland","Scotland",FALSE
+"Scottish Borders","Scotland",FALSE
+"Second French Empire","France",FALSE
+"Senegal","Senegal",FALSE
+"Serbia","Serbia",FALSE
+"Sfr Yugoslavia","Yugoslavia",FALSE
+"Shropshire","England",TRUE
+"Somerset","England",TRUE
+"South-West Africa","Namibia",FALSE
+"South Africa","South Africa",FALSE
+"South African Republic","South Africa",FALSE
+"South Australia","Australia",TRUE
+"South Korea","South Korea",FALSE
+"South Rhodesia","Namibia",FALSE
+"South Wales","Wales",FALSE
+"South West Africa","Namibia",FALSE
+"Southern Rhodesia","Namibia",FALSE
+"Soviet Union","U.S.S.R.",FALSE
+"Spain","Spain",FALSE
+"Sri Lanka","Sri Lanka",FALSE
+"Staffordshire","England",TRUE
+"Suffolk","England",TRUE
+"Surrey","England",TRUE
+"Swaziland","Eswatini",FALSE
+"Sweden","Sweden",FALSE
+"Switzerland","Switzerland",FALSE
+"Sydney","Australia",TRUE
+"Tailevu","Fiji",TRUE
+"Taiwan","Taiwan",FALSE
+"Tanzania","Tanzania",FALSE
+"Tarn","France",TRUE
+"Tasmania","Australia",TRUE
+"Texas","U.S.A.",TRUE
+"Thailand","Thailand",FALSE
+"The Gambia","Gambia",FALSE
+"The Netherlands","Netherlands",FALSE
+"Tokyo","Japan",TRUE
+"Tonga","Tonga",FALSE
+"Tongatapu","Tonga",FALSE
+"Torfaen","Wales",TRUE
+"Transvaal","South Africa",TRUE
+"Transvaal Colony","South Africa",TRUE
+"Trinidad And Tobago","Trinidad And Tobago",FALSE
+"Turkey","Turkey",FALSE
+"Tyne And Wear","England",TRUE
+"U.k.","United Kingdom",FALSE
+"U.s.","U.S.A.",FALSE
+"Uae","United Arab Emirates",FALSE
+"Uganda","Uganda",FALSE
+"Uk","United Kingdom",FALSE
+"Ukraine","Ukraine",FALSE
+"Union Of South Africa","South Africa",FALSE
+"United Kingdom","United Kingdom",FALSE
+"United States","U.S.A.",FALSE
+"United States Of America","U.S.A.",FALSE
+"Upolu","Samoa",TRUE
+"Uruguay","Uruguay",FALSE
+"Us","U.S.A.",FALSE
+"Usa","U.S.A.",FALSE
+"Ussr","U.S.S.R.",FALSE
+"Utah","U.S.A.",TRUE
+"Vale Of Glamorgan","Scotland",TRUE
+"Vava'u","Tonga",TRUE
+"Vava'utonga","Tonga",FALSE
+"Venezuela","Venezuela",FALSE
+"Venice","Italy",TRUE
+"Victoria","Australia",TRUE
+"Vrystaat","South Africa",TRUE
+"Wales","Wales",FALSE
+"Waleswales","Wales",FALSE
+"Wallis And Futuna","France",TRUE
+"Warwickshire","England",TRUE
+"Washington","U.S.A.",TRUE
+"Wellington","NEw Zealand",TRUE
+"West Germany","Germany",FALSE
+"West Indies","West Indies",FALSE
+"West London","England",TRUE
+"West Midlands","England",TRUE
+"West Sussex","England",TRUE
+"West Yorkshire","England",TRUE
+"Western Australia","Australia",FALSE
+"Western Cape","South Africa",TRUE
+"Western Samoa","Samoa",FALSE
+"Whittlesea","Australia",TRUE
+"Wiltshire","England",TRUE
+"Worcestershire","England",TRUE
+"Yasawa","Fiji",TRUE
+"Yorkshire","England",TRUE
+"Zaire","Zaire",FALSE
+"Zambia","Zambia",FALSE
+"Zimbabwe","Zimbabwe",FALSE

@@ -35,23 +35,23 @@ get_clean_positions <- function(players) {
   # │  └─ Hooker
   # ├─ 2nd Row = Lock
   # │  ├─ Loosehead Lock
-  # │  └─ Tighthead lock
+  # │  └─ Tighthead Lock
   # └─ 3rd Row = Back Row = Loose Forward
-  #    ├─ Flanker = Wing Forward
+  #    ├─ Flanker = Wing Forward = Third-line Wing
   #    │  ├─ Openside Flanker
   #    │  └─ Blindside Flanker
   #    └─ Number 8 = Eightman
   # Back
   # ├─ Half-Back
-  # │  ├─ Scrum-Half
-  # │  └─ Fly-Half = First Five-Eighth = Out-Half = Stand-Off"
+  # │  ├─ Scrum-Half = Inside-Half = Inside Left
+  # │  └─ Fly-Half = First Five-Eighth = Outside Half = Out-Half = Stand-Off
   # ├─ Three-Quarter
   # │  ├─ Centre
   # │  │  ├─ Inside Centre = Inside Back = Second Five-Eighth
   # │  │  └─ Outside Centre = Outside Back = Centre Three-Quarter = Outside Half
   # │  └─ Winger = Wing Three Quarter
-  # │     ├─ Left Winger
-  # │     └─ Right Winger
+  # │     ├─ Left Winger = Left Back
+  # │     └─ Right Winger = Right Back
   # └─ Fullback
 
   # define conversion map
