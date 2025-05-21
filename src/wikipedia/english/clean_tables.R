@@ -223,7 +223,7 @@ all_locs <- gsub("nowzimbabwe", "zimbabwe", all_locs, fixed = TRUE)
 all_locs <- str_to_title(all_locs)
 all_locs <- strsplit(all_locs, ",")
 unique_locs <- sort(unique(trimws(unlist(all_locs))))
-write.csv(unique_locs, file.path(folder, "check_locations.csv"), row.names = FALSE)
+#write.csv(unique_locs, file.path(folder, "check_locations.csv"), row.names = FALSE)
 
 # distinguish between towns/regions and countries
 #### check number of distinct names by row
@@ -280,21 +280,10 @@ players[, "birthPlace"] <- all_locs
 # add countries
 players[, "birthPlaceWP"] <- countries
 colnames(players)[colnames(players) == "birthPlaceWP"] <- "birthCountry"
-
 #write.csv(players, file.path(folder, "raw/tmp.csv"), row.names = FALSE)
 
-
-
-
-# rename certain columns
-tlog(2, "Rename certain columns")
-col <- which(colnames(players) == "origWdId")
-colnames(players)[col] <- "wikidataId"
-col <- which(colnames(players) == "origName")
-colnames(players)[col] <- "fullName"
-
 # remove superfluous columns
-sup_cols <- c("debugComment", "wpPage", "currentTeam", "birthPlaceWP", "deathPlaceWP")
+sup_cols <- c("X", "debugComment", "wpPage", "deathDate", "deathPlace", "deathPlaceWP", "currentTeam")
 tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
 cols <- which(colnames(players) %in% sup_cols)
 players <- players[, -cols]
@@ -305,6 +294,7 @@ players <- players[, -cols]
 ########################################################################
 # clean the stint table
 tlog(0, "Cleaning the stint table")
+# TODO
 
 #### debug: checking the unique period values
 #head(sort(unique(stints[, "timePeriod"])))
