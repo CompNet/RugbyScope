@@ -3604,7 +3604,7 @@
 3602,"Q2924439","Brendan Venter","Brendan Venter","Brendan_Venter","senior_club","2000","western province","/wiki/Western_Province_(rugby_union)",2,0
 3603,"Q2924439","Brendan Venter","Brendan Venter","Brendan_Venter","senior_club","2000","stormers","/wiki/Stormers",4,0
 3604,"Q2924439","Brendan Venter","Brendan Venter","Brendan_Venter","international","1994-1999","south africa","/wiki/Johannesburg,_South_Africa",17,10
-3605,"Q2924441","Brendon Nasser","Brendon Nasser","Brendan_Nasser","amateur","19","queensland university",NA,0,0
+3605,"Q2924441","Brendon Nasser","Brendon Nasser","Brendan_Nasser","amateur","-","queensland university",NA,0,0
 3606,"Q2924441","Brendon Nasser","Brendon Nasser","Brendan_Nasser","amateur","1992","oxford university",NA,0,0
 3607,"Q2924441","Brendon Nasser","Brendon Nasser","Brendan_Nasser","senior_club","1989-1992","queensland","/wiki/Queensland",0,0
 3608,"Q2924441","Brendon Nasser","Brendon Nasser","Brendan_Nasser","senior_club","1992-1993","casale","/w/index.php?title=ASD_Rugby_Casale&action=edit&redlink=1",0,0
@@ -5221,7 +5221,7 @@
 5796,"Q3017427","David Attoub","David Attoub","David_Attoub","senior_club","2014-2015","montpellier",NA,2,0
 5797,"Q3017427","David Attoub","David Attoub","David_Attoub","senior_club","2015-17","lyon","/wiki/Lyon_OU",40,0
 5798,"Q3017427","David Attoub","David Attoub","David_Attoub","international","2006-2012","france","/wiki/France_national_rugby_union_team",4,0
-5805,"Q3017452","David Barnes","David Barnes","David_Barnes_(rugby_union)","amateur","14","stoneygate fc",NA,0,0
+5805,"Q3017452","David Barnes","David Barnes","David_Barnes_(rugby_union)","amateur","-","stoneygate fc",NA,0,0
 5806,"Q3017452","David Barnes","David Barnes","David_Barnes_(rugby_union)","amateur","-","kendal rufc",NA,0,0
 5807,"Q3017452","David Barnes","David Barnes","David_Barnes_(rugby_union)","senior_club","1995-1998","newcastle","/wiki/Newcastle_Falcons",3,0
 5808,"Q3017452","David Barnes","David Barnes","David_Barnes_(rugby_union)","senior_club","1997","west hartlepool","/wiki/West_Hartlepool_R.F.C.",10,5
@@ -9392,10 +9392,7 @@
 13665,"Q109672375","Tomasi Alosio","Tomasi Alosio","Tomasi_Alosio","senior_club","2022-2023","moana pasifika","/wiki/Moana_Pasifika",3,5
 13666,"Q109672375","Tomasi Alosio","Tomasi Alosio","Tomasi_Alosio","senior_club","2022-2023","tasman","/wiki/Tasman_(National_Provincial_Championship)",10,5
 13667,"Q109672375","Tomasi Alosio","Tomasi Alosio","Tomasi_Alosio","international","2021-2022","samoa","/wiki/Samoa",7,5
-13668,"Q3194758","Keith Oxlee","Keith Oxlee","Keith_Oxlee","senior_club","]","natal","/wiki/Kwazulu-Natal",0,0
-13669,"Q3194758","Keith Oxlee","Keith Oxlee","Keith_Oxlee","senior_club","4",NA,"/wiki/Umhlanga,_KwaZulu-Natal",5,0
-13670,"Q3194758","Keith Oxlee","Keith Oxlee","Keith_Oxlee","senior_club","[",NA,"/wiki/Umhlanga,_KwaZulu-Natal",0,6
-13671,"Q3194758","Keith Oxlee","Keith Oxlee","Keith_Oxlee","senior_club","1955-1971",NA,"/wiki/Umhlanga,_KwaZulu-Natal",0,0
+13671,"Q3194758","Keith Oxlee","Keith Oxlee","Keith_Oxlee","senior_club","1955-1971",NA,"/wiki/Sharks_(Currie_Cup)",102,412
 13672,"Q3194758","Keith Oxlee","Keith Oxlee","Keith_Oxlee","international","1960-1965","south africa","/wiki/South_Africa_national_rugby_union_team",19,88
 13678,"Q3194767","Keith Robertson","Keith Robertson","Keith_Robertson_(rugby_union,_born_1954)","amateur","-","melrose","/wiki/Melrose_RFC",0,0
 13679,"Q3194767","Keith Robertson","Keith Robertson","Keith_Robertson_(rugby_union,_born_1954)","senior_club","-","south of scotland","/wiki/South_of_Scotland_District_(rugby_union)",0,0
@@ -13520,7 +13517,7 @@
 18384,"Q3476318","Scott Staniforth","Scott Staniforth","Scott_Staniforth","senior_club","2000","eastwood","/wiki/Eastwood_Rugby_Club",0,0
 18385,"Q3476318","Scott Staniforth","Scott Staniforth","Scott_Staniforth","senior_club","2005-06","london irish","/wiki/London_Irish",24,35
 18386,"Q3476318","Scott Staniforth","Scott Staniforth","Scott_Staniforth","senior_club","2009-10","yokogawa musashino atlastars","/wiki/Yokogawa_Musashino_Atlastars",0,0
-18387,"Q3476318","Scott Staniforth","Scott Staniforth","Scott_Staniforth","international","1999- 2008 t","australia","/wiki/Australia_national_rugby_union_team",12,35
+18387,"Q3476318","Scott Staniforth","Scott Staniforth","Scott_Staniforth","international","1999-2008","australia","/wiki/Australia_national_rugby_union_team",12,35
 18388,"Q3476318","Scott Staniforth","Scott Staniforth","Scott_Staniforth","international","1995","australian schoolboys","/wiki/Australian_Schoolboys",0,0
 18389,"Q3476694","Sean-Michael Stephen","Sean-Michael Stephen","Sean-Michael_Stephen","senior_club","2008-","plymouth albion","/wiki/Plymouth_Albion_R.F.C.",72,35
 18390,"Q3476694","Sean-Michael Stephen","Sean-Michael Stephen","Sean-Michael_Stephen","senior_club","2006-2008","as béziers hérault","/wiki/AS_B%C3%A9ziers_H%C3%A9rault",15,5
@@ -18991,7 +18988,8 @@
 23853,"Q4764092","Angus Cottrell","Angus Cottrell","Angus_Cottrell","senior_club","2018-2019","melbourne rising","/wiki/Melbourne_Rising",5,10
 23854,"Q4764092","Angus Cottrell","Angus Cottrell","Angus_Cottrell","senior_club","2021-2022","la giltinis","/wiki/LA_Giltinis",21,70
 23855,"Q111267671","Jacque-Louis du Toit","Jacque-Louis du Toit","Jacque-Louis_du_Toit","senior_club","2022-","golden lions","/wiki/Golden_Lions#Golden_Lions_XV",4,5
-23856,"Q4764234","Angus Roberts","Angus Roberts","Angus_Roberts","senior_club","2010-2014-","sydney universitysydney stars",NA,10,72
+23856,"Q4764234","Angus Roberts","Angus Roberts","Angus_Roberts","senior_club","2010-","sydney university","/wiki/Sydney_Uni_Football_Club",NA,NA
+23856,"Q4764234","Angus Roberts","Angus Roberts","Angus_Roberts","senior_club","2014-","sydney stars","/wiki/Sydney_Stars",10,72
 23857,"Q4764256","Angus Stuart","Angus Stuart","Angus_Stuart","amateur","pre-1883","rusholme",NA,0,0
 23858,"Q4764256","Angus Stuart","Angus Stuart","Angus_Stuart","amateur","pre-1883","salford","/wiki/Salford_Red_Devils",0,0
 23859,"Q4764256","Angus Stuart","Angus Stuart","Angus_Stuart","amateur","1883-1886","cardiff rfc","/wiki/Cardiff_RFC",0,0
@@ -19059,10 +19057,7 @@
 23921,"Q4775691","Anton Bresler","Anton Bresler","Anton_Bresler","senior_club","2009-2013","sharks (currie cup)","/wiki/Sharks_(Currie_Cup)",44,5
 23922,"Q4777261","Antony Warr","Antony Warr","Antony_Warr","international","1934","england","/wiki/England_national_rugby_union_team",2,3
 23923,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","amateur","1997","north shore",NA,0,0
-23924,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","]","lazio","/wiki/S.S._Lazio_Rugby_1927",0,0
-23925,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","3","]",NA,0,0
-23926,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","[","2",NA,0,0
-23927,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","2007-2008","[",NA,0,0
+23927,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","2007-2008","lazio","/wiki/S.S._Lazio_Rugby_1927",0,0
 23928,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","2002-2006","calvisano","/wiki/Rugby_Calvisano",0,0
 23929,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","1998","rugby rovato","/w/index.php?title=Rugby_Rovato&action=edit&redlink=1",0,0
 23930,"Q4779344","Apenisa Tuta Vodo","Apenisa Tuta Vodo","Apenisa_Tuta_Vodo","senior_club","1997","north harbour","/wiki/North_Harbour_Rugby_Union",0,0
@@ -19125,10 +19120,7 @@
 23987,"Q4798338","Arthur Cornish","Arthur Cornish","Arthur_Cornish","amateur","-","royal navy",NA,0,0
 23988,"Q4798338","Arthur Cornish","Arthur Cornish","Arthur_Cornish","international","1923-1926","wales","/wiki/Wales",10,7
 23989,"Q4798340","Arthur Corfe","Arthur Corfe","Arthur_Corfe","senior_club","1899","queensland","/wiki/Queensland_Reds",0,0
-23990,"Q4798340","Arthur Corfe","Arthur Corfe","Arthur_Corfe","international","]","australia","/wiki/Australian_national_rugby_union_team",0,0
-23991,"Q4798340","Arthur Corfe","Arthur Corfe","Arthur_Corfe","international","3",NA,"/wiki/Christchurch",3,0
-23992,"Q4798340","Arthur Corfe","Arthur Corfe","Arthur_Corfe","international","[",NA,"/wiki/Christchurch",0,3
-23993,"Q4798340","Arthur Corfe","Arthur Corfe","Arthur_Corfe","international","1899",NA,"/wiki/Christchurch",1,0
+23990,"Q4798340","Arthur Corfe","Arthur Corfe","Arthur_Corfe","international","1899","australia","/wiki/Australian_national_rugby_union_team",1,0
 23994,"Q4798487","Arthur Dorward","Arthur Dorward","Arthur_Dorward","amateur","-","cambridge university r.u.f.c.","/wiki/Cambridge_University_R.U.F.C.",0,0
 23995,"Q4798487","Arthur Dorward","Arthur Dorward","Arthur_Dorward","amateur","-","gala rfc","/wiki/Gala_RFC",0,0
 23996,"Q4798487","Arthur Dorward","Arthur Dorward","Arthur_Dorward","senior_club","-","south of scotland","/wiki/South_of_Scotland_rugby_union_team",0,0
@@ -19839,9 +19831,6 @@
 24701,"Q4908449","Bill Cavubati","Bill Cavubati","Bill_Cavubati","international","1995-2005","fiji","/wiki/Fiji",38,0
 24702,"Q4908480","Bill Clark","Bill Clark","Bill_Clark_(rugby_union)","senior_club","1950-58","wellington","/wiki/Victoria_University_of_Wellington",0,0
 24703,"Q4908480","Bill Clark","Bill Clark","Bill_Clark_(rugby_union)","international","1953-56","new zealand","/wiki/Nelson,_New_Zealand",9,9
-24704,"Q4908513","Bill Cody","Bill Cody","Bill_Cody_(rugby_union)","international","]","]",NA,0,0
-24705,"Q4908513","Bill Cody","Bill Cody","Bill_Cody_(rugby_union)","international","2","2",NA,2,0
-24706,"Q4908513","Bill Cody","Bill Cody","Bill_Cody_(rugby_union)","international","[","[",NA,0,2
 24707,"Q4908513","Bill Cody","Bill Cody","Bill_Cody_(rugby_union)","international","1913","wallabies","/wiki/Australian_national_rugby_union_team",3,0
 24708,"Q4908587","Bill Cotty","Bill Cotty","Bill_Cotty","international","1896","south africa","/wiki/South_Africa",1,0
 24709,"Q4908765","Bill Dickinson","Bill Dickinson","Bill_Dickinson","amateur","-","jordanhill rfc","/wiki/Jordanhill_RFC",0,0
@@ -20468,15 +20457,12 @@
 25330,"Q111472719","Biselele Tshamala","Biselele Tshamala","Biselele_Tshamala","senior_club","2022-","zimbabwe goshawks","/wiki/Zimbabwe_national_rugby_union_team#Zimbabwe_Goshawks",1,0
 25331,"Q111472719","Biselele Tshamala","Biselele Tshamala","Biselele_Tshamala","international","2010","zimbabwe u20","/wiki/Zimbabwe_national_under-20_rugby_union_team",3,0
 25332,"Q111472719","Biselele Tshamala","Biselele Tshamala","Biselele_Tshamala","international","2016-","zimbabwe","/wiki/Zimbabwe_national_rugby_union_team#Zimbabwe_Goshawks",7,5
-25333,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","]","]",NA,0,0
-25334,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2","1",NA,0,0
-25335,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","[","[",NA,0,0
-25336,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2013–15","universitatea cluj","/wiki/CS_Universitatea_Cluj-Napoca_(rugby)",0,0
-25337,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2009–13","baia mare","/wiki/CSM_Baia_Mare_(rugby)",0,0
-25338,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","?","timișoara","/wiki/Timi%C8%99oara_Saracens",0,0
-25339,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","?","csu arad","/wiki/CSU_Aurel_Vlaicu_Arad",0,0
-25340,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2003","dinamo bucurești","/wiki/CS_Dinamo_Bucure%C8%99ti_(rugby)",0,0
-25341,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","–2003","universitatea cluj","/wiki/CS_Universitatea_Cluj-Napoca_(rugby)",0,0
+25336,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2013–15","universitatea cluj","/wiki/CS_Universitatea_Cluj-Napoca_(rugby)",NA,NA
+25337,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2009–13","baia mare","/wiki/CSM_Baia_Mare_(rugby)",NA,NA
+25338,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","?","timișoara","/wiki/Timi%C8%99oara_Saracens",NA,NA
+25339,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","?","csu arad","/wiki/CSU_Aurel_Vlaicu_Arad",NA,NA
+25340,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2003","dinamo bucurești","/wiki/CS_Dinamo_Bucure%C8%99ti_(rugby)",NA,NA
+25341,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","–2003","universitatea cluj","/wiki/CS_Universitatea_Cluj-Napoca_(rugby)",NA,NA
 25342,"Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","international","2001-03","romania","/wiki/Romania_national_rugby_union_team",9,0
 25343,"Q50141033","Marius Niculai","Marius Niculai","Marius_Niculai","senior_club","2000","rcj farul constanțastade lavelanétiensc pamiers",NA,0,0
 25344,"Q50141033","Marius Niculai","Marius Niculai","Marius_Niculai","international","2003","romania","/wiki/Romania_national_rugby_union_team",2,0
@@ -24333,15 +24319,11 @@
 29194,"Q5488395","Frank Mellish","Frank Mellish","Frank_Mellish","senior_club","-","barbarian f.c.","/wiki/Barbarian_F.C.",2,0
 29195,"Q5488395","Frank Mellish","Frank Mellish","Frank_Mellish","international","1920-21","england","/wiki/England_national_rugby_union_team",6,0
 29196,"Q5488395","Frank Mellish","Frank Mellish","Frank_Mellish","international","1921-24","south africa","/wiki/South_African_College_School",6,0
+29197,"Q5488675","Frank Nicholson","Frank Nicholson","Frank_Nicholson_(rugby_union)","amateur","","toombul, qld.",NA,NA,NA
 29197,"Q5488675","Frank Nicholson","Frank Nicholson","Frank_Nicholson_(rugby_union)","senior_club","1900-04","queensland","/wiki/Queensland_Reds",13,0
-29198,"Q5488675","Frank Nicholson","Frank Nicholson","Frank_Nicholson_(rugby_union)","international","]","australia","/wiki/Australian_national_rugby_union_team",0,0
-29199,"Q5488675","Frank Nicholson","Frank Nicholson","Frank_Nicholson_(rugby_union)","international","1",NA,"/wiki/Brisbane_Grammar_School",1,0
-29200,"Q5488675","Frank Nicholson","Frank Nicholson","Frank_Nicholson_(rugby_union)","international","[",NA,"/wiki/Brisbane_Grammar_School",0,1
-29201,"Q5488675","Frank Nicholson","Frank Nicholson","Frank_Nicholson_(rugby_union)","international","1903–04",NA,"/wiki/Brisbane_Grammar_School",2,0
-29202,"Q5489175","Frank Reginald Adams","Frank Reginald Adams","Frank_Reginald_Adams","international","]","england","/wiki/England_national_rugby_union_team",7,0
-29203,"Q5489175","Frank Reginald Adams","Frank Reginald Adams","Frank_Reginald_Adams","international","2",NA,"/wiki/Newcastle_upon_Tyne",0,0
-29204,"Q5489175","Frank Reginald Adams","Frank Reginald Adams","Frank_Reginald_Adams","international","[",NA,"/wiki/Newcastle_upon_Tyne",0,0
-29205,"Q5489175","Frank Reginald Adams","Frank Reginald Adams","Frank_Reginald_Adams","international","1875–1879",NA,"/wiki/Newcastle_upon_Tyne",0,2
+29201,"Q5488675","Frank Nicholson","Frank Nicholson","Frank_Nicholson_(rugby_union)","international","1903–04","australia","/wiki/Australian_national_rugby_union_team",2,0
+29205,"Q5489175","Frank Reginald Adams","Frank Reginald Adams","Frank_Reginald_Adams","senior_club","","richmond f.c.","/wiki/Richmond_F.C.",NA,NA
+29205,"Q5489175","Frank Reginald Adams","Frank Reginald Adams","Frank_Reginald_Adams","international","1875–1879",NA,"/wiki/Newcastle_upon_Tyne",7,10
 29206,"Q5489284","Frank Row","Frank Row","Frank_Row","senior_club","1896-1902","new south wales","/wiki/New_South_Wales_Waratahs",10,0
 29207,"Q5489284","Frank Row","Frank Row","Frank_Row","international","]","australia","/wiki/Australian_national_rugby_union_team",0,0
 29208,"Q5489284","Frank Row","Frank Row","Frank_Row","international","1",NA,"/wiki/Dalby,_Queensland",1,0
@@ -24990,7 +24972,7 @@
 29851,"Q55433204","Tjaart Marais","Tjaart Marais","Tjaart_Marais","senior_club","1980-1990","western transvaal,northern transvaal",NA,0,1150
 29852,"Q55433815","Hakatoa Tupou","Hakatoa Tupou","Hakatoa_Tupou","international","1982-1987","tonga","/wiki/Tonga_national_rugby_union_team",9,4
 29853,"Q55433833","Kini Fotu","Kini Fotu","Kini_Fotu","amateur","1984-1980","tonga college","/wiki/Tonga_College",0,0
-29854,"Q55433833","Kini Fotu","Kini Fotu","Kini_Fotu","senior_club","1980-1994","hornsby rugby union club",NA,0,0
+29854,"Q55433833","Kini Fotu","Kini Fotu","Kini_Fotu","senior_club","-1994","hornsby rugby union club",NA,0,0
 29855,"Q55433833","Kini Fotu","Kini Fotu","Kini_Fotu","international","1986-1994","tonga","/wiki/Tongatapu",8,4
 29856,"Q5543506","George Porter","George Porter","George_Porter_(rugby_union)","senior_club","2011–","worcester warriors","/wiki/Worcester_Warriors",0,0
 29857,"Q5543506","George Porter","George Porter","George_Porter_(rugby_union)","senior_club","2009–2011","plymouth albion","/wiki/Plymouth_Albion_R.F.C.",0,0
@@ -27843,14 +27825,8 @@
 32703,"Q61160474","Santiago Carreras","Santiago Carreras","Santiago_Carreras","international","2017-2018","argentina u20s","/wiki/Argentina_national_under-20_rugby_union_team",8,9
 32704,"Q61160474","Santiago Carreras","Santiago Carreras","Santiago_Carreras","international","2018-2019","argentina xv","/wiki/Argentina_XV_national_rugby_union_team",6,20
 32705,"Q61160474","Santiago Carreras","Santiago Carreras","Santiago_Carreras","international","2019-","argentina","/wiki/Argentina_national_under-20_rugby_union_team",53,100
-32706,"Q6116224","Jackie Beith","Jackie Beith","Jackie_Beith","international","]","wallabies","/wiki/Australian_national_rugby_union_team",0,0
-32707,"Q6116224","Jackie Beith","Jackie Beith","Jackie_Beith","international","1",NA,"/wiki/Mudgee,_New_South_Wales",1,0
-32708,"Q6116224","Jackie Beith","Jackie Beith","Jackie_Beith","international","[",NA,"/wiki/Mudgee,_New_South_Wales",0,1
-32709,"Q6116224","Jackie Beith","Jackie Beith","Jackie_Beith","international","1914–20",NA,"/wiki/Mudgee,_New_South_Wales",4,0
-32710,"Q6116650","Jackie Shute","Jackie Shute","Jackie_Shute","international","]","wallabies","/wiki/Australian_national_rugby_union_team",0,0
-32711,"Q6116650","Jackie Shute","Jackie Shute","Jackie_Shute","international","4",NA,"/wiki/Mudgee,_New_South_Wales",4,0
-32712,"Q6116650","Jackie Shute","Jackie Shute","Jackie_Shute","international","[",NA,"/wiki/Mudgee,_New_South_Wales",0,4
-32713,"Q6116650","Jackie Shute","Jackie Shute","Jackie_Shute","international","1920–22",NA,"/wiki/Mudgee,_New_South_Wales",3,0
+32709,"Q6116224","Jackie Beith","Jackie Beith","Jackie_Beith","international","1914–20","wallabies","/wiki/Australian_national_rugby_union_team",4,0
+32710,"Q6116650","Jackie Shute","Jackie Shute","Jackie_Shute","international","1920–22","wallabies","/wiki/Australian_national_rugby_union_team",3,6
 32714,"Q6117271","Jackson Mullane","Jackson Mullane","Jackson_Mullane","senior_club","2007","perth spirit","/wiki/Perth_Spirit",0,0
 32715,"Q6117271","Jackson Mullane","Jackson Mullane","Jackson_Mullane","senior_club","-","sydney fleet","/wiki/Sydney_Fleet",0,0
 32716,"Q6117271","Jackson Mullane","Jackson Mullane","Jackson_Mullane","senior_club","2006","waratahs","/wiki/New_South_Wales_Waratahs",0,0
@@ -32477,11 +32453,8 @@
 37336,"Q6789367","Matt Smith","Matt Smith","Matt_Smith_(rugby_union,_born_1989)","senior_club","2012–","leeds tykes","/wiki/Leeds_Tykes",0,0
 37337,"Q6789367","Matt Smith","Matt Smith","Matt_Smith_(rugby_union,_born_1989)","senior_club","2011–12","cornish pirates","/wiki/Cornish_Pirates",0,0
 37338,"Q6789367","Matt Smith","Matt Smith","Matt_Smith_(rugby_union,_born_1989)","international","2010-11","england students",NA,3,5
-37339,"Q6789427","Matt Thompson","Matt Thompson","Matt_Thompson_(rugby_union)","senior_club","]","]",NA,7,0
-37340,"Q6789427","Matt Thompson","Matt Thompson","Matt_Thompson_(rugby_union)","senior_club","3","2",NA,136,55
-37341,"Q6789427","Matt Thompson","Matt Thompson","Matt_Thompson_(rugby_union)","senior_club","[","[",NA,0,0
-37342,"Q6789427","Matt Thompson","Matt Thompson","Matt_Thompson_(rugby_union)","senior_club","2015–16","ealing trailfinders","/wiki/Ealing_Trailfinders",0,0
-37343,"Q6789427","Matt Thompson","Matt Thompson","Matt_Thompson_(rugby_union)","senior_club","2001–2014","newcastle falcons","/wiki/Newcastle_Falcons",0,0
+37342,"Q6789427","Matt Thompson","Matt Thompson","Matt_Thompson_(rugby_union)","senior_club","2015–16","ealing trailfinders","/wiki/Ealing_Trailfinders",7,0
+37343,"Q6789427","Matt Thompson","Matt Thompson","Matt_Thompson_(rugby_union)","senior_club","2001–2014","newcastle falcons","/wiki/Newcastle_Falcons",136,55
 37344,"Q6789465","Matt Vant Leven","Matt Vant Leven","Matt_Vant_Leven","senior_club","2014−","kobelco steelers","/wiki/Kobelco_Steelers",17,10
 37345,"Q6789465","Matt Vant Leven","Matt Vant Leven","Matt_Vant_Leven","senior_club","2010−13","waikato","/wiki/Waikato_Rugby_Union",30,5
 37346,"Q6790341","Matthew Cooper","Matthew Cooper","Matthew_Cooper_(rugby_union)","senior_club","1985-88","hawke's bay","/wiki/Hawke%27s_Bay_Rugby_Union",0,0
@@ -33043,8 +33016,8 @@
 37902,"Q11425506","Yoshihiro Sakata","Yoshihiro Sakata","Yoshihiro_Sakata","international","1967 - 1973","japan","/wiki/Japan_national_rugby_union_team",16,0
 37903,"Q6915581","Mose Timoteo","Mose Timoteo","Mose_Timoteo","senior_club","2016","denver stampede","/wiki/Denver_Stampede",10,5
 37904,"Q6915581","Mose Timoteo","Mose Timoteo","Mose_Timoteo","international","2000-2012","united states","/wiki/United_States_national_rugby_union_team",32,15
-37905,"Q6916026","Mosese Luveitasau","Mosese Luveitasau","Mosese_Luveitasau","senior_club","2","cardiff blues","/wiki/Cardiff_Blues",0,0
-37906,"Q6916026","Mosese Luveitasau","Mosese Luveitasau","Mosese_Luveitasau","international","3","fiji","/wiki/Fiji",8,20
+37905,"Q6916026","Mosese Luveitasau","Mosese Luveitasau","Mosese_Luveitasau","senior_club","2006-2007","cardiff blues","/wiki/Cardiff_Blues",NA,NA
+37906,"Q6916026","Mosese Luveitasau","Mosese Luveitasau","Mosese_Luveitasau","international","2005-2007","fiji","/wiki/Fiji",8,20
 37907,"Q6916036","Mosey van Buuren","Mosey van Buuren","Mosey_van_Buuren","international","1891","south africa","/wiki/South_Africa_national_rugby_union_team",1,0
 37908,"Q6918721","Motu Matu'u","Motu Matu'u","Motu_Matu%27u","senior_club","2018–","london irish","/wiki/London_Irish",46,15
 37909,"Q6918721","Motu Matu'u","Motu Matu'u","Motu_Matu%27u","senior_club","2016−2018","gloucester","/wiki/Gloucester_Rugby",0,0
@@ -37356,7 +37329,8 @@
 45139,"Q7675872","Taiasina Tuifu'a","Taiasina Tuifu'a","Taiasina_Tuifu%27a","senior_club","2008","taranaki","/wiki/Taranaki_Rugby_Football_Union",38,40
 45140,"Q7675872","Taiasina Tuifu'a","Taiasina Tuifu'a","Taiasina_Tuifu%27a","senior_club","2004–2007","counties manukau","/wiki/Counties_Manukau_Rugby_Football_Union",0,0
 45141,"Q7675872","Taiasina Tuifu'a","Taiasina Tuifu'a","Taiasina_Tuifu%27a","international","2011-2017","samoa","/wiki/Samoa",19,10
-45150,"Q7676803","Tajhon Mailata","Tajhon Mailata","Tajhon_Mailata","senior_club","2007-2006","bay of plentywestern force",NA,0,0
+45150,"Q7676803","Tajhon Mailata","Tajhon Mailata","Tajhon_Mailata","senior_club","2007-","bay of plenty","/wiki/Bay_of_Plenty_Rugby_Union",0,NA
+45150,"Q7676803","Tajhon Mailata","Tajhon Mailata","Tajhon_Mailata","senior_club","2006","western force","/wiki/Western_Force",0,NA
 45152,"Q7677052","Takahiro Hosokawa","Takahiro Hosokawa","Takahiro_Hosokawa","amateur","0-1989","doshisha university rfc",NA,0,0
 45153,"Q7677052","Takahiro Hosokawa","Takahiro Hosokawa","Takahiro_Hosokawa","senior_club","1989-1994","kobe steel","/wiki/Kobelco_Steelers",0,0
 45154,"Q7677052","Takahiro Hosokawa","Takahiro Hosokawa","Takahiro_Hosokawa","international","1990-1993","japan","/wiki/Japan",10,115
@@ -48532,7 +48506,8 @@
 60453,"Q16008640","Jimmy Clark","Jimmy Clark","Jimmy_Clark_(rugby_union)","international","1931-33",NA,"/wiki/Mount_Perry,_Queensland",5,0
 60454,"Q105811368","Carlos Price","Carlos Price","Carlos_Price","senior_club","2017-2018","wellington","/wiki/Wellington_(National_Provincial_Championship)",12,0
 60455,"Q105811368","Carlos Price","Carlos Price","Carlos_Price","senior_club","2019","waikato","/wiki/Waikato_(National_Provincial_Championship)",6,0
-60456,"Q105811368","Carlos Price","Carlos Price","Carlos_Price","international","2","new zealand under 20",NA,4,10
+60455,"Q105811368","Carlos Price","Carlos Price","Carlos_Price","senior_club","2018","hurricanes","/wiki/Hurricanes_(rugby_union)",0,0
+60456,"Q105811368","Carlos Price","Carlos Price","Carlos_Price","international","2016-2018","new zealand under 20",NA,4,10
 60457,"Q16008751","George J. Morgan","George J. Morgan","George_J._Morgan","international","1934-38","ireland","/wiki/Ireland_national_rugby_union_team",0,0
 60458,"Q16008751","George J. Morgan","George J. Morgan","George_J._Morgan","international","1938","british & irish lions","/wiki/British_%26_Irish_Lions",0,0
 60459,"Q16009557","Arthur Finlay","Arthur Finlay","Arthur_Finlay_(rugby_union,_born_1903)","international","]","wallabies","/wiki/Australian_national_rugby_union_team",0,0
@@ -50028,13 +50003,7 @@
 61949,"Q16226558","Junior Bester","Junior Bester","Junior_Bester","senior_club","2010","pumas","/wiki/Pumas_(Currie_Cup)",7,5
 61950,"Q16226558","Junior Bester","Junior Bester","Junior_Bester","senior_club","2011-2013","boland cavaliers","/wiki/Boland_Cavaliers",46,40
 61951,"Q16226558","Junior Bester","Junior Bester","Junior_Bester","senior_club","2014-present","swd eagles","/wiki/SWD_Eagles",30,20
-61952,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","]","wallabies","/wiki/Australian_national_rugby_union_team",0,0
-61953,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","2",NA,"/wiki/Blayney,_New_South_Wales",1,0
-61954,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","[",NA,"/wiki/Blayney,_New_South_Wales",0,1
-61955,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","]",NA,"/wiki/Blayney,_New_South_Wales",1,0
-61956,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","1",NA,"/wiki/Blayney,_New_South_Wales",0,0
-61957,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","[",NA,"/wiki/Blayney,_New_South_Wales",0,0
-61958,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","1922",NA,"/wiki/Blayney,_New_South_Wales",0,0
+61952,"Q16228021","Henry Pigott","Henry Pigott","Henry_Pigott_(rugby_union)","international","1922","wallabies","/wiki/Australian_national_rugby_union_team",1,0
 61959,"Q16228158","Charles Reid","Charles Reid","Charles_Reid_(rugby_union)","amateur","-","perthshire","/wiki/Perthshire_RFC",0,0
 61960,"Q16228158","Charles Reid","Charles Reid","Charles_Reid_(rugby_union)","senior_club","1880","edinburgh district","/wiki/Edinburgh_District_(rugby_union)",0,0
 61961,"Q16228158","Charles Reid","Charles Reid","Charles_Reid_(rugby_union)","senior_club","1881","east of scotland district","/wiki/East_of_Scotland_District_(rugby_union)",0,0
@@ -54264,8 +54233,8 @@
 66187,"Q18632220","Toni Pulu","Toni Pulu","Toni_Pulu","senior_club","2016-2018","chiefs","/wiki/Chiefs_(rugby_union)",31,70
 66188,"Q18632220","Toni Pulu","Toni Pulu","Toni_Pulu","senior_club","2019-2020","brumbies","/wiki/Brumbies",14,10
 66189,"Q18632220","Toni Pulu","Toni Pulu","Toni_Pulu","senior_club","2021-2023","western force","/wiki/Western_Force",21,25
-66190,"Q18632227","Josh Renton","Josh Renton","Josh_Renton","senior_club","2013−2018","otago","/wiki/Otago_(National_Provincial_Championship)",42,1e+35
-66191,"Q18632227","Josh Renton","Josh Renton","Josh_Renton","senior_club","2015−2018","highlanders","/wiki/Highlanders_(rugby_union)",6,1e+35
+66190,"Q18632227","Josh Renton","Josh Renton","Josh_Renton","senior_club","2013−2018","otago","/wiki/Otago_(National_Provincial_Championship)",42,NA
+66191,"Q18632227","Josh Renton","Josh Renton","Josh_Renton","senior_club","2015−2018","highlanders","/wiki/Highlanders_(rugby_union)",6,NA
 66192,"Q18632227","Josh Renton","Josh Renton","Josh_Renton","senior_club","2018−2021","zebre","/wiki/Zebre",42,15
 66193,"Q18632227","Josh Renton","Josh Renton","Josh_Renton","senior_club","2021","southland stags","/wiki/Southland_(National_Provincial_Championship)",2,0
 66194,"Q18632227","Josh Renton","Josh Renton","Josh_Renton","senior_club","2022−","valorugby emilia","/wiki/Valorugby_Emilia",0,0
@@ -58659,7 +58628,8 @@
 72750,"Q21622160","Torin Myhill","Torin Myhill","Torin_Myhill","senior_club","2013-16","scarlets","/wiki/Scarlets",5,0
 72751,"Q21622160","Torin Myhill","Torin Myhill","Torin_Myhill","senior_club","2022","cardiff rugby","/wiki/Cardiff_Rugby",1,0
 72752,"Q21622160","Torin Myhill","Torin Myhill","Torin_Myhill","international","2015","wales u20","/wiki/Wales_national_under-20_rugby_union_team",5,0
-72758,"Q21622199","Ioan Nicholas","Ioan Nicholas","Ioan_Nicholas","senior_club","2015-2015-","llanelli rfcscarlets",NA,1171,10
+72758,"Q21622199","Ioan Nicholas","Ioan Nicholas","Ioan_Nicholas","senior_club","2015-","llanelli rfc","/wiki/Llanelli_RFC",11,10
+72758,"Q21622199","Ioan Nicholas","Ioan Nicholas","Ioan_Nicholas","senior_club","2015-","scarlets","/wiki/Scarlets",71,50
 72759,"Q21622199","Ioan Nicholas","Ioan Nicholas","Ioan_Nicholas","international","2018","wales u20","/wiki/Wales_national_under-20_rugby_union_team",2,0
 72762,"Q21622221","Sam Nock","Sam Nock","Sam_Nock","senior_club","2015-","northland","/wiki/Northland_(National_Provincial_Championship)",86,107
 72763,"Q21622221","Sam Nock","Sam Nock","Sam_Nock","senior_club","2016-","blues","/wiki/Blues_(Super_Rugby)",77,10
@@ -61049,8 +61019,8 @@
 77242,"Q24258759","Lewis Marshall","Lewis Marshall","Lewis_Marshall","amateur","2013","freyberg",NA,0,0
 77243,"Q24258759","Lewis Marshall","Lewis Marshall","Lewis_Marshall","amateur","2014","petone (wellington)",NA,0,0
 77244,"Q24258759","Lewis Marshall","Lewis Marshall","Lewis_Marshall","amateur","2015-16","mac sports",NA,0,0
-77245,"Q24258759","Lewis Marshall","Lewis Marshall","Lewis_Marshall","senior_club","17;2015-16","manawatu","/wiki/Manawatu_(National_Provincial_Championship)",36,58
-77246,"Q24258759","Lewis Marshall","Lewis Marshall","Lewis_Marshall","senior_club","-","hawke's bay","/wiki/Hawke%27s_Bay_(National_Provincial_Championship)",8,5
+77245,"Q24258759","Lewis Marshall","Lewis Marshall","Lewis_Marshall","senior_club","2010-13, 2017","manawatu","/wiki/Manawatu_(National_Provincial_Championship)",36,58
+77246,"Q24258759","Lewis Marshall","Lewis Marshall","Lewis_Marshall","senior_club","2015-16","hawke's bay","/wiki/Hawke%27s_Bay_(National_Provincial_Championship)",8,5
 77253,"Q24258817","Irakli Mirtskhulava","Irakli Mirtskhulava","Irakli_Mirtskhulava","senior_club","2016-","oyonnax rugby","/wiki/Oyonnax_Rugby",25,5
 77254,"Q24258817","Irakli Mirtskhulava","Irakli Mirtskhulava","Irakli_Mirtskhulava","senior_club","2013-2016","tarbes","/wiki/Tarbes_Pyr%C3%A9n%C3%A9es_Rugby",27,0
 77255,"Q24258817","Irakli Mirtskhulava","Irakli Mirtskhulava","Irakli_Mirtskhulava","international","2016-","georgia","/wiki/Georgian_SSR",14,0
@@ -62370,7 +62340,8 @@
 79691,"Q26923808","Tadhg Beirne","Tadhg Beirne","Tadhg_Beirne","international","2018-","ireland","/wiki/Ireland_national_under-20_rugby_union_team",61,60
 79692,"Q26923808","Tadhg Beirne","Tadhg Beirne","Tadhg_Beirne","international","2021","british & irish lions","/wiki/British_%26_Irish_Lions",2,0
 79697,"Q26923808","Tadhg Beirne","Tadhg Beirne","Tadhg_Beirne","senior_club","2018-","munster","/wiki/Munster_Rugby",90,50
-79701,"Q26923811","Josh Macleod","Josh Macleod","Josh_Macleod","senior_club","2015-2016-","llanelli rfcscarlets",NA,80103,25
+79701,"Q26923811","Josh Macleod","Josh Macleod","Josh_Macleod","senior_club","2015-2018","llanelli rfc","/wiki/Llanelli_RFC",13,15
+79701,"Q26923811","Josh Macleod","Josh Macleod","Josh_Macleod","senior_club","2016-","scarlets","/wiki/Scarlets",134,70
 79702,"Q26923811","Josh Macleod","Josh Macleod","Josh_Macleod","international","2016","wales u20","/wiki/Wales_national_under-20_rugby_union_team",3,0
 79703,"Q26923811","Josh Macleod","Josh Macleod","Josh_Macleod","international","2022-","wales","/wiki/Wales_national_under-20_rugby_union_team",2,0
 79707,"Q26923916","Joey Carbery","Joey Carbery","Joey_Carbery","amateur","2014-2015","ucd","/wiki/University_College_Dublin_R.F.C.",0,0
