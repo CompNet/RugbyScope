@@ -288,6 +288,11 @@ tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
 cols <- which(colnames(players) %in% sup_cols)
 players <- players[, -cols]
 
+# rename certain columns
+colnames(players)[which(colnames(players) == "origWdId")] <- "wikidataId"
+colnames(players)[which(colnames(players) == "origName")] <- "fullName"
+colnames(players)[which(colnames(players) == "wiki_Name")] <- "enName"
+
 
 
 
@@ -824,13 +829,14 @@ for (r in 1:nrow(new_stints)) {
 #print(length(which(!is.na(new_stints[, "teamWP"]))))  # 57,946/62,603 non-NAs
 ####
 
-
-
 # remove superfluous columns
 sup_cols <- c("X")
 tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
 cols <- which(colnames(new_stints) %in% sup_cols)
 new_stints <- new_stints[, -cols]
+
+# rename certain columns
+colnames(new_stints)[which(colnames(new_stints) == "wiki_Name")] <- "enName"
 
 
 
