@@ -154,20 +154,25 @@ write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 tlog("Extract team table from stints")
 removed_teams <- c()
 
-# TODO
-# remove stints with teams "(loan)", TEMPORARILY
-# - "(d/r)"- "(medical joker)"- "(on loan)"- "(permit)"- "(trial)"
-# same with "[" "]" "\\d"
-# and "?" > but definitely
+# TEMPORARILY remove stints with missing team names
+idx <- which(wp_stints[, "teamName"] %in% c("(d/r)", "(medical joker)", "(loan)", "(on loan)", "(permit)", "(trial)", "(amateur)", "[", "]", "1", "2", "3", "4", "5"))
+if (length(idx) > 0)
+  wp_stints <- wp_stints[-idx, ]
 
 # clean team names
-# wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub("→", "", wp_stints[, "teamName"], fixed = TRUE)
-# wp_stints[, "teamName"] <- gsub("(loan)", "", wp_stints[, "teamName"], fixed = TRUE)
+#
+# wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
+wp_stints[, "teamName"] <- gsub("-+>", "", wp_stints[, "teamName"], fixed = FALSE)
+wp_stints[, "teamName"] <- gsub(" ?(loan)$", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- trimws(wp_stints[, "teamName"])
 idx <- which(wp_stints[, "teamName"] %in% c("?", "", "NA"))
 if (length(idx) > 0)
   wp_stints[idx, "teamName"] <- NA
+#### debug: show team list
+#head(sort(unique(wp_stints[, "teamName"])),100)
+#tail(sort(unique(wp_stints[, "teamName"])),100)
+####
 
 # insert new teams based on the manually curated list new_teams
 tlog(2, "Import manually curated additional teams and insert into merged team table")
