@@ -145,7 +145,6 @@ print(total_changes)
 tab.file <- file.path(fusion_folder, "players_06_enwp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
-# >>>>>>>>>>>>>>> TODO <<<<<<<<<<<<<<<<<
 
 
 
@@ -155,10 +154,16 @@ write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 tlog("Extract team table from stints")
 removed_teams <- c()
 
+# TODO
+# remove stints with teams "(loan)", TEMPORARILY
+# - "(d/r)"- "(medical joker)"- "(on loan)"- "(permit)"- "(trial)"
+# same with "[" "]" "\\d"
+# and "?" > but definitely
+
 # clean team names
-wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
+# wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub("→", "", wp_stints[, "teamName"], fixed = TRUE)
-wp_stints[, "teamName"] <- gsub("(prêt)", "", wp_stints[, "teamName"], fixed = TRUE)
+# wp_stints[, "teamName"] <- gsub("(loan)", "", wp_stints[, "teamName"], fixed = TRUE)
 wp_stints[, "teamName"] <- trimws(wp_stints[, "teamName"])
 idx <- which(wp_stints[, "teamName"] %in% c("?", "", "NA"))
 if (length(idx) > 0)
