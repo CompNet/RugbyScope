@@ -284,7 +284,8 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 # remove sevens teams
 tlog(2, "Removing rugby sevens teams")
 del_rows <- which(grepl("\\b[sS]evens?\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][sS]evens?[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE) |
-                  grepl("\\b7s?\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.]7s[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
+                  grepl("\\b7s?\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.]7s[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE) |
+                  grepl("\\bVII\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) | grepl("[\\W_/,.]VII[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE, ignore.case = TRUE))
 #write.csv(wp_teams[del_rows, ], file.path(wp_folder, "rugby_sevens_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
@@ -329,7 +330,12 @@ tlog(4, "Removed ", length(del_rows), " highschool teams from the WP table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 # remove women's teams
-# TODO (didn't find any mean to automate this task on these data)
+del_rows <- which(grepl("\\bwallaroos?\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE))                # >>>> TODO check that on definitive data
+#write.csv(wp_teams[del_rows, ], file.path(wp_folder, "women_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
+wp_teams <- wp_teams[-del_rows, ]
+tlog(4, "Removed ", length(del_rows), " women's teams from the WP table")
+tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 # we first focus on teams possessing a URL, as they are easier to match
 
