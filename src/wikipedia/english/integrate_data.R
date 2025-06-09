@@ -10,7 +10,6 @@ library("dplyr")
 library("httr")
 library("jsonlite")
 library("magrittr")
-library("polyglotr")
 
 source("src/common/logging.R")
 source("src/common/norm_names.R")
@@ -95,7 +94,7 @@ tlog(2, "Merging regular fields")
 total_changes <- rep(0, length(map))
 names(total_changes) <- names(map)
 for (p in 1:nrow(wp_players)) {
-  if (p %% 100 == 0)
+  if (p %% 1000 == 0)
     tlog(4, "Processing player ", p, "/", nrow(wp_players))
   filled_wp_cols <- which(!is.na(wp_players[p, map]))
   empty_fus_cols <- which(is.na(fus_players[idx[p], names(map)]))
@@ -154,7 +153,7 @@ write.csv(fus_players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 tlog("Extract team table from stints")
 removed_teams <- c()
 
-# TEMPORARILY remove stints with missing team names
+# TODO TEMPORARILY remove stints with missing team names
 idx <- which(wp_stints[, "teamName"] %in% c("(d/r)", "(medical joker)", "(loan)", "(on loan)", "(permit)", "(trial)", "(amateur)", "[", "]", "1", "2", "3", "4", "5"))
 if (length(idx) > 0)
   wp_stints <- wp_stints[-idx, ]
@@ -164,7 +163,9 @@ wp_stints[, "teamName"] <- gsub("→", "", wp_stints[, "teamName"], fixed = TRUE
 #
 # wp_stints[, "teamName"] <- gsub("\\[(\\d+|[a-z]+)\\]", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub("-+>", "", wp_stints[, "teamName"], fixed = FALSE)
-wp_stints[, "teamName"] <- gsub(" ?(loan)$", "", wp_stints[, "teamName"], fixed = FALSE)
+wp_stints[, "teamName"] <- gsub(" ?\\(amateur\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
+wp_stints[, "teamName"] <- gsub(" ?\\(d/r\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
+wp_stints[, "teamName"] <- gsub(" ?\\(d/r\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- trimws(wp_stints[, "teamName"])
 idx <- which(wp_stints[, "teamName"] %in% c("?", "", "NA"))
 if (length(idx) > 0)
@@ -282,7 +283,8 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 
 # remove sevens teams
 tlog(2, "Removing rugby sevens teams")
-del_rows <- which(grepl("\\bsept\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.]sept[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
+del_rows <- which(grepl("\\b[sS]evens?\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][sS]evens?[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE) |
+                  grepl("\\b7s?\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.]7s[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
 #write.csv(wp_teams[del_rows, ], file.path(wp_folder, "rugby_sevens_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
@@ -292,9 +294,8 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 # remove rugby league teams
 tlog(2, "Removing rugby league teams")
 #### debug: code used to detect rugby league teams (first approximation)
-#idx <- which(grepl("\\b[Xx][Ii]{3}\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][Xx][Ii]{3}[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE) |
-#          grepl("\\b[Ll]eague\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][Ll]eague[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
-#tab <- wp_teams[idx, ]  # 89 teams detected
+#idx <- which(grepl("\\b[Ll]eague\\b", wp_teams[, "altNames"], fixed = FALSE) | grepl("[\\W_/,.][Ll]eague[\\W_/,.]", wp_teams[, "teamWP"], fixed = FALSE))
+#tab <- wp_teams[idx, ]  # 420 teams detected
 #idx <- order(tab[, "altNames"])
 #write.csv(tab[idx, -1], file.path(ref_folder, "rugby_league_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### this list was then completed manually and used below
@@ -307,10 +308,24 @@ tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, ba
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 # use the rugby league names
 list_rleague <- read.csv(file.path(ref_folder, "team_names.csv"))
-del_rows <- which(wp_teams[, "altNames"] %in% list_rleague[, "name"])
+del_rows <- which(wp_teams[, "altNames"] %in% tolower(list_rleague[, "name"]))
+if (length(del_rows) > 0) {
+  removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
+  wp_teams <- wp_teams[-del_rows, ]
+}
+tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, based on their name")
+tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+
+# remove junior teams (highschool, U17, etc.)
+tlog(2, "Removing junior teams")
+del_rows <- which(grepl("\\bhigh ?school\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
+                  grepl("\\bgrammar\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
+                  grepl("\\bunder[ -]1[3-7]\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
+                  grepl("\\bacademy\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE))                # >>>> TODO check that on definitive data
+#write.csv(wp_teams[del_rows, ], file.path(wp_folder, "junior_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
 wp_teams <- wp_teams[-del_rows, ]
-tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, based on their name")
+tlog(4, "Removed ", length(del_rows), " highschool teams from the WP table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 # remove women's teams
@@ -342,25 +357,25 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 #write.csv(unique_urls[idx], file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### we use the above file to define manually the url2url map (used above), url2id map (used below) and bew_teams list
 
-# use url2id map to match the remaining cases based on their URL
-tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
-temp <- read.csv(file.path(wp_folder, "maps", "url2id.csv"))
-map_ids <- temp[, "teamId"]
-names(map_ids) <- temp[, "url"]
-wp_idx <- match(names(map_ids), wp_teams[, "teamWP"])
-# handle teams present in merged table: just update id in WP table
-fus_idx <- match(as.integer(map_ids), fus_teams[, "rugbyscopeId"])
-ii <- which(!is.na(wp_idx) & !is.na(fus_idx))
-wp_teams[wp_idx[ii], "rugbyscopeId"] <- fus_teams[fus_idx[ii], "rugbyscopeId"]
-tlog(4, "Could match directly ", length(ii), " teams based on ids")
-tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
-# handle teams marked for deletion (NA id) in url2id
-ii <- which(!is.na(wp_idx) & is.na(fus_idx))
-del_rows <- wp_idx[ii]
-removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
-wp_teams <- wp_teams[-del_rows, ]
-tlog(4, "Removed ", length(del_rows), " highschool teams or other similar teams from the WP table")
-tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+                    # use url2id map to match the remaining cases based on their URL
+                    tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
+                    temp <- read.csv(file.path(wp_folder, "maps", "url2id.csv"))
+                    map_ids <- temp[, "teamId"]
+                    names(map_ids) <- temp[, "url"]
+                    wp_idx <- match(names(map_ids), wp_teams[, "teamWP"])
+                    # handle teams present in merged table: just update id in WP table
+                    fus_idx <- match(as.integer(map_ids), fus_teams[, "rugbyscopeId"])
+                    ii <- which(!is.na(wp_idx) & !is.na(fus_idx))
+                    wp_teams[wp_idx[ii], "rugbyscopeId"] <- fus_teams[fus_idx[ii], "rugbyscopeId"]
+                    tlog(4, "Could match directly ", length(ii), " teams based on ids")
+                    tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+                    # handle teams marked for deletion (NA id) in url2id
+                    ii <- which(!is.na(wp_idx) & is.na(fus_idx))
+                    del_rows <- wp_idx[ii]
+                    removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
+                    wp_teams <- wp_teams[-del_rows, ]
+                    tlog(4, "Removed ", length(del_rows), " highschool teams or other similar teams from the WP table")
+                    tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 ## we now switch to names only, as the remaining WP teams do not have a URL
 
@@ -405,6 +420,7 @@ result <- match_team_names(src_names = wp_teams[wp_idx, "altNames"], tgt_names =
 #}
 #### the above loop is used to detect cases of multiple matching
 # use matches to update WP team table
+                                                                                result <- sapply(result, function(x) x[1])
 idx <- which(!is.na(result))
 tlog(4, "Could match ", length(idx), " teams based on name only")
 #### debug (check matches)

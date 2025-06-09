@@ -5357,7 +5357,8 @@
 "Q3017806","David Duckham","David Duckham","David_Duckham","international","1969-1976","england","England_national_rugby_union_team",36,36,"1969","1976"
 "Q3017806","David Duckham","David Duckham","David_Duckham","international","1971-1971","british and irish lions","British_%26_Irish_Lions",3,0,"1971","1971"
 "Q3017806","David Duckham","David Duckham","David_Duckham","international","1973-1973","barbarians","Barbarian_F.C.",0,0,"1973","1973"
-"Q3017897","David Fitter","David Fitter","David_Fitter","senior_club","2014-","act brumbies, western force,",NA,0,0,"2014",NA
+"Q3017897","David Fitter","David Fitter","David_Fitter","senior_club","NA-NA","act brumbies",NA,0,0,NA,NA
+"Q3017897","David Fitter","David Fitter","David_Fitter","senior_club","NA-NA","western force",NA,0,0,NA,NA
 "Q3017897","David Fitter","David Fitter","David_Fitter","senior_club","NA-NA","australian wallabies,",NA,0,0,NA,NA
 "Q3017897","David Fitter","David Fitter","David_Fitter","senior_club","NA-NA","australia a, london irish",NA,0,0,NA,NA
 "Q3017899","David Flatman","David Flatman","David_Flatman","senior_club","1998-2003","saracens","Saracens_F.C.",109,25,"1998","2003"
@@ -24898,7 +24899,8 @@
 "Q5542814","George Neilson","George Neilson","George_Neilson","amateur","NA-NA","west of scotland","West_of_Scotland_F.C.",0,0,NA,NA
 "Q5542814","George Neilson","George Neilson","George_Neilson","senior_club","1891-1891","glasgow district","Glasgow_District_(rugby_union)",0,0,"1891","1891"
 "Q5542814","George Neilson","George Neilson","George_Neilson","international","1891-1896","scotland","Scotland",14,6,"1891","1896"
-"Q55433204","Tjaart Marais","Tjaart Marais","Tjaart_Marais","senior_club","1980-1990","western transvaal,northern transvaal",NA,0,1150,"1980","1990"
+"Q55433204","Tjaart Marais","Tjaart Marais","Tjaart_Marais","senior_club","1980-1990","western transvaal,","Leopards_(rugby_union)",0,1150,"1980","1990"
+"Q55433204","Tjaart Marais","Tjaart Marais","Tjaart_Marais","senior_club","1980-1990","northern transvaal","Blue_Bulls",0,1150,"1980","1990"
 "Q55433815","Hakatoa Tupou","Hakatoa Tupou","Hakatoa_Tupou","international","1982-1987","tonga","Tonga_national_rugby_union_team",9,4,"1982","1987"
 "Q55433833","Kini Fotu","Kini Fotu","Kini_Fotu","amateur","1984-","tonga college","Tonga_College",0,0,"1984",NA
 "Q55433833","Kini Fotu","Kini Fotu","Kini_Fotu","senior_club","-1994","hornsby rugby union club",NA,0,0,NA,"1994"
@@ -33901,7 +33903,7 @@
 "Q7174734","Peter Horne","Peter Horne","Peter_Horne","senior_club","2009-2021","glasgow warriors","Glasgow_Warriors",182,446,"2009","2021"
 "Q7174734","Peter Horne","Peter Horne","Peter_Horne","international","2007-2009","scotland u20","Scotland_national_under-20_rugby_union_team",0,0,"2007","2009"
 "Q7174734","Peter Horne","Peter Horne","Peter_Horne","international","2010-2010","scotland a","Scotland_A_national_rugby_union_team",1,0,"2010","2010"
-"Q7174734","Peter Horne","Peter Horne","Peter_Horne","international","2013-2021","scotland","Aberdeen",45,53,"2013","2021"
+"Q7174734","Peter Horne","Peter Horne","Peter_Horne","international","2013-2021","scotland","Scotland_national_rugby_union_team",45,53,"2013","2021"
 "Q7174823","Peter Ianusevici","Peter Ianusevici","Peter_Ianusevici","senior_club","NA-NA","știința cluj","CS_Universitatea_Elbi_Cluj",0,0,NA,NA
 "Q7174823","Peter Ianusevici","Peter Ianusevici","Peter_Ianusevici","senior_club","NA-NA","rcj farul constanța","RCJ_Farul_Constan%C8%9Ba",0,0,NA,NA
 "Q7174823","Peter Ianusevici","Peter Ianusevici","Peter_Ianusevici","senior_club","NA-NA","sportul studențesc",NA,0,0,NA,NA
@@ -38750,7 +38752,7 @@
 "Q80607","George Pisi","George Pisi","George_Pisi","senior_club","2018-2018","force","Western_Force",4,0,"2018","2018"
 "Q80607","George Pisi","George Pisi","George_Pisi","international","2006-2007","new zealand u21","New_Zealand_national_under-21_rugby_union_team",6,5,"2006","2007"
 "Q80607","George Pisi","George Pisi","George_Pisi","international","2010-2016","samoa","Samoa_national_rugby_union_team",21,20,"2010","2016"
-"Q8060751","Yukio Motoki","Yukio Motoki","Yukio_Motoki","amateur","1987-1990","aida hs, higashiosaka",NA,0,0,"1987","1990"
+"Q8060751","Yukio Motoki","Yukio Motoki","Yukio_Motoki","amateur","1987-1990","aida hs",NA,0,0,"1987","1990"
 "Q8060751","Yukio Motoki","Yukio Motoki","Yukio_Motoki","amateur","1990-1994","meiji university rfc",NA,0,0,"1990","1994"
 "Q8060751","Yukio Motoki","Yukio Motoki","Yukio_Motoki","senior_club","1994-2010","kobelco steelers","Kobelco_Kobe_Steelers",0,0,"1994","2010"
 "Q8060751","Yukio Motoki","Yukio Motoki","Yukio_Motoki","international","1991-2005","japan","Japan_national_rugby_union_team",79,45,"1991","2005"
@@ -47833,7 +47835,7 @@
 "Q15695798","Marcello Violi","Marcello Violi","Marcello_Violi","international","2014-2021","italy a","Italy_A_national_rugby_union_team",5,5,"2014","2021"
 "Q15695798","Marcello Violi","Marcello Violi","Marcello_Violi","international","2015-2021","italy","Italy_national_under-20_rugby_union_team",21,3,"2015","2021"
 "Q15710153","Geoffrey Palis","Geoffrey Palis","Geoffrey_Palis","amateur","NA-NA","ua gaillacoise",NA,0,0,NA,NA
-"Q15710153","Geoffrey Palis","Geoffrey Palis","Geoffrey_Palis","senior_club","2009-2013","albi","Albi",81,137,"2009","2013"
+"Q15710153","Geoffrey Palis","Geoffrey Palis","Geoffrey_Palis","senior_club","2009-2013","albi","SC_Albi",81,137,"2009","2013"
 "Q15710153","Geoffrey Palis","Geoffrey Palis","Geoffrey_Palis","senior_club","2013-","castres","Castres_Olympique",196,446,"2013",NA
 "Q15710153","Geoffrey Palis","Geoffrey Palis","Geoffrey_Palis","international","2011-2011","france u20","France_national_under-20_rugby_union_team",9,25,"2011","2011"
 "Q15710153","Geoffrey Palis","Geoffrey Palis","Geoffrey_Palis","international","2018-","france","France",2,0,"2018",NA
