@@ -26165,7 +26165,7 @@
 "Q5686489","Haydn Thomas","Haydn Thomas","Haydn_Thomas","senior_club","2005-2007","gloucester rugby","Gloucester_Rugby",17,5,"2005","2007"
 "Q5686489","Haydn Thomas","Haydn Thomas","Haydn_Thomas","senior_club","2003-2005","exeter chiefs","Exeter_Chiefs",0,0,"2003","2005"
 "Q568655","Joseph Roffo","Joseph Roffo","Joseph_Roffo","senior_club","1896-1899","racing club de france","Racing_Club_de_France_Football",0,0,"1896","1899"
-"Q56876909","Josh Whippy","Josh Whippy","Josh_Whippy","amateur","2010-2010","united rugby club",NA,0,0,"2010","2010"
+"Q56876909","Josh Whippy","Josh Whippy","Josh_Whippy","amateur","2010-2010","alpine united rugby club",NA,0,0,"2010","2010"
 "Q56876909","Josh Whippy","Josh Whippy","Josh_Whippy","amateur","2017-2017","utah selects",NA,0,0,"2017","2017"
 "Q56876909","Josh Whippy","Josh Whippy","Josh_Whippy","senior_club","2018-","utah warriors","Utah_Warriors",0,0,"2018",NA
 "Q56876909","Josh Whippy","Josh Whippy","Josh_Whippy","international","2017-2017","usa selects","USA_Falcons_XV",2,5,"2017","2017"
@@ -29150,7 +29150,8 @@
 "Q62572798","Davide Zanetti","Davide Zanetti","Davide_Zanetti","senior_club","2015-","calvisano","Rugby_Calvisano",80,20,"2015",NA
 "Q62572798","Davide Zanetti","Davide Zanetti","Davide_Zanetti","senior_club","2017-2017","→zebre","Zebre_Parma",1,0,"2017","2017"
 "Q62572798","Davide Zanetti","Davide Zanetti","Davide_Zanetti","international","2014-2015","italy under 20","Italy_national_under-20_rugby_union_team",12,5,"2014","2015"
-"Q6258105","John Skinner Wilson","John Skinner Wilson","John_Skinner_Wilson_(rugby_union)","senior_club","NA-NA","united services portsmouthlondon scottish fc",NA,0,0,NA,NA
+"Q6258105","John Skinner Wilson","John Skinner Wilson","John_Skinner_Wilson_(rugby_union)","senior_club","NA-NA","united services portsmouth","United_Services_Portsmouth_Rugby_Football_Club",0,0,NA,NA
+"Q6258105","John Skinner Wilson","John Skinner Wilson","John_Skinner_Wilson_(rugby_union)","senior_club","NA-NA","london scottish fc","London_Scottish_FC",0,0,NA,NA
 "Q6258105","John Skinner Wilson","John Skinner Wilson","John_Skinner_Wilson_(rugby_union)","international","1908-1909","scotland","Scotland_national_rugby_union_team",2,0,"1908","1909"
 "Q6258643","John Spencer","John Spencer","John_Spencer_(rugby_union,_born_1947)","senior_club","1966-1970","headingleycambridge university",NA,0,0,"1966","1970"
 "Q6258643","John Spencer","John Spencer","John_Spencer_(rugby_union,_born_1947)","international","1969-1971","england","England",14,6,"1969","1971"
@@ -47314,7 +47315,7 @@
 "Q1396331","Frédéric Michalak","Frédéric Michalak","Fr%C3%A9d%C3%A9ric_Michalak","senior_club","2008-2008","sharks","Sharks_(Currie_Cup)",9,5,"2008","2008"
 "Q1396331","Frédéric Michalak","Frédéric Michalak","Fr%C3%A9d%C3%A9ric_Michalak","senior_club","2011-2012","sharks","Sharks_(Currie_Cup)",21,115,"2011","2012"
 "Q1396331","Frédéric Michalak","Frédéric Michalak","Fr%C3%A9d%C3%A9ric_Michalak","international","2001-2015","france","France_national_rugby_union_team",77,436,"2001","2015"
-"Q1396771","John Smit","John Smit","John_Smit","amateur","1997-1997","university of natal(maritzburg)",NA,0,0,"1997","1997"
+"Q1396771","John Smit","John Smit","John_Smit","amateur","1997-1997","university of natal maritzburg",NA,0,0,"1997","1997"
 "Q1396771","John Smit","John Smit","John_Smit","amateur","NA-NA","durban crusaders",NA,0,0,NA,NA
 "Q1396771","John Smit","John Smit","John_Smit","senior_club","2007-2008","clermont","ASM_Clermont_Auvergne",3,5,"2007","2008"
 "Q1396771","John Smit","John Smit","John_Smit","senior_club","2011-2013","saracens","Saracens_F.C.",46,10,"2011","2013"
@@ -48252,8 +48253,8 @@
 "Q16027171","Harry Wetter","Harry Wetter","Harry_Wetter","amateur","NA-NA","monmouthshire","Monmouthshire_County_RFC",0,0,NA,NA
 "Q16027171","Harry Wetter","Harry Wetter","Harry_Wetter","international","1912-1913","wales","Wales_national_rugby_union_team",2,0,"1912","1913"
 "Q16029271","James Watts","James Watts","James_Watts_(rugby_union)","international","1907-1909","wales","Wales",11,6,"1907","1909"
-"Q16029391","Robert Loftus Owen Versfeld","Robert Loftus Owen Versfeld","Robert_Loftus_Owen_Versfeld","amateur","1880-1885","hamiltons rfc,sea point",NA,0,0,"1880","1885"
-"Q16029391","Robert Loftus Owen Versfeld","Robert Loftus Owen Versfeld","Robert_Loftus_Owen_Versfeld","amateur","1888-1888","union rfc,uitenhage",NA,0,0,"1888","1888"
+"Q16029391","Robert Loftus Owen Versfeld","Robert Loftus Owen Versfeld","Robert_Loftus_Owen_Versfeld","amateur","1880-1885","hamiltons rfc sea point","Hamilton_RFC,_Sea_Point",0,0,"1880","1885"
+"Q16029391","Robert Loftus Owen Versfeld","Robert Loftus Owen Versfeld","Robert_Loftus_Owen_Versfeld","amateur","1888-1888","union rfc uitenhage",NA,0,0,"1888","1888"
 "Q16029391","Robert Loftus Owen Versfeld","Robert Loftus Owen Versfeld","Robert_Loftus_Owen_Versfeld","amateur","1889-1897","pretoria rfc,pretoria",NA,0,0,"1889","1897"
 "Q16029391","Robert Loftus Owen Versfeld","Robert Loftus Owen Versfeld","Robert_Loftus_Owen_Versfeld","senior_club","1885-1885","cape town xv",NA,0,0,"1885","1885"
 "Q16029391","Robert Loftus Owen Versfeld","Robert Loftus Owen Versfeld","Robert_Loftus_Owen_Versfeld","senior_club","1889-1889","transvaal",NA,0,0,"1889","1889"
