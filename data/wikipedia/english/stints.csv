@@ -5838,7 +5838,7 @@
 "Q30338642","Joe Batley","Joe Batley","Joe_Batley","international","2024-2024","england a","England_A_national_rugby_union_team",0,0,"2024","2024"
 "Q3034852","Dominic Feau'nati","Dominic Feau'nati","Dominic_Fe%27aunati","senior_club","-1997","marist st pats",NA,0,0,NA,"1997"
 "Q3034852","Dominic Feau'nati","Dominic Feau'nati","Dominic_Fe%27aunati","senior_club","1998-1999","hutt old boys-marist","Hutt_Old_Boys-Marist",0,0,"1998","1999"
-"Q3034852","Dominic Feau'nati","Dominic Feau'nati","Dominic_Fe%27aunati","senior_club","2000-2001","viadanastourbridge",NA,0,0,"2000","2001"
+"Q3034852","Dominic Feau'nati","Dominic Feau'nati","Dominic_Fe%27aunati","senior_club","2000-2001","viadana","Viadana_Rugby",0,0,"2000","2001"
 "Q3034852","Dominic Feau'nati","Dominic Feau'nati","Dominic_Fe%27aunati","senior_club","2001-2001","pontypridd","Pontypridd_RFC",0,0,"2001","2001"
 "Q3034852","Dominic Feau'nati","Dominic Feau'nati","Dominic_Fe%27aunati","senior_club","2002-2003","marist st pats",NA,0,0,"2002","2003"
 "Q3034852","Dominic Feau'nati","Dominic Feau'nati","Dominic_Fe%27aunati","senior_club","2005-2007","london irish","London_Irish",12,10,"2005","2007"
@@ -10386,7 +10386,7 @@
 "Q3288332","Marc Raynaud","Marc Raynaud","Marc_Raynaud","international","1999-1999","france","France_national_rugby_union_team",2,0,"1999","1999"
 "Q109781593","Radhika Hettiarachchi","Radhika Hettiarachchi","Radhika_Hettiarachchi","senior_club","2008-2010","kandy sc","Kandy_Sports_Club_(rugby)",0,0,"2008","2010"
 "Q109781593","Radhika Hettiarachchi","Radhika Hettiarachchi","Radhika_Hettiarachchi","senior_club","1997-2005",NA,"Dharmaraja_College",0,0,"1997","2005"
-"Q3288533","Marc de Rougemont","Marc de Rougemont","Marc_de_Rougemont","senior_club","2007-","us la seigne",NA,0,0,"2007",NA
+"Q3288533","Marc de Rougemont","Marc de Rougemont","Marc_de_Rougemont","senior_club","2007-","us la seyne",NA,0,0,"2007",NA
 "Q3288533","Marc de Rougemont","Marc de Rougemont","Marc_de_Rougemont","senior_club","2006-2007","marseille","Marseille_Provence_XV",0,0,"2006","2007"
 "Q3288533","Marc de Rougemont","Marc de Rougemont","Marc_de_Rougemont","senior_club","2001-2006","pays d'aix rc","Provence_Rugby",0,0,"2001","2006"
 "Q3288533","Marc de Rougemont","Marc de Rougemont","Marc_de_Rougemont","senior_club","1999-2001","bordeaux","Union_Bordeaux_B%C3%A8gles",0,0,"1999","2001"
@@ -12465,7 +12465,8 @@
 "Q3384531","Pierre Corréia","Pierre Corréia","Pierre_Corr%C3%A9ia","international","2008-2008","france","France_national_rugby_union_team",1,0,"2008","2008"
 "Q3384623","Pierre Danos","Pierre Danos","Pierre_Danos","amateur","NA-NA","as béziers","AS_B%C3%A9ziers_H%C3%A9rault",0,0,NA,NA
 "Q3384623","Pierre Danos","Pierre Danos","Pierre_Danos","international","1954-1960","france","French_Third_Republic",17,15,"1954","1960"
-"Q3384624","Pierre Darbos","Pierre Darbos","Pierre_Darbos","senior_club","NA-NA","us dax(1958-1962, 1965-1971)",NA,0,0,NA,NA
+"Q3384624","Pierre Darbos","Pierre Darbos","Pierre_Darbos","senior_club","1958-1962","us dax",NA,0,0,"1958","1962"
+"Q3384624","Pierre Darbos","Pierre Darbos","Pierre_Darbos","senior_club","1965-1971","us dax",NA,0,0,"1965","1971"
 "Q3384624","Pierre Darbos","Pierre Darbos","Pierre_Darbos","international","1969-1969","france","France",0,0,"1969","1969"
 "Q3384790","Peio Dospital","Peio Dospital","Pierre_Dospital","amateur","1984-1986","barbarian rugby club","French_Barbarians",0,0,"1984","1986"
 "Q3384790","Peio Dospital","Peio Dospital","Pierre_Dospital","senior_club","NA-NA","aviron bayonnais","Aviron_Bayonnais",0,0,NA,NA
@@ -22403,8 +22404,8 @@
 "Q5228266","Dave Attwood","Dave Attwood","Dave_Attwood","international","2010-2011","england saxons","England_A_national_rugby_union_team",2,0,"2010","2011"
 "Q5228266","Dave Attwood","Dave Attwood","Dave_Attwood","international","2010-2018","england","England_national_under-20_rugby_union_team",24,0,"2010","2018"
 "Q5228591","Dave Cowper","Dave Cowper","Dave_Cowper","amateur","NA-NA","melbourne rugby club","Melbourne_Rugby_Union_Football_Club",0,0,NA,NA
-"Q5228591","Dave Cowper","Dave Cowper","Dave_Cowper","senior_club","1930-1935","victoria",NA,0,0,"1930","1935"
-"Q5228591","Dave Cowper","Dave Cowper","Dave_Cowper","senior_club","1934-1935","new south wales","Mosman",0,0,"1934","1935"
+"Q5228591","Dave Cowper","Dave Cowper","Dave_Cowper","senior_club","1930-1935","victoria","Rugby_Victoria",0,0,"1930","1935"
+"Q5228591","Dave Cowper","Dave Cowper","Dave_Cowper","senior_club","1934-1935","new south wales","New_South_Wales_Waratahs",0,0,"1934","1935"
 "Q5228591","Dave Cowper","Dave Cowper","Dave_Cowper","international","1931-1933","australia","Australia_national_rugby_union_team",9,18,"1931","1933"
 "Q5228658","Dave Dennis","Dave Dennis","Dave_Dennis_(rugby_union)","senior_club","2007-2007","rebels","Melbourne_Rebels",5,0,"2007","2007"
 "Q5228658","Dave Dennis","Dave Dennis","Dave_Dennis_(rugby_union)","senior_club","2015-2015","sydney stars","Sydney_Stars",2,0,"2015","2015"
