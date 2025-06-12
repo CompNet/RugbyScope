@@ -304,12 +304,7 @@
 "Q27808828","James Veitch","James Veitch","James_Veitch_(rugby_union)","senior_club","1881-1883","edinburgh district","Edinburgh_District_(rugby_union)",0,0,"1881","1883"
 "Q27808828","James Veitch","James Veitch","James_Veitch_(rugby_union)","senior_club","1882-1886","east of scotland district","East_of_Scotland_District_(rugby_union)",0,0,"1882","1886"
 "Q27808828","James Veitch","James Veitch","James_Veitch_(rugby_union)","international","1882-1886","scotland","East_of_Scotland_District_(rugby_union)",8,0,"1882","1886"
-"Q27824265","James Raine","James Raine","James_Raine_(footballer)","senior_club","1904-1904","sheffield united","Sheffield_United_F.C.",1,0,"1904","1904"
-"Q27824265","James Raine","James Raine","James_Raine_(footballer)","senior_club","1905-1906","newcastle united","Newcastle_United_F.C.",4,1,"1905","1906"
-"Q27824265","James Raine","James Raine","James_Raine_(footballer)","senior_club","1906-1907","sunderland","Sunderland_A.F.C.",25,6,"1906","1907"
-"Q27824265","James Raine","James Raine","James_Raine_(footballer)","senior_club","1908-1910","glossop","Glossop_North_End_A.F.C.",54,4,"1908","1910"
-"Q27824265","James Raine","James Raine","James_Raine_(footballer)","international","1906-1910","england amateurs","England_national_amateur_football_team",10,9,"1906","1910"
-"Q27824265","James Raine","James Raine","James_Raine_(footballer)","international","1910-1910","football association xi","The_Football_Association",0,0,"1910","1910"
+"Q27824265","James Raine","James Raine","James_Raine_(footballer)","senior_club","NA-NA","percy park rfc","Percy_Park_RFC",NA,NA,NA,NA
 "Q107534981","Tom Bowen","Tom Bowen","Tom_Bowen_(rugby_union,_born_1993)","senior_club","2012-","plymouth albion r.f.c.","Plymouth_Albion_R.F.C.",0,0,"2012",NA
 "Q107534981","Tom Bowen","Tom Bowen","Tom_Bowen_(rugby_union,_born_1993)","senior_club","2022-","worthing rfc","Worthing_RFC",0,0,"2022",NA
 "Q27825241","Conraad van Vuuren","Conraad van Vuuren","Conraad_van_Vuuren","amateur","2015-2016","ufs shimlas","University_of_the_Free_State",11,19,"2015","2016"
@@ -18407,7 +18402,7 @@
 "Q4717065","Alex Goode","Alex Goode","Alex_Goode","international","2012-2016","england","England_national_under-20_rugby_union_team",21,8,"2012","2016"
 "Q111130430","Kowie Roos","Kowie Roos","Kowie_Roos","senior_club","2022-2022","blue bulls","Blue_Bulls",2,0,"2022","2022"
 "Q4717072","Alex Gordon","Alex Gordon","Alex_Gordon_(rugby_union)","amateur","2007-2009","alb. bulldogs",NA,24,110,"2007","2009"
-"Q4717072","Alex Gordon","Alex Gordon","Alex_Gordon_(rugby_union)","senior_club","2009-","shamrock rfc",NA,81,55,"2009",NA
+"Q4717072","Alex Gordon","Alex Gordon","Alex_Gordon_(rugby_union)","senior_club","2009-","shamrock rfc","Allegheny_Rugby_Union",81,55,"2009",NA
 "Q4717088","Alex Gray","Alex Gray","Alex_Gray_(sportsman,_born_1991)","senior_club","2010-2011","newcastle falcons","Newcastle_Falcons",9,5,"2010","2011"
 "Q4717088","Alex Gray","Alex Gray","Alex_Gray_(sportsman,_born_1991)","senior_club","2011-2013","london irish","London_Irish",29,10,"2011","2013"
 "Q4717088","Alex Gray","Alex Gray","Alex_Gray_(sportsman,_born_1991)","senior_club","2016-2017","yorkshire carnegie","Leeds_Tykes",8,5,"2016","2017"
@@ -36806,7 +36801,9 @@
 "Q762029","David Leslie","David Leslie","David_Leslie_(rugby_union)","international","1975-1985","scotland",NA,32,0,"1975","1985"
 "Q76213549","Bryan Braithwaite-Exley","Bryan Braithwaite-Exley","Bryan_Braithwaite-Exley","international","1949-1949","england","England_national_rugby_union_team",1,0,"1949","1949"
 "Q7624946","Struan Dewar","Struan Dewar","Struan_Dewar","senior_club","2010-2012","edinburgh","Edinburgh_Rugby",3,0,"2010","2012"
-"Q7624946","Struan Dewar","Struan Dewar","Struan_Dewar","international","2009-2009","scotland u18scotland u19scotland u20",NA,10,5,"2009","2009"
+"Q7624946","Struan Dewar","Struan Dewar","Struan_Dewar","international","2007-2007","scotland u18",NA,NA,NA,"2007","2007"
+"Q7624946","Struan Dewar","Struan Dewar","Struan_Dewar","international","2008-2008","scotland u19",NA,NA,NA,"2008","2008"
+"Q7624946","Struan Dewar","Struan Dewar","Struan_Dewar","international","2009-2009","scotland u20",NA,10,5,"2009","2009"
 "Q762608","Ian Evans","Ian Evans","Ian_Evans_(rugby_union)","senior_club","2005-2014","ospreys","Ospreys_(rugby_union)",129,15,"2005","2014"
 "Q762608","Ian Evans","Ian Evans","Ian_Evans_(rugby_union)","senior_club","2014-2017","bristol","Bristol_Bears",29,0,"2014","2017"
 "Q762608","Ian Evans","Ian Evans","Ian_Evans_(rugby_union)","international","2006-2016","wales","Wales_national_rugby_union_team",33,5,"2006","2016"
@@ -53921,7 +53918,8 @@
 "Q18637254","Cameron Clark","Cameron Clark","Cam_Clark","senior_club","2021-2021","san diego legion","San_Diego_Legion",15,20,"2021","2021"
 "Q18637254","Cameron Clark","Cameron Clark","Cam_Clark","international","2011-2011","australia schoolboys","Australian_Schoolboys_rugby_union_team",1,0,"2011","2011"
 "Q18637276","John Cullen","John Cullen","John_Cullen_(rugby_union)","amateur","2011-2013","university of utah","Utah_Utes",0,0,"2011","2013"
-"Q18637276","John Cullen","John Cullen","John_Cullen_(rugby_union)","amateur","2013-","seattle saracensdes moines rugby club",NA,0,0,"2013",NA
+"Q18637276","John Cullen","John Cullen","John_Cullen_(rugby_union)","amateur","2013-","seattle saracens","Seattle_Saracens",0,0,"2013",NA
+"Q18637276","John Cullen","John Cullen","John_Cullen_(rugby_union)","amateur","2013-","des moines rugby club",NA,0,0,"2013",NA
 "Q18637276","John Cullen","John Cullen","John_Cullen_(rugby_union)","senior_club","2018-2020","utah warriors","Utah_Warriors",26,10,"2018","2020"
 "Q18637276","John Cullen","John Cullen","John_Cullen_(rugby_union)","senior_club","2023-","chicago hounds","Chicago_Hounds_(rugby_union)",1,0,"2023",NA
 "Q18637276","John Cullen","John Cullen","John_Cullen_(rugby_union)","international","2014-2014","united states","United_States_men%27s_national_rugby_union_team",3,0,"2014","2014"
@@ -54578,7 +54576,8 @@
 "Q19571710","Simon Labouyrie","Simon Labouyrie","Simon_Labouyrie","senior_club","2018-2019","bourg-en-bresse","Union_Sportive_Bressane",9,10,"2018","2019"
 "Q19571710","Simon Labouyrie","Simon Labouyrie","Simon_Labouyrie","senior_club","2018-2018","dax","US_Dax",7,0,"2018","2018"
 "Q19571710","Simon Labouyrie","Simon Labouyrie","Simon_Labouyrie","senior_club","2014-2018","bayonne","Aviron_Bayonnais",69,30,"2014","2018"
-"Q19571724","Henry Staff","Henry Staff","Henry_Staff","senior_club","2009-","saracens f.c.rosslyn park f.c.",NA,0,0,"2009",NA
+"Q19571724","Henry Staff","Henry Staff","Henry_Staff","senior_club","2009-","saracens f.c.","Saracens_F.C.",NA,NA,"2009",NA
+"Q19571724","Henry Staff","Henry Staff","Henry_Staff","senior_club","2009-","rosslyn park f.c.","Rosslyn_Park_F.C.",NA,NA,NA,NA
 "Q19571736","Giorgi Tkhilaishvili","Giorgi Tkhilaishvili","Giorgi_Tkhilaishvili","senior_club","2014-","batumi rc","RC_Batumi",0,0,"2014",NA
 "Q19571736","Giorgi Tkhilaishvili","Giorgi Tkhilaishvili","Giorgi_Tkhilaishvili","senior_club","2014-2014","(trial)",NA,0,0,"2014","2014"
 "Q19571736","Giorgi Tkhilaishvili","Giorgi Tkhilaishvili","Giorgi_Tkhilaishvili","senior_club","2014-2014","leicester","Leicester_Tigers",0,0,"2014","2014"
@@ -62474,7 +62473,7 @@
 "Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","senior_club","-2012","cr majadahonda",NA,0,0,NA,"2012"
 "Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","senior_club","2012-2014","atlético madrid rugby","Atl%C3%A9tico_Madrid_Rugby",0,0,"2012","2014"
 "Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","senior_club","2014-2015","alcobendas rugby","Alcobendas_Rugby",0,0,"2014","2015"
-"Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","senior_club","2014-2015","section paloiseespoirs",NA,0,0,"2014","2015"
+"Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","senior_club","2014-2015","section paloise espoirs",NA,0,0,"2014","2015"
 "Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","senior_club","2015-2016","avenir castanéen rugby",NA,0,0,"2015","2016"
 "Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","senior_club","2017-","cr majadahonda",NA,0,0,"2017",NA
 "Q27448064","Pablo Fontes","Pablo Fontes","Pablo_Fontes","international","2014-2014","spain","Spain_national_rugby_union_team",2,0,"2014","2014"
