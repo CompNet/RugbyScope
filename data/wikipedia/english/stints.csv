@@ -1014,9 +1014,9 @@
 "Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1990-1993","rc tatra smíchov",NA,0,0,"1990","1993"
 "Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1993-1994","vtj pardubice",NA,0,0,"1993","1994"
 "Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1994-1997","rc tatra smíchov",NA,0,0,"1994","1997"
-"Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1997-1998","rc tatra smíchov (→cliffton rfc - england)",NA,0,0,"1997","1998"
-"Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1998-1999","rc tatra smíchov (→marlow rfc - england)",NA,0,0,"1998","1999"
-"Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1999-2001","rc tatra smíchov (→avennir lescarian - france)",NA,0,0,"1999","2001"
+"Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1997-1998","cliffton rfc",NA,0,0,"1997","1998"
+"Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1998-1999","marlow rfc",NA,0,0,"1998","1999"
+"Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","1999-2001","avenir lescarien",NA,0,0,"1999","2001"
 "Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","2001-2003","rc tatra smíchov",NA,0,0,"2001","2003"
 "Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","2003-2005","sporting nazarien rugby - france",NA,0,0,"2003","2005"
 "Q28131419","Antonín Brabec","Antonín Brabec","Anton%C3%ADn_Brabec_(rugby_union)","amateur","2005-2008","rc tatra smíchov",NA,0,0,"2005","2008"
@@ -1666,7 +1666,8 @@
 "Q2834287","Alexandru Tudori","Alexandru Tudori","Alexandru_Tudori","senior_club","2005-2006","venezia mestre","Venezia_Mestre_Rugby_FC",0,0,"2005","2006"
 "Q2834287","Alexandru Tudori","Alexandru Tudori","Alexandru_Tudori","senior_club","2006-2010","dinamo bucurești","CS_Dinamo_Bucure%C8%99ti_(rugby_union)",0,0,"2006","2010"
 "Q2834287","Alexandru Tudori","Alexandru Tudori","Alexandru_Tudori","senior_club","2010-2012","roc la voulte-valence","ROC_La_Voulte-Valence",0,0,"2010","2012"
-"Q2834287","Alexandru Tudori","Alexandru Tudori","Alexandru_Tudori","senior_club","2012-2015","rouen normandiestade poitevin",NA,0,0,"2012","2015"
+"Q2834287","Alexandru Tudori","Alexandru Tudori","Alexandru_Tudori","senior_club","2012-2015","rouen normandie","Rouen_Normandie_Rugby",NA,NA,"2012","2015"
+"Q2834287","Alexandru Tudori","Alexandru Tudori","Alexandru_Tudori","senior_club","2015-2018","stade poitevin","Stade_Poitevin_Rugby","2015","2018",NA,NA
 "Q2834287","Alexandru Tudori","Alexandru Tudori","Alexandru_Tudori","international","2003-2009","romania","Romania_national_rugby_union_team",35,20,"2003","2009"
 "Q28343726","Jordi Camps","Jordi Camps","Jordi_Camps","amateur","-1994","club natació montjuïc",NA,0,0,NA,"1994"
 "Q28343726","Jordi Camps","Jordi Camps","Jordi_Camps","senior_club","1994-1995","currie rfc","Currie_RFC",0,0,"1994","1995"
@@ -20516,7 +20517,9 @@
 "Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","2003-2003","dinamo bucurești","CS_Dinamo_Bucure%C8%99ti_(rugby_union)",NA,NA,"2003","2003"
 "Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","senior_club","-2003","universitatea cluj","CS_Universitatea_Elbi_Cluj",NA,NA,NA,"2003"
 "Q50136662","Cristian Podea","Cristian Podea","Cristian_Podea","international","2001-2003","romania","Romania_national_rugby_union_team",9,0,"2001","2003"
-"Q50141033","Marius Niculai","Marius Niculai","Marius_Niculai","senior_club","2000-2000","rcj farul constanțastade lavelanétiensc pamiers",NA,0,0,"2000","2000"
+"Q50141033","Marius Niculai","Marius Niculai","Marius_Niculai","senior_club","NA-NA","rcj farul constanța","RCJ_Farul_Constan%C8%9Ba",NA,NA,NA,NA
+"Q50141033","Marius Niculai","Marius Niculai","Marius_Niculai","senior_club","NA-NA","stade lavelanétien",NA,NA,NA,NA,NA
+"Q50141033","Marius Niculai","Marius Niculai","Marius_Niculai","senior_club","NA-NA","sc pamiers",NA,NA,NA,NA,NA
 "Q50141033","Marius Niculai","Marius Niculai","Marius_Niculai","international","2003-2003","romania","Romania_national_rugby_union_team",2,0,"2003","2003"
 "Q501604","Florian Faure","Florian Faure","Florian_Faure","senior_club","2002-2005","fc grenoble","FC_Grenoble_Rugby",30,25,"2002","2005"
 "Q501604","Florian Faure","Florian Faure","Florian_Faure","senior_club","2005-2009","castres olympique","Castres_Olympique",75,25,"2005","2009"
@@ -42559,8 +42562,10 @@
 "Q121482787","Imad Khan","Imad Khan","Imad_Khan","senior_club","NA-NA","stormers","Stormers",0,0,NA,NA
 "Q121482787","Imad Khan","Imad Khan","Imad_Khan","senior_club","NA-NA","western province","Western_Province_(rugby_union)",0,0,NA,NA
 "Q121482787","Imad Khan","Imad Khan","Imad_Khan","international","NA-NA","south africa u20","South_Africa_national_under-20_rugby_union_team",0,0,NA,NA
-"Q121484156","Vladimir Covalschi","Vladimir Covalschi","Vladimir_Covalschi","senior_club","2011-2011","central ballester","Central_Ballester",1,0,"2011","2011"
-"Q121484156","Vladimir Covalschi","Vladimir Covalschi","Vladimir_Covalschi","senior_club","2019-2019","real pilar","Real_Pilar_F%C3%BAtbol_Club",4,0,"2019","2019"
+"Q121484156","Vladimir Covalschi","Vladimir Covalschi","Vladimir_Covalschi","senior_club","NA-NA","rada tilly",NA,NA,NA,NA,NA
+"Q121484156","Vladimir Covalschi","Vladimir Covalschi","Vladimir_Covalschi","senior_club","NA-NA","chubut",NA,NA,NA,NA,NA
+"Q121484156","Vladimir Covalschi","Vladimir Covalschi","Vladimir_Covalschi","senior_club","NA-NA","calafate",NA,NA,NA,NA,NA
+"Q121484156","Vladimir Covalschi","Vladimir Covalschi","Vladimir_Covalschi","senior_club","NA-NA","hindú club","Hind%C3%BA_Club",NA,NA,NA,NA
 "Q121503353","PJ Sheck","PJ Sheck","PJ_Sheck","senior_club","2021-","wellington","Wellington_(National_Provincial_Championship)",15,0,"2021",NA
 "Q121503353","PJ Sheck","PJ Sheck","PJ_Sheck","senior_club","2023-","highlanders","Highlanders_(rugby_union)",1,0,"2023",NA
 "Q121503899","Matt Whaanga","Matt Whaanga","Matt_Whaanga","senior_club","2018-2020","otago","Otago_(National_Provincial_Championship)",16,5,"2018","2020"
@@ -61471,16 +61476,16 @@
 "Q261702","Sunia Koto","Sunia Koto","Sunia_Koto","senior_club","2016-","as mâcon",NA,0,0,"2016",NA
 "Q261702","Sunia Koto","Sunia Koto","Sunia_Koto","international","2005-","fiji","Fiji_Warriors",58,10,"2005",NA
 "Q261702","Sunia Koto","Sunia Koto","Sunia_Koto","international","2008-2008","pacific islanders","Pacific_Islanders_rugby_union_team",2,0,"2008","2008"
-"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1918-1918","rata",NA,0,0,"1925","1926"
-"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1920-1920","rata",NA,0,0,"1925","1926"
-"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1923-1923","rata",NA,0,0,"1925","1926"
+"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1918-1918","rata",NA,0,0,"1918","1918"
+"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1920-1920","rata",NA,0,0,"1920","1920"
+"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1923-1923","rata",NA,0,0,"1923","1923"
 "Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1925-1926","rata",NA,0,0,"1925","1926"
 "Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1930-1930","aotea",NA,0,0,"1930","1930"
 "Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","amateur","1931-1931","ratana",NA,0,0,"1931","1931"
-"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1918-1918","wanganui","Whanganui_Rugby_Football_Union",25,0,"1930","1931"
-"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1920-1920","wanganui","Whanganui_Rugby_Football_Union",25,0,"1930","1931"
-"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1923-1923","wanganui","Whanganui_Rugby_Football_Union",25,0,"1930","1931"
-"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1925-1926","wanganui","Whanganui_Rugby_Football_Union",25,0,"1930","1931"
+"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1918-1918","wanganui","Whanganui_Rugby_Football_Union",25,0,"1918","1918"
+"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1920-1920","wanganui","Whanganui_Rugby_Football_Union",25,0,"1920","1920"
+"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1923-1923","wanganui","Whanganui_Rugby_Football_Union",25,0,"1923","1923"
+"Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1925-1926","wanganui","Whanganui_Rugby_Football_Union",25,0,"1925","1926"
 "Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","senior_club","1930-1931","wanganui","Whanganui_Rugby_Football_Union",25,0,"1930","1931"
 "Q26179621","Waate Potaka","Waate Potaka","Waate_Potaka","international","1923-1923","new zealand","New_Zealand_national_rugby_union_team",2,3,"1923","1923"
 "Q2619055","Erik Lund","Erik Lund","Erik_Lund_(rugby_union)","senior_club","2010-2016","biarritz","Biarritz_Olympique",137,10,"2010","2016"

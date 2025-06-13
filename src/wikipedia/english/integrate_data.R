@@ -813,3 +813,15 @@ write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ########################################################################
 # stop logging
 end.rec.log()
+
+
+
+# club types
+#  [1] "Club"                     "National senior team"
+#  [3] "Combined team"            "National U20 team"
+#  [5] "Invitational team"        "National U21 team"
+#  [7] "National school team"     "National U18 team"
+#  [9] "National U19 team"        "Regional team"
+# [11] "National U16 team"        "National university team"
+# [13] "National U17 team"        "National U23 team"
+# [15] NA                         "National military team"
