@@ -31853,8 +31853,9 @@
 "Q6756434","Marcello Sampson","Marcello Sampson","Marcello_Sampson","senior_club","2014-2016","pumas","Pumas_(Currie_Cup)",23,35,"2014","2016"
 "Q6756434","Marcello Sampson","Marcello Sampson","Marcello_Sampson","senior_club","2017-2017","western province","Western_Province_(rugby_union)",6,25,"2017","2017"
 "Q6756434","Marcello Sampson","Marcello Sampson","Marcello_Sampson","international","2011-2011","south african kings","Southern_Kings",1,0,"2011","2011"
-"Q6758227","Marcus Holden","Marcus Holden","Marcus_Holden","senior_club","1987-1989","port vale","Port_Vale_F.C.",6,0,"1987","1989"
-"Q6758227","Marcus Holden","Marcus Holden","Marcus_Holden","senior_club","1989-1989","→northwich victoria(loan)",NA,0,0,"1989","1989"
+"Q6758227","Marcus Holden","Marcus Holden","Marcus_Holden","senior_club","NA-NA","episkopi eagles",NA,NA,NA,NA,NA
+"Q6758227","Marcus Holden","Marcus Holden","Marcus_Holden","senior_club","2007-2009","paphos tigers","Paphos_Tigers",29,422,"2007","2009"
+"Q6758227","Marcus Holden","Marcus Holden","Marcus_Holden","international","2007-NA","cyprus","Cyprus_national_rugby_union_team",18,249,"2007",NA
 "Q6758495","Marcus Trick","Marcus Trick","Marcus_Trick","amateur","2005-2013","sc neuenheim","SC_Neuenheim",0,0,"2005","2013"
 "Q6758495","Marcus Trick","Marcus Trick","Marcus_Trick","amateur","2004-2004","rc l'hospitalet","RC_L%27Hospitalet",0,0,"2004","2004"
 "Q6758495","Marcus Trick","Marcus Trick","Marcus_Trick","amateur","1999-2004","sc neuenheim","SC_Neuenheim",0,0,"1999","2004"
@@ -33916,9 +33917,8 @@
 "Q7176748","Peter Saili","Peter Saili","Peter_Saili","senior_club","2017-2019","pau","Section_Paloise",12,15,"2017","2019"
 "Q7176748","Peter Saili","Peter Saili","Peter_Saili","senior_club","2015-2017","bordeaux","Union_Bordeaux_B%C3%A8gles",26,10,"2015","2017"
 "Q7176748","Peter Saili","Peter Saili","Peter_Saili","senior_club","2008-2015","auckland","Auckland",70,20,"2008","2015"
-"Q7176768","Peter Sanders","Peter Sanders","Peter_Sanders_(sportsman)","senior_club","1959-1961","newport county","Newport_County_A.F.C.",3,0,"1959","1961"
-"Q7176768","Peter Sanders","Peter Sanders","Peter_Sanders_(sportsman)","senior_club","1961-1962","gillingham","Gillingham_F.C.",2,0,"1961","1962"
-"Q7176768","Peter Sanders","Peter Sanders","Peter_Sanders_(sportsman)","senior_club","1962-","prescot cables","Prescot_Cables_F.C.",0,0,"1962",NA
+"Q7176768","Peter Sanders","Peter Sanders","Peter_Sanders_(sportsman)","senior_club","NA-NA","newport rfc","Newport_RFC",NA,NA,NA,NA
+"Q7176768","Peter Sanders","Peter Sanders","Peter_Sanders_(sportsman)","senior_club","NA-NA","cross keys rfc","Cross_Keys_RFC",NA,NA,NA,NA
 "Q7176932","Peter Sidoli","Peter Sidoli","Peter_Sidoli","senior_club","2000-2001","merthyr","Merthyr_Tydfil",0,0,"2000","2001"
 "Q7176932","Peter Sidoli","Peter Sidoli","Peter_Sidoli","senior_club","2001-2003","ebbw vale","Ebbw_Vale_RFC",0,0,"2001","2003"
 "Q7176932","Peter Sidoli","Peter Sidoli","Peter_Sidoli","senior_club","2003-2008","newport gwent dragons","Dragons_RFC",114,20,"2003","2008"
@@ -36546,8 +36546,9 @@
 "Q75870462","Sir Thomas Devitt, 2nd Baronet","Sir Thomas Devitt, 2nd Baronet","Sir_Thomas_Devitt,_2nd_Baronet","international","1926-1928","england","England_national_rugby_union_team",4,0,"1926","1928"
 "Q75921281","Jack Malone","Jack Malone","Jack_Malone_(rugby_union)","international","1936-1937","australia","Australia_national_rugby_union_team",4,0,"1936","1937"
 "Q75951857","William Kirwan-Taylor","William Kirwan-Taylor","William_Kirwan-Taylor","international","1928-1928","england","England_national_rugby_union_team",5,6,"1928","1928"
-"Q7596554","Staff Jones","Staff Jones","Staff_Jones","amateur","NA-NA","pontypool rfc 1978 to 1993",NA,0,0,NA,NA
-"Q7596554","Staff Jones","Staff Jones","Staff_Jones","amateur","NA-NA","barbarian f.c.","Barbarian_F.C.",0,0,NA,NA
+"Q7596554","Staff Jones","Staff Jones","Staff_Jones","amateur","1978-1993","pontypridd rfc","Pontypridd_RFC",NA,NA,NA,NA
+"Q7596554","Staff Jones","Staff Jones","Staff_Jones","amateur","1978-1993","pontypool rfc","Pontypool_RFC",NA,NA,"1978","1993"
+"Q7596554","Staff Jones","Staff Jones","Staff_Jones","amateur","NA-NA","barbarian f.c.","Barbarian_F.C.",NA,NA,NA,NA
 "Q7596554","Staff Jones","Staff Jones","Staff_Jones","international","1983-1988","wales","Wales",10,4,"1983","1988"
 "Q7596554","Staff Jones","Staff Jones","Staff_Jones","international","1983-1983","british & irish lions","British_%26_Irish_Lions",3,0,"1983","1983"
 "Q7597963","Stan Wickham","Stan Wickham","Stan_Wickham","senior_club","1900-1906","west harbour","West_Harbour_RFC",87,0,"1900","1906"
@@ -47619,7 +47620,9 @@
 "Q15097500","Graham Purvis","Graham Purvis","Graham_Purvis","senior_club","1997-1997","waikato","Waikato_Rugby_Union",147,0,"1997","1997"
 "Q15097500","Graham Purvis","Graham Purvis","Graham_Purvis","international","1989-1993","new zealand","New_Zealand_national_rugby_union_team",2,4,"1989","1993"
 "Q15101082","Daniel Hourcade","Daniel Hourcade","Daniel_Hourcade","senior_club","1979-1992","uni tucumán","Universitario_Rugby_Club_de_Tucum%C3%A1n",0,0,"1979","1992"
-"Q15114582","Sean Morrell","Sean Morrell","Sean_Morrell","senior_club","2011-","ponsonby rfcking countrycsm baia mare",NA,0,0,"2011",NA
+"Q15114582","Sean Morrell","Sean Morrell","Sean_Morrell","senior_club","NA-NA","ponsonby rfc","Ponsonby_RFC",NA,NA,NA,NA
+"Q15114582","Sean Morrell","Sean Morrell","Sean_Morrell","senior_club","NA-NA","king country","King_Country_Rugby_Football_Union",NA,NA,NA,NA
+"Q15114582","Sean Morrell","Sean Morrell","Sean_Morrell","senior_club","2011-","csm baia mare","CSM_Baia_Mare_(rugby)",0,0,"2011",NA
 "Q15114582","Sean Morrell","Sean Morrell","Sean_Morrell","international","2009-2009","fiji","Fiji",1,0,"2009","2009"
 "Q15119090","Billy Vunipola","Billy Vunipola","Billy_Vunipola","senior_club","2011-2013","wasps","Wasps_RFC",41,20,"2011","2013"
 "Q15119090","Billy Vunipola","Billy Vunipola","Billy_Vunipola","senior_club","2013-2024","saracens","Saracens_F.C.",178,145,"2013","2024"
