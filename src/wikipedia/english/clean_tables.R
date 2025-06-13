@@ -729,12 +729,12 @@ for (r in 1:nrow(stints)) {
     points_scored <- trimws(points_scored)
 
   # processing each period
+  years <- c()
+  start_years <- c()
+  end_years <- c()
   for (p in 1:length(periods)) {
     per <- periods[p]
     # there is a hyphen in the period
-    years <- c()
-    start_years <- c()
-    end_years <- c()
     if (grepl("-", per, fixed = TRUE)) {
       pers <- as.integer(strsplit(per, "-")[[1]])
       # end year missing
