@@ -24867,7 +24867,8 @@
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","senior_club","2009-2010","connacht","Connacht_Rugby",14,15,"2009","2010"
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","senior_club","2011-2016","connacht","Connacht_Rugby",103,30,"2011","2016"
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","international","2001-2001","new zealand schools","New_Zealand_national_schoolboy_rugby_union_team",0,0,"2001","2001"
-"Q5542786","George Naoupu","George Naoupu","George_Naoupu","international","2002-2002","new zealand u19new zealand u21",NA,0,0,"2002","2002"
+"Q5542786","George Naoupu","George Naoupu","George_Naoupu","international","2002-2002","new zealand u19",NA,0,0,"2002","2002"
+"Q5542786","George Naoupu","George Naoupu","George_Naoupu","international","NA-NA","new zealand u21",NA,0,0,NA,NA
 "Q5542814","George Neilson","George Neilson","George_Neilson","amateur","NA-NA","west of scotland","West_of_Scotland_F.C.",0,0,NA,NA
 "Q5542814","George Neilson","George Neilson","George_Neilson","senior_club","1891-1891","glasgow district","Glasgow_District_(rugby_union)",0,0,"1891","1891"
 "Q5542814","George Neilson","George Neilson","George_Neilson","international","1891-1896","scotland","Scotland",14,6,"1891","1896"
@@ -32397,7 +32398,7 @@
 "Q6829881","Michael Dods","Michael Dods","Michael_Dods","international","1994-1996","scotland","Scotland_national_rugby_union_team",8,80,"1994","1996"
 "Q6830140","Michael Essex","Michael Essex","Michael_Essex","senior_club","NA-NA","highfield","Highfield_R.F.C.",0,0,NA,NA
 "Q6830140","Michael Essex","Michael Essex","Michael_Essex","senior_club","NA-NA","shannon","Shannon_RFC",0,0,NA,NA
-"Q6830140","Michael Essex","Michael Essex","Michael_Essex","senior_club","NA-NA","north otago2009-",NA,0,0,NA,NA
+"Q6830140","Michael Essex","Michael Essex","Michael_Essex","senior_club","2009-NA","north otago",NA,NA,NA,"2009",NA
 "Q6830968","Michael Harris","Michael Harris","Mike_Harris_(rugby_union)","senior_club","2016-2018","lyon","Lyon_OU_Rugby",45,158,"2016","2018"
 "Q6830968","Michael Harris","Michael Harris","Mike_Harris_(rugby_union)","senior_club","2018-2020","toshiba brave lupus","Toshiba_Brave_Lupus_Tokyo",5,30,"2018","2020"
 "Q6830968","Michael Harris","Michael Harris","Mike_Harris_(rugby_union)","senior_club","2020-2023","pau","Section_Paloise",4,3,"2020","2023"
@@ -39590,7 +39591,7 @@
 "Q88876856","Robert Cockrell","Robert Cockrell","Robert_Cockrell","amateur","NA-NA","paarl rfc",NA,0,0,NA,NA
 "Q88876856","Robert Cockrell","Robert Cockrell","Robert_Cockrell","senior_club","1972-1982","western province","Western_Province_(rugby_union)",102,0,"1972","1982"
 "Q88876856","Robert Cockrell","Robert Cockrell","Robert_Cockrell","international","1974-1981","south africa","South_Africa_national_rugby_union_team",11,4,"1974","1981"
-"Q88888690","Charlie Cockrell","Charlie Cockrell","Charlie_Cockrell","amateur","NA-NA","noordelikes (ntk rugby club)",NA,0,0,NA,NA
+"Q88888690","Charlie Cockrell","Charlie Cockrell","Charlie_Cockrell","amateur","NA-NA","noordelikes",NA,0,0,NA,NA
 "Q88888690","Charlie Cockrell","Charlie Cockrell","Charlie_Cockrell","senior_club","1963-1971","western province","Western_Province_(rugby_union)",66,0,"1963","1971"
 "Q88888690","Charlie Cockrell","Charlie Cockrell","Charlie_Cockrell","international","1969-1970","south africa","South_Africa_national_rugby_union_team",3,0,"1969","1970"
 "Q88985328","Aymeric Luc","Aymeric Luc","Aymeric_Luc","senior_club","2019-2021","bayonne","Aviron_Bayonnais",44,80,"2019","2021"
