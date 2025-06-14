@@ -21757,7 +21757,8 @@
 "Q5173537","Cory Allen","Cory Allen","Cory_Allen_(rugby_union)","international","2012-2013","wales u20","Wales_national_under-20_rugby_union_team",13,20,"2012","2013"
 "Q5173537","Cory Allen","Cory Allen","Cory_Allen_(rugby_union)","international","2013-2017","wales","Wales_national_under-20_rugby_union_team",6,15,"2013","2017"
 "Q517519","Norm Maxwell","Norm Maxwell","Norm_Maxwell","senior_club","2010-2018","vigo rc",NA,0,0,"2010","2018"
-"Q517519","Norm Maxwell","Norm Maxwell","Norm_Maxwell","senior_club","1995-1997","northlandcanterbury",NA,38,20,"1995","1997"
+"Q517519","Norm Maxwell","Norm Maxwell","Norm_Maxwell","senior_club","1995-1997","northland",NA,38,20,"1995","1997"
+"Q517519","Norm Maxwell","Norm Maxwell","Norm_Maxwell","senior_club","NA-NA","canterbury","Canterbury_Rugby_Football_Union",NA,NA,NA,NA
 "Q517519","Norm Maxwell","Norm Maxwell","Norm_Maxwell","senior_club","1996-2005","crusaders","Crusaders_(rugby_union)",75,0,"1996","2005"
 "Q517519","Norm Maxwell","Norm Maxwell","Norm_Maxwell","international","1999-2004","new zealand","New_Zealand_national_rugby_union_team",36,25,"1999","2004"
 "Q517519","Norm Maxwell","Norm Maxwell","Norm_Maxwell","international","NA-NA","nz schools","New_Zealand_national_schoolboy_rugby_union_team",0,0,NA,NA
@@ -24866,6 +24867,7 @@
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","senior_club","2007-2009","hawke's bay","Hawke%27s_Bay_Rugby_Union",27,20,"2007","2009"
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","senior_club","2009-2010","connacht","Connacht_Rugby",14,15,"2009","2010"
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","senior_club","2011-2016","connacht","Connacht_Rugby",103,30,"2011","2016"
+"Q5542786","George Naoupu","George Naoupu","George_Naoupu","senior_club","2008-2009","highlanders","Highlanders_(rugby_union)",11,5,"2008","2009"
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","international","2001-2001","new zealand schools","New_Zealand_national_schoolboy_rugby_union_team",0,0,"2001","2001"
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","international","2002-2002","new zealand u19",NA,0,0,"2002","2002"
 "Q5542786","George Naoupu","George Naoupu","George_Naoupu","international","NA-NA","new zealand u21",NA,0,0,NA,NA
@@ -29206,7 +29208,7 @@
 "Q6267114","Johnny Leota","Johnny Leota","Johnny_Leota","senior_club","2008-2011","→manawatu(loan)",NA,0,0,"2008","2011"
 "Q6267114","Johnny Leota","Johnny Leota","Johnny_Leota","senior_club","2008-2009","highlanders","Highlanders_(rugby_union)",24,10,"2008","2009"
 "Q6267114","Johnny Leota","Johnny Leota","Johnny_Leota","senior_club","2011-2019","sale sharks","Sale_Sharks",129,135,"2011","2019"
-"Q6267114","Johnny Leota","Johnny Leota","Johnny_Leota","senior_club","2019-","north west blades men's open",NA,7,0,"2019",NA
+"Q6267114","Johnny Leota","Johnny Leota","Johnny_Leota","senior_club","2019-","north west blades",NA,7,0,"2019",NA
 "Q6267114","Johnny Leota","Johnny Leota","Johnny_Leota","international","2011-","samoa","Samoa_national_rugby_union_team",20,10,"2011",NA
 "Q6267266","Johnny McNicholl","Johnny McNicholl","Johnny_McNicholl","senior_club","2014-2016","crusaders","Crusaders_(rugby_union)",44,95,"2024",NA
 "Q6267266","Johnny McNicholl","Johnny McNicholl","Johnny_McNicholl","senior_club","2024-","crusaders","Crusaders_(rugby_union)",44,95,"2024",NA
