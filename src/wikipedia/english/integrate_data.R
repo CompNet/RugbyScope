@@ -166,6 +166,7 @@ wp_stints[, "teamName"] <- gsub("-+>", "", wp_stints[, "teamName"], fixed = FALS
 wp_stints[, "teamName"] <- gsub(" ?\\(amateur\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub(" ?\\(trial\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub(" ?\\(dual-registration\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
+wp_stints[, "teamName"] <- gsub(" ?\\(player-coach\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub(" ?\\(d[/\\-]r\\)$", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- gsub(" ?- on loan$", "", wp_stints[, "teamName"], fixed = FALSE)
 wp_stints[, "teamName"] <- trimws(wp_stints[, "teamName"])
