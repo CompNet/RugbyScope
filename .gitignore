@@ -4,3 +4,9 @@
 .Ruserdata
 /data/wikipedia/english/PP
 /data/wikipedia/english/PP_cleaned
+
+# Ignore all JSON files in english folder
+data/english/*.json
+
+# Ignore everything in subfolders
+data/english/**/
