@@ -6,7 +6,7 @@
 /data/wikipedia/english/PP_cleaned
 
 # Ignore all JSON files in english folder
-data/english/*.json
+/data/wikipedia/english/*.json
 
 # Ignore everything in subfolders
-data/english/**/
+/data/wikipedia/english/**/
