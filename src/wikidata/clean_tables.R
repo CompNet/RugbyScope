@@ -160,8 +160,8 @@ get_clean_positions <- function(players) {
   # │  └─ Fly-Half = First Five-Eighth = Out-Half = Stand-Off
   # ├─ Three-Quarter
   # │  ├─ Centre
-  # │  │  ├─ Inside Centre = Inside Back = Second Five-Eighth
-  # │  │  └─ Outside Centre = Outside Back = Centre Three-Quarter = Outside Half
+  # │  │  ├─ Inside Centre = Inside Back = Second Five-Eighth = Left Centre
+  # │  │  └─ Outside Centre = Outside Back = Centre Three-Quarter = Outside Half = Right Centre
   # │  └─ Winger = Wing Three Quarter
   # │     ├─ Left Winger
   # │     └─ Right Winger

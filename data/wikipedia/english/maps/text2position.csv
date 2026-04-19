@@ -1,4 +1,5 @@
 "text","position"
+"",NA
 "-",NA
 "0",NA
 "1st 5","1st Row"
@@ -7,6 +8,7 @@
 "4","Loosehead Lock"
 "5)","Tighthead Lock"
 "8","Number 8"
+"8 (rugby union)","Number 8"
 "assistant coach",NA
 "assistant coach - defence",NA
 "assistant coach queensland reds",NA
@@ -25,6 +27,8 @@
 "backrow","3rd Row"
 "backrow (no.8 & blindside flanker)","Number 8; Blindside Flanker"
 "backrow forwardhooker","3rd Row; Hooker"
+"backrower","3rd Row"
+"backs","3rd Row"
 "backs coach",NA
 "blindside","Blindside Flanker"
 "blindside flanker","Blindside Flanker"
@@ -38,8 +42,10 @@
 "central defender",NA
 "centre","Centre"
 "centre-mogliano","Centre"
+"centre (15s)","Centre"
 "centre (15s);forward (7s)","Centre"
-"centre (7s);wing (15s)","Centre"
+"centre (7s)",NA
+"centre (7s);wing (15s)","Winger"
 "centre and half-back","Centre; Winger; Half-Back"
 "centre fly-half","Centre; Fly-Half"
 "centre forward",NA
@@ -62,10 +68,14 @@
 "daniel davies(brother)position(s)",NA
 "defence coach",NA
 "defender",NA
+"defensive end",NA
+"defensive tackle",NA
 "director of rugby",NA
 "director of sport",NA
+"e.g.centre","Centre"
 "eighth man","Number 8"
 "eighthman","Number 8"
+"executive chairmanfree jacks",NA
 "first-five","1st Row; 2nd Row"
 "first-five-eighth","Fly-Half"
 "first five","1st Row; 2nd Row"
@@ -118,6 +128,7 @@
 "forward","Forward"
 "forward (7s)",NA
 "forward (7s)fullback","Fullback"
+"forward(7s)",NA
 "forwardandhalf-back","Forward; Half-Back"
 "forwardpropno. 8lock","Forward; Prop; Number 8"
 "forwards","Forward"
@@ -139,6 +150,7 @@
 "fullback .","Fullback"
 "fullback centre","Fullback; Centre"
 "fullback centre or wing","Fullback; Centre; Winger"
+"fullback(15s)","Fullback"
 "fullback(15s);forward(7s)","Fullback"
 "fullback.fly-half","Fullback; Fly-Half"
 "fullback.scrum-half","Fullback; Scrum-Half"
@@ -154,6 +166,7 @@
 "fullbackwing","Fullback; Winger"
 "fullbackwingcentrefirst five-eighth","Fullback; Winger; Centre; Fly-Half"
 "goalkeeper",NA
+"guard",NA
 "half-back","Half-Back"
 "half-back (7s)wing (15s)","Winger"
 "half-backandthree-quarter back","Half-Back; Three-Quarter"
@@ -176,6 +189,7 @@
 "hookercentre","Hooker; Centre"
 "hookerflanker","Hooker; Flanker"
 "hookerloose forward","Hooker; 3rd Row"
+"hookeropenside flanker","Hooker; Openside Flanker"
 "hookeropenside flankernumber 8","Hooker; Openside Flanker; Number 8"
 "hookerorprop","Hooker; Prop"
 "hookerprop","Hooker; Prop"
@@ -192,8 +206,11 @@
 "inside centrehalfbackfly-half","Inside Centre; Fly-Half"
 "inside left","Scrum-Half"
 "interim head coach ofmelbourne rebels",NA
+"left-centre","Inside Centre"
 "left-wing","Left Winger"
 "left back","Left Winger"
+"left centre","Inside Centre"
+"left half forward",NA
 "left wing","Left Winger"
 "lh",NA
 "linebacker",NA
@@ -213,6 +230,7 @@
 "lockloose forward","2nd Row; 3rd Row"
 "locknumber 8","2nd Row; Number 8"
 "lockorflanker","2nd Row; Flanker"
+"lockprop","2nd Row; Prop"
 "locks","2nd Row"
 "lockwingscrum-half","2nd Row; Winger; Scrum-Half"
 "loose-forward","3rd Row"
@@ -225,9 +243,11 @@
 "loosehead","Loosehead Prop"
 "loosehead prop","Loosehead Prop"
 "looseheadprop","Loosehead Prop"
+"manager",NA
 "midfield",NA
 "midfield back",NA
 "midfielder",NA
+"midfielder;striker",NA
 "n",NA
 "n8","Number 8"
 "no 8","Number 8"
@@ -252,6 +272,7 @@
 "number 8orflank","Number 8; Flanker"
 "number 8orflankerorlock","Number 8; Flanker; 2nd Row"
 "number 8prop","Number 8; Prop"
+"number 8stormers","Number 8"
 "number eight","Number 8"
 "number eight.","Number 8"
 "number eightand flanker","Number 8; Flanker"
@@ -279,25 +300,34 @@
 "outside centrewinger","Outside Centre; Winger"
 "outside half","Fly-Half"
 "outside right","Right Winger"
+"owner",NA
 "performance director",NA
 "player",NA
+"positions",NA
 "president",NA
 "primera linea","1st Row"
 "prop","Prop"
+"prop(loosehead)","Loosehead Prop"
 "prop (rugby union)","Prop"
 "prop forward","Prop"
 "propforward","Prop"
 "propforward)","Prop"
 "prophooker","Prop; Hooker"
 "propnumber 8","Prop; Number 8"
+"propnumber 8flanker","Prop; Number 8; Flanker"
+"punter",NA
 "referee",NA
 "retired",NA
 "right-wing","Right Winger"
+"rover",NA
 "ruckman",NA
 "rugby union coach",NA
 "rugby union positions first five-eight","Fly-Half"
+"running back",NA
+"safetyupback",NA
 "scrum-hafl","Scrum-Half"
 "scrum-half","Scrum-Half"
+"scrum-half (7s)",NA
 "scrum-half (7s);fullback(15s)","Fullback"
 "scrum-half (rugby union)","Scrum-Half"
 "scrum-half('31-38)centre('33)fly-half('37)no. 8('37)","Scrum-Half; Centre; Fly-Half; Number 8"
@@ -327,6 +357,7 @@
 "second row","2nd Row"
 "second row & no 8","2nd Row; Number 8"
 "second row forward","2nd Row"
+"second rower","2nd Row"
 "second roworflanker","2nd Row; Flanker"
 "secondrow","2nd Row"
 "siderow forward","2nd Row"
@@ -334,17 +365,21 @@
 "stand-off half","Fly-Half"
 "stand-off(fly-half)","Fly-Half"
 "stand off","Fly-Half"
+"standoff","Fly-Half"
 "striker",NA
 "tbc",NA
 "th prop","Tighthead Prop"
 "thighthead prop","Tighthead Prop"
 "third line wing","Flanker"
+"third row","3rd Row"
 "three-quarter","Three-Quarter"
+"three-quarter back","Three-Quarter"
 "three-quarter back - centre","Three-Quarter; Centre"
 "three-quarters","Three-Quarter"
 "three quarters","Three-Quarter"
 "threequarters","Three-Quarter"
 "tight-head prop","Tighthead Prop"
+"tight end",NA
 "tight head prop","Tighthead Prop"
 "tighthead","Tighthead Prop"
 "tighthead prop","Tighthead Prop"
@@ -358,11 +393,13 @@
 "utility players","Utility"
 "versatile backflanker","Utility Back"
 "versatile forward","Utility Forward"
+"wide receiver",NA
 "wing","Winger"
 "wing-forward","Flanker"
 "wing-forwardhooker","Flanker; Hooker"
 "wing-forwardloose forward","Flanker"
 "wing-threequarter","Winger"
+"wing (15s)","Winger"
 "wing (rugby union)","Winger"
 "wing (rugby union)centre (sevens)","Winger"
 "wing and centre","Winger; Centre"
@@ -395,6 +432,7 @@
 "winginside centeroutside centerfullback","Winger; Inside Centre; Outside Centre; Fullback"
 "winginside centrefullback","Winger; Inside Centre; Fullback"
 "wingloose forward","Winger; 3rd Row"
+"wingopenside flanker","Winger; Openside Flanker"
 "wingorfull-back","Winger; Fullback"
 "wingorfullback","Winger; Fullback"
 "wingoutside centre","Winger; Outside Centre"

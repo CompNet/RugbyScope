@@ -5,15 +5,20 @@
 "Albania","Albania",FALSE
 "Alberta","Canada",TRUE
 "Algeria","Algeria",FALSE
+"Allied-Occupied Germany","Germany",FALSE
 "American Samoa","American Samoa",FALSE
 "Angola","Angola",FALSE
 "Argentina","Argentina",FALSE
 "Argentine","Argentina",FALSE
 "Arizona","U.S.A.",TRUE
+"Auckland","New Zealand",TRUE
 "Australia","Australia",FALSE
 "Austria-Hungary","Austria-Hungary",FALSE
+"Ayutthaya","Thailand",TRUE
 "Az","U.S.A.",FALSE
+"Bangladesh","Bangladesh",FALSE
 "Barcelona","Spain",TRUE
+"Basutoland","Lesotho",FALSE
 "Belgium","Belgium",FALSE
 "Berkshire","England",TRUE
 "Bermuda","Bermuda",FALSE
@@ -23,7 +28,9 @@
 "Bouches-Du-Rhône","France",TRUE
 "Brazil","Brazil",FALSE
 "British Burma","Burma",FALSE
-"British Columbia","Canadia",TRUE
+"British Ceylon","Sri Lanka",FALSE
+"British Columbia","Canada",TRUE
+"British Hong Kong","Hong Kong",FALSE
 "British India","India",FALSE
 "British North America","U.S.A.",FALSE
 "British Overseas Territories","United Kingdom",FALSE
@@ -43,12 +50,16 @@
 "Cape Province","South Africa",TRUE
 "Cape Town","South Africa",TRUE
 "Carmarthenshire","England",TRUE
+"Carlisle","England",TRUE
 "Ceylon","Sri Lanka",FALSE
 "Cheshire","England",TRUE
 "Chile","Chile",FALSE
 "China","China",FALSE
 "Co. Antrim","Ireland",TRUE
+"Co. Cork Ireland","Ireland",TRUE
 "Co. Down","Ireland",TRUE
+"Co. Westmeath","Ireland",TRUE
+"Colony Of Fiji","Fiji",FALSE
 "Colony Of Natal","South Africa",TRUE
 "Colony Of New South Wales","Australia",TRUE
 "Colony Of Victoria","Australia",TRUE
@@ -64,11 +75,15 @@
 "County Galway","Ireland",TRUE
 "County Kerry","Ireland",TRUE
 "County Kildareireland","Ireland",TRUE
+"County Kilkenny","Ireland",TRUE
+"County Laois","Ireland",TRUE
 "County Meath","Ireland",TRUE
 "County Roscommon","Ireland",TRUE
+"County Tipperary","Ireland",TRUE
 "County Tyrone","Ireland",TRUE
 "County Wicklow","Ireland",TRUE
 "Croatia","Croatia",FALSE
+"Cumberland","England",TRUE
 "Cumbria","England",TRUE
 "Czechoslovakia","Czechoslovakia",FALSE
 "D.c.","U.S.A.",TRUE
@@ -77,6 +92,7 @@
 "Denbighshire","England",TRUE
 "Devon","England",TRUE
 "Dominion Of Fiji","Fiji",FALSE
+"Dorset","England",TRUE
 "Dr Congo","D.R. of the Congo",FALSE
 "Drôme","France",TRUE
 "Dublin","Ireland",TRUE
@@ -85,23 +101,28 @@
 "East Lothian","England",TRUE
 "Eastern Cape","South Africa",TRUE
 "Eastern Province","South Africa",TRUE
+"Edinburgh","Scotland",TRUE
 "Egypt","Egypt",FALSE
 "England","England",FALSE
 "England Uk","England",FALSE
 "España","Spain",FALSE
 "Essex","England",TRUE
+"Fascist Italy","Italy",FALSE
 "Federation Of Rhodesia And Nyasaland","Zimbabwe",TRUE
 "Fiji","Fiji",FALSE
 "Fiji Islands","Fiji",FALSE
+"Fr Yugoslavia","Yugoslavia",FALSE
 "Frabce","France",FALSE
 "France","France",FALSE
 "Free State","South Africa",TRUE
 "French Algeria","Algeria",FALSE
+"French Indochina","Vietnam",FALSE
 "French Tunisia","Tunisia",FALSE
 "Gasperich","Luxembourg",TRUE
 "Gauteng","South Africa",TRUE
 "Georgia","Georgia",FALSE
 "Georgian Ssr","Georgia",FALSE
+"German East Africa","Burundi",FALSE
 "German-Occupied France","France",FALSE
 "German Empire","Germany",FALSE
 "Germany","Germany",FALSE
@@ -109,18 +130,23 @@
 "Ghana","Ghana",FALSE
 "Glamorgan","Wales",TRUE
 "Gloucestershire","England",TRUE
+"Gold Coast","Australia",TRUE
 "Great Britain","United Kingdom",FALSE
 "Greater Manchester","England",TRUE
+"Greece","Greece",FALSE
 "Guam","Guam",FALSE
 "Guernsey","Guernsey",FALSE
 "Guinea","Guinea",FALSE
 "Guinea-Bissau","Guinea-Bissau",FALSE
 "Haiti","Haiti",FALSE
+"Halifax","England",TRUE
 "Hampshire","England",TRUE
+"Hants","England",TRUE
 "Havering","England",TRUE
 "Hawaii","U.S.A.",TRUE
 "Hérault","France",TRUE
 "Hertfordshire","England",TRUE
+"Hong Kong","Hong Kong",FALSE
 "Illinois","U.S.A.",TRUE
 "India","India",FALSE
 "Indiana","U.S.A.",TRUE
@@ -131,24 +157,32 @@
 "Ireland","Ireland",FALSE
 "Ireland.","Ireland",FALSE
 "Irish Free State","Ireland",FALSE
+"Isle Of Man","United Kingdom",TRUE
+"Isle Of Wight","England",TRUE
 "Israel","Israel",FALSE
+"Italian Libya","Libya",FALSE
 "Italy","Italy",FALSE
 "Ivory Coast","Ivory Coast",FALSE
 "Jamaica","Jamaica",FALSE
 "Japan","Japan",FALSE
 "Jersey","Jersey",FALSE
+"Johannesburg","South Africa",TRUE
 "Kadavu","Fiji",TRUE
 "Karas Region","Namibia",TRUE
 "Kazakhstan","Kazakhstan",FALSE
 "Kent","England",TRUE
 "Kenya","Kenya",FALSE
 "Kenya Colony","Kenya",FALSE
+"Kingdom Of Greece","Greece",FALSE
+"Kingdom Of Italy","Italy",FALSE
 "Kingdom Of Romania","Romania",FALSE
 "Kingdom Of Württemberg","Germany",FALSE
 "Kwazulu-Natal","South Africa",TRUE
 "Lancashire","England",TRUE
 "Landes","France",TRUE
 "Latvian Ssr","Latvia",FALSE
+"Leeds","England",TRUE
+"Leicester","England",TRUE
 "Leicestershire","England",TRUE
 "Libya","Libya",FALSE
 "Limerick","Ireland",TRUE
@@ -157,9 +191,12 @@
 "Lithuania","Lithuania",FALSE
 "Lombardy","Italy",TRUE
 "London","England",TRUE
+"London Borough Of Bexley","England",TRUE
+"Louisiana","U.S.A.",TRUE
 "Macedonia","Macedonia",FALSE
 "Madagascar","Madagascar",FALSE
 "Malawi","Malawi",FALSE
+"Malaya","Malaysia",FALSE
 "Malaysia","Malaysia",FALSE
 "Malta","Malta",FALSE
 "Manchester","England",TRUE
@@ -168,9 +205,12 @@
 "Maryland","U.S.A.",TRUE
 "Massachusetts","U.S.A.",TRUE
 "Mauritius","Mauritius",FALSE
+"Mediterranean Seaoffcrete","Crete",FALSE
+"Mendoza","Argentina",TRUE
 "Merionethshire","England",TRUE
 "Merseyside","England",TRUE
 "Mexico","Mexico",FALSE
+"Middlesex","England",TRUE
 "Midlothian","Scotland",TRUE
 "Minnesota","U.S.A.",TRUE
 "Missouri","U.S.A.",TRUE
@@ -179,6 +219,7 @@
 "Monaco","Monaco",FALSE
 "Monmouthshire","England",TRUE
 "Morocco","Morocco",FALSE
+"Mozambique","Mozambique",FALSE
 "Mpumalanga","South Africa",TRUE
 "Myanmar","Myanmar",FALSE
 "N.ireland","Ireland",FALSE
@@ -186,6 +227,7 @@
 "Nadroga","Fiji",TRUE
 "Namibia","Namibia",FALSE
 "Natal","South Africa",TRUE
+"Nazi Germany","Germany",FALSE
 "Netherland","Netherlands",FALSE
 "Netherlands","Netherlands",FALSE
 "New Brunswick","Canada",TRUE
@@ -195,8 +237,10 @@
 "New York","U.S.A.",TRUE
 "New Zealand","New Zealand",FALSE
 "Newfoundland And Labrador","Canada",TRUE
+"Niger","Niger",FALSE
 "Nigeria","Nigeria",FALSE
 "Norfolk","England",TRUE
+"North Carolina","U.S.A.",TRUE
 "North German Confederation","Germany",FALSE
 "North London","England",TRUE
 "North West","South Africa",TRUE
@@ -209,16 +253,23 @@
 "Northumberland","England",TRUE
 "Norway","Norway",FALSE
 "Nsw","Australa",TRUE
+"Nyasaland","Malawi",FALSE
 "Nz","NEw Zealand",FALSE
+"Off Greenland","Denmark",FALSE
+"Off Scotland","Scotland",FALSE
 "Okavango Region","Botswana",TRUE
 "Oklahoma","U.S.A.",TRUE
 "Ontario","Canada",TRUE
+"Orange Free State","South Africa",TRUE
 "Orange River Colony","South Africa",TRUE
 "Osaka","Japan",TRUE
 "Otago","New Zealand",TRUE
+"Ottoman Empire","Turkey",FALSE
+"Ottoman Turkey","Turkey",FALSE
 "Oxfordshire","England",TRUE
 "Oxon","English",FALSE
 "Pakistan","Pakistan",FALSE
+"Palestine","Palestine",FALSE
 "Papua New Guinea","Papua New Guinea",FALSE
 "Paris","France",TRUE
 "Pembrokeshire","England",TRUE
@@ -226,12 +277,17 @@
 "Perthshire","Scotland",TRUE
 "Peru","Peru",FALSE
 "Philippines","Philippines",FALSE
+"Plymouth","England",TRUE
 "Png","Papua New Guinea",FALSE
 "Poland","Poland",FALSE
+"Polish People's Republic","Poland",FALSE
 "Portugal","Portugal",FALSE
 "Portuguese Mozambique","Mozambique",FALSE
 "Province Of Rovigo","Italy",TRUE
 "Punjab","India",TRUE
+"Punjaub","India",TRUE
+"Qatar","Qatar",FALSE
+"Qing Dynasty","China",FALSE
 "Qld","Australian",TRUE
 "Quebec","Canada",TRUE
 "Queensland","Australia",TRUE
@@ -240,29 +296,37 @@
 "Republic Of South Africa","South Africa",FALSE
 "Réunion","France",TRUE
 "Rhodesia","Zimbabwe",FALSE
+"Rhodesia And Nyasaland","Zimbabwe",FALSE
 "Rhône","France",TRUE
 "Romania","Romania",FALSE
 "Romănia","Romania",FALSE
 "Rsa","South Africa",FALSE
 "Russia","Russia",FALSE
+"Russian Empire","Russia",FALSE
 "Russian Federation","Russia",FALSE
 "Rutland","England",TRUE
+"S. Wales.","Wales",FALSE
 "Saint Lucia","Saint Lucia",FALSE
 "Samoa","Samoa",FALSE
 "Saskatchewan","Canada",TRUE
 "Saudi Arabia","Saudi Arabia",FALSE
 "Scotland","Scotland",FALSE
 "Scottish Borders","Scotland",FALSE
+"Scottish Highlands","Scotland",FALSE
 "Second French Empire","France",FALSE
 "Senegal","Senegal",FALSE
 "Serbia","Serbia",FALSE
 "Sfr Yugoslavia","Yugoslavia",FALSE
 "Shropshire","England",TRUE
+"Singapore","Singapore",FALSE
+"Skagerrak","Denmark",FALSE
+"Socialist Republic Of Romania","Romania",FALSE
 "Somerset","England",TRUE
 "South-West Africa","Namibia",FALSE
 "South Africa","South Africa",FALSE
 "South African Republic","South Africa",FALSE
 "South Australia","Australia",TRUE
+"South China Sea","China",FALSE
 "South Korea","South Korea",FALSE
 "South Rhodesia","Namibia",FALSE
 "South Wales","Wales",FALSE
@@ -272,14 +336,19 @@
 "Spain","Spain",FALSE
 "Sri Lanka","Sri Lanka",FALSE
 "Staffordshire","England",TRUE
+"Sudan","Sudan",FALSE
 "Suffolk","England",TRUE
 "Surrey","England",TRUE
+"Sussex","England",TRUE
+"Suva","Fiji",TRUE
+"Swansea","Wales",TRUE
 "Swaziland","Eswatini",FALSE
 "Sweden","Sweden",FALSE
 "Switzerland","Switzerland",FALSE
 "Sydney","Australia",TRUE
 "Tailevu","Fiji",TRUE
 "Taiwan","Taiwan",FALSE
+"Tanganyika","Tanzania",FALSE
 "Tanzania","Tanzania",FALSE
 "Tarn","France",TRUE
 "Tasmania","Australia",TRUE
@@ -292,8 +361,11 @@
 "Tongatapu","Tonga",FALSE
 "Torfaen","Wales",TRUE
 "Transvaal","South Africa",TRUE
+"Transvaal Province","South Africa",TRUE
 "Transvaal Colony","South Africa",TRUE
+"Treviso Province","Italy",TRUE
 "Trinidad And Tobago","Trinidad And Tobago",FALSE
+"Tunisia","Tunisia",FALSE
 "Turkey","Turkey",FALSE
 "Tyne And Wear","England",TRUE
 "U.k.","United Kingdom",FALSE
@@ -319,9 +391,11 @@
 "Venice","Italy",TRUE
 "Victoria","Australia",TRUE
 "Vrystaat","South Africa",TRUE
+"Wakefield","England",TRUE
 "Wales","Wales",FALSE
 "Waleswales","Wales",FALSE
 "Wallis And Futuna","France",TRUE
+"Wang Jingwei Regime","China",FALSE
 "Warwickshire","England",TRUE
 "Washington","U.S.A.",TRUE
 "Wellington","NEw Zealand",TRUE
@@ -330,11 +404,13 @@
 "West London","England",TRUE
 "West Midlands","England",TRUE
 "West Sussex","England",TRUE
+"West Wales","Wales",FALSE
 "West Yorkshire","England",TRUE
 "Western Australia","Australia",FALSE
 "Western Cape","South Africa",TRUE
 "Western Samoa","Samoa",FALSE
 "Whittlesea","Australia",TRUE
+"Wigan","England",TRUE
 "Wiltshire","England",TRUE
 "Worcestershire","England",TRUE
 "Yasawa","Fiji",TRUE
@@ -342,3 +418,4 @@
 "Zaire","Zaire",FALSE
 "Zambia","Zambia",FALSE
 "Zimbabwe","Zimbabwe",FALSE
+"Zimbabwe Rhodesia","Zimbabwe",FALSE

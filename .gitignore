@@ -9,4 +9,4 @@
 /data/wikipedia/english/*.json
 
 # Ignore everything in subfolders
-/data/wikipedia/english/**/
+#/data/wikipedia/english/**/

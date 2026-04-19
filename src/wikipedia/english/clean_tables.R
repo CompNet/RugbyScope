@@ -28,11 +28,11 @@ start.rec.log("CleaningEnWP")
 tlog("Loading Wikipedia EN tables")
 folder <- file.path("data", "wikipedia", "english")
 
-players <- read.csv(file.path(folder, "raw", "player_info4.csv"))
+players <- read.csv(file.path(folder, "raw", "player_info6.csv"))
 tlog(2, "Raw number of players: ", nrow(players))
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
-stints <- read.csv(file.path(folder, "raw", "stint_info3.csv"))
+stints <- read.csv(file.path(folder, "raw", "stint_info6.csv"))
 tlog(2, "Raw number of stints: ", nrow(stints))
 stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 
@@ -45,40 +45,41 @@ tlog(0, "Cleaning the player table")
 tlog(2, "Number of players found on EN Wikipedia: ", nrow(players))
 
 
-#### did that just once and recorded the correction in player_info3.csv
-## fix WD ids, which are incorrect for full homonyms
-#tlog(2, "Fixing incorrect WD ids in complete homonyms")
-#fusion_folder <- file.path("data", "fusion")
-#fus_players <- read.csv(file.path(fusion_folder, "players_05_eswp.csv"))
-#players[, "wpPage"] <- gsub("https://en.wikipedia.org/wiki/", "", players[, "wpPage"], fixed = TRUE)
-#idx <- match(players[, "wpPage"], fus_players[, "wikipediaEn"])
-#players[, "origWdId"] <- fus_players[idx, "wikidataId"]
-#write.csv(players, file.path(folder, "raw/player_info3.csv"), row.names = FALSE)
+#### did that just once and recorded the correction in player_info6.csv
+# # fix WD ids, which are incorrect for full homonyms
+# tlog(2, "Fixing incorrect WD ids in complete homonyms")
+# fusion_folder <- file.path("data", "fusion")
+# fus_players <- read.csv(file.path(fusion_folder, "players_05_eswp.csv"))
+# players[, "wpPage"] <- gsub("https://en.wikipedia.org/wiki/", "", players[, "wpPage"], fixed = TRUE)
+# idx <- match(players[, "wpPage"], fus_players[, "wikipediaEn"])
+# players[, "origWdId"] <- fus_players[idx, "wikidataId"]
+# write.csv(players, file.path(folder, "raw/player_info6.csv"), row.names = FALSE)
 ####
 
-#### did that just once, and recorded the correction in player_info4.csv
-# remove duplicate rows (some rows are almost identical, for some reason)
-#tt <- table(players[, "origWdId"])
-#ids <- names(which(tt > 1))
-#tlog(2, "Found ", length(ids), " duplicate rows: removing them")
-## checking that the duplicate rows are identical: fine
-##for (id in ids) {
-##  #print(id)
-##  idx <- which(players[, "origWdId"] == id)
-##  if ((is.na(players[idx[1], "birthDate"]) && !is.na(players[idx[2], "birthDate"]))
-##      || (!is.na(players[idx[1], "birthDate"]) && is.na(players[idx[2], "birthDate"]))
-##      || (!is.na(players[idx[1], "birthDate"]) && !is.na(players[idx[2], "birthDate"])
-##          && players[idx[1], "birthDate"] != players[idx[2], "birthDate"]))
-##    print(players[idx, 2:ncol(players)])
-##}
-## removing the second occurrence of the duplicate rows
-#del <- c()
-#for (id in ids) {
+#### did that just once, and recorded the correction in player_info7.csv
+#### edit: not needed anymore after new WP scraping
+# # remove duplicate rows (some rows are almost identical, for some reason)
+# tt <- table(players[, "origWdId"])
+# ids <- names(which(tt > 1))
+# tlog(2, "Found ", length(ids), " duplicate rows: removing them")
+# # checking that the duplicate rows are identical: fine
+# #for (id in ids) {
+# #  #print(id)
+# #  idx <- which(players[, "origWdId"] == id)
+# #  if ((is.na(players[idx[1], "birthDate"]) && !is.na(players[idx[2], "birthDate"]))
+# #      || (!is.na(players[idx[1], "birthDate"]) && is.na(players[idx[2], "birthDate"]))
+# #      || (!is.na(players[idx[1], "birthDate"]) && !is.na(players[idx[2], "birthDate"])
+# #          && players[idx[1], "birthDate"] != players[idx[2], "birthDate"]))
+# #    print(players[idx, 2:ncol(players)])
+# #}
+# # removing the second occurrence of the duplicate rows
+# del <- c()
+# for (id in ids) {
 #  idx <- which(players[, "origWdId"] == id)
 #  del <- c(del, idx[2])
-#}
-#players <- players[-del, ]
-#write.csv(players, file.path(folder, "raw/player_info4.csv"), row.names = FALSE)
+# }
+# players <- players[-del, ]
+# write.csv(players, file.path(folder, "raw/player_info7.csv"), row.names = FALSE)
 ####
 
 # normalize positions
@@ -91,6 +92,7 @@ all_positions <- gsub("/", "; ", all_positions, fixed = TRUE)
 all_positions <- strsplit(all_positions, "; ")
 unique_positions <- sort(unique(trimws(unlist(all_positions))))
 #table(unique_positions)
+#write.csv(unique_positions, file.path(folder, "check_positions.csv"), row.names = FALSE)
 # position conversion map
 temp <- read.csv(file.path(folder, "maps", "text2position.csv"))
 map <- temp[, "position"]
@@ -120,6 +122,11 @@ players[, "positions"] <- all_positions
 # converting meter heights to centimeters
 #sort(unique(players[, "height"]))
 heights <- as.numeric(players[, "height"])
+heights[heights == 0.0196] <- 1.96
+heights[heights == 1.12] <- 1.69
+heights[heights == 1.3] <- 1.78
+heights[heights == 1.45] <- 1.78
+heights[heights == 1.57] <- 1.78
 idx <- which(heights < 3)
 heights[idx] <- heights[idx] * 100
 # remove zero heights
@@ -131,6 +138,7 @@ players[, "height"] <- heights
 # checking weights
 #sort(unique(players[, "weight"]))
 weights <- as.numeric(players[, "weight"])
+weights[weights == 220] <- 107
 # remove small weights
 idx <- which(weights <= 10)
 weights[idx] <- NA
@@ -146,16 +154,29 @@ birth_dates <- gsub("^(\\d{4}-\\d{2})-00$", "\\1-01", birth_dates, fixed = FALSE
 birth_dates[!is.na(birth_dates) & birth_dates == ""] <- NA
 #head(sort(unique(birth_dates)), 20)
 #tail(sort(unique(birth_dates)), 20)
+birth_dates[birth_dates == "2012-03-10"] <- "1925-06-11"
 #idx <- which(!is.na(birth_dates) & is.na(as.Date(birth_dates)))
 #print(birth_dates[idx])
 birth_dates <- as.Date(birth_dates)
 players[, "birthDate"] <- birth_dates
 
-# no death dates to clean
+# clean death dates
+death_dates <- players[, "deathDate"]
+# deal with certain incomplete dates
+death_dates <- gsub("^(\\d{4})$", "\\1-01-01", death_dates, fixed = FALSE)      # form YYYY
+death_dates <- gsub("^(\\d{4}-\\d{2})$", "\\1-01", death_dates, fixed = FALSE)  # form YYYY-MM
+death_dates <- gsub("^(\\d{4}-\\d{2})-00$", "\\1-01", death_dates, fixed = FALSE)  # form YYYY-MM-00
+death_dates[!is.na(death_dates) & death_dates == ""] <- NA
+#head(sort(unique(death_dates)), 20)
+#tail(sort(unique(death_dates)), 20)
+#idx <- which(!is.na(death_dates) & is.na(as.Date(death_dates)))
+#print(death_dates[idx])
+death_dates <- as.Date(death_dates)
+players[, "deathDate"] <- death_dates
 
 # clean birth places
-tlog(2, "Normalize birth places")
-all_locs <- players[, "birthPlaceWP"]
+tlog(2, "Normalize place names")
+all_locs <- c(players[, "birthPlaceWP"], players[, "deathPlaceWP"])
 #which(grepl(";", all_locs, fixed = TRUE))
 all_locs <- gsub('cowra, new south wales[1]"warrangong", koorawatha (near cowra)', "cowra, new south wales", all_locs, fixed = TRUE)
 all_locs <- gsub("\\[\\d+\\]", "", all_locs, fixed = FALSE)
@@ -171,6 +192,8 @@ all_locs <- gsub("[’ʻ]", "'", all_locs, fixed = FALSE)
 all_locs <- gsub("ǁ", "", all_locs, fixed = TRUE)
 all_locs <- gsub("\\((.+)\\)", ", \\1", all_locs, fixed = FALSE)
 all_locs <- gsub("africasiblings =suleiman hartzenbergmunier hartzenberg", "africa", all_locs, fixed = TRUE)
+all_locs <- gsub("australia.", "australia", all_locs, fixed = TRUE)
+all_locs <- gsub("hmshawke,atlantic ocean", "HLS hawke", all_locs, fixed = TRUE)
 all_locs <- gsub("in what would becomesouth rhodesiaand later zimbabwe", "zimbabwe", all_locs, fixed = TRUE)
 all_locs <- gsub("nearsouthampton", "southampton", all_locs, fixed = TRUE)
 all_locs <- gsub("provinceunion", "province, union", all_locs, fixed = TRUE)
@@ -220,6 +243,44 @@ all_locs <- gsub("nowpapua new guinea", "papua new guinea", all_locs, fixed = TR
 all_locs <- gsub("nowpolokwane", "polokwane", all_locs, fixed = TRUE)
 all_locs <- gsub("nowwestern cape", "western cape", all_locs, fixed = TRUE)
 all_locs <- gsub("nowzimbabwe", "zimbabwe", all_locs, fixed = TRUE)
+all_locs <- gsub("scottish borders, scotland", "scotland", all_locs, fixed = TRUE)
+all_locs <- gsub("bau,colony of fiji, british empire", "bau, fiji", all_locs, fixed = TRUE)
+all_locs <- gsub("cape province south africa", "cape province, south africa", all_locs, fixed = TRUE)
+all_locs <- gsub("cape province.south africa","cape province, south africa", all_locs, fixed = TRUE)
+all_locs <- gsub("County Corkireland", "county cork, ireland", all_locs, fixed = TRUE)
+all_locs <- gsub("dublin ireland", "dublin, ireland", all_locs, fixed = TRUE)
+all_locs <- gsub("near thecanary islands", "canary islands, spain", all_locs, fixed = TRUE)
+all_locs <- gsub("nearjutland", "jutland, denmark", all_locs, fixed = TRUE)
+all_locs <- gsub("hmstiger,dogger bank,north sea", "england", all_locs, fixed = TRUE)
+all_locs <- gsub("northern ireland.", "northern ireland", all_locs, fixed = TRUE)
+all_locs <- gsub("nsw australia", "new south wales, australia", all_locs, fixed = TRUE)
+all_locs <- gsub("nswaustralia", "new south wales, australia", all_locs, fixed = TRUE)
+all_locs <- gsub("offcoromandel peninsula", "coromandel peninsula, new zealand", all_locs, fixed = TRUE)
+all_locs <- gsub("at sea, officeland", "iceland", all_locs, fixed = TRUE)
+all_locs <- gsub(".bucharest, romania", "bucharest, romania", all_locs, fixed = TRUE)
+all_locs <- gsub(".tonedale, wellington, somerset", "tonedale, wellington, somerset", all_locs, fixed = TRUE)
+all_locs <- gsub("†flers, france", "flers, france", all_locs, fixed = TRUE)
+all_locs <- gsub("10th arrondissement of paris", "paris", all_locs, fixed = TRUE)
+all_locs <- gsub("nearzillebeke", "zillebeke", all_locs, fixed = TRUE)
+all_locs <- gsub("nearverdun", "verdun", all_locs, fixed = TRUE)
+all_locs <- gsub("neartobruk", "tobruk", all_locs, fixed = TRUE)
+all_locs <- gsub("nearte pohue", "te pohue", all_locs, fixed = TRUE)
+all_locs <- gsub("nearosches", "osches", all_locs, fixed = TRUE)
+all_locs <- gsub("nearnorthwich", "northwich", all_locs, fixed = TRUE)
+all_locs <- gsub("nearnormanton", "normanton", all_locs, fixed = TRUE)
+all_locs <- gsub("nearlüderitz", "lüderitz", all_locs, fixed = TRUE)
+all_locs <- gsub("nearlille", "lille", all_locs, fixed = TRUE)
+all_locs <- gsub("nearkimberley", "kimberley", all_locs, fixed = TRUE)
+all_locs <- gsub("neargatton", "gatton", all_locs, fixed = TRUE)
+all_locs <- gsub("neardornitz", "dornitz", all_locs, fixed = TRUE)
+all_locs <- gsub("neardeir ibzi", "deir ibzi", all_locs, fixed = TRUE)
+all_locs <- gsub("nearboshof", "boshof", all_locs, fixed = TRUE)
+all_locs <- gsub("nearbir hakeim", "bir hakeim", all_locs, fixed = TRUE)
+all_locs <- gsub("nearbathurst", "bathurst", all_locs, fixed = TRUE)
+all_locs <- gsub("nearappleby", "appleby", all_locs, fixed = TRUE)
+all_locs <- gsub("near shatterbury", "shatterbury", all_locs, fixed = TRUE)
+all_locs <- gsub("washington d.c.", "washington dc", all_locs, fixed = TRUE)
+all_locs <- gsub(",limpopo, south africa", "limpopo, south africa", all_locs, fixed = TRUE)
 all_locs <- str_to_title(all_locs)
 all_locs <- strsplit(all_locs, ",")
 unique_locs <- sort(unique(trimws(unlist(all_locs))))
@@ -247,7 +308,7 @@ for (i in idx_sev) {
     if (length(ii) == 1) {
       # add the normalized string to the country list
       countries[i] <- country_map[ii, "normalized"]
-      # and possibly delete the string from locs
+      # and possibly delete the original string from locs
       if (!as.logical(country_map[ii, "keep"])) {
         locs <- locs[-length(locs)]
       }
@@ -276,14 +337,17 @@ for (i in idx_unq) {
 all_locs <- sapply(all_locs, function(locs) paste0(locs, collapse = "; "))
 all_locs[all_locs == "NA" | all_locs == ""] <- NA
 names(all_locs) <- NULL
-players[, "birthPlace"] <- all_locs
-# add countries
-players[, "birthPlaceWP"] <- countries
+players[, "birthPlace"] <- all_locs[1:nrow(players)]
+players[, "deathPlace"] <- all_locs[(nrow(players)+1):(2*nrow(players))]
+# add countries as a column
 colnames(players)[colnames(players) == "birthPlaceWP"] <- "birthCountry"
+players[, "birthCountry"] <- countries[1:nrow(players)]
+colnames(players)[colnames(players) == "deathPlaceWP"] <- "deathCountry"
+players[, "deathCountry"] <- countries[(nrow(players)+1):(2*nrow(players))]
 #write.csv(players, file.path(folder, "raw/tmp.csv"), row.names = FALSE)
 
 # remove superfluous columns
-sup_cols <- c("X", "debugComment", "wpPage", "deathDate", "deathPlace", "deathPlaceWP", "currentTeam")
+sup_cols <- c("X", "debugComment", "wpPage", "currentTeam")
 tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
 cols <- which(colnames(players) %in% sup_cols)
 players <- players[, -cols]
@@ -300,7 +364,7 @@ colnames(players)[which(colnames(players) == "wiki_Name")] <- "enName"
 # clean the stint table
 tlog(0, "Cleaning the stint table")
 
-#### did that just once and recorded the correction in player_info3.csv
+#### did that just once and recorded the correction in stint_info5.csv
 ## fix WD ids, which are incorrect for full homonyms
 #tlog(2, "Fixing incorrect WD ids in complete homonyms")
 #fusion_folder <- file.path("data", "fusion")
@@ -308,11 +372,11 @@ tlog(0, "Cleaning the stint table")
 #stints[, "wpPage"] <- gsub("https://en.wikipedia.org/wiki/", "", stints[, "wpPage"], fixed = TRUE)
 #idx <- match(stints[, "wpPage"], fus_players[, "wikipediaEn"])
 #stints[, "origWdId"] <- fus_players[idx, "wikidataId"]
-#write.csv(stints, file.path(folder, "raw/stint_info2.csv"), row.names = FALSE)
+#write.csv(stints, file.path(folder, "raw/stint_info5.csv"), row.names = FALSE)
 ####
 
-#### did that just once, and recorded the correction in stint_info3.csv
-## remove duplicate rows (some rows are almost identical, for some reason)
+#### did that just once, and recorded the correction in stint_info6.csv
+## remove duplicate rows (some rows are identical, for some reason)
 #str <- apply(stints[, 2:ncol(stints)], 1, function(row) paste0(row, collapse = ","))
 #tt <- table(str)
 #ids <- names(which(tt > 1))
@@ -324,7 +388,7 @@ tlog(0, "Cleaning the stint table")
 # del <- c(del, idx[2:length(idx)])
 #}
 #stints <- stints[-del, ]
-#write.csv(stints, file.path(folder, "raw/stint_info3.csv"), row.names = FALSE)
+#write.csv(stints, file.path(folder, "raw/stint_info6.csv"), row.names = FALSE)
 ####
 
 #### debug: checking the unique period values
@@ -336,10 +400,10 @@ tlog(0, "Cleaning the stint table")
 idx <- which(stints[, "teamName"] == "total" | stints[, "timePeriod"] == "total") # rows displaying total numbers of points scored and match played
 tlog("Removing ", length(idx), " spurious stints representing total statistics")
 stints <- stints[-idx, ]
-# remove stints with footnote issues (temporary)
-idx <- which(stints[, "timePeriod"] %in% c("[", "1", "]"))
-tlog("Removing ", length(idx), " stints with a footnote instead of a date")
-stints <- stints[-idx, ]
+# # remove stints with footnote issues (temporary)
+# idx <- which(stints[, "timePeriod"] %in% c("[", "1", "]"))
+# tlog("Removing ", length(idx), " stints with a footnote instead of a date")
+# stints <- stints[-idx, ]
 
 # fix some specific cases
 all_periods <- stints[, "timePeriod"]
@@ -666,6 +730,7 @@ norm_periods <- gsub("^([01]\\d)-(\\d{2})$", "20\\1-20\\2", norm_periods, fixed 
 norm_periods <- gsub("^(\\d{3})(\\d)-(\\d)$", "\\1\\2-\\1\\3", norm_periods, fixed = FALSE)
 norm_periods <- gsub("^(\\d{2})(\\d{2})-(\\d{2})$", "\\1\\2-\\1\\3", norm_periods, fixed = FALSE)
 norm_periods <- gsub("^-$", "", norm_periods, fixed = FALSE)
+#all_periods[which(sapply(all_periods, function(x) any(trimws(x)==unique_periods[which(norm_periods=="14")])))]
 
 #### debug
 #norm_periods[grepl("total", norm_periods, fixed = FALSE)]
