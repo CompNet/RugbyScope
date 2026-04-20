@@ -28,11 +28,11 @@ start.rec.log("CleaningEnWP")
 tlog("Loading Wikipedia EN tables")
 folder <- file.path("data", "wikipedia", "english")
 
-players <- read.csv(file.path(folder, "raw", "player_info6.csv"))
+players <- read.csv(file.path(folder, "raw", "player_info.csv"))
 tlog(2, "Raw number of players: ", nrow(players))
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
-stints <- read.csv(file.path(folder, "raw", "stint_info6.csv"))
+stints <- read.csv(file.path(folder, "raw", "stint_info.csv"))
 tlog(2, "Raw number of stints: ", nrow(stints))
 stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 
@@ -874,7 +874,7 @@ if (length(idx) > 0)
 # solve wikipedia redirections
 old_urls <- sort(unique(new_stints[, "teamWP"]))
 new_urls <- rep(NA, length(old_urls))
-for (r in r:length(old_urls)) {
+for (r in 1:length(old_urls)) {
   url <- old_urls[r]
   # if (r %% 100 == 0)
     tlog(4, "Solving redirections for entry ", r, "/", length(old_urls), " (", url, ")")
@@ -901,10 +901,10 @@ new_stints[idx2, "teamWP"] <- new_urls[idx1[idx2]]
 ####
 
 # remove superfluous columns
-sup_cols <- c("X")
-tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
-cols <- which(colnames(new_stints) %in% sup_cols)
-new_stints <- new_stints[, -cols]
+#sup_cols <- c("X")
+#tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
+#cols <- which(colnames(new_stints) %in% sup_cols)
+#new_stints <- new_stints[, -cols]
 
 # rename certain columns
 colnames(new_stints)[which(colnames(new_stints) == "wiki_Name")] <- "enName"
