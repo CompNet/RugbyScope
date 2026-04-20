@@ -18422,7 +18422,8 @@
 "Q5542786",NA,"george naoupu","George_Naoupu","senior_club","2011-2016","connacht","/wiki/Connacht_Rugby",103,30
 "Q5542786",NA,"george naoupu","George_Naoupu","senior_club","2008-2009","highlanders","/wiki/Highlanders_(rugby_union)",11,5
 "Q5542786",NA,"george naoupu","George_Naoupu","international","2001","new zealand schools","/wiki/New_Zealand_national_schoolboy_rugby_union_team",0,0
-"Q5542786",NA,"george naoupu","George_Naoupu","international","2002","new zealand u19new zealand u21",NA,0,0
+"Q5542786",NA,"george naoupu","George_Naoupu","international","2002","new zealand u19","/wiki/New_Zealand_national_under-19_rugby_union_team",NA,NA
+"Q5542786",NA,"george naoupu","George_Naoupu","international","2002","new zealand u21","/wiki/New_Zealand_national_under-21_rugby_union_team",NA,NA
 "Q51754360",NA,"ben cima","Ben_Cima","amateur","2015-2017","rocky gorge","/wiki/Rocky_Gorge_Rugby",0,0
 "Q51754360",NA,"ben cima","Ben_Cima","senior_club","2018","san diego legion","/wiki/San_Diego_Legion",7,15
 "Q51754360",NA,"ben cima","Ben_Cima","senior_club","2018","new england free jacks","/wiki/New_England_Free_Jacks",1,4
@@ -32102,7 +32103,7 @@
 "Q16993737",NA,"tommy haslam","Tommy_Haslam","amateur","1889-1893","cheshire","/wiki/Cheshire_Rugby_Football_Union",0,0
 "Q16993737",NA,"tommy haslam","Tommy_Haslam","amateur","1884-1888","yorkshire","/wiki/Yorkshire_Rugby_Football_Union",0,0
 "Q16993737",NA,"tommy haslam","Tommy_Haslam","amateur","1892-1896","stockport","/wiki/Stockport_RFC",0,0
-"Q16993737",NA,"tommy haslam","Tommy_Haslam","amateur","1889-1892","Dukinfield","https://dukinfieldrugbyclub.co.uk/",0,0
+"Q16993737",NA,"tommy haslam","Tommy_Haslam","amateur","1889-1892","Dukinfield",NA,0,0
 "Q16993737",NA,"tommy haslam","Tommy_Haslam","amateur","1882-1889","batley","/wiki/Batley_Bulldogs",0,0
 "Q16993737",NA,"tommy haslam","Tommy_Haslam","international","1888","british isles","/wiki/British_and_Irish_Lions",0,0
 "Q21511939",NA,"nisifolo naufahu","Nisifolo_Naufahu","amateur","2000","suburbs",NA,0,0
@@ -38094,11 +38095,11 @@
 "Q7173718",NA,"peter sime douty","Peter_Douty","international","1925-27","barbarians","/wiki/Barbarian_F.C.",7,0
 "Q7173718",NA,"peter sime douty","Peter_Douty","international","1927-28","scotland","/w/index.php?title=Scotland_Possibles&action=edit&redlink=1",3,0
 "Q7173718",NA,"peter sime douty","Peter_Douty","international","1927","british and irish lions","/wiki/British_and_Irish_Lions",0,0
-"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1889-1890","melrose",NA,NA,nA
-"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1892-1894","poneke",NA,,NA,nA
-"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1896-1897","poneke",NA,,NA,nA
-"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1899-1903","poneke",NA,,NA,nA
-"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1895","petone",NA,,NA,nA
+"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1889-1890","melrose",NA,NA,NA
+"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1892-1894","poneke",NA,,NA,NA
+"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1896-1897","poneke",NA,,NA,NA
+"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1899-1903","poneke",NA,,NA,NA
+"Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1895","petone",NA,,NA,NA
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","senior_club","1889-1890","wellington","/wiki/Wellington",5,0
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","senior_club","1892-1897","wellington","/wiki/Wellington",20,0
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","senior_club","1899-1903","wellington","/wiki/Wellington",22,0
@@ -51322,7 +51323,8 @@
 "Q116505156",NA,"edward mckeating","Eddie_McKeating","amateur","1963 -","west of scotland","/wiki/West_of_Scotland_F.C.",0,0
 "Q116505156",NA,"edward mckeating","Eddie_McKeating","senior_club","1957","edinburgh district","/wiki/Edinburgh_District_(rugby_union)",0,0
 "Q116505156",NA,"edward mckeating","Eddie_McKeating","senior_club","-","kent","/wiki/Kent_Rugby_Football_Union",0,0
-"Q116505156",NA,"edward mckeating","Eddie_McKeating","senior_club","19601963-","cities districtglasgow district",NA,0,0
+"Q116505156",NA,"edward mckeating","Eddie_McKeating","senior_club","1960","cities district","/wiki/Cities_District_(rugby_union)",NA,NA
+"Q116505156",NA,"edward mckeating","Eddie_McKeating","senior_club","1963-","cities districtglasgow district","/wiki/Glasgow_District_(rugby_union)",NA,NA
 "Q116505156",NA,"edward mckeating","Eddie_McKeating","international","1957-61","scotland","/wiki/Scotland",6,0
 "Q639771",NA,"august friedrich christian schmierer","August_Schmierer","amateur","-","cannstatter fc","/w/index.php?title=Cannstatter_Fu%C3%9Fball-Club&action=edit&redlink=1",0,0
 "Q3565988",NA,"ratu wame ganilau lewaravu","Wame_Lewaravu","senior_club","2005-2006","highlanders","/wiki/Suva_Highlanders",0,0

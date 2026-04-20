@@ -869,29 +869,35 @@ if (length(idx) > 0)
 idx <- which(new_stints[, "teamWP"] == "")
 if (length(idx) > 0)
   new_stints[idx, "teamWP"] <- NA
-#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 41,334/46,999 non-NAs
+#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 60,339/63,792 non-NAs
 
 # solve wikipedia redirections
-old_urls <- new_stints[, "teamWP"]
-for (r in 1:nrow(new_stints)) {
-  url <- new_stints[r, "teamWP"]
+old_urls <- sort(unique(new_stints[, "teamWP"]))
+new_urls <- rep(NA, length(old_urls))
+for (r in r:length(old_urls)) {
+  url <- old_urls[r]
   # if (r %% 100 == 0)
-    tlog(4, "Solving redirections for entry ", r, "/", nrow(new_stints), " (", url, ")")
+    tlog(4, "Solving redirections for entry ", r, "/", length(old_urls), " (", url, ")")
 
   if (!is.na(url)) {
     if (url == "")
-      new_stints[r, "teamWP"] <- NA
+      new_urls[r] <- NA
     else
       # solve redirection
-      new_stints[r, "teamWP"] <- solve_redirections(name = url, lang = "en")
+      new_urls[r] <- solve_redirections(name = url, lang = "en")
+      Sys.sleep(0.25)
   }
 
-  if (!is.na(url) && is.na(new_stints[r, "teamWP"]))
-    tlog(6, "Difference: ", r)
+  if (!is.na(url) && is.na(new_urls[r]))
+    tlog(6, "Lost URL: ", r)
 }
+# put unique URL into the sting table
+idx1 <- match(new_stints[, "teamWP"], old_urls)
+idx2 <- which(!is.na(idx1))
+new_stints[idx2, "teamWP"] <- new_urls[idx1[idx2]]
 #### debug: check if we lost some URL after the above processing
-#print(length(which(!is.na(old_urls) & is.na(new_stints[, "teamWP"]))))
-#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 57,946/62,603 non-NAs
+#print(length(which(!is.na(old_urls) & is.na(new_urls))))
+#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 60,338/63,792 non-NAs
 ####
 
 # remove superfluous columns
