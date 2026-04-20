@@ -72,9 +72,26 @@ tlog("Merging players")
 
 # convert dob and dod into proper dates
 wp_players[, "birthDate"] %<>%  as.Date()
-# wp_players[, "deathDate"] %<>%  as.Date()   # TODO
+wp_players[, "deathDate"] %<>%  as.Date()
 fus_players[, "birthDate"] %<>%  as.Date()
 fus_players[, "deathDate"] %<>%  as.Date()
+
+# merge country and place of birth/death
+wp_players[, "birthPlace"] <- sapply(1:nrow(wp_players), function(i) {
+  if (is.na(wp_players[i, "birthCountry"]))
+    return(wp_players[i, "birthPlace"])
+  else
+    return(paste0(wp_players[i, "birthPlace"], "; ", wp_players[i, "birthCountry"]))
+})
+wp_players[, "deathPlace"] <- sapply(1:nrow(wp_players), function(i) {
+  if (is.na(wp_players[i, "deathCountry"]))
+    return(wp_players[i, "deathPlace"])
+  else
+    return(paste0(wp_players[i, "deathPlace"], "; ", wp_players[i, "deathCountry"]))
+})
+
+# normalize player names case
+wp_players[, "enName"] <- str_to_title(wp_players[, "enName"])
 
 # match players from WP to the merged list
 idx <- match(wp_players[, "wikidataId"], fus_players[, "wikidataId"])
@@ -84,8 +101,8 @@ tlog(2, "Successful player matches: ", length(which(!is.na(idx))), "/", nrow(wp_
 map <- c()  # merged <- wp
 map["birthDate"] <- "birthDate"
 map["birthPlaces"] <- "birthPlace"
-#map["deathDate"] <- "deathDate"      # TODO
-#map["deathPlaces"] <- "deathPlace"   # TODO
+map["deathDate"] <- "deathDate"
+map["deathPlaces"] <- "deathPlace"
 map["fullName"] <- "fullName"
 map["heights"] <- "height"
 map["weights"] <- "weight"
@@ -117,16 +134,19 @@ alt_names <- strsplit(fus_players[, "altNames"], "; ")
 en_names <- wp_players[, "enName"]
 # loop over players to copy WP data
 for (p in 1:length(idx)) {
-  if (!is.na(en_names[p]) && en_names[p] != full_names[idx[p]]) {
+  if (!is.na(en_names[p]) && str_to_upper(en_names[p]) != str_to_upper(full_names[idx[p]])) {
     # possibly complement list of alt names
     if (all(is.na(alt_names[[idx[p]]])))
-      a_names <- end_year_names[p]
-    else
-      a_names <- union(alt_names[[idx[p]]], en_names[p])
+      a_names <- en_names[p]
+    else {
+#      a_names <- union(alt_names[[idx[p]]], en_names[p])
+      a_names <- c(alt_names[[idx[p]]], en_names[p])
+      a_names <- a_names[!duplicated(str_to_upper(a_names))]
+    }
     
     # update in table
     alt_names_new <- paste(a_names, collapse = "; ")
-    if (is.na(fus_players[idx[p], "altNames"]) || alt_names_new != fus_players[idx[p], "altNames"]) {
+    if (is.na(fus_players[idx[p], "altNames"]) || str_to_upper(alt_names_new) != str_to_upper(fus_players[idx[p], "altNames"])) {
       total_changes["altNames"] <- total_changes["altNames"] + 1
       tlog(4, "(", full_names[idx[p]], ") ", fus_players[idx[p], "altNames"], " => ", alt_names_new)
     }
@@ -139,6 +159,7 @@ if (length(idx) > 0)
 tlog(2, "Total numbers of changes: ", sum(total_changes))
 tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
+#head(sort(wp_players[, "enName"]),n=40)
 
 # record merged table as a new CSV file
 tab.file <- file.path(fusion_folder, "players_06_enwp.csv")

@@ -874,7 +874,7 @@ if (length(idx) > 0)
 # solve wikipedia redirections
 old_urls <- sort(unique(new_stints[, "teamWP"]))
 new_urls <- rep(NA, length(old_urls))
-for (r in 1:length(old_urls)) {
+for (r in r:length(old_urls)) {
   url <- old_urls[r]
   # if (r %% 100 == 0)
     tlog(4, "Solving redirections for entry ", r, "/", length(old_urls), " (", url, ")")
