@@ -161,12 +161,7 @@ tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
 #head(sort(wp_players[, "enName"]),n=40)
 
-# # get the names containing a digit
-# names <- wp_players[which(grepl("\\d", wp_players[, "enName"])), "enName"]
-# write.csv(sort(names), file.path(folder, "player_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-write.csv(sort(wp_players[,"enName"]), file.path(folder, "player_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-
-#note: D did not retrive stints with no date at all
+############################### note: D did not retrive stints with no date at all
 
 # record merged table as a new CSV file
 tab.file <- file.path(fusion_folder, "players_06_enwp.csv")
