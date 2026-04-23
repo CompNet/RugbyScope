@@ -5,6 +5,7 @@
 # Vincent Labatut
 # 04/2026
 ########################################################################
+from random import random
 import time
 from matplotlib import text
 import requests
@@ -48,9 +49,6 @@ session.headers.update({
 # relevant info sections
 YOUTH_CAREER = {"Youth career", "Amateur team(s)"}
 
-# ignored sections
-CAREER_DISC = {"Senior Career", "International career", "Coaching career", "National sevens team"}
-
 
 
 
@@ -65,95 +63,106 @@ player_number = merged_table.shape[0]
 ########################################################################
 # init lists to store extracted data
 stint_info = []
+sections_found = set()
 all_sections_found = []
 
 
 
+
 ########################################################################
-# returns the stints and career sections for the specified page.
+# returns the targeted stints for the specified page.
 ########################################################################
-def parse_youth_and_amateur_stints(soup, orig_id, orig_name, player_page):
+def extract_targeted_career(soup, orig_id, orig_name, player_page):
+    results = []
 
-    stints = []
-    sections_found = []
+    for targeted_section in YOUTH_CAREER:
 
-    keep_section = False
-
-    def normalize_section(text):
-        if not text:
-            return None
-        return text.strip()
-
-    def is_target_section(text):
-        if not text:
-            return False
-        t = text.strip().lower()
-        return any(sec.lower() in t for sec in YOUTH_CAREER)
-
-    def parse_int(text):
-        if not text:
-            return None
-        text = text.strip().strip("()")
-        return int(text) if text.isdigit() else None
-
-    table = soup.find("table", class_="infobox")
-    if not table:
-        return stints, sections_found
-
-    for row in table.find_all("tr"):
-
-        # Detect section header
-        header = row.find("th", class_="infobox-header")
-        if header:
-            section_title = normalize_section(header.get_text(strip=True))
-            sections_found.append(section_title)
-
-            keep_section = is_target_section(section_title)
+        # Find the targeted career header
+        header = soup.find("th", class_="infobox-header", string=lambda x: x and targeted_section in x)
+        if not header:
             continue
 
-        # Skip if not in a target section
-        if not keep_section:
-            continue
+        # Go to the parent row
+        row = header.find_parent("tr")
 
-        data_cells = row.find_all("td")
-        year_cell = row.find("th")
+        # Iterate over next rows until next section header
+        for sib in row.find_next_siblings("tr"):
+            # Stop if next section starts
+            if sib.find("th", class_="infobox-header"):
+                break
 
-        if not data_cells:
-            continue
+            cells = sib.find_all(["th", "td"])
+            if not cells:
+                continue
 
-        years = year_cell.get_text(strip=True) if year_cell else None
+            # Default values
+            years = ""
+            team = ""
+            team_url = ""
+            apps = ""
+            points = ""
 
-        # Team + URL
-        team_cell = data_cells[0]
-        link = team_cell.find("a")
+            if len(cells) >= 1:
+                years = cells[0].get_text(strip=True)
+                if years == "Years" or years.startswith("Correct as"):
+                    continue  # Skip header row
 
-        if link:
-            team = link.get_text(strip=True) or None
-            url = link.get("href")
-        else:
-            team = team_cell.get_text(strip=True) or None
-            url = None
+            if len(cells) >= 2:
+                team_cell = cells[1]
+                team = team_cell.get_text(strip=True)
 
-        # Apps / Points (optional)
-        apps = parse_int(data_cells[1].get_text(strip=True)) if len(data_cells) > 1 else None
-        points = parse_int(data_cells[2].get_text(strip=True)) if len(data_cells) > 2 else None
+                link = team_cell.find("a")
+                if link and link.get("href"):
+                    team_url = link.get("href")
 
-        stints.append([orig_id, orig_name, player_page, header, years, team, url, apps, points])
+            if len(cells) >= 3:
+                apps = cells[2].get_text(strip=True)
 
-    return stints, sections_found
+            if len(cells) >= 4:
+                points = cells[3].get_text(strip=True)
+
+            # Clean points like "(123)" → "123"
+            if points.startswith("(") and points.endswith(")"):
+                points = points[1:-1].strip()
+
+            results.append([orig_id, orig_name, player_page, targeted_section, years, team, team_url, apps, points])
+
+    return results
+
+
+
+
+########################################################################
+# Returns the list of all career section headers found in the infobox.
+########################################################################
+def extract_career_headers(soup):
+    headers = []
+
+    # Find the main infobox first (safer if page has multiple tables)
+    infobox = soup.find("table", class_="infobox")
+    if not infobox:
+        return headers
+
+    for th in infobox.find_all("th", class_="infobox-header"):
+        text = th.get_text(strip=True)
+        headers.append(text)
+
+    return headers
+
+
 
 
 ########################################################################
 # loop over players
 name = ""
 p = 1
-for player_page in ["Christopher_Hilsenbeck"]:  # Christophe_Dominici Antoine_Dupont Fabien_Galthié Jonathan_Sexton Faf_de_Klerk
-    orig_name = ""
-    orig_id = ""
-# for _, player in merged_table.iterrows():
-#     player_page = player["wikipediaEn"]
-#     orig_name = player["fullName"]
-#     orig_id = player["wikidataId"]
+# for player_page in ["Faf_de_Klerk"]:  # Christopher_Hilsenbeck Christophe_Dominici Antoine_Dupont Fabien_Galthié Jonathan_Sexton Faf_de_Klerk
+#     orig_name = ""
+#     orig_id = ""
+for _, player in merged_table.iterrows():
+    player_page = player["wikipediaEn"]
+    orig_name = player["fullName"]
+    orig_id = player["wikidataId"]
     tlog(0, f"Processing player {p}/{player_number}: {orig_name} ({orig_id})")
 
     comment = ""
@@ -196,8 +205,8 @@ for player_page in ["Christopher_Hilsenbeck"]:  # Christophe_Dominici Antoine_Du
                 p = p + 1
                 continue
 
-            # # get career sections
-            stints, sections_found = parse_youth_and_amateur_stints(soup, orig_id, orig_name, player_page)
+            # get targeted career stints
+            stints = extract_targeted_career(soup, orig_id, orig_name, player_page)
 
             if not stints:
                 comment = "No stint found"
@@ -206,8 +215,11 @@ for player_page in ["Christopher_Hilsenbeck"]:  # Christophe_Dominici Antoine_Du
                 stint_info.extend(stints)
                 print(stints)
 
-            all_sections_found.extend(sections_found)
-            print(sections_found)
+            # get all career section titles
+            sections = extract_career_headers(soup)
+            sections_found.update(sections)
+            all_sections_found.append([orig_id] + sections)
+            #print(sections_found)
 
     # record stints
     if len(stint_info) > 0:
@@ -215,13 +227,16 @@ for player_page in ["Christopher_Hilsenbeck"]:  # Christophe_Dominici Antoine_Du
         stint_df.to_csv(path.join(table_folder, "stint_info2.csv"), index=False)
 
     # record sections found
-    if len(all_sections_found) > 0:
-        with open(path.join(table_folder, "sections.txt"), "w", encoding="utf-8") as f:
-            for sections_found in all_sections_found:
-                f.write(",".join(sections_found) + "\n")
+    with open(path.join(table_folder, "sections.txt"), "w", encoding="utf-8") as f:
+        for sf in sorted(sections_found):
+            f.write(sf + "\n")
+    # record sections for each player
+    with open(path.join(table_folder, "all_sections.txt"), "w", encoding="utf-8") as f:
+        for sf in all_sections_found:
+            f.write(", ".join(sf) + "\n")
 
     p = p + 1
-
+    time.sleep(0.5)
 
 
 

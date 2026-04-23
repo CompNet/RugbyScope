@@ -36,6 +36,10 @@ stints <- read.csv(file.path(folder, "raw", "stint_info.csv"))
 tlog(2, "Raw number of stints: ", nrow(stints))
 stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 
+stints_comp <- read.csv(file.path(folder, "raw", "stint_info_comp.csv"))
+tlog(2, "Raw number of stints: ", nrow(stints_comp))
+stints_comp <- stints_comp %>% mutate(across(where(is.character), ~ na_if(., "")))
+
 
 
 
@@ -874,7 +878,245 @@ if (length(idx) > 0)
 # solve wikipedia redirections
 old_urls <- sort(unique(new_stints[, "teamWP"]))
 new_urls <- rep(NA, length(old_urls))
-for (r in r:length(old_urls)) {
+for (r in 1:length(old_urls)) {
+  url <- old_urls[r]
+  # if (r %% 100 == 0)
+    tlog(4, "Solving redirections for entry ", r, "/", length(old_urls), " (", url, ")")
+
+  if (!is.na(url)) {
+    if (url == "")
+      new_urls[r] <- NA
+    else
+      # solve redirection
+      new_urls[r] <- solve_redirections(name = url, lang = "en")
+      Sys.sleep(0.25)
+  }
+
+  if (!is.na(url) && is.na(new_urls[r]))
+    tlog(6, "Lost URL: ", r)
+}
+# put unique URL into the sting table
+idx1 <- match(new_stints[, "teamWP"], old_urls)
+idx2 <- which(!is.na(idx1))
+new_stints[idx2, "teamWP"] <- new_urls[idx1[idx2]]
+#### debug: check if we lost some URL after the above processing
+#print(length(which(!is.na(old_urls) & is.na(new_urls))))
+#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 60,338/63,792 non-NAs
+####
+
+# remove superfluous columns
+#sup_cols <- c("X")
+#tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
+#cols <- which(colnames(new_stints) %in% sup_cols)
+#new_stints <- new_stints[, -cols]
+
+# rename certain columns
+colnames(new_stints)[which(colnames(new_stints) == "wiki_Name")] <- "enName"
+
+
+
+
+########################################################################
+# clean the complementary stint table
+tlog(0, "Cleaning the complementary stint table")
+
+#### debug: checking the unique period values
+#head(sort(unique(stints_comp[, "timePeriod"])))
+#tail(sort(unique(stints_comp[, "timePeriod"])))
+####
+
+# fix cases where only the club is provided
+idx <- which(!is.na(stints_comp[, "timePeriod"]) & stints_comp[,"timePeriod"]!="\u2013" & stints_comp[,"timePeriod"]!="-" & !grepl("\\d", stints_comp[, "timePeriod"], fixed=FALSE) & is.na(stints_comp[, "teamName"]))
+#tail(stints_comp[idx, c("timePeriod", "teamName")])
+stints_comp[idx, "teamName"] <- stints_comp[idx, "timePeriod"]
+stints_comp[idx, "timePeriod"] <- NA
+
+# fix some specific cases
+all_periods <- stints_comp[, "timePeriod"]
+all_periods <- gsub("\u00A0", " ", all_periods, fixed = FALSE)
+all_periods <- gsub("\u200E", "", all_periods, fixed = FALSE)
+all_periods <- gsub("\u2014", "-", all_periods, fixed = FALSE)
+all_periods <- gsub("\u2013", "-", all_periods, fixed = FALSE)
+all_periods <- gsub("\u2015", "-", all_periods, fixed = FALSE)
+all_periods <- gsub("\u2212", "-", all_periods, fixed = FALSE)
+#
+all_periods <- gsub(";", ",", all_periods, fixed = FALSE)
+all_periods <- strsplit(all_periods, ",")
+unique_periods <- sort(unique(trimws(unlist(all_periods))))
+#
+norm_periods <- unique_periods
+norm_periods <- gsub("['_→<>≥]", "", norm_periods, fixed = FALSE)
+norm_periods <- gsub(" ?- ?", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("\\+", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("-+", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("-unknown$", "-", norm_periods, fixed = FALSE)
+#
+norm_periods <- gsub("^c\\.", "", norm_periods, fixed = FALSE)
+norm_periods <- gsub("[-–]c\\.", "-", norm_periods, fixed = FALSE)
+#
+norm_periods <- gsub("^\\?-", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("^\\?{2}-", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("^\\?{4}-", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("-\\?$", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("-\\?{2}$", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("-\\?{4}$", "-", norm_periods, fixed = FALSE)
+norm_periods <- gsub("\\d{2}\\?{2}", "", norm_periods, fixed = FALSE)
+norm_periods <- gsub("\\d{3}\\?", "", norm_periods, fixed = FALSE)
+norm_periods <- gsub("^\\?+$", "", norm_periods, fixed = FALSE)
+#idx <- which(grepl("?", norm_periods, fixed=TRUE))
+#norm_periods[idx]
+#
+norm_periods <- gsub("^-$", "", norm_periods, fixed = FALSE)
+##### debug
+# print(head(sort(norm_periods)))
+# print(sort(norm_periods)[1:500])
+# str1 <- "20-2017" 
+# idx1 <- which(norm_periods == str1)
+# str2 <- unique_periods[idx1]
+# idx2 <- which(str2 == all_periods)
+# print(all_periods[idx2]); print(idx2)
+#####
+
+# apply normalization to table
+tlog("Applying date normalization to periods")
+map_dates <- norm_periods
+names(map_dates) <- unique_periods
+for (p in 1:length(all_periods)) {
+  ps <- trimws(all_periods[[p]])
+  ps <- map_dates[ps]
+  all_periods[[p]] <- ps
+}
+stints_comp[, "timePeriod"] <- sapply(all_periods, function(row) paste0(row, collapse = "; "))
+
+# add columns for start/end years
+stints_comp <- cbind(stints_comp, matrix(NA, nrow = nrow(stints_comp), ncol = 2))
+colnames(stints_comp)[(ncol(stints_comp) - 1):ncol(stints_comp)] <- c("startYear", "endYear")
+
+# split rows containing multiple stints
+new_stints <- stints_comp[-(1:nrow(stints_comp)), ]
+for (r in 1:nrow(stints_comp)) {
+  # if (r %% 1000 == 0)
+    tlog(4, "Processing row ", r, "/", nrow(stints_comp))
+
+  periods <- stints_comp[r, "timePeriod"]
+  team_names <- stints_comp[r, "teamName"]
+  team_urls <- stints_comp[r, "teamWP"]
+  matches_played <- as.character(stints_comp[r, "matchesPlayed"])
+  points_scored <- as.character(stints_comp[r, "pointsScored"])
+
+  # split period by semicolon
+  ll <- 0
+  if (is.na(periods) || periods == "")
+    periods <- NA
+  else
+    periods <- trimws(strsplit(periods, ";")[[1]])
+  if (is.na(team_names) || team_names == "")
+    team_names <- NA
+  else
+    team_names <- trimws(team_names)
+  if (is.na(team_urls) || team_urls == "")
+    team_urls <- NA
+  else
+    team_urls <- trimws(team_urls)
+  if (is.na(matches_played) || matches_played == "")
+    matches_played <- NA
+  else
+    matches_played <- trimws(matches_played)
+  if (is.na(points_scored) || points_scored == "")
+    points_scored <- NA
+  else
+    points_scored <- gsub("[(),]", "", trimws(points_scored))
+
+  # processing each period
+  years <- c()
+  start_years <- c()
+  end_years <- c()
+  for (p in 1:length(periods)) {
+    per <- periods[p]
+    # there is a hyphen in the period
+    if (grepl("-", per, fixed = TRUE)) {
+      pers <- as.integer(strsplit(per, "-")[[1]])
+      # end year missing
+      if (length(pers) < 2 || is.na(pers[2])) {
+        years <- c(years, 1)
+        start_years <- c(start_years, pers[1])
+        end_years <- c(end_years, NA)
+      # start year missing
+      } else if (is.na(pers[1])) {
+        years <- c(years, 1)
+        start_years <- c(start_years, NA)
+        end_years <- c(end_years, pers[2])
+      # both start and end years present
+      } else {
+        if (pers[2] < pers[1])
+          pers[2] <- pers[2] + floor(pers[1] / 100) * 100
+        years <- c(years, pers[2] - pers[1] + 1)
+        start_years <- c(start_years, pers[1])
+        end_years <- c(end_years, pers[2])
+      }
+    # no hyphen in the period
+    } else {
+      start_years <- c(start_years, per)
+      end_years <- c(end_years, per)
+      per <- paste0(per, "-", per)
+      years <- c(years, 1)
+    }
+    periods[p] <- per
+  }
+
+  start_years <- trimws(start_years)
+  start_years[start_years == "?"] <- NA
+  end_years <- trimws(end_years)
+  end_years[end_years == "?"] <- NA
+
+  # init rows
+  new_rows <- stints_comp[rep(r, length(periods)), ]
+  new_rows[, "timePeriod"] <- periods
+  new_rows[, "teamName"] <- rep(team_names, length(periods))
+  new_rows[, "teamWP"] <- rep(team_urls, length(periods))
+  new_rows[, "startYear"] <- start_years
+  new_rows[, "endYear"] <- end_years
+
+  # adjust stats based on number of years
+  if (!is.na(matches_played))
+    new_rows[, "matchesPlayed"] <- round(as.integer(matches_played) * years / sum(years))
+  if (!is.na(points_scored))
+    new_rows[, "pointsScored"] <- round(as.integer(points_scored) * years / sum(years))
+
+  # add rows to table
+  new_stints <- rbind(new_stints, new_rows)
+}
+#### debug: check newly created year fields
+#options(warn = 2)
+#sort(unique(new_stints[, "startYear"]))
+#sort(unique(new_stints[, "endYear"]))
+#new_stints[which(new_stints[, "endYear"] == "4006"),]
+####
+#idx <- which(new_stints[, "startYear"] > new_stints[, "endYear"])
+#print(new_stints[idx, ])
+####
+
+
+
+
+
+
+
+
+# clean team urls
+idx <- which(grepl("action=edit&redlink=1", new_stints[, "teamWP"], fixed = FALSE))
+if (length(idx) > 0)
+  new_stints[idx, "teamWP"] <- NA
+#tail(sort(unique(new_stints[, "teamWP"])))
+idx <- which(new_stints[, "teamWP"] == "")
+if (length(idx) > 0)
+  new_stints[idx, "teamWP"] <- NA
+#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 60,339/63,792 non-NAs
+
+# solve wikipedia redirections
+old_urls <- sort(unique(new_stints[, "teamWP"]))
+new_urls <- rep(NA, length(old_urls))
+for (r in 1:length(old_urls)) {
   url <- old_urls[r]
   # if (r %% 100 == 0)
     tlog(4, "Solving redirections for entry ", r, "/", length(old_urls), " (", url, ")")
