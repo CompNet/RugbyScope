@@ -161,14 +161,6 @@ tlog(4, "Fields: ", paste0(total_changes, collapse = ", "))
 print(total_changes)
 #head(sort(wp_players[, "enName"]),n=40)
 
-############################### 
-############################### 
-# -  D did not retrive stints with no date at all
-# - why not including the stint type (junior, senior, etc.) in the table?
-############################### 
-############################### 
-
-
 # record merged table as a new CSV file
 tab.file <- file.path(fusion_folder, "players_06_enwp.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
@@ -847,6 +839,7 @@ write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 # stop logging
 end.rec.log()
 
+# TODO why not including the stint type (junior, senior, etc.) in the table?
 
 
 # club types

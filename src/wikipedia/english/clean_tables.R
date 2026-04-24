@@ -1190,6 +1190,8 @@ for(r in 1:nrow(new_stints_comp)) {
 }
 tlog(2, "Number of matches found: ", matches, "/", nrow(new_stints_comp)) # 11,406
 
+new_stints_comp[, "pointsScored"] <- as.integer(new_stints_comp[, "pointsScored"])
+
 
 
 

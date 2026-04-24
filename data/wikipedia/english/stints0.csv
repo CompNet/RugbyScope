@@ -122,7 +122,7 @@
 "Q5445997",NA,"fetu'u moana vainikolo","Fetu%CA%BBu_Vainikolo","senior_club","2008-2010","highlanders","Highlanders_(rugby_union)",41,65,"2008","2010"
 "Q5445997",NA,"fetu'u moana vainikolo","Fetu%CA%BBu_Vainikolo","international","2011-2016","tonga","Tonga",28,90,"2011","2016"
 "Q97143853",NA,"jacques mazoin","Jacques_Mazoin","senior_club","1952-1954","paris université club","Paris_Universit%C3%A9_Club_(rugby_union)",0,0,"1952","1954"
-"Q97143853",NA,"jacques mazoin","Jacques_Mazoin","senior_club",NA,"us dax","US_Dax",0,0,"NA","NA"
+"Q97143853",NA,"jacques mazoin","Jacques_Mazoin","senior_club",NA,"us dax","US_Dax",0,0,NA,NA
 "Q3479690",NA,"sergio souto vidal","Sergio_Souto","senior_club","2006-2011","olympus rugby xv madrid","Olympus_Rugby_XV_Madrid",0,0,"2006","2011"
 "Q3479690",NA,"sergio souto vidal","Sergio_Souto","senior_club","2005-2006","el salvador rugby","CR_El_Salvador",0,0,"2005","2006"
 "Q3479690",NA,"sergio souto vidal","Sergio_Souto","senior_club","1993-2005","oviedo rugby","Oviedo_RC",0,0,"1993","2005"
@@ -1413,7 +1413,7 @@
 "Q65717888",NA,"sean patrick lonsdale","Sean_Lonsdale","senior_club","2017-2018","plymouth albion","Plymouth_Albion_R.F.C.",18,5,"2017","2018"
 "Q65717888",NA,"sean patrick lonsdale","Sean_Lonsdale","senior_club","2022-2024","dragons","Dragons_RFC",30,0,"2022","2024"
 "Q65717888",NA,"sean patrick lonsdale","Sean_Lonsdale","senior_club","2024-","ealing trailfinders","Ealing_Trailfinders_Rugby_Club",23,0,"2024",NA
-"Q50315235",NA,"daniel chiriac","Daniel_Chiriac","senior_club",NA,"farul constanța","RCJ_Farul_Constan%C8%9Ba",0,0,"NA","NA"
+"Q50315235",NA,"daniel chiriac","Daniel_Chiriac","senior_club",NA,"farul constanța","RCJ_Farul_Constan%C8%9Ba",0,0,NA,NA
 "Q50315235",NA,"daniel chiriac","Daniel_Chiriac","senior_club","1995-1998","farul constanța","RCJ_Farul_Constan%C8%9Ba",7,5,"1995","1998"
 "Q50315235",NA,"daniel chiriac","Daniel_Chiriac","international","1999-2001","romania","Romania_national_rugby_union_team",5,0,"1999","2001"
 "Q4805490",NA,"ashley francois johnson","Ashley_Johnson_(rugby_union)","senior_club","2012-2020","wasps","Wasps_RFC",198,210,"2012","2020"
@@ -1468,7 +1468,7 @@
 "Q4727286",NA,"alistair hargreaves","Alistair_Hargreaves","senior_club","2005-2012","sharks (currie cup)","Sharks_(rugby_union)",53,15,"2005","2012"
 "Q4727286",NA,"alistair hargreaves","Alistair_Hargreaves","senior_club","2009-2012","sharks","Sharks_(rugby_union)",29,5,"2009","2012"
 "Q4727286",NA,"alistair hargreaves","Alistair_Hargreaves","international","2010-2011","south africa","South_Africa_national_rugby_union_team",4,0,"2010","2011"
-"Q86921570",NA,"dumitru cătălin beca","C%C4%83t%C4%83lin_Beca","senior_club",NA,"dinamo bucurești","CS_Dinamo_Bucure%C8%99ti_(rugby_union)",0,0,"NA","NA"
+"Q86921570",NA,"dumitru cătălin beca","C%C4%83t%C4%83lin_Beca","senior_club",NA,"dinamo bucurești","CS_Dinamo_Bucure%C8%99ti_(rugby_union)",0,0,NA,NA
 "Q86921570",NA,"dumitru cătălin beca","C%C4%83t%C4%83lin_Beca","senior_club","2010-2010","aurel vlaicu arad","CSU_Aurel_Vlaicu_Arad",0,0,"2010","2010"
 "Q86921570",NA,"dumitru cătălin beca","C%C4%83t%C4%83lin_Beca","senior_club","2013-2014","steaua bucurești","CSA_Steaua_Bucure%C8%99ti_(rugby_union)",2,5,"2013","2014"
 "Q86921570",NA,"dumitru cătălin beca","C%C4%83t%C4%83lin_Beca","senior_club","2014-2016","csm bucurești","CSM_Bucure%C8%99ti_(rugby_union)",21,0,"2014","2016"
@@ -1503,7 +1503,7 @@
 "Q6179819",NA,"jens schmidt","Jens_Schmidt","senior_club","2002-","tsv h","TSV_Handschuhsheim",0,0,"2002",NA
 "Q6179819",NA,"jens schmidt","Jens_Schmidt","senior_club","2001-2001","auch gers","FC_Auch_Gers",0,0,"2001","2001"
 "Q6179819",NA,"jens schmidt","Jens_Schmidt","senior_club","1990-2001","tsv h","TSV_Handschuhsheim",0,0,"1990","2001"
-"Q6179819",NA,"jens schmidt","Jens_Schmidt","international",NA,"germany","Wiki/Germany_national_rugby_union_team",41,0,"NA","NA"
+"Q6179819",NA,"jens schmidt","Jens_Schmidt","international",NA,"germany","Wiki/Germany_national_rugby_union_team",41,0,NA,NA
 "Q3199721",NA,"kristopher shaun burton","Kris_Burton","senior_club","2006-2008","orléans","RC_Orl%C3%A9ans",34,322,"2006","2008"
 "Q3199721",NA,"kristopher shaun burton","Kris_Burton","senior_club","2008-2010","prato","Rugby_Club_I_Cavalieri_Prato",18,65,"2008","2010"
 "Q3199721",NA,"kristopher shaun burton","Kris_Burton","senior_club","2010-2013","treviso","Benetton_Rugby",55,403,"2010","2013"
@@ -4368,7 +4368,7 @@
 "Q3183546",NA,"jone tawake","Jone_Tawake","senior_club","2007-2008","canberra vikings","Canberra_Vikings",0,0,"2007","2008"
 "Q3183546",NA,"jone tawake","Jone_Tawake","senior_club","2004-2007","brumbies","ACT_Brumbies",0,0,"2004","2007"
 "Q3183546",NA,"jone tawake","Jone_Tawake","senior_club","2002-2003","waratahs","New_South_Wales_Waratahs",2748,0,"2002","2003"
-"Q3183546",NA,"jone tawake","Jone_Tawake","international",NA,"australia u-21","Australia_national_under-21_rugby_union_team",0,0,"NA","NA"
+"Q3183546",NA,"jone tawake","Jone_Tawake","international",NA,"australia u-21","Australia_national_under-21_rugby_union_team",0,0,NA,NA
 "Q3183546",NA,"jone tawake","Jone_Tawake","international",NA,"australia u-19","Australia_national_under-19_rugby_union_team",0,0,NA,NA
 "Q7167280",NA,"percy christopherson","Percy_Christopherson","amateur","1886-1888","oxford university rfc","Oxford_University_RFC",0,0,"1886","1888"
 "Q7167280",NA,"percy christopherson","Percy_Christopherson","amateur","1888-","blackheath f.c.","Blackheath_F.C.",0,0,"1888",NA
@@ -7522,7 +7522,7 @@
 "Q16232295",NA,"niall edward morris","Niall_Morris_(rugby_union)","international","2007-2007","ireland u19",NA,4,5,"2007","2007"
 "Q16232295",NA,"niall edward morris","Niall_Morris_(rugby_union)","international","2008-2008","ireland u20","Ireland_national_under-20_rugby_union_team",6,10,"2008","2008"
 "Q16232295",NA,"niall edward morris","Niall_Morris_(rugby_union)","international","2013-2013","emerging ireland","Emerging_Ireland",3,10,"2013","2013"
-"Q16031827",NA,"john rogers","John_Rogers_(rugby_union)","amateur",NA,"barbarian f.c.","Barbarian_F.C.",0,0,"NA","NA"
+"Q16031827",NA,"john rogers","John_Rogers_(rugby_union)","amateur",NA,"barbarian f.c.","Barbarian_F.C.",0,0,NA,NA
 "Q16031827",NA,"john rogers","John_Rogers_(rugby_union)","international","1890-1891","england","England",4,1,"1890","1891"
 "Q58010465",NA,"josh iosefa-scott","Josh_Iosefa-Scott","senior_club","2016-2020","waikato","Waikato_(National_Provincial_Championship)",39,10,"2016","2020"
 "Q58010465",NA,"josh iosefa-scott","Josh_Iosefa-Scott","senior_club","2021-","exeter chiefs","Exeter_Chiefs",51,45,"2021",NA
@@ -7669,8 +7669,8 @@
 "Q126362065",NA,"peter william nixon","Peter_Nixon_(rugby_union)","senior_club","2007-2007","tasman","Tasman_(National_Provincial_Championship)",7,0,"2007","2007"
 "Q126362065",NA,"peter william nixon","Peter_Nixon_(rugby_union)","senior_club","2007-2007","crusaders","Crusaders_(rugby_union)",3,0,"2007","2007"
 "Q2847124",NA,"andrç¸ abadie","Andr%C3%A9_Abadie","senior_club","1954-","sporting club rieumois",NA,0,0,"1954",NA
-"Q2847124",NA,"andrç¸ abadie","Andr%C3%A9_Abadie","senior_club",NA,"sporting club graulhetois","Sporting_Club_Graulhetois",0,0,"NA","NA"
-"Q2847124",NA,"andrç¸ abadie","Andr%C3%A9_Abadie","senior_club",NA,"albi","SC_Albi",0,0,"NA","NA"
+"Q2847124",NA,"andrç¸ abadie","Andr%C3%A9_Abadie","senior_club",NA,"sporting club graulhetois","Sporting_Club_Graulhetois",0,0,NA,NA
+"Q2847124",NA,"andrç¸ abadie","Andr%C3%A9_Abadie","senior_club",NA,"albi","SC_Albi",0,0,NA,NA
 "Q2847124",NA,"andrç¸ abadie","Andr%C3%A9_Abadie","international","1965-1968","france","France_national_rugby_union_team",0,0,"1965","1968"
 "Q109700791",NA,"alexandru alexe","Alexandru_Alexe","senior_club","2018-","csm baia mare","CSM_%C8%98tiin%C8%9Ba_Baia_Mare",23,40,"2018",NA
 "Q109700791",NA,"alexandru alexe","Alexandru_Alexe","international","2021-","romania","Romania_national_rugby_union_team",1,0,"2021",NA
@@ -9238,11 +9238,11 @@
 "Q433555",NA,"daniel stuart care","Danny_Care","international","2008-2022","england xv","England_A_national_rugby_union_team",7,15,"2008","2022"
 "Q433555",NA,"daniel stuart care","Danny_Care","international","2008-2024","england","England_national_under-20_rugby_union_team",101,84,"2008","2024"
 "Q124022036",NA,"kenneth victor mcmullen","Ken_McMullen_(rugby)","international","1962-1963","australia","Australia_national_rugby_union_team",4,3,"1962","1963"
-"Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","amateur",NA,"ayr rfc","Ayr_RFC",0,0,"NA","NA"
+"Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","amateur",NA,"ayr rfc","Ayr_RFC",0,0,NA,NA
 "Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","amateur",NA,"glasgow hutchesons aloysians","Glasgow_Hutchesons_Aloysians_RFC",0,0,NA,NA
 "Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","amateur","2010-2010","ayr rfc","Ayr_RFC",0,0,"2010","2010"
 "Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","senior_club","2001-2005","glasgow warriors","Glasgow_Warriors",50,0,"2001","2005"
-"Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","international",NA,"scotland u21","Scotland_national_under-21_rugby_union_team",0,0,"NA","NA"
+"Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","international",NA,"scotland u21","Scotland_national_under-21_rugby_union_team",0,0,NA,NA
 "Q21997571",NA,"andrew william kelly","Andrew_Kelly_(rugby_union,_born_1981)","international",NA,"scotland club xv","Scotland_Club_XV",0,0,NA,NA
 "Q4799520",NA,"arthur leyland harrison","Arthur_Leyland_Harrison","senior_club",NA,"royal navy","Royal_Navy",0,0,NA,NA
 "Q4799520",NA,"arthur leyland harrison","Arthur_Leyland_Harrison","international","1914-1914","england","England_national_rugby_union_team",2,0,"1914","1914"
@@ -10424,7 +10424,7 @@
 "Q107126490",NA,"tyler evan macgregor duguid","Tyler_Duguid","senior_club","2015-2018","alberta canada",NA,0,0,"2015","2018"
 "Q107126490",NA,"tyler evan macgregor duguid","Tyler_Duguid","international","2017-2017","canada u20","Canada_national_under-20_rugby_union_team",7,0,"2017","2017"
 "Q107126490",NA,"tyler evan macgregor duguid","Tyler_Duguid","international","2025-","france","France_national_rugby_union_team",1,0,"2025",NA
-"Q3426077",NA,"renç¸ deleris","Ren%C3%A9_Deleris","senior_club",NA,"carmaux","Carmaux",0,0,"NA","NA"
+"Q3426077",NA,"renç¸ deleris","Ren%C3%A9_Deleris","senior_club",NA,"carmaux","Carmaux",0,0,NA,NA
 "Q3014328",NA,"daniel leo","Daniel_Leo_(rugby_union)","senior_club","2003-2004","queensland reds","Queensland_Reds",87,35,"2003","2004"
 "Q3014328",NA,"daniel leo","Daniel_Leo_(rugby_union)","senior_club","2005-2010","london wasps","Wasps_RFC",87,35,"2005","2010"
 "Q3014328",NA,"daniel leo","Daniel_Leo_(rugby_union)","senior_club","2010-2012","bordeaux bègles","Union_Bordeaux_B%C3%A8gles",43,5,"2010","2012"
@@ -11709,7 +11709,7 @@
 "Q2836869",NA,"alivereti mocelutu vuivau","Alfie_Mocelutu","international","1994-2003","fiji","Fiji",34,20,"1994","2003"
 "Q28000335",NA,"david joseph matthews","David_Matthews_(rugby_union)","senior_club","1955-1974","leicester tigers","Leicester_Tigers",502,451,"1955","1974"
 "Q2924970",NA,"brian o'meara","Brian_O%27Meara_(rugby_union)","senior_club","2006-2007","munster","Munster_Rugby",6,0,"2006","2007"
-"Q2924970",NA,"brian o'meara","Brian_O%27Meara_(rugby_union)","senior_club",NA,"leinster","Leinster_Rugby",99,553,"NA","NA"
+"Q2924970",NA,"brian o'meara","Brian_O%27Meara_(rugby_union)","senior_club",NA,"leinster","Leinster_Rugby",99,553,NA,NA
 "Q2924970",NA,"brian o'meara","Brian_O%27Meara_(rugby_union)","senior_club","2001-2006","munster","Munster_Rugby",20,0,"2001","2006"
 "Q2924970",NA,"brian o'meara","Brian_O%27Meara_(rugby_union)","international","1996-1996","ireland u21","Ireland_national_under-20_rugby_union_team",0,0,"1996","1996"
 "Q2924970",NA,"brian o'meara","Brian_O%27Meara_(rugby_union)","international","1997-2003","ireland","Republic_of_Ireland",9,0,"1997","2003"
@@ -12958,8 +12958,8 @@
 "Q3434179",NA,"robert hawkins","Rob_Hawkins","senior_club","2010-2014","leicester tigers","Leicester_Tigers",67,15,"2010","2014"
 "Q3434179",NA,"robert hawkins","Rob_Hawkins","senior_club","2014-2016","newcastle falcons","Newcastle_Red_Bulls",7,0,"2014","2016"
 "Q3434179",NA,"robert hawkins","Rob_Hawkins","senior_club","2016-2017","bristol rugby","Bristol_Bears",14,10,"2016","2017"
-"Q7259791",NA,"phumlani eddie nodikida","Phumlani_Nodikida","amateur",NA,"sa amateur",NA,0,0,"NA","NA"
-"Q7259791",NA,"phumlani eddie nodikida","Phumlani_Nodikida","amateur",NA,"sa kings",NA,0,0,"NA","NA"
+"Q7259791",NA,"phumlani eddie nodikida","Phumlani_Nodikida","amateur",NA,"sa amateur",NA,0,0,NA,NA
+"Q7259791",NA,"phumlani eddie nodikida","Phumlani_Nodikida","amateur",NA,"sa kings",NA,0,0,NA,NA
 "Q7259791",NA,"phumlani eddie nodikida","Phumlani_Nodikida","senior_club","2006-2006","mighty elephants","Eastern_Province_Elephants",23,0,"2006","2006"
 "Q7259791",NA,"phumlani eddie nodikida","Phumlani_Nodikida","senior_club","2007-2007","eastern province kings","Eastern_Province_Elephants",5,0,"2007","2007"
 "Q6238793",NA,"john henry dowse","John_Henry_Dowse","international","1961-1961","wallabies","Australia_national_rugby_union_team",4,25,"1961","1961"
@@ -16751,7 +16751,7 @@
 "Q5497366",NA,"frederick charles belson","Frederick_Belson","international","1899-1899","british isles","British_%26_Irish_Lions",1,0,"1899","1899"
 "Q16232229",NA,"thomas loizides","Tom_Loizides","senior_club","2006-2008","london irish","London_Irish",0,0,"2006","2008"
 "Q16232229",NA,"thomas loizides","Tom_Loizides","senior_club","2008-","saracens","Saracens_F.C.",0,0,"2008",NA
-"Q16232229",NA,"thomas loizides","Tom_Loizides","senior_club",NA,"esher rfc","Esher_RFC",0,0,"NA","NA"
+"Q16232229",NA,"thomas loizides","Tom_Loizides","senior_club",NA,"esher rfc","Esher_RFC",0,0,NA,NA
 "Q16232229",NA,"thomas loizides","Tom_Loizides","international","2011-","cyprus","Cyprus_national_rugby_union_team",2,0,"2011",NA
 "Q103940219",NA,"davit niniashvili","Davit_Niniashvili","senior_club","2019-2021","khvamli tbilisi","Khvamli_Tbilisi",9,113,"2019","2021"
 "Q103940219",NA,"davit niniashvili","Davit_Niniashvili","senior_club","2021-2025","lyon","Lyon_OU_Rugby",76,139,"2021","2025"
@@ -16773,7 +16773,7 @@
 "Q5307220",NA,"drew locke","Drew_Locke","senior_club","2012-2013","gloucester rugby","Gloucester_Rugby",3,0,"2012","2013"
 "Q5307220",NA,"drew locke","Drew_Locke","senior_club","2013-2015","jersey","Jersey_Reds",0,0,"2013","2015"
 "Q5307220",NA,"drew locke","Drew_Locke","senior_club","2015-","london scottish","London_Scottish_F.C.",5,10,"2015",NA
-"Q2907739",NA,"johannes albertus loubser","Bob_Loubser","senior_club",NA,"western province",NA,0,0,"NA","NA"
+"Q2907739",NA,"johannes albertus loubser","Bob_Loubser","senior_club",NA,"western province",NA,0,0,NA,NA
 "Q2907739",NA,"johannes albertus loubser","Bob_Loubser","international","1903-1910","south africa","South_Africa_national_rugby_union_team",7,9,"1903","1910"
 "Q97164006",NA,"hamish dalzell","Hamish_Dalzell","senior_club","2016-2018","canterbury","Canterbury_(National_Provincial_Championship)",17,0,"2016","2018"
 "Q97164006",NA,"hamish dalzell","Hamish_Dalzell","senior_club","2020-2020","panasonic wild knights","Saitama_Wild_Knights",5,5,"2020","2020"
@@ -18679,9 +18679,9 @@
 "Q776564",NA,"jean-pierre rives","Jean-Pierre_Rives","amateur","1974-1981","stade toulousain","Stade_Toulousain",0,0,"1974","1981"
 "Q776564",NA,"jean-pierre rives","Jean-Pierre_Rives","amateur","1981-1986","racing club de france","Racing_92",0,0,"1981","1986"
 "Q776564",NA,"jean-pierre rives","Jean-Pierre_Rives","international","1975-1984","france","Racing_92",59,20,"1975","1984"
-"Q21621729",NA,"taniela koroi","Taniela_Koroi","senior_club",NA,"asmacon rugby",NA,0,0,"NA","NA"
+"Q21621729",NA,"taniela koroi","Taniela_Koroi","senior_club",NA,"asmacon rugby",NA,0,0,NA,NA
 "Q21621729",NA,"taniela koroi","Taniela_Koroi","senior_club","2015-2018","london scottish",NA,0,0,"2015","2018"
-"Q21621729",NA,"taniela koroi","Taniela_Koroi","senior_club",NA,"Wellington","Wellington_(National_Provincial_Championship)",11,5,"NA","NA"
+"Q21621729",NA,"taniela koroi","Taniela_Koroi","senior_club",NA,"Wellington","Wellington_(National_Provincial_Championship)",11,5,NA,NA
 "Q21621729",NA,"taniela koroi","Taniela_Koroi","senior_club","2018-2019","auckland","Auckland_(National_Provincial_Championship)",5,0,"2018","2019"
 "Q21621729",NA,"taniela koroi","Taniela_Koroi","international","2014-","fiji","Fiji",6,0,"2014",NA
 "Q6107048",NA,"john shaw thomson","J._S._Thomson","amateur",NA,"university of st andrews rfc","University_of_St_Andrews_RFC",0,0,NA,NA
@@ -18812,7 +18812,7 @@
 "Q16970046",NA,"lalakai louis arapeta foketi","Lalakai_Foketi","international","2022-","australia a","Australia_A_national_rugby_union_team",2,0,"2022",NA
 "Q16970046",NA,"lalakai louis arapeta foketi","Lalakai_Foketi","international","2022-","australia","Australia_national_under-20_rugby_union_team",9,5,"2022",NA
 "Q16970046",NA,"lalakai louis arapeta foketi","Lalakai_Foketi","international","2025-2025","first nations & pasifika xv","First_Nations_%26_Pasifika_XV",1,0,"2025","2025"
-"Q5670559",NA,"harry william leonard","Harry_Leonard_(rugby_union)","amateur",NA,"brighton blues","Brighton_Football_Club_(RFU)",0,0,"NA","NA"
+"Q5670559",NA,"harry william leonard","Harry_Leonard_(rugby_union)","amateur",NA,"brighton blues","Brighton_Football_Club_(RFU)",0,0,NA,NA
 "Q5670559",NA,"harry william leonard","Harry_Leonard_(rugby_union)","amateur","2011-2012","boroughmuir rfc","Boroughmuir_RFC",0,0,"2011","2012"
 "Q5670559",NA,"harry william leonard","Harry_Leonard_(rugby_union)","senior_club","2011-2014","edinburgh rugby","Edinburgh_Rugby",43,130,"2011","2014"
 "Q5670559",NA,"harry william leonard","Harry_Leonard_(rugby_union)","senior_club","2014-2016","yorkshire carnegie","Leeds_Tykes",46,315,"2014","2016"
@@ -22670,7 +22670,7 @@
 "Q123200105",NA,"walter johnson williams","Walter_Williams_(rugby_union)","international","1974-1974","wales","Wales_national_rugby_union_team",2,0,"1974","1974"
 "Q109668252",NA,"john thomas henry colman","Jack_Colman","senior_club","1905-1922","taranaki","Taranaki_(National_Provincial_Championship)",49,0,"1905","1922"
 "Q109668252",NA,"john thomas henry colman","Jack_Colman","international","1907-1908","new zealand","New_Zealand_national_rugby_union_team",4,2,"1907","1908"
-"Q3441608",NA,"ronan mccormack","Ronan_McCormack","amateur",NA,"buccaneers rfc","Buccaneers_RFC",0,0,"NA","NA"
+"Q3441608",NA,"ronan mccormack","Ronan_McCormack","amateur",NA,"buccaneers rfc","Buccaneers_RFC",0,0,NA,NA
 "Q3441608",NA,"ronan mccormack","Ronan_McCormack","senior_club","2001-2003","connacht","Connacht_Rugby",26,0,"2001","2003"
 "Q3441608",NA,"ronan mccormack","Ronan_McCormack","senior_club","2003-2005","ulster","Ulster_Rugby",37,10,"2003","2005"
 "Q3441608",NA,"ronan mccormack","Ronan_McCormack","senior_club","2005-2010","leinster","Leinster_Rugby",52,15,"2005","2010"
@@ -22684,12 +22684,12 @@
 "Q590826",NA,"rory patrick lamont","Rory_Lamont","senior_club","2009-2011","toulon","RC_Toulon",37,15,"2009","2011"
 "Q590826",NA,"rory patrick lamont","Rory_Lamont","senior_club","2011-2013","glasgow warriors","Glasgow_Warriors",6,5,"2011","2013"
 "Q590826",NA,"rory patrick lamont","Rory_Lamont","international","2005-2013","scotland","Perth,_Scotland",29,30,"2005","2013"
-"Q4892990",NA,"bernard charles hartley","Bernard_Charles_Hartley","senior_club",NA,"blackheath f.c.","Blackheath_F.C.",0,0,"NA","NA"
-"Q4892990",NA,"bernard charles hartley","Bernard_Charles_Hartley","senior_club",NA,"barbarian f.c.","Barbarian_F.C.",0,0,"NA","NA"
-"Q4892990",NA,"bernard charles hartley","Bernard_Charles_Hartley","senior_club",NA,"kent",NA,0,0,"NA","NA"
+"Q4892990",NA,"bernard charles hartley","Bernard_Charles_Hartley","senior_club",NA,"blackheath f.c.","Blackheath_F.C.",0,0,NA,NA
+"Q4892990",NA,"bernard charles hartley","Bernard_Charles_Hartley","senior_club",NA,"barbarian f.c.","Barbarian_F.C.",0,0,NA,NA
+"Q4892990",NA,"bernard charles hartley","Bernard_Charles_Hartley","senior_club",NA,"kent",NA,0,0,NA,NA
 "Q4892990",NA,"bernard charles hartley","Bernard_Charles_Hartley","international","1901-1902","england","England_national_rugby_union_team",2,0,"1901","1902"
 "Q130908693",NA,"alfred henry price","Alfred_Price_(rugby_union)","international","1920-1920","ireland","Ireland_national_rugby_union_team",2,3,"1920","1920"
-"Q6388516",NA,"george kenneth smith","Ken_Smith_(rugby_union)","amateur",NA,"kelso","Kelso_RFC",0,0,"NA","NA"
+"Q6388516",NA,"george kenneth smith","Ken_Smith_(rugby_union)","amateur",NA,"kelso","Kelso_RFC",0,0,NA,NA
 "Q6388516",NA,"george kenneth smith","Ken_Smith_(rugby_union)","senior_club","1956-1957","south of scotland district","South_of_Scotland_District_(rugby_union)",0,0,"1956","1957"
 "Q6388516",NA,"george kenneth smith","Ken_Smith_(rugby_union)","international","1957-1961","scotland","Scotland",18,0,"1957","1961"
 "Q6388516",NA,"george kenneth smith","Ken_Smith_(rugby_union)","international","1959-1959","british and irish lions","British_%26_Irish_Lions",4,3,"1959","1959"
@@ -24192,7 +24192,7 @@
 "Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club","2005-2007","sanyo wild knights","Saitama_Wild_Knights",0,0,"2005","2007"
 "Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club","2007-2011","biarritz","Biarritz_Olympique",77,50,"2007","2011"
 "Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club","2011-2014","béziers","AS_B%C3%A9ziers_H%C3%A9rault",44,10,"2011","2014"
-"Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club",NA,"otago","Otago_Rugby_Football_Union",0,0,"NA","NA"
+"Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club",NA,"otago","Otago_Rugby_Football_Union",0,0,NA,NA
 "Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club","1999-1999","blues","Blues_(Super_Rugby)",1,0,"1999","1999"
 "Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club","2000-2001","highlanders","Highlanders_(rugby_union)",15,15,"2000","2001"
 "Q3470865",NA,"samiu kaufusi vahafolau","Samiu_Vahafolau","senior_club","2002-2002","blues","Blues_(Super_Rugby)",4,5,"2002","2002"
@@ -24203,9 +24203,9 @@
 "Q55585113",NA,"cornelis johannes grobbelaar","Johan_Grobbelaar","senior_club","2018-","bulls","Bulls_(rugby_union)",72,125,"2018",NA
 "Q55585113",NA,"cornelis johannes grobbelaar","Johan_Grobbelaar","international","2015-2015","south africa schools","South_Africa_national_under-18_rugby_union_team",3,5,"2015","2015"
 "Q55585113",NA,"cornelis johannes grobbelaar","Johan_Grobbelaar","international","2017-2017","south africa under-20","South_Africa_national_under-20_rugby_union_team",5,20,"2017","2017"
-"Q6742554",NA,"malcolm stanley phillips","Malcolm_Phillips","senior_club",NA,"fylde rugby club","Fylde_RFC",NA,NA,"NA","NA"
-"Q6742554",NA,"malcolm stanley phillips","Malcolm_Phillips","senior_club",NA,"barbarian fc","Barbarian_F.C.",NA,NA,"NA","NA"
-"Q6742554",NA,"malcolm stanley phillips","Malcolm_Phillips","senior_club",NA,"lancashire","Lancashire_County_Rugby_Football_Union",NA,NA,"NA","NA"
+"Q6742554",NA,"malcolm stanley phillips","Malcolm_Phillips","senior_club",NA,"fylde rugby club","Fylde_RFC",NA,NA,NA,NA
+"Q6742554",NA,"malcolm stanley phillips","Malcolm_Phillips","senior_club",NA,"barbarian fc","Barbarian_F.C.",NA,NA,NA,NA
+"Q6742554",NA,"malcolm stanley phillips","Malcolm_Phillips","senior_club",NA,"lancashire","Lancashire_County_Rugby_Football_Union",NA,NA,NA,NA
 "Q6742554",NA,"malcolm stanley phillips","Malcolm_Phillips","international","1958-1964","england","England_national_rugby_union_team",27,50,"1958","1964"
 "Q1381032",NA,"philip bennett","Phil_Bennett","amateur","1966-1981","llanelli rfc","Llanelli_RFC",414,2535,"1966","1981"
 "Q1381032",NA,"philip bennett","Phil_Bennett","amateur","1970-1980","barbarians","Barbarian_F.C.",20,181,"1970","1980"
@@ -26445,10 +26445,10 @@
 "Q110560982",NA,"lundi msenge","Lundi_Msenge","senior_club","2022-","pumas","Pumas_(Currie_Cup)",2,0,"2022",NA
 "Q125233750",NA,"john richard uzzell","Dick_Uzzell","international","1963-1965","wales","Wales_national_rugby_union_team",5,0,"1963","1965"
 "Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club","-1976","fc lourdes","FC_Lourdes",0,0,NA,"1976"
-"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"rc toulonnais","RC_Toulon",0,0,"NA","NA"
-"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"rc nice",NA,0,0,"NA","NA"
-"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"us la seyne",NA,0,0,"NA","NA"
-"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"stade marseillais uc",NA,0,0,"NA","NA"
+"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"rc toulonnais","RC_Toulon",0,0,NA,NA
+"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"rc nice",NA,0,0,NA,NA
+"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"us la seyne",NA,0,0,NA,NA
+"Q3105687",NA,"gilbert doucet","Gilbert_Doucet","senior_club",NA,"stade marseillais uc",NA,0,0,NA,NA
 "Q85855932",NA,"jake flannery","Jake_Flannery","amateur","2021-2022","shannon","Shannon_RFC",9,115,"2021","2022"
 "Q85855932",NA,"jake flannery","Jake_Flannery","amateur","2022-2023","ballynahinch","Ballynahinch_RFC",1,0,"2022","2023"
 "Q85855932",NA,"jake flannery","Jake_Flannery","senior_club","2020-2022","munster","Munster_Rugby",6,8,"2020","2022"
@@ -26841,8 +26841,8 @@
 "Q39072726",NA,"selevasio tolofua","Selevasio_Tolofua","senior_club","2016-","toulouse","Stade_Toulousain",113,50,"2016",NA
 "Q39072726",NA,"selevasio tolofua","Selevasio_Tolofua","international","2017-2017","france u20","France_national_under-20_rugby_union_team",6,10,"2017","2017"
 "Q39072726",NA,"selevasio tolofua","Selevasio_Tolofua","international","2020-","france","France",2,0,"2020",NA
-"Q2830170",NA,"alain plantefol","Alain_Plantefol","senior_club",NA,"racing cf","Racing_92",0,0,"NA","NA"
-"Q2830170",NA,"alain plantefol","Alain_Plantefol","senior_club",NA,"su agen","SU_Agen_Lot-et-Garonne",0,0,"NA","NA"
+"Q2830170",NA,"alain plantefol","Alain_Plantefol","senior_club",NA,"racing cf","Racing_92",0,0,NA,NA
+"Q2830170",NA,"alain plantefol","Alain_Plantefol","senior_club",NA,"su agen","SU_Agen_Lot-et-Garonne",0,0,NA,NA
 "Q2830170",NA,"alain plantefol","Alain_Plantefol","international","1967-1969","france","German_military_administration_in_occupied_France_during_World_War_II",11,3,"1967","1969"
 "Q50807539",NA,"tudor gabriel butnariu","Tudor_Butnariu","senior_club","2015-2018","politehnica iași","CS_Politehnica_Ia%C8%99i_(rugby_union)",11,0,"2015","2018"
 "Q50807539",NA,"tudor gabriel butnariu","Tudor_Butnariu","senior_club","2018-","steaua bucurești","CSA_Steaua_Bucure%C8%99ti_(rugby_union)",0,0,"2018",NA
@@ -26979,9 +26979,9 @@
 "Q5028328",NA,"george david campese ma'afu","Campese_Ma%27afu","senior_club","2016-2018","northampton saints","Northampton_Saints",36,0,"2016","2018"
 "Q5028328",NA,"george david campese ma'afu","Campese_Ma%27afu","senior_club","2018-2019","leicester tigers","Leicester_Tigers",9,0,"2018","2019"
 "Q5028328",NA,"george david campese ma'afu","Campese_Ma%27afu","international","2010-","fiji","Fiji_national_rugby_union_team",58,10,"2010",NA
-"Q2391413",NA,"andrç¸ darrieussecq","Andr%C3%A9_Darrieussecq","senior_club",NA,"saint-jean-de-luz olympique",NA,0,0,"NA","NA"
+"Q2391413",NA,"andrç¸ darrieussecq","Andr%C3%A9_Darrieussecq","senior_club",NA,"saint-jean-de-luz olympique",NA,0,0,NA,NA
 "Q2391413",NA,"andrç¸ darrieussecq","Andr%C3%A9_Darrieussecq","senior_club","1968-1977","biarritz olympique","Biarritz_Olympique",0,0,"1968","1977"
-"Q2391413",NA,"andrç¸ darrieussecq","Andr%C3%A9_Darrieussecq","senior_club",NA,"stade français","Stade_Fran%C3%A7ais",0,0,"NA","NA"
+"Q2391413",NA,"andrç¸ darrieussecq","Andr%C3%A9_Darrieussecq","senior_club",NA,"stade français","Stade_Fran%C3%A7ais",0,0,NA,NA
 "Q2391413",NA,"andrç¸ darrieussecq","Andr%C3%A9_Darrieussecq","international","1973-1973","france","France_national_rugby_union_team",0,0,"1973","1973"
 "Q17385620",NA,"scott kevin barrett","Scott_Barrett_(rugby_union)","senior_club","2014-2016","canterbury","Canterbury_(National_Provincial_Championship)",19,5,"2014","2016"
 "Q17385620",NA,"scott kevin barrett","Scott_Barrett_(rugby_union)","senior_club","2014-","crusaders","Crusaders_(rugby_union)",117,90,"2014",NA
@@ -28169,7 +28169,7 @@
 "Q8017129",NA,"william brooke purdon","William_Purdon","amateur",NA,"collegians","Collegians_(Belfast)",0,0,NA,NA
 "Q8017129",NA,"william brooke purdon","William_Purdon","amateur",NA,"army","Army_Rugby_Union",0,0,NA,NA
 "Q8017129",NA,"william brooke purdon","William_Purdon","international","1906-1906","ireland","Ireland",3,3,"1906","1906"
-"Q7817632",NA,"thomas mitchell smith","Tom_Smith_(rugby_union,_born_1985)","senior_club",NA,"neath","Neath_RFC",NA,NA,"NA","NA"
+"Q7817632",NA,"thomas mitchell smith","Tom_Smith_(rugby_union,_born_1985)","senior_club",NA,"neath","Neath_RFC",NA,NA,NA,NA
 "Q7817632",NA,"thomas mitchell smith","Tom_Smith_(rugby_union,_born_1985)","senior_club","2007-2015","ospreys","Ospreys_(rugby_union)",91,0,"2007","2015"
 "Q18632104",NA,"kevin michael greene","Kevin_Greene_(rugby_union)","senior_club","1969-1980","waikato","Waikato_Rugby_Union",87,0,"1969","1980"
 "Q18632104",NA,"kevin michael greene","Kevin_Greene_(rugby_union)","international","1976-1977","new zealand","Hamilton,_New_Zealand",8,0,"1976","1977"
@@ -31685,10 +31685,10 @@
 "Q106981381",NA,"tomoki osada","Tomoki_Osada","international","2019-2019","japan u20","Japan_national_under-20_rugby_union_team",0,0,"2019","2019"
 "Q106981381",NA,"tomoki osada","Tomoki_Osada","international","2023-","japan","Japan",26,0,"2023",NA
 "Q106981381",NA,"tomoki osada","Tomoki_Osada","international","2024-2024","japan xv","Junior_Japan",0,0,"2024","2024"
-"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"sporting club rieumois",NA,0,0,"NA","NA"
-"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"us montauban","US_Montauban",0,0,"NA","NA"
-"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"la voulte sportif",NA,0,0,"NA","NA"
-"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"stade union cavaillon",NA,0,0,"NA","NA"
+"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"sporting club rieumois",NA,0,0,NA,NA
+"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"us montauban","US_Montauban",0,0,NA,NA
+"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"la voulte sportif",NA,0,0,NA,NA
+"Q3069378",NA,"fernand zago","Fernand_Zago","senior_club",NA,"stade union cavaillon",NA,0,0,NA,NA
 "Q3069378",NA,"fernand zago","Fernand_Zago","international","1963-1963","france","Vichy_France",2,0,"1963","1963"
 "Q27909851",NA,"fraser paul armstrong","Fraser_Armstrong_(rugby_union)","senior_club","2013-2013","waikato","Waikato_Rugby_Union",1,0,"2013","2013"
 "Q27909851",NA,"fraser paul armstrong","Fraser_Armstrong_(rugby_union)","senior_club","2014-2014","auckland","Auckland_Rugby_Union",1,0,"2014","2014"
@@ -35845,7 +35845,7 @@
 "Q125630222",NA,"pierre hontas","Peyo_Hontas","international","1990-1993","france","France_national_rugby_union_team",9,0,"1990","1993"
 "Q3183225",NA,"jon petrie","Jon_Petrie","senior_club","1998-2007","glasgow warriors","Glasgow_Warriors",155,60,"1998","2007"
 "Q3183225",NA,"jon petrie","Jon_Petrie","international","2000-2007","scotland","Scotland",45,15,"2000","2007"
-"Q3165020",NA,"jean-claude hiquet","Jean-Claude_Hiquet","senior_club",NA,"su agen","SU_Agen_Lot-et-Garonne",0,0,"NA","NA"
+"Q3165020",NA,"jean-claude hiquet","Jean-Claude_Hiquet","senior_club",NA,"su agen","SU_Agen_Lot-et-Garonne",0,0,NA,NA
 "Q3165020",NA,"jean-claude hiquet","Jean-Claude_Hiquet","international","1964-1964","france","French_Third_Republic",1,0,"1964","1964"
 "Q3002002",NA,"craig william dowd","Craig_Dowd","senior_club","2001-2005","wasps","Wasps_RFC",115,85,"2001","2005"
 "Q3002002",NA,"craig william dowd","Craig_Dowd","senior_club","1991-2001","auckland","Auckland",83,0,"1991","2001"
@@ -38528,13 +38528,13 @@
 "Q7173718",NA,"peter sime douty","Peter_Douty","international","1927-1927","british and irish lions","British_%26_Irish_Lions",0,0,"1927","1927"
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1889-1890","melrose",NA,NA,NA,"1889","1890"
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1892-1894","poneke",NA,NA,NA,"1892","1894"
-NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1896-1897","poneke",NA,NA,NA,"1896","1897"
-NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1899-1903","poneke",NA,NA,NA,"1899","1903"
-NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","amateur","1895-1895","petone",NA,NA,NA,"1895","1895"
-NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","senior_club","1889-1890","wellington","Wellington",5,0,"1889","1890"
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","senior_club","1892-1897","wellington","Wellington",20,0,"1892","1897"
 "Q27827757",NA,"william roberts","William_Roberts_(rugby_union)","senior_club","1899-1903","wellington","Wellington",22,0,"1899","1903"
@@ -38589,9 +38589,9 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q13035033",NA,"johannes christoffel breedt","Jannie_Breedt","senior_club","1981-1984","northern transvaal","Bulls_(rugby_union)",47,0,"1981","1984"
 "Q13035033",NA,"johannes christoffel breedt","Jannie_Breedt","senior_club","1985-1992","transvaal","Bulls_(rugby_union)",118,0,"1985","1992"
 "Q13035033",NA,"johannes christoffel breedt","Jannie_Breedt","international","1986-1992","south africa","South_Africa_national_rugby_union_team",8,0,"1986","1992"
-"Q50141033",NA,"marius niculai","Marius_Niculai","senior_club",NA,"rcj farul constanța","RCJ_Farul_Constan%C8%9Ba",NA,NA,"NA","NA"
-"Q50141033",NA,"marius niculai","Marius_Niculai","senior_club",NA,"stade lavelanétien",NA,NA,NA,"NA","NA"
-"Q50141033",NA,"marius niculai","Marius_Niculai","senior_club",NA,"sc pamiers",NA,NA,NA,"NA","NA"
+"Q50141033",NA,"marius niculai","Marius_Niculai","senior_club",NA,"rcj farul constanța","RCJ_Farul_Constan%C8%9Ba",NA,NA,NA,NA
+"Q50141033",NA,"marius niculai","Marius_Niculai","senior_club",NA,"stade lavelanétien",NA,NA,NA,NA,NA
+"Q50141033",NA,"marius niculai","Marius_Niculai","senior_club",NA,"sc pamiers",NA,NA,NA,NA,NA
 "Q50141033",NA,"marius niculai","Marius_Niculai","international","2003-2003","romania","Romania_national_rugby_union_team",2,0,"2003","2003"
 "Q112340103",NA,"frank bradshaw ryan","Frank_Bradshaw_Ryan","senior_club","2016-2017","auch","FC_Auch_Gers",8,5,"2016","2017"
 "Q112340103",NA,"frank bradshaw ryan","Frank_Bradshaw_Ryan","senior_club","2017-2022","nevers","USON_Nevers",101,20,"2017","2022"
@@ -41290,7 +41290,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q5980715",NA,"ian robert smith","Ian_%22Dosser%22_Smith","amateur","1977-1991","leicester tigers","Leicester_Tigers",331,268,"1977","1991"
 "Q130491645",NA,"william ritchie crawford brydon","Willie_Brydon","international","1939-1939","scotland","Scotland_national_rugby_union_team",1,0,"1939","1939"
 "Q7441494",NA,"sean tomes","Sean_Tomes","senior_club","2009-2009","exeter chiefs","Exeter_Chiefs",0,0,"2009","2009"
-"Q7441494",NA,"sean tomes","Sean_Tomes","senior_club",NA,"newport gwent dragons","Dragons_RFC",0,0,"NA","NA"
+"Q7441494",NA,"sean tomes","Sean_Tomes","senior_club",NA,"newport gwent dragons","Dragons_RFC",0,0,NA,NA
 "Q7441494",NA,"sean tomes","Sean_Tomes","senior_club","2006-2009","newcastle falcons","Newcastle_Red_Bulls",3,5,"2006","2009"
 "Q7441494",NA,"sean tomes","Sean_Tomes","senior_club","2007-2007","doncaster knights","Doncaster_Knights",0,0,"2007","2007"
 "Q7441494",NA,"sean tomes","Sean_Tomes","senior_club","2006-2006","otley","Otley_R.U.F.C.",0,0,"2006","2006"
@@ -43882,8 +43882,8 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q4980855",NA,"bryn robert evans","Bryn_Evans_(rugby_union,_born_1984)","senior_club","2015-2020","sale sharks","Sale_Sharks",122,70,"2015","2020"
 "Q4980855",NA,"bryn robert evans","Bryn_Evans_(rugby_union,_born_1984)","senior_club","2021-2022","highlanders","Highlanders_(rugby_union)",24,5,"2021","2022"
 "Q4980855",NA,"bryn robert evans","Bryn_Evans_(rugby_union,_born_1984)","international","2009-2009","new zealand","New_Zealand_national_rugby_union_team",2,0,"2009","2009"
-"Q29347962",NA,"ovidiu ștefan slușariuc","Ovidiu_Slu%C8%99ariuc","senior_club",NA,"csm suceava","CSM_Cetatea_Suceava",NA,NA,"NA","NA"
-"Q29347962",NA,"ovidiu ștefan slușariuc","Ovidiu_Slu%C8%99ariuc","senior_club",NA,"dinamo bucurești","CS_Dinamo_Bucure%C8%99ti_(rugby_union)",NA,NA,"NA","NA"
+"Q29347962",NA,"ovidiu ștefan slușariuc","Ovidiu_Slu%C8%99ariuc","senior_club",NA,"csm suceava","CSM_Cetatea_Suceava",NA,NA,NA,NA
+"Q29347962",NA,"ovidiu ștefan slușariuc","Ovidiu_Slu%C8%99ariuc","senior_club",NA,"dinamo bucurești","CS_Dinamo_Bucure%C8%99ti_(rugby_union)",NA,NA,NA,NA
 "Q29347962",NA,"ovidiu ștefan slușariuc","Ovidiu_Slu%C8%99ariuc","international","1993-1999","romania","Romania_national_rugby_union_team",16,5,"1993","1999"
 "Q111472716",NA,"boyd rouse","Boyd_Rouse","senior_club","2022-","zimbabwe goshawks","Zimbabwe_national_rugby_union_team",1,3,"2022",NA
 "Q123458876",NA,"seç­n machale","Se%C3%A1n_MacHale","international","1965-1967","ireland","Ireland_national_rugby_union_team",12,0,"1965","1967"
@@ -44014,7 +44014,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q83739297",NA,"sam costelow","Sam_Costelow","international","2022-","wales","Wales_national_under-20_rugby_union_team",21,54,"2022",NA
 "Q6163405",NA,"jason rutledge","Jason_Rutledge","senior_club","2000-2004","southland","Rugby_Southland",69,30,"2000","2004"
 "Q6163405",NA,"jason rutledge","Jason_Rutledge","senior_club","2009-2013","southland","Rugby_Southland",69,30,"2009","2013"
-"Q6163405",NA,"jason rutledge","Jason_Rutledge","senior_club",NA,"highlanders","Highlanders_(rugby_union)",59,40,"NA","NA"
+"Q6163405",NA,"jason rutledge","Jason_Rutledge","senior_club",NA,"highlanders","Highlanders_(rugby_union)",59,40,NA,NA
 "Q7329075",NA,"richard david skuse","Richard_Skuse","senior_club","2009-2010","saracens","Saracens_F.C.",0,0,"2009","2010"
 "Q7329075",NA,"richard david skuse","Richard_Skuse","senior_club","2005-2009","london irish","London_Irish",0,5,"2005","2009"
 "Q7329075",NA,"richard david skuse","Richard_Skuse","senior_club","2002-2003","bristol bears","Bristol_Bears",0,0,"2002","2003"
@@ -46827,8 +46827,8 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q47528471",NA,"aphiwe odwa dyantyi","Aphiwe_Dyantyi","senior_club","2024-","blue bulls","Bulls_(rugby_union)",3,0,"2024",NA
 "Q47528471",NA,"aphiwe odwa dyantyi","Aphiwe_Dyantyi","senior_club","2024-","bulls","Bulls_(rugby_union)",4,0,"2024",NA
 "Q47528471",NA,"aphiwe odwa dyantyi","Aphiwe_Dyantyi","international","2018-2019","south africa","South_Africa_national_rugby_union_team",13,30,"2018","2019"
-"Q16014096",NA,"james charles kearney","Jim_Kearney_(rugby_union)","amateur",NA,"ranfurly","Ranfurly_RFC",0,0,"NA","NA"
-"Q16014096",NA,"james charles kearney","Jim_Kearney_(rugby_union)","senior_club",NA,"otago","Otago_Rugby_Football_Union",0,0,"NA","NA"
+"Q16014096",NA,"james charles kearney","Jim_Kearney_(rugby_union)","amateur",NA,"ranfurly","Ranfurly_RFC",0,0,NA,NA
+"Q16014096",NA,"james charles kearney","Jim_Kearney_(rugby_union)","senior_club",NA,"otago","Otago_Rugby_Football_Union",0,0,NA,NA
 "Q16014096",NA,"james charles kearney","Jim_Kearney_(rugby_union)","international","1947-1947","all blacks","New_Zealand_national_rugby_union_team",0,30,"1947","1947"
 "Q24004679",NA,"harold howell meredith thomas","Harold_Thomas_(rugby_union,_born_1883)","amateur","1910-1910","swansea rfc","Swansea_RFC",0,0,"1910","1910"
 "Q24004679",NA,"harold howell meredith thomas","Harold_Thomas_(rugby_union,_born_1883)","amateur","1910-1910","morriston rfc","Morriston_RFC",0,0,"1910","1910"
@@ -52189,7 +52189,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q28648790",NA,"calvin nash","Calvin_Nash","international","2022-2022","emerging ireland","Emerging_Ireland",2,5,"2022","2022"
 "Q28648790",NA,"calvin nash","Calvin_Nash","international","2022-2022","ireland a","Ireland_Wolfhounds",2,5,"2022","2022"
 "Q28648790",NA,"calvin nash","Calvin_Nash","international","2023-","ireland","Ireland_national_under-20_rugby_union_team",12,20,"2023",NA
-"Q64374522",NA,"clement currie","Clem_Currie","senior_club",NA,"griquas",NA,0,0,"NA","NA"
+"Q64374522",NA,"clement currie","Clem_Currie","senior_club",NA,"griquas",NA,0,0,NA,NA
 "Q64374522",NA,"clement currie","Clem_Currie","international","1903-1903","south africa","South_Africa_national_rugby_union_team",1,0,"1903","1903"
 "Q131196125",NA,"frederick archibald leslie-jones","Frederick_Leslie-Jones","international","1895-1895","england","England_national_rugby_union_team",2,3,"1895","1895"
 "Q128995878",NA,"john hawkins","John_Hawkins_(rugby_union)","senior_club","2018-2023","bristol bears","Bristol_Bears",37,0,"2018","2023"
@@ -53794,7 +53794,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q107300566",NA,"gordon mclean boyd","Gordon_Boyd_(rugby_union)","amateur","1922-1927","glasgow hsfp","Glasgow_HSFP",0,0,"1922","1927"
 "Q107300566",NA,"gordon mclean boyd","Gordon_Boyd_(rugby_union)","senior_club","1924-1924","whites trial",NA,0,0,"1924","1924"
 "Q107300566",NA,"gordon mclean boyd","Gordon_Boyd_(rugby_union)","international","1926-1926","scotland","Scotland",1,0,"1926","1926"
-"Q3103194",NA,"georges michel","Georges_Michel_(rugby_union)","senior_club",NA,"tarbes pyrénées rugby","Stado_Tarbes_Pyr%C3%A9n%C3%A9es_Rugby",0,0,"NA","NA"
+"Q3103194",NA,"georges michel","Georges_Michel_(rugby_union)","senior_club",NA,"tarbes pyrénées rugby","Stado_Tarbes_Pyr%C3%A9n%C3%A9es_Rugby",0,0,NA,NA
 "Q44268866",NA,"darcy taimua swain","Darcy_Swain","senior_club","2016-2019","canberra vikings","Canberra_Vikings",23,10,"2016","2019"
 "Q44268866",NA,"darcy taimua swain","Darcy_Swain","senior_club","2018-2024","brumbies","ACT_Brumbies",78,10,"2018","2024"
 "Q44268866",NA,"darcy taimua swain","Darcy_Swain","senior_club","2025-","western force","Western_Force",14,5,"2025",NA
@@ -55470,8 +55470,8 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q16762884",NA,"gerrit jacobus visagie","Jaco_Visagie","senior_club","2019-2019","stade toulousain","Stade_Toulousain",3,0,"2019","2019"
 "Q16762884",NA,"gerrit jacobus visagie","Jaco_Visagie","senior_club","2020-","lions","Lions_(United_Rugby_Championship)",71,35,"2020",NA
 "Q16762884",NA,"gerrit jacobus visagie","Jaco_Visagie","senior_club","2020-","golden lions","Lions_(United_Rugby_Championship)",48,40,"2020",NA
-"Q3105628",NA,"gilbert brunat","Gilbert_Brunat","senior_club",NA,"us iseaux",NA,0,0,"NA","NA"
-"Q3105628",NA,"gilbert brunat","Gilbert_Brunat","senior_club",NA,"so chambéry","Stade_Olympique_Chamb%C3%A9rien_Rugby",0,0,"NA","NA"
+"Q3105628",NA,"gilbert brunat","Gilbert_Brunat","senior_club",NA,"us iseaux",NA,0,0,NA,NA
+"Q3105628",NA,"gilbert brunat","Gilbert_Brunat","senior_club",NA,"so chambéry","Stade_Olympique_Chamb%C3%A9rien_Rugby",0,0,NA,NA
 "Q3105628",NA,"gilbert brunat","Gilbert_Brunat","senior_club","1981-1985","fc lourdes","FC_Lourdes",0,0,"1981","1985"
 "Q3105628",NA,"gilbert brunat","Gilbert_Brunat","senior_club","1985-1986","fc aix-les-bains",NA,0,0,"1985","1986"
 "Q3105628",NA,"gilbert brunat","Gilbert_Brunat","senior_club","1986-1993","fc grenoble","FC_Grenoble_Rugby",0,0,"1986","1993"
@@ -56607,7 +56607,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q3131879",NA,"henri rancoule","Henri_Rancoule","senior_club","-1959","fc lourdes","FC_Lourdes",0,0,NA,"1959"
 "Q3131879",NA,"henri rancoule","Henri_Rancoule","senior_club","1959-1961","rc toulonnais","RC_Toulon",0,0,"1959","1961"
 "Q3131879",NA,"henri rancoule","Henri_Rancoule","senior_club","1961-","tarbes pyrénées rugby","Stado_Tarbes_Pyr%C3%A9n%C3%A9es_Rugby",0,0,"1961",NA
-"Q3131879",NA,"henri rancoule","Henri_Rancoule","senior_club",NA,"us carcassonne","US_Carcassonne",0,0,"NA","NA"
+"Q3131879",NA,"henri rancoule","Henri_Rancoule","senior_club",NA,"us carcassonne","US_Carcassonne",0,0,NA,NA
 "Q3131879",NA,"henri rancoule","Henri_Rancoule","international","1955-1962","france","French_Third_Republic",27,24,"1955","1962"
 "Q75548329",NA,"henry joseph pollock","Henry_Pollock_(rugby_union)","senior_club","2022-","northampton saints","Northampton_Saints",27,45,"2022",NA
 "Q75548329",NA,"henry joseph pollock","Henry_Pollock_(rugby_union)","senior_club","2023-2024","bedford blues","Bedford_Blues",5,15,"2023","2024"
@@ -56638,8 +56638,8 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q131298889",NA,"john michael thornton quirke","John_Quirke_(rugby_union)","international","1962-1968","ireland","Ireland_national_rugby_union_team",3,0,"1962","1968"
 "Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club","1976-1976","pontypool","Pontypool_RFC",0,0,"1976","1976"
 "Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club","1976-","neath","Neath_RFC",0,0,"1976",NA
-"Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club",NA,"pontypool","Pontypool_RFC",0,0,"NA","NA"
-"Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club",NA,"llanelli","Llanelli_RFC",0,0,"NA","NA"
+"Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club",NA,"pontypool","Pontypool_RFC",0,0,NA,NA
+"Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club",NA,"llanelli","Llanelli_RFC",0,0,NA,NA
 "Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club","1986-1993","swansea","Swansea_RFC",172,351,"1986","1993"
 "Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","senior_club","1993-1996","pontypool","Pontypool_RFC",0,0,"1993","1996"
 "Q4925842",NA,"bleddyn taylor","Bleddyn_Taylor","international",NA,"wales","Wales",0,0,NA,NA
@@ -58244,7 +58244,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q108265519",NA,"walter paea fifita","Walter_Fifita","senior_club","2021-2023","glasgow warriors","Glasgow_Warriors",3,0,"2021","2023"
 "Q108265519",NA,"walter paea fifita","Walter_Fifita","senior_club","2022-2023","loanstirling wolves",NA,7,10,"2022","2023"
 "Q108265519",NA,"walter paea fifita","Walter_Fifita","international","2021-","tonga","Tonga_national_rugby_union_team",6,5,"2021",NA
-"Q17708991",NA,"raef morrison1995","Raef_Morrison","international",NA,"hong kong","Hong_Kong_Football_Club",14,315,"NA","NA"
+"Q17708991",NA,"raef morrison1995","Raef_Morrison","international",NA,"hong kong","Hong_Kong_Football_Club",14,315,NA,NA
 "Q16043526",NA,"john lawrence hickson","John_Lawrence_Hickson","senior_club",NA,"bradford fc","Bradford_(Park_Avenue)_A.F.C.",6,0,NA,NA
 "Q16043526",NA,"john lawrence hickson","John_Lawrence_Hickson","senior_club",NA,"yorkshire","Yorkshire_Rugby_Football_Union",27,0,NA,NA
 "Q16043526",NA,"john lawrence hickson","John_Lawrence_Hickson","international","1887-1890","england","England_national_rugby_union_team",6,0,"1887","1890"
@@ -61189,7 +61189,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q3530773",NA,"thomas anthony lawton","Tom_Lawton","senior_club","1989-1990","natal","Sharks_(rugby_union)",0,0,"1989","1990"
 "Q3530773",NA,"thomas anthony lawton","Tom_Lawton","international","1983-1992","australia","Australia_national_rugby_union_team",41,16,"1983","1992"
 "Q42897691",NA,"allan towell","Allan_Towell","senior_club","1947-1950","leicester tigers","Leicester_Tigers",93,52,"1947","1950"
-"Q42897691",NA,"allan towell","Allan_Towell","senior_club",NA,"bedford blues","Bedford_Blues",0,0,"NA","NA"
+"Q42897691",NA,"allan towell","Allan_Towell","senior_club",NA,"bedford blues","Bedford_Blues",0,0,NA,NA
 "Q42897691",NA,"allan towell","Allan_Towell","international","1948-1951","england","England",2,0,"1948","1951"
 "Q3498028",NA,"steffon elvis armitage","Steffon_Armitage","senior_club","2004-2006","saracens","Saracens_F.C.",5,15,"2004","2006"
 "Q3498028",NA,"steffon elvis armitage","Steffon_Armitage","senior_club","2006-2011","london irish","London_Irish",136,128,"2006","2011"
@@ -61901,7 +61901,7 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q4761160",NA,"andy perry","Andy_Perry","senior_club","2005-","newcastle falcons","Newcastle_Red_Bulls",67,0,"2005",NA
 "Q4761160",NA,"andy perry","Andy_Perry","senior_club","-2005","plymouth albion","Plymouth_Albion_R.F.C.",0,0,NA,"2005"
 "Q104536721",NA,"francois anton meiring","FA_Meiring","senior_club","1990-","Eastern Province","Eastern_Province_Elephants",NA,NA,"1990",NA
-"Q104536721",NA,"francois anton meiring","FA_Meiring","senior_club",NA,"northern transvaal","Bulls_(rugby_union)",105,53,"NA","NA"
+"Q104536721",NA,"francois anton meiring","FA_Meiring","senior_club",NA,"northern transvaal","Bulls_(rugby_union)",105,53,NA,NA
 "Q104536721",NA,"francois anton meiring","FA_Meiring","international","1994-1994","south africa","South_Africa_national_rugby_union_team",0,0,"1994","1994"
 "Q65031016",NA,"paul cunningham","Paul_Cunningham_(rugby_union)","senior_club","1995-1997","munster","Munster_Rugby",8,0,"1995","1997"
 "Q5496060",NA,"fred leonard perrett","Fred_Perrett","amateur",NA,"briton ferry rfc","Briton_Ferry_RFC",0,0,NA,NA
@@ -62643,8 +62643,8 @@ NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"NA","NA"
 "Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club","2008-","rc carqueiranne-hyères",NA,2,0,"2008",NA
 "Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club","2007-2008","stade montois","Stade_Montois_Rugby",0,0,"2007","2008"
 "Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club","-2007","nimes","RC_N%C3%AEmes",13,0,NA,"2007"
-"Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club",NA,"toulon","RC_Toulon",0,0,"NA","NA"
-"Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club",NA,"bourgoin","CS_Bourgoin-Jallieu",0,0,"NA","NA"
+"Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club",NA,"toulon","RC_Toulon",0,0,NA,NA
+"Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club",NA,"bourgoin","CS_Bourgoin-Jallieu",0,0,NA,NA
 "Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","senior_club","2001-2002","ca périgueux","CA_P%C3%A9rigueux",0,0,"2001","2002"
 "Q209358",NA,"andré lourenço da silva","Andr%C3%A9_Silva_(rugby_union,_born_1975)","international","2007-2007","portugal","Portugal_national_rugby_union_team",5,0,"2007","2007"
 "Q21066897",NA,"apisalome ratuniyarawa","Api_Ratuniyarawa","senior_club","2022-2023","london irish","London_Irish",21,5,"2022","2023"
