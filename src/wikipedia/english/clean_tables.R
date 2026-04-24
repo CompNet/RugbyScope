@@ -32,7 +32,7 @@ players <- read.csv(file.path(folder, "raw", "player_info.csv"))
 tlog(2, "Raw number of players: ", nrow(players))
 players <- players %>% mutate(across(where(is.character), ~ na_if(., "")))
 
-stints <- read.csv(file.path(folder, "raw", "stint_info.csv"))
+stints <- read.csv(file.path(folder, "raw", "stints_info.csv"))
 tlog(2, "Raw number of stints: ", nrow(stints))
 stints <- stints %>% mutate(across(where(is.character), ~ na_if(., "")))
 
@@ -993,7 +993,7 @@ stints_comp <- cbind(stints_comp, matrix(NA, nrow = nrow(stints_comp), ncol = 2)
 colnames(stints_comp)[(ncol(stints_comp) - 1):ncol(stints_comp)] <- c("startYear", "endYear")
 
 # split rows containing multiple stints
-new_stints <- stints_comp[-(1:nrow(stints_comp)), ]
+new_stints_comp <- stints_comp[-(1:nrow(stints_comp)), ]
 for (r in 1:nrow(stints_comp)) {
   # if (r %% 1000 == 0)
     tlog(4, "Processing row ", r, "/", nrow(stints_comp))
@@ -1084,37 +1084,30 @@ for (r in 1:nrow(stints_comp)) {
     new_rows[, "pointsScored"] <- round(as.integer(points_scored) * years / sum(years))
 
   # add rows to table
-  new_stints <- rbind(new_stints, new_rows)
+  new_stints_comp <- rbind(new_stints_comp, new_rows)
 }
 #### debug: check newly created year fields
 #options(warn = 2)
-#sort(unique(new_stints[, "startYear"]))
-#sort(unique(new_stints[, "endYear"]))
-#new_stints[which(new_stints[, "endYear"] == "4006"),]
+#sort(unique(new_stints_comp[, "startYear"]))
+#sort(unique(new_stints_comp[, "endYear"]))
+#new_stints_comp[which(new_stints_comp[, "endYear"] == "4006"),]
 ####
-#idx <- which(new_stints[, "startYear"] > new_stints[, "endYear"])
-#print(new_stints[idx, ])
+#idx <- which(new_stints_comp[, "startYear"] > new_stints_comp[, "endYear"])
+#print(new_stints_comp[idx, ])
 ####
-
-
-
-
-
-
-
 
 # clean team urls
-idx <- which(grepl("action=edit&redlink=1", new_stints[, "teamWP"], fixed = FALSE))
+idx <- which(grepl("action=edit&redlink=1", new_stints_comp[, "teamWP"], fixed = FALSE))
 if (length(idx) > 0)
-  new_stints[idx, "teamWP"] <- NA
-#tail(sort(unique(new_stints[, "teamWP"])))
-idx <- which(new_stints[, "teamWP"] == "")
+  new_stints_comp[idx, "teamWP"] <- NA
+#tail(sort(unique(new_stints_comp[, "teamWP"])))
+idx <- which(new_stints_comp[, "teamWP"] == "")
 if (length(idx) > 0)
-  new_stints[idx, "teamWP"] <- NA
-#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 60,339/63,792 non-NAs
+  new_stints_comp[idx, "teamWP"] <- NA
+#print(length(which(!is.na(new_stints_comp[, "teamWP"]))))  # 8,991/11,515 non-NAs
 
 # solve wikipedia redirections
-old_urls <- sort(unique(new_stints[, "teamWP"]))
+old_urls <- sort(unique(new_stints_comp[, "teamWP"]))
 new_urls <- rep(NA, length(old_urls))
 for (r in 1:length(old_urls)) {
   url <- old_urls[r]
@@ -1134,22 +1127,68 @@ for (r in 1:length(old_urls)) {
     tlog(6, "Lost URL: ", r)
 }
 # put unique URL into the sting table
-idx1 <- match(new_stints[, "teamWP"], old_urls)
+idx1 <- match(new_stints_comp[, "teamWP"], old_urls)
 idx2 <- which(!is.na(idx1))
-new_stints[idx2, "teamWP"] <- new_urls[idx1[idx2]]
+new_stints_comp[idx2, "teamWP"] <- new_urls[idx1[idx2]]
 #### debug: check if we lost some URL after the above processing
 #print(length(which(!is.na(old_urls) & is.na(new_urls))))
-#print(length(which(!is.na(new_stints[, "teamWP"]))))  # 60,338/63,792 non-NAs
+#print(length(which(!is.na(new_stints_comp[, "teamWP"]))))  # 8,954/11,515 non-NAs
 ####
 
-# remove superfluous columns
-#sup_cols <- c("X")
-#tlog(2, "Remove superfluous columns: ", paste0(sup_cols, collapse = ", "))
-#cols <- which(colnames(new_stints) %in% sup_cols)
-#new_stints <- new_stints[, -cols]
 
-# rename certain columns
-colnames(new_stints)[which(colnames(new_stints) == "wiki_Name")] <- "enName"
+
+
+########################################################################
+# merge stints and stints_comp
+
+# init new table
+new_new_stints <- new_stints
+matches <- 0
+
+# loop over complement table
+tn <- str_to_upper(new_stints[, "teamName"])
+tn_comp <- str_to_upper(new_stints_comp[, "teamName"])
+for(r in 1:nrow(new_stints_comp)) {
+  tlog(2, "Processing row ", r, "/", nrow(new_stints_comp))
+
+  idx <- which(new_stints[, "origWdId"] == new_stints_comp[r, "origWdId"] &
+                 tn == tn_comp[r] &
+                 (is.na(new_stints[, "startYear"]) | is.na(new_stints_comp[r, "startYear"]) | new_stints[, "startYear"] == new_stints_comp[r, "startYear"]) &
+                 (is.na(new_stints[, "endYear"]) | is.na(new_stints_comp[r, "endYear"]) | new_stints[, "endYear"] == new_stints_comp[r, "endYear"]))
+  # nothing found: add row to table
+  if (length(idx) == 0) {
+    tlog(4, "No match found for row ", r, ": add to table")
+
+    new_new_stints <- rbind(new_new_stints, data.frame(new_stints_comp[r, c("origWdId","origName")], "wiki_name"="", new_stints_comp[r, c("wpPage","stintType","timePeriod","teamName","teamWP","matchesPlayed","pointsScored","startYear","endYear")]))
+
+  # several matches found: log warning
+  } else if (length(idx) > 1) {
+    tlog(6, "WARNING: Multiple matches found for row ", r, ": ", paste0(idx, collapse = ", "))
+
+  # just one single match: merge into table
+  } else {
+    tlog(4, "Match found for row ", r, ": merge into table")
+    matches <- matches + 1
+
+    if (is.na(new_stints[idx, "stintType"]))
+      new_new_stints[idx, "stintType"] <- new_stints_comp[r, "stintType"]
+    if (is.na(new_stints[idx, "teamName"]))
+      new_new_stints[idx, "teamName"] <- new_stints_comp[r, "teamName"]
+    if (is.na(new_stints[idx, "teamWP"]))
+      new_new_stints[idx, "teamWP"] <- new_stints_comp[r, "teamWP"]
+    if (is.na(new_stints[idx, "teamWP"]))
+      new_new_stints[idx, "teamWP"] <- new_stints_comp[r, "teamWP"]
+    if (is.na(new_stints[idx, "timePeriod"]))
+      new_new_stints[idx, "timePeriod"] <- new_stints_comp[r, "timePeriod"]
+    if (is.na(new_stints[idx, "endYear"]))
+      new_new_stints[idx, "endYear"] <- new_stints_comp[r, "endYear"]
+    if (is.na(new_stints[idx, "matchesPlayed"]))
+      new_new_stints[idx, "matchesPlayed"] <- new_stints_comp[r, "matchesPlayed"]
+    if (is.na(new_stints[idx, "pointsScored"]))
+      new_new_stints[idx, "pointsScored"] <- new_stints_comp[r, "pointsScored"]
+  }
+}
+tlog(2, "Number of matches found: ", matches, "/", nrow(new_stints_comp)) # 11,406
 
 
 
@@ -1165,7 +1204,7 @@ write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 # record stint table
 tab_file <- file.path(folder, "stints.csv")
 tlog(2, "Record stint table as: ", tab_file)
-write.csv(new_stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+write.csv(new_new_stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
