@@ -314,8 +314,6 @@ wp_teams <- wp_teams[-del_rows, ]
 tlog(4, "Removed ", length(del_rows), " rugby sevens teams from the WP table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
-stop()
-
 # remove rugby league teams
 tlog(2, "Removing rugby league teams")
 #### debug: code used to detect rugby league teams (first approximation)
@@ -342,26 +340,20 @@ tlog(4, "Removed ", length(del_rows), " rugby league teams from the WP table, ba
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 # remove junior teams (highschool, U17, etc.)
-tlog(2, "Removing junior teams")
-del_rows <- which(grepl("\\bhigh ?school\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
-                  grepl("\\bgrammar\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
-                  grepl("\\bunder[ -]1[3-7]\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
-                  grepl("\\bacademy\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE))                # >>>> TODO check that on definitive data
-#write.csv(wp_teams[del_rows, ], file.path(wp_folder, "junior_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
-wp_teams <- wp_teams[-del_rows, ]
-tlog(4, "Removed ", length(del_rows), " highschool teams from the WP table")
-tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
-
-# remove women's teams
-del_rows <- which(grepl("\\bwallaroos?\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE))                # >>>> TODO check that on definitive data
-#write.csv(wp_teams[del_rows, ], file.path(wp_folder, "women_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
-wp_teams <- wp_teams[-del_rows, ]
-tlog(4, "Removed ", length(del_rows), " women's teams from the WP table")
-tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+#tlog(2, "Removing junior teams")
+#del_rows <- which(grepl("\\bhigh ?school\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
+#                  grepl("\\bgrammar\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
+#                  grepl("\\bunder[ -]1[3-7]\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE) |
+#                  grepl("\\bacademy\\b", wp_teams[, "altNames"], fixed = FALSE, ignore.case = TRUE))                # >>>> TODO check that on definitive data
+##write.csv(wp_teams[del_rows, ], file.path(wp_folder, "junior_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
+#wp_teams <- wp_teams[-del_rows, ]
+#tlog(4, "Removed ", length(del_rows), " highschool teams from the WP table")
+#tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+#### in the end, done manually
 
 # we first focus on teams possessing a URL, as they are easier to match
+stop()
 
 # match teams using WP URLs
 tlog(2, "Match WP teams to merged table based on urls")
@@ -384,8 +376,8 @@ wp_teams[non_na, "rugbyscopeId"] <- fus_teams[mm, "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 #### debug: record the list of unmatched teams with a URL
 #idx <- which(is.na(mm))
-#write.csv(unique_urls[idx], file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-#### we use the above file to define manually the url2url map (used above), url2id map (used below) and bew_teams list
+#write.csv(sort(unique_urls[idx]), file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#### we use the above file to define manually the url2url map (used above), url2id map (used below), and new_teams list
 
                     # use url2id map to match the remaining cases based on their URL
                     tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
