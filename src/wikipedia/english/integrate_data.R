@@ -314,6 +314,8 @@ wp_teams <- wp_teams[-del_rows, ]
 tlog(4, "Removed ", length(del_rows), " rugby sevens teams from the WP table")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
+stop()
+
 # remove rugby league teams
 tlog(2, "Removing rugby league teams")
 #### debug: code used to detect rugby league teams (first approximation)
@@ -321,7 +323,7 @@ tlog(2, "Removing rugby league teams")
 #tab <- wp_teams[idx, ]  # 420 teams detected
 #idx <- order(tab[, "altNames"])
 #write.csv(tab[idx, -1], file.path(ref_folder, "rugby_league_teams.csv"), row.names = FALSE, fileEncoding = "UTF-8")
-#### this list was then completed manually and used below
+#### this list was then complemented manually and used below
 # use the rugby league urls
 list_rleague <- read.csv(file.path(ref_folder, "team_urls.csv"))
 del_rows <- which(wp_teams[, "teamWP"] %in% list_rleague[, "url"])
