@@ -196,28 +196,28 @@ if (length(idx) > 0)
 #tail(sort(unique(wp_stints[, "teamName"])),100)
 ####
 
-# # insert new teams based on the manually curated list new_teams
-# tlog(2, "Import manually curated additional teams and insert into merged team table")
-# temp <- read.csv(file.path(wp_folder, "maps", "new_teams.csv"))
-# max_id <- max(fus_teams[, "rugbyscopeId"])
-# temp <- cbind(max_id:(max_id + nrow(temp) - 1) + 1, temp)
-# colnames(temp)[1] <- "rugbyscopeId"
-# fus_teams <- rbind(fus_teams, temp)
+# insert new teams based on the manually curated list new_teams
+tlog(2, "Import manually curated additional teams and insert into merged team table")
+temp <- read.csv(file.path(wp_folder, "maps", "new_teams.csv"))
+max_id <- max(fus_teams[, "rugbyscopeId"])
+temp <- cbind(max_id:(max_id + nrow(temp) - 1) + 1, temp)
+colnames(temp)[1] <- "rugbyscopeId"
+fus_teams <- rbind(fus_teams, temp)
 
-# # fix url problems based on the manually curated url2url map
-# tlog(2, "fix url problems based on the manually curated url2url map")
-# temp <- read.csv(file.path(wp_folder, "maps", "url2url.csv"))
-# map_urls <- temp[, "newUrl"]
-# names(map_urls) <- temp[, "oldUrl"]
-# for (i in 1:length(map_urls)) {
-#   old_url <- names(map_urls[i])
-#   new_url <- map_urls[i]
-#   idx <- which(wp_stints[, "teamWP"] == old_url)
-#   if (length(idx) == 0)
-#     tlog(4, "WARNING: did not find any team with URL ", old_url)
-#   else
-#     wp_stints[idx, "teamWP"] <- new_url
-# }
+# fix url problems based on the manually curated url2url map
+tlog(2, "fix url problems based on the manually curated url2url map")
+temp <- read.csv(file.path(wp_folder, "maps", "url2url.csv"))
+map_urls <- temp[, "newUrl"]
+names(map_urls) <- temp[, "oldUrl"]
+for (i in 1:length(map_urls)) {
+  old_url <- names(map_urls[i])
+  new_url <- map_urls[i]
+  idx <- which(wp_stints[, "teamWP"] == old_url)
+  if (length(idx) == 0)
+    tlog(4, "WARNING: did not find any team with URL ", old_url)
+  else
+    wp_stints[idx, "teamWP"] <- new_url
+}
 
 # remove stints without a team
 idx <- which(is.na(wp_stints[, "teamName"]))
@@ -353,7 +353,6 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 #### in the end, done manually
 
 # we first focus on teams possessing a URL, as they are easier to match
-stop()
 
 # match teams using WP URLs
 tlog(2, "Match WP teams to merged table based on urls")
@@ -375,9 +374,10 @@ wp_teams[non_na, "rugbyscopeId"] <- fus_teams[mm, "rugbyscopeId"]
 #length(which(!is.na(wp_teams[, "rugbyscopeId"])))
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 #### debug: record the list of unmatched teams with a URL
-#idx <- which(is.na(mm))
-#write.csv(sort(unique_urls[idx]), file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+idx <- which(is.na(mm))
+write.csv(sort(unique_urls[idx]), file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### we use the above file to define manually the url2url map (used above), url2id map (used below), and new_teams list
+stop()
 
                     # use url2id map to match the remaining cases based on their URL
                     tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
