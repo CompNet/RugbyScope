@@ -377,7 +377,7 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 idx <- which(is.na(mm))
 write.csv(sort(unique_urls[idx]), file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### we use the above file to define manually the url2url map (used above), url2id map (used below), and new_teams list
-stop()
+stop() 
 
                     # use url2id map to match the remaining cases based on their URL
                     tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
