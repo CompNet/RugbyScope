@@ -829,8 +829,13 @@ write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 # stop logging
 end.rec.log()
 
-# TODO why not including the stint type (junior, senior, etc.) in the table?
-
+# TODO
+# - why not including the stint type (junior, senior, etc.) in the table?
+# - some WP URLs have changed: resolve them all, then check for unicity
+# - check the presence of ";" in alt team names
+# - process ( ) in team names
+# - check the type of manually added teams in previous linguistic versions of WP
+# - check for "xxxxx" in the full table
 
 # club types
 #  [1] "Club"                     "National senior team"
@@ -840,4 +845,4 @@ end.rec.log()
 #  [9] "National U19 team"        "Regional team"
 # [11] "National U16 team"        "National university team"
 # [13] "National U17 team"        "National U23 team"
-# [15] NA                         "National military team"
+# [15] NA                         "Military team"
