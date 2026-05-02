@@ -377,27 +377,28 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 idx <- which(is.na(mm))
 write.csv(sort(unique_urls[idx]), file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### we use the above file to define manually the url2url map (used above), url2id map (used below), and new_teams list
-end.rec.log(); stop()
 
-                    # use url2id map to match the remaining cases based on their URL
-                    tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
-                    temp <- read.csv(file.path(wp_folder, "maps", "url2id.csv"))
-                    map_ids <- temp[, "teamId"]
-                    names(map_ids) <- temp[, "url"]
-                    wp_idx <- match(names(map_ids), wp_teams[, "teamWP"])
-                    # handle teams present in merged table: just update id in WP table
-                    fus_idx <- match(as.integer(map_ids), fus_teams[, "rugbyscopeId"])
-                    ii <- which(!is.na(wp_idx) & !is.na(fus_idx))
-                    wp_teams[wp_idx[ii], "rugbyscopeId"] <- fus_teams[fus_idx[ii], "rugbyscopeId"]
-                    tlog(4, "Could match directly ", length(ii), " teams based on ids")
-                    tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
-                    # handle teams marked for deletion (NA id) in url2id
-                    ii <- which(!is.na(wp_idx) & is.na(fus_idx))
-                    del_rows <- wp_idx[ii]
-                    removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
-                    wp_teams <- wp_teams[-del_rows, ]
-                    tlog(4, "Removed ", length(del_rows), " highschool teams or other similar teams from the WP table")
-                    tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+# use url2id map to match the remaining cases based on their URL
+tlog(2, "Handle remaining teams possessing a URL, using manually constituted url2id map")
+temp <- read.csv(file.path(wp_folder, "maps", "url2id.csv"))
+map_ids <- temp[, "teamId"]
+names(map_ids) <- temp[, "url"]
+wp_idx <- match(names(map_ids), wp_teams[, "teamWP"])
+# handle teams present in merged table: just update id in WP table
+fus_idx <- match(as.integer(map_ids), fus_teams[, "rugbyscopeId"])
+ii <- which(!is.na(wp_idx) & !is.na(fus_idx))
+wp_teams[wp_idx[ii], "rugbyscopeId"] <- fus_teams[fus_idx[ii], "rugbyscopeId"]
+tlog(4, "Could match directly ", length(ii), " teams based on ids")
+tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+# handle teams marked for deletion (NA id) in url2id
+ii <- which(!is.na(wp_idx) & is.na(fus_idx))
+del_rows <- wp_idx[ii]
+if (length(del_rows)) {
+  removed_teams <- c(removed_teams, wp_teams[del_rows, "altNames"])
+  wp_teams <- wp_teams[-del_rows, ]
+}
+tlog(4, "Removed ", length(del_rows), " highschool teams or other similar teams from the WP table")
+tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 ## we now switch to names only, as the remaining WP teams do not have a URL
 
@@ -415,10 +416,16 @@ if (length(idx_rem) > 0) {
   map_names <- map_names[-idx_rem]
 }
 # update the other teams
-idx <- match(names(map_names), wp_teams[, "altNames"])
 wp_teams[idx, "rugbyscopeId"] <- map_names
 tlog(4, "Matched ", length(idx), " WP teams")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
+
+# # check if alt names in the merged table contain (incorrectly) ","
+# idx <- which(grepl(",", fus_teams[, "altNames"], fixed = FALSE))
+# print(fus_teams[idx, c("rugbyscopeId", "altNames")])
+# # same with parentheses
+# idx <- which(grepl("[()]", fus_teams[, "altNames"], fixed = FALSE))
+# print(fus_teams[idx[1], c("rugbyscopeId", "altNames")])
 
 # now trying to match teams by name
 # combine merged team names in a single list
@@ -434,12 +441,13 @@ fus_names <- sapply(1:length(fus_names1), function(i) {
 wp_idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
 result <- match_team_names(src_names = wp_teams[wp_idx, "altNames"], tgt_names = fus_names)
 #### debug: check names with several matches
-#idx <- which(sapply(result, length) > 1)
-#for (i in idx) {
-#  print(wp_teams[wp_idx[i], ])
-#  print(fus_teams[result[[i]], ])
-#  print("-------------------")
-#}
+idx <- which(sapply(result, length) > 1)
+for (i in idx) {
+ print(wp_teams[wp_idx[i], ])
+ print(fus_teams[result[[i]], ])
+ print("-------------------")
+}
+end.rec.log(); stop()
 #### the above loop is used to detect cases of multiple matching
 # use matches to update WP team table
                                                                                 result <- sapply(result, function(x) x[1])
@@ -836,6 +844,7 @@ end.rec.log()
 # - process ( ) in team names
 # - check the type of manually added teams in previous linguistic versions of WP
 # - check for "xxxxx" in the full table
+# - check that all rugbyscopeIds are correct in the stints (due to merging some teams)
 
 # club types
 #  [1] "Club"                     "National senior team"
