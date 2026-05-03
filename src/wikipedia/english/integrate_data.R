@@ -441,34 +441,35 @@ fus_names <- sapply(1:length(fus_names1), function(i) {
 wp_idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
 result <- match_team_names(src_names = wp_teams[wp_idx, "altNames"], tgt_names = fus_names)
 #### debug: check names with several matches
-idx <- which(sapply(result, length) > 1)
-for (i in idx) {
- print(wp_teams[wp_idx[i], ])
- print(fus_teams[result[[i]], ])
- print("-------------------")
-}
-end.rec.log(); stop()
+#idx <- which(sapply(result, length) > 1)
+#for (i in idx) {
+# print(wp_teams[wp_idx[i], ])
+# print(fus_teams[result[[i]], ])
+# print("-------------------")
+#}
 #### the above loop is used to detect cases of multiple matching
+
 # use matches to update WP team table
-                                                                                result <- sapply(result, function(x) x[1])
+result <- sapply(result, function(x) x[1])
 idx <- which(!is.na(result))
 tlog(4, "Could match ", length(idx), " teams based on name only")
 #### debug (check matches)
 #tab <- cbind(wp_teams[wp_idx[idx], "altNames"], fus_names[result[idx]], fus_teams[result[idx], "rugbyscopeId"], wp_teams[wp_idx[idx], "teamWP"])
 #colnames(tab) <- c("wpName", "fusName", "rugbyscopeId", "teamWP")
-#write.csv(tab, file.path(wp_folder, "successful_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#write.csv(tab[order(tab[,"wpName"]),], file.path(wp_folder, "successful_matches.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### the above file is meant for visual inspection and verification
 wp_teams[wp_idx[idx], "rugbyscopeId"] <- fus_teams[result[idx], "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 #### debug: export the list of unmatched teams
-#idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
-#tab <- wp_teams[idx, c("altNames", "rugbyscopeId")]
-#idx <- order(tab[, "altNames"])
-#tab <- tab[idx, ]
-#colnames(tab)[1] <- "teamName"
-#write.csv(tab, file.path(wp_folder, "unmatched_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+tab <- wp_teams[idx, c("altNames", "rugbyscopeId")]
+idx <- order(tab[, "altNames"])
+tab <- tab[idx, ]
+colnames(tab)[1] <- "teamName"
+write.csv(tab, file.path(wp_folder, "unmatched_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### the produced file is used to complement existing maps
+end.rec.log(); stop()
 
 # add merged table name to EN entry, for visual verification
 idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
@@ -845,6 +846,7 @@ end.rec.log()
 # - check the type of manually added teams in previous linguistic versions of WP
 # - check for "xxxxx" in the full table
 # - check that all rugbyscopeIds are correct in the stints (due to merging some teams)
+# - if >0 pts but 0 matches, then matches should be NA
 
 # club types
 #  [1] "Club"                     "National senior team"
