@@ -841,12 +841,13 @@ end.rec.log()
 # TODO
 # - why not including the stint type (junior, senior, etc.) in the table?
 # - some WP URLs have changed: resolve them all, then check for unicity
-# - check the presence of ";" in alt team names
+# - check the presence of "," in alt team names
 # - process ( ) in team names
 # - check the type of manually added teams in previous linguistic versions of WP
 # - check for "xxxxx" in the full table
 # - check that all rugbyscopeIds are correct in the stints (due to merging some teams)
 # - if >0 pts but 0 matches, then matches should be NA
+# - delete all under 16 or 17 teams
 
 # club types
 #  [1] "Club"                     "National senior team"
