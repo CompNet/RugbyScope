@@ -848,12 +848,16 @@ end.rec.log()
 # - check that all rugbyscopeIds are correct in the stints (due to merging some teams)
 # - if >0 pts but 0 matches, then matches should be NA
 # - delete all under 16 or 17 teams
+# - check teams related to UK (often actually england)
+# - integration of WP EN:
+#   - don't keep zero points/matches (keep the values already in the DB)
+# - switch police teams to military status?
 
 # club types
 #  [1] "Club"                     "National senior team"
 #  [3] "Combined team"            "National U20 team"
 #  [5] "Invitational team"        "National U21 team"
-#  [7] "National school team"     "National U18 team"
+#  [x] "National school team"     "National U18 team"
 #  [9] "National U19 team"        "Regional team"
 # [11] "National U16 team"        "National university team"
 # [13] "National U17 team"        "National U23 team"
