@@ -462,14 +462,13 @@ wp_teams[wp_idx[idx], "rugbyscopeId"] <- fus_teams[result[idx], "rugbyscopeId"]
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
 #### debug: export the list of unmatched teams
-idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
-tab <- wp_teams[idx, c("altNames", "rugbyscopeId")]
-idx <- order(tab[, "altNames"])
-tab <- tab[idx, ]
-colnames(tab)[1] <- "teamName"
-write.csv(tab, file.path(wp_folder, "unmatched_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
+#tab <- wp_teams[idx, c("altNames", "rugbyscopeId")]
+#idx <- order(tab[, "altNames"])
+#tab <- tab[idx, ]
+#colnames(tab)[1] <- "teamName"
+#write.csv(tab, file.path(wp_folder, "unmatched_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### the produced file is used to complement existing maps
-end.rec.log(); stop()
 
 # add merged table name to EN entry, for visual verification
 idx <- match(wp_teams[, "rugbyscopeId"], fus_teams[, "rugbyscopeId"])
@@ -487,7 +486,40 @@ wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 # record final WP team table as a new CSV file, for verification
 tab.file <- file.path(wp_folder, "teams.csv")
 tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-write.csv(wp_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+wp_teams[, "rugbyscopeId"] <- as.integer(wp_teams[, "rugbyscopeId"])
+write.csv(wp_teams[order(wp_teams[, "rugbyscopeId"]), ], tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+wp_teams0 <- wp_teams # used for debugging
+
+# put back case lost during data scraping
+#### use the following line to check the most frequent tokens in team names, to detect acronyms that should be preserved
+#print(head(sort(table(trimws(unlist(strsplit(wp_teams[, "altNames"], "[; -]", fixed = FALSE)))), decreasing = TRUE), n = 50))
+####
+acronyms <- c("'a'", "ac", "act", "as", "ca", "cr", "cs", "csm", "cus", "f\\.c\\.", "fc", "fp", 
+  "hrk", "hsfp", "hsob", "nsw", "ntt", "nz", "r\\.c\\.", "r\\.f\\.c", "r\\.f\\.c\\.", "r\\.u\\.f\\.c\\.", 
+  "rc", "rfc", "rk", "rt", "rufc", "s\\.a\\.", "sa", "sc", "scm", "u\\.s\\.", "uc", "us", "usa", "vva", "xv")
+for (i in 1:nrow(wp_teams)) {
+  if (i %% 100 == 0)
+    tlog(4, "Processing team ", i, "/", nrow(wp_teams))
+  names <- wp_teams[i, "altNames"]
+  name_lst <- trimws(unlist(strsplit(names, ";")))
+  for (j in 1:length(name_lst)) {
+    name <- name_lst[j]
+    # possibly normalize case, if no upper case letter
+    if (!grepl("\\p{Lu}", name, perl = TRUE))
+      name_lst[j] <- str_to_title(name)
+    # preserve listed acronyms
+    for (acronym in acronyms) {
+      name_lst[j] <- gsub(paste0("\\b", acronym, "\\b"), str_to_upper(gsub("\\", "", acronym, fixed = TRUE)), name_lst[j], fixed = FALSE, ignore.case = TRUE)
+    }
+    if (i %% 100 == 0)
+      tlog(6, "Name '", name, "' -> '", name_lst[j], "' ")
+  }
+
+  # put everything back together
+  wp_teams[i, "altNames"] <- paste(name_lst, collapse = "; ")
+
+  # readline()
+}
 
 # complement alternative names in merged table, using english names
 tlog("Complement alternative names in merged team table")
@@ -544,19 +576,27 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #### debug: list WP teams sharing a name and having different ids
 #### > this must be disambiguated before switching to players
-#alt_names <- strsplit(wp_teams[, "altNames"], "; ")
-#for (i in 1:(length(alt_names) - 1)) {
-#  for (j in (i+1):length(alt_names)) {
-#    common_names <- intersect(alt_names[[i]], alt_names[[j]])
-#    if (length(common_names) > 0 && wp_teams[i, "rugbyscopeId"] != wp_teams[j, "rugbyscopeId"]) {
-#      tlog(2, "Team ", i, " vs. ", j)
-#      tlog(4, "Common name(s): ", paste0(common_names, collapse = ", "))
-#      print(wp_teams[c(i,j), ])
-#      print("----------------------")
-#    }
-#  }
-#}
+tlog(2, "Listing WP teams sharing a name and having different ids")
+fileConn <- file(file.path(wp_folder, "same_name_diff_id.txt"), open = "w")
+alt_names <- strsplit(wp_teams[, "altNames"], "; ")
+for (i in 1:(length(alt_names) - 1)) {
+  if (i %% 100 == 0)
+    tlog(4, "Processing team ", i, "/", nrow(wp_teams))
+  for (j in (i+1):length(alt_names)) {
+    common_names <- intersect(alt_names[[i]], alt_names[[j]])
+    if (length(common_names) > 0 && wp_teams[i, "rugbyscopeId"] != wp_teams[j, "rugbyscopeId"]) {
+      writeLines(paste0("Team ", i, " vs. ", j), fileConn)
+      writeLines(paste0("Common name(s): ", paste0(common_names, collapse = ", ")), fileConn)
+      writeLines(paste0(wp_teams[i, ], ", "), fileConn)
+      writeLines(paste0(wp_teams[j, ], ", "), fileConn)
+      writeLines("----------------------", fileConn)
+    }
+  }
+}
+close(fileConn)
 ####
+
+end.rec.log(); stop()
 
 #### debug: check removed teams that share a name
 #### with a team still in the list
@@ -839,8 +879,10 @@ write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 end.rec.log()
 
 # TODO
+# - put back casing in players' names
+# - check if we include alternative player names in the merged table
 # - why not including the stint type (junior, senior, etc.) in the table?
-# - some WP URLs have changed: resolve them all, then check for unicity
+# - some URLs have changed on WP: resolve them all, then check for unicity
 # - check the presence of "," in alt team names
 # - process ( ) in team names
 # - check the type of manually added teams in previous linguistic versions of WP
@@ -854,11 +896,19 @@ end.rec.log()
 # - switch police teams to military status?
 
 # club types
-#  [1] "Club"                     "National senior team"
-#  [3] "Combined team"            "National U20 team"
-#  [5] "Invitational team"        "National U21 team"
-#  [x] "National school team"     "National U18 team"
-#  [9] "National U19 team"        "Regional team"
-# [11] "National U16 team"        "National university team"
-# [13] "National U17 team"        "National U23 team"
-# [15] NA                         "Military team"
+#  [ ] "Club/franchise team"      
+#  [ ] "National senior team"
+#  [ ] "Combined team"            
+#  [ ] "National U20 team"
+#  [ ] "Invitational team"        
+#  [ ] "National U21 team"
+#  [x] "National school team"     
+#  [ ] "National U18 team"
+#  [ ] "National U19 team"        
+#  [ ] "Regional team"
+#  [x] "National U16 team"        
+#  [ ] "National university team"
+#  [x] "National U17 team"        
+#  [ ] "National U23 team"
+#  [ ] NA                         
+#  [ ] "Military/police team"

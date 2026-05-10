@@ -1,0 +1,495 @@
+Team 23 vs. 91
+Common name(s): Chiefs
+72, 
+Chiefs; Waikato Chiefs; Chiefs, 
+Chiefs_(Super_Rugby), 
+Chiefs, 
+111, 
+Exeter Chiefs; Exeter; Exeter Rugby Club; Exeter RFC; Chiefs; Exeter Chiefs Academy; Exeter Chiefs, 
+Exeter_Chiefs, 
+Exeter Chiefs, 
+----------------------
+Team 29 vs. 1843
+Common name(s): New Zealand XV
+124, 
+All Blacks XV; New Zealand A; Junior All Blacks; New Zealand XV; New Zealand Juniors, 
+All_Blacks_XV, 
+Junior All Blacks, 
+1563, 
+New Zealand Divisional XV; NZ Divisional XV; New Zealand XV; Heartland XV; New Zealand Divisional Team; New Zealand Heartland XV, 
+New_Zealand_Heartland_XV, 
+New Zealand Heartland XV, 
+----------------------
+Team 34 vs. 758
+Common name(s): Harlequins
+230, 
+Harlequin F.C.; Harlequins; Nec Harlequins; Harlequin FC; Harlequins F.C.; Harlequin; Harlequins; NEC Harlequins; Harlequins RFC; Harlequins Academy; Harlequin F.C., 
+Harlequin_F.C., 
+Harlequin F.C., 
+1681, 
+Pretoria Police; Harlequins; Pretoria Quins; Pretoria Police RC; Pretoria Harlequins; Pretoria Police; Pretoria Police RC, 
+Quins-Bobbies_Rugby_Club, 
+Pretoria Harlequins, 
+----------------------
+Team 38 vs. 836
+Common name(s): Barbarians
+136, 
+Barbarian F.C.; Barbarians; Barbarians FC; Barbarian FC; Barbarians F.C.; Barbarians; Barbarian F. C.; Barbarian F.C., 
+Barbarian_F.C., 
+Barbarian FC, 
+326, 
+Barbarian RC; French Barbarians; Barbarians; Barbarian Rugby Club, 
+French_Barbarians, 
+Barbarian Rugby Club, 
+----------------------
+Team 39 vs. 2550
+Common name(s): England
+39, 
+England; England Rugby, 
+England_national_rugby_union_team, 
+England national rugby union team, 
+7369, 
+England, 
+University_of_the_West_of_England, 
+University of the West of England, 
+----------------------
+Team 40 vs. 43
+Common name(s): Transvaal
+254, 
+Blue Bulls XV; Blue Bulls; Bulls; Northern Transvaal; Transvaal; Naka Bulls; Northern Bulls; Blue Bulls; Blue Bulls U21, 
+Bulls_(rugby_union), 
+Bulls, 
+241, 
+Lions; Golden Lions; Golden Lions XV; Transvaal; Cats; Transvaal/Gauteng Lions; Lions XV; The Cats; Transvaal/Golden Lions; Gauteng Lions; Cats / Lions; Cats/Lions; Transvaal Province; Cats /Lions (Super Rugby); Golden Lions; Golden Lions U19; Lions, 
+Lions_(United_Rugby_Championship), 
+Lions, 
+----------------------
+Team 40 vs. 877
+Common name(s): Naka Bulls
+254, 
+Blue Bulls XV; Blue Bulls; Bulls; Northern Transvaal; Transvaal; Naka Bulls; Northern Bulls; Blue Bulls; Blue Bulls U21, 
+Bulls_(rugby_union), 
+Bulls, 
+6280, 
+Naka Bulls, 
+NA, 
+Naka Bulls, 
+----------------------
+Team 40 vs. 1256
+Common name(s): Blue Bulls, Bulls
+254, 
+Blue Bulls XV; Blue Bulls; Bulls; Northern Transvaal; Transvaal; Naka Bulls; Northern Bulls; Blue Bulls; Blue Bulls U21, 
+Bulls_(rugby_union), 
+Bulls, 
+2002, 
+Blue Bulls; Bulls; Limpopo Blue Bulls; Far North; Limpopo Blue Bulls; Falcons U19, 
+Limpopo_Blue_Bulls, 
+Limpopo Blue Bulls, 
+----------------------
+Team 43 vs. 48
+Common name(s): Lions
+241, 
+Lions; Golden Lions; Golden Lions XV; Transvaal; Cats; Transvaal/Gauteng Lions; Lions XV; The Cats; Transvaal/Golden Lions; Gauteng Lions; Cats / Lions; Cats/Lions; Transvaal Province; Cats /Lions (Super Rugby); Golden Lions; Golden Lions U19; Lions, 
+Lions_(United_Rugby_Championship), 
+Lions, 
+118, 
+British And Irish Lions; Lions; British & Irish Lions; British Lions; British Isles; Anglo-Welsh; British Isles XV; British Lions XV; The Lions; Combined British; Anglo Welsh, 
+British_%26_Irish_Lions, 
+British & Irish Lions, 
+----------------------
+Team 49 vs. 54
+Common name(s): South Africa
+179, 
+Southern Kings; South African Kings; Kings; South Africa, 
+Southern_Kings, 
+Southern Kings, 
+52, 
+South Africa; Springboks, 
+South_Africa_national_rugby_union_team, 
+South Africa national rugby union team, 
+----------------------
+Team 49 vs. 146
+Common name(s): South Africa
+179, 
+Southern Kings; South African Kings; Kings; South Africa, 
+Southern_Kings, 
+Southern Kings, 
+797, 
+South Africa Under-20; South Africa U20; South Africa U-20; South Africa; South Africa Under-20s; South Africa U20s; S.a. Under 20, 
+South_Africa_national_under-20_rugby_union_team, 
+South Africa national under-20 rugby union team, 
+----------------------
+Team 53 vs. 122
+Common name(s): Sharks
+258, 
+Natal; Sharks XV; Sharks; Natal Duikers; Natal Wildebeest; Coastal Sharks; Natal Sharks; Sharks Invitational XV; Natal/Sharks; Sharks Academy; Sharks; Sharks(Academy); Sharks U19; Sharks U21; Natal Sharks; Sharks Academy, 
+Sharks_(rugby_union), 
+Sharks, 
+164, 
+Sale Sharks; Sale; Sale RFC; Sharks; Sale FC; Sale; Sale Sharks; Sale Jets, 
+Sale_Sharks, 
+Sale Sharks, 
+----------------------
+Team 53 vs. 956
+Common name(s): Sharks Academy
+258, 
+Natal; Sharks XV; Sharks; Natal Duikers; Natal Wildebeest; Coastal Sharks; Natal Sharks; Sharks Invitational XV; Natal/Sharks; Sharks Academy; Sharks; Sharks(Academy); Sharks U19; Sharks U21; Natal Sharks; Sharks Academy, 
+Sharks_(rugby_union), 
+Sharks, 
+121, 
+Sharks Academy, 
+NA, 
+Natal Sharks, 
+----------------------
+Team 53 vs. 1282
+Common name(s): Sharks
+258, 
+Natal; Sharks XV; Sharks; Natal Duikers; Natal Wildebeest; Coastal Sharks; Natal Sharks; Sharks Invitational XV; Natal/Sharks; Sharks Academy; Sharks; Sharks(Academy); Sharks U19; Sharks U21; Natal Sharks; Sharks Academy, 
+Sharks_(rugby_union), 
+Sharks, 
+1589, 
+Sharks, 
+Northern_Sharks, 
+Northern Sharks, 
+----------------------
+Team 54 vs. 146
+Common name(s): South Africa
+52, 
+South Africa; Springboks, 
+South_Africa_national_rugby_union_team, 
+South Africa national rugby union team, 
+797, 
+South Africa Under-20; South Africa U20; South Africa U-20; South Africa; South Africa Under-20s; South Africa U20s; S.a. Under 20, 
+South_Africa_national_under-20_rugby_union_team, 
+South Africa national under-20 rugby union team, 
+----------------------
+Team 57 vs. 144
+Common name(s): Llanelli
+272, 
+Llanelli RFC; Llanelli; Llanelli RFC; Llanelli RFC, 
+Llanelli_RFC, 
+Llanelli RFC, 
+64, 
+Scarlets; Llanelli Scarlets; Llanelli; Scarlets, 
+Scarlets, 
+Scarlets, 
+----------------------
+Team 58 vs. 133
+Common name(s): Wales
+143, 
+Wales; Wales, 
+Wales_national_rugby_union_team, 
+Wales national rugby union team, 
+61, 
+NSW; Waratahs; NSW Waratahs; New South Wales Waratahs; New South Wales; Metropolis Sydney; Wales; Metropolitan Rugby Union; Nswru; waratahs A; NSW Academy; Inter-Colonial NSW; Waratahs Academy, 
+New_South_Wales_Waratahs, 
+New South Wales Waratahs, 
+----------------------
+Team 83 vs. 205
+Common name(s): Japan
+210, 
+Japan; Japan National Team, 
+Japan_national_rugby_union_team, 
+Japan national rugby union team, 
+2421, 
+Japan XV; Junior Japan; Japan; Emerging Blossoms, 
+Junior_Japan, 
+Junior Japan, 
+----------------------
+Team 84 vs. 494
+Common name(s): Wanganui
+270, 
+Wellington; Wanganui; Wellington; Wellington Lions; Wellington Lions, 
+Wellington_(National_Provincial_Championship), 
+Wellington Rugby Football Union Team, 
+730, 
+Wanganui, 
+Whanganui_Rugby_Football_Union, 
+Wanganui Rugby Football Union, 
+----------------------
+Team 84 vs. 1392
+Common name(s): Wanganui
+270, 
+Wellington; Wanganui; Wellington; Wellington Lions; Wellington Lions, 
+Wellington_(National_Provincial_Championship), 
+Wellington Rugby Football Union Team, 
+730, 
+Wanganui Collegiate; Wanganui; Whanganui, 
+Wanganui_Rugby_Football_Union, 
+Wanganui Rugby Football Union, 
+----------------------
+Team 85 vs. 471
+Common name(s): Hurricanes
+99, 
+Hurricanes; Wellington Hurricanes; Hurricanes, 
+Hurricanes_(rugby_union), 
+Hurricanes, 
+2038, 
+NTT Docomo Red Hurricanes; Red Hurricanes; Red Hurricanes Osaka; NTT Red Hurricanes; Hurricanes; NTT Docomo; NTT Docomo Red Hurricanes Osaka, 
+Red_Hurricanes_Osaka, 
+Red Hurricanes Osaka, 
+----------------------
+Team 87 vs. 528
+Common name(s): NZ Colts
+1565, 
+New Zealand Colts; New Zealand U21; New Zealand Under-21; New Zealand U-21; New Zealand Under 21s; NZ Colts; NZ Under 21s; NZ U21; New Zealand U21s; NZ U-21, 
+New_Zealand_national_under-21_rugby_union_team, 
+New Zealand national under-21 rugby union team, 
+124, 
+NZ Colts, 
+NA, 
+Junior All Blacks, 
+----------------------
+Team 90 vs. 522
+Common name(s): South West Africa
+243, 
+Namibia; South West Africa; Namibia, 
+Namibia_national_rugby_union_team, 
+Namibia national rugby union team, 
+563, 
+Welwitschias; South West Africa; Welwitschias, 
+Welwitschias, 
+Welwitschias, 
+----------------------
+Team 93 vs. 1683
+Common name(s): Valence
+2627, 
+Valence Romans; Valence; Valence Romans Drôme; US Romanaise; US Romans; Roval Drôme XV, 
+Valence_Romans_Dr%C3%B4me_Rugby, 
+Valence Romans Drôme Rugby, 
+726, 
+Valence Sportif; Valence, 
+Valence_Sportif, 
+Valence Sportif, 
+----------------------
+Team 94 vs. 1727
+Common name(s): Utah Warriors
+1928, 
+Utah Warriors; Utah, 
+Utah_Warriors, 
+Utah Warriors, 
+2690, 
+Utah Warriors, 
+Utah_Warriors_(Rugby_Super_League), 
+Utah Warriors, 
+----------------------
+Team 104 vs. 1362
+Common name(s): Leopards
+308, 
+Leopards; Leopards XV; Western Transvaal; North West; Leopards; Leopards S.A. Academy; Leopards U19; Leopards U21, 
+Leopards_(rugby_union), 
+Leopards, 
+7511, 
+Leopards, 
+SAARB_Leopards_(rugby_union), 
+SAARB Leopards, 
+----------------------
+Team 106 vs. 1906
+Common name(s): Free State
+203, 
+Cheetahs; Free State XV; Free State Cheetahs; Free State; Emerging Cheetahs; Cheetahs/Free State Cheetahs; Orange Free State; Cheetahs XV; Fs Cheetahs; Free State Cheetahs Academy; Free State Cheetahs; Free State; Free State U19; Free State U21; Cheetahs, 
+Cheetahs_(rugby_union), 
+Cheetahs, 
+22, 
+Free State, 
+Free_State_Cheetahs, 
+Free State Cheetahs, 
+----------------------
+Team 107 vs. 225
+Common name(s): Newport, Newport RFC
+7, 
+Dragons; Newport Gd; Ng Dragons; Newport Gwent Dragons; Newport Gwent; Newport; Dragons RFC; Gwent; Newport RFC, 
+Dragons_RFC, 
+Dragons, 
+275, 
+Newport RFC; Newport; Newport RFC; Newport F.C., 
+Newport_RFC, 
+Newport RFC, 
+----------------------
+Team 122 vs. 767
+Common name(s): Sale, Sale FC
+164, 
+Sale Sharks; Sale; Sale RFC; Sharks; Sale FC; Sale; Sale Sharks; Sale Jets, 
+Sale_Sharks, 
+Sale Sharks, 
+2227, 
+Sale FC; Sale; Sale F.C., 
+Sale_FC_Rugby_Club, 
+Sale FC Rugby Club, 
+----------------------
+Team 122 vs. 1282
+Common name(s): Sharks
+164, 
+Sale Sharks; Sale; Sale RFC; Sharks; Sale FC; Sale; Sale Sharks; Sale Jets, 
+Sale_Sharks, 
+Sale Sharks, 
+1589, 
+Sharks, 
+Northern_Sharks, 
+Northern Sharks, 
+----------------------
+Team 133 vs. 2089
+Common name(s): New South Wales
+61, 
+NSW; Waratahs; NSW Waratahs; New South Wales Waratahs; New South Wales; Metropolis Sydney; Wales; Metropolitan Rugby Union; Nswru; waratahs A; NSW Academy; Inter-Colonial NSW; Waratahs Academy, 
+New_South_Wales_Waratahs, 
+New South Wales Waratahs, 
+7527, 
+New South Wales Country; New South Wales; Central North, 
+New_South_Wales_Country_Rugby_Union, 
+New South Wales Country Rugby Union Team, 
+----------------------
+Team 144 vs. 1491
+Common name(s): Llanelli
+64, 
+Scarlets; Llanelli Scarlets; Llanelli; Scarlets, 
+Scarlets, 
+Scarlets, 
+272, 
+Llanelli, 
+NA, 
+Llanelli RFC, 
+----------------------
+Team 152 vs. 542
+Common name(s): Gosforth
+160, 
+Newcastle Falcons; Newcastle; Newcastle Gosforth; Newcastle Falcons Academy; Newcastle Red Bulls; Newcastle Falcons; Newcastle Academy; Gosforth; Newcastle Falcons, 
+Newcastle_Red_Bulls, 
+Newcastle Red Bulls, 
+1273, 
+Gosforth, 
+NA, 
+Gosforth Rugby Football Club, 
+----------------------
+Team 152 vs. 1496
+Common name(s): Gosforth
+160, 
+Newcastle Falcons; Newcastle; Newcastle Gosforth; Newcastle Falcons Academy; Newcastle Red Bulls; Newcastle Falcons; Newcastle Academy; Gosforth; Newcastle Falcons, 
+Newcastle_Red_Bulls, 
+Newcastle Red Bulls, 
+1273, 
+Gosforth RFC; Gosforth Rugby Football Club; Gosforth; Gosforth, 
+Gosforth_RFC, 
+Gosforth Rugby Football Club, 
+----------------------
+Team 152 vs. 3388
+Common name(s): Gosforth
+160, 
+Newcastle Falcons; Newcastle; Newcastle Gosforth; Newcastle Falcons Academy; Newcastle Red Bulls; Newcastle Falcons; Newcastle Academy; Gosforth; Newcastle Falcons, 
+Newcastle_Red_Bulls, 
+Newcastle Red Bulls, 
+1273, 
+Gosforth, 
+NA, 
+Gosforth Rugby Football Club, 
+----------------------
+Team 156 vs. 438
+Common name(s): Milano
+219, 
+Milano; Amatori Milano; Amatori Milan; Milan; Amatori Rugby Milano; Amatori Milano, 
+Amatori_Rugby_Milano, 
+Amatori Milano, 
+843, 
+Milano, 
+Rugby_Grande_Milano, 
+Rugby Grande Milano, 
+----------------------
+Team 158 vs. 2559
+Common name(s): Jockey Club
+193, 
+Jockey Club De Rosario; Jockey Rosario; Jockey Club Rosario; Jockey Club, 
+Jockey_Club_de_Rosario, 
+Jockey Club de Rosario, 
+2009, 
+Jockey Club; Jockey Club Córdoba, 
+Jockey_Club_C%C3%B3rdoba, 
+Jockey Club Córdoba, 
+----------------------
+Team 158 vs. 3785
+Common name(s): Jockey Club
+193, 
+Jockey Club De Rosario; Jockey Rosario; Jockey Club Rosario; Jockey Club, 
+Jockey_Club_de_Rosario, 
+Jockey Club de Rosario, 
+2009, 
+Jockey Club, 
+NA, 
+Jockey Club Córdoba, 
+----------------------
+Team 183 vs. 1503
+Common name(s): Austin
+2677, 
+Austin Gilgronis; Austin Elite; Austin Herd; Austin, 
+Austin_Gilgronis, 
+Austin Gilgronis, 
+2639, 
+Austin Huns; Austin, 
+Austin_Huns, 
+Austin Huns, 
+----------------------
+Team 184 vs. 352
+Common name(s): Glendale Raptors
+2691, 
+American Raptors; Colorado Raptors; Glendale Raptors, 
+American_Raptors, 
+American Raptors, 
+1266, 
+Glendale Merlins; Glendale Raptors, 
+Glendale_Merlins, 
+Glendale Merlins, 
+----------------------
+Team 185 vs. 240
+Common name(s): United States
+69, 
+United States U20s; United States U20; USA U20s; USA U20; United States; United States U-20s; USA Under-20; USA U-20s; United States Under-20, 
+United_States_national_under-20_rugby_union_team, 
+United States national under-20 rugby union team, 
+228, 
+USA; United States; USA Eagles, 
+United_States_national_rugby_union_team, 
+United States national rugby union team, 
+----------------------
+Team 194 vs. 623
+Common name(s): Bath
+138, 
+Bath Rugby; Bath; Bath United; Bath FC; Bath Rugby; Bath, 
+Bath_Rugby, 
+Bath Rugby, 
+7364, 
+University Of Bath; Bath; Bath University; TeamBath, 
+University_of_Bath, 
+University of Bath, 
+----------------------
+Team 198 vs. 618
+Common name(s): Wasps
+231, 
+Wasps; London Wasps; Wasps RFC; Wasps Academy; Wasps RFC, 
+Wasps_RFC, 
+Wasps RFC, 
+1955, 
+Wasps FC; Wasps; Wasps, 
+Wasps_FC, 
+Wasps FC, 
+----------------------
+Team 209 vs. 611
+Common name(s): Emerging Ireland
+1368, 
+Ireland A; Ireland Wolfhounds; ireland A; Wolfhounds; Ireland XV; Ireland 'A'; Emerging Ireland; Ireland B, 
+Ireland_Wolfhounds, 
+Ireland Wolfhounds, 
+2364, 
+Emerging Ireland; Emerging Ireland, 
+Emerging_Ireland, 
+Emerging Ireland, 
+----------------------
+Team 212 vs. 488
+Common name(s): Bordeaux Bègles, Bordeaux, Bègles-Bordeaux, Bordeaux-Bègles
+316, 
+Bordeaux Bègles; Union Bordeaux Bègles; Bordeaux; Bègles-Bordeaux; Bordeaux-Bègles; Union Bordeaux Begles; Bordeaux Begles; Bordeaux Bègles; Union Bordeaux Bègles; Bordeaux-Bègles, 
+Union_Bordeaux_B%C3%A8gles, 
+Union Bordeaux Bègles, 
+196, 
+Bordeaux-Begles; Bègles-Bordeaux; Bordeaux-Bègles; Bègles; Bordeaux; CA Bègles; Bordeaux Bègles; CA Bordeaux-Bègles Gironde; CA Bordeaux; Begles-Bordeaux; CA Bordeaux Bègles; CA Bordeaux Bègles; CA Bordeaux-Bègles, 
+CA_Bordeaux-B%C3%A8gles_Gironde, 
+CA Bordeaux-Bègles Gironde, 
+----------------------
