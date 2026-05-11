@@ -894,6 +894,7 @@ end.rec.log()
 # - integration of WP EN:
 #   - don't keep zero points/matches (keep the values already in the DB)
 # - switch police teams to military status?
+# - check that, in the final stint file, team names match main name in team table
 
 # club types
 #  [ ] "Club/franchise team"      
