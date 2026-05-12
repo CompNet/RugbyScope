@@ -294,8 +294,8 @@ wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "
 #dup_names <- names(which(table(wp_teams[, "altNames"]) > 1))
 #tab <- wp_teams[-(1:nrow(wp_teams)), ]
 #for (dupp_name in dup_names) {
-# idx <- which(wp_teams[, "altNames"] == dupp_name)
-# tab <- rbind(tab, wp_teams[idx, ])
+#idx <- which(wp_teams[, "altNames"] == dupp_name)
+#tab <- rbind(tab, wp_teams[idx, ])
 #}
 #write.csv(tab, file.path(wp_folder, "duplicate_names.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### the above code was used to define the url2url.csv map, allowing to solve specific cases of
@@ -350,7 +350,7 @@ tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nr
 #wp_teams <- wp_teams[-del_rows, ]
 #tlog(4, "Removed ", length(del_rows), " highschool teams from the WP table")
 #tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
-#### in the end, done manually
+#### in the end, this was done manually
 
 # we first focus on teams possessing a URL, as they are easier to match
 
@@ -374,8 +374,8 @@ wp_teams[non_na, "rugbyscopeId"] <- fus_teams[mm, "rugbyscopeId"]
 #length(which(!is.na(wp_teams[, "rugbyscopeId"])))
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 #### debug: record the list of unmatched teams with a URL
-idx <- which(is.na(mm))
-write.csv(sort(unique_urls[idx]), file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
+#idx <- which(is.na(mm))
+#write.csv(sort(unique_urls[idx]), file.path(wp_folder, "unmatched_urls.csv"), row.names = FALSE, fileEncoding = "UTF-8")
 #### we use the above file to define manually the url2url map (used above), url2id map (used below), and new_teams list
 
 # use url2id map to match the remaining cases based on their URL
@@ -420,12 +420,13 @@ wp_teams[idx, "rugbyscopeId"] <- map_names
 tlog(4, "Matched ", length(idx), " WP teams")
 tlog(6, "Remaining: ", length(which(is.na(wp_teams[, "rugbyscopeId"]))), "/", nrow(wp_teams), " WP teams to match")
 
-# # check if alt names in the merged table contain (incorrectly) ","
-# idx <- which(grepl(",", fus_teams[, "altNames"], fixed = FALSE))
-# print(fus_teams[idx, c("rugbyscopeId", "altNames")])
-# # same with parentheses
-# idx <- which(grepl("[()]", fus_teams[, "altNames"], fixed = FALSE))
-# print(fus_teams[idx[1], c("rugbyscopeId", "altNames")])
+#### debug: check if alt names in the merged table contain (incorrectly) ","
+#idx <- which(grepl(",", fus_teams[, "altNames"], fixed = FALSE))
+#print(fus_teams[idx, c("rugbyscopeId", "altNames")])
+## same with parentheses
+#idx <- which(grepl("[()]", fus_teams[, "altNames"], fixed = FALSE))
+#print(fus_teams[idx[1], c("rugbyscopeId", "altNames")])
+####
 
 # now trying to match teams by name
 # combine merged team names in a single list
@@ -440,12 +441,13 @@ fus_names <- sapply(1:length(fus_names1), function(i) {
 # search WP names in merged table
 wp_idx <- which(is.na(wp_teams[, "rugbyscopeId"]))
 result <- match_team_names(src_names = wp_teams[wp_idx, "altNames"], tgt_names = fus_names)
+
 #### debug: check names with several matches
 #idx <- which(sapply(result, length) > 1)
 #for (i in idx) {
-# print(wp_teams[wp_idx[i], ])
-# print(fus_teams[result[[i]], ])
-# print("-------------------")
+#  print(wp_teams[wp_idx[i], ])
+#  print(fus_teams[result[[i]], ])
+#  print("-------------------")
 #}
 #### the above loop is used to detect cases of multiple matching
 
@@ -483,13 +485,6 @@ wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 #}
 #### there are many cases: it is expected, there are many slightly different english names
 
-# record final WP team table as a new CSV file, for verification
-tab.file <- file.path(wp_folder, "teams.csv")
-tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
-wp_teams[, "rugbyscopeId"] <- as.integer(wp_teams[, "rugbyscopeId"])
-write.csv(wp_teams[order(wp_teams[, "rugbyscopeId"]), ], tab.file, row.names = FALSE, fileEncoding = "UTF-8")
-wp_teams0 <- wp_teams # used for debugging
-
 # put back case lost during data scraping
 #### use the following line to check the most frequent tokens in team names, to detect acronyms that should be preserved
 #print(head(sort(table(trimws(unlist(strsplit(wp_teams[, "altNames"], "[; -]", fixed = FALSE)))), decreasing = TRUE), n = 50))
@@ -520,6 +515,13 @@ for (i in 1:nrow(wp_teams)) {
 
   # readline()
 }
+
+# record final WP team table as a new CSV file, for verification
+tab.file <- file.path(wp_folder, "teams.csv")
+tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
+wp_teams[, "rugbyscopeId"] <- as.integer(wp_teams[, "rugbyscopeId"])
+write.csv(wp_teams[order(wp_teams[, "rugbyscopeId"]), ], tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+wp_teams0 <- wp_teams # used for debugging
 
 # complement alternative names in merged table, using english names
 tlog("Complement alternative names in merged team table")
@@ -598,8 +600,7 @@ close(fileConn)
 
 end.rec.log(); stop()
 
-#### debug: check removed teams that share a name
-#### with a team still in the list
+#### debug: check removed teams that share a name with a team still in the list
 #rem_names <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
 #alt_names <- strsplit(wp_teams[, "altNames"], "; ")
 #for (i in 1:length(rem_names)) {
