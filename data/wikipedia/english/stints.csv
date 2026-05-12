@@ -1618,7 +1618,7 @@
 "Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","amateur","2001-2003","suburbs",NA,0,0,"2001","2003"
 "Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","senior_club","2003-2004","rc orléans","RC_Orl%C3%A9ans",0,0,"2003","2004"
 "Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","senior_club","2004-2011","stade rochelais","Stade_Rochelais",0,0,"2004","2011"
-"Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","senior_club","2011-2013","bordeaux-begles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"2011","2013"
+"Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","senior_club","2011-2013","Union Bordeaux Bègles","Union_Bordeaux_B%C3%A8gles",0,0,"2011","2013"
 "Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","senior_club","2013-","ca brive","CA_Brive",0,0,"2013",NA
 "Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","senior_club","2001-2003","auckland","Auckland",1,0,"2001","2003"
 "Q3514698",NA,"tamato samasoni leupolu","Tamato_Leupolu","international","2001-2007","samoa","Samoa_national_rugby_union_team",15,5,"2001","2007"
@@ -8565,7 +8565,7 @@
 "Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","1982-1991","u s meyzieu",NA,0,0,"1982","1991"
 "Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","1991-1996","toulouse","Stade_Toulousain",0,0,"1991","1996"
 "Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","1996-1997","ca périgueux","CA_P%C3%A9rigueux",0,0,"1996","1997"
-"Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","1997-1999","bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1997","1999"
+"Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","1997-1999","CA Bordeaux Bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1997","1999"
 "Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","1999-2004","us colomiers","Colomiers_Rugby",0,0,"1999","2004"
 "Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","2004-2006","us montauban","US_Montauban",0,0,"2004","2006"
 "Q3081620",NA,"francis ntamack","Francis_Ntamack","senior_club","2006-2007","us colomiers","Colomiers_Rugby",0,0,"2006","2007"
@@ -9302,12 +9302,12 @@
 "Q21511885",NA,"viliami ma'asi","Viliami_Ma%CA%BBasi","international","1997-2009","tonga","Tonga",36,15,"1997","2009"
 "Q111267671",NA,"jacque-louis du toit","Jacque-Louis_du_Toit","senior_club","2022-","golden lions","Lions_(United_Rugby_Championship)",4,5,"2022",NA
 "Q123459997",NA,"charles eric campbell","Eric_Campbell_(rugby_union)","international","1970-1970","ireland","Ireland_national_rugby_union_team",1,0,"1970","1970"
-"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2003-2003","aberavon rfc","Aberavon_RFC",8,5,"2003","2003"
-"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2000-","neath rfc","Neath_RFC",0,0,"2000",NA
-"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","1997-1999","llanelli rfc","Llanelli_RFC",62,0,"1997","1999"
-"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","-1997","bonymaen rfc","Bonymaen_RFC",0,0,NA,"1997"
-"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2002-2003","bonymaen rfc","Bonymaen_RFC",0,0,"2002","2003"
-"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2004-","bonymaen rfc","Bonymaen_RFC",0,0,"2004",NA
+"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2003-2003","aberavon rfc","Aberavon_RFC",8,5,"2003","2003"
+"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2000-","neath rfc","Neath_RFC",0,0,"2000",NA
+"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","1997-1999","llanelli rfc","Llanelli_RFC",62,0,"1997","1999"
+"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","-1997","bonymaen rfc","Bonymaen_RFC",0,0,NA,"1997"
+"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2002-2003","bonymaen rfc","Bonymaen_RFC",0,0,"2002","2003"
+"Q22097945",NA,"darril john williams","Darril_Williams","senior_club","2004-","bonymaen rfc","Bonymaen_RFC",0,0,"2004",NA
 "Q22097945",NA,"darril john williams","Darril_Williams","international","1998-1998","wales","Wales",1,0,"1998","1998"
 "Q7487319",NA,"shalom suniula","Shalom_Suniula","amateur","2011-2011","belmont shore rfc","Belmont_Shore_RFC",0,0,"2011","2011"
 "Q7487319",NA,"shalom suniula","Shalom_Suniula","senior_club","2018-","seattle seawolves","Seattle_Seawolves",30,25,"2018",NA
@@ -17762,7 +17762,7 @@
 "Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","amateur","1994-1999","tihoi",NA,0,0,"1994","1999"
 "Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","amateur","1999-2004","kumeu",NA,0,0,"1999","2004"
 "Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","senior_club","1996-1999","secom rugguts","Sayama_Secom_Rugguts",0,0,"1996","1999"
-"Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","senior_club","1999-2004","bordeaux-begles","CA_Bordeaux-B%C3%A8gles_Gironde",6,5,"1999","2004"
+"Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","senior_club","1999-2004","CA Bordeaux Bègles","CA_Bordeaux-B%C3%A8gles_Gironde",6,5,"1999","2004"
 "Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","senior_club","2004-2005","fc grenoble","FC_Grenoble_Rugby",23,25,"2004","2005"
 "Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","senior_club","2005-2008","oyonnax rugby","Oyonnax_Rugby",63,25,"2005","2008"
 "Q2364869",NA,"alifeleti fakaongo","Feleti_Fakaongo","senior_club","2008-2009","rc chalon","RC_Chalon",14,0,"2008","2009"
@@ -20007,7 +20007,7 @@
 "Q2310451",NA,"jean-marc souverbie","Jean-Marc_Souverbie","senior_club","2007-","us morlaàs",NA,0,0,"2007",NA
 "Q2310451",NA,"jean-marc souverbie","Jean-Marc_Souverbie","senior_club","2003-2007","section paloise","Section_Paloise",0,0,"2003","2007"
 "Q2310451",NA,"jean-marc souverbie","Jean-Marc_Souverbie","senior_club","2001-2003","usap","USA_Perpignan",0,0,"2001","2003"
-"Q2310451",NA,"jean-marc souverbie","Jean-Marc_Souverbie","senior_club","1997-2001","bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1997","2001"
+"Q2310451",NA,"jean-marc souverbie","Jean-Marc_Souverbie","senior_club","1997-2001","CA Bordeaux Bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1997","2001"
 "Q2310451",NA,"jean-marc souverbie","Jean-Marc_Souverbie","senior_club","-1997","section paloise","Section_Paloise",0,0,NA,"1997"
 "Q2310451",NA,"jean-marc souverbie","Jean-Marc_Souverbie","international","2000-2000","france","France_national_rugby_union_team",1,5,"2000","2000"
 "Q18379237",NA,"bryce ian heem","Bryce_Heem","senior_club","2010-2010","auckland","Auckland",3,0,"2010","2010"
@@ -22815,7 +22815,7 @@
 "Q5024026",NA,"calum clark","Calum_Clark","international","2009-2009","england u20",NA,3,5,"2009","2009"
 "Q5024026",NA,"calum clark","Calum_Clark","international","2015-2015","england","England_national_rugby_union_team",1,0,"2015","2015"
 "Q3559759",NA,"thierry vincent moscato","Vincent_Moscato","amateur","1983-1988","sc graulhet",NA,0,0,"1983","1988"
-"Q3559759",NA,"thierry vincent moscato","Vincent_Moscato","amateur","1988-1993","bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1988","1993"
+"Q3559759",NA,"thierry vincent moscato","Vincent_Moscato","amateur","1988-1993","CA Bordeaux Bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1988","1993"
 "Q3559759",NA,"thierry vincent moscato","Vincent_Moscato","amateur","1993-1995","stade bordelais","Stade_Bordelais",0,0,"1993","1995"
 "Q3559759",NA,"thierry vincent moscato","Vincent_Moscato","senior_club","1995-1996","brive","CA_Brive",0,0,"1995","1996"
 "Q3559759",NA,"thierry vincent moscato","Vincent_Moscato","senior_club","1996-1999","stade français","Stade_Fran%C3%A7ais",0,0,"1996","1999"
@@ -30320,7 +30320,7 @@
 "Q104178586",NA,"finlay kennedy","Finlay_Kennedy","international","1920-1921","scotland","Scotland",5,13,"1920","1921"
 "Q3266144",NA,"ludovic loustau","Ludovic_Loustau","senior_club","1992-1997","us dax","US_Dax",0,0,"1992","1997"
 "Q3266144",NA,"ludovic loustau","Ludovic_Loustau","senior_club","1997-1999","stade français","Stade_Fran%C3%A7ais",0,0,"1997","1999"
-"Q3266144",NA,"ludovic loustau","Ludovic_Loustau","senior_club","1999-2001","bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1999","2001"
+"Q3266144",NA,"ludovic loustau","Ludovic_Loustau","senior_club","1999-2001","CA Bordeaux Bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1999","2001"
 "Q3266144",NA,"ludovic loustau","Ludovic_Loustau","senior_club","2001-2005","usa perpignan","USA_Perpignan",0,0,"2001","2005"
 "Q3266144",NA,"ludovic loustau","Ludovic_Loustau","senior_club","2005-2006","rc toulonnais","RC_Toulon",0,0,"2005","2006"
 "Q3266144",NA,"ludovic loustau","Ludovic_Loustau","senior_club","2006-2007","lyon ou","Lyon_OU_Rugby",0,0,"2006","2007"
@@ -41000,9 +41000,9 @@
 "Q18637871",NA,"guido petti pagadizábal","Guido_Petti","international","2013-2014","argentina u20s","Argentina_national_under-20_rugby_union_team",8,0,"2013","2014"
 "Q18637871",NA,"guido petti pagadizábal","Guido_Petti","international","2013-2014","argentina jaguars","Argentina_XV_national_rugby_union_team",5,0,"2013","2014"
 "Q18637871",NA,"guido petti pagadizábal","Guido_Petti","international","2014-","argentina","Argentina_national_rugby_union_team",97,20,"2014",NA
-"Q24182511",NA,"gregory prosser","Greg_Prosser","senior_club","1991-1993","bridgend rfc","Bridgend_Ravens",19,12,"1991","1993"
-"Q24182511",NA,"gregory prosser","Greg_Prosser","senior_club","1986-1991","pontypridd rfc","Pontypridd_RFC",0,0,"1986","1991"
-"Q24182511",NA,"gregory prosser","Greg_Prosser","senior_club","1994-2000","pontypridd rfc","Pontypridd_RFC",0,0,"1994","2000"
+"Q24182511",NA,"gregory prosser","Greg_Prosser","senior_club","1991-1993","bridgend rfc","Bridgend_Ravens",19,12,"1991","1993"
+"Q24182511",NA,"gregory prosser","Greg_Prosser","senior_club","1986-1991","pontypridd rfc","Pontypridd_RFC",0,0,"1986","1991"
+"Q24182511",NA,"gregory prosser","Greg_Prosser","senior_club","1994-2000","pontypridd rfc","Pontypridd_RFC",0,0,"1994","2000"
 "Q24182511",NA,"gregory prosser","Greg_Prosser","international","1995-1995","wales","Wales",1,0,"1995","1995"
 "Q3338508",NA,"netani edward talei","Netani_Talei","senior_club","2014-","Harlequins F.C.","Harlequin_F.C.",8,0,"2014",NA
 "Q3338508",NA,"netani edward talei","Netani_Talei","senior_club","2013-2014","newport gwent dragons","Dragons_RFC",20,0,"2013","2014"
@@ -41801,7 +41801,7 @@
 "Q3370769",NA,"paul burke","Paul_Burke_(rugby_union,_born_1973)","international","1992-1992","england u21",NA,1,0,"1992","1992"
 "Q3370769",NA,"paul burke","Paul_Burke_(rugby_union,_born_1973)","international","1995-2003","ireland","Ireland_national_rugby_union_team",13,108,"1995","2003"
 "Q7087878",NA,"oliver tomaszczyk","Oliver_Tomaszczyk","senior_club","2015-2015","jersey r.f.c","Jersey_RFC",10,0,"2015","2015"
-"Q7087878",NA,"oliver tomaszczyk","Oliver_Tomaszczyk","senior_club","2012-2015","newcastle falcons","Newcastle_Red_Bulls",24,5,"2012","2015"
+"Q7087878",NA,"oliver tomaszczyk","Oliver_Tomaszczyk","senior_club","2012-2015","newcastle falcons","Newcastle_Red_Bulls",24,5,"2012","2015"
 "Q7087878",NA,"oliver tomaszczyk","Oliver_Tomaszczyk","senior_club","2010-2012","worcester warriors","Worcester_Warriors",27,0,"2010","2012"
 "Q7087878",NA,"oliver tomaszczyk","Oliver_Tomaszczyk","international","2004-2005","england u18","England_national_under-18_rugby_union_team",0,0,"2004","2005"
 "Q130631530",NA,"harry millett","Harry_Millett","international","1920-1920","england","England_national_rugby_union_team",1,0,"1920","1920"
@@ -48612,7 +48612,7 @@
 "Q30118260",NA,"anthony belleau","Anthony_Belleau","senior_club","2025-","northampton saints","Northampton_Saints",4,49,"2025",NA
 "Q30118260",NA,"anthony belleau","Anthony_Belleau","international","2017-2025","france","France_national_rugby_union_team",12,24,"2017","2025"
 "Q3018017",NA,"david gç¸rard","David_G%C3%A9rard","senior_club","1990-1999","rc toulonnais","RC_Toulon",0,0,"1990","1999"
-"Q3018017",NA,"david gç¸rard","David_G%C3%A9rard","senior_club","1999-2000","bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1999","2000"
+"Q3018017",NA,"david gç¸rard","David_G%C3%A9rard","senior_club","1999-2000","CA Bordeaux Bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"1999","2000"
 "Q3018017",NA,"david gç¸rard","David_G%C3%A9rard","senior_club","2000-2006","toulouse","Stade_Toulousain",0,0,"2000","2006"
 "Q3018017",NA,"david gç¸rard","David_G%C3%A9rard","senior_club","2006-2007","northampton","Northampton_Saints",0,0,"2006","2007"
 "Q3018017",NA,"david gç¸rard","David_G%C3%A9rard","senior_club","2007-2009","racing","Racing_92",0,0,"2007","2009"
@@ -59993,7 +59993,7 @@
 "Q3161273",NA,"james gerard mclaren","James_McLaren_(rugby)","senior_club","1998-1998","caledonia reds","Caledonia_Reds",1,0,"1998","1998"
 "Q3161273",NA,"james gerard mclaren","James_McLaren_(rugby)","senior_club","1998-2000","bourgoin","CS_Bourgoin-Jallieu",0,0,"1998","2000"
 "Q3161273",NA,"james gerard mclaren","James_McLaren_(rugby)","senior_club","2000-2002","glasgow warriors","Glasgow_Warriors",38,72,"2000","2002"
-"Q3161273",NA,"james gerard mclaren","James_McLaren_(rugby)","senior_club","2002-2004","begles-bordeaux","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"2002","2004"
+"Q3161273",NA,"james gerard mclaren","James_McLaren_(rugby)","senior_club","2002-2004","CA Bordeaux Bègles","CA_Bordeaux-B%C3%A8gles_Gironde",0,0,"2002","2004"
 "Q3161273",NA,"james gerard mclaren","James_McLaren_(rugby)","senior_club","2004-2006","bayonne",NA,0,0,"2004","2006"
 "Q3161273",NA,"james gerard mclaren","James_McLaren_(rugby)","international","1999-2003","scotland","Scotland_national_rugby_union_team",30,30,"1999","2003"
 "Q110761541",NA,"ruan venter","Ruan_Venter_(rugby_union,_born_2002)","senior_club","2022-","golden lions","Lions_(United_Rugby_Championship)",19,35,"2022",NA

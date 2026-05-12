@@ -578,43 +578,44 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #### debug: list WP teams sharing a name and having different ids
 #### > this must be disambiguated before switching to players
-tlog(2, "Listing WP teams sharing a name and having different ids")
-fileConn <- file(file.path(wp_folder, "same_name_diff_id.txt"), open = "w")
-alt_names <- strsplit(wp_teams[, "altNames"], "; ")
-for (i in 1:(length(alt_names) - 1)) {
-  if (i %% 100 == 0)
-    tlog(4, "Processing team ", i, "/", nrow(wp_teams))
-  for (j in (i+1):length(alt_names)) {
-    common_names <- intersect(alt_names[[i]], alt_names[[j]])
-    if (length(common_names) > 0 && wp_teams[i, "rugbyscopeId"] != wp_teams[j, "rugbyscopeId"]) {
-      writeLines(paste0("Team ", i, " vs. ", j), fileConn)
-      writeLines(paste0("Common name(s): ", paste0(common_names, collapse = ", ")), fileConn)
-      writeLines(paste0(wp_teams[i, ], ", "), fileConn)
-      writeLines(paste0(wp_teams[j, ], ", "), fileConn)
-      writeLines("----------------------", fileConn)
-    }
-  }
-}
-close(fileConn)
-####
-
-end.rec.log(); stop()
-
-#### debug: check removed teams that share a name with a team still in the list
-#rem_names <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
+#tlog(2, "Listing WP teams sharing a name and having different ids")
+#fileConn <- file(file.path(wp_folder, "same_name_diff_id.txt"), open = "w")
 #alt_names <- strsplit(wp_teams[, "altNames"], "; ")
-#for (i in 1:length(rem_names)) {
-#  for (j in 1:length(alt_names)) {
-#    rn <- rem_names[i]
-#    an <- alt_names[[j]]
-#    if (rn %in% an) {
-#      idx <- which(wp_stints[, "teamName"] == rn)
-#      tlog(2, "Problem with ", rn)
-#      print(unique(wp_stints[idx, "teamWP"]))
+#for (i in 1:(length(alt_names) - 1)) {
+#  if (i %% 100 == 0)
+#    tlog(4, "Processing team ", i, "/", nrow(wp_teams))
+#  for (j in (i+1):length(alt_names)) {
+#    common_names <- intersect(alt_names[[i]], alt_names[[j]])
+#    if (length(common_names) > 0 && wp_teams[i, "rugbyscopeId"] != wp_teams[j, "rugbyscopeId"]) {
+#      writeLines(paste0("Team ", i, " vs. ", j), fileConn)
+#      writeLines(paste0("Common name(s): ", paste0(common_names, collapse = ", ")), fileConn)
+#      writeLines(paste0(wp_teams[i, ], ", "), fileConn)
+#      writeLines(paste0(wp_teams[j, ], ", "), fileConn)
+#      writeLines("----------------------", fileConn)
 #    }
 #  }
 #}
+#close(fileConn)
 ####
+
+#### debug: check removed teams that share a name with a team still in the list
+rem_names <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
+alt_names <- strsplit(wp_teams[, "altNames"], "; ")
+for (i in 1:length(rem_names)) {
+ for (j in 1:length(alt_names)) {
+   rn <- rem_names[i]
+   an <- alt_names[[j]]
+   if (rn %in% an) {
+     idx <- which(wp_stints[, "teamName"] == rn)
+     tlog(2, "Problem with ", rn)
+     print(unique(wp_stints[idx, "teamWP"]))
+   }
+ }
+}
+####
+
+# > pb racing et autres
+end.rec.log(); stop()
 
 
 
