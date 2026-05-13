@@ -490,8 +490,8 @@ wp_teams[, "fusionName"] <- fus_teams[idx, "fullName"]
 #print(head(sort(table(trimws(unlist(strsplit(wp_teams[, "altNames"], "[; -]", fixed = FALSE)))), decreasing = TRUE), n = 50))
 ####
 acronyms <- c("'a'", "ac", "act", "as", "ca", "cr", "cs", "csm", "cus", "f\\.c\\.", "fc", "fp", 
-  "hrk", "hsfp", "hsob", "nsw", "ntt", "nz", "r\\.c\\.", "r\\.f\\.c", "r\\.f\\.c\\.", "r\\.u\\.f\\.c\\.", 
-  "rc", "rfc", "rk", "rt", "rufc", "s\\.a\\.", "sa", "sc", "scm", "u\\.s\\.", "uc", "us", "usa", "vva", "xv")
+  "hrk", "hsfp", "hsob", "nsw", "ntt", "nz", "r\\.c\\.", "r\\.f\\.c", "r\\.f\\.c\\.", "r\\.l\\.f\\.c\\.", "r\\.u\\.f\\.c\\.", 
+  "rc", "rfc", "rlfc", "rk", "rt", "rufc", "s\\.a\\.", "sa", "sc", "scm", "u\\.s\\.", "uc", "us", "usa", "vii", "vva", "xv")
 for (i in 1:nrow(wp_teams)) {
   if (i %% 100 == 0)
     tlog(4, "Processing team ", i, "/", nrow(wp_teams))
@@ -522,6 +522,17 @@ tlog(2, "Recording as a CSV file: \"", tab.file, "\"")
 wp_teams[, "rugbyscopeId"] <- as.integer(wp_teams[, "rugbyscopeId"])
 write.csv(wp_teams[order(wp_teams[, "rugbyscopeId"]), ], tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 wp_teams0 <- wp_teams # used for debugging
+
+# apply the same normalization to the stint table
+tn <- trimws(wp_stints[, "teamName"])
+idx <- which(!grepl("\\p{Lu}", tn, perl = TRUE))
+tn[idx] <- str_to_title(tn[idx])
+for (acronym in acronyms) {
+  tlog(4, "Processing acronym ", acronym, " (", which(acronyms == acronym), "/", length(acronyms), ")")
+  tn <- gsub(paste0("\\b", acronym, "\\b"), str_to_upper(gsub("\\", "", acronym, fixed = TRUE)), tn, fixed = FALSE, ignore.case = TRUE)
+}
+print(cbind(wp_stints[, "teamName"], tn)[sample(nrow(wp_stints), 100), ])
+wp_stints[, "teamName"] <- tn
 
 # complement alternative names in merged table, using english names
 tlog("Complement alternative names in merged team table")
@@ -599,23 +610,20 @@ write.csv(fus_teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ####
 
 #### debug: check removed teams that share a name with a team still in the list
-rem_names <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
-alt_names <- strsplit(wp_teams[, "altNames"], "; ")
-for (i in 1:length(rem_names)) {
- for (j in 1:length(alt_names)) {
-   rn <- rem_names[i]
-   an <- alt_names[[j]]
-   if (rn %in% an) {
-     idx <- which(wp_stints[, "teamName"] == rn)
-     tlog(2, "Problem with ", rn)
-     print(unique(wp_stints[idx, "teamWP"]))
-   }
- }
-}
+#rem_names <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
+#alt_names <- strsplit(wp_teams[, "altNames"], "; ")
+#for (i in 1:length(rem_names)) {
+# for (j in 1:length(alt_names)) {
+#   rn <- rem_names[i]
+#   an <- alt_names[[j]]
+#   if (rn %in% an) {
+#     idx <- which(wp_stints[, "teamName"] == rn)
+#     tlog(2, "Problem with ", rn)
+#     print(unique(wp_stints[idx, "teamWP"]))
+#   }
+# }
+#}
 ####
-
-# > pb racing et autres
-end.rec.log(); stop()
 
 
 
@@ -623,7 +631,17 @@ end.rec.log(); stop()
 ########################################################################
 # merge stints
 tlog("Merging stints")
+
+# clean and normalize removed teams names
 removed_teams <- unique(trimws(unlist(strsplit(removed_teams, ";"))))
+idx <- which(!grepl("\\p{Lu}", removed_teams, perl = TRUE))
+removed_teams[idx] <- str_to_title(removed_teams[idx])
+for (acronym in acronyms)
+  removed_teams <- gsub(paste0("\\b", acronym, "\\b"), str_to_upper(gsub("\\", "", acronym, fixed = TRUE)), removed_teams, fixed = FALSE, ignore.case = TRUE)
+
+#### used when debugging
+wp_stints0 <- wp_stints
+####
 
 # connect WP stint to WP team tables (and so, to merged teams)
 tlog(2, "Matching stint teams to team table")
@@ -696,6 +714,10 @@ tlog(2, "Deleted ", length(del_rows), "/", nrow(wp_stints), " stints correspondi
 #print(head(wp_stints[del_rows, ]))
 wp_stints <- wp_stints[-del_rows, ]
 
+
+fus_stints0 <- fus_stints
+stop(); end.rec.log()
+
 # insert WP stints in merged table
 for (r in 1:nrow(wp_stints)) {
   player_id <- wp_stints[r, "origWdId"]
@@ -715,12 +737,12 @@ for (r in 1:nrow(wp_stints)) {
       points_scored <- wp_stints[r, "pointsScored"]
       update <- FALSE
 
-      # debug
-      #print(wp_stints[r, ])
-      #print(fus_stints[idx2, ])
-      #tlog(6, wp_stints[r, "startYear"], "-", wp_stints[r, "endYear"])
-      #for (z in idx2)
-      #  tlog(8, fus_stints[z, "startYear"], "-", fus_stints[z, "endYear"])
+      #### debug
+      print(wp_stints[r, ])
+      print(fus_stints[idx2, ])
+      tlog(6, wp_stints[r, "startYear"], "-", wp_stints[r, "endYear"])
+      for (z in idx2)
+       tlog(8, fus_stints[z, "startYear"], "-", fus_stints[z, "endYear"])
 
       # compare the start/end years to find a compatible stint
       if (is.na(start_year)) {
