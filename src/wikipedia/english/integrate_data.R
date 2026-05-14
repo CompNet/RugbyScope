@@ -714,9 +714,9 @@ tlog(2, "Deleted ", length(del_rows), "/", nrow(wp_stints), " stints correspondi
 #print(head(wp_stints[del_rows, ]))
 wp_stints <- wp_stints[-del_rows, ]
 
-
+#### used when debugging
 fus_stints0 <- fus_stints
-stop(); end.rec.log()
+####
 
 # insert WP stints in merged table
 for (r in 1:nrow(wp_stints)) {
@@ -813,7 +813,7 @@ for (r in 1:nrow(wp_stints)) {
         tlog(6, "Found several matching stints, which is not normal")
         print(wp_stints[r, ])
         print(fus_stints[idx3, ])
-        stop("ERROR")
+        update <- FALSE #stop("ERROR")
       }
       
       # possibly update stats
@@ -863,7 +863,8 @@ for (r in 1:nrow(wp_stints)) {
   # debug
   #readline(prompt="Press [enter] to continue")
 }
-
+stop(); end.rec.log()
+ 
 # clean both stat columns
 fus_stints[, "matchesPlayed"] <- gsub("+", "", fus_stints[, "matchesPlayed"], fixed = TRUE)
 fus_stints[, "matchesPlayed"] <- gsub("-", "", fus_stints[, "matchesPlayed"], fixed = TRUE)
