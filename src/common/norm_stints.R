@@ -192,17 +192,18 @@ merge_overlapping_stints_strict <- function(stints) {
 }
 
 #### test
-#setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-#source("src/common/norm_stints.R")
+# #setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
+# #source("src/common/norm_stints.R")
 
-start.rec.log("StintMerge")
+# start.rec.log("StintMerge")
 
-fusion_folder <- file.path("data", "fusion")
-fus_stints <- read.csv(file.path(fusion_folder, "stints_04_eswp.csv"))
+# fusion_folder <- file.path("data", "fusion")
+# fus_stints <- read.csv(file.path(fusion_folder, "stints_04_eswp.csv"))
 
-stints <- merge_overlapping_stints_strict(fus_stints)
+# stints <- merge_overlapping_stints_strict(fus_stints)
 
-tab.file <- file.path(fusion_folder, "stints_04_eswp_v1.csv")
-write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# tab.file <- file.path(fusion_folder, "stints_04_eswp_v1.csv")
+# write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
-end.rec.log()
+# end.rec.log()
+####

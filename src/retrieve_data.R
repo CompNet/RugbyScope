@@ -2,7 +2,7 @@
 # Main script for the raw data retrieval process. It invokes the
 # Wikidata, DBpedia and Wikipedia scripts to form the tables used to
 # extract various types of networks. The corresponding CSV files are
-# stored in folder`data/tables`. See the individual scripts for details.
+# stored in folder`data`. See the individual scripts for details.
 #
 # Important: these scripts extract data from *live* repositories such as
 # DBpedia, Wikidata, and Wikipedia. They all function correctly at the
@@ -90,7 +90,11 @@ source("src/wikipedia/spanish/clean_tables.R")
 
 # english Wikipedia
 # TODO
+# this produces the raw CSV files in folder `data/wikipedia/english/raw/`
 source("src/wikipedia/english/clean_tables.R")
+# this complements the data retrieved by the previous script, in the same folder
+source("src/wikipedia/english/clean_tables.R")
+# this produces the clean CSV files in folder `data/wikipedia/english/`
 
 
 
@@ -130,3 +134,18 @@ source("src/wikipedia/spanish/integrate_data.R")
 
 # english Wikipedia
 source("src/wikipedia/english/integrate_data.R")
+# this produces the following files in folder `data/fusion/`:
+# - `players_06_enwp.csv`: merged list of players
+# - `teams_07_enwp.csv`: merged list of teams
+# - `stints_05_enwp.csv`: merged list of stints
+
+
+
+
+########################################################################
+# finalize the final tables by merging similar stints, and performing other cleaning operations
+source("src/finalize_tables.R")
+# this produces the following files in folder `data`:
+# - `players.csv`: final list of players
+# - `teams.csv`: final list of teams
+# - `stints.csv`: final list of stints

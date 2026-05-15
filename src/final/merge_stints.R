@@ -1,11 +1,11 @@
 ########################################################################
-# Loads the clean English Wikipedia tables and inserts them into our
-# merged tables.
+# The data contain many similar and redundant stints. This script tries
+# to merge them efficiently.
 #
 # 05/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/wikipedia/english/integrate_data.R")
+# source("src/wikipedia/final/merge_stints.R")
 ########################################################################
 library("stringi")
 library("stringr")
@@ -15,8 +15,6 @@ library("jsonlite")
 library("magrittr")
 
 source("src/common/logging.R")
-source("src/common/norm_names.R")
-source("src/common/norm_teams.R")
 
 
 
@@ -905,3 +903,33 @@ write.csv(fus_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ########################################################################
 # stop logging
 end.rec.log()
+
+# TODO
+# - why not including the stint type (junior, senior, etc.) in the table?
+# - some URLs have changed on WP: resolve them all, then check for unicity
+# - check the presence of "," in alt team names
+# - process ( ) in team names
+# - check that all rugbyscopeIds are correct in the stints (due to merging some teams)
+# - if >0 pts but 0 matches, then matches should be NA
+# - check teams related to UK (often actually england)
+# - integration of WP EN:
+#   - don't keep zero points/matches (keep the values already in the DB)
+# - check that, in the final stint file, team names match main name in team table
+# - handle the history of racing 92 and other similarly merged clubs
+#   UBB, Quins-Bobbies_Rugby_Club
+# - check that all players have a birthdate (needed to distinguish junior years)
+
+# club types
+#  [ ] "Club/franchise team"      
+#  [ ] "National senior team"
+#  [ ] "Combined team"            
+#  [ ] "National U20 team"
+#  [ ] "Invitational team"        
+#  [ ] "National U21 team"
+#  [ ] "National U18 team"
+#  [ ] "National U19 team"        
+#  [ ] "Regional team"
+#  [ ] "National university team"
+#  [ ] "National U23 team"
+#  [ ] NA                         
+#  [ ] "Military/police team"
