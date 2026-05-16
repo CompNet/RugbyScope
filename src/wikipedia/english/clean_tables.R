@@ -895,7 +895,7 @@ for (r in 1:length(old_urls)) {
   if (!is.na(url) && is.na(new_urls[r]))
     tlog(6, "Lost URL: ", r)
 }
-# put unique URL into the sting table
+# put unique URL into the stint table
 idx1 <- match(new_stints[, "teamWP"], old_urls)
 idx2 <- which(!is.na(idx1))
 new_stints[idx2, "teamWP"] <- new_urls[idx1[idx2]]
@@ -1126,7 +1126,7 @@ for (r in 1:length(old_urls)) {
   if (!is.na(url) && is.na(new_urls[r]))
     tlog(6, "Lost URL: ", r)
 }
-# put unique URL into the sting table
+# put unique URL into the stint table
 idx1 <- match(new_stints_comp[, "teamWP"], old_urls)
 idx2 <- which(!is.na(idx1))
 new_stints_comp[idx2, "teamWP"] <- new_urls[idx1[idx2]]

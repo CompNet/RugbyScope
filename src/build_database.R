@@ -143,8 +143,9 @@ source("src/wikipedia/english/integrate_data.R")
 
 
 ########################################################################
-# finalize the final tables by merging similar stints, and performing other cleaning operations
-source("src/finalize_tables.R")
+# finalize the tables by merging similar stints, and performing other cleaning operations
+source("src/final/clean_data.R")
+source("src/final/merge_stints.R")
 # this produces the following files in folder `data`:
 # - `players.csv`: final list of players
 # - `teams.csv`: final list of teams
