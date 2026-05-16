@@ -33,6 +33,8 @@ data_folder <- file.path("data")
 #
 fusion_folder <- file.path(data_folder, "fusion")
 
+languages <- c("En", "Fr", "It", "Es", "Ja")
+
 
 
 
@@ -41,7 +43,6 @@ fusion_folder <- file.path(data_folder, "fusion")
 tlog("Loading merged tables")
 
 teams <- read.csv(file.path(fusion_folder, "teams_07_enwp.csv"))
-# teams <- read.csv(file.path(data_folder, "teams_01.csv"))
 tlog(2, "Raw number of teams: ", nrow(teams))
 
 players <- read.csv(file.path(fusion_folder, "players_06_enwp.csv"))
@@ -49,78 +50,6 @@ tlog(2, "Raw number of players: ", nrow(players))
 
 stints <- read.csv(file.path(fusion_folder, "stints_05_enwp.csv"))
 tlog(2, "Raw number of stints: ", nrow(stints))
-
-
-
-
-########################################################################
-# verifications in teams table
-
-# check that each team url is unique
-tlog("Checking URL uniqueness in teams table")
-for (l in 1:length(languages)) {
-  tlog(2, "Processing language ", languages[l], "(", l,"/", length(languages),")")
-
-  col_name <- paste0("wikipedia", languages[l])
-  urls <- teams[, col_name]
-  tt <- table(urls[!is.na(urls)])
-  if (any(tt > 1)) {
-    tlog(4, "Non-unique URLs found for language ", languages[l])
-    print(tt[tt > 1])
-  }
-}
-
-# check team types
-tlog("Checking team types")
-print(table(teams[, "type"]))
-# change "club" type name
-idx <- which(teams[, "type"] == "Club")
-teams[idx, "type"] <- "Club/franchise team"
-tlog("Fixed the type of ", length(idx), " team types")
-# check team types (again)
-tlog("Checking team types")
-print(table(teams[, "type"]))
-
-# check the presence of commas in team names
-tlog("Look for commas in team names")
-fields <- c("fullName", "altNames")
-for (field in fields) {
-  idx <- which(grepl(",", teams[, field], fixed = TRUE))
-  print(teams[idx, c("rugbyscopeId", field)])
-}
-
-
-
-
-########################################################################
-# verifications in players table
-
-# check that each team url is unique
-tlog("Checking URL uniqueness in players table")
-for (l in 1:length(languages)) {
-  tlog(2, "Processing language ", languages[l], "(", l,"/", length(languages),")")
-
-  col_name <- paste0("wikipedia", languages[l])
-  urls <- players[, col_name]
-  tt <- table(urls[!is.na(urls)])
-  if (any(tt > 1)) {
-    tlog(4, "Non-unique URLs found for language ", languages[l])
-    print(tt[tt > 1])
-  }
-}
-
-# check the presence of commas in player names
-tlog("Look for commas in player names")
-fields <- c("fullName", "firstName", "lastName", "altNames")
-for (field in fields) {
-  idx <- which(grepl("[,)(]", players[, field], fixed = FALSE))
-  print(players[idx, c("wikidataId", field)])
-}
-
-# list players without a birthdate
-tlog("Players without a birthdate:")
-idx <- which(is.na(players[, "birthDate"]))
-print(cbind(players[idx, c("wikidataId", "fullName")], paste0("http://www.wikipedia.org/wiki/", players[idx, "wikipediaEn"])))
 
 
 
@@ -161,9 +90,7 @@ if (length(idx) > 0) {
     )
   }))
 }
-#### debug
 #stints[which(stints[,"teamRsId"]==2687),"teamName"]
-#### >>>>>>>>>>>>>> Bonneuil
 
 # check that, in the final stint file, player names match main names in player table
 tlog("Checking that all player names in the stint table match the main names from  the player table")
@@ -185,14 +112,12 @@ if (length(idx) > 0) {
     )
   }))
 }
-stop(); end.rec.log()
 
 
 
 
 ########################################################################
 # resolve all WP redirections, as the URL possibly have changed since the retrieval of the first tables
-languages <- c("En", "Fr", "It", "Es", "Ja")
 
 # resolve wikipedia redirections for teams
 tlog("Resolving Wikipedia redirections and updating URLs in teams table")
@@ -269,6 +194,78 @@ for (l in 1:length(languages)) {
   # update team table with new URLs
   players[, col_name] <- new_urls
 }
+
+
+
+
+########################################################################
+# verifications in teams table
+
+# check that each team url is unique
+tlog("Checking URL uniqueness in teams table")
+for (l in 1:length(languages)) {
+  tlog(2, "Processing language ", languages[l], "(", l,"/", length(languages),")")
+
+  col_name <- paste0("wikipedia", languages[l])
+  urls <- teams[, col_name]
+  tt <- table(urls[!is.na(urls)])
+  if (any(tt > 1)) {
+    tlog(4, "Non-unique URLs found for language ", languages[l])
+    print(tt[tt > 1])
+  }
+}
+
+# check team types
+tlog("Checking team types")
+print(table(teams[, "type"]))
+# change "club" type name
+idx <- which(teams[, "type"] == "Club")
+teams[idx, "type"] <- "Club/franchise team"
+tlog("Fixed the type of ", length(idx), " team types")
+# check team types (again)
+tlog("Checking team types")
+print(table(teams[, "type"]))
+
+# check the presence of commas in team names
+tlog("Look for commas in team names")
+fields <- c("fullName", "altNames")
+for (field in fields) {
+  idx <- which(grepl(",", teams[, field], fixed = TRUE))
+  print(teams[idx, c("rugbyscopeId", field)])
+}
+
+
+
+
+########################################################################
+# verifications in players table
+
+# check that each team url is unique
+tlog("Checking URL uniqueness in players table")
+for (l in 1:length(languages)) {
+  tlog(2, "Processing language ", languages[l], "(", l,"/", length(languages),")")
+
+  col_name <- paste0("wikipedia", languages[l])
+  urls <- players[, col_name]
+  tt <- table(urls[!is.na(urls)])
+  if (any(tt > 1)) {
+    tlog(4, "Non-unique URLs found for language ", languages[l])
+    print(tt[tt > 1])
+  }
+}
+
+# check the presence of commas in player names
+tlog("Look for commas in player names")
+fields <- c("fullName", "firstName", "lastName", "altNames")
+for (field in fields) {
+  idx <- which(grepl("[,)(]", players[, field], fixed = FALSE))
+  print(players[idx, c("wikidataId", field)])
+}
+
+# list players without a birthdate
+tlog("Players without a birthdate:")
+idx <- which(is.na(players[, "birthDate"]))
+print(cbind(players[idx, c("wikidataId", "fullName")], paste0("http://www.wikipedia.org/wiki/", players[idx, "wikipediaEn"])))
 
 
 
