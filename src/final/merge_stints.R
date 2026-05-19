@@ -58,6 +58,7 @@ tlog(2, "Number of stints: ", nrow(stints))
 idx <- which(!is.na(stints[, "matchesPlayed"]) & stints[, "matchesPlayed"]==0 & !is.na(stints[, "pointsScored"]) & stints[, "pointsScored"]!=0)
 if (length(idx) > 0)
   stints[idx, "matchesPlayed"] <- NA
+tlog("Fixed 'zero played matches but has scored points' issue in ", length(idx), " stints")
 
 # if zero matches and zero points, then it probably means no stats >> make both NAs
 idx <- which(!is.na(stints[, "matchesPlayed"]) & stints[, "matchesPlayed"]==0 & !is.na(stints[, "pointsScored"]) & stints[, "pointsScored"]==0)
@@ -65,6 +66,7 @@ if (length(idx) > 0) {
   stints[idx, "matchesPlayed"] <- NA
   stints[idx, "pointsScored"] <- NA
 }
+tlog("Fixed 'zero played matches / zero scored points' in ", length(idx), " stints")
 
 
 
@@ -126,7 +128,7 @@ for (p in 1:nrow(players)) {
   player_stints <- stints[idx, ]
   player_teams <- sort(unique(player_stints[, "teamRsId"]))
 
-  # loop over the palyer's teams
+  # loop over the player's teams
   for (t in player_teams) {
 #    tlog(6, "Processing team ", t, " (", teams[teams[, "rugbyscopeId"] == t, "fullName"], ")")
     idx2 <- which(player_stints[, "teamRsId"] == t)
@@ -143,12 +145,12 @@ for (p in 1:nrow(players)) {
           
           if (((is.na(start1) && is.na(start2)) || (!is.na(start1) && !is.na(start2) && start1 == start2))
               && ((is.na(end1) && is.na(end2)) || (!is.na(end1) && !is.na(end2) && end1 == end2))) {
-            tlog(2, "Identical stints detected:")
+            tlog(8, "Identical stints detected:")
             print(team_stints[c(s1, s2), ])
             
             # merge stats in the first stint
             stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ])
-            tlog(2, "Merged stint:")
+            tlog(8, "Merged stint:")
             print(stints[idx[idx2[s1]], ])
 
             # mark the second stint for removal (good enough, as there are no complicated cases)
@@ -169,7 +171,90 @@ if (length(rem_marked) > 0)
 # display result
 tlog(2, "Number of identical stints merged: ", merged_stints)
 tlog(2, "Number of stints after merging: ", nrow(stints))
-stints0 <- stints; end.rec.log(); stop()
+stints0 <- stints
+
+
+
+
+########################################################################
+# merge consecutive stints at the same club
+tlog("Merging stints contained in other stints at the same club")
+
+# loop over players
+tlog(2, "Looping over players")
+merged_stints <- 0
+conflict_stints <- 0
+rem_marked <- c()
+for (p in 1:nrow(players)) {
+  player_id <- players[p, "wikidataId"]
+#  tlog(4, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
+
+  # retrieve the player's stints
+  idx <- which(stints[, "playerId"] == player_id)
+  player_stints <- stints[idx, ]
+  player_teams <- sort(unique(player_stints[, "teamRsId"]))
+
+  # loop over the player's teams
+  for (t in player_teams) {
+#    tlog(6, "Processing team ", t, " (", teams[teams[, "rugbyscopeId"] == t, "fullName"], ")")
+    idx2 <- which(player_stints[, "teamRsId"] == t)
+    team_stints <- player_stints[idx2, ]
+
+    # look for inclusions
+    if (nrow(team_stints) > 1) {
+      for (s1 in 1:(nrow(team_stints) - 1)) {
+        if (!(idx[idx2[s1]] %in% rem_marked)) {
+          start1 <- team_stints[s1, "startYear"]
+          end1 <- team_stints[s1, "endYear"]
+
+          if (!is.na(start1) && !is.na(end1)) {
+            iii <- (s1 + 1):nrow(team_stints)
+            idx3 <- s1 + which(!is.na(team_stints[iii, "startYear"]) & team_stints[iii, "startYear"] >= start1 &
+                              !is.na(team_stints[iii, "endYear"]) & team_stints[iii, "endYear"] <= end1)
+            # ignore rows already marked for deletion
+            idx3 <- idx3[!(idx[idx2[idx3]] %in% rem_marked)]
+
+            # single match
+            if (length(idx3) == 1) {
+              tlog(8, "One match detected:")
+              print(team_stints[c(s1, idx3), ])
+
+              # no date update in this case
+
+              # merge stats the regular way
+              stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[idx3, ])
+
+              # display updated stint
+              tlog(10, "Merged stint:")
+              print(stints[idx[idx2[s1]], ])
+
+              # mark the second stint for removal (good enough, as there are no complicated cases)
+              rem_marked <- c(rem_marked, idx[idx2[idx3]])
+              
+              merged_stints <- merged_stints + 1
+
+            # several matches
+            } else if (length(idx3) > 1) {
+              tlog(8, "Several matches detected:")
+              print(team_stints[c(s1, idx3), ])
+            }
+          }
+        }
+      }
+    }
+  }
+
+  readline(prompt="Press [enter] to continue")
+}
+tlog(2, "Number of stints before merging: ", nrow(stints))  # only 22 pairs of stints are concerned
+
+# remove the marked rows
+if (length(rem_marked) > 0)
+  stints <- stints[-rem_marked, ]
+# display result
+tlog(2, "Number of included stints merged: ", merged_stints)
+tlog(2, "Number of stints after merging: ", nrow(stints))
+tlog(2, "Number of conflicts detected: ", conflict_stints)
 
 
 
@@ -399,13 +484,13 @@ for (p in 1:nrow(players)) {
   player_stints <- stints[idx, ]
   player_teams <- sort(unique(player_stints[, "teamRsId"]))
 
-  # loop over the palyer's teams
+  # loop over the player's teams
   for (t in player_teams) {
 #    tlog(6, "Processing team ", t, " (", teams[teams[, "rugbyscopeId"] == t, "fullName"], ")")
     idx2 <- which(player_stints[, "teamRsId"] == t)
     team_stints <- player_stints[idx2, ]
 
-    # look for identical stints
+    # look for consecutive stints
     if (nrow(team_stints) > 1) {
       for (s1 in 1:(nrow(team_stints) - 1)) {
         if (!(idx[idx2[s1]] %in% rem_marked)) {
@@ -413,9 +498,10 @@ for (p in 1:nrow(players)) {
           end1 <- team_stints[s1, "endYear"]
 
           if (!is.na(end1)) {
-            idx3 <- s1 + which(team_stints[(s1 + 1):nrow(team_stints), "startYear"] == end1)
-# TODO remove marked rows here
-# case where the 2nd stint is inslde the 1st (= just 1 year long)
+            iii <- (s1 + 1):nrow(team_stints)
+            idx3 <- s1 + which(!is.na(team_stints[iii, "startYear"]) & team_stints[iii, "startYear"] == end1)
+            # ignore rows already marked for deletion
+            idx3 <- idx3[!(idx[idx2[idx3]] %in% rem_marked)]
 
             # single match
             if (length(idx3) == 1) {
@@ -483,6 +569,7 @@ stints0 <- stints; end.rec.log(); stop()
 # TODO
 # what about merging overlapping stints at the same club ?
 # then the pb becomes: adjusting the bounds of conflicting stints
+# or should we consider each WP version separately?
 
 
 
@@ -926,3 +1013,23 @@ end.rec.log()
 
 # stats
 # - compare evolution of number of player/team/stint *by data source*
+
+
+# principle :
+# - for a given player, extract the stints for each source
+# - fix each source separately
+# - compare them to find the best source
+# - then match the stints from the other sources to these best stints
+# - if matched: merge to existing stint
+# - if not : add extra stint
+
+# best sources :
+# - most stints?
+# - covers the longer time span?
+
+# 1) focus only on one source, get the stints of a player
+# 2) detect issues in these stints, fix them
+# 3) compare stings from WP versions : if no disagreement, merge
+# 4) if disagreement, start from the earliest stint
+# 5) if several, take the one from the source with the most stints
+# 6) if the next stint overlaps, fix its start year
