@@ -72,46 +72,6 @@ tlog("Fixed 'zero played matches / zero scored points' in ", length(idx), " stin
 
 
 ########################################################################
-# Merges the stats of two stints, taking their values into account
-# (including the presence of NAs).
-#
-# s1: first stint to merge, as a row in the stint table.
-# s2: second stint to merge, as a row in the stint table.
-#
-# returns: resulting merged stint.
-########################################################################
-merge_stint_stats <- function(s1, s2) {
-  # init result
-  res <- s1
-
-  # matches played
-  mp1 <- s1[, "matchesPlayed"]
-  mp2 <- s2[, "matchesPlayed"]
-  if (is.na(mp1))
-    res[, "matchesPlayed"] <- mp2
-  else
-    res[, "matchesPlayed"] <- max(mp1, mp2, na.rm = TRUE)
-
-  # points scored
-  ps1 <- s1[, "pointsScored"]
-  ps2 <- s2[, "pointsScored"]
-  if (is.na(ps1))
-    res[, "pointsScored"] <- ps2
-  else
-    res[, "pointsScored"] <- max(ps1, ps2, na.rm = TRUE)
-
-  # data source
-  ds1 <- trimws(unlist(strsplit(s1[, "dataSource"], ";")))
-  ds2 <- trimws(unlist(strsplit(s2[, "dataSource"], ";")))
-  res[, "dataSource"] <- paste0(sort(unique(union(ds1, ds2))), collapse = "; ")
-
-  return(res)
-}
-
-
-
-
-########################################################################
 # merge stints with identical dates
 tlog("Merging stints with identical dates")
 
@@ -149,7 +109,7 @@ for (p in 1:nrow(players)) {
             print(team_stints[c(s1, s2), ])
             
             # merge stats in the first stint
-            stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ])
+            stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ], mode = "max")
             tlog(8, "Merged stint:")
             print(stints[idx[idx2[s1]], ])
 
@@ -173,6 +133,9 @@ tlog(2, "Number of identical stints merged: ", merged_stints)
 tlog(2, "Number of stints after merging: ", nrow(stints))
 stints0 <- stints
 
+# record table
+tab.file <- file.path(data_folder, "stints_02.csv")
+write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -222,7 +185,7 @@ for (p in 1:nrow(players)) {
               # no date update in this case
 
               # merge stats the regular way
-              stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[idx3, ])
+              stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[idx3, ], mode = "max")
 
               # display updated stint
               tlog(10, "Merged stint:")
@@ -391,7 +354,7 @@ tlog(2, "Number of conflicts detected: ", conflict_stints)
 #                 stints[idx[idx2[s1]], "endYear"] <- ey2
               
 #               # merge stats in the first stint
-#               stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ])
+#               stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ], mode = "max")
 #               tlog(10, "Merged stint:")
 #               print(stints[idx[idx2[s1]], ])
 
@@ -746,7 +709,7 @@ for (p in 1:nrow(players)) {
                     stints[idx[idx2[s1]], "endYear"] <- ey1
                   
                   # merge stats in the first stint
-                  stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s_tgt, ], team_stints[s_rem, ])
+                  stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s_tgt, ], team_stints[s_rem, ], mode = "max")
                   tlog(12, "Merged stint:")
                   print(stints[idx[idx2[s1]], ])
 
@@ -982,19 +945,10 @@ print(player_conflicts)
 
 
 ########################################################################
-# record the updated tables
+# record the updated table
 
-# players
-tab.file <- file.path(data_folder, "players_02.csv")
-write.csv(players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
-
-# teams
-tab.file <- file.path(data_folder, "teams_02.csv")
-write.csv(teams, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
-
-# stints
-tab.file <- file.path(data_folder, "stints_02.csv")
-write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+# tab.file <- file.path(data_folder, "stints_02.csv")
+# write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 

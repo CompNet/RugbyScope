@@ -274,7 +274,7 @@ print(cbind(players[idx, c("wikidataId", "fullName")], paste0("http://www.wikipe
 # record the updated tables
 
 # players
-tab.file <- file.path(data_folder, "players_01.csv")
+tab.file <- file.path(data_folder, "players_02.csv")
 write.csv(players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # teams

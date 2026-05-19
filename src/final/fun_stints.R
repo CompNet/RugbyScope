@@ -9,7 +9,57 @@
 
 
 ########################################################################
-# For the specified player, extracts the stint sequence of each source.
+# Merges the stats of two stints, taking their values into account
+# (including the presence of NAs).
+#
+# s1: first stint to merge, as a row in the stint table.
+# s2: second stint to merge, as a row in the stint table.
+# mode: whether to take the max or the sum of the values.
+#
+# returns: resulting merged stint.
+########################################################################
+merge_stint_stats <- function(s1, s2, mode) {
+  # init result
+  res <- s1
+
+  # matches played
+  mp1 <- s1[, "matchesPlayed"]
+  mp2 <- s2[, "matchesPlayed"]
+  if (is.na(mp1))
+    res[, "matchesPlayed"] <- mp2
+  else {
+    if (mode == "max")
+      res[, "matchesPlayed"] <- max(mp1, mp2, na.rm = TRUE)
+    else if (mode =="sum")
+      res[, "matchesPlayed"] <- mp1 + mp2
+  }
+
+  # points scored
+  ps1 <- s1[, "pointsScored"]
+  ps2 <- s2[, "pointsScored"]
+  if (is.na(ps1))
+    res[, "pointsScored"] <- ps2
+  else {
+    if (mode == "max")
+      res[, "pointsScored"] <- max(ps1, ps2, na.rm = TRUE)
+    else if (mode =="sum")
+      res[, "pointsScored"] <- ps1 + ps2
+  }
+
+  # data source
+  ds1 <- trimws(unlist(strsplit(s1[, "dataSource"], ";")))
+  ds2 <- trimws(unlist(strsplit(s2[, "dataSource"], ";")))
+  res[, "dataSource"] <- paste0(sort(unique(union(ds1, ds2))), collapse = "; ")
+
+  return(res)
+}
+
+
+
+
+########################################################################
+# For the specified player, extracts the stint sequence of each data 
+#source (Wikidata, EN Wikipedia, FR Wikipedia, etc.).
 #
 # player_id: WD id of the player.
 # stints: full stint table.
@@ -32,6 +82,7 @@ retrieve_stints_by_source <- function(player_id, stints) {
 
   return(result)
 }
+#### test
 #retrieve_stints_by_source("Q26037",stints)
 
 
@@ -75,9 +126,9 @@ merge_stints_identical <- function(player_stints) {
                 print(team_stints[c(s1, s2), ])
                 
                 # merge stats in the first stint
-                stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ])
+                player_stints[idx[s1], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ], mode = "max")
                 tlog(8, "Merged stint:")
-                print(stints[idx[idx2[s1]], ])
+                print(player_stints[idx[s1], ])
 
                 # mark the second stint for removal
                 rem_marked <- c(rem_marked, idx[s2])
@@ -93,10 +144,16 @@ merge_stints_identical <- function(player_stints) {
 
   # remove the marked rows
   if (length(rem_marked) > 0)
-    stints <- stints[-rem_marked, ]
+    player_stints <- player_stints[-rem_marked, ]
 
-  return(stints)
+  return(player_stints)
 }
+#### test
+seq_list <- retrieve_stints_by_source("Q26037", stints)
+merge_stints_identical(seq_list$enWP)
+merge_stints_identical(rbind(seq_list$enWP,seq_list$enWP[1,]))
+
+
 
 
 
@@ -151,4 +208,5 @@ clean_stints_by_source <- function (seq_list) {
 # returns: name of the best source.
 ########################################################################
 retrieve_stints_by_source <- function(seq_list) {
+  # TODO
 }
