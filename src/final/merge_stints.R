@@ -290,7 +290,7 @@ stints0 <- stints; end.rec.log(); stop()
 #             }
 
 #             if (conf) {
-#               tlog(2, "Compatible stints detected:")
+#               tlog(10, "Compatible stints detected:")
 #               print(team_stints[c(s1, s2), ])
 
 #               # merge dates in the first stint
@@ -307,7 +307,7 @@ stints0 <- stints; end.rec.log(); stop()
               
 #               # merge stats in the first stint
 #               stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s1, ], team_stints[s2, ])
-#               tlog(2, "Merged stint:")
+#               tlog(10, "Merged stint:")
 #               print(stints[idx[idx2[s1]], ])
 
 #               # mark the second stint for removal
@@ -382,6 +382,112 @@ stints0 <- stints; end.rec.log(); stop()
 
 
 ########################################################################
+# merge consecutive stints at the same club
+tlog("Merging exactly consecutive stints at the same club")
+
+# loop over players
+tlog(2, "Looping over players")
+merged_stints <- 0
+conflict_stints <- 0
+rem_marked <- c()
+for (p in 1:nrow(players)) {
+  player_id <- players[p, "wikidataId"]
+#  tlog(4, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
+
+  # retrieve the player's stints
+  idx <- which(stints[, "playerId"] == player_id)
+  player_stints <- stints[idx, ]
+  player_teams <- sort(unique(player_stints[, "teamRsId"]))
+
+  # loop over the palyer's teams
+  for (t in player_teams) {
+#    tlog(6, "Processing team ", t, " (", teams[teams[, "rugbyscopeId"] == t, "fullName"], ")")
+    idx2 <- which(player_stints[, "teamRsId"] == t)
+    team_stints <- player_stints[idx2, ]
+
+    # look for identical stints
+    if (nrow(team_stints) > 1) {
+      for (s1 in 1:(nrow(team_stints) - 1)) {
+        if (!(idx[idx2[s1]] %in% rem_marked)) {
+          start1 <- team_stints[s1, "startYear"]
+          end1 <- team_stints[s1, "endYear"]
+
+          if (!is.na(end1)) {
+            idx3 <- s1 + which(team_stints[(s1 + 1):nrow(team_stints), "startYear"] == end1)
+# TODO remove marked rows here
+# case where the 2nd stint is inslde the 1st (= just 1 year long)
+
+            # single match
+            if (length(idx3) == 1) {
+              tlog(8, "One match detected:")
+              print(team_stints[c(s1, idx3), ])
+
+              # update end date in first stint
+              stints[idx[idx2[s1]], "endYear"] <- team_stints[idx3, "endYear"]
+
+              # add 2nd stint stats to 1st stint
+              mp1 <- team_stints[s1, "matchesPlayed"]
+              mp2 <- team_stints[idx3, "matchesPlayed"]
+              ps1 <- team_stints[s1, "pointsScored"]
+              ps2 <- team_stints[idx3, "pointsScored"]
+              if (all(!is.na(c(mp1, ps1, mp2, ps2))) && mp1 == mp2 && ps1 == ps2) {
+                # duplicate of the same stint: do nothing stat-wise
+                conflict_stints <- conflict_stints + 1
+              } else {
+                if (!is.na(mp1)) {
+                  if (!is.na(mp2))
+                    stints[idx[idx2[s1]], "matchesPlayed"] <- mp1 + mp2
+                } else
+                    stints[idx[idx2[s1]], "matchesPlayed"] <- mp2
+                if (!is.na(ps1)) {
+                  if (!is.na(ps2))
+                    stints[idx[idx2[s1]], "pointsScored"] <- ps1 + ps2
+                } else
+                    stints[idx[idx2[s1]], "pointsScored"] <- ps2
+              }
+
+              # display updated stint
+              tlog(10, "Merged stint:")
+              print(stints[idx[idx2[s1]], ])
+
+              # mark the second stint for removal (good enough, as there are no complicated cases)
+              rem_marked <- c(rem_marked, idx[idx2[idx3]])
+              
+              merged_stints <- merged_stints + 1
+
+            # several matches
+            } else if (length(idx3) > 1) {
+              tlog(8, "Several matches detected:")
+              print(team_stints[c(s1, idx3), ])
+            }
+          }
+        }
+      }
+    }
+  }
+}
+tlog(2, "Number of stints before merging: ", nrow(stints))  # only 22 pairs of stints are concerned
+
+# remove the marked rows
+if (length(rem_marked) > 0)
+  stints <- stints[-rem_marked, ]
+# display result
+tlog(2, "Number of consecutive stints merged: ", merged_stints)
+tlog(2, "Number of stints after merging: ", nrow(stints))
+tlog(2, "Number of conflicts detected: ", conflict_stints)
+stints0 <- stints; end.rec.log(); stop()
+
+
+
+
+# TODO
+# what about merging overlapping stints at the same club ?
+# then the pb becomes: adjusting the bounds of conflicting stints
+
+
+
+
+########################################################################
 # merge stints with incomplete or only approximately matching dates
 tlog("Merging stints with incomplete/approximately matching dates")
 tolerance <- 1    # tolerance (in years) when comparing periods
@@ -409,155 +515,159 @@ for (p in 1:nrow(players)) {
     if (nrow(team_stints) > 1) {
       for (s1 in 1:(nrow(team_stints) - 1)) {
         #tlog(8, "s1: ", s1)
-        for (s2 in (s1 + 1):nrow(team_stints)) {
-          #tlog(10, "s2: ", s2)
-          # check that the 2nd stint is not already marked for deletion
-          if (!(idx[idx2[s2]] %in% rem_marked)) {
+        # check that the 1st stint is not already marked for deletion
+        if (!(idx[idx2[s1]] %in% rem_marked)) {
+          # loop over the remaining stints
+          for (s2 in (s1 + 1):nrow(team_stints)) {
+            #tlog(10, "s2: ", s2)
+            # check that the 2nd stint is not already marked for deletion
+            if (!(idx[idx2[s2]] %in% rem_marked)) {
 
-            start1 <- team_stints[s1, "startYear"]
-            end1 <- team_stints[s1, "endYear"]
-            start2 <- team_stints[s2, "startYear"]
-            end2 <- team_stints[s2, "endYear"]
-            if (is.na(start1)) {
-              if (is.na(end1)) {
-                if (is.na(start2)) {
-                  if (is.na(end2)) {
-                    # s1==NA e1==NA s2==NA e2==NA
-                    conf <- TRUE
+              start1 <- team_stints[s1, "startYear"]
+              end1 <- team_stints[s1, "endYear"]
+              start2 <- team_stints[s2, "startYear"]
+              end2 <- team_stints[s2, "endYear"]
+              if (is.na(start1)) {
+                if (is.na(end1)) {
+                  if (is.na(start2)) {
+                    if (is.na(end2)) {
+                      # s1==NA e1==NA s2==NA e2==NA
+                      conf <- TRUE
+                    } else {
+                      # s1==NA e1==NA s2==NA e2!=NA
+                      conf <- TRUE
+                    }
                   } else {
-                    # s1==NA e1==NA s2==NA e2!=NA
-                    conf <- TRUE
+                    if (is.na(end2)) {
+                      # s1==NA e1==NA s2!=NA e2==NA
+                      conf <- TRUE
+                    } else {
+                      # s1==NA e1==NA s2!=NA e2!=NA
+                      conf <- TRUE
+                    }
                   }
                 } else {
-                  if (is.na(end2)) {
-                    # s1==NA e1==NA s2!=NA e2==NA
-                    conf <- TRUE
+                  if (is.na(start2)) {
+                    if (is.na(end2)) {
+                      # s1==NA e1!=NA s2==NA e2==NA
+                      conf <- TRUE
+                    } else {
+                      # s1==NA e1!=NA s2==NA e2!=NA
+                      conf <- abs(end1 - end2) <= tolerance
+                    }
                   } else {
-                    # s1==NA e1==NA s2!=NA e2!=NA
-                    conf <- TRUE
+                    if (is.na(end2)) {
+                      # s1==NA e1!=NA s2!=NA e2==NA
+                      conf <- end1 >= start2
+                    } else {
+                      # s1==NA e1!=NA s2!=NA e2!=NA
+                      conf <- abs(end1 - end2) <= tolerance && end1 >= start2 && end1 <= end2
+                    }
                   }
                 }
               } else {
-                if (is.na(start2)) {
-                  if (is.na(end2)) {
-                    # s1==NA e1!=NA s2==NA e2==NA
-                    conf <- TRUE
+                if (is.na(end1)) {
+                  if (is.na(start2)) {
+                    if (is.na(end2)) {
+                      # s1!=NA e1==NA s2==NA e2==NA
+                      conf <- TRUE
+                    } else {
+                      # s1!=NA e1==NA s2==NA e2!=NA
+                      conf <- start1 <= end2
+                    }
                   } else {
-                    # s1==NA e1!=NA s2==NA e2!=NA
-                    conf <- abs(end1 - end2) <= tolerance
+                    if (is.na(end2)) {
+                      # s1!=NA e1==NA s2!=NA e2==NA
+                      conf <- abs(start1 - start2) <= tolerance
+                    } else {
+                      # s1!=NA e1==NA s2!=NA e2!=NA
+                      conf <- abs(start1 - start2) <= tolerance && start1 >= start2 && start1 <= end2
+                    }
                   }
                 } else {
-                  if (is.na(end2)) {
-                    # s1==NA e1!=NA s2!=NA e2==NA
-                    conf <- end1 >= start2
+                  if (is.na(start2)) {
+                    if (is.na(end2)) {
+                      # s1!=NA e1!=NA s2==NA e2==NA
+                      conf <- TRUE
+                    } else {
+                      # s1!=NA e1!=NA s2==NA e2!=NA
+                      conf <- abs(end1 - end2) <= tolerance && end2 >= start1 && end2 <= start1
+                    }
                   } else {
-                    # s1==NA e1!=NA s2!=NA e2!=NA
-                    conf <- abs(end1 - end2) <= tolerance && end1 >= start2 && end1 <= end2
+                    if (is.na(end2)) {
+                      # s1!=NA e1!=NA s2!=NA e2==NA
+                      conf <- abs(start1 - start2) <= tolerance && start2 >= start1 && start2 <= end1
+                    } else {
+                      # s1!=NA e1!=NA s2!=NA e2!=NA
+                      conf <- abs(start1 - start2) <= tolerance && abs(end1 - end2) <= tolerance &&
+                                (start1 >= start2 && start1 <= end2 || end1 >= start2 && end1 <= end2)
+                    }
                   }
                 }
               }
-            } else {
-              if (is.na(end1)) {
-                if (is.na(start2)) {
-                  if (is.na(end2)) {
-                    # s1!=NA e1==NA s2==NA e2==NA
-                    conf <- TRUE
-                  } else {
-                    # s1!=NA e1==NA s2==NA e2!=NA
-                    conf <- start1 <= end2
-                  }
-                } else {
-                  if (is.na(end2)) {
-                    # s1!=NA e1==NA s2!=NA e2==NA
-                    conf <- abs(start1 - start2) <= tolerance
-                  } else {
-                    # s1!=NA e1==NA s2!=NA e2!=NA
-                    conf <- abs(start1 - start2) <= tolerance && start1 >= start2 && start1 <= end2
-                  }
-                }
-              } else {
-                if (is.na(start2)) {
-                  if (is.na(end2)) {
-                    # s1!=NA e1!=NA s2==NA e2==NA
-                    conf <- TRUE
-                  } else {
-                    # s1!=NA e1!=NA s2==NA e2!=NA
-                    conf <- abs(end1 - end2) <= tolerance && end2 >= start1 && end2 <= start1
-                  }
-                } else {
-                  if (is.na(end2)) {
-                    # s1!=NA e1!=NA s2!=NA e2==NA
-                    conf <- abs(start1 - start2) <= tolerance && start2 >= start1 && start2 <= end1
-                  } else {
-                    # s1!=NA e1!=NA s2!=NA e2!=NA
-                    conf <- abs(start1 - start2) <= tolerance && abs(end1 - end2) <= tolerance &&
-                              (start1 >= start2 && start1 <= end2 || end1 >= start2 && end1 <= end2)
-                  }
-                }
-              }
-            }
 
-            if (conf) {
-              tlog(2, "Similar stints detected:")
-              print(team_stints[c(s1, s2), ])
+              if (conf) {
+                tlog(12, "Similar stints detected:")
+                print(team_stints[c(s1, s2), ])
 
-              mp1 <- team_stints[s1, "matchesPlayed"]
-              mp2 <- team_stints[s2, "matchesPlayed"]
-              ps1 <- team_stints[s1, "pointsScored"]
-              ps2 <- team_stints[s2, "pointsScored"]
+                mp1 <- team_stints[s1, "matchesPlayed"]
+                mp2 <- team_stints[s2, "matchesPlayed"]
+                ps1 <- team_stints[s1, "pointsScored"]
+                ps2 <- team_stints[s2, "pointsScored"]
 
-              # we merge into the stint that has stats, or that has the largest stats
-              # if same stats or not stats at all: do not merge
+                # we merge into the stint that has stats, or that has the largest stats
+                # if same stats or not stats at all: do not merge
 
-              # no stat at all
-              merge_flag <- FALSE
-              if (all(is.na(c(mp1, mp2, ps1, ps2)))) {
-                # do nothing
+                # no stat at all
                 merge_flag <- FALSE
-              # first stint better
-              } else if (((!is.na(mp1) && is.na(mp2)) || (!is.na(mp1) && !is.na(mp2) && mp1 > mp2)) || ((!is.na(ps1) && is.na(ps2)) || (!is.na(ps1) && !is.na(ps2) && ps1 > ps2))) {
-                # merge into first stint
-                s_tgt <- s1
-                s_rem <- s2
-                merge_flag <- TRUE
-              # second stint better
-              } else if (((!is.na(mp2) && is.na(mp1)) || (!is.na(mp1) && !is.na(mp2) && mp2 > mp1)) || ((!is.na(ps2) && is.na(ps1)) || (!is.na(ps1) && !is.na(ps2) && ps2 > ps1))) {
-                # merge into second stint
-                s_tgt <- s2
-                s_rem <- s1
-                merge_flag <- TRUE
-              # other situations
-              } else {
-                # do nothing
-                merge_flag <- FALSE
-              }
+                if (all(is.na(c(mp1, mp2, ps1, ps2)))) {
+                  # do nothing
+                  merge_flag <- FALSE
+                # first stint better
+                } else if (((!is.na(mp1) && is.na(mp2)) || (!is.na(mp1) && !is.na(mp2) && mp1 > mp2)) || ((!is.na(ps1) && is.na(ps2)) || (!is.na(ps1) && !is.na(ps2) && ps1 > ps2))) {
+                  # merge into first stint
+                  s_tgt <- s1
+                  s_rem <- s2
+                  merge_flag <- TRUE
+                # second stint better
+                } else if (((!is.na(mp2) && is.na(mp1)) || (!is.na(mp1) && !is.na(mp2) && mp2 > mp1)) || ((!is.na(ps2) && is.na(ps1)) || (!is.na(ps1) && !is.na(ps2) && ps2 > ps1))) {
+                  # merge into second stint
+                  s_tgt <- s2
+                  s_rem <- s1
+                  merge_flag <- TRUE
+                # other situations
+                } else {
+                  # do nothing
+                  merge_flag <- FALSE
+                }
 
-              if (merge_flag) {
-                # merge dates in the first stint
-                # start year
-                sy1 <- team_stints[s_tgt, "startYear"]
-                sy2 <- team_stints[s_rem, "startYear"]
-                if (is.na(sy1))
-                  stints[idx[idx2[s1]], "startYear"] <- sy2
-                else
-                  stints[idx[idx2[s1]], "startYear"] <- sy1
-                # end year
-                ey1 <- team_stints[s_tgt, "endYear"]
-                ey2 <- team_stints[s_rem, "endYear"]
-                if (is.na(ey1))
-                  stints[idx[idx2[s1]], "endYear"] <- ey2
-                else
-                  stints[idx[idx2[s1]], "endYear"] <- ey1
-                
-                # merge stats in the first stint
-                stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s_tgt, ], team_stints[s_rem, ])
-                tlog(2, "Merged stint:")
-                print(stints[idx[idx2[s1]], ])
+                if (merge_flag) {
+                  # merge dates in the first stint
+                  # start year
+                  sy1 <- team_stints[s_tgt, "startYear"]
+                  sy2 <- team_stints[s_rem, "startYear"]
+                  if (is.na(sy1))
+                    stints[idx[idx2[s1]], "startYear"] <- sy2
+                  else
+                    stints[idx[idx2[s1]], "startYear"] <- sy1
+                  # end year
+                  ey1 <- team_stints[s_tgt, "endYear"]
+                  ey2 <- team_stints[s_rem, "endYear"]
+                  if (is.na(ey1))
+                    stints[idx[idx2[s1]], "endYear"] <- ey2
+                  else
+                    stints[idx[idx2[s1]], "endYear"] <- ey1
+                  
+                  # merge stats in the first stint
+                  stints[idx[idx2[s1]], ] <- merge_stint_stats(team_stints[s_tgt, ], team_stints[s_rem, ])
+                  tlog(12, "Merged stint:")
+                  print(stints[idx[idx2[s1]], ])
 
-                # mark the second stint for removal
-                rem_marked <- c(rem_marked, idx[idx2[s2]])
-                
-                merged_stints <- merged_stints + 1
+                  # mark the second stint for removal
+                  rem_marked <- c(rem_marked, idx[idx2[s2]])
+                  
+                  merged_stints <- merged_stints + 1
+                }
               }
             }
           }
@@ -595,9 +705,6 @@ tlog(2, "Number of stints after merging: ", nrow(stints))
 # > use conflicting stints to decide?
 # "Q26037","Quade Cooper","Q1368281",253,"Queensland Reds",2006,2015,109,768,"enWP"
 # "Q26037","Quade Cooper","Q1368281",253,"Queensland Reds",2006,2017,119,846,"jaWP"
-
-# TODO
-# before all that: merge consecutive stints at the same club
 
 
 
