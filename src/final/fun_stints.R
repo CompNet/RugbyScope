@@ -94,7 +94,7 @@ retrieve_stints_by_source <- function(player_id, stints) {
 #
 # player_stints: table containing the stints of a specific player.
 #
-# returns: same table, but with merged identical stints.
+# returns: same table, but with merged identical stints. And some stats.
 ########################################################################
 merge_stints_identical <- function(player_stints) {
   player_teams <- sort(unique(player_stints[, "teamRsId"]))
@@ -146,20 +146,205 @@ merge_stints_identical <- function(player_stints) {
   if (length(rem_marked) > 0)
     player_stints <- player_stints[-rem_marked, ]
 
-  return(player_stints)
+  result <- list(player_stints=player_stints, merged_stints=merged_stints)
+  return(result)
 }
 #### test
-seq_list <- retrieve_stints_by_source("Q26037", stints)
-merge_stints_identical(seq_list$enWP)
-merge_stints_identical(rbind(seq_list$enWP,seq_list$enWP[1,]))
+#seq_list <- retrieve_stints_by_source("Q26037", stints)
+#merge_stints_identical(seq_list$enWP)
+#print("---------------------------------")
+#merge_stints_identical(rbind(seq_list$enWP, seq_list$enWP[1, ]))
+
+
+
+
+########################################################################
+# Takes the stints of a player, detect those that are nested (i.e. same
+# team and one stint's time period included in the other's) and merges
+# them.
+#
+# player_stints: table containing the stints of a specific player.
+#
+# returns: same table, but with merged nested stints. And some stats.
+########################################################################
+merge_stints_nested <- function(player_stints) {
+  player_teams <- sort(unique(player_stints[, "teamRsId"]))
+
+  # loop over teams
+  merged_stints <- 0
+  conflict_stints <- 0
+  rem_marked <- c()
+  for (team_id in player_teams) {
+#    tlog(6, "Processing team ", team_id, " (", teams[teams[, "rugbyscopeId"] == team_id, "fullName"], ")")
+
+    # retrieve team stints
+    idx <- which(player_stints[, "teamRsId"] == team_id)
+    team_stints <- player_stints[idx, ]
+
+    # look for inclusions
+    if (nrow(team_stints) > 1) {
+      for (s1 in 1:(nrow(team_stints) - 1)) {
+        if (!(idx[s1] %in% rem_marked)) {
+          start1 <- team_stints[s1, "startYear"]
+          end1 <- team_stints[s1, "endYear"]
+
+          if (!is.na(start1) && !is.na(end1)) {
+            iii <- (s1 + 1):nrow(team_stints)
+            idx2 <- s1 + which(!is.na(team_stints[iii, "startYear"]) & team_stints[iii, "startYear"] >= start1 &
+                              !is.na(team_stints[iii, "endYear"]) & team_stints[iii, "endYear"] <= end1)
+            # ignore rows already marked for deletion
+            idx2 <- idx2[!(idx[idx2] %in% rem_marked)]
+
+            # single match
+            if (length(idx2) == 1) {
+              tlog(8, "One match detected:")
+              print(team_stints[c(s1, idx2), ])
+
+              # no date update in this case
+
+              # max-merge stats the regular way
+              player_stints[idx[s1], ] <- merge_stint_stats(team_stints[s1, ], team_stints[idx2, ], mode = "max")
+
+              # display updated stint
+              tlog(10, "Merged stint:")
+              print(player_stints[idx[s1], ])
+
+              # mark the second stint for removal (good enough, as there are no complicated cases)
+              rem_marked <- c(rem_marked, idx[idx2])
+              
+              merged_stints <- merged_stints + 1
+
+            # several matches
+            } else if (length(idx2) > 1) {
+              tlog(8, "Several matches detected:")
+              print(team_stints[c(s1, idx2), ])
+              conflict_stints <- conflict_stints + 1
+            }
+          }
+        }
+      }
+    }
+  }
+
+  # remove the marked rows
+  if (length(rem_marked) > 0)
+    player_stints <- player_stints[-rem_marked, ]
+
+  result <- list(player_stints=player_stints, merged_stints=merged_stints, conflict_stints=conflict_stints)
+  return(result)
+}
+#### test
+#seq_list <- retrieve_stints_by_source("Q26037", stints)
+#merge_stints_nested(seq_list$enWP)
+#print("---------------------------------")
+#tmp <- rbind(seq_list$enWP, seq_list$enWP[1, ])
+#tmp[nrow(tmp), "startYear"] <- 2010
+#merge_stints_nested(tmp)
 
 
 
 
 
-    # stints <- merge_stints_nested(stints)
-    # stints <- merge_stints_consecutive(stints)
-    # stints <- merge_stints_overlapping(stints)
+
+
+
+########################################################################
+# Merges the directly consecutive stints of a player, i.e. same team and
+# same end1 / start2 year. The stats are added.
+#
+# player_stints: table containing the stints of a specific player.
+#
+# returns: same table, but with merged consecutive stints. And some stats.
+########################################################################
+merge_stints_consecutive <- function(player_stints) {
+  player_teams <- sort(unique(player_stints[, "teamRsId"]))
+
+  # loop over teams
+  merged_stints <- 0
+  conflict_stints <- 0
+  rem_marked <- c()
+  for (team_id in player_teams) {
+#    tlog(6, "Processing team ", team_id, " (", teams[teams[, "rugbyscopeId"] == team_id, "fullName"], ")")
+
+    # retrieve team stints
+    idx <- which(player_stints[, "teamRsId"] == team_id)
+    team_stints <- player_stints[idx, ]
+
+    # look for consecutive stints
+    if (nrow(team_stints) > 1) {
+      for (s1 in 1:(nrow(team_stints) - 1)) {
+        if (!(idx[s1] %in% rem_marked)) {
+          start1 <- team_stints[s1, "startYear"]
+          end1 <- team_stints[s1, "endYear"]
+
+          if (!is.na(end1)) {
+            iii <- (s1 + 1):nrow(team_stints)
+            idx2 <- s1 + which(!is.na(team_stints[iii, "startYear"]) & team_stints[iii, "startYear"] == end1)
+            # ignore rows already marked for deletion
+            idx2 <- idx2[!(idx[idx2] %in% rem_marked)]
+
+            # single match
+            if (length(idx2) == 1) {
+              tlog(8, "One match detected:")
+              print(team_stints[c(s1, idx2), ])
+
+              # update end date in first stint
+              team_stints[s1, "endYear"] <- team_stints[idx2, "endYear"]
+
+              # possibly add 2nd stint stats to 1st stint
+              mp1 <- team_stints[s1, "matchesPlayed"]
+              mp2 <- team_stints[idx2, "matchesPlayed"]
+              ps1 <- team_stints[s1, "pointsScored"]
+              ps2 <- team_stints[idx2, "pointsScored"]
+              if (all(!is.na(c(mp1, ps1, mp2, ps2))) && mp1 == mp2 && ps1 == ps2)
+                # likely a duplicate of the first stint: do nothing stats-wise
+                player_stints[idx[s1], ] <- team_stints[s1, ]
+              else
+                player_stints[idx[s1], ] <- merge_stint_stats(team_stints[s1, ], team_stints[idx2, ], mode = "sum")
+
+              # display updated stint
+              tlog(10, "Merged stint:")
+              print(player_stints[idx[s1], ])
+
+              # mark the second stint for removal (good enough, as there are no complicated cases)
+              rem_marked <- c(rem_marked, idx[idx2])
+              
+              merged_stints <- merged_stints + 1
+
+            # several matches
+            } else if (length(idx2) > 1) {
+              tlog(8, "Several matches detected:")
+              print(team_stints[c(s1, idx2), ])
+            }
+          }
+        }
+      }
+    }
+  }
+
+  # remove the marked rows
+  if (length(rem_marked) > 0)
+    player_stints <- player_stints[-rem_marked, ]
+
+  result <- list(player_stints=player_stints, merged_stints=merged_stints, conflict_stints=conflict_stints)
+  return(result)
+}
+#### test
+#seq_list <- retrieve_stints_by_source("Q26037", stints)
+#merge_stints_consecutive(seq_list$enWP)
+#print("---------------------------------")
+#tmp <- rbind(seq_list$enWP, seq_list$enWP[1, ])
+#tmp[nrow(tmp), "startYear"] <- 2015
+#tmp[nrow(tmp), "endYear"] <- 2016
+#merge_stints_consecutive(tmp)
+stop()
+
+
+########################################################################
+########################################################################
+merge_stints_overlapping <- function(player_stints) {
+  # TODO
+}
 
 
 
@@ -170,25 +355,48 @@ merge_stints_identical(rbind(seq_list$enWP,seq_list$enWP[1,]))
 #
 # stint_list: list of stint sequences (one for each data source).
 #
-# returns: same list, but cleaned.
+# returns: same list, but cleaned. And some stats.
 ########################################################################
-clean_stints_by_source <- function (seq_list) {
-  result <- list()
-  sources <- names(stints)
+clean_stints_by_source <- function(seq_list) {
+  res_lst <- list()
+  sources <- names(seq_list)
+
+  step_names <- c("identical", "nested", "consecutive", "overlapping")
+  merged_stints <- rep(0, length(step_names))
+  conflict_stints <- rep(0, length(step_names))
+  names(merged_stints) <- names(conflict_stints) <- step_names
 
   # loop over data sources
   for (source in sources) {
-    stints <- seq_list[[source]]
-    res <- stints[-(1:nrow(stints)), ]
+    player_stints <- seq_list[[source]]
 
-    stints <- merge_stints_identical(stints)
-    stints <- merge_stints_nested(stints)
-    stints <- merge_stints_consecutive(stints)
-    stints <- merge_stints_overlapping(stints)
+    # merge identical stints
+    tmp <- merge_stints_identical(player_stints)
+    player_stints <- tmp$player_stints
+    merged_stints["identical"] <- merged_stints["identical"] + tmp$merged_stints
 
-    result[[source]] <- stints
+    # merge nested stints
+    tmp <- merge_stints_nested(player_stints)
+    player_stints <- tmp$player_stints
+    merged_stints["nested"] <- merged_stints["nested"] + tmp$merged_stints
+    conflict_stints["nested"] <- conflict_stints["nested"] + tmp$conflict_stints
+
+    # merge consecutive stints
+    tmp <- merge_stints_consecutive(player_stints)
+    player_stints <- tmp$player_stints
+    merged_stints["consecutive"] <- merged_stints["consecutive"] + tmp$merged_stints
+    conflict_stints["consecutive"] <- conflict_stints["consecutive"] + tmp$conflict_stints
+
+    # merge overlapping stints
+    tmp <- merge_stints_overlapping(player_stints)
+    player_stints <- tmp$player_stints
+    merged_stints["overlapping"] <- merged_stints["overlapping"] + tmp$merged_stints
+    conflict_stints["overlapping"] <- conflict_stints["overlapping"] + tmp$conflict_stints
+
+    res_lst[[source]] <- player_stints
   }
 
+  result <- list(res_lst, merged_stints=merged_stints, conflict_stints=conflict_stints)
   return(result)
 }
 
@@ -207,6 +415,6 @@ clean_stints_by_source <- function (seq_list) {
 # 
 # returns: name of the best source.
 ########################################################################
-retrieve_stints_by_source <- function(seq_list) {
+identify_best_source <- function(seq_list) {
   # TODO
 }
