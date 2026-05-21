@@ -123,7 +123,8 @@ for (p in 1:nrow(players)) {
     }
   }
 }
-tlog(2, "Number of stints before merging: ", nrow(stints))  # only 22 pairs of stints are concerned
+tlog(2, "Number of stints before merging: ", nrow(stints))  
+# > only 22 pairs of stints are concerned
 
 # remove the marked rows
 if (length(rem_marked) > 0)
@@ -775,6 +776,11 @@ for (p in 1:nrow(players)) {
   idx <- which(stints[, "playerId"] == player_id)
   player_stints <- stints[idx, ]
   player_teams <- sort(unique(player_stints[, "teamRsId"]))
+  # keep only club stints to look for conflicts
+  if (length(player_teams) > 0) {
+    team_types <- teams[match(player_teams, teams[, "rugbyscopeId"]), "type"]
+    player_teams <- player_teams[team_types == "Club/franchise team"]
+  }
 
   # loop over teams
   for (t in player_teams) {
@@ -987,3 +993,32 @@ end.rec.log()
 # 4) if disagreement, start from the earliest stint
 # 5) if several, take the one from the source with the most stints
 # 6) if the next stint overlaps, fix its start year
+
+
+
+# "Q18455","Ben Tune","Q1368281",253,"Queensland Reds",1995,2007,112,155,"WD; frWP; esWP"
+# "Q18455","Ben Tune","Q1368281",253,"Queensland Reds",1996,2007,84,155,"esWP; enWP"
+# > same stint, but one year difference at start
+
+# "Q29880","Ben Botica","Q104855944",2904,"North Harbour Rugby Union Team",2009,2011,19,168,"frWP"
+# "Q29880","Ben Botica","Q104855944",2904,"North Harbour Rugby Union Team",2009,2012,17,168,"enWP"
+# > same stint, but one year difference at end
+
+# > check stint begore / after to determine the correct date
+
+# "Q72185","Manu Tuilagi","Q1071691",204,"Leicester Tigers",2009,2020,128,205,"WD; jaWP; frWP; enWP"
+# "Q72185","Manu Tuilagi","Q1071691",204,"Leicester Tigers",2010,2020,95,145,"itWP; esWP"
+
+# other possibility : use largest stats
+
+# "Q31193","Ben Smith","Q104856109",2911,"Otago Rugby Union Team",2007,2012,59,75,"jaWP; frWP; enWP"
+# "Q31193","Ben Smith","Q104856109",2911,"Otago Rugby Union Team",2007,2016,37,50,"itWP"
+# "Q31193","Ben Smith","Q104856109",2911,"Otago Rugby Union Team",2008,2009,NA,NA,"esWP"     >> this one should be merged in one of the others beforehand
+# very different stints: can't see how to solve that automatically
+
+# algo if one year difference
+# 1) check if stint before: use end year to select compatible start year
+#    if several stints before: should be solved beforehand
+# 2) if no stint before (= first stint), then compare stats and use option with largest stats
+# 3) if no stat, use majority stint in terms of sources
+# 4) of none of that... deal with it manually?

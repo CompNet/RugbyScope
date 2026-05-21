@@ -412,15 +412,14 @@ merge_stints_overlapping <- function(player_stints) {
   result <- list(player_stints=player_stints, merged_stints=merged_stints, conflict_stints=conflict_stints)
   return(result)
 }
-### test
-seq_list <- retrieve_stints_by_source("Q26037", stints)
-merge_stints_overlapping(seq_list$enWP)
-print("---------------------------------")
-tmp <- rbind(seq_list$enWP, seq_list$enWP[1, ])
-tmp[nrow(tmp), "startYear"] <- 2013
-tmp[nrow(tmp), "endYear"] <- 2016
-merge_stints_overlapping(tmp)
-stop()
+#### test
+#seq_list <- retrieve_stints_by_source("Q26037", stints)
+#merge_stints_overlapping(seq_list$enWP)
+#print("---------------------------------")
+#tmp <- rbind(seq_list$enWP, seq_list$enWP[1, ])
+#tmp[nrow(tmp), "startYear"] <- 2013
+#tmp[nrow(tmp), "endYear"] <- 2016
+#merge_stints_overlapping(tmp)
 
 
 
@@ -444,6 +443,7 @@ clean_stints_by_source <- function(seq_list) {
 
   # loop over data sources
   for (source in sources) {
+    #tlog(4, "Processing source ", source)
     player_stints <- seq_list[[source]]
 
     # merge identical stints
@@ -472,25 +472,114 @@ clean_stints_by_source <- function(seq_list) {
     res_lst[[source]] <- player_stints
   }
 
-  result <- list(res_lst, merged_stints=merged_stints, conflict_stints=conflict_stints)
+  result <- list(seq_list=res_lst, merged_stints=merged_stints, conflict_stints=conflict_stints)
   return(result)
 }
+#### test
+#seq_list <- retrieve_stints_by_source("Q26037", stints)
+#clean_stints_by_source(seq_list)
+#print("---------------------------------")
+#tmp <- rbind(seq_list$enWP, seq_list$enWP[1, ])
+#tmp[nrow(tmp), "startYear"] <- 2013
+#tmp[nrow(tmp), "endYear"] <- 2016
+#seq_list$enWP <- tmp
+#clean_stints_by_source(seq_list)
+#stop()
 
 
 
 
 ########################################################################
 # Identifies the best data source for the specified player. We compare the
-# stint sequence according to all sources, and keep the best one according
+# stint sequence coming from each source, and keep the best one according
 # to the following criteria (by decreasing order of importance):
-# - total number of covered years
-# - 
-# We assume there is no redundant stints, source-wise.
-# 
+# - total number of covered years (we want to maximize this)
+# - time span covered by the source (we want to maximize this)
+# - number of discontinuities in the stint sequence (max)
+# - number of overlaps between club stints (we want to minimize that)
+# We assume the cleaning process was applied, and at this stage there is
+# no redundant stints, source-wise.
+#
 # seq_list: list of player's stint sequences, on for each data source.
-# 
+#
 # returns: name of the best source.
 ########################################################################
 identify_best_source <- function(seq_list) {
-  # TODO
+  sources <- names(seq_list)
+
+  # loop over data sources
+  covered_durations <- c()
+  covered_spans <- c()
+  gap_years <- c()
+  overlap_years <- c()
+  for (source in sources) {
+    #tlog(4, "Processing source ", source)
+    player_stints <- seq_list[[source]]
+
+    # retrieve club stints
+    team_ids <- player_stints[, "teamRsId"]
+    team_types <- teams[match(team_ids, teams[, "rugbyscopeId"]), "type"]
+    idx <- which(team_types == "Club/franchise team")
+    club_stints <- player_stints[idx, ]
+
+    # compute number of gap years at clubs
+    gap_years[source] <- 0
+    if (nrow(club_stints) > 1) {
+      for (s1 in 1:(nrow(club_stints) - 1)) {
+        end1 <- club_stints[s1, "endYear"]
+
+        if (!is.na(end1)) {
+          start2 <- club_stints[s1 + 1, "startYear"]
+
+          if (!is.na(start2))
+            gap_years[source] <- gap_years[source] + max(0, start2 - end1)
+        }
+      }
+    }
+
+    # compute number of overlap years at clubs
+    overlap_years[source] <- 0
+    if (nrow(club_stints) > 1) {
+      for (s1 in 1:(nrow(club_stints) - 1)) {
+        end1 <- club_stints[s1, "endYear"]
+
+        if (!is.na(end1)) {
+          start2 <- club_stints[s1 + 1, "startYear"]
+
+          if (!is.na(start2))
+            overlap_years[source] <- overlap_years[source] + max(0, end1 - start2)
+        }
+      }
+    }
+
+    # compute total number of covered years
+    covered_durations[source] <- 0
+    for (s in 1:nrow(player_stints)) {
+      start <- player_stints[s, "startYear"]
+      end <- player_stints[s, "endYear"]
+      if (is.na(start) || is.na(end))
+        covered_durations[source] <- covered_durations[source] + 1
+      else
+        covered_durations[source] <- covered_durations[source] + (end - start)
+    }
+
+    # compute covered time span
+    years <- unlist(player_stints[, c("startYear", "endYear")])
+    earliest <- min(years, na.rm = TRUE)
+    latest <- max(years, na.rm = TRUE)
+    if (is.na(earliest) || is.na(latest))
+      covered_spans[source] <- length(player_stints)
+    else
+      covered_spans[source] <- latest - earliest
+  }
+
+  # identify best sources
+  result <- sources[order(gap_years + overlap_years, covered_durations, covered_spans, decreasing = TRUE)][1]
+  return(result)
 }
+#### test
+seq_list <- retrieve_stints_by_source("Q26037", stints)
+tmp <- clean_stints_by_source(seq_list)
+seq_list <- tmp$seq_list
+identify_best_source(seq_list)
+stop()
