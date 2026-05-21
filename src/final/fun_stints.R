@@ -578,8 +578,7 @@ identify_best_source <- function(seq_list) {
   return(result)
 }
 #### test
-seq_list <- retrieve_stints_by_source("Q26037", stints)
-tmp <- clean_stints_by_source(seq_list)
-seq_list <- tmp$seq_list
-identify_best_source(seq_list)
-stop()
+#seq_list <- retrieve_stints_by_source("Q26037", stints)
+#tmp <- clean_stints_by_source(seq_list)
+#seq_list <- tmp$seq_list
+#identify_best_source(seq_list)
