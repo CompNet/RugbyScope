@@ -140,7 +140,7 @@ write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 ########################################################################
-# merge consecutive stints at the same club
+# merge nested stints at the same club
 tlog("Merging stints contained in other stints at the same club")
 
 # loop over players

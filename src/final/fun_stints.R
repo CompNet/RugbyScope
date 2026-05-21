@@ -244,10 +244,6 @@ merge_stints_nested <- function(player_stints) {
 
 
 
-
-
-
-
 ########################################################################
 # Merges the directly consecutive stints of a player, i.e. same team and
 # same end1 / start2 year. The stats are added.
@@ -315,6 +311,7 @@ merge_stints_consecutive <- function(player_stints) {
             } else if (length(idx2) > 1) {
               tlog(8, "Several matches detected:")
               print(team_stints[c(s1, idx2), ])
+              conflict_stints <- conflict_stints + 1
             }
           }
         }
@@ -337,14 +334,93 @@ merge_stints_consecutive <- function(player_stints) {
 #tmp[nrow(tmp), "startYear"] <- 2015
 #tmp[nrow(tmp), "endYear"] <- 2016
 #merge_stints_consecutive(tmp)
-stop()
+
+
 
 
 ########################################################################
+# For a given player, merges overlapping stints at the same club. We keep
+# the max stats.
+#
+# player_stints: table containing the stints of a specific player.
+#
+# returns: same table, but with merged overlapping stints. And some stats.
 ########################################################################
 merge_stints_overlapping <- function(player_stints) {
-  # TODO
+  player_teams <- sort(unique(player_stints[, "teamRsId"]))
+
+  # loop over teams
+  merged_stints <- 0
+  conflict_stints <- 0
+  rem_marked <- c()
+  for (team_id in player_teams) {
+#    tlog(6, "Processing team ", team_id, " (", teams[teams[, "rugbyscopeId"] == team_id, "fullName"], ")")
+
+    # retrieve team stints
+    idx <- which(player_stints[, "teamRsId"] == team_id)
+    team_stints <- player_stints[idx, ]
+
+    # look for overlapping stints
+    if (nrow(team_stints) > 1) {
+      for (s1 in 1:(nrow(team_stints) - 1)) {
+        if (!(idx[s1] %in% rem_marked)) {
+          start1 <- team_stints[s1, "startYear"]
+          end1 <- team_stints[s1, "endYear"]
+
+          if (!is.na(end1)) {
+            iii <- (s1 + 1):nrow(team_stints)
+            idx2 <- s1 + which(!is.na(team_stints[iii, "startYear"]) & team_stints[iii, "startYear"] <= end1)
+            # ignore rows already marked for deletion
+            idx2 <- idx2[!(idx[idx2] %in% rem_marked)]
+
+            # single match
+            if (length(idx2) == 1) {
+              tlog(8, "One match detected:")
+              print(team_stints[c(s1, idx2), ])
+
+              # update end date in first stint
+              team_stints[s1, "endYear"] <- team_stints[idx2, "endYear"]
+
+              # combine stats
+              player_stints[idx[s1], ] <- merge_stint_stats(team_stints[s1, ], team_stints[idx2, ], mode = "max")
+
+              # display updated stint
+              tlog(10, "Merged stint:")
+              print(player_stints[idx[s1], ])
+
+              # mark the second stint for removal (good enough, as there are no complicated cases)
+              rem_marked <- c(rem_marked, idx[idx2])
+              
+              merged_stints <- merged_stints + 1
+
+            # several matches
+            } else if (length(idx2) > 1) {
+              tlog(8, "Several matches detected:")
+              print(team_stints[c(s1, idx2), ])
+              conflict_stints <- conflict_stints + 1
+            }
+          }
+        }
+      }
+    }
+  }
+
+  # remove the marked rows
+  if (length(rem_marked) > 0)
+    player_stints <- player_stints[-rem_marked, ]
+
+  result <- list(player_stints=player_stints, merged_stints=merged_stints, conflict_stints=conflict_stints)
+  return(result)
 }
+### test
+seq_list <- retrieve_stints_by_source("Q26037", stints)
+merge_stints_overlapping(seq_list$enWP)
+print("---------------------------------")
+tmp <- rbind(seq_list$enWP, seq_list$enWP[1, ])
+tmp[nrow(tmp), "startYear"] <- 2013
+tmp[nrow(tmp), "endYear"] <- 2016
+merge_stints_overlapping(tmp)
+stop()
 
 
 
