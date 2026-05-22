@@ -752,6 +752,13 @@ for (p in 1:nrow(players)) {
 }
 print(player_conflicts)
 
+idx <- which(stints[, "playerId"] %in% player_conflicts)
+conf_stints <- stints[idx, ]
+tab.file <- file.path(data_folder, "stints_03_conflicts.csv")
+write.csv(conf_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+ok_stints <- stints[-idx, ]
+tab.file <- file.path(data_folder, "stints_03_ok.csv")
+write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # s1==NA
 #   e1==NA
