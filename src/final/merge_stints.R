@@ -889,3 +889,10 @@ end.rec.log()
 # 2) if no stint before (= first stint), then compare stats and use option with largest stats
 # 3) if no stat, use majority stint in terms of sources
 # 4) of none of that... deal with it manually?
+
+
+
+
+# TODO
+# better order stints:
+#   > replace start NA by 0000  and end NA by 9999
