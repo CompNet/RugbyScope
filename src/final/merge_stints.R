@@ -898,6 +898,9 @@ end.rec.log()
 #   > replace start NA by 0000  and end NA by 9999
 # - when extracting the net: complement missing end years by leveraging present start years
 #   possibly put 2025 for the latest stint
+# - remove stints and parts of stints before 18 yo (without changing stats)
 
-# - missing cases : 
+# - missing cases:
 #   2021-NA vs. 2022-NA (same team)
+
+# note : overlapping stints at clubs = loans
