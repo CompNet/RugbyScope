@@ -894,5 +894,10 @@ end.rec.log()
 
 
 # TODO
-# better order stints:
+# - better order stints:
 #   > replace start NA by 0000  and end NA by 9999
+# - when extracting the net: complement missing end years by leveraging present start years
+#   possibly put 2025 for the latest stint
+
+# - missing cases : 
+#   2021-NA vs. 2022-NA (same team)
