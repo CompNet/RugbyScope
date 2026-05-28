@@ -895,7 +895,9 @@ end.rec.log()
 
 # TODO
 # - better order stints:
-#   > replace start NA by 0000  and end NA by 9999
+#   - replace start NA by 0000  and end NA by 9999
+#   - put invitational then national teams at the end
+#   - if start1-end1 and start2-end1 with the latter nested in the former, it's a loan >> keep the first one first, even if start1==start2 and end1 >= end2
 # - when extracting the net: complement missing end years by leveraging present start years
 #   possibly put 2025 for the latest stint
 # - remove stints and parts of stints before 18 yo (without changing stats)
