@@ -905,4 +905,9 @@ end.rec.log()
 # - missing cases:
 #   2021-NA vs. 2022-NA (same team)
 
-# note : overlapping stints at clubs = loans
+# for net extraction: 
+# - complement missing dates/ split depending on loans, etc.
+#   note : overlapping stints at clubs = loans
+#          but there are also just simultaneous membership
+# - complement missing U18 dates using player's age
+#   > opposite : complement missing birthdate using Uxx stints
