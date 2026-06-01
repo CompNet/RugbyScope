@@ -911,3 +911,5 @@ end.rec.log()
 #          but there are also just simultaneous membership
 # - complement missing U18 dates using player's age
 #   > opposite : complement missing birthdate using Uxx stints
+
+# check UBB in re-merged stint table
