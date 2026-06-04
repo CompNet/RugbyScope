@@ -894,22 +894,30 @@ end.rec.log()
 
 
 # TODO
-# - better order stints:
-#   - replace start NA by 0000  and end NA by 9999
-#   - put invitational then national teams at the end
-#   - if start1-end1 and start2-end1 with the latter nested in the former, it's a loan >> keep the first one first, even if start1==start2 and end1 >= end2
-# - when extracting the net: complement missing end years by leveraging present start years
-#   possibly put 2025 for the latest stint
-# - remove stints and parts of stints before 18 yo (without changing stats)
+###############################
+# - DATABASE
+#   - better order stints:
+#     - replace start NA by 0000  and end NA by 9999
+#     - put invitational then national teams at the end
+#     - if start1-end1 and start2-end1 with the latter nested in the former, it's a loan >> keep the first one first, even if start1==start2 and end1 >= end2
+#   - complement data:
+#     - remove stints and parts of stints before 18 yo (without changing stats)
+#     - complement missing U18 (and other youth teams) dates using player's age
+#     - and do the opposite: complement missing birthdate using Uxx stints
+#     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
+#     - classify stints based on the WP categories (provincial, pro, etc.)
+#   - misc
+#     - missing cases: 2021-NA vs. 2022-NA (same team)
+#     - check pre-2006 UBB stints in re-merged stint table
+###############################
+# - NET EXTRACTION
+#   - complement missing end years by leveraging present start years
+#   - complement missing dates/ split depending on loans, etc.
+#     note : overlapping stints at clubs = loans
+#            but there are also just simultaneous membership
+#   - possibly put 2025 for the latest stint ?
+###############################
 
-# - missing cases:
-#   2021-NA vs. 2022-NA (same team)
 
-# for net extraction: 
-# - complement missing dates/ split depending on loans, etc.
-#   note : overlapping stints at clubs = loans
-#          but there are also just simultaneous membership
-# - complement missing U18 dates using player's age
-#   > opposite : complement missing birthdate using Uxx stints
 
-# check UBB in re-merged stint table
+
