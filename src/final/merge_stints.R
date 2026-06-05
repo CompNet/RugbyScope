@@ -909,6 +909,10 @@ end.rec.log()
 #   - misc
 #     - missing cases: 2021-NA vs. 2022-NA (same team)
 #     - check pre-2006 UBB stints in re-merged stint table
+#     - we should have kept stint order, loan indications, and stint types (amateur, provincial, junior, senior, etc.)
+#     - check stins whose source is only "WD", "esWP" or "itWP"
+#     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
+#     - handle frWP stints at the start of career: often wrong
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
@@ -917,7 +921,3 @@ end.rec.log()
 #            but there are also just simultaneous membership
 #   - possibly put 2025 for the latest stint ?
 ###############################
-
-
-
-
