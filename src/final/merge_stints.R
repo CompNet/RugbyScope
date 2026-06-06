@@ -913,6 +913,9 @@ end.rec.log()
 #     - check stins whose source is only "WD", "esWP" or "itWP"
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - handle frWP stints at the start of career: often wrong
+#     - confusion Dragons vs. Newport RFC
+#     - enWP = Crociati Rugby Football Club is probably a confusion with Rugby Parma FC
+#     - confusion Rugby club Auch and FC Auch Gers
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
