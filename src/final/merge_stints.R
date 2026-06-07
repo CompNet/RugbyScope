@@ -916,6 +916,7 @@ end.rec.log()
 #     - confusion Dragons vs. Newport RFC
 #     - enWP = Crociati Rugby Football Club is probably a confusion with Rugby Parma FC
 #     - confusion Rugby club Auch and FC Auch Gers
+#     - lots of "Barbarian FC" backed by just WD
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
