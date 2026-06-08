@@ -912,9 +912,12 @@ end.rec.log()
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - handle frWP stints at the start of career: often wrong
 #       > check players with very long career spans, probably this type of problem
+#       > and/or players with big gaps between stints
 #     - confusion Dragons vs. Newport RFC
 #     - lots of "Barbarian FC" backed by just WD
 #     - stints with the same dates and scores but different teams > probably a wrong team in one of the sources
+#     - france olympic team > remove
+#     - Academica Coimbra – rugby > fix name
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
