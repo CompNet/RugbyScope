@@ -31,7 +31,7 @@ start.rec.log("MergingRedundantStints")
 
 ########################################################################
 # paths
-data_folder <- file.path("data")
+data_folder <- file.path("data", "fusion")
 
 
 
@@ -40,14 +40,13 @@ data_folder <- file.path("data")
 # load previously merged tables
 tlog("Loading cleaned tables")
 
-teams <- read.csv(file.path(data_folder, "teams_01.csv"))
+teams <- read.csv(file.path(data_folder, "teams_08.csv"))
 tlog(2, "Number of teams: ", nrow(teams))
 
-players <- read.csv(file.path(data_folder, "players_02.csv"))
+players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-#stints <- read.csv(file.path(data_folder, "stints_01.csv"))
-stints <- read.csv(file.path(data_folder, "stints_02.csv"))
+stints <- read.csv(file.path(data_folder, "stints_09_remaining.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -908,15 +907,14 @@ end.rec.log()
 #     - classify stints based on the WP categories (provincial, pro, etc.)
 #   - misc
 #     - missing cases: 2021-NA vs. 2022-NA (same team)
-#     - check pre-2006 UBB stints in re-merged stint table
 #     - we should have kept stint order, loan indications, and stint types (amateur, provincial, junior, senior, etc.)
-#     - check stins whose source is only "WD", "esWP" or "itWP"
+#     - check stints whose source is only "WD", "esWP" or "itWP"
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - handle frWP stints at the start of career: often wrong
+#       > check players with very long career spans, probably this type of problem
 #     - confusion Dragons vs. Newport RFC
-#     - enWP = Crociati Rugby Football Club is probably a confusion with Rugby Parma FC
-#     - confusion Rugby club Auch and FC Auch Gers
 #     - lots of "Barbarian FC" backed by just WD
+#     - stints with the same dates and scores but different teams > probably a wrong team in one of the sources
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
@@ -925,3 +923,35 @@ end.rec.log()
 #            but there are also just simultaneous membership
 #   - possibly put 2025 for the latest stint ?
 ###############################
+
+
+########################################################################
+# list players with conflicting stints
+tlog("Identify players with a single stint")
+
+# loop over players
+tlog(2, "Looping over players")
+selected_players <- c()
+for (p in 1:nrow(players)) {
+  player_id <- players[p, "wikidataId"]
+  tlog(4, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
+  found_conflict <- FALSE
+
+  # retrieve the player's stints
+  idx <- which(stints[, "playerId"] == player_id)
+  player_stints <- stints[idx, ]
+  player_teams <- sort(unique(player_stints[, "teamRsId"]))
+  # keep only club stints to look for conflicts
+  if (length(player_teams) <= 2) {
+    selected_players <- c(selected_players, player_id)
+  }
+}
+print(selected_players)
+
+idx <- which(stints[, "playerId"] %in% selected_players)
+conf_stints <- stints[idx, ]
+tab.file <- file.path(data_folder, "stints_09_removed.csv")
+write.csv(conf_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+ok_stints <- stints[-idx, ]
+tab.file <- file.path(data_folder, "stints_09_kept.csv")
+write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
