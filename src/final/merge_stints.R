@@ -46,7 +46,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_09_remaining.csv"))
+stints <- read.csv(file.path(data_folder, "stints_09_removed.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -918,6 +918,8 @@ end.rec.log()
 #     - stints with the same dates and scores but different teams > probably a wrong team in one of the sources
 #     - france olympic team > remove
 #     - Academica Coimbra – rugby > fix name
+#     - check that all players in the old table appear in the new one, to verify no stint was lost
+#     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
@@ -938,23 +940,38 @@ selected_players <- c()
 for (p in 1:nrow(players)) {
   player_id <- players[p, "wikidataId"]
   tlog(4, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
-  found_conflict <- FALSE
 
   # retrieve the player's stints
   idx <- which(stints[, "playerId"] == player_id)
   player_stints <- stints[idx, ]
   player_teams <- sort(unique(player_stints[, "teamRsId"]))
-  # keep only club stints to look for conflicts
-  if (length(player_teams) <= 2) {
-    selected_players <- c(selected_players, player_id)
+  team_types <- teams[match(player_teams, teams[, "rugbyscopeId"]), "type"]
+
+  if (nrow(player_stints) > 0) {
+    # focus on a specific situation
+    if (length(player_teams) <= 2) {
+      # 2 stints without dates
+      #if (nrow(player_stints)==2 && (all(is.na(player_stints[1, c("startYear", "endYear")])) || all(is.na(player_stints[2, c("startYear", "endYear")]))))
+      # one national team stint
+      #if (any(grepl("National", team_types, fixed = TRUE)))
+      # overlapping periods without NA
+      # if (all(!is.na(unlist(player_stints[, c("startYear", "endYear")]))) && 
+      #   (player_stints[1, "startYear"] >= player_stints[2, "startYear"] && player_stints[1, "startYear"] <= player_stints[2, "endYear"] ||
+      #   player_stints[2, "startYear"] >= player_stints[1, "startYear"] && player_stints[2, "startYear"] <= player_stints[1, "endYear"]))
+      # overlapping periods with NA
+      if (!is.na(player_stints[1, "endYear"]) && !is.na(player_stints[2, "startYear"]) && 
+          (player_stints[1, "endYear"] >= player_stints[2, "startYear"] &&
+           (is.na(player_stints[2, "endYear"]) || player_stints[1, "startYear"] <= player_stints[2, "endYear"])))
+        selected_players <- c(selected_players, player_id)
+    }
   }
 }
 print(selected_players)
 
 idx <- which(stints[, "playerId"] %in% selected_players)
 conf_stints <- stints[idx, ]
-tab.file <- file.path(data_folder, "stints_09_removed.csv")
+tab.file <- file.path(data_folder, "stints_09_removed2.csv")
 write.csv(conf_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ok_stints <- stints[-idx, ]
-tab.file <- file.path(data_folder, "stints_09_kept.csv")
+tab.file <- file.path(data_folder, "stints_09_kept2.csv")
 write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
