@@ -916,8 +916,6 @@ end.rec.log()
 #     - confusion Dragons vs. Newport RFC
 #     - lots of "Barbarian FC" backed by just WD
 #     - stints with the same dates and scores but different teams > probably a wrong team in one of the sources
-#     - france olympic team > remove
-#     - Academica Coimbra – rugby > fix name
 #     - check that all players in the old table appear in the new one, to verify no stint was lost
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 ###############################
