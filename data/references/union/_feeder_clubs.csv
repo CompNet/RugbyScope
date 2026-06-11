@@ -1,72 +1,207 @@
-"country","startYear","endYear","feederId","feederName","receiverId","receiverName"
-,,,275,"Newport RFC",7,"Dragons"
-,,,,,,
-,,,928,"Auckland RFU Team ",,
-,,,957,"Bay of Plenty Steamers",,
-,,,1027,"Buller Rugby Football Union ",,
-,,,2903,"Canterbury Rugby Union Team ",,
-,,,2907,"Counties Manukau Rugby Union Team",,
-,,,1200,"East Coast Rugby Football Union ",,
-,,,2908,"Hawke's Bay Rugby Union Team",,
-,,,1347,"Horowhenua-Kapiti Rugby Football Union ",,
-,,,541,"King Country Rugby Football Union ",,
-,,,2909,"Manawatu Rugby Union Team",,
-,,,361,"Marlborough Rugby Union ",,
-,,,1510,"Mid Canterbury Rugby Football Union ",,
-,,,1554,"Nelson Bays Rugby Union ",,
-,,,2904,"North Harbour Rugby Union Team",,
-,,,1582,"North Otago Rugby Football Union ",,
-,,,2910,"Northland Rugby Union Team",,
-,,,2911,"Otago Rugby Union Team ",,
-,,,832,"Poverty Bay Rugby Football Union ",,
-,,,1811,"South Canterbury Rugby Football Union ",,
-,,,2912,"Southland RFU Team",,
-,,,2913,"Taranaki Rugby Union Team ",,
-,,,2905,"Tasman Rugby Union Team ",,
-,,,1880,"Thames Valley Rugby Football Union ",,
-,,,2915,"Waikato Rugby Union Team",,
-,,,1946,"Wairarapa Bush Rugby Football Union ",,
-,,,730,"Wanganui Rugby Football Union ",,
-,,,270,"Wellington Rugby Football Union Team",,
-,,,736,"West Coast Rugby Football Union ",,
-,,,,,,
-,,,,,,
-,,,,,,
-"New Zealand",1996,1998,928,"Auckland RFU Team ",232,"Blues"
-"New Zealand",1996,1998,2907,"Counties Manukau Rugby Union Team",232,"Blues"
-"New Zealand",1996,1998,1880,"Thames Valley Rugby Football Union ",232,"Blues"
-"New Zealand",1996,1998,2915,"Waikato Rugby Union Team",72,"Chiefs"
-"New Zealand",1996,1998,957,"Bay of Plenty Steamers",72,"Chiefs"
-"New Zealand",1996,1998,541,"King Country Rugby Football Union ",72,"Chiefs"
-"New Zealand",1996,1998,2910,"Northland Rugby Union Team",72,"Chiefs"
-"New Zealand",1996,1998,2904,"North Harbour Rugby Union Team",72,"Chiefs"
-"New Zealand",1999,"NA",928,"Auckland RFU Team ",232,"Blues"
-"New Zealand",1999,"NA",2907,"Counties Manukau Rugby Union Team",72,"Chiefs"
-"New Zealand",1999,"NA",1880,"Thames Valley Rugby Football Union ",72,"Chiefs"
-"New Zealand",1999,"NA",2915,"Waikato Rugby Union Team",72,"Chiefs"
-"New Zealand",1999,"NA",957,"Bay of Plenty Steamers",72,"Chiefs"
-"New Zealand",1999,"NA",541,"King Country Rugby Football Union ",72,"Chiefs"
-"New Zealand",1999,"NA",2910,"Northland Rugby Union Team",232,"Blues"
-"New Zealand",1999,"NA",2904,"North Harbour Rugby Union Team",232,"Blues"
-"New Zealand",2013,"NA",2913,"Taranaki Rugby Union Team ",72,"Chiefs"
-"New Zealand",2025,"NA",1200,"East Coast Rugby Football Union ",72,"Chiefs"
-"New Zealand",1996,"NA",270,"Wellington Rugby Football Union Team",99,"Hurricanes "
-"New Zealand",1996,2012,2913,"Taranaki Rugby Union Team ",99,"Hurricanes "
-"New Zealand",1996,"NA",2909,"Manawatu Rugby Union Team",99,"Hurricanes "
-"New Zealand",1996,"NA",2908,"Hawke's Bay Rugby Union Team",99,"Hurricanes "
-"New Zealand",1996,2012,1200,"East Coast Rugby Football Union ",99,"Hurricanes "
-"New Zealand",1996,"NA",832,"Poverty Bay Rugby Football Union ",99,"Hurricanes "
-"New Zealand",1996,"NA",730,"Wanganui Rugby Football Union ",99,"Hurricanes "
-"New Zealand",1996,"NA",1946,"Wairarapa Bush Rugby Football Union ",99,"Hurricanes "
-"New Zealand",1996,"NA",1347,"Horowhenua-Kapiti Rugby Football Union ",99,"Hurricanes "
-"New Zealand",1996,"NA",2903,"Canterbury Rugby Union Team ",188,"Crusaders "
-"New Zealand",1996,"NA",1811,"South Canterbury Rugby Football Union ",188,"Crusaders "
-"New Zealand",1996,"NA",1510,"Mid Canterbury Rugby Football Union ",188,"Crusaders "
-"New Zealand",1996,"NA",1027,"Buller Rugby Football Union ",188,"Crusaders "
-"New Zealand",1996,"NA",736,"West Coast Rugby Football Union ",188,"Crusaders "
-"New Zealand",1996,2005,361,"Marlborough Rugby Union ",188,"Crusaders "
-"New Zealand",1996,2005,1554,"Nelson Bays Rugby Union ",188,"Crusaders "
-"New Zealand",2006,"NA",2905,"Tasman Rugby Union Team ",188,"Crusaders "
-"New Zealand",1996,"NA",2911,"Otago Rugby Union Team ",240,"Highlanders"
-"New Zealand",1996,"NA",2912,"Southland RFU Team",240,"Highlanders"
-"New Zealand",1996,"NA",1582,"North Otago Rugby Football Union ",240,"Highlanders"
+country,startYear,endYear,feederId,feederName,receiverId,receiverName
+Wales,2003,2004,104,Pontypridd RFC,185,Celtic Warriors
+Wales,2003,2004,440,Bridgend Ravens,185,Celtic Warriors
+Wales,2003,NA,150,Swansea RFC,273,Ospreys
+Wales,2003,NA,276,Neath RFC,273,Ospreys
+Wales,2004,NA,440,Bridgend Ravens,273,Ospreys
+Wales,2004,NA,104,Pontypridd RFC,14,Cardiff Rugby
+Wales,2004,NA,1509,Merthyr RFC,14,Cardiff Rugby
+Wales,2003,NA,151,Cardiff RFC,14,Cardiff Rugby
+Wales,2003,NA,272,Llanelli RFC,64,Scarlets
+Wales,2003,NA,200,Carmarthen Quins RFC,64,Scarlets
+Wales,2003,NA,100,Llandovery RFC,64,Scarlets
+Wales,2003,NA,215,Pontypool RFC,7,Dragons
+Wales,2003,NA,450,Caerphilly RFC,7,Dragons
+Wales,2003,NA,214,Cross Keys RFC,7,Dragons
+Wales,2003,NA,275,Newport RFC,7,Dragons
+Wales,2003,NA,216,Ebbw Vale RFC,7,Dragons
+New Zealand,1996,1998,928,Auckland RFU Team,232,Blues
+New Zealand,1996,1998,2907,Counties Manukau Rugby Union Team,232,Blues
+New Zealand,1996,1998,1880,Thames Valley Rugby Football Union,232,Blues
+New Zealand,1996,1998,2915,Waikato Rugby Union Team,72,Chiefs
+New Zealand,1996,1998,957,Bay of Plenty Steamers,72,Chiefs
+New Zealand,1996,1998,541,King Country Rugby Football Union,72,Chiefs
+New Zealand,1996,1998,2910,Northland Rugby Union Team,72,Chiefs
+New Zealand,1996,1998,2904,North Harbour Rugby Union Team,72,Chiefs
+New Zealand,1999,NA,928,Auckland RFU Team,232,Blues
+New Zealand,1999,NA,2907,Counties Manukau Rugby Union Team,72,Chiefs
+New Zealand,1999,NA,1880,Thames Valley Rugby Football Union,72,Chiefs
+New Zealand,1999,NA,2915,Waikato Rugby Union Team,72,Chiefs
+New Zealand,1999,NA,957,Bay of Plenty Steamers,72,Chiefs
+New Zealand,1999,NA,541,King Country Rugby Football Union,72,Chiefs
+New Zealand,1999,NA,2910,Northland Rugby Union Team,232,Blues
+New Zealand,1999,NA,2904,North Harbour Rugby Union Team,232,Blues
+New Zealand,2013,NA,2913,Taranaki Rugby Union Team,72,Chiefs
+New Zealand,2025,NA,1200,East Coast Rugby Football Union,72,Chiefs
+New Zealand,1996,NA,270,Wellington Rugby Football Union Team,99,Hurricanes 
+New Zealand,1996,2012,2913,Taranaki Rugby Union Team,99,Hurricanes 
+New Zealand,1996,NA,2909,Manawatu Rugby Union Team,99,Hurricanes 
+New Zealand,1996,NA,2908,Hawke's Bay Rugby Union Team,99,Hurricanes 
+New Zealand,1996,2012,1200,East Coast Rugby Football Union,99,Hurricanes 
+New Zealand,1996,NA,832,Poverty Bay Rugby Football Union,99,Hurricanes 
+New Zealand,1996,NA,730,Wanganui Rugby Football Union,99,Hurricanes 
+New Zealand,1996,NA,1946,Wairarapa Bush Rugby Football Union,99,Hurricanes 
+New Zealand,1996,NA,1347,Horowhenua-Kapiti Rugby Football Union,99,Hurricanes 
+New Zealand,1996,NA,2903,Canterbury Rugby Union Team,188,Crusaders 
+New Zealand,1996,NA,1811,South Canterbury Rugby Football Union,188,Crusaders 
+New Zealand,1996,NA,1510,Mid Canterbury Rugby Football Union,188,Crusaders 
+New Zealand,1996,NA,1027,Buller Rugby Football Union,188,Crusaders 
+New Zealand,1996,NA,736,West Coast Rugby Football Union,188,Crusaders 
+New Zealand,1996,2005,361,Marlborough Rugby Union,188,Crusaders 
+New Zealand,1996,2005,1554,Nelson Bays Rugby Union,188,Crusaders 
+New Zealand,2006,NA,2905,Tasman Rugby Union Team,188,Crusaders 
+New Zealand,1996,NA,2911,Otago Rugby Union Team,240,Highlanders
+New Zealand,1996,NA,2912,Southland RFU Team,240,Highlanders
+New Zealand,1996,NA,1582,North Otago Rugby Football Union,240,Highlanders
+South Africa,1998,NA,236,Falcons,156,Bulls
+South Africa,1998,2005,233,Pumas,156,Bulls
+South Africa,1998,2005,308,Leopards,156,Bulls
+South Africa,1998,NA,22,Cheetahs,241,Lions
+South Africa,2006,NA,233,Pumas,241,Lions
+South Africa,2006,NA,308,Leopards,241,Lions
+South Africa,1998,NA,235,Boland Cavaliers,135,Stormers 
+South Africa,1997,2005,103,Border Bulldogs,121,Sharks
+South Africa,1997,2005,495,Eastern Province Kings,121,Sharks
+South Africa,2006,2015,234,Griquas,22,Cheetahs 
+South Africa,2006,2015,531,Griffons,22,Cheetahs 
+South Africa,2021,NA,234,Griquas,22,Cheetahs 
+South Africa,2021,NA,531,Griffons,22,Cheetahs 
+South Africa,2006,NA,495,Eastern Province Kings,179,Southern Kings
+South Africa,2006,NA,103,Border Bulldogs,179,Southern Kings
+South Africa,2006,NA,237,SWD Eagles,179,Southern Kings
+Australia,1996,NA,42,Canberra Vikings,80,ACT Brumbies
+Australia,1996,NA,1203,"Eastern Suburbs RUFC""",80,ACT Brumbies
+Australia,1996,NA,1283,Gungahlin Eagles,80,ACT Brumbies
+Australia,1996,NA,1690,Queanbeyan Whites,80,ACT Brumbies
+Australia,1996,NA,1055,Canberra Royals,80,ACT Brumbies
+Australia,1996,NA,1904,Tuggeranong Vikings,80,ACT Brumbies
+Australia,1996,NA,1915,Uni-Norths Owls,80,ACT Brumbies
+Australia,1996,NA,1974,Wests Lions,80,ACT Brumbies
+Australia,1996,NA,2210,New South Wales Country Eagles,61,New South Wales Waratahs
+Australia,1996,NA,55,Central Coast Rays,61,New South Wales Waratahs
+Australia,1996,NA,494,Eastern Suburbs RUFC,61,New South Wales Waratahs
+Australia,1996,NA,497,Eastwood Rugby Club,61,New South Wales Waratahs
+Australia,1996,NA,527,Gordon RFC,61,New South Wales Waratahs
+Australia,1996,NA,3109,Hunter Wildfires,61,New South Wales Waratahs
+Australia,1996,NA,552,Manly RUFC,61,New South Wales Waratahs
+Australia,1996,NA,567,Northern Suburbs Rugby Club,61,New South Wales Waratahs
+Australia,1996,NA,581,Parramatta Two Blues,61,New South Wales Waratahs
+Australia,1996,NA,606,Randwick DRUFC,61,New South Wales Waratahs
+Australia,1996,NA,649,Southern Districts Rugby Club,61,New South Wales Waratahs
+Australia,1996,NA,690,Sydney University Football Club,61,New South Wales Waratahs
+Australia,1996,NA,731,Warringah RC,61,New South Wales Waratahs
+Australia,1996,NA,737,West Harbour RFC,61,New South Wales Waratahs
+Australia,1996,NA,424,Brisbane City,253,Queensland Reds 
+Australia,1996,NA,493,Queensland Country,253,Queensland Reds 
+Australia,1996,NA,526,Gold Coast Breakers,253,Queensland Reds 
+Australia,1996,NA,1014,Brothers Rugby Club Sydney,253,Queensland Reds 
+Australia,1996,NA,496,Easts Tigers Rugby Union,253,Queensland Reds 
+Australia,1996,NA,516,GPS Rugby,253,Queensland Reds 
+Australia,1996,NA,568,North Brisbane Rugby Club,253,Queensland Reds 
+Australia,1996,NA,650,Souths Rugby,253,Queensland Reds 
+Australia,1996,NA,683,Sunnybank Rugby,253,Queensland Reds 
+Australia,1996,NA,725,University of Queensland Rugby Club,253,Queensland Reds 
+Australia,1996,NA,741,Wests Rugby,253,Queensland Reds 
+Australia,1996,NA,2665,Barossa Rams RUFC,2613,Adelaide Black Falcons
+Australia,1996,NA,3628,Brighton RUFC,2613,Adelaide Black Falcons
+Australia,1996,NA,3629,Burnside RUF,2613,Adelaide Black Falcons
+Australia,1996,NA,1605,Old Collegians Rugby Club,2613,Adelaide Black Falcons
+Australia,1996,NA,2439,Onkaparinga Rugby Union Football Club,2613,Adelaide Black Falcons
+Australia,1996,NA,2566,Port Adelaide RUFC,2613,Adelaide Black Falcons
+Australia,1996,NA,3631,Southern Suburbs RUFC,2613,Adelaide Black Falcons
+Australia,1996,NA,3632,Woodville RUFC,2613,Adelaide Black Falcons
+Australia,2011,NA,2255,Melbourne Rising,247,Melbourne Rebels
+Australia,2011,NA,3297,Victoria Country Barbarians,247,Melbourne Rebels
+Australia,2011,NA,3637,Box Hill RC,247,Melbourne Rebels
+Australia,2011,NA,3638,Endeavour Hills RC,247,Melbourne Rebels
+Australia,2011,NA,3639,Footscray RUFC,247,Melbourne Rebels
+Australia,2011,NA,1505,Melbourne Harlequins,247,Melbourne Rebels
+Australia,2011,NA,1507,Melbourne Rugby Union Football Club,247,Melbourne Rebels
+Australia,2011,NA,2716,Melbourne University Rugby Football Club,247,Melbourne Rebels
+Australia,2011,NA,2732,Moorabbin Rugby Club,247,Melbourne Rebels
+Australia,2011,NA,3640,Power House RC,247,Melbourne Rebels
+Australia,1996,NA,586,Perth Spirit,161,Western Force
+Australia,1996,NA,3649,Associates RC,161,Western Force
+Australia,1996,NA,3057,Cottesloe Rugby Union Football Club,161,Western Force
+Australia,1996,NA,2274,Nedlands Rugby Union Football Club,161,Western Force
+Australia,1996,NA,6957,University of Western Australia RC,161,Western Force
+Australia,1996,NA,3028,Wests Scarborough Rugby Union Football Club,161,Western Force
+Australia,1996,NA,3650,Joondalup Brothers Rugby Club,161,Western Force
+Australia,1996,NA,3651,Kalamunda RC,161,Western Force
+Australia,1996,NA,3652,Palmyra RC,161,Western Force
+Australia,1996,NA,3653,Perth Bayswater RC,161,Western Force
+Australia,1996,NA,1817,Southern Lions Rugby Union Football Club,161,Western Force
+Australia,1996,NA,3656,Wanneroo RC,161,Western Force
+Australia,1996,NA,1178,Devonport Rugby Club,7962,Tasmanian Jack Jumpers
+Australia,1996,NA,1267,Glenorchy Rugby Union Football Club,7962,Tasmanian Jack Jumpers
+Australia,1996,NA,2271,Hobart Harlequins Rugby Union Club,7962,Tasmanian Jack Jumpers
+Australia,1996,NA,1339,Hobart Lions Rugby Club,7962,Tasmanian Jack Jumpers
+Australia,1996,NA,1872,Taroona Rugby Club,7962,Tasmanian Jack Jumpers
+Australia,1996,NA,2201,Australian Maritime College Rugby Union Club,7962,Tasmanian Jack Jumpers
+Australia,1996,NA,3633,Casuarina Cougars,3294,Northern Territory Mosquitoes
+Australia,1996,NA,3634,Darwin Dragons,3294,Northern Territory Mosquitoes
+Australia,1996,NA,3635,Palmerstown Crocs,3294,Northern Territory Mosquitoes
+Australia,1996,NA,2718,South Darwin Rabbitohs,3294,Northern Territory Mosquitoes
+Australia,1996,NA,3636,University Pirates,3294,Northern Territory Mosquitoes
+Scotland,1996,NA,734,Watsonian FC,120,Edinburgh Rugby
+Scotland,1996,NA,248,Heriot's Rugby Club,120,Edinburgh Rugby
+Scotland,1996,NA,158,Boroughmuir RFC,120,Edinburgh Rugby
+Scotland,1996,NA,229,Currie RFC,120,Edinburgh Rugby
+Scotland,1996,2007,195,Melrose RFC,157,Border Reivers
+Scotland,1996,2007,165,Hawick RFC,157,Border Reivers
+Scotland,1996,2007,274,Selkirk RFC,157,Border Reivers
+Scotland,1996,2007,357,Jed-Forest RFC,157,Border Reivers
+Scotland,1996,2007,540,Kelso RFC,157,Border Reivers
+Scotland,1996,1998,1323,Highland RFC,452,Caledonia Reds
+Scotland,1996,1998,400,Aberdeen GSFP RFC,452,Caledonia Reds
+Scotland,1996,1998,528,Gordonians RFC,452,Caledonia Reds
+Scotland,1996,1998,680,Stirling County RFC,452,Caledonia Reds
+Scotland,1996,NA,60,Glasgow Hawks,37,Glasgow Warriors
+Scotland,1996,NA,133,Ayr RFC,37,Glasgow Warriors
+Scotland,1996,NA,739,West of Scotland FC,37,Glasgow Warriors
+Scotland,1996,NA,525,Glasgow Hutchesons Aloysians RFC,37,Glasgow Warriors
+Scotland,1996,NA,456,Cartha Queens Park RFC,37,Glasgow Warriors
+Ireland,1996,NA,425,Ballynahinch RFC,282,Ulster Rugby
+Ireland,1996,NA,2263,City of Armagh RFC,282,Ulster Rugby
+Ireland,1996,NA,337,Instonians,282,Ulster Rugby
+Ireland,1996,NA,1693,Queen's University RFC,282,Ulster Rugby
+Ireland,1996,NA,423,Ballymena RFC,282,Ulster Rugby
+Ireland,1996,NA,943,Banbridge RFC,282,Ulster Rugby
+Ireland,1996,NA,492,Dungannon RFC,282,Ulster Rugby
+Ireland,1996,NA,3154,Clogher Valley RFC,282,Ulster Rugby
+Ireland,1996,NA,550,Malone RFC,282,Ulster Rugby
+Ireland,1996,NA,5448,Rainey RFC,282,Ulster Rugby
+Ireland,1996,NA,3300,Ballyclare,282,Ulster Rugby
+Ireland,1996,NA,430,Belfast Harlequins,282,Ulster Rugby
+Ireland,1996,NA,535,Highfield RFC,225,Munster Rugby
+Ireland,1996,NA,591,Shannon RFC,225,Munster Rugby
+Ireland,1996,NA,571,Old Crescent,225,Munster Rugby
+Ireland,1996,NA,519,Garryowen Football Club,225,Munster Rugby
+Ireland,1996,NA,480,Cork Constitution,225,Munster Rugby
+Ireland,1996,NA,489,Dolphin RFC,225,Munster Rugby
+Ireland,1996,NA,724,University College Cork RFC,225,Munster Rugby
+Ireland,1996,NA,1853,Sundays Well RFC,225,Munster Rugby
+Ireland,1996,NA,742,Young Munster,225,Munster Rugby
+Ireland,1996,NA,119,UL Bohemians R.F.C.,225,Munster Rugby
+Ireland,1996,NA,544,Lansdowne Football Club,267,Leinster Rugby
+Ireland,1996,NA,592,St Mary's College RFC,267,Leinster Rugby
+Ireland,1996,NA,358,Wanderers F.C.,267,Leinster Rugby
+Ireland,1996,NA,429,Bective Rangers,267,Leinster Rugby
+Ireland,1996,NA,435,Blackrock College RFC,267,Leinster Rugby
+Ireland,1996,NA,573,Old Wesley RFC,267,Leinster Rugby
+Ireland,1996,NA,694,Terenure College RFC,267,Leinster Rugby
+Ireland,1996,NA,530,Greystones RFC,267,Leinster Rugby
+Ireland,1996,NA,491,Dublin University Football Club,267,Leinster Rugby
+Ireland,1996,NA,169,Clontarf FC,267,Leinster Rugby
+Ireland,1996,NA,65,Old Belvedere,267,Leinster Rugby
+Ireland,1996,NA,1545,Naas RFC,267,Leinster Rugby
+Ireland,1996,NA,427,Barnhall RFC,267,Leinster Rugby
+Ireland,1996,NA,518,Galway Corinthians RFC,213,Connacht Rugby
+Ireland,1996,NA,517,Galwegians RFC,213,Connacht Rugby
+Ireland,1996,NA,1922,University College Galway R.F.C.,213,Connacht Rugby
+Ireland,1996,NA,443,Buccaneers RFC,213,Connacht Rugby
+Ireland,1996,NA,2712,Ballina R.F.C.,213,Connacht Rugby
+Ireland,1996,NA,5449,Athlone RFC,213,Connacht Rugby
+Ireland,1996,NA,5450,Ballinasloe RFC,213,Connacht Rugby
+Ireland,1996,NA,2281,Sligo RFC,213,Connacht Rugby
+Ireland,1996,NA,5451,Loughrea RFC,213,Connacht Rugby
