@@ -920,6 +920,7 @@ end.rec.log()
 #     - check that all players in the old table appear in the new one, to verify no stint was lost
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 #     - there are still overlapping stints of the same team...
+#     - Newport vs. Dragons vs. another local team ?
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
