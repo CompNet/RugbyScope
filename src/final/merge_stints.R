@@ -922,6 +922,9 @@ end.rec.log()
 #     - there are still overlapping stints of the same team...
 #     - Newport vs. Dragons vs. another local team ?
 #     - confusion Sharks (SA) vs. Sales Sharks
+#   - final
+#     - check all categorical variables (in particular sources)
+#     - clean (unique) + order sources (and other multiple fields)
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
