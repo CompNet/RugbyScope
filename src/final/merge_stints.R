@@ -46,7 +46,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_10.csv"))
+stints <- read.csv(file.path(data_folder, "stints_11.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
