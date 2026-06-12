@@ -46,7 +46,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_09.csv"))
+stints <- read.csv(file.path(data_folder, "stints_10.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -753,10 +753,10 @@ print(player_conflicts)
 
 idx <- which(stints[, "playerId"] %in% player_conflicts)
 conf_stints <- stints[idx, ]
-tab.file <- file.path(data_folder, "stints_03_conflicts.csv")
+tab.file <- file.path(data_folder, "stints_11_conflicts.csv")
 write.csv(conf_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ok_stints <- stints[-idx, ]
-tab.file <- file.path(data_folder, "stints_03_ok.csv")
+tab.file <- file.path(data_folder, "stints_11_ok.csv")
 write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # s1==NA
@@ -921,6 +921,7 @@ end.rec.log()
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 #     - there are still overlapping stints of the same team...
 #     - Newport vs. Dragons vs. another local team ?
+#     - confusion Sharks (SA) vs. Sales Sharks
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
