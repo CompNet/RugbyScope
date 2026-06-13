@@ -913,14 +913,8 @@ end.rec.log()
 #     - handle frWP stints at the start of career: often wrong
 #       > check players with very long career spans, probably this type of problem
 #       > and/or players with big gaps between stints
-#     - confusion Dragons vs. Newport RFC
-#     - lots of "Barbarian FC" backed by just WD
-#     x stints with the same dates and scores but different teams > probably a wrong team in one of the sources
-#       > check with the same teams too
-#     - check that all players in the old table appear in the new one, to verify no stint was lost
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 #     - there are still overlapping stints of the same team...
-#     - Newport vs. Dragons vs. another local team ?
 #     - confusion Sharks (SA) vs. Sales Sharks
 #   - final
 #     - check all categorical variables (in particular sources)
@@ -969,7 +963,7 @@ for (p in 1:nrow(players)) {
       #      (is.na(player_stints[2, "endYear"]) || player_stints[1, "startYear"] <= player_stints[2, "endYear"])))
         # selected_players <- c(selected_players, player_id)
     # }
-    # same date and stats but different teams
+
     if (nrow(player_stints) > 1) {
       for (i in 1:(nrow(player_stints)-1)) {
         team1 <- player_stints[i, "teamRsId"]
@@ -978,23 +972,38 @@ for (p in 1:nrow(players)) {
         mp1 <- player_stints[i, "matchesPlayed"]
         ps1 <- player_stints[i, "pointsScored"]
         
-        if((!is.na(start1) || !is.na(start2)) && (!is.na(mp1) || !is.na(ps1)) ) {
-          for (j in (i+1):nrow(player_stints)) {
-            team2 <- player_stints[j, "teamRsId"]
-            start2 <- player_stints[j, "startYear"]
-            end2 <- player_stints[j, "endYear"]
-            mp2 <- player_stints[j, "matchesPlayed"]
-            ps2 <- player_stints[j, "pointsScored"]
+        # # same date and stats #but different teams
+        # if((!is.na(start1) || !is.na(start2)) && (!is.na(mp1) || !is.na(ps1)) ) {
+        #   for (j in (i+1):nrow(player_stints)) {
+        #     team2 <- player_stints[j, "teamRsId"]
+        #     start2 <- player_stints[j, "startYear"]
+        #     end2 <- player_stints[j, "endYear"]
+        #     mp2 <- player_stints[j, "matchesPlayed"]
+        #     ps2 <- player_stints[j, "pointsScored"]
+        #
+        #     if((is.na(start1) && is.na(start2) || !is.na(start1) && !is.na(start2) && start1==start2) &&
+        #       (is.na(end1) && is.na(end2) || !is.na(end1) && !is.na(end2) && end1==end2) &&
+        #       (is.na(mp1) && is.na(mp2) || !is.na(mp1) && !is.na(mp2) && mp1==mp2) &&
+        #       (is.na(ps1) && is.na(ps2) || !is.na(ps1) && !is.na(ps2) && ps1==ps2)) {
+        #       selected_players <- c(selected_players, player_id)
+        #       # cat("i =", i, "-", "j =", j, "\n") # debug
+        #     }
+        #   }
 
-            if((is.na(start1) && is.na(start2) || !is.na(start1) && !is.na(start2) && start1==start2) &&
-              (is.na(end1) && is.na(end2) || !is.na(end1) && !is.na(end2) && end1==end2) &&
-              (is.na(mp1) && is.na(mp2) || !is.na(mp1) && !is.na(mp2) && mp1==mp2) &&
-              (is.na(ps1) && is.na(ps2) || !is.na(ps1) && !is.na(ps2) && ps1==ps2)) {
-                selected_players <- c(selected_players, player_id)
-                cat("i =", i, "-", "j =", j, "\n")
-              }
+        # two stints with same team, present start year, but no end year
+        for (j in (i+1):nrow(player_stints)) {
+          team2 <- player_stints[j, "teamRsId"]
+          start2 <- player_stints[j, "startYear"]
+          end2 <- player_stints[j, "endYear"]
+          mp2 <- player_stints[j, "matchesPlayed"]
+          ps2 <- player_stints[j, "pointsScored"]
+          if (!is.na(start1) && !is.na(start2) && is.na(end1) && is.na(end2) && team1 == team2 || 
+              is.na(start1) && is.na(start2) && !is.na(end1) && !is.na(end2) && team1 == team2 ) {
+            selected_players <- c(selected_players, player_id)
+            cat("i =", i, "-", "j =", j, "\n") # debug
           }
         }
+
       }
     }
   }
@@ -1003,8 +1012,8 @@ print(selected_players)
 
 idx <- which(stints[, "playerId"] %in% selected_players)
 conf_stints <- stints[idx, ]
-tab.file <- file.path(data_folder, "stints_10_removed2.csv")
+tab.file <- file.path(data_folder, "stints_11_selected.csv")
 write.csv(conf_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ok_stints <- stints[-idx, ]
-tab.file <- file.path(data_folder, "stints_10_kept2.csv")
+tab.file <- file.path(data_folder, "stints_11_notselected.csv")
 write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
