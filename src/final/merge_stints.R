@@ -46,7 +46,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_11.csv"))
+stints <- read.csv(file.path(data_folder, "stints_12.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -906,7 +906,6 @@ end.rec.log()
 #     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
 #     - classify stints based on the WP categories (provincial, pro, etc.)
 #   - misc
-#     - missing cases: 2021-NA vs. 2022-NA (same team)
 #     - we should have kept stint order, loan indications, and stint types (amateur, provincial, junior, senior, etc.)
 #     - check stints whose source is only "WD", "esWP" or "itWP"
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
@@ -916,6 +915,8 @@ end.rec.log()
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 #     - there are still overlapping stints of the same team...
 #     - confusion Sharks (SA) vs. Sales Sharks
+#     - confusion London Scottish vs. Irish
+#     - handles cases where there are stints without dates and the first dated stints starts >18yo
 #   - final
 #     - check all categorical variables (in particular sources)
 #     - clean (unique) + order sources (and other multiple fields)
@@ -990,7 +991,7 @@ for (p in 1:nrow(players)) {
         #     }
         #   }
 
-        # two stints with same team, present start year, but no end year
+        # two stints with same team, start year present, but no end year
         for (j in (i+1):nrow(player_stints)) {
           team2 <- player_stints[j, "teamRsId"]
           start2 <- player_stints[j, "startYear"]
