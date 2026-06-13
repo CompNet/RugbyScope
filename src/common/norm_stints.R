@@ -207,3 +207,40 @@ merge_overlapping_stints_strict <- function(stints) {
 
 # end.rec.log()
 ####
+
+
+
+
+########################################################################
+# Order stints based on dates, and player and team names.
+#
+# stints: stint table.
+#
+# returns: ordered stint table.
+########################################################################
+order_stints <- function(stints) {
+  # player ids
+  player_ids <- stints[, "playerId"]
+  player_ids <- as.integer(substr(player_ids, start = 2, stop = nchar(player_ids)))
+
+  # start years
+  start_years <- as.integer(stints[, "startYear"])
+  start_years[is.na(start_years)] <- 1000
+
+  # end years
+  end_years <- as.integer(stints[, "endYear"])
+  end_years[is.na(end_years)] <- 9999
+  end_years <- -end_years # we want the largest stints first
+
+  # team names
+  team_names <- stints[, "teamName"]
+
+  # order stints
+  idx <- order(player_ids, start_years, end_years, team_names)
+  stints <- stints[idx, ]
+
+  return(stints)
+}
+# TODO
+# - if start=end, not a loan but put before the longer stint
+# - would be nice to put invitational and national stints at the end

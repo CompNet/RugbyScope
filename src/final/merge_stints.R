@@ -895,10 +895,6 @@ end.rec.log()
 # TODO
 ###############################
 # - DATABASE
-#   - better order stints:
-#     - replace start NA by 0000  and end NA by 9999
-#     - put invitational then national teams at the end
-#     - if start1-end1 and start2-end1 with the latter nested in the former, it's a loan >> keep the first one first, even if start1==start2 and end1 >= end2
 #   - complement data:
 #     - remove stints and parts of stints before 18 yo (without changing stats)
 #     - complement missing U18 (and other youth teams) dates using player's age
@@ -906,16 +902,13 @@ end.rec.log()
 #     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
 #     - classify stints based on the WP categories (provincial, pro, etc.)
 #   - misc
-#     - we should have kept stint order, loan indications, and stint types (amateur, provincial, junior, senior, etc.)
-#     - check stints whose source is only "WD", "esWP" or "itWP"
+#     - we should have kept stint order and loan indications
+#     > function to add back stint types (amateur, provincial, junior, senior, etc.)
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - handle frWP stints at the start of career: often wrong
 #       > check players with very long career spans, probably this type of problem
 #       > and/or players with big gaps between stints
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
-#     - there are still overlapping stints of the same team...
-#     - confusion Sharks (SA) vs. Sales Sharks
-#     - confusion London Scottish vs. Irish
 #     - handles cases where there are stints without dates and the first dated stints starts >18yo
 #   - final
 #     - check all categorical variables (in particular sources)
@@ -1013,8 +1006,13 @@ print(selected_players)
 
 idx <- which(stints[, "playerId"] %in% selected_players)
 conf_stints <- stints[idx, ]
-tab.file <- file.path(data_folder, "stints_11_selected.csv")
+tab.file <- file.path(data_folder, "stints_12_selected.csv")
 write.csv(conf_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ok_stints <- stints[-idx, ]
-tab.file <- file.path(data_folder, "stints_11_notselected.csv")
+tab.file <- file.path(data_folder, "stints_12_notselected.csv")
 write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# order stints
+stints <- order_stints(stints)
+tab.file <- file.path(data_folder, "stints_13.csv")
+write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
