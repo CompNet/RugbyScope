@@ -895,24 +895,25 @@ end.rec.log()
 # TODO
 ###############################
 # - DATABASE
-#   - complement data:
-#     - remove stints and parts of stints before 18 yo (without changing stats)
-#     - complement missing U18 (and other youth teams) dates using player's age
-#     - and do the opposite: complement missing birthdate using Uxx stints
-#     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
-#     - classify stints based on the WP categories (provincial, pro, etc.)
-#   - misc
+#   - notes:
 #     - we should have kept stint order and loan indications
+#   - misc:
 #     > function to add back stint types (amateur, provincial, junior, senior, etc.)
+#       - classify stints based on the WP categories (provincial, pro, etc.)
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - handle frWP stints at the start of career: often wrong
 #       > check players with very long career spans, probably this type of problem
 #       > and/or players with big gaps between stints
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 #     - handles cases where there are stints without dates and the first dated stints starts >18yo
-#   - final
+#   - final:
 #     - check all categorical variables (in particular sources)
 #     - clean (unique) + order sources (and other multiple fields)
+#   - complement data:
+#     - remove stints and parts of stints before 18 yo (without changing stats)
+#     - complement missing U18 (and other youth teams) dates using player's age
+#     - and do the opposite: complement missing birthdate using Uxx stints
+#     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
