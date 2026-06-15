@@ -907,6 +907,7 @@ end.rec.log()
 #     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
 #     - handles cases where there are stints without dates and the first dated stints starts >18yo
 #   - final:
+#     - look for exact duplicates
 #     - check all categorical variables (in particular sources)
 #     - clean (unique) + order sources (and other multiple fields)
 #   - complement data:
@@ -920,7 +921,8 @@ end.rec.log()
 #   - complement missing dates/ split depending on loans, etc.
 #     note : overlapping stints at clubs = loans
 #            but there are also just simultaneous membership
-#   - possibly put 2025 for the latest stint ?
+#   - possibly put 2025 or 2026 for the latest stint ?
+#   - merge junior/senior consecutive stints with the same team
 ###############################
 
 

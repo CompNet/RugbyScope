@@ -68,7 +68,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_12.csv"))
+stints <- read.csv(file.path(data_folder, "stints_13.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -148,7 +148,7 @@ if(!"type" %in% colnames(stints))
 
 # open log files for debugging
 con_mult <- file(file.path(data_folder, "stints_13_multiple.csv"), open = "w")
-con_none <- file(file.path(data_folder, "stints_13_unmatched.csv"), open = "w")
+# con_none <- file(file.path(data_folder, "stints_13_unmatched.csv"), open = "w")
 
 nbr_missed <- 0
 nbr_multiple <- 0
@@ -214,22 +214,6 @@ for (s in 1:nrow(stints)) {
       idx <- sort(unique(idx2))
       plyr_matches[[source]] <- idx
 
-      # idx <- which(old_stints[, "origWdId"] == stints[s, "playerId"] &
-      #              (!is.na(rep(old_team_wp, nrow(old_stints))) & !is.na(old_stints[, "teamWP"]) & old_stints[, "teamWP"] == old_team_wp | 
-      #               is.na(rep(old_team_wp, nrow(old_stints))) & is.na(old_stints[, "teamWP"]) & grepl(pattern="", x=old_stints[, "teamName"], ignore.case = TRUE, fixed = TRUE)) &
-      #              (is.na(old_stints[, "startYear"]) & is.na(stints[s, "startYear"]) | !is.na(old_stints[, "startYear"]) & !is.na(stints[s, "startYear"]) & old_stints[, "startYear"] == stints[s, "startYear"]) &
-      #              (is.na(old_stints[, "endYear"]) & is.na(stints[s, "endYear"]) | !is.na(old_stints[, "endYear"]) & !is.na(stints[s, "endYear"]) & old_stints[, "endYear"] == stints[s, "endYear"]) )
-
-      # TODO
-      # - export file with stint of the unconcerned players
-      # - export file with :
-      #   - the year the player turned 18 yo
-      #   - stints from the fusioned file for the concerned player
-      #     with an asterix in front of the problematic stint
-      #   - then a separator and the full sources (all stints)
-      #   - then a new line as a player separator
-
-
       # get stint type
       if (length(idx) > 0)
         original_types <- c(original_types, old_stints[idx, "stintType"])
@@ -237,36 +221,37 @@ for (s in 1:nrow(stints)) {
   }
   original_types <- sort(unique(original_types))
   
-  # update stint table
-  if (length(original_types) > 0)
-    stints[s, "type"] <- paste0(original_types, collapse = "; ")
+  # # update stint table
+  # if (length(original_types) > 0)
+  #   stints[s, "type"] <- paste0(original_types, collapse = "; ")
 
-  # debug: no match
-   if (length(original_types) == 0) {
-    # log issue
-    nbr_missed <- nbr_missed + 1
-    tlog(4, "Unmatched stint:")
-    print(stints[s, ])
-
-    # export for debug
-    concerned_players <- c(concerned_players, player_id)
-    # write current stint's player's stints
-    ps <- which(stints[, "playerId"] == player_id)
-    for(r in ps) 
-      writeLines(paste0(if(r == s) "*" else "", '"', paste0(stints[r, ], collapse='","'), '"'), con_none)
-    writeLines("=========================", con_none)
-    # write no-match source data
-    for (source in sources) {
-      old_stints <- all_stints[[source]]
-      ps <- which(old_stints[, "origWdId"] == player_id)
-      for(r in ps) 
-        writeLines(paste0(paste0(old_stints[r, ], collapse='","'), '"'), con_none)
-      writeLines(paste0("====================AAAA=", source), con_none)
-    }
-    writeLines("", con_none)  # player separator
-  
-  # debug: multiple matches
-  } else if (length(original_types) > 1) {
+  # # debug: no match
+  # if (length(original_types) == 0) {
+  #   # log issue
+  #   nbr_missed <- nbr_missed + 1
+  #   tlog(4, "Unmatched stint:")
+  #   print(stints[s, ])
+  #
+  #   # export for debug
+  #   concerned_players <- c(concerned_players, player_id)
+  #   # write current stint's player's stints
+  #   ps <- which(stints[, "playerId"] == player_id)
+  #   for(r in ps) 
+  #     writeLines(paste0(if(r == s) "*" else "", '"', paste0(stints[r, ], collapse='","'), '"'), con_none)
+  #   writeLines("=========================", con_none)
+  #   # write no-match source data
+  #   for (source in sources) {
+  #     old_stints <- all_stints[[source]]
+  #     ps <- which(old_stints[, "origWdId"] == player_id)
+  #     for(r in ps) 
+  #       writeLines(paste0(paste0(old_stints[r, ], collapse='","'), '"'), con_none)
+  #     writeLines(paste0("====================AAAA=", source), con_none)
+  #   }
+  #   writeLines("", con_none)  # player separator
+  #
+  # # debug: multiple matches
+  # } else if (length(original_types) > 1) {
+if (stints[s, "type"] %in% c("Junior; Senior", "Junior; Regional; Senior")) {
     # log issue
     nbr_multiple <- nbr_multiple + 1
     tlog(4, "Several matches: ", paste0(original_types, collapse = "; "))
@@ -296,7 +281,7 @@ tlog("Number of stints that could not be matched: ", nbr_missed)
 tlog("Number of stints matched to several original stints: ", nbr_multiple)
 
 close(con_mult)
-close(con_none)
+# close(con_none)
 
 idx <- which(!(stints[, "playerId"] %in% concerned_players))
 ok_stints <- stints[idx, ]
