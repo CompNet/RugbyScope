@@ -432,6 +432,28 @@ print(length(concerned_players))
 # handle pre-profesionnalism stints: should be amateur, not senior
 switch_year <- 1995
 
+#####################
+# principle : no "senior" stint before 1995, then it means more or less pro after 1995
+# algorithm: depends on the country, as they differ in how they switched to professionalism
+#####################
+# FR/EN/IT/JP:
+# - <1995: all clubs "amateur"
+# - >=1995: certain clubs switched to pro ("senior")
+# NZ:
+# - provinces: always "regional"
+# - clubs: always "amateur"
+# - franchises: always "senior"
+# IE/WA/SC/AU :
+# - clubs: always "amateur"
+# - provinces/franchises: "regional" <1995 then "senior" >=1995
+# ZA:
+# - clubs: always "amateur"
+# - provinces: "regional" <1995 then "senior" >=1995
+# FJ/AR : everything "amateur" except certain teams:
+# - FJ: Fijian Drua
+# - AR: Jaguares
+#####################
+
 #### case: <1995 - <1995
 idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] < switch_year)
 table(stints[idx, "type"])
@@ -475,7 +497,7 @@ for (m in 1:length(map)) {
 }
 
 #### case: <1995 - >=1995
-idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] >= switch_year)
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] > switch_year)
 table(stints[idx, "type"])
 sort(names(table(stints[idx, "startYear"])))
 sort(names(table(stints[idx, "endYear"])))
@@ -499,38 +521,55 @@ idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senio
 print(stints[idx2, "type"])
 head(stints[idx2, ])
 print(sort(unique(stints[idx2, "teamName"])))
-tids <- sort(unique(stints[idx2, "teamRsId"]))
-tab <- teams[teams[, "rugbyscopeId"] %in% tids, c("rugbyscopeId", "fullName", "countries")]
-tab <- tab[order(tab[, "countries"], tab[, "rugbyscopeId"]), ]
-write.csv(tab, file.path(data_folder, "team_list.csv"), row.names = FALSE)
+#### export list of teams to be annotated and used later
+#tids <- sort(unique(stints[idx2, "teamRsId"]))
+#tab <- teams[teams[, "rugbyscopeId"] %in% tids, c("rugbyscopeId", "fullName", "countries")]
+#tab <- tab[order(tab[, "countries"], tab[, "rugbyscopeId"]), ]
+#write.csv(cbind(tab, rep(NA, nrow(tab))), file.path(data_folder, "team_list.csv"), row.names = FALSE)
+####
+map <- read.csv(file = file.path(data_folder, "team_list.csv"))
+# use the map to split stints
+for (t in 1:nrow(map)) {
+  tid <- map[t, "rugbyscopeId"]
+  before <- map[t, "before"]
+  after <- map[t, "after"]
+  tlog(2, "Processing stint ", t, "/", nrow(map), " (", before, "-", after, ")")
 
-# principle : no "senior" stint before 1995, then it means more or less pro after 1995
-# algorithm: depends on the country, as they differ in how they switched to professionalism
-#####################
-# FR/EN/IT/JP:
-# - <1995: all clubs "amateur"
-# - >=1995: certain clubs switched to pro ("senior")
-# NZ:
-# - provinces: always "regional"
-# - clubs: always "amateur"
-# - franchises: always "senior"
-# IE/WA/SC/AU :
-# - clubs: always "amateur"
-# - provinces/franchises: "regional" <1995 then "senior" >=1995
-# ZA:
-# - clubs: always "amateur"
-# - provinces: "regional" <1995 then "senior" >=1995
-# FJ/AR : everything "amateur" except certain teams:
-# - FJ: Fijian Drua
-# - AR: Jaguares
-#####################
-# check if franchise teams existed before 1995 (should not, in certain countries)?
+  idx3 <- idx2[stints[idx2, "teamRsId"] == tid]
+  if (length(idx3) > 0) {
+    if (before == after) {
+      print(stints[idx3, ])
+      stints[idx3, "type"] <- before
+      print(stints[idx3, ])
+    } else {
+      for (s in idx3) {
+        new_stint <- stints[s, ]
+        duration <- stints[s, "endYear"] - stints[s, "startYear"]
+        matches_played <- stints[s, "matchesPlayed"]
+        points_scored <- stints[s, "pointsScored"]
+        # fix old stint
+        stints[s, "type"] <- before
+        stints[s, "endYear"] <- switch_year
+        if (!is.na(matches_played))
+          stints[s, "matchesPlayed"] <- round(matches_played / duration * (stints[s, "endYear"] - stints[s, "startYear"]))
+        if (!is.na(points_scored))
+          stints[s, "pointsScored"] <- round(points_scored / duration * (stints[s, "endYear"] - stints[s, "startYear"]))
+        # add extra stint
+        new_stint[1, "type"] <- after
+        new_stint[1, "startYear"] <- switch_year
+        if (!is.na(matches_played))
+          new_stint[1, "matchesPlayed"] <- round(matches_played / duration * (new_stint[1, "endYear"] - new_stint[1, "startYear"]))
+        if (!is.na(points_scored))
+          new_stint[1, "pointsScored"] <- round(points_scored / duration * (new_stint[1, "endYear"] - new_stint[1, "startYear"]))
+        stints <- rbind(stints, new_stint)
+        # print for verifications
+        print(stints[c(s, nrow(stints)),])
+      }
+    }
+  }
 
-
-
-
-
-
+  # readline("Type enter to continue")
+}
 
 #### case: <1995 - NA
 idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & is.na(stints[, "endYear"]))
@@ -540,7 +579,7 @@ sort(names(table(stints[idx, "endYear"])))
 # display all stints (not that many)
 print(stints[idx, ])
 
-
+# TODO
 
 # show specific cases
 idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional; Senior"]
