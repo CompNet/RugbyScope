@@ -68,7 +68,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_13.csv"))
+stints <- read.csv(file.path(data_folder, "stints_14.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -79,53 +79,53 @@ tlog(2, "Number of stints: ", nrow(stints))
 
 # english
 tlog("English version;")
-print(table(en_stints[,"stintType"]))
+print(table(en_stints[, "stintType"]))
 en_map <- c(
-  "amateur"="Junior",
-  "Amateur team(s)"="Junior",
-  "international"="International",
-  "International career"="International",
-  "senior_club"="Senior",
-  "Youth career"="Junior"
+  "amateur" = "Amateur",
+  "Amateur team(s)" = "Amateur",
+  "international" = "International",
+  "International career" = "International",
+  "senior_club" = "Senior",
+  "Youth career" = "Amateur"
 )
-en_stints[,"stintType"] <- en_map[en_stints[,"stintType"]]
-print(table(en_stints[,"stintType"]))
+en_stints[, "stintType"] <- en_map[en_stints[, "stintType"]]
+print(table(en_stints[, "stintType"]))
 
 # french
 tlog("French version;")
-print(table(fr_stints[,"stintType"]))
+print(table(fr_stints[, "stintType"]))
 fr_map <- c(
-  "International"="International",
-  "Senior"="Senior",
-  "Senir"="Senior",
-  "Youth"="Junior"
+  "International" = "International",
+  "Senior" = "Senior",
+  "Senir" = "Senior",
+  "Youth" = "Amateur"
 )
-fr_stints[,"stintType"] <- fr_map[fr_stints[,"stintType"]]
-print(table(fr_stints[,"stintType"]))
+fr_stints[, "stintType"] <- fr_map[fr_stints[, "stintType"]]
+print(table(fr_stints[, "stintType"]))
 
 # italian
 tlog("Italian version;")
-print(table(it_stints[,"stintType"]))
+print(table(it_stints[, "stintType"]))
 it_map <- c(
-  "International"="International",
-  "Regional"="Regional",
-  "Senior"="Senior",
-  "Youth"="Junior"
+  "International" = "International",
+  "Regional" = "Regional",
+  "Senior" = "Senior",
+  "Youth" = "Amateur"
 )
-it_stints[,"stintType"] <- it_map[it_stints[,"stintType"]]
-print(table(it_stints[,"stintType"]))
+it_stints[, "stintType"] <- it_map[it_stints[, "stintType"]]
+print(table(it_stints[, "stintType"]))
 
 # japanese
 tlog("Japanese version;")
-print(table(ja_stints[,"stintType"]))
+print(table(ja_stints[, "stintType"]))
 ja_map <- c(
-  "Amateur"="Junior",
-  "International"="International",
-  "Regional"="Regional",
-  "Senior"="Senior",
-  "Youth"="Junior"
+  "Amateur" = "Amateur",
+  "International" = "International",
+  "Regional" = "Regional",
+  "Senior" = "Senior",
+  "Youth" = "Amateur"
 )
-ja_stints[,"stintType"] <- ja_map[ja_stints[,"stintType"]]
+ja_stints[, "stintType"] <- ja_map[ja_stints[, "stintType"]]
 print(table(ja_stints[,"stintType"]))
 
 # spanish
@@ -135,6 +135,42 @@ print(table(ja_stints[,"stintType"]))
 # put everything in convenient lists
 all_stints <- list(enWP=en_stints, frWP=fr_stints, itWP=it_stints, jaWP=ja_stints)
 all_teams <- list(enWP=en_teams, frWP=fr_teams, itWP=it_teams, jaWP=ja_teams)
+
+
+
+
+########################################################################
+# handle regional teams
+# [x] Rugby Football Union Team
+# [x] Rugby Football Union
+# [x] RFU Team
+# [x] Rugby Union
+# [x] Rugby Union Team
+# [x] District
+# [x] Country
+# [x] XV
+# [x] Division
+# [x] Unión
+# [x] County
+# [x] Combined
+#idx <- which(teams[, "type"] != "Regional team" & grepl("XV", teams[,"fullName"], ignore.case = FALSE, fixe = TRUE))
+#print(teams[idx, c("rugbyscopeId","wikidataId","fullName","type","altNames")])
+# fix incorrect stint types
+conv <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
+idx <- which(stints[, "type"] != "Regional" & teams[conv, "type"] == "Regional team")
+print(head(stints[idx, ]))
+stints[idx, "type"] <- "Regional"
+
+
+# handle national teams
+#idx <- which(grepl("national", teams[, "type"], ignore.case = TRUE, fixed = TRUE) & grepl("national", teams[,"fullName"], ignore.case = FALSE, fixe = TRUE))
+#print(teams[idx, c("fullName")])
+# fix incorrect stint types
+conv <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
+idx <- which(stints[, "type"] != "International" & grepl("National", teams[conv, "type"], ignore.case = TRUE, fixed = TRUE))
+print(head(stints[idx, ]))
+print(sort(unique(stints[idx, "teamName"])))
+stints[idx, "type"] <- "International"
 
 
 
@@ -154,7 +190,7 @@ nbr_missed <- 0
 nbr_multiple <- 0
 fus_types <- c()
 concerned_players <- c()
-for (s in 1:nrow(stints)) {
+for (s in 2800:nrow(stints)) {
   tlog(2, "Processing stint ", s, "/", nrow(stints))
 
   # retrive data sources for this stint
@@ -237,7 +273,7 @@ for (s in 1:nrow(stints)) {
   #   # write current stint's player's stints
   #   ps <- which(stints[, "playerId"] == player_id)
   #   for(r in ps) 
-  #     writeLines(paste0(if(r == s) "*" else "", '"', paste0(stints[r, ], collapse='","'), '"'), con_none)
+  #     writeLines(paste0(if(r == s) "***" else "", '"', paste0(stints[r, ], collapse='","'), '"'), con_none)
   #   writeLines("=========================", con_none)
   #   # write no-match source data
   #   for (source in sources) {
@@ -251,27 +287,69 @@ for (s in 1:nrow(stints)) {
   #
   # # debug: multiple matches
   # } else if (length(original_types) > 1) {
-if (stints[s, "type"] %in% c("Junior; Senior", "Junior; Regional; Senior")) {
+if (stints[s, "type"] %in% c("Amateur; Senior", "Amateur; Regional; Senior")) {
     # log issue
     nbr_multiple <- nbr_multiple + 1
     tlog(4, "Several matches: ", paste0(original_types, collapse = "; "))
 
-    # export for debug
-    concerned_players <- c(concerned_players, player_id)
-    # write current stint's player's stints
+    # # export for debug
+    # concerned_players <- c(concerned_players, player_id)
+    # # write current stint's player's stints
+    # ps <- which(stints[, "playerId"] == player_id)
+    # for(r in ps) 
+    #   writeLines(paste0(if(r == s) "***" else "", '"', paste0(stints[r, ], collapse='","'), '"'), con_mult)
+    # writeLines("=========================", con_mult)
+    # # write conflicting source data
+    # for (source in sources) {
+    #   old_stints <- all_stints[[source]]
+    #   ps <- which(old_stints[, "origWdId"] == player_id)
+    #   for(r in ps) 
+    #     writeLines(paste0(if(r %in% plyr_matches[[source]]) "***" else "", '"', paste0(old_stints[r, ], collapse='","'), '"'), con_mult)
+    #   writeLines(paste0("====================AAAA=", source), con_mult)
+    # }
+    # writeLines("", con_mult)  # player separator
+
+    # instead: ask the user to solve the issue and automatically split the concerned stint
+    # show current stint's player's stints
     ps <- which(stints[, "playerId"] == player_id)
     for(r in ps) 
-      writeLines(paste0(if(r == s) "*" else "", '"', paste0(stints[r, ], collapse='","'), '"'), con_mult)
-    writeLines("=========================", con_mult)
-    # write conflicting source data
+      tlog(4, paste0(if(r == s) "***" else "", '"', paste0(stints[r, ], collapse='","'), '"'))
+    tlog(4, "=========================")
+    # show conflicting source data
     for (source in sources) {
       old_stints <- all_stints[[source]]
       ps <- which(old_stints[, "origWdId"] == player_id)
       for(r in ps) 
-        writeLines(paste0(if(r %in% plyr_matches[[source]]) "*" else "", '"', paste0(old_stints[r, ], collapse='","'), '"'), con_mult)
-      writeLines(paste0("====================AAAA=", source), con_mult)
+        tlog(4, paste0(if(r %in% plyr_matches[[source]]) "***" else "", '"', paste0(old_stints[r, ], collapse='","'), '"'))
+      tlog(4, paste0("====================AAAA=", source))
     }
-    writeLines("", con_mult)  # player separator
+    #readline("Type enter to solve the issue")
+    answer <- readline("Enter the split year, or nothing to ignore the issue: ")
+    if (answer != "") {
+      # not splitting
+      if (answer == "a") {
+        stints[s, "type"] <- "Amateur"
+        print(stints[s, ])
+      } else if (answer == "s") {
+        stints[s, "type"] <- "Senior"
+        print(stints[s, ])
+      } else {
+        split_year <- as.integer(answer)
+        senior_stint <- stints[s, ]
+        # correct amateur stint
+        stints[s, "type"] <- "Amateur"
+        stints[s, "endYear"] <- split_year
+        stints[s, "matchesPlayed"] <- NA
+        stints[s, "pointsScored"] <- NA
+        # add senior stint
+        senior_stint[1, "type"] <- "Senior"
+        senior_stint[1, "startYear"] <- split_year
+        stints <- rbind(stints, senior_stint)
+        # print for verifications
+        print(stints[c(s, nrow(stints)),])
+      }
+      readline("Press enter to continue")
+    }
   }
 
   # readline("Type enter to continue")
@@ -294,3 +372,193 @@ write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 ########################################################################
 # stop logging
 end.rec.log()
+
+
+
+
+
+
+
+
+
+
+
+########################################################################
+# look for perfect duplicates among stints
+rem_flag <- c()
+concerned_players <- c()
+pids <- sort(unique(stints[, "playerId"]))
+for (p in 1:length(pids)) {
+  if (p %% 1000 == 0)
+    tlog(2, "Processing player ", p, "/", length(pids))
+  pid <- pids[p]
+  player_stints <- which(stints[, "playerId"] == pid)
+  if (length(player_stints) > 1) {
+    for (s1 in 1:(length(player_stints) - 1)) {
+      stint1 <- stints[player_stints[s1], ]
+      stint1[1, is.na(stint1[1, ])] <- "NA"
+      for (s2 in (s1 + 1):length(player_stints)) {
+        stint2 <- stints[player_stints[s2], ]
+        stint2[1, is.na(stint2[1, ])] <- "NA"
+        if (all(stint1[1, ] == stint2[1, ])) {
+          tlog(4, "------------------")
+          print(stints[player_stints[c(s1, s2)], ])
+          rem_flag <- c(rem_flag, player_stints[s2])
+          concerned_players <- c(concerned_players, pid)
+        }
+      }
+    }
+  }
+}
+rem_flag <- sort(unique(rem_flag))
+print(length(rem_flag))
+concerned_players <- sort(unique(concerned_players))
+print(length(concerned_players))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########################################################################
+# handle pre-profesionnalism stints: should be amateur, not senior
+switch_year <- 1995
+
+#### case: <1995 - <1995
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] < switch_year)
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+# show specific cases
+#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional; Senior"]
+#print(stints[idx2, ])
+#
+#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional"]
+#print(stints[idx2, ])
+#
+#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "International; Regional; Senior"]
+#print(stints[idx2, ])
+# clean stint types
+map <- c(
+  "Amateur; Senior" = "Amateur",
+  "International; Senior" = "International",
+  "Senior" = "Amateur"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  print(stints[idx2, "type"])
+  stints[idx2, "type"] <- map[m]
+}
+
+#### case: NA - <1995
+idx <- which(is.na(stints[, "startYear"]) & !is.na(stints[, "endYear"]) & stints[, "endYear"] < switch_year)
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+# clean stint types
+map <- c(
+  "Amateur; Senior" = "Amateur",
+  "Senior" = "Amateur"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  print(stints[idx2, "type"])
+  stints[idx2, "type"] <- map[m]
+}
+
+#### case: <1995 - >=1995
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] >= switch_year)
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+years <- apply(stints[idx, c("startYear", "endYear")], 1, function(row) paste0(row, collapse = "-"))
+table(years)
+# show specific cases
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senior"]
+print(stints[idx2, ])
+print(sort(unique(stints[idx2, "teamName"])))
+# clean stint types
+map <- c(
+  "Senior" = "Amateur; Senior"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  print(stints[idx2, "type"])
+  stints[idx2, "type"] <- map[m]
+}
+# split around 1995: pre=>amateur, post=> senior
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senior"]
+print(stints[idx2, "type"])
+head(stints[idx2, ])
+print(sort(unique(stints[idx2, "teamName"])))
+tids <- sort(unique(stints[idx2, "teamRsId"]))
+tab <- teams[teams[, "rugbyscopeId"] %in% tids, c("rugbyscopeId", "fullName", "countries")]
+tab <- tab[order(tab[, "countries"], tab[, "rugbyscopeId"]), ]
+write.csv(tab, file.path(data_folder, "team_list.csv"), row.names = FALSE)
+
+# principle : no "senior" stint before 1995, then it means more or less pro after 1995
+# algorithm: depends on the country, as they differ in how they switched to professionalism
+#####################
+# FR/EN/IT/JP:
+# - <1995: all clubs "amateur"
+# - >=1995: certain clubs switched to pro ("senior")
+# NZ:
+# - provinces: always "regional"
+# - clubs: always "amateur"
+# - franchises: always "senior"
+# IE/WA/SC/AU :
+# - clubs: always "amateur"
+# - provinces/franchises: "regional" <1995 then "senior" >=1995
+# ZA:
+# - clubs: always "amateur"
+# - provinces: "regional" <1995 then "senior" >=1995
+# FJ/AR : everything "amateur" except certain teams:
+# - FJ: Fijian Drua
+# - AR: Jaguares
+#####################
+# check if franchise teams existed before 1995 (should not, in certain countries)?
+
+
+
+
+
+
+
+#### case: <1995 - NA
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & is.na(stints[, "endYear"]))
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+# display all stints (not that many)
+print(stints[idx, ])
+
+
+
+# show specific cases
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional; Senior"]
+print(stints[idx2, ])
+#
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional"]
+print(stints[idx2, ])
+#
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "International; Regional; Senior"]
+print(stints[idx2, ])
+# clean stint types
+map <- c(
+  "Amateur; Senior" = "Amateur",
+  "International; Senior" = "International",
+  "Senior" = "Amateur"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  print(stints[idx2, "type"])
+  stints[idx2, "type"] <- map[m]
+}

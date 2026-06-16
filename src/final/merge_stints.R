@@ -1017,5 +1017,8 @@ write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # order stints
 stints <- order_stints(stints)
-tab.file <- file.path(data_folder, "stints_13.csv")
+tab.file <- file.path(data_folder, "stints_14.csv")
 write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+
+#teams <- read.csv(file.path(data_folder, "teams_08.csv"))
+#stints <- read.csv(file.path(data_folder, "stints_14.csv"))

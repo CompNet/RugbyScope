@@ -242,5 +242,5 @@ order_stints <- function(stints) {
   return(stints)
 }
 # TODO
-# - if start=end, not a loan but put before the longer stint
+# - if start=end, not a loan but put it before the longer stint
 # - would be nice to put invitational and national stints at the end
