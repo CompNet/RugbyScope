@@ -1,5 +1,5 @@
 ########################################################################
-# Add (back) the stint types, which for some reason were discarded during
+# Put back the stint types, which for some reason were discarded during
 # the earlier data processing steps.
 #
 # 06/2025 Vincent Labatut
@@ -157,7 +157,7 @@ all_teams <- list(enWP=en_teams, frWP=fr_teams, itWP=it_teams, jaWP=ja_teams)
 #print(teams[idx, c("rugbyscopeId","wikidataId","fullName","type","altNames")])
 # fix incorrect stint types
 conv <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
-idx <- which(stints[, "type"] != "Regional" & teams[conv, "type"] == "Regional team")
+idx <- which((is.na(stints[, "type"]) | stints[, "type"] != "Regional") & teams[conv, "type"] == "Regional team")
 print(head(stints[idx, ]))
 stints[idx, "type"] <- "Regional"
 
@@ -167,10 +167,241 @@ stints[idx, "type"] <- "Regional"
 #print(teams[idx, c("fullName")])
 # fix incorrect stint types
 conv <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
-idx <- which(stints[, "type"] != "International" & grepl("National", teams[conv, "type"], ignore.case = TRUE, fixed = TRUE))
+idx <- which((is.na(stints[, "type"]) | stints[, "type"] != "International") & grepl("National", teams[conv, "type"], ignore.case = TRUE, fixed = TRUE))
 print(head(stints[idx, ]))
 print(sort(unique(stints[idx, "teamName"])))
 stints[idx, "type"] <- "International"
+
+
+
+
+########################################################################
+# handle pre-profesionnalism stints: should be amateur, not senior
+switch_year <- 1995
+
+#####################
+# principle : no "senior" stint before 1995, then it means more or less pro after 1995
+# algorithm: depends on the country, as they differ in how they switched to professionalism
+#####################
+# FR/EN/IT/JP:
+# - <1995: all clubs "amateur"
+# - >=1995: certain clubs switched to pro ("senior")
+# NZ:
+# - provinces: always "regional"
+# - clubs: always "amateur"
+# - franchises: always "senior"
+# IE/WA/SC/AU/ZA :
+# - clubs: always "amateur"
+# - provinces/franchises: "regional" <1995 then "senior" >=1995
+# FJ/AR : everything "amateur" except certain teams:
+# - FJ: Fijian Drua
+# - AR: Jaguares
+#####################
+
+regions_prepro <- c(
+  # south africa
+  22, 121, 135, 156, 179, 241,
+  # australia
+  61, 80, 253, 2613, 247, 161, 7962, 3294,
+  # ireland
+  213, 225, 267, 282
+)
+
+
+
+#### case: <1995 - <1995
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] < switch_year)
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+# show specific cases
+#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional; Senior"]
+#print(stints[idx2, ])
+#
+#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional"]
+#print(stints[idx2, ])
+#
+#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "International; Regional; Senior"]
+#print(stints[idx2, ])
+#
+#idx2 <- idx[is.na(stints[idx, "type"])]
+#print(stints[idx2, ])
+# clean stint types
+map <- c(
+  "Amateur; Senior" = "Amateur",
+  "International; Senior" = "International",
+  "Senior" = "Amateur"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  print(stints[idx2, "type"])
+  stints[idx2, "type"] <- map[m]
+}
+# deal with certain missing types
+idx2 <- idx[is.na(stints[idx, "type"]) & stints[idx, "teamRsId"] %in% regions_prepro]
+print(stints[idx2, ])
+if (length(idx2) > 0)
+  stints[idx2, "type"] <- "Regional"
+idx2 <- idx[is.na(stints[idx, "type"]) & !(stints[idx, "teamRsId"] %in% regions_prepro)]
+print(stints[idx2, ])
+if (length(idx2) > 0)
+  stints[idx2, "type"] <- "Amateur"
+
+
+
+#### case: NA - <1995
+idx <- which(is.na(stints[, "startYear"]) & !is.na(stints[, "endYear"]) & stints[, "endYear"] < switch_year)
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+# clean stint types
+map <- c(
+  "Amateur; Senior" = "Amateur",
+  "Senior" = "Amateur"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  if (length(idx2) > 0) {
+    print(stints[idx2, "type"])
+    stints[idx2, "type"] <- map[m]
+  }
+}
+# deal with certain missing types
+idx2 <- idx[is.na(stints[idx, "type"]) & stints[idx, "teamRsId"] %in% regions_prepro]
+print(stints[idx2, ])
+if (length(idx2) > 0)
+  stints[idx2, "type"] <- "Regional"
+idx2 <- idx[is.na(stints[idx, "type"]) & !(stints[idx, "teamRsId"] %in% regions_prepro)]
+print(stints[idx2, ])
+if (length(idx2) > 0)
+  stints[idx2, "type"] <- "Amateur"
+
+
+
+#### case: <1995 - >1995
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] > switch_year)
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+years <- apply(stints[idx, c("startYear", "endYear")], 1, function(row) paste0(row, collapse = "-"))
+table(years)
+# show specific cases
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senior"]
+print(stints[idx2, ])
+print(sort(unique(stints[idx2, "teamName"])))
+# clean stint types
+map <- c(
+  "Senior" = "Amateur; Senior"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  if (length(idx2) > 0) {
+    print(stints[idx2, "type"])
+    stints[idx2, "type"] <- map[m]
+  }
+}
+# deal with certain missing types
+idx2 <- idx[is.na(stints[idx, "type"]) & stints[idx, "teamRsId"] %in% regions_prepro]
+print(stints[idx2, ])
+if (length(idx2) > 0)
+  stints[idx2, "type"] <- "Amateur; Senior"
+idx2 <- idx[is.na(stints[idx, "type"]) & !(stints[idx, "teamRsId"] %in% regions_prepro)]
+print(stints[idx2, ])
+if (length(idx2) > 0)
+  stints[idx2, "type"] <- "Amateur; Senior"
+# split around 1995
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senior"]
+print(stints[idx2, "type"])
+head(stints[idx2, ])
+print(sort(unique(stints[idx2, "teamName"])))
+#### export list of teams to be annotated and used later
+#tids <- sort(unique(stints[idx2, "teamRsId"]))
+#tab <- teams[teams[, "rugbyscopeId"] %in% tids, c("rugbyscopeId", "fullName", "countries")]
+#tab <- tab[order(tab[, "countries"], tab[, "rugbyscopeId"]), ]
+#write.csv(cbind(tab, rep(NA, nrow(tab))), file.path(data_folder, "team_list.csv"), row.names = FALSE)
+####
+map <- read.csv(file = file.path(data_folder, "team_list.csv"))
+# use the map to split stints
+for (t in 1:nrow(map)) {
+  tid <- map[t, "rugbyscopeId"]
+  before <- map[t, "before"]
+  after <- map[t, "after"]
+  tlog(2, "Processing stint ", t, "/", nrow(map), " (", before, "-", after, ")")
+
+  idx3 <- idx2[stints[idx2, "teamRsId"] == tid]
+  if (length(idx3) > 0) {
+    if (before == after) {
+      print(stints[idx3, ])
+      stints[idx3, "type"] <- before
+      print(stints[idx3, ])
+    } else {
+      for (s in idx3) {
+        new_stint <- stints[s, ]
+        duration <- stints[s, "endYear"] - stints[s, "startYear"]
+        matches_played <- stints[s, "matchesPlayed"]
+        points_scored <- stints[s, "pointsScored"]
+        # fix old stint
+        stints[s, "type"] <- before
+        stints[s, "endYear"] <- switch_year
+        if (!is.na(matches_played))
+          stints[s, "matchesPlayed"] <- round(matches_played / duration * (stints[s, "endYear"] - stints[s, "startYear"]))
+        if (!is.na(points_scored))
+          stints[s, "pointsScored"] <- round(points_scored / duration * (stints[s, "endYear"] - stints[s, "startYear"]))
+        # add extra stint
+        new_stint[1, "type"] <- after
+        new_stint[1, "startYear"] <- switch_year
+        if (!is.na(matches_played))
+          new_stint[1, "matchesPlayed"] <- round(matches_played / duration * (new_stint[1, "endYear"] - new_stint[1, "startYear"]))
+        if (!is.na(points_scored))
+          new_stint[1, "pointsScored"] <- round(points_scored / duration * (new_stint[1, "endYear"] - new_stint[1, "startYear"]))
+        stints <- rbind(stints, new_stint)
+        # print for verifications
+        print(stints[c(s, nrow(stints)),])
+      }
+    }
+  }
+
+  # readline("Type enter to continue")
+}
+
+
+
+#### case: <1980 - NA
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < 1980 & is.na(stints[, "endYear"]))
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+years <- apply(stints[idx, c("startYear", "endYear")], 1, function(row) paste0(row, collapse = "-"))
+table(years)
+# show specific cases
+idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senior"]
+print(stints[idx2, ])
+print(sort(unique(stints[idx2, "teamName"])))
+#
+idx2 <- idx[is.na(stints[idx, "type"])]
+print(stints[idx2, ])
+# clean stint types
+map <- c(
+  "Amateur; Senior" = "Amateur",
+  "Senior" = "Amateur"
+)
+for (m in 1:length(map)) {
+  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
+  if (length(idx2) > 0) {
+    print(stints[idx2, "type"])
+    stints[idx2, "type"] <- map[m]
+  }
+}
+
+
+#### case: 1980<x<1995 - NA
+idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] >= 1980 & stints[, "startYear"] < switch_year & is.na(stints[, "endYear"]))
+table(stints[idx, "type"])
+sort(names(table(stints[idx, "startYear"])))
+sort(names(table(stints[idx, "endYear"])))
+years <- apply(stints[idx, c("startYear", "endYear")], 1, function(row) paste0(row, collapse = "-"))
+table(years)
+print(sort(unique(stints[idx, "playerName"])))
 
 
 
@@ -414,190 +645,3 @@ rem_flag <- sort(unique(rem_flag))
 print(length(rem_flag))
 concerned_players <- sort(unique(concerned_players))
 print(length(concerned_players))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-########################################################################
-# handle pre-profesionnalism stints: should be amateur, not senior
-switch_year <- 1995
-
-#####################
-# principle : no "senior" stint before 1995, then it means more or less pro after 1995
-# algorithm: depends on the country, as they differ in how they switched to professionalism
-#####################
-# FR/EN/IT/JP:
-# - <1995: all clubs "amateur"
-# - >=1995: certain clubs switched to pro ("senior")
-# NZ:
-# - provinces: always "regional"
-# - clubs: always "amateur"
-# - franchises: always "senior"
-# IE/WA/SC/AU :
-# - clubs: always "amateur"
-# - provinces/franchises: "regional" <1995 then "senior" >=1995
-# ZA:
-# - clubs: always "amateur"
-# - provinces: "regional" <1995 then "senior" >=1995
-# FJ/AR : everything "amateur" except certain teams:
-# - FJ: Fijian Drua
-# - AR: Jaguares
-#####################
-
-#### case: <1995 - <1995
-idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] < switch_year)
-table(stints[idx, "type"])
-sort(names(table(stints[idx, "startYear"])))
-sort(names(table(stints[idx, "endYear"])))
-# show specific cases
-#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional; Senior"]
-#print(stints[idx2, ])
-#
-#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional"]
-#print(stints[idx2, ])
-#
-#idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "International; Regional; Senior"]
-#print(stints[idx2, ])
-# clean stint types
-map <- c(
-  "Amateur; Senior" = "Amateur",
-  "International; Senior" = "International",
-  "Senior" = "Amateur"
-)
-for (m in 1:length(map)) {
-  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
-  print(stints[idx2, "type"])
-  stints[idx2, "type"] <- map[m]
-}
-
-#### case: NA - <1995
-idx <- which(is.na(stints[, "startYear"]) & !is.na(stints[, "endYear"]) & stints[, "endYear"] < switch_year)
-table(stints[idx, "type"])
-sort(names(table(stints[idx, "startYear"])))
-sort(names(table(stints[idx, "endYear"])))
-# clean stint types
-map <- c(
-  "Amateur; Senior" = "Amateur",
-  "Senior" = "Amateur"
-)
-for (m in 1:length(map)) {
-  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
-  print(stints[idx2, "type"])
-  stints[idx2, "type"] <- map[m]
-}
-
-#### case: <1995 - >=1995
-idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & !is.na(stints[, "endYear"]) & stints[, "endYear"] > switch_year)
-table(stints[idx, "type"])
-sort(names(table(stints[idx, "startYear"])))
-sort(names(table(stints[idx, "endYear"])))
-years <- apply(stints[idx, c("startYear", "endYear")], 1, function(row) paste0(row, collapse = "-"))
-table(years)
-# show specific cases
-idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senior"]
-print(stints[idx2, ])
-print(sort(unique(stints[idx2, "teamName"])))
-# clean stint types
-map <- c(
-  "Senior" = "Amateur; Senior"
-)
-for (m in 1:length(map)) {
-  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
-  print(stints[idx2, "type"])
-  stints[idx2, "type"] <- map[m]
-}
-# split around 1995: pre=>amateur, post=> senior
-idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Senior"]
-print(stints[idx2, "type"])
-head(stints[idx2, ])
-print(sort(unique(stints[idx2, "teamName"])))
-#### export list of teams to be annotated and used later
-#tids <- sort(unique(stints[idx2, "teamRsId"]))
-#tab <- teams[teams[, "rugbyscopeId"] %in% tids, c("rugbyscopeId", "fullName", "countries")]
-#tab <- tab[order(tab[, "countries"], tab[, "rugbyscopeId"]), ]
-#write.csv(cbind(tab, rep(NA, nrow(tab))), file.path(data_folder, "team_list.csv"), row.names = FALSE)
-####
-map <- read.csv(file = file.path(data_folder, "team_list.csv"))
-# use the map to split stints
-for (t in 1:nrow(map)) {
-  tid <- map[t, "rugbyscopeId"]
-  before <- map[t, "before"]
-  after <- map[t, "after"]
-  tlog(2, "Processing stint ", t, "/", nrow(map), " (", before, "-", after, ")")
-
-  idx3 <- idx2[stints[idx2, "teamRsId"] == tid]
-  if (length(idx3) > 0) {
-    if (before == after) {
-      print(stints[idx3, ])
-      stints[idx3, "type"] <- before
-      print(stints[idx3, ])
-    } else {
-      for (s in idx3) {
-        new_stint <- stints[s, ]
-        duration <- stints[s, "endYear"] - stints[s, "startYear"]
-        matches_played <- stints[s, "matchesPlayed"]
-        points_scored <- stints[s, "pointsScored"]
-        # fix old stint
-        stints[s, "type"] <- before
-        stints[s, "endYear"] <- switch_year
-        if (!is.na(matches_played))
-          stints[s, "matchesPlayed"] <- round(matches_played / duration * (stints[s, "endYear"] - stints[s, "startYear"]))
-        if (!is.na(points_scored))
-          stints[s, "pointsScored"] <- round(points_scored / duration * (stints[s, "endYear"] - stints[s, "startYear"]))
-        # add extra stint
-        new_stint[1, "type"] <- after
-        new_stint[1, "startYear"] <- switch_year
-        if (!is.na(matches_played))
-          new_stint[1, "matchesPlayed"] <- round(matches_played / duration * (new_stint[1, "endYear"] - new_stint[1, "startYear"]))
-        if (!is.na(points_scored))
-          new_stint[1, "pointsScored"] <- round(points_scored / duration * (new_stint[1, "endYear"] - new_stint[1, "startYear"]))
-        stints <- rbind(stints, new_stint)
-        # print for verifications
-        print(stints[c(s, nrow(stints)),])
-      }
-    }
-  }
-
-  # readline("Type enter to continue")
-}
-
-#### case: <1995 - NA
-idx <- which(!is.na(stints[, "startYear"]) & stints[, "startYear"] < switch_year & is.na(stints[, "endYear"]))
-table(stints[idx, "type"])
-sort(names(table(stints[idx, "startYear"])))
-sort(names(table(stints[idx, "endYear"])))
-# display all stints (not that many)
-print(stints[idx, ])
-
-# TODO
-
-# show specific cases
-idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional; Senior"]
-print(stints[idx2, ])
-#
-idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "Amateur; Regional"]
-print(stints[idx2, ])
-#
-idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == "International; Regional; Senior"]
-print(stints[idx2, ])
-# clean stint types
-map <- c(
-  "Amateur; Senior" = "Amateur",
-  "International; Senior" = "International",
-  "Senior" = "Amateur"
-)
-for (m in 1:length(map)) {
-  idx2 <- idx[!is.na(stints[idx, "type"]) & stints[idx, "type"] == names(map)[m]]
-  print(stints[idx2, "type"])
-  stints[idx2, "type"] <- map[m]
-}

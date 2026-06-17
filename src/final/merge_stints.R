@@ -918,6 +918,7 @@ end.rec.log()
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
+#     with a limit of 30 years for the very last missing end year?
 #   - complement missing dates/ split depending on loans, etc.
 #     note : overlapping stints at clubs = loans
 #            but there are also just simultaneous membership
