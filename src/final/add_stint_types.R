@@ -521,7 +521,7 @@ for (s in 2800:nrow(stints)) {
 if (stints[s, "type"] %in% c("Amateur; Senior", "Amateur; Regional; Senior")) {
     # log issue
     nbr_multiple <- nbr_multiple + 1
-    tlog(4, "Several matches: ", paste0(original_types, collapse = "; "))
+    tlog(4, "Several matches (", nbr_multiple,"): ", paste0(original_types, collapse = "; "))
 
     # # export for debug
     # concerned_players <- c(concerned_players, player_id)
@@ -596,6 +596,9 @@ idx <- which(!(stints[, "playerId"] %in% concerned_players))
 ok_stints <- stints[idx, ]
 tab.file <- file.path(data_folder, "stints_13_ok.csv")
 write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# "Arnaud Héguy"
+# "Amateur","Q807749","136","Barbarian FC"
 
 
 
