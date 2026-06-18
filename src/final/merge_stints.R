@@ -910,11 +910,14 @@ end.rec.log()
 #     - look for exact duplicates
 #     - check all categorical variables (in particular sources)
 #     - clean (unique) + order sources (and other multiple fields)
+#     - check that start <= end
+#     - check overlapping stints with the same team and type
 #   - complement data:
 #     - remove stints and parts of stints before 18 yo (without changing stats)
 #     - complement missing U18 (and other youth teams) dates using player's age
 #     - and do the opposite: complement missing birthdate using Uxx stints
 #     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
+#     - replace "," by ";" in multi-value fields
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
@@ -1018,7 +1021,7 @@ write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # order stints
 stints <- order_stints(stints)
-tab.file <- file.path(data_folder, "stints_15.csv")
+tab.file <- file.path(data_folder, "stints_15-4.csv")
 write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #teams <- read.csv(file.path(data_folder, "teams_08.csv"))

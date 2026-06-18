@@ -68,7 +68,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_14.csv"))
+stints <- read.csv(file.path(data_folder, "stints_15-4.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -596,9 +596,6 @@ idx <- which(!(stints[, "playerId"] %in% concerned_players))
 ok_stints <- stints[idx, ]
 tab.file <- file.path(data_folder, "stints_13_ok.csv")
 write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
-
-# "Arnaud Héguy"
-# "Amateur","Q807749","136","Barbarian FC"
 
 
 
