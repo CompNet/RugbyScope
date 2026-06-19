@@ -68,7 +68,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_15-6.csv"))
+stints <- read.csv(file.path(data_folder, "stints_16.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -421,7 +421,7 @@ nbr_missed <- 0
 nbr_multiple <- 0
 fus_types <- c()
 concerned_players <- c()
-for (s in 2800:nrow(stints)) {
+for (s in 1:nrow(stints)) {
   tlog(2, "Processing stint ", s, "/", nrow(stints))
 
   # retrive data sources for this stint
@@ -515,7 +515,8 @@ for (s in 2800:nrow(stints)) {
   #
   # # debug: multiple matches
   # } else if (length(original_types) > 1) {
-if (stints[s, "type"] %in% c("Amateur; Senior", "Amateur; Regional; Senior")) {
+#if (stints[s, "type"] %in% c("Amateur; Senior", "Amateur; Regional; Senior")) {
+if (is.na(stints[s, "type"])) {
     # log issue
     nbr_multiple <- nbr_multiple + 1
     tlog(4, "Several matches (", nbr_multiple,"): ", paste0(original_types, collapse = "; "))
@@ -593,6 +594,9 @@ idx <- which(!(stints[, "playerId"] %in% concerned_players))
 ok_stints <- stints[idx, ]
 tab.file <- file.path(data_folder, "stints_13_ok.csv")
 write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# ^([^,]+,[^,]+),NA,([^,]+,[^,]+,[^,]+,\d+,.+\n\1),"Amateur"
+# $1,"Amateur",$2,"Amateur"
 
 
 

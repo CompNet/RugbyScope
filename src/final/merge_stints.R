@@ -898,14 +898,11 @@ end.rec.log()
 #   - notes:
 #     - we should have kept stint order and loan indications
 #   - misc:
-#     > function to add back stint types (amateur, provincial, junior, senior, etc.)
-#       - classify stints based on the WP categories (provincial, pro, etc.)
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - handle frWP stints at the start of career: often wrong
 #       > check players with very long career spans, probably this type of problem
 #       > and/or players with big gaps between stints
-#     - look for stints of the form xxx-2013 vs 2014-xxxx (same team)
-#     - handles cases where there are stints without dates and the first dated stints starts >18yo
+#     - look for overlapping stints of the form xxx-2013 vs 2014-xxxx (same team)
 #   - final:
 #     - look for exact duplicates
 #     - check all categorical variables (in particular sources)
@@ -918,6 +915,7 @@ end.rec.log()
 #     - and do the opposite: complement missing birthdate using Uxx stints
 #     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
 #     - replace "," by ";" in multi-value fields
+#     - handles cases where there are stints without dates and the first dated stints starts >18yo (could remove the undated stints)
 ###############################
 # - NET EXTRACTION
 #   - complement missing end years by leveraging present start years
@@ -1025,4 +1023,4 @@ tab.file <- file.path(data_folder, "stints_15-6.csv")
 write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #teams <- read.csv(file.path(data_folder, "teams_08.csv"))
-#stints <- read.csv(file.path(data_folder, "stints_14.csv"))
+#stints <- read.csv(file.path(data_folder, "stints_16.csv"))
