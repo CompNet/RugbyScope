@@ -68,7 +68,7 @@ tlog(2, "Number of teams: ", nrow(teams))
 players <- read.csv(file.path(data_folder, "players_08.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-stints <- read.csv(file.path(data_folder, "stints_15-4.csv"))
+stints <- read.csv(file.path(data_folder, "stints_15-6.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -415,7 +415,7 @@ if(!"type" %in% colnames(stints))
 
 # open log files for debugging
 con_mult <- file(file.path(data_folder, "stints_13_multiple.csv"), open = "w")
-# con_none <- file(file.path(data_folder, "stints_13_unmatched.csv"), open = "w")
+con_none <- file(file.path(data_folder, "stints_13_unmatched.csv"), open = "w")
 
 nbr_missed <- 0
 nbr_multiple <- 0
@@ -426,7 +426,6 @@ for (s in 2800:nrow(stints)) {
 
   # retrive data sources for this stint
   player_id <- stints[s, "playerId"]
-  #sources <- setdiff(sort(unique(trimws(unlist(strsplit(stints[s, "dataSource"], ";"))))), "WD")
   sources <- names(all_stints)
 
   # retrieve stint types from original stint tables
@@ -473,8 +472,6 @@ for (s in 2800:nrow(stints)) {
                              (old_stints[idx0, "endYear"] >= stints[s, "startYear"] & old_stints[idx0, "endYear"] <= stints[s, "endYear"])]
               }
             }
-            # idx0 <- idx0[(is.na(old_stints[idx0, "startYear"]) & is.na(stints[s, "startYear"]) | !is.na(old_stints[idx0, "startYear"]) & !is.na(stints[s, "startYear"]) & old_stints[idx0, "startYear"] == stints[s, "startYear"]) |
-            #              (is.na(old_stints[idx0, "endYear"]) & is.na(stints[s, "endYear"]) | !is.na(old_stints[idx0, "endYear"]) & !is.na(stints[s, "endYear"]) & old_stints[idx0, "endYear"] == stints[s, "endYear"])]
             idx2 <- c(idx2, idx0)
         }
       }
@@ -590,7 +587,7 @@ tlog("Number of stints that could not be matched: ", nbr_missed)
 tlog("Number of stints matched to several original stints: ", nbr_multiple)
 
 close(con_mult)
-# close(con_none)
+close(con_none)
 
 idx <- which(!(stints[, "playerId"] %in% concerned_players))
 ok_stints <- stints[idx, ]
