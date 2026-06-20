@@ -13,6 +13,9 @@ library("dplyr")
 library("httr")
 library("jsonlite")
 library("magrittr")
+library("skimr")
+library("DataExplorer")
+library("summarytools")
 
 source("src/common/logging.R")
 
@@ -32,7 +35,7 @@ tlog("Loading player table")
 
 data_folder <- file.path("data", "fusion")
 
-players <- read.csv(file.path(data_folder, "players_08.csv"))
+players <- read.csv(file.path(data_folder, "players_09.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
 
@@ -144,6 +147,7 @@ players[, "altNames"] <- temp
 # dates: check birth < death and so on
 # "birthDate" "deathDate" "careerStartYears" "careerEndYears"
 
+# test birth / death dates
 head(sort(unique(players[, "birthDate"])))
 tail(sort(unique(players[, "birthDate"])))
 head(sort(unique(players[, "deathDate"])))
@@ -151,7 +155,8 @@ tail(sort(unique(players[, "deathDate"])))
 idx <- which(players[, "birthDate"] > players[, "deathDate"])
 if (length(idx) > 0)
   print(players[idx, ])
-#
+
+# test career dates
 head(sort(unique(players[, "careerStartYears"])))
 tail(sort(unique(players[, "careerStartYears"])))
 head(sort(unique(players[, "careerEndYears"])))
@@ -357,21 +362,39 @@ if (length(duplicates) > 0)
 
 ########################################################################
 # adjust column names
-colnames[colnames(players) == "firstName"]  <- "firstNames"
-colnames[colnames(players) == "lastName"]  <- "lastNames"
+colnames(players)[colnames(players) == "firstName"]  <- "firstNames"
+colnames(players)[colnames(players) == "lastName"]  <- "lastNames"
 #
-colnames[colnames(players) == "weights"]  <- "weight"
-colnames[colnames(players) == "heights"]  <- "height"
+colnames(players)[colnames(players) == "weights"]  <- "weight"
+colnames(players)[colnames(players) == "heights"]  <- "height"
 #
-colnames[colnames(players) == "careerStartYears"]  <- "careerStartYear"
-colnames[colnames(players) == "careerEndYears"]  <- "careerEndYear"
+colnames(players)[colnames(players) == "careerStartYears"]  <- "careerStartYear"
+colnames(players)[colnames(players) == "careerEndYears"]  <- "careerEndYear"
 #
-colnames[colnames(players) == "espnScrumIds"]  <- "espnScrumId"
-colnames[colnames(players) == "allRugbyIds"]  <- "allRugbyId"
-colnames[colnames(players) == "googleKnowlIds"]  <- "googleKnowlId"
-colnames[colnames(players) == "itsRugbyIds"]  <- "itsRugbyId"
-colnames[colnames(players) == "rugbyDatabaseIds"]  <- "rugbyDatabaseId"
+colnames(players)[colnames(players) == "espnScrumIds"]  <- "espnScrumId"
+colnames(players)[colnames(players) == "allRugbyIds"]  <- "allRugbyId"
+colnames(players)[colnames(players) == "googleKnowlIds"]  <- "googleKnowlId"
+colnames(players)[colnames(players) == "itsRugbyIds"]  <- "itsRugbyId"
+colnames(players)[colnames(players) == "rugbyDatabaseIds"]  <- "rugbyDatabaseId"
 
+
+
+
+########################################################################
+# summarize the table properties
+
+# basic stats
+summary(players)
+
+# a bit more advanced
+skim(players)
+
+# full report
+dfSummary(players)
+#create_report(players)
+
+
+########################################################################
 # record players table
 tab.file <- file.path(data_folder, "players_09.csv")
 write.csv(players, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
