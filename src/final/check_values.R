@@ -338,5 +338,4 @@ end.rec.log()
 
 
 # TODO
-# firstName => firstNames
-# lastName => lastNames
+# synch names in player and stint tables

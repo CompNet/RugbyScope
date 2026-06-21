@@ -1,11 +1,11 @@
 ########################################################################
-# Performs various checks and verification on the players data table, in
+# Performs various checks and verification on the teams data table, in
 # order to detect issues in the data.
 #
 # 06/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/final/check_players.R")
+# source("src/final/check_teams.R")
 ########################################################################
 library("stringi")
 library("stringr")
@@ -24,24 +24,325 @@ source("src/common/logging.R")
 
 ########################################################################
 # start logging
-start.rec.log("CheckPlayers")
+start.rec.log("CheckTeams")
 
 
 
 
 ########################################################################
 # load tables
-tlog("Loading players table")
+tlog("Loading teams table")
 
 data_folder <- file.path("data", "fusion")
 
-players <- read.csv(file.path(data_folder, "players_08.csv"))
-tlog(2, "Number of players: ", nrow(players))
+teams <- read.csv(file.path(data_folder, "teams_08.csv"))
+tlog(2, "Number of teams: ", nrow(teams))
 
 
 
 
 ########################################################################
+# ids: check unicity
+# "rugbyscopeId" "wikidataId" "allRugbyIds" "googleKnowlIds" "dbpediaId"
+id_field <- "rugbyscopeId"
+tlog(2, "Processing ", id_field)
+tt <- table(teams[, id_field])
+duplicates <- names(tt[tt > 1])
+if (length(duplicates) > 0)
+  print(teams[teams[, id_field] %in% duplicates, ])
+
+id_field <- "wikidataId"
+tlog(2, "Processing ", id_field)
+tt <- table(teams[, id_field])
+duplicates <- names(tt[tt > 1])
+if (length(duplicates) > 0)
+  print(teams[teams[, id_field] %in% duplicates, ])
+
+id_field <- "allRugbyIds"
+tlog(2, "Processing ", id_field)
+tt <- table(teams[, id_field])
+duplicates <- names(tt[tt > 1])
+if (length(duplicates) > 0)
+  print(teams[teams[, id_field] %in% duplicates, ])
+
+id_field <- "googleKnowlIds"
+tlog(2, "Processing ", id_field)
+tt <- table(teams[, id_field])
+duplicates <- names(tt[tt > 1])
+if (length(duplicates) > 0)
+  print(teams[teams[, id_field] %in% duplicates, ])
+
+id_field <- "dbpediaId"
+tlog(2, "Processing ", id_field)
+tt <- table(teams[, id_field])
+duplicates <- names(tt[tt > 1])
+if (length(duplicates) > 0)
+  print(teams[teams[, id_field] %in% duplicates, ])
+
+
+
+
+########################################################################
+# alt names: remove redundant names and sort remaining names
+# "fullName" "altNames"
+split_altnames <- strsplit(teams[, "altNames"], ";", fixed = TRUE)
+split_altnames <- lapply(split_altnames, function(an) if(all(is.na(an))) NA else trimws(an))
+temp <- rep(NA, nrow(teams))
+for (p in 1:nrow(teams)) {
+  if (!all(is.na(split_altnames[[p]])))
+    temp[p] <- paste0(sort(setdiff(split_altnames[[p]], teams[p, "fullName"])), collapse = "; ")
+}
+
+# verification
+idx <- which(teams[, "altNames"] != temp)
+print(length(idx))
+if (length(idx) > 0)
+  for (i in idx) print(c(teams[i, "fullName"], teams[i, "altNames"], temp[i]))
+
+# replace "" by NA
+temp[temp == ""] <- NA
+# update table
+teams[, "altNames"] <- temp
+
+
+
+
+########################################################################
+# categories: verify normalization
+# "type" "countries" "competitions" "tier"
+
+# check names vs. types
+print(sort(unique(teams[, "type"])))
+idx <- which(teams[, "type"] == "National senior team")
+print(teams[idx, c("fullName", "tier")])
+print(as.matrix(sort(teams[idx, "fullName"]), ncol = 1))
+
+
+# normalize country names
+print(sort(unique(trimws(unlist(strsplit(teams[, "countries"], ";"))))))
+# check teams without country
+idx <- which(is.na(teams[, "countries"]))
+print(teams[idx, c("rugbyscopeId", "fullName", "countries")])
+
+
+# check tier values
+print(sort(unique(teams[, "tier"])))
+
+
+########################################################################
+# affiliation: complement missing affiliations
+# "affiliations"
+
+# display existing affiliations
+table(trimws(unlist(strsplit(teams[, "affiliations"], ";"))), useNA = "always")
+print(sort(unique(trimws(unlist(strsplit(teams[, "affiliations"], ";"))))))
+
+# JUST DID: complemented all missing countries
+# > now must list all countries and complement list of federations below
+
+map <- c(
+  "Argentina" = "Argentine Rugby Union",
+  "Australia" = "Rugby Australia",
+  "Belgium" = "Belgian Rugby Federation",
+  "Bosnia and Herzegovina" = "Rugby Union of Bosnia and Herzegovina",
+  "Canada" = "Rugby Canada",
+  "Croatia" = "Croatian Rugby Federation",
+  "Cyprus" = "Cyprus Rugby Federation",
+  "Czechia" = "Czech Rugby Union",
+  "England" = "Rugby Football Union",
+  "Fiji" = "Fiji Rugby Union",
+  "Finland" = "Finnish Rugby Federation",
+  "France" = "French Rugby Federation",
+  "Greece" = "Hellenic Rugby Federation",
+  "Hong Kong" = "Hong Kong Rugby Union",
+  "Ireland" = "Irish Rugby Football Union",
+  "Israel" = "Rugby Israel",
+  "Italy" = "Italian Rugby Federation",
+  "Japan" = "Japan Rugby Football Union",
+  "Kenya" = "Kenya Rugby Football Union",
+  "Lebanon" = "Lebanese Rugby Union Federation",
+  "Malta" = "Malta Rugby Football Union",
+  "Montenegro" = "Montenegrin Rugby Union",
+  "Morocco" = "Royal Moroccan Rugby Federation",
+  "Nepal" = "Nepal Rugby Association",
+  "Netherlands" = "Dutch Rugby Union",
+  "New Zealand" = "New Zealand Rugby",
+  "Norway" = "Norwegian Rugby Union",
+  "Poland" = "Polish Rugby Union",
+  "Romania" = "Romanian Rugby Federation",
+  "Russia" = "Rugby Union of Russia",
+  "Samoa" = "Rugby Samoa",
+  "Scotland" = "Scottish Rugby Union",
+  "South Africa" = "South African Rugby Union",
+  "South Korea" = "Korea Rugby Union",
+  "Spain" = "Spanish Rugby Federation",
+  "Sri Lanka" = "Sri Lanka Rugby",
+  "Taiwan" = "Taiwan Rugby Football Union",
+  "Tanzania" = "Tanzania Rugby Football Union",
+  "Tonga" = "Tonga Rugby Union",
+  "Uganda" = "Uganda Rugby Football Union",
+  "Ukraine" = "Ukraine Rugby Union",
+  "United Arab Emirates" = "United Arab Emirates Rugby Federation",
+  "U.S.A." = "USA Rugby",
+  "Wales" = "Welsh Rugby Union",
+  "Zimbabwe" = "Zimbabwe Rugby Union"
+)
+for (i in 1:length(map)) {
+  country <- names(map)[i]
+  federation_name <- map[i]
+
+  idx <- which(teams[, "countries"] == country & is.na(teams[, "affiliations"]))
+  table(teams[idx, "affiliations"], useNA = "always")
+  table(teams[idx, "type"], useNA = "always")
+  print(teams[idx, c("fullName", "affiliations")])
+
+  # handle clubs
+  idx2 <- idx[teams[idx, "type"] == "Club/franchise team"]
+  if (length(idx2) > 0) {
+    print(teams[idx2, c("fullName", "affiliations")])
+    teams[idx2, "affiliations"] <- federation_name
+  }
+
+  # handle national teams
+  idx2 <- idx[grepl("national", teams[idx, "type"], ignore.case = TRUE) & grepl(country, teams[idx, "fullName"], ignore.case = TRUE)]
+  if (length(idx2) > 0) {
+    print(teams[idx2, c("fullName", "affiliations")])
+    teams[idx2, "affiliations"] <- federation_name
+  }
+
+  # handle regional teams
+  idx2 <- idx[teams[idx, "type"] == "Regional team"]
+  if (length(idx2) > 0) {
+    print(teams[idx2, c("fullName", "affiliations")])
+    teams[idx2, "affiliations"] <- federation_name
+  }
+  
+  # display non-affiliated teams
+  idx2 <- idx[is.na(teams[idx, "affiliations"])]
+  print(teams[idx2, c("fullName", "affiliations")])
+}
+stop("STOP HERE")
+
+# display non-affiliated teams overall
+idx <- which(is.na(teams[, "affiliations"]))
+print(teams[idx, c("fullName", "countries", "affiliations")])
+
+federation_name <- "Spanish Rugby Federation"
+country <- "Spain"
+idx <- which(teams[, "countries"] == country)
+table(teams[idx, "affiliations"], useNA = "always")
+table(teams[idx, "type"], useNA = "always")
+print(teams[idx, c("fullName", "affiliations")])
+# handle clubs
+idx2 <- idx[teams[idx, "type"] == "Club/franchise team"]
+print(teams[idx2, c("fullName", "affiliations")])
+teams[idx2, "affiliations"] <- federation_name
+# handle national teams
+idx2 <- idx[grepl("national", teams[idx, "type"], ignore.case = TRUE) & grepl(country, teams[idx, "fullName"], ignore.case = TRUE)]
+print(teams[idx2, c("fullName", "affiliations")])
+teams[idx2, "affiliations"] <- federation_name
+# handle regional teams
+idx2 <- idx[teams[idx, "type"] == "Regional team"]
+print(teams[idx2, c("fullName", "affiliations")])
+teams[idx2, "affiliations"] <- federation_name
+# display non-affiliated teams
+idx2 <- idx[is.na(teams[idx, "affiliations"])]
+print(teams[idx2, c("fullName", "affiliations")])
+
+# TODO deal with unassigned national teams
+
+
+
+# normalize competition names
+print(sort(unique(trimws(unlist(strsplit(teams[, "competitions"], ";"))))))
+
+
+
+
+
+########################################################################
+# numeric: check formating
+# "homeVenueCapacities"
+
+
+
+
+########################################################################
+# place names: nothing to do
+# "homeVenueNames" "locations"
+
+
+
+
+########################################################################
+# dates: check inception < termination
+# "inceptionDate" "terminationDate"
+
+
+
+
+########################################################################
+# urls: check unicity
+# "wikipediaEn" "wikipediaFr" "wikipediaIt" "wikipediaEs" "wikipediaJa"
+
+
+
+
+########################################################################
+# comments: nothing to do
+# "comments"
+
+
+
+
+########################################################################
+# summarize the table properties
+
+# basic stats
+summary(teams)
+
+# a bit more advanced
+skim(teams)
+
+# full report
+dfSummary(teams)
+#create_report(teams)
+
+
+
+
+########################################################################
+# record players table
+tab_file <- file.path(data_folder, "teams_09.csv")
+write.csv(teams, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# stop logging
+end.rec.log()
+
+# TODO
+# - convert dates into dates
+# - pseudo-countries like tahiti and so on ? > main country, but possibly local Union
+# - add missing values : dates, others ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # names: complement missing firstnames / lastnames
 # "fullName" "firstName" "lastName"
 
@@ -114,31 +415,6 @@ print(cbind(players[idx, "fullName"], before, players[idx, "lastName"]))
 # check if hyphens are correctly handled
 #idx <- which(grepl("-", players[, "fullName"]) & (grepl(";", players[, "firstName"]) | grepl(";", players[, "lastName"])))
 #print(players[idx, c("fullName", "firstName", "lastName", "altNames")])
-
-
-
-
-########################################################################
-# alt names: remove redundant forms and sort remaining forms
-# "altNames"
-split_altnames <- strsplit(players[, "altNames"], ";", fixed = TRUE)
-split_altnames <- lapply(split_altnames, function(an) if(all(is.na(an))) NA else trimws(an))
-temp <- rep(NA, nrow(players))
-for (p in 1:nrow(players)) {
-  if (!all(is.na(split_altnames[[p]])))
-    temp[p] <- paste0(sort(setdiff(split_altnames[[p]], players[p, "fullName"])), collapse = "; ")
-}
-
-# verification
-idx <- which(players[, "altNames"] != temp)
-print(length(idx))
-if (length(idx) > 0)
-  for (i in idx) print(c(players[i, "fullName"], players[i, "altNames"], temp[i]))
-
-# replace "" by NA
-temp[temp == ""] <- NA
-# update table
-players[, "altNames"] <- temp
 
 
 
@@ -376,30 +652,3 @@ colnames(players)[colnames(players) == "allRugbyIds"]  <- "allRugbyId"
 colnames(players)[colnames(players) == "googleKnowlIds"]  <- "googleKnowlId"
 colnames(players)[colnames(players) == "itsRugbyIds"]  <- "itsRugbyId"
 colnames(players)[colnames(players) == "rugbyDatabaseIds"]  <- "rugbyDatabaseId"
-
-
-
-
-########################################################################
-# summarize the table properties
-
-# basic stats
-summary(players)
-
-# a bit more advanced
-skim(players)
-
-# full report
-dfSummary(players)
-#create_report(players)
-
-
-
-
-########################################################################
-# record players table
-tab_file <- file.path(data_folder, "players_09.csv")
-write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
-
-# stop logging
-end.rec.log()
