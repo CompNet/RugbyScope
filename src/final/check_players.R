@@ -172,6 +172,10 @@ idx <- which(players[, "careerEndYears"] < players[, "birthDate"] | players[, "c
 if (length(idx) > 0)
   print(players[idx, ])
 
+# convert to proper date formats
+players[, "birthDate"] <- as.Date(players[, "birthDate"])
+players[, "deathDate"] <- as.Date(players[, "deathDate"])
+
 
 
 
@@ -315,6 +319,15 @@ tt <- table(players[, id_field])
 duplicates <- names(tt[tt > 1])
 if (length(duplicates) > 0)
   print(players[players[, id_field] %in% duplicates, ])
+
+
+# presence of WD ids in the wrong column
+for (i in (1:ncol(players))[-2]) {
+  tlog(2, "Processing column ", colnames(players)[i])
+  idx <- which(grepl("Q\\d", players[, i]))
+  which(length(idx) > 0)
+    tlog(4, paste0(idx, collapse = ", "))
+}
 
 
 
