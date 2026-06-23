@@ -34,10 +34,106 @@ start.rec.log("CheckStints")
 tlog("Loading stints table")
 
 data_folder <- file.path("data", "fusion")
-res_folder <- file.path("data", "references", "union")
+
+players <- read.csv(file.path(data_folder, "players_09.csv"))
+tlog(2, "Number of players: ", nrow(players))
+
+teams <- read.csv(file.path(data_folder, "teams_09.csv"))
+tlog(2, "Number of teams: ", nrow(teams))
 
 stints <- read.csv(file.path(data_folder, "stints_16.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
+
+
+
+
+########################################################################
+# ids: check player/team exists
+# "playerId" "teamRsId"
+
+pids <- stints[, "playerId"]
+idx <- match(pids, players[, "wikidataId"])
+print(stints[is.na(idx), ])
+
+tids <- stints[, "teamRsId"]
+idx <- match(tids, teams[, "rugbyscopeId"])
+print(stints[is.na(idx), ])
+
+
+
+
+########################################################################
+# info: check player/team info are synched
+# "playerName" "teamName" "teamWdId
+
+pids <- stints[, "playerId"]
+idx <- match(pids, players[, "wikidataId"])
+print(stints[players[idx, "fullName"] != stints[, "playerName"], ])
+
+tids <- stints[, "teamRsId"]
+idx <- match(tids, teams[, "rugbyscopeId"])
+print(stints[teams[idx, "fullName"] != stints[, "teamName"], ])
+print(stints[!is.na(stints[, "teamWdId"]) & teams[idx, "wikidataId"] != stints[, "teamWdId"], ])
+
+
+
+
+########################################################################
+# types: check normalization
+# "type"
+
+print(sort(table(stints[, "type"], useNA = "always")))
+which(stints[, "type"] == "Junior")
+#
+idx <- which(is.na(stints[, "type"]) & stints[, "dataSource"] != "WD")
+stints[idx, ]
+
+
+
+
+########################################################################
+# types: check validty, compare to team/player years
+# "startYear" "endYear"
+
+# check internal validity
+head(sort(unique(stints[, "startYear"])))
+tail(sort(unique(stints[, "startYear"])))
+head(sort(unique(stints[, "endYear"])))
+tail(sort(unique(stints[, "endYear"])))
+idx <- which(stints[, "startYear"] > stints[, "endYear"])
+if (length(idx) > 0)
+  print(stints[idx, ])
+
+# compare to player dates
+
+
+
+# compare to team dates
+
+
+stop()
+
+
+
+
+########################################################################
+# stats: check validty
+# "matchesPlayed" "pointsScored"
+
+
+
+
+########################################################################
+# source: order and remove redundancy
+# "dataSource"
+
+
+
+
+
+
+
+
 
 
 
