@@ -35,8 +35,11 @@ tlog("Loading players table")
 
 data_folder <- file.path("data", "fusion")
 
-players <- read.csv(file.path(data_folder, "players_08.csv"))
+players <- read.csv(file.path(data_folder, "players_10.csv"))
 tlog(2, "Number of players: ", nrow(players))
+
+stints <- read.csv(file.path(data_folder, "stints_16.csv"))
+tlog(2, "Number of stints: ", nrow(stints))
 
 
 
@@ -233,8 +236,95 @@ players[, "deathPlaces"] <- gsub(",", ";", players[, "deathPlaces"], fixed = TRU
 ########################################################################
 # countries: verify normalization
 # "citizenships" "sportCountries"
-print(sort(unique(trimws(unlist(strsplit(players[, "citizenships"], ";"))))))
-print(sort(unique(trimws(unlist(strsplit(players[, "sportCountries"], ";"))))))
+print(sort(table(trimws(unlist(strsplit(players[, "citizenships"], ";"))), useNA = "always")))
+print(sort(table(trimws(unlist(strsplit(players[, "sportCountries"], ";"))), useNA = "always")))
+
+
+
+# fix missing sport countries for UK
+idx <- which(players[, "citizenships"] == "England")
+players[idx, "citizenships"] <- "United Kingdom"
+players[idx, "sportCountries"] <- "England"
+idx <- which(grepl("England", players[, "citizenships"]))
+#
+idx <- which(players[, "citizenships"] == "Scotland")
+players[idx, "citizenships"] <- "United Kingdom"
+players[idx, "sportCountries"] <- "Scotland"
+idx <- which(grepl("Scotland", players[, "citizenships"]))
+#
+idx <- which(players[, "citizenships"] == "Wales")
+players[idx, "citizenships"] <- "United Kingdom"
+players[idx, "sportCountries"] <- "Wales"
+idx <- which(grepl("Wales", players[, "citizenships"]))
+
+idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
+print(players[idx, ])
+
+# leverage international stints
+for (i in 1:length(idx)) {
+  tlog(2, "Process player ", players[idx[i], "fullName"])
+  print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+
+  player_stints <- stints[stints[, "playerId"] == players[idx[i], "wikidataId"], ]
+  sport_countries <- c()
+  for (nation in c("England", "Ireland", "Scotland", "Wales")) {
+    if (grepl(nation, paste0(player_stints[, "teamName"], collapse = "; "), fixed = TRUE))
+      sport_countries <- c(sport_countries, nation)
+  }
+
+  if (length(sport_countries) > 0) {
+    players[idx[i], "sportCountries"] <- paste0(sport_countries, collapse = "; ")
+    print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+  }
+}
+idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
+print(players[idx, ])
+
+# add manual annotations
+map <- read.csv("data/fusion/_missing_nations.csv")
+idx <- match(map[, "url"], players[, "wikipediaEn"])
+cbind(players[idx, "wikipediaEn"], map)
+players[idx, "sportCountries"] <- map[, "country"]
+#
+idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
+print(players[idx, ])
+
+
+# dealing with missing citizenships
+idx <- which(is.na(players[, "citizenships"]))
+# leverage international stints
+for (i in 1:length(idx)) {
+  tlog(2, "Process player ", players[idx[i], "fullName"])
+  print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+
+  player_stints <- stints[stints[, "playerId"] == players[idx[i], "wikidataId"], ]
+  sport_countries <- c()
+  for (nation in c("England", "Ireland", "Scotland", "Wales")) {
+    if (grepl(nation, paste0(player_stints[, "teamName"], collapse = "; "), fixed = TRUE))
+      sport_countries <- c(sport_countries, nation)
+  }
+
+# TODO
+# parser chaque équipe pr lister les nations, rajouter dans pays sport
+# si une seule, rajouter au citizenship
+# attention au cas UK: si home nation, rajouter aussi UK au ctz + nation au pays sport
+  
+  names <- sort(teams[teams[, "type"] == "National senior team", "fullName"])
+  if (grepl("(.+) national rugby union team", team_name)) {
+    ctry <- str_match(team_name, "(.+) national rugby union team")[2]
+    if (substr(ctry, nchar(ctry) - 1, nchar(ctry) - 1) == " ")
+      ctry <- substr(ctry, 1, nchar(ctry) - 2)
+    else
+      ctry
+  }
+
+  if (length(sport_countries) > 0) {
+    players[idx[i], "sportCountries"] <- paste0(sport_countries, collapse = "; ")
+    print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+  }
+}
+idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
+print(players[idx, ])
 
 
 
@@ -411,7 +501,7 @@ dfSummary(players)
 
 ########################################################################
 # record players table
-tab_file <- file.path(data_folder, "players_09.csv")
+tab_file <- file.path(data_folder, "players_10.csv")
 write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # stop logging

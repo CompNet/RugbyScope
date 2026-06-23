@@ -104,12 +104,21 @@ idx <- which(stints[, "startYear"] > stints[, "endYear"])
 if (length(idx) > 0)
   print(stints[idx, ])
 
-# compare to player dates
+# check if stints are posterior to player's birth date
+idx <- match(stints[, "playerId"], players[, "wikidataId"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "birthDate"]) & stints[, "startYear"] <= players[idx, "birthDate"])
+print(stints[idx2, ])
 
+# check if stints are anterior to player's death date
+idx <- match(stints[, "playerId"], players[, "wikidataId"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "deathDate"]) & stints[, "startYear"] <= players[idx, "endDate"])
+print(stints[idx2, ])
 
 
 # compare to team dates
 
+
+# fix FR stint : check 1--10 line above, same exact dates > need a fix
 
 stop()
 
@@ -469,3 +478,4 @@ end.rec.log()
 # - add missing values : dates, others ?
 #   > use LLM to retrive them from WP?
 # - compare stints and team/player dates
+# - players: replace United Kingdom in country by one of the home nations
