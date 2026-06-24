@@ -4,7 +4,7 @@
 #
 # 06/2025 Vincent Labatut
 #
-# setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
+# setwd("C:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
 # source("src/final/check_players.R")
 ########################################################################
 library("stringi")
@@ -37,6 +37,9 @@ data_folder <- file.path("data", "fusion")
 
 players <- read.csv(file.path(data_folder, "players_10.csv"))
 tlog(2, "Number of players: ", nrow(players))
+
+teams <- read.csv(file.path(data_folder, "teams_09.csv"))
+tlog(2, "Number of teams: ", nrow(teams))
 
 stints <- read.csv(file.path(data_folder, "stints_16.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
@@ -236,6 +239,8 @@ players[, "deathPlaces"] <- gsub(",", ";", players[, "deathPlaces"], fixed = TRU
 ########################################################################
 # countries: verify normalization
 # "citizenships" "sportCountries"
+home_nations <- c("England", "Ireland", "Scotland", "Wales")
+
 print(sort(table(trimws(unlist(strsplit(players[, "citizenships"], ";"))), useNA = "always")))
 print(sort(table(trimws(unlist(strsplit(players[, "sportCountries"], ";"))), useNA = "always")))
 
@@ -267,7 +272,7 @@ for (i in 1:length(idx)) {
 
   player_stints <- stints[stints[, "playerId"] == players[idx[i], "wikidataId"], ]
   sport_countries <- c()
-  for (nation in c("England", "Ireland", "Scotland", "Wales")) {
+  for (nation in home_nations) {
     if (grepl(nation, paste0(player_stints[, "teamName"], collapse = "; "), fixed = TRUE))
       sport_countries <- c(sport_countries, nation)
   }
@@ -290,41 +295,101 @@ idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "U
 print(players[idx, ])
 
 
-# dealing with missing citizenships
+# dealing with missing citizenships when there are sport countries
+idx <- which(is.na(players[, "citizenships"]) & !is.na(players[, "sportCountries"]))
+print(players[idx, ])
+# home nations
+idx2 <- idx[players[idx, "sportCountries"] %in% setdiff(home_nations, "Ireland")]
+players[idx2, "citizenships"] <- "United Kingdom"
+print(players[idx2, ])
+# other countries
+idx <- which(is.na(players[, "citizenships"]) & !is.na(players[, "sportCountries"]))
+players[idx, "citizenships"] <- players[idx, "sportCountries"]
+players[idx, "sportCountries"] <- NA
+print(players[idx, ])
+
+
+# dealing with missing citizenships and sport country
 idx <- which(is.na(players[, "citizenships"]))
+print(length(idx))
 # leverage international stints
 for (i in 1:length(idx)) {
-  tlog(2, "Process player ", players[idx[i], "fullName"])
+  tlog(2, "Process player ", players[idx[i], "fullName"], "(", i, "/", length(idx), ")")
   print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
 
   player_stints <- stints[stints[, "playerId"] == players[idx[i], "wikidataId"], ]
-  sport_countries <- c()
-  for (nation in c("England", "Ireland", "Scotland", "Wales")) {
-    if (grepl(nation, paste0(player_stints[, "teamName"], collapse = "; "), fixed = TRUE))
-      sport_countries <- c(sport_countries, nation)
-  }
-
-# TODO
-# parser chaque équipe pr lister les nations, rajouter dans pays sport
-# si une seule, rajouter au citizenship
-# attention au cas UK: si home nation, rajouter aussi UK au ctz + nation au pays sport
+  print(player_stints)
   
-  names <- sort(teams[teams[, "type"] == "National senior team", "fullName"])
-  if (grepl("(.+) national rugby union team", team_name)) {
-    ctry <- str_match(team_name, "(.+) national rugby union team")[2]
-    if (substr(ctry, nchar(ctry) - 1, nchar(ctry) - 1) == " ")
-      ctry <- substr(ctry, 1, nchar(ctry) - 2)
-    else
-      ctry
-  }
+  if (is.na(players[idx[i], "citizenships"])) {
+    mm <- match(player_stints[, "teamRsId"], teams[, "rugbyscopeId"])
+    again <- 0
+    while (again >= 0) {
+      if (again == 0)
+        nat_team_names <- player_stints[teams[mm, "type"] == "National senior team" & !grepl("amateur", player_stints[, "teamName"]), "teamName"]
+      else {
+        tlog(2, "Retry player ", players[idx[i], "fullName"])
+        nat_team_names <- player_stints[grepl("National .* team", teams[mm, "type"]), "teamName"]
+        nat_team_names <- gsub(" (amateur|A|B|under-\\d{2}|university) ", " ", nat_team_names, fixed = FALSE)
+      }
+      if (length(nat_team_names) > 0) {
+        nations <- sapply(nat_team_names, function(team_name) {
+                    ctry <- str_match(team_name, "(.+) national rugby union team")[2]
+                    if (is.na(ctry))
+                      ctry
+                    else {
+                      # case of "A" and "B" teams
+                      if (substr(ctry, nchar(ctry) - 1, nchar(ctry) - 1) == " ")
+                        ctry <- substr(ctry, 1, nchar(ctry) - 2)
+                      else
+                        ctry
+                    }
+                  })
+        nations <- sort(unique(nations[!is.na(nations)]))
+        if (length(nations) == 0) {
+          if (again == 0)
+            again <- 1
+          else
+            again <- -1
+        } else if (length(nations) == 1) {
+          if (nations %in% setdiff(home_nations, "Ireland")) {
+            players[idx[i], "citizenships"] <- "United Kingdom"
+            players[idx[i], "sportCountries"] <- nations
+          } else {
+            players[idx[i], "citizenships"] <- nations
+          }
+          again <- -1
+        } else if (length(nations) > 1) {
+          if (any(nations %in% home_nations)) {
+            players[idx[i], "citizenships"] <- "United Kingdom"
+          } else {
+            players[idx[i], "sportCountries"] <- paste0(nations, collapse = "; ")
+          }
+          again <- -1
+        }
+      } else {
+        if (again == 0)
+          again <- 1
+        else {
+          again <- -1
+          nation <- readline("Country?")
+          if (nation != "") {
+            if (nation %in% setdiff(home_nations, "Ireland")) {
+              players[idx[i], "citizenships"] <- "United Kingdom"
+              players[idx[i], "sportCountries"] <- nation
+            } else {
+              players[idx[i], "citizenships"] <- nation
+            }
+          }
+        }
+      }
+    }
 
-  if (length(sport_countries) > 0) {
-    players[idx[i], "sportCountries"] <- paste0(sport_countries, collapse = "; ")
     print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+    # readline("Press enter to continue")
   }
 }
-idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
-print(players[idx, ])
+idx2 <- which(is.na(players[, "citizenships"]))
+print(players[idx2, c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
 
 
 
@@ -501,7 +566,7 @@ dfSummary(players)
 
 ########################################################################
 # record players table
-tab_file <- file.path(data_folder, "players_10.csv")
+tab_file <- file.path(data_folder, "players_11.csv")
 write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # stop logging
