@@ -35,7 +35,7 @@ tlog("Loading players table")
 
 data_folder <- file.path("data", "fusion")
 
-players <- read.csv(file.path(data_folder, "players_10.csv"))
+players <- read.csv(file.path(data_folder, "players_11.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
 teams <- read.csv(file.path(data_folder, "teams_09.csv"))
@@ -243,6 +243,9 @@ home_nations <- c("England", "Ireland", "Scotland", "Wales")
 
 print(sort(table(trimws(unlist(strsplit(players[, "citizenships"], ";"))), useNA = "always")))
 print(sort(table(trimws(unlist(strsplit(players[, "sportCountries"], ";"))), useNA = "always")))
+print(sort(table(trimws(unlist(strsplit(unlist(players[, c("citizenships", "sportCountries")]), ";"))), useNA = "always")))
+
+print(sort(unique(trimws(unlist(strsplit(c(teams[, "countries"], unlist(players[, c("citizenships", "sportCountries")])), ";"))))))
 
 
 
