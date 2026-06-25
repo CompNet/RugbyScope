@@ -35,7 +35,7 @@ tlog("Loading stints table")
 
 data_folder <- file.path("data", "fusion")
 
-players <- read.csv(file.path(data_folder, "players_09.csv"))
+players <- read.csv(file.path(data_folder, "players_11.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
 teams <- read.csv(file.path(data_folder, "teams_09.csv"))
@@ -115,7 +115,18 @@ idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "deathDate"]) 
 print(stints[idx2, ])
 
 
-# compare to team dates
+stints <- read.csv(file.path(data_folder, "stints_16.csv"))
+teams <- read.csv(file.path(data_folder, "teams_09.csv"))
+teams[, "inceptionDate"] <- as.Date(teams[, "inceptionDate"])
+teams[, "terminationDate"] <- as.Date(teams[, "terminationDate"])
+
+# check if stints are posterior to team's inception
+idx <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(teams[idx, "inceptionDate"]) & stints[, "startYear"] < as.integer(format(teams[idx, "inceptionDate"], "%Y")))
+head(stints[idx2, ])
+length(idx2)
+
+# check if stints are anterior to team's termination
 
 
 # fix FR stint : check 1--10 line above, same exact dates > need a fix
@@ -479,3 +490,5 @@ end.rec.log()
 #   > use LLM to retrive them from WP?
 # - compare stints and team/player dates
 # - players: replace United Kingdom in country by one of the home nations
+# - players with very long career
+# - missing LAST end date: use average stint duration at team
