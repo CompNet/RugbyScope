@@ -158,23 +158,25 @@ tlog("Number of potential issues detected: ", flagged)
 ########################################################################
 # stats: check validity
 # "matchesPlayed" "pointsScored"
-
 stints <- read.csv(file.path(data_folder, "stints_16.csv"))
 teams <- read.csv(file.path(data_folder, "teams_09.csv"))
 teams[, "inceptionDate"] <- as.Date(teams[, "inceptionDate"])
 teams[, "terminationDate"] <- as.Date(teams[, "terminationDate"])
 
+durations <- sapply(1:nrow(stints), function(i) max(1, stints[i, "endYear"] - stints[i, "startYear"]))
+
+
 sort(unique(stints[, "matchesPlayed"]))
 #which(stints[, "matchesPlayed"] == 2748)
-tail(sort(unique(stints[, "matchesPlayed"]/(stints[, "endYear"] - stints[, "startYear"]))))
+tail(sort(unique(stints[, "matchesPlayed"] / durations)), 250)
+tail(stints[order((stints[, "matchesPlayed"] / durations), na.last = FALSE), ])
 
 
 
 sort(unique(stints[, "pointsScored"]))
 #which(stints[, "pointsScored"] == 20040)
-durations <- sapply(1:nrow(stints), function(i) max(1, stints[i, "endYear"] - stints[i, "startYear"]))
-tail(sort(unique(stints[, "pointsScored"]/durations)))
-#which((stints[, "pointsScored"]/durations) >= 2700)
+tail(sort(unique(stints[, "pointsScored"] / durations)))
+stints[which.max((stints[, "pointsScored"] / durations)), ]
 
 stop()
 
