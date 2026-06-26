@@ -104,41 +104,79 @@ idx <- which(stints[, "startYear"] > stints[, "endYear"])
 if (length(idx) > 0)
   print(stints[idx, ])
 
-# check if stints are posterior to player's birth date
+# check if stints are anterior to player's birth date
 idx <- match(stints[, "playerId"], players[, "wikidataId"])
 idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "birthDate"]) & stints[, "startYear"] <= players[idx, "birthDate"])
 print(stints[idx2, ])
 
-# check if stints are anterior to player's death date
+# check if stints are posterior to player's death date
 idx <- match(stints[, "playerId"], players[, "wikidataId"])
-idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "deathDate"]) & stints[, "startYear"] <= players[idx, "endDate"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "deathDate"]) & stints[, "startYear"] > players[idx, "endDate"])
 print(stints[idx2, ])
 
+# check if stints are anterior to team's inception
+idx <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(teams[idx, "inceptionDate"]) & stints[, "startYear"] < as.integer(format(teams[idx, "inceptionDate"], "%Y")))
+#head(stints[idx2, ])
+length(idx2)
+stints[idx2[order(stints[idx2, "teamName"])], ]
+
+# check if stints are posterior to team's termination
+idx <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(teams[idx, "terminationDate"]) & stints[, "startYear"] > as.integer(format(teams[idx, "terminationDate"], "%Y")))
+#head(stints[idx2, ])
+length(idx2)
+stints[idx2[order(stints[idx2, "teamName"])], ]
+
+
+# fix FR stint : check 1--10 line above, same exact dates > need a fix
+flagged <- 0
+for (player_id in players[, "wikidataId"]) {
+  ps <- which(stints[, "playerId"] == player_id)
+  if (length(ps) > 0 && stints[ps[1], "dataSource"] == "frWP") {
+    start_year1 <- stints[ps[1], "startYear"]
+    end_year1 <- stints[ps[1], "endYear"]
+    for (i in 1:10) {
+      if (ps[1] - i > 0) {
+        start_year2 <- stints[ps[1] - i, "startYear"]
+        end_year2 <- stints[ps[1] - i, "endYear"]
+        if (!is.na(start_year1) && !is.na(start_year2) && start_year1 == start_year2 &&
+            !is.na(end_year1) && !is.na(end_year2) && end_year1 == end_year2) {
+          tlog(2, "ALERT:")
+          print(stints[c(ps[1] - i, ps[1]), ])
+          flagged <- flagged + 1
+        }
+      }
+    }
+  }
+}
+tlog("Number of potential issues detected: ", flagged)
+
+
+
+
+########################################################################
+# stats: check validity
+# "matchesPlayed" "pointsScored"
 
 stints <- read.csv(file.path(data_folder, "stints_16.csv"))
 teams <- read.csv(file.path(data_folder, "teams_09.csv"))
 teams[, "inceptionDate"] <- as.Date(teams[, "inceptionDate"])
 teams[, "terminationDate"] <- as.Date(teams[, "terminationDate"])
 
-# check if stints are posterior to team's inception
-idx <- match(stints[, "teamRsId"], teams[, "rugbyscopeId"])
-idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(teams[idx, "inceptionDate"]) & stints[, "startYear"] < as.integer(format(teams[idx, "inceptionDate"], "%Y")))
-head(stints[idx2, ])
-length(idx2)
-
-# check if stints are anterior to team's termination
+sort(unique(stints[, "matchesPlayed"]))
+#which(stints[, "matchesPlayed"] == 2748)
+tail(sort(unique(stints[, "matchesPlayed"]/(stints[, "endYear"] - stints[, "startYear"]))))
 
 
-# fix FR stint : check 1--10 line above, same exact dates > need a fix
+
+sort(unique(stints[, "pointsScored"]))
+#which(stints[, "pointsScored"] == 20040)
+durations <- sapply(1:nrow(stints), function(i) max(1, stints[i, "endYear"] - stints[i, "startYear"]))
+tail(sort(unique(stints[, "pointsScored"]/durations)))
+#which((stints[, "pointsScored"]/durations) >= 2700)
 
 stop()
-
-
-
-
-########################################################################
-# stats: check validty
-# "matchesPlayed" "pointsScored"
 
 
 
@@ -492,3 +530,4 @@ end.rec.log()
 # - players: replace United Kingdom in country by one of the home nations
 # - players with very long career
 # - missing LAST end date: use average stint duration at team
+# - "dataSource" should be plural
