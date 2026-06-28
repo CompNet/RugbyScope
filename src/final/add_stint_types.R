@@ -602,20 +602,6 @@ write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 ########################################################################
-# stop logging
-end.rec.log()
-
-
-
-
-
-
-
-
-
-
-
-########################################################################
 # look for perfect duplicates among stints
 rem_flag <- c()
 concerned_players <- c()
@@ -646,3 +632,10 @@ rem_flag <- sort(unique(rem_flag))
 print(length(rem_flag))
 concerned_players <- sort(unique(concerned_players))
 print(length(concerned_players))
+
+
+
+
+########################################################################
+# stop logging
+end.rec.log()

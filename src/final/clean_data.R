@@ -1,5 +1,5 @@
 ########################################################################
-# The merged tables still contain some inconsistencies, that we fixed here.
+# The merged tables still contain some inconsistencies, that we fix here.
 #
 # 05/2025 Vincent Labatut
 #

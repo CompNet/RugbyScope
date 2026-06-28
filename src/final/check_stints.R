@@ -41,7 +41,7 @@ tlog(2, "Number of players: ", nrow(players))
 teams <- read.csv(file.path(data_folder, "teams_09.csv"))
 tlog(2, "Number of teams: ", nrow(teams))
 
-stints <- read.csv(file.path(data_folder, "stints_16.csv"))
+stints <- read.csv(file.path(data_folder, "stints_17.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -63,7 +63,7 @@ print(stints[is.na(idx), ])
 
 
 ########################################################################
-# info: check player/team info are synched
+# info: check player/team info is synched
 # "playerName" "teamName" "teamWdId
 
 pids <- stints[, "playerId"]
@@ -158,27 +158,20 @@ tlog("Number of potential issues detected: ", flagged)
 ########################################################################
 # stats: check validity
 # "matchesPlayed" "pointsScored"
-stints <- read.csv(file.path(data_folder, "stints_16.csv"))
-teams <- read.csv(file.path(data_folder, "teams_09.csv"))
-teams[, "inceptionDate"] <- as.Date(teams[, "inceptionDate"])
-teams[, "terminationDate"] <- as.Date(teams[, "terminationDate"])
 
+# check numbers of matches played
 durations <- sapply(1:nrow(stints), function(i) max(1, stints[i, "endYear"] - stints[i, "startYear"]))
-
-
 sort(unique(stints[, "matchesPlayed"]))
 #which(stints[, "matchesPlayed"] == 2748)
 tail(sort(unique(stints[, "matchesPlayed"] / durations)), 250)
 tail(stints[order((stints[, "matchesPlayed"] / durations), na.last = FALSE), ])
+#hh=hist(stints[, "matchesPlayed"] / durations, breaks=50);plot(hh$breaks, c(hh$counts,0), log="y")
 
-
-
+# check numbers of points scored
 sort(unique(stints[, "pointsScored"]))
 #which(stints[, "pointsScored"] == 20040)
-tail(sort(unique(stints[, "pointsScored"] / durations)))
-stints[which.max((stints[, "pointsScored"] / durations)), ]
-
-stop()
+tail(sort(unique(stints[, "pointsScored"] / stints[, "matchesPlayed"])), 250)
+tail(stints[order((stints[, "pointsScored"] / stints[, "matchesPlayed"]), na.last = FALSE), ], 100)
 
 
 
@@ -187,316 +180,33 @@ stop()
 # source: order and remove redundancy
 # "dataSource"
 
+# display source distribution
+split_src <- strsplit(stints[, "dataSource"], ";", fixed = TRUE)
+split_src <- lapply(split_src, function(an) if(all(is.na(an))) NA else trimws(an))
+print(table(unlist(split_src), useNA = "always"))
 
-
-
-
-
-
-
-
-
-
-
-
-
-########################################################################
-# ids: check unicity
-# "rugbyscopeId" "wikidataId" "allRugbyIds" "googleKnowlIds" "dbpediaId"
-id_field <- "rugbyscopeId"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "wikidataId"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "allRugbyIds"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "googleKnowlIds"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "dbpediaId"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-# presence of WD ids in the wrong column
-for (i in (1:ncol(stints))[-2]) {
-  tlog(2, "Processing column ", colnames(stints)[i])
-  idx <- which(grepl("Q\\d", stints[, i]))
-  which(length(idx) > 0)
-    tlog(4, paste0(idx, collapse = ", "))
-}
-
-# check multiple ids
-which(grepl(";", stints[ ,"allRugbyIds"], fixed = TRUE))
-which(grepl(";", stints[ ,"googleKnowlIds"], fixed = TRUE))
-
-
-
-
-########################################################################
-# alt names: remove redundant names and sort remaining names
-# "fullName" "altNames"
-split_altnames <- strsplit(stints[, "altNames"], ";", fixed = TRUE)
-split_altnames <- lapply(split_altnames, function(an) if(all(is.na(an))) NA else trimws(an))
+# fix redundancies
 temp <- rep(NA, nrow(stints))
 for (p in 1:nrow(stints)) {
-  if (!all(is.na(split_altnames[[p]])))
-    temp[p] <- paste0(sort(setdiff(split_altnames[[p]], stints[p, "fullName"])), collapse = "; ")
+  if (!all(is.na(split_src[[p]])))
+    temp[p] <- paste0(sort(unique(split_src[[p]])), collapse = "; ")
 }
 
 # verification
-idx <- which(stints[, "altNames"] != temp)
+idx <- which(stints[, "dataSource"] != temp)
 print(length(idx))
 if (length(idx) > 0)
-  for (i in idx) print(c(stints[i, "fullName"], stints[i, "altNames"], temp[i]))
+  for (i in idx) print(c(stints[i, "dataSource"], temp[i]))
 
-# replace "" by NA
-temp[temp == ""] <- NA
 # update table
-stints[, "altNames"] <- temp
-
-# check if non-latin names as fullnames
-idx <- which(stri_detect_regex(stints[, "fullName"], "[^\\p{Latin}\\p{Common}\\p{Inherited}]"))
-print(unique(stints[idx, "firstName"]))
-
-
-
-
-########################################################################
-# categories: verify normalization
-# "type" "countries" "competitions" "tier"
-
-# check names vs. types
-print(sort(unique(stints[, "type"])))
-idx <- which(stints[, "type"] == "National senior stint")
-print(stints[idx, c("fullName", "tier")])
-print(as.matrix(sort(stints[idx, "fullName"]), ncol = 1))
-
-
-# normalize country names
-countries <- trimws(unlist(strsplit(stints[, "countries"], ";")))
-unique_countries <- sort(unique(countries))
-print(unique_countries)
-#print(setdiff(unique_countries, names(map)))
-sort(table(countries))
-#### debug: produce a list of countries, to complement manually
-#vals <- setdiff(unique_countries, names(map))
-#tab <- cbind(vals, rep(NA, length(vals)))
-#tab <- rbind(tab, cbind(names(map), map))
-#colnames(tab) <- c("Country", "GoverningBody")
-#tab <- tab[order(tab[, 1]), ]
-#write.csv(tab, "temptemp.csv", row.names = FALSE)
-####
-#check stints without country
-idx <- which(is.na(stints[, "countries"]))
-print(stints[idx, c("rugbyscopeId", "fullName", "countries")])
-
-
-# check tier values
-print(sort(unique(stints[, "tier"])))
-
-
-########################################################################
-# affiliation: complement missing affiliations
-# "affiliations"
-
-# display existing affiliations
-table(trimws(unlist(strsplit(stints[, "affiliations"], ";"))), useNA = "always")
-print(sort(unique(trimws(unlist(strsplit(stints[, "affiliations"], ";"))))))
-
-# read affiliation map
-tmp <- read.csv(file.path(res_folder, "_governing_bodies.csv"))
-map <- tmp[, "GoverningBody"]
-names(map) <- tmp[, "Country"]
-# apply to missing values
-for (i in 1:length(map)) {
-  country <- names(map)[i]
-  federation_name <- map[i]
-
-  idx <- which(stints[, "countries"] == country & is.na(stints[, "affiliations"]))
-  table(stints[idx, "affiliations"], useNA = "always")
-  table(stints[idx, "type"], useNA = "always")
-  print(stints[idx, c("fullName", "affiliations")])
-
-  # handle clubs
-  idx2 <- idx[stints[idx, "type"] == "Club/franchise stint"]
-  if (length(idx2) > 0) {
-    print(stints[idx2, c("fullName", "affiliations")])
-    stints[idx2, "affiliations"] <- federation_name
-  }
-
-  # handle national stints
-  if (country == "U.S.A.")
-    country <- "United States"
-  else if (country == "U.S.S.R.")
-    country <- "Soviet Union"
-  else if (country == "Czechia")
-    country <- "Czech Republic"
-  else if (country == "Republic of the Congo")
-    country <- "Congo"
-  else if (country == "D.R. of the Congo")
-    country <- "Democratic Republic of the Congo"
-  #
-  idx2 <- idx[grepl("national", stints[idx, "type"], ignore.case = TRUE) & grepl(country, stints[idx, "fullName"], ignore.case = TRUE)]
-  if (length(idx2) > 0) {
-    print(stints[idx2, c("fullName", "affiliations")])
-    stints[idx2, "affiliations"] <- federation_name
-  }
-
-  # handle regional stints
-  idx2 <- idx[stints[idx, "type"] == "Regional stint"]
-  if (length(idx2) > 0) {
-    print(stints[idx2, c("fullName", "affiliations")])
-    stints[idx2, "affiliations"] <- federation_name
-  }
-
-  # handle military stints
-  idx2 <- idx[stints[idx, "type"] == "Military/police stint"]
-  if (length(idx2) > 0) {
-    print(stints[idx2, c("fullName", "affiliations")])
-    stints[idx2, "affiliations"] <- "None"
-  }
-
-  # display non-affiliated stints
-  idx2 <- idx[is.na(stints[idx, "affiliations"])]
-  print(stints[idx2, c("fullName", "affiliations")])
-}
-
-# display non-affiliated stints overall
-idx <- which(is.na(stints[, "affiliations"]))
-print(stints[idx, c("fullName", "countries", "affiliations")])
-
-# display existing affiliations (after update)
-table(trimws(unlist(strsplit(stints[, "affiliations"], ";"))), useNA = "always")
-print(sort(unique(trimws(unlist(strsplit(stints[, "affiliations"], ";"))))))
-#
-sort(unique(sapply(1:nrow(stints), function(i) paste0(stints[i, "countries"], "--", stints[i, "affiliations"]))))
-
-
-# normalize competition names
-compets <- trimws(unlist(strsplit(stints[, "competitions"], ";")))
-print(sort(unique(compets)))
-sort(table(compets, useNA = "always"))
-
-
-
-
-########################################################################
-# numeric: check formating
-# "homeVenueCapacities"
-
-caps <- trimws(unlist(strsplit(stints[, "homeVenueCapacities"], ";")))
-sort(table(caps, useNA = "always"))
-#which(grepl("Galway", stints[, "homeVenueCapacities"], ignore.case = TRUE))
-
-
-
-
-########################################################################
-# place names: nothing to do
-# "homeVenueNames" "locations"
-
-print(sort(unique(trimws(unlist(strsplit(stints[, "homeVenueNames"], ";"))))))
-#
-print(sort(unique(trimws(unlist(strsplit(stints[, "locations"], ";"))))))
-
-
-
-
-########################################################################
-# dates: check inception < termination
-# "inceptionDate" "terminationDate"
-stints[, "inceptionDate"] <- as.Date(stints[, "inceptionDate"])
-stints[, "terminationDate"] <- as.Date(stints[, "terminationDate"])
-
-tlog(2, "Missing inception dates: ", length(which(is.na(stints[, "inceptionDate"]))), "/", nrow(stints))
-
-# test birth / death dates
-head(sort(unique(stints[, "inceptionDate"])))
-tail(sort(unique(stints[, "inceptionDate"])))
-head(sort(unique(stints[, "terminationDate"])))
-tail(sort(unique(stints[, "terminationDate"])))
-idx <- which(stints[, "inceptionDate"] > stints[, "terminationDate"])
-if (length(idx) > 0)
-  print(stints[idx, ])
-
-
-
-
-########################################################################
-# urls: check unicity
-# "wikipediaEn" "wikipediaFr" "wikipediaIt" "wikipediaEs" "wikipediaJa"
-
-id_field <- "wikipediaEn"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "wikipediaFr"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "wikipediaIt"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "wikipediaEs"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-id_field <- "wikipediaJa"
-tlog(2, "Processing ", id_field)
-tt <- table(stints[, id_field])
-duplicates <- names(tt[tt > 1])
-if (length(duplicates) > 0)
-  print(stints[stints[, id_field] %in% duplicates, ])
-
-
-
-
-########################################################################
-# comments: nothing to do
-# "comments"
+stints[, "dataSources"] <- temp
 
 
 
 
 ########################################################################
 # adjust column names
-colnames(stints)[colnames(stints) == "allRugbyIds"]  <- "allRugbyId"
-colnames(stints)[colnames(stints) == "googleKnowlIds"]  <- "googleKnowlId"
-
+colnames(stints)[colnames(stints) == "dataSource"]  <- "dataSources"
 
 
 
@@ -519,17 +229,8 @@ create_report(stints)
 
 ########################################################################
 # record players table
-tab_file <- file.path(data_folder, "stints_17.csv")
+tab_file <- file.path(data_folder, "stints_18.csv")
 write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # stop logging
 end.rec.log()
-
-# TODO
-# - add missing values : dates, others ?
-#   > use LLM to retrive them from WP?
-# - compare stints and team/player dates
-# - players: replace United Kingdom in country by one of the home nations
-# - players with very long career
-# - missing LAST end date: use average stint duration at team
-# - "dataSource" should be plural

@@ -829,65 +829,7 @@ write.csv(ok_stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 # stop logging
 end.rec.log()
 
-# TODO
-# verifications
-# - why not including the stint type (junior, senior, etc.) in the table?
-# - check start date <= end date in stints
 
-# merge stints
-# - if >0 pts but 0 matches, then matches should be NA
-
-# stats
-# - compare evolution of number of player/team/stint *by data source*
-
-
-# principle :
-# - for a given player, extract the stints for each source
-# - fix each source separately
-# - compare them to find the best source
-# - then match the stints from the other sources to these best stints
-# - if matched: merge to existing stint
-# - if not : add extra stint
-
-# best sources :
-# - most stints?
-# - covers the longer time span?
-
-# 1) focus only on one source, get the stints of a player
-# 2) detect issues in these stints, fix them
-# 3) compare stings from WP versions : if no disagreement, merge
-# 4) if disagreement, start from the earliest stint
-# 5) if several, take the one from the source with the most stints
-# 6) if the next stint overlaps, fix its start year
-
-
-
-# "Q18455","Ben Tune","Q1368281",253,"Queensland Reds",1995,2007,112,155,"WD; frWP; esWP"
-# "Q18455","Ben Tune","Q1368281",253,"Queensland Reds",1996,2007,84,155,"esWP; enWP"
-# > same stint, but one year difference at start
-
-# "Q29880","Ben Botica","Q104855944",2904,"North Harbour Rugby Union Team",2009,2011,19,168,"frWP"
-# "Q29880","Ben Botica","Q104855944",2904,"North Harbour Rugby Union Team",2009,2012,17,168,"enWP"
-# > same stint, but one year difference at end
-
-# > check stint begore / after to determine the correct date
-
-# "Q72185","Manu Tuilagi","Q1071691",204,"Leicester Tigers",2009,2020,128,205,"WD; jaWP; frWP; enWP"
-# "Q72185","Manu Tuilagi","Q1071691",204,"Leicester Tigers",2010,2020,95,145,"itWP; esWP"
-
-# other possibility : use largest stats
-
-# "Q31193","Ben Smith","Q104856109",2911,"Otago Rugby Union Team",2007,2012,59,75,"jaWP; frWP; enWP"
-# "Q31193","Ben Smith","Q104856109",2911,"Otago Rugby Union Team",2007,2016,37,50,"itWP"
-# "Q31193","Ben Smith","Q104856109",2911,"Otago Rugby Union Team",2008,2009,NA,NA,"esWP"     >> this one should be merged in one of the others beforehand
-# very different stints: can't see how to solve that automatically
-
-# algo if one year difference
-# 1) check if stint before: use end year to select compatible start year
-#    if several stints before: should be solved beforehand
-# 2) if no stint before (= first stint), then compare stats and use option with largest stats
-# 3) if no stat, use majority stint in terms of sources
-# 4) of none of that... deal with it manually?
 
 
 
@@ -896,35 +838,43 @@ end.rec.log()
 ###############################
 # - DATABASE
 #   - notes:
-#     - we should have kept stint order and loan indications
-#   - misc:
+#     - we should have kept stint order and loan indications (esp. to extract networks)
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
-#     - handle frWP stints at the start of career: often wrong
-#       > check players with very long career spans, probably this type of problem
-#       > and/or players with big gaps between stints
-#     - look for overlapping stints of the form xxx-2013 vs 2014-xxxx (same team)
-#   - final:
-#     - look for exact duplicates
-#     - check all categorical variables (in particular sources)
-#     - clean (unique) + order sources (and other multiple fields)
-#     - check that start <= end
+#     - produce a raw version, and one where we try to complement missing data with heuristics?
+#   - tests:
+#     - check players with a very long career span and/or players with big gaps between stints
 #     - check overlapping stints with the same team and type
+#     - look for overlapping stints of the form xxx-2014 vs 2013-xxxx (same team)
+#     - more generally: apply again tests that are already implemented
 #   - complement data:
-#     - remove stints and parts of stints before 18 yo (without changing stats)
+#     - remove stints and parts of stints before 18 yo (without changing stats), using birthdate
 #     - complement missing U18 (and other youth teams) dates using player's age
-#     - and do the opposite: complement missing birthdate using Uxx stints
-#     - use other sources to complement missing dates (esp. NA-NA in career start ?) https://www.allrugby.com/
-#     - replace "," by ";" in multi-value fields
-#     - handles cases where there are stints without dates and the first dated stints starts >18yo (could remove the undated stints)
+#     - and do the opposite: complement missing birthdates using Uxx stints
+#       U18~17yo - U19~18yo - U20~18/19yo - U21~19/20yo
+#     - use other sources to complement missing dates (esp. NA-NA in career start)? https://www.allrugby.com/
+#     - handle cases where there are stints without dates and the first dated stints starts >18yo (could remove the updated stints)
+#     - add missing values : dates, others ?
+#       > use LLM to retrive them from WP?
 ###############################
-# - NET EXTRACTION
-#   - complement missing end years by leveraging present start years
-#     with a limit of 30 years for the very last missing end year?
-#   - complement missing dates/ split depending on loans, etc.
+# - STATS
+#   - evolution of number of players based on birthdate and country
+#   - evolution of the number of stints based on start date and country
+#   - distribution of players/teams by country (static)
+#   - distribution of stints by source (static)
+#     - find a way to show how redundant they are
+#     - compare evolution of number of player/team/stint *by data source*
+###############################
+# - DATA AUGMENTATION FOR NET EXTRACTION
+#   - complement missing dates / split depending on loans, etc.
 #     note : overlapping stints at clubs = loans
-#            but there are also just simultaneous membership
-#   - possibly put 2025 or 2026 for the latest stint ?
+#            ...but there are also just simultaneous membership
 #   - merge junior/senior consecutive stints with the same team
+# - missing end years:
+#   - leverage present start year in following stint
+#     with a limit of 30 years for the very last missing end year? (or average career duration)
+# - missing LAST end years:
+#   - use average stint duration for this team? or for the considered player?
+#   - possibly put 2025 or 2026 for current players?
 ###############################
 
 
