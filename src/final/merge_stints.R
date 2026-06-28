@@ -842,12 +842,13 @@ end.rec.log()
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - produce a raw version, and one where we try to complement missing data with heuristics?
 #   - tests:
-#     - check players with a very long career span and/or players with big gaps between stints
+#     - check players with big gaps between stints
 #     - check overlapping stints with the same team and type
 #     - look for overlapping stints of the form xxx-2014 vs 2013-xxxx (same team)
 #     - more generally: apply again tests that are already implemented
 #   - complement data:
 #     - remove stints and parts of stints before 18 yo (without changing stats), using birthdate
+#       > this should be a separate DB
 #     - complement missing U18 (and other youth teams) dates using player's age
 #     - and do the opposite: complement missing birthdates using Uxx stints
 #       U18~17yo - U19~18yo - U20~18/19yo - U21~19/20yo
@@ -868,7 +869,7 @@ end.rec.log()
 #   - complement missing dates / split depending on loans, etc.
 #     note : overlapping stints at clubs = loans
 #            ...but there are also just simultaneous membership
-#   - merge junior/senior consecutive stints with the same team
+#   - merge junior/senior consecutive stints with the same team (only bc not useful for network extraction)
 # - missing end years:
 #   - leverage present start year in following stint
 #     with a limit of 30 years for the very last missing end year? (or average career duration)

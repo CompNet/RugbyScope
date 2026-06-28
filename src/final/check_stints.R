@@ -41,7 +41,7 @@ tlog(2, "Number of players: ", nrow(players))
 teams <- read.csv(file.path(data_folder, "teams_09.csv"))
 tlog(2, "Number of teams: ", nrow(teams))
 
-stints <- read.csv(file.path(data_folder, "stints_17.csv"))
+stints <- read.csv(file.path(data_folder, "stints_18.csv"))
 tlog(2, "Number of stints: ", nrow(stints))
 
 
@@ -128,7 +128,6 @@ idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(teams[idx, "terminationDate
 length(idx2)
 stints[idx2[order(stints[idx2, "teamName"])], ]
 
-
 # fix FR stint : check 1--10 line above, same exact dates > need a fix
 flagged <- 0
 for (player_id in players[, "wikidataId"]) {
@@ -151,6 +150,23 @@ for (player_id in players[, "wikidataId"]) {
   }
 }
 tlog("Number of potential issues detected: ", flagged)
+
+# check career durations
+durations <- c()
+for (p in 1:nrow(players)) {
+  player_stints <- stints[stints[, "playerId"] == players[p, "wikidataId"], ]
+  start_year <- min(c(player_stints[, "startYear"], player_stints[, "endYear"]), na.rm = TRUE)
+  end_year <- max(c(player_stints[, "startYear"], player_stints[, "endYear"]), na.rm = TRUE)
+  if (!is.na(start_year) && !is.infinite(start_year) && !is.na(end_year) && !is.infinite(end_year))
+    durations <- c(durations, end_year - start_year + 1)
+  else
+    durations <- c(durations, NA)
+}
+print(sort(unique(durations)))
+print(stints[stints[, "playerId"] == players[which(durations == 85), "wikidataId"], ])
+
+# check stint gaps
+# TODO
 
 
 
