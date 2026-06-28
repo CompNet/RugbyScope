@@ -842,10 +842,9 @@ end.rec.log()
 #     - write an algo to split appropriately loans and such, and list the cases that could not be split properly?
 #     - produce a raw version, and one where we try to complement missing data with heuristics?
 #   - tests:
-#     - check players with big gaps between stints
 #     - check overlapping stints with the same team and type
 #     - look for overlapping stints of the form xxx-2014 vs 2013-xxxx (same team)
-#     - more generally: apply again tests that are already implemented
+#     > more generally: apply again tests that are already implemented
 #   - complement data:
 #     - remove stints and parts of stints before 18 yo (without changing stats), using birthdate
 #       > this should be a separate DB

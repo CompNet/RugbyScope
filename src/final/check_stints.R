@@ -163,10 +163,28 @@ for (p in 1:nrow(players)) {
     durations <- c(durations, NA)
 }
 print(sort(unique(durations)))
-print(stints[stints[, "playerId"] == players[which(durations == 85), "wikidataId"], ])
+print(stints[stints[, "playerId"] %in% players[which(durations == 85), "wikidataId"], ])
 
 # check stint gaps
-# TODO
+stints <- read.csv(file.path(data_folder, "stints_18.csv"))
+gaps <- c()
+for (p in 1:nrow(players)) {
+  player_stints <- stints[stints[, "playerId"] == players[p, "wikidataId"], ]
+  gg <- 0
+  if (nrow(player_stints) > 1) {
+    for (s1 in 1:(nrow(player_stints) - 1)) {
+      gs <- 0
+      if (!is.na(player_stints[s1, "endYear"])) {
+        gs <- sapply(player_stints[(s1 + 1):nrow(player_stints), "startYear"], function(year) if (is.na(year)) 0 else max(year - player_stints[s1, "endYear"], 0))
+        #print(gs)
+      }
+      gg <- max(c(gg, min(gs)))
+    }
+  }
+  gaps <- c(gaps, gg)
+}
+print(sort(unique(gaps)))
+print(stints[stints[, "playerId"] %in% players[which(gaps == 26), "wikidataId"], ])
 
 
 

@@ -36,7 +36,7 @@ tlog("Loading teams table")
 data_folder <- file.path("data", "fusion")
 res_folder <- file.path("data", "references", "union")
 
-teams <- read.csv(file.path(data_folder, "teams_08.csv"))
+teams <- read.csv(file.path(data_folder, "teams_09.csv"))
 tlog(2, "Number of teams: ", nrow(teams))
 
 
@@ -91,8 +91,8 @@ for (i in (1:ncol(teams))[-2]) {
 }
 
 # check multiple ids
-which(grepl(";", teams[ ,"allRugbyIds"], fixed = TRUE))
-which(grepl(";", teams[ ,"googleKnowlIds"], fixed = TRUE))
+which(grepl(";", teams[, "allRugbyIds"], fixed = TRUE))
+which(grepl(";", teams[, "googleKnowlIds"], fixed = TRUE))
 
 
 
@@ -275,7 +275,7 @@ teams[, "terminationDate"] <- as.Date(teams[, "terminationDate"])
 
 tlog(2, "Missing inception dates: ", length(which(is.na(teams[, "inceptionDate"]))), "/", nrow(teams))
 
-# test birth / death dates
+# test inception / termination dates
 head(sort(unique(teams[, "inceptionDate"])))
 tail(sort(unique(teams[, "inceptionDate"])))
 head(sort(unique(teams[, "terminationDate"])))
