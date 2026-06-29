@@ -106,12 +106,12 @@ if (length(idx) > 0)
 
 # check if stints are anterior to player's birth date
 idx <- match(stints[, "playerId"], players[, "wikidataId"])
-idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "birthDate"]) & stints[, "startYear"] <= players[idx, "birthDate"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "birthDate"]) & stints[, "startYear"] <= as.integer(format(players[idx, "birthDate"], "%Y")))
 print(stints[idx2, ])
 
 # check if stints are posterior to player's death date
 idx <- match(stints[, "playerId"], players[, "wikidataId"])
-idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "deathDate"]) & stints[, "startYear"] > players[idx, "endDate"])
+idx2 <- which(!is.na(stints[, "startYear"]) & !is.na(players[idx, "deathDate"]) & stints[, "startYear"] > as.integer(format(players[idx, "endDate"], "%Y")))
 print(stints[idx2, ])
 
 # check if stints are anterior to team's inception

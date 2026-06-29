@@ -78,5 +78,5 @@ stints0 <- stints
 
 ########################################################################
 # record table
-tab.file <- file.path(data_folder, "stints_02.csv")
+tab.file <- file.path(data_folder, "stints_02.csv") 
 write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")

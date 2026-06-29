@@ -7,7 +7,7 @@
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
 # source("src/final/merge_stints_identical.R")
 ########################################################################
-
+source("src/final/fun_stints.R")
 
 
 
@@ -87,7 +87,7 @@ tlog(2, "Number of stints before merging: ", nrow(stints))
 if (length(rem_marked) > 0)
   stints <- stints[-rem_marked, ]
 # display result
-tlog(2, "Number of included stints merged: ", merged_stints)
+tlog(2, "Number of nested stints merged: ", merged_stints)
 tlog(2, "Number of stints after merging: ", nrow(stints))
 tlog(2, "Number of conflicts detected: ", conflict_stints)
 

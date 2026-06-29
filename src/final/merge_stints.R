@@ -319,10 +319,12 @@ for (p in 1:nrow(players)) {
         if (!(idx[idx2[s1]] %in% rem_marked)) {
           start1 <- team_stints[s1, "startYear"]
           end1 <- team_stints[s1, "endYear"]
+          type1 <- team_stints[s1, "type"]
 
           if (!is.na(end1)) {
             iii <- (s1 + 1):nrow(team_stints)
-            idx3 <- s1 + which(!is.na(team_stints[iii, "startYear"]) & team_stints[iii, "startYear"] == end1)
+            idx3 <- s1 + which(!is.na(team_stints[iii, "startYear"]) & team_stints[iii, "startYear"] == end1 & 
+                               (is.na(type1) | is.na(team_stints[iii, "type"]) | type1 == team_stints[iii, "type"]))
             # ignore rows already marked for deletion
             idx3 <- idx3[!(idx[idx2[idx3]] %in% rem_marked)]
 
@@ -385,14 +387,6 @@ tlog(2, "Number of consecutive stints merged: ", merged_stints)
 tlog(2, "Number of stints after merging: ", nrow(stints))
 tlog(2, "Number of conflicts detected: ", conflict_stints)
 stints0 <- stints; end.rec.log(); stop()
-
-
-
-
-# TODO
-# what about merging overlapping stints at the same club ?
-# then the pb becomes: adjusting the bounds of conflicting stints
-# or should we consider each WP version separately?
 
 
 

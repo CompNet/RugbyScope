@@ -240,7 +240,7 @@ for (field in fields) {
 ########################################################################
 # verifications in players table
 
-# check that each team url is unique
+# check that each player url is unique
 tlog("Checking URL uniqueness in players table")
 for (l in 1:length(languages)) {
   tlog(2, "Processing language ", languages[l], "(", l,"/", length(languages),")")
