@@ -31,7 +31,7 @@ start.rec.log("CheckStints")
 
 ########################################################################
 # load tables
-tlog("Loading stints table")
+tlog("Loading data tables table")
 
 data_folder <- file.path("data", "fusion")
 
