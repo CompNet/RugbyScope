@@ -402,7 +402,8 @@ merged_stints <- 0
 rem_marked <- c()
 for (p in 1:nrow(players)) {
   player_id <- players[p, "wikidataId"]
-  tlog(4, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
+  if (p %% 1000 == 0)
+    tlog(4, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
 
   # retrieve the player's stints
   idx <- which(stints[, "playerId"] == player_id)
