@@ -1,5 +1,5 @@
 ########################################################################
-# Complement missing birthdates using youth teams, and vice-versa.
+# Complement missing start date in first stint, using birthdate.
 #
 # 06/2025 Vincent Labatut
 #
@@ -23,7 +23,7 @@ source("src/common/logging.R")
 
 ########################################################################
 # start logging
-start.rec.log("ComplementBirthDates")
+start.rec.log("ComplementFirstStints")
 
 
 
@@ -47,166 +47,39 @@ tlog(2, "Number of stints: ", nrow(stints))
 
 
 ########################################################################
-# check the age of players during youth stints
-idx <- which(!is.na(players[, "birthDate"]))
-start_age <- list("U18" = c(), "U19" = c(), "U20" = c(), "U21" = c(), "U23" = c())
-end_age <- list("U18" = c(), "U19" = c(), "U20" = c(), "U21" = c(), "U23" = c())
-for (p in 1:length(idx)) {
-  player_id <- players[idx[p], "wikidataId"]
-  if (p %% 1000 == 0)
-    tlog("Processing player ", player_id, "(", p, "/", length(idx), ")")
-
-  player_stints <- stints[stints[, "playerId"] == player_id, ]
-  player_teams <- teams[match(player_stints[, "teamRsId"], teams[, "rugbyscopeId"]), ]
-
-  birth_year <- as.integer(format(as.Date(players[idx[p], "birthDate"]), "%Y"))
-
-  # U18 stint
-  i <- which(player_teams[, "type"] == "National U18 team")
-  if (length(i) > 1) {
-    tlog(2, "WARNING U18: ", paste0(players[idx[p], ], collapse = ","))
-    print(player_stints[i, ])
-    i <- i[1]
-  }
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      start_age[["U18"]] <- c(start_age[["U18"]], player_stints[i, "startYear"] - birth_year)
-    if (!is.na(player_stints[i, "endYear"]))
-      end_age[["U18"]] <- c(end_age[["U18"]], player_stints[i, "endYear"] - birth_year)
-  }
-
-  # U19 stint
-  i <- which(player_teams[, "type"] == "National U19 team")
-  if (length(i) > 1) {
-    tlog(2, "WARNING U19: ", paste0(players[idx[p], ], collapse = ","))
-    print(player_stints[i, ])
-    i <- i[1]
-  }
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      start_age[["U19"]] <- c(start_age[["U19"]], player_stints[i, "startYear"] - birth_year)
-    if (!is.na(player_stints[i, "endYear"]))
-      end_age[["U19"]] <- c(end_age[["U19"]], player_stints[i, "endYear"] - birth_year)
-  }
-
-  # U20 stint
-  i <- which(player_teams[, "type"] == "National U20 team")
-  if (length(i) > 1) {
-    tlog(2, "WARNING U20: ", paste0(players[idx[p], ], collapse = ","))
-    print(player_stints[i, ])
-    i <- i[1]
-  }
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      start_age[["U20"]] <- c(start_age[["U20"]], player_stints[i, "startYear"] - birth_year)
-    if (!is.na(player_stints[i, "endYear"]))
-      end_age[["U20"]] <- c(end_age[["U20"]], player_stints[i, "endYear"] - birth_year)
-  }
-
-  # U21 stint
-  i <- which(player_teams[, "type"] == "National U21 team")
-  if (length(i) > 1) {
-    tlog(2, "WARNING U21: ", paste0(players[idx[p], ], collapse = ","))
-    print(player_stints[i, ])
-    i <- i[1]
-  }
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      start_age[["U21"]] <- c(start_age[["U21"]], player_stints[i, "startYear"] - birth_year)
-    if (!is.na(player_stints[i, "endYear"]))
-      end_age[["U21"]] <- c(end_age[["U21"]], player_stints[i, "endYear"] - birth_year)
-  }
-
-  # U23 stint
-  i <- which(player_teams[, "type"] == "National U23 team")
-  if (length(i) > 1) {
-    tlog(2, "WARNING U23: ", paste0(players[idx[p], ], collapse = ","))
-    print(player_stints[i, ])
-    i <- i[1]
-  }
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      start_age[["U23"]] <- c(start_age[["U23"]], player_stints[i, "startYear"] - birth_year)
-    if (!is.na(player_stints[i, "endYear"]))
-      end_age[["U23"]] <- c(end_age[["U23"]], player_stints[i, "endYear"] - birth_year)
-  }
-}
-#print(start_age)
-print(lapply(start_age, function(a) table(a, useNA = "always")))
-#print(end_age)
-print(lapply(end_age, function(a) table(a, useNA = "always")))
-
-
-# use birth date to add missing youth team years
+# use birth date to add missing first stint start years
 idx <- which(is.na(players[, "birthDate"]))
 for (p in 1:length(idx)) {
   player_id <- players[idx[p], "wikidataId"]
-  tlog(2, "Processing player ", player_id, "(", p, "/", length(idx), ")")
+  if (p %% 1000 == 0)
+    tlog(2, "Processing player ", player_id, "(", p, "/", length(idx), ")")
+  birth_year <- players[p, "birthDate"] %>% as.Date() %>% format("%Y") %>% as.integer()
 
   player_stints <- stints[stints[, "playerId"] == player_id, ]
-  player_teams <- teams[match(player_stints[, "teamRsId"], teams[, "rugbyscopeId"]), ]
+  idx <- match(player_stints[, "teamRsId"], teams[, "rugbyscopeId"])
+  player_teams <- teams[idx, ]
 
-  birth_year <- c()
+  # a single full NA-NA stint generally is the very first stint:
+  # use start year from second stint as end year
+  idx <- which(is.na(player_stints[, "startYear"]) & is.na(player_stints[, "endYear"]))
+  if (length(idx) == 1 && nrow(player_stints) > 1 && !is.na(player_stints[idx + 1, "startYear"])) {
+    tlog(2, "Processing player ", player_id, "(", p, "/", length(idx), ")")
+    player_stints[idx, "endYear"] <- player_stints[idx + 1, "startYear"]
+    tlog(4, "Single NA-NA stint: end year set to ", player_stints[i, "endYear"])
+  }
+  # TODO : move out of birthdate constraint
 
-  # U18 stint
-  i <- which(player_teams[, "type"] == "National U18 team")
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      birth_year <- c(birth_year, player_stints[i, "startYear"] - 18)
-    if (!is.na(player_stints[i, "endYear"]))
-      birth_year <- c(birth_year, player_stints[i, "endYear"] - 17)
-    tlog(4, "U18: ", paste0(birth_year, collapse = ","))
+  # missing NA is first stint: use birth date
+  idx <- which.min(player_stints[, "endYear"])
+  if (length(idx) > 0 && !is.na(player_stints[idx, "startYear"]) && player_stints[idx, "startYear"] >= (birth_year + 18)) {
+    tlog(2, "Processing player ", player_id, "(", p, "/", length(idx), ")")
+    player_stints[idx, "startYear"] <- birth_year + 18
+    tlog(4, "Missing first start year: set to ", player_stints[i, "startYear"])
   }
 
-  # U19 stint
-  i <- which(player_teams[, "type"] == "National U19 team")
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      birth_year <- c(birth_year, player_stints[i, "startYear"] - 19)
-    if (!is.na(player_stints[i, "endYear"]))
-      birth_year <- c(birth_year, player_stints[i, "endYear"] - 18)
-    tlog(4, "U19: ", paste0(birth_year, collapse = ","))
-  }
-
-  # U20 stint
-  i <- which(player_teams[, "type"] == "National U20 team")
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      birth_year <- c(birth_year, player_stints[i, "startYear"] - 20)
-    if (!is.na(player_stints[i, "endYear"]))
-      birth_year <- c(birth_year, player_stints[i, "endYear"] - 19)
-    tlog(4, "U20: ", paste0(birth_year, collapse = ","))
-  }
-
-  # U21 stint
-  i <- which(player_teams[, "type"] == "National U21 team")
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      birth_year <- c(birth_year, player_stints[i, "startYear"] - 21)
-    if (!is.na(player_stints[i, "endYear"]))
-      birth_year <- c(birth_year, player_stints[i, "endYear"] - 20)
-    tlog(4, "U21: ", paste0(birth_year, collapse = ","))
-  }
-
-  # U23 stint
-  i <- which(player_teams[, "type"] == "National U23 team")
-  if (length(i) > 0) {
-    if (!is.na(player_stints[i, "startYear"]))
-      birth_year <- c(birth_year, player_stints[i, "startYear"] - 23)
-    if (!is.na(player_stints[i, "endYear"]))
-      birth_year <- c(birth_year, player_stints[i, "endYear"] - 22)
-    tlog(4, "U23: ", paste0(birth_year, collapse = ","))
-  }
-
-  if (length(birth_year) > 0) {
-    bi_ye <- as.integer(names(sort(table(birth_year), decreasing = TRUE))[1])
-    tlog(4, "Final: ", bi_ye)
-    players[idx[p], "birthDate"] <- paste0(bi_ye, "-01-01")
-
+  if (changed)
     #readline("Press enter to continue")
-  }
 }
-# note: complements just 3 missing birthdates
 
 
 
