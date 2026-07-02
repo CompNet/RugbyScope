@@ -1,30 +1,13 @@
-* Stats
+# STATS
   * active players stats with *filtering* process
   * fix country colors (ireland=green, france=blue, etc.)
-  * histo number of teams by country, distinguishing WD/non-WD
+  * histogram number of teams by country, distinguishing WD/non-WD
+  * evolution of players weight and height
 
-- career steps with missing end date: 
-  try to fill based on next step start date?
-- missing country: use career steps that concern national teams
-
-- teams:
-  - remove under-17 and other younger teams
-- merging stints:
-  - prioritize those with stats vs. NAs, even if different years
-  - if same stats and different years, prioritize shorter time span
-  - if larger time span and higher stats > prioritize that one
-  - if larger time span but lower stats > solve manually
-  - B&I lions sometimes split by year, for some reason...
-- extracting transfers:
-  - if 1 stint temporally included in another: assume a loan
-
-stats:
-- evolution of players weight and height
-
-* NOTES
+# NOTES
   - Filtering players depending on whether they played for a club: many are missed
     But if their club is not indicated... maybe they are not important enough?
-    We should get them with WP, though. So better to keep them.
+    We could get them with WP, though. So better to keep them.
   - If we just focus on pro clubs, the careers will be very incomplete, the sequences very short (not useful)
     > include amateur/university clubs too
   - Must be able to assess the completeness of the data, in order to get long enough sequences
@@ -43,7 +26,7 @@ stats:
       - https://enterprise.wikimedia.com/blog/structured-contents-wikipedia-infobox/ 
       - https://enterprise.wikimedia.com/docs/on-demand/#article-structured-contents-beta
     - There's also a way using Panda: https://gist.github.com/aculich/b34868c098d94d614515
-  - Possible databases:
+  - Possible alternative databases:
     - All.Rugby: seems to include transfers; looks incomplete but worth exploring.
       They state explicitly that it's not possible to use their data like we want
       https://all.rugby/
@@ -54,7 +37,7 @@ stats:
       http://stats.espnscrum.com/statsguru/rugby/stats/index.html
       https://www.espn.com/rugby/
     + It's Rugby: very good, but commercial (no legal notice on the website, though). 
-      Maybe we could ask them to retrieve their publicly accessible data?
+      Maybe we could ask them the authorization to retrieve their publicly accessible data?
       https://www.itsrugby.co.uk/
       Seems (partially) scrapped here: https://www.kaggle.com/datasets/patricknaylor/its-rugby-player-data
     - Pick & Go: only international matches (and Super Rugby), commercial access
