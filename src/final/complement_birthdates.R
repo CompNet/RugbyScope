@@ -206,7 +206,7 @@ for (p in 1:length(idx)) {
     #readline("Press enter to continue")
   }
 }
-# note: complements just 3 missing birthdates
+# NOTE: complements just 3 missing birthdates
 
 
 
@@ -309,6 +309,7 @@ for (p in 21077:nrow(players)) {
   }
 }
 tlog(2, "Number of changes: ", changes)
+# NOTE: complements 128 missing dates
 
 
 

@@ -26,7 +26,7 @@
         ...but there are also just simultaneous membership
 [ ] merge junior/senior consecutive stints with the same team (only bc not useful for network extraction)
 [ ] missing end years:
-    * leverage present start year in following stint
+    * leverage start year in following stint, if present
       with a limit of 30 years for the very last missing end year? (or average career duration)
 [ ] missing LAST end years:
     * use average stint duration for this team? or for the considered player?
