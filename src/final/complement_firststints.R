@@ -110,7 +110,7 @@ for (p in 1:length(idx)) {
     empty_stint_nbr <- length(which(is.na(player_stints[, "startYear"]) & is.na(player_stints[, "endYear"])))
     # we apply the change only if there are no NA-NA stints (= alternatives) or if the resulting stint is not tool long
     if (empty_stint_nbr == 0 && (player_stints[idx3, "endYear"] - potential_start) <= 4 ||
-        empty_stint_nbr > 0 && (player_stints[idx3, "endYear"] - potential_start) <= 2) {
+        empty_stint_nbr > 0 && (player_stints[idx3, "endYear"] - potential_start) <= 2) { # without these constraints: 3,862 changes
 
       player_stints[idx3, "startYear"] <- potential_start
       tlog(4, "Missing first start year: set to ", player_stints[idx3, "startYear"])
