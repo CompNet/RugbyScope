@@ -1,5 +1,6 @@
 ########################################################################
-# Computes and plots some stats for the tables retrieved from Wikidata.
+# Computes and plots the evolution of the number of players by career
+# start date.
 #
 # Vincent Labatut
 # 12/2024

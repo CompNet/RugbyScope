@@ -4,7 +4,7 @@
 # 05/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/final/clean_data.R")
+# source("src/fusion/clean_data.R")
 ########################################################################
 library("stringi")
 library("stringr")

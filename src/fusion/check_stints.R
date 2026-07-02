@@ -5,7 +5,7 @@
 # 06/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/final/check_stints.R")
+# source("src/fusion/check_stints.R")
 ########################################################################
 library("stringi")
 library("stringr")

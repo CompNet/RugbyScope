@@ -5,7 +5,7 @@
 # 05/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/final/merge_stints_identical.R")
+# source("src/fusion/merge_stints_identical.R")
 ########################################################################
 
 

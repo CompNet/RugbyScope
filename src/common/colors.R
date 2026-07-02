@@ -121,6 +121,27 @@ CAT_COLORS_32 <- c(	# glasbey.colors(32) from package Polychrome
 
 
 #############################################################
+# colors to represent the different countries in the plots
+COUNTRY_COLORS <- c(
+  "Argentina" = "#e3d21b",
+  "Australia" = "#e29911",
+  "England" = "#c01818",
+  "France" = "#3b3baa",
+  "Ireland" = "#349a34",
+  "Italy" = "#18afc0",
+  "Japan" = "#c819ae",
+  "New Zealand" = "#000000",
+  "Scotland" = "#04007c",
+  "South Africa" = "#0b4e0b",
+  "Wales" = "#eb8585",
+  "U.S.A." = "#b585eb"
+)
+
+
+
+
+
+#############################################################
 # Returns the appropriate number of colors
 # 
 # values: number of distinct values to plot.

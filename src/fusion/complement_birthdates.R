@@ -4,7 +4,7 @@
 # 06/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/final/complement_birthdates.R")
+# source("src/fusion/complement_birthdates.R")
 ########################################################################
 library("stringi")
 library("stringr")

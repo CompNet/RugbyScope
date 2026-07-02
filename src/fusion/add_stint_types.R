@@ -5,7 +5,7 @@
 # 06/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/final/add_stint_types.R")
+# source("src/fusion/add_stint_types.R")
 ########################################################################
 library("stringi")
 library("stringr")
@@ -17,7 +17,7 @@ library("magrittr")
 source("src/common/logging.R")
 source("src/common/norm_names.R")
 source("src/common/norm_teams.R")
-source("src/final/fun_stints.R")
+source("src/fusion/fun_stints.R")
 
 
 
