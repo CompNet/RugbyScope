@@ -9,7 +9,7 @@
 # 07/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/stats/evol_start_year.R")
+# source("src/stats/evol_players.R")
 ########################################################################
 source("src/common/logging.R")
 source("src/common/colors.R")
@@ -19,19 +19,26 @@ source("src/common/colors.R")
 
 ########################################################################
 # start logging
-start.rec.log("EvolCareerStat")
+start.rec.log("EvolPlayers")
 
+
+
+
+########################################################################
+# parameters
+
+mode <- "active-years"  # "start-year" or "active-years"
 
 # TODO
 # - overall stats
-# - active years instead of start year
 # - then switch to other stuff than nbr of players: avg size, height, age
+
 
 
 
 ########################################################################
 # create output folder
-stats_folder <- file.path("data", "stats", "evol_nbr-players_vs_start-year")
+stats_folder <- file.path("data", "stats", paste0("evol_nbr-players_vs_", mode))
 dir.create(stats_folder, showWarnings = FALSE, recursive = TRUE)
 
 # load tables
@@ -43,24 +50,61 @@ source("src/stats/load_all_tables.R")
 ########################################################################
 # total number of player by start year
 
-# compute stats
-start_years <- c()
-for (p in 1:nrow(players)) {
-  player_id <- players[p, "wikidataId"]
-  if (p %% 1000 == 0)
-    tlog(2, "Processing player ", player_id, "(", p, "/", nrow(players), ")")
+# identify start years
+ref_years <- c()
+ref_players <- c()
+if (mode == "start-year") {
+  for (p in 1:nrow(players)) {
+    player_id <- players[p, "wikidataId"]
+    if (p %% 1000 == 0)
+      tlog(2, "Processing player ", player_id, "(", p, "/", nrow(players), ")")
 
-  career_start <- players[p, "careerStartYear"]
+    career_start <- players[p, "careerStartYear"]
 
-  player_stints <- stints[stints[, "playerId"] == player_id, ]
-  first_stint <- suppressWarnings(min(c(player_stints[, "startYear"], player_stints[, "endYear"]), na.rm = TRUE))
+    player_stints <- stints[stints[, "playerId"] == player_id, ]
+    first_stint <- suppressWarnings(min(c(player_stints[, "startYear"], player_stints[, "endYear"]), na.rm = TRUE))
 
-  if (is.na(first_stint) || is.infinite(first_stint))
-    start_years <- c(start_years, career_start)
-  else
-    start_years <- c(start_years, first_stint)
+    if (is.na(first_stint) || is.infinite(first_stint))
+      ref_years <- c(ref_years, career_start)
+    else
+      ref_years <- c(ref_years, first_stint)
+    ref_players <- c(ref_players, player_id)
+  }
+# identify active years
+} else if (mode == "active-years") {
+  for (p in 1:nrow(players)) {
+    player_id <- players[p, "wikidataId"]
+    if (p %% 1000 == 0)
+      tlog(2, "Processing player ", player_id, "(", p, "/", nrow(players), ")")
+
+    player_stints <- stints[stints[, "playerId"] == player_id, ]
+    active_years <- c()
+    if (nrow(player_stints) > 0) {
+      for (s in 1:nrow(player_stints)) {
+        stint_start <- player_stints[s, "startYear"]
+        stint_end <- player_stints[s, "endYear"]
+        if (is.na(stint_start)) {
+          if (!is.na(stint_end))
+            active_years <- c(active_years, stint_end)
+        } else {
+          if (is.na(stint_end))
+            active_years <- c(active_years, stint_start)
+          else
+            active_years <- c(active_years, stint_start:stint_end)
+        }
+      }
+      active_years <- sort(unique(active_years))
+    }
+
+    if (length(active_years) > 0) {
+      ref_years <- c(ref_years, active_years)
+      ref_players <- c(ref_players, rep(player_id, length(active_years)))
+    }
+  }
+} else {
+  stop("Unknown mode: ", mode)
 }
-all_tt <- table(start_years, useNA = "always")
+all_tt <- table(ref_years, useNA = "always")
 print(all_tt)
 
 
@@ -101,10 +145,11 @@ for (plot_log in c(FALSE, TRUE)) {
 # get country info
 countries <- c()
 country_years <- c()
-for (p in 1:nrow(players)) {
-  player_id <- players[p, "wikidataId"]
-  if (p %% 1000 == 0)
-    tlog(2, "Processing player ", player_id, "(", p, "/", nrow(players), ")")
+for (i in 1:length(ref_players)) {
+  if (i %% 1000 == 0)
+    tlog(2, "Processing entry ", i, "/", length(ref_players))
+  player_id <- ref_players[i]
+  p <- which(players[, "wikidataId"] == player_id)
 
   # get country list
   sport_countries <- players[p, "sportCountries"]
@@ -118,11 +163,13 @@ for (p in 1:nrow(players)) {
   # add to stat list
   for (player_country in player_countries) {
     countries <- c(countries, player_country)
-    country_years <- c(country_years, start_years[p])
+    country_years <- c(country_years, ref_years[p])
   }
 }
 countr_tt <- table(countries, country_years, useNA = "always")
 print(countr_tt)
+
+
 
 # produce plot files
 for (plot_log in c(FALSE, TRUE)) {
@@ -188,10 +235,11 @@ for (plot_log in c(FALSE, TRUE)) {
 # get country info
 positions <- c()
 position_years <- c()
-for (p in 1:nrow(players)) {
-  player_id <- players[p, "wikidataId"]
-  if (p %% 1000 == 0)
-    tlog(2, "Processing player ", player_id, "(", p, "/", nrow(players), ")")
+for (i in 1:length(ref_players)) {
+  if (i %% 1000 == 0)
+    tlog(2, "Processing entry ", i, "/", length(ref_players))
+  player_id <- ref_players[i]
+  p <- which(players[, "wikidataId"] == player_id)
 
   # get position lists
   pos <- players[p, "positions"]
@@ -201,15 +249,17 @@ for (p in 1:nrow(players)) {
     # add to stat list
     for (player_position in player_positions) {
       positions <- c(positions, player_position)
-      position_years <- c(position_years, start_years[p])
+      position_years <- c(position_years, ref_years[p])
     }
   } else {
     positions <- c(positions, NA)
-    position_years <- c(position_years, start_years[p])
+    position_years <- c(position_years, ref_years[p])
   }
 }
 pos_tt <- table(positions, position_years, useNA = "always")
 print(pos_tt)
+
+
 
 # produce plot files
 for (plot_log in c(FALSE, TRUE)) {
