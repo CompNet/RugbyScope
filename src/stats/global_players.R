@@ -8,6 +8,7 @@
 ########################################################################
 source("src/common/logging.R")
 source("src/common/colors.R")
+source("src/common/norm_positions.R")
 
 
 
@@ -36,7 +37,7 @@ source("src/stats/load_all_tables.R")
 birth_year <- players[, "birthDate"] %>% as.Date() %>% format("%Y") %>% as.integer()
 birth_year <- birth_year[!is.na(birth_year)]
 
-plot_file <- file.path(stats_folder, paste0("birthyears.pdf"))
+plot_file <- file.path(stats_folder, paste0("birthyears", ".pdf"))
 pdf(plot_file, width = 7, height = 7)
   hist(birth_year,
     main = NA,
@@ -54,7 +55,7 @@ dev.off()
 death_year <- players[, "deathDate"] %>% as.Date() %>% format("%Y") %>% as.integer()
 death_year <- death_year[!is.na(death_year)]
 
-plot_file <- file.path(stats_folder, paste0("deathyears.pdf"))
+plot_file <- file.path(stats_folder, paste0("deathyears", ".pdf"))
 pdf(plot_file, width = 7, height = 7)
   hist(death_year,
     main = NA,
@@ -109,7 +110,7 @@ top_countries <- c(top_countries, "Others")
 color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
 
 # generate barplot
-plot_file <- file.path(stats_folder, paste0("countries"))
+plot_file <- file.path(stats_folder, paste0("countries", ".pdf"))
 pdf(plot_file, width = 7, height = 7)
   barplot(
     height = countr_tt2[top_countries],
@@ -145,65 +146,44 @@ for (p in 1:nrow(players)) {
   }
 }
 
-# count values
-pos_tt <- table(positions, useNA = "always")
-print(pos_tt)
+# loop over aggregation levels
+for (plot_agg in 1:4) {
+  # aggregate positions
+  tmp <- aggregate_positions(positions = positions, granularity = plot_agg)
+  positions2 <- tmp$positions
+  top_positions <- tmp$top_positions
 
-# focus on most frequent values
-pos_tt0 <- sort(table(positions, useNA = "no"), decreasing = TRUE)
-top_positions <- names(pos_tt0)[1:plot_top]
+  # count values
+  pos_tt <- table(positions2, useNA = "always")
+  print(pos_tt)
 
-# remove NAs
-pos_tt2 <- pos_tt[!is.na(names(pos_tt))]
+  # # focus on most frequent values
+  # pos_tt0 <- sort(table(positions, useNA = "no"), decreasing = TRUE)
+  # top_positions <- names(pos_tt0)[1:min(plot_top, length(pos_tt0))]
 
-# add a new value for category others
-pos_tt2 <- c(pos_tt2, "Others" = sum(pos_tt2[!(names(pos_tt2) %in% top_positions)], na.rm = TRUE))
-top_positions <- c(top_positions, "Others")
+  # remove NAs
+  pos_tt2 <- pos_tt[!is.na(names(pos_tt))]
 
-# set colors
-POSITION_COLORS <- c(
-  "Forward" = "red",
-  "1st Row" = "#a10202",
-  "Prop" = "#a10202",
-  "Loosehead Prop" = "#a10202",
-  "Tighthead Prop" = "#a10202",
-  "Hooker" = "#a10202",
-  "2nd Row" = "#b03333",
-  "Loosehead Lock" = "#b03333",
-  "Tighthead Lock" = "#b03333",
-  "3rd Row" = "#d35b5b",
-  "Flanker" = "#d35b5b",
-  "Openside Flanker" = "#d35b5b",
-  "Blindside Flanker" = "#d35b5b",
-  "Number 8" = "#d35b5b",
-  "Back" = "blue",
-  "Half-Back" = "#2e2eba",
-  "Scrum-Half" = "#2e2eba",
-  "Fly-Half" = "#2e2eba",
-  "Three-Quarter" = "#5555c4",
-  "Centre" = "#6464c4",
-  "Inside Centre" = "#6464c4",
-  "Outside Centre" = "#6464c4",
-  "Winger" = "#7a7ad2",
-  "Left Winger" = "#7a7ad2",
-  "Right Winger" = "#7a7ad2",
-  "Fullback" = "#9595d0"
-)
-color_palette <- c(POSITION_COLORS, "Others" = "#919191")
+  # add a new value for category others
+  pos_tt2 <- c(pos_tt2, "Others" = sum(pos_tt2[!(names(pos_tt2) %in% top_positions)], na.rm = TRUE))
+  top_positions <- c(top_positions, "Others")
 
-# generate barplot
-plot_file <- file.path(stats_folder, paste0("positions"))
-pdf(plot_file, width = 7, height = 7)
-  barplot(
-    height = pos_tt2[top_positions],
-    names.arg = top_positions,
-    #xlab = "Player positions",
-    legend = FALSE,
-    las = 2,
-    col = color_palette[top_positions]
-  )
-dev.off()
+  # set colors
+  color_palette <- c(POSITION_COLORS, "Others" = "#919191")
 
+  # generate barplot
+  plot_file <- file.path(stats_folder, paste0("positions_agg=", plot_agg, ".pdf"))
+  pdf(plot_file, width = 7, height = 7)
+    barplot(
+      height = pos_tt2[top_positions],
+      names.arg = top_positions,
+      #xlab = "Player positions",
+      legend = FALSE,
+      las = 2,
+      col = color_palette[top_positions]
+    )
+  dev.off()
+}
 
 
 
@@ -211,17 +191,37 @@ dev.off()
 ########################################################################
 # distribution of heights
 
+heights <- players[, "height"]
+heights <- heights[!is.na(heights)]
+
+plot_file <- file.path(stats_folder, paste0("heights", ".pdf"))
+pdf(plot_file, width = 7, height = 7)
+  hist(heights,
+    main = NA,
+    xlab = "Player height (cm)",
+    col = "red",
+    breaks = 30
+  )
+dev.off()
+
 
 
 
 ########################################################################
 # distribution of weights
 
+weights <- players[, "weight"]
+weights <- weights[!is.na(weights)]
 
-
-
-
-
+plot_file <- file.path(stats_folder, paste0("weights", ".pdf"))
+pdf(plot_file, width = 7, height = 7)
+  hist(weights,
+    main = NA,
+    xlab = "Player weight (kg)",
+    col = "red",
+    breaks = 30
+  )
+dev.off()
 
 
 

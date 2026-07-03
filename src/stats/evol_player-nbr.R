@@ -9,7 +9,7 @@
 # 07/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/stats/evol_players.R")
+# source("src/stats/evol_player-nbr.R")
 ########################################################################
 source("src/common/logging.R")
 source("src/common/colors.R")
@@ -19,7 +19,7 @@ source("src/common/colors.R")
 
 ########################################################################
 # start logging
-start.rec.log("EvolPlayers")
+start.rec.log("EvolPlayerNbr")
 
 
 
@@ -28,18 +28,15 @@ start.rec.log("EvolPlayers")
 # parameters
 
 mode <- "active-years"  # "start-year" or "active-years"
-
-# TODO
-# - overall stats
-# - then switch to other stuff than nbr of players: avg size, height, age
-# - position: aggregate to medium/larger granularity
+mode_labels <- c("start-year" = "career start year", "active-years" = "active year")
+mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
 
 
 
 ########################################################################
 # create output folder
-stats_folder <- file.path("data", "stats", paste0("evol_nbr-players_vs_", mode))
+stats_folder <- file.path("data", "stats", paste0("evol_player-nbr_vs_", mode))
 dir.create(stats_folder, showWarnings = FALSE, recursive = TRUE)
 
 # load tables
@@ -126,8 +123,8 @@ for (plot_log in c(FALSE, TRUE)) {
     plot(
       x = x,
       y = if (plot_smoothed) predict(fit) else y,
-      xlab = "Year", ylab = "Number of players",
-      main = "Number of players by career year start",
+      xlab = mode_xlabels[mode], ylab = "Number of players",
+      main = paste0("Number of players as a function of ", mode_labels[mode]),
       log = if (plot_log) "y" else "",
       type = "l", col = "red", lwd = 2
     )
@@ -139,9 +136,9 @@ for (plot_log in c(FALSE, TRUE)) {
 
 
 ########################################################################
-# number of player by start year by country
+# number of player by year by country
 
-# note: multiple citizenship are possible, so the same player can be counted several times
+# note: multiple citizenship is possible, so the same player can be counted several times
 
 # get country info
 countries <- c()
@@ -196,9 +193,9 @@ for (plot_log in c(FALSE, TRUE)) {
 
       pdf(plot_file, width = 14, height = 7)
         plot(NULL,
-          xlab = "Year", ylab = "Number of players",
+          xlab = mode_xlabels[mode], ylab = "Number of players",
           log = if (plot_log) "y" else "",
-          main = "Number of players by career year start",
+          main = paste0("Number of players as a function of ", mode_labels[mode]),
           xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
           ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
         )
@@ -229,11 +226,11 @@ for (plot_log in c(FALSE, TRUE)) {
 
 
 ########################################################################
-# number of players by start year by position
+# number of players by year by position
 
-# note: multiple positions are possible, so the same player can be counted several times
+# note: multiple positions is possible, so the same player can be counted several times
 
-# get country info
+# get position info
 positions <- c()
 position_years <- c()
 for (i in 1:length(ref_players)) {
@@ -287,9 +284,9 @@ for (plot_log in c(FALSE, TRUE)) {
 
       pdf(plot_file, width = 14, height = 7)
         plot(NULL,
-          xlab = "Year", ylab = "Number of players",
+          xlab = mode_xlabels[mode], ylab = "Number of players",
           log = if (plot_log) "y" else "",
-          main = "Number of players by career year start",
+          main = paste0("Number of players as a function of ", mode_labels[mode]),
           xlim = c(min(as.integer(colnames(pos_tt2))), max(as.integer(colnames(pos_tt2)))),
           ylim = c(min(pos_tt2, na.rm = TRUE), max(pos_tt2, na.rm = TRUE))
         )

@@ -13,12 +13,18 @@
     * [ ] Leverage LLM to retrive missing information from WP articles' body, and other textual sources
 
 # STATS
-* [ ] evolution of the number of players based on birthdate (or activity?) and country
-* [ ] evolution of the number of stints based on start date and country
-* [ ] distribution of players/teams by country (static)
-* [ ] distribution of stints by source (static)
-  * [ ] find a way to show how redundant they are
-  * [ ] compare evolution of number of player/team/stint *by data source*
+* Player stats
+  * [x] distribution of players by country
+  * [ ] distribution of weight/height depending on position
+  * [x] evolution of the number of players based on birthdate (or activity?) and country
+  * [x] evolution of the number of stints based on start date and country
+  * [ ] evolution of the height / weight over time
+* Team stats
+  * [ ] distribution of teams by country
+* Sting stats
+  * [ ] distribution of stints by source
+    * [ ] find a way to show how redundant they are
+    * [ ] compare evolution of number of player/team/stint *by data source*
 
 # DATA AUGMENTATION FOR NET EXTRACTION
 For net extraction, we need all the dates to be filled, and we can allow more approximation when estimating them.

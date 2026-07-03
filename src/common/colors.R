@@ -137,6 +137,37 @@ COUNTRY_COLORS <- c(
   "U.S.A." = "#b585eb"
 )
 
+# color associated to player positions
+POSITION_COLORS <- c(
+  "Forward" = "red",
+  "1st Row" = "#a10202",
+  "Prop" = "#a10202",
+  "Loosehead Prop" = "#a10202",
+  "Tighthead Prop" = "#a10202",
+  "Hooker" = "#a10202",
+  "2nd Row" = "#b03333",
+  "Loosehead Lock" = "#b03333",
+  "Tighthead Lock" = "#b03333",
+  "3rd Row" = "#d35b5b",
+  "Flanker" = "#d35b5b",
+  "Openside Flanker" = "#d35b5b",
+  "Blindside Flanker" = "#d35b5b",
+  "Number 8" = "#d35b5b",
+  "Back" = "blue",
+  "Half-Back" = "#2e2eba",
+  "Scrum-Half" = "#2e2eba",
+  "Fly-Half" = "#2e2eba",
+  "Three-Quarter" = "#5555c4",
+  "Centre" = "#6464c4",
+  "Inside Centre" = "#6464c4",
+  "Outside Centre" = "#6464c4",
+  "Winger" = "#7a7ad2",
+  "Left Winger" = "#7a7ad2",
+  "Right Winger" = "#7a7ad2",
+  "Fullback" = "#9595d0"
+)
+
+
 
 
 
@@ -211,7 +242,7 @@ combine.colors <- function(col1, col2, transparency=50)
 #
 # returns: partially transparent color.
 #############################################################
-make.color.transparent <- function(color, transparency=50)
+make.color.transparent <- function(color, transparency = 50)
 {	# convert to RGB triplet
 	rgb.val <- col2rgb(color)
 	

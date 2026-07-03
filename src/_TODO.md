@@ -1,9 +1,3 @@
-# STATS
-  * active players stats with *filtering* process
-  * fix country colors (ireland=green, france=blue, etc.)
-  * histogram number of teams by country, distinguishing WD/non-WD
-  * evolution of players weight and height
-
 # NOTES
   - Filtering players depending on whether they played for a club: many are missed
     But if their club is not indicated... maybe they are not important enough?
