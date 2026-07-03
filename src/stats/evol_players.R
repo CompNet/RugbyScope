@@ -32,6 +32,7 @@ mode <- "active-years"  # "start-year" or "active-years"
 # TODO
 # - overall stats
 # - then switch to other stuff than nbr of players: avg size, height, age
+# - position: aggregate to medium/larger granularity
 
 
 
