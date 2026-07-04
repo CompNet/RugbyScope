@@ -25,7 +25,7 @@ start.rec.log("EvolPlayerSize")
 ########################################################################
 # parameters
 
-mode <- "active-years"  # "start-year" or "active-years"
+mode <- "start-year"  # "start-year" or "active-years"
 mode_labels <- c("start-year" = "career start year", "active-years" = "active years")
 mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
@@ -43,10 +43,12 @@ source("src/stats/load_all_tables.R")
 
 
 ########################################################################
-# identify start years
+# identify years
 
 ref_years <- c()
 ref_players <- c()
+
+# identify start years
 if (mode == "start-year") {
   for (p in 1:nrow(players)) {
     player_id <- players[p, "wikidataId"]
@@ -64,6 +66,7 @@ if (mode == "start-year") {
       ref_years <- c(ref_years, first_stint)
     ref_players <- c(ref_players, player_id)
   }
+
 # identify active years
 } else if (mode == "active-years") {
   for (p in 1:nrow(players)) {
@@ -123,7 +126,7 @@ for (i in 1:length(ref_players)) {
   # add to stat lists
   heights <- c(heights, height)
   weights <- c(weights, weight)
-  size_years <- c(size_years, ref_years[p])
+  size_years <- c(size_years, ref_years[i])
   size_players <- c(size_players, player_id)
 }
 
@@ -199,6 +202,7 @@ positions <- c()
 position_years <- c()
 position_heights <- c()
 position_weights <- c()
+position_players <- c()
 for (i in 1:length(size_players)) {
   if (i %% 1000 == 0)
     tlog(2, "Processing entry ", i, "/", length(size_players))
@@ -213,22 +217,25 @@ for (i in 1:length(size_players)) {
     # add to stat list
     for (player_position in player_positions) {
       positions <- c(positions, player_position)
-      position_years <- c(position_years, ref_years[p])
-      position_heights <- c(position_heights, heights[p])
-      position_weights <- c(position_weights, heights[p])
+      position_years <- c(position_years, size_years[i])
+      position_heights <- c(position_heights, heights[i])
+      position_weights <- c(position_weights, weights[i])
+      position_players <- c(position_players, size_players[i])
     }
   } else {
     positions <- c(positions, NA)
-    position_years <- c(position_years, ref_years[p])
-    position_heights <- c(position_heights, heights[p])
-    position_weights <- c(position_weights, heights[p])
+    position_years <- c(position_years, size_years[i])
+    position_heights <- c(position_heights, heights[i])
+    position_weights <- c(position_weights, weights[i])
+    position_players <- c(position_players, size_players[i])
   }
 }
 
 
 
 # produce plot files
-for (plot_log in c(FALSE, TRUE)) {
+plot_log <- FALSE
+#for (plot_log in c(FALSE, TRUE)) {
   for (plot_smoothed in c(FALSE, TRUE)) {
     for (plot_agg in 1:4) {
       # aggregate positions depending on current granularity
@@ -250,26 +257,26 @@ for (plot_log in c(FALSE, TRUE)) {
           # heights
           idx <- which(position_years == year & !is.na(position_heights) & !is.na(positions2) & positions2 == position)
           if (length(idx) > 0) {
-            av_heights[position, year] <- mean(position_heights[idx])
-            sd_heights[position, year] <- sd(position_heights[idx])
+            av_heights[position, as.character(year)] <- mean(position_heights[idx], na.rm = TRUE)
+            sd_heights[position, as.character(year)] <- sd(position_heights[idx], na.rm = TRUE)
           }
 
           # weights
           idx <- which(position_years == year & !is.na(position_weights) & !is.na(positions2) & positions2 == position)
           if (length(idx) > 0) {
-            av_weights[position, year] <- mean(position_weights[idx])
-            sd_weights[position, year] <- sd(position_weights[idx])
+            av_weights[position, as.character(year)] <- mean(position_weights[idx], na.rm = TRUE)
+            sd_weights[position, as.character(year)] <- sd(position_weights[idx], na.rm = TRUE)
           }
         }
       }
 
-      # replace zeros by NA to avoid log(0) in the plot
-      if (plot_log) {
-        av_heights[av_heights == 0] <- NA
-        sd_heights[av_heights == 0] <- NA
-        av_weights[av_weights == 0] <- NA
-        sd_weights[av_weights == 0] <- NA
-      }
+     # replace zeros by NA to avoid log(0) in the plot
+     if (plot_log) {
+       av_heights[av_heights == 0] <- NA
+       sd_heights[av_heights == 0] <- NA
+       av_weights[av_weights == 0] <- NA
+       sd_weights[av_weights == 0] <- NA
+     }
 
       # put values in lists
       vals <- list(height = position_heights, weight = position_weights)
@@ -280,52 +287,61 @@ for (plot_log in c(FALSE, TRUE)) {
       color_palette <- c(POSITION_COLORS, "Others" = "#919191")
 
       for (size_name in c("height", "weight")) {
-        plot_file <- file.path(stats_folder, paste0(size_name, "_positions_agg=", plot_agg, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
-        tlog("Producing plot file: ", plot_file)
+        for (plot_points in c(FALSE, TRUE)) {
+#          plot_file <- file.path(stats_folder, paste0(size_name, "_positions_agg=", plot_agg, "_smoothed=", plot_smoothed, "_ylog=", plot_log, "_pts=", plot_points, ".pdf"))
+          plot_file <- file.path(stats_folder, paste0(size_name, "_positions_agg=", plot_agg, "_smoothed=", plot_smoothed, "_pts=", plot_points, ".pdf"))
+          tlog("Producing plot file: ", plot_file)
 
-        pdf(plot_file, width = 14, height = 7)
-          # init plot
-          plot(
-            xlab = mode_xlabels[mode], ylab = size_labels[size_name],
-            log = if (plot_log) "y" else "",
-            main = paste0("Average player ", size_name," as a function of ", mode_labels[mode]),
-            xlim = c(min(as.integer(un_years)), max(as.integer(colnames(un_years)))),
-            ylim = c(min(vals[size_name], na.rm = TRUE), max(vals[size_name], na.rm = TRUE))
-          )
-          # add series
-          for (position in top_positions) {
-            # plot points
-            idx <- which(positions == position)
-            x <- as.integer(position_years[idx])
-            y <- as.integer(vals[[size_name]][idx])
-            plot(
-              x = x, y = y, pch = 19,
-              col = make.color.transparent(color = color_palette[position], transparency = 80)
+          pdf(plot_file, width = 14, height = 7)
+            # init plot
+            plot(NULL,
+              xlab = mode_xlabels[mode], ylab = size_labels[size_name],
+              log = if (plot_log) "y" else "",
+              main = paste0("Average player ", size_name," as a function of ", mode_labels[mode]),
+              xlim = c(min(as.integer(un_years)), max(as.integer(un_years))),
+              ylim = c(min(vals[[size_name]], na.rm = TRUE), max(vals[[size_name]], na.rm = TRUE))
             )
-            # plot average
-            x <- as.integer(un_years)
-            y <- as.integer(av_vals[[size_name]][position, ])
-            if (plot_smoothed)
-              fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
-            lines(
-              x = x,
-              y = if (plot_smoothed) predict(fit) else y,
-              col = color_palette[position],
-              lwd = 2
+
+            # add series
+            for (position in top_positions) {
+              # plot points
+              if (plot_points) {
+                idx <- which(positions2 == position)
+                x <- as.integer(position_years[idx])
+                y <- as.integer(vals[[size_name]][idx])
+                points(
+                  x = x, y = y, pch = 19,
+                  col = make.color.transparent(color = color_palette[position], transparency = 95)
+                )
+              }
+              # plot average
+              x <- as.integer(un_years)
+              y <- as.integer(av_vals[[size_name]][position, ])
+              if (length(which(!is.na(y))) > 2) {
+                if (plot_smoothed)
+                  fit <- loess(y ~ x, na.action = na.exclude, span = 0.2)
+                lines(
+                  x = x,
+                  y = if (plot_smoothed) predict(fit) else y,
+                  col = color_palette[position],
+                  lwd = 2
+                )
+              }
+            }
+
+            # add legend
+            legend(
+              "topleft",
+              legend = top_positions,
+              # cex = 0.8,
+              fill = color_palette[top_positions]
             )
-          }
-          # add legend
-          legend(
-            "topleft",
-            legend = top_positions,
-            # cex = 0.8,
-            fill = color_palette[top_positions]
-          )
-        dev.off()
+          dev.off()
+        }
       }
     }
   }
-}
+#}
 
 
 

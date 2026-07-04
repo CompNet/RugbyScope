@@ -6,6 +6,10 @@
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
 # source("src/stats/global_players.R")
 ########################################################################
+library("dplyr")
+
+
+
 source("src/common/logging.R")
 source("src/common/colors.R")
 source("src/common/norm_positions.R")
@@ -38,6 +42,7 @@ birth_year <- players[, "birthDate"] %>% as.Date() %>% format("%Y") %>% as.integ
 birth_year <- birth_year[!is.na(birth_year)]
 
 plot_file <- file.path(stats_folder, paste0("birthyears", ".pdf"))
+tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   hist(birth_year,
     main = NA,
@@ -56,6 +61,7 @@ death_year <- players[, "deathDate"] %>% as.Date() %>% format("%Y") %>% as.integ
 death_year <- death_year[!is.na(death_year)]
 
 plot_file <- file.path(stats_folder, paste0("deathyears", ".pdf"))
+tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   hist(death_year,
     main = NA,
@@ -111,6 +117,7 @@ color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
 
 # generate barplot
 plot_file <- file.path(stats_folder, paste0("countries", ".pdf"))
+tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   barplot(
     height = countr_tt2[top_countries],
@@ -131,6 +138,8 @@ plot_top <- 12
 
 # retrieve positions
 positions <- c()
+pos_heights <- c()
+pos_weights <- c()
 for (p in 1:nrow(players)) {
   if (p %% 1000 == 0)
     tlog(2, "Processing entry ", p, "/", nrow(players))
@@ -143,6 +152,8 @@ for (p in 1:nrow(players)) {
 
     # add to stat list
     positions <- c(positions, player_positions)
+    pos_heights <- c(pos_heights, rep(players[p, "height"], length(player_positions)))
+    pos_weights <- c(pos_weights, rep(players[p, "height"], length(player_positions)))
   }
 }
 
@@ -173,6 +184,7 @@ for (plot_agg in 1:4) {
 
   # generate barplot
   plot_file <- file.path(stats_folder, paste0("positions_agg=", plot_agg, ".pdf"))
+  tlog("Producing plot file: ", plot_file)
   pdf(plot_file, width = 7, height = 7)
     barplot(
       height = pos_tt2[top_positions],
@@ -195,6 +207,7 @@ heights <- players[, "height"]
 heights <- heights[!is.na(heights)]
 
 plot_file <- file.path(stats_folder, paste0("heights", ".pdf"))
+tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   hist(heights,
     main = NA,
@@ -203,6 +216,62 @@ pdf(plot_file, width = 7, height = 7)
     breaks = 30
   )
 dev.off()
+
+# heights vs. position
+for (plot_agg in 1:4) {
+  # aggregate positions
+  tmp <- aggregate_positions(positions = positions, granularity = plot_agg)
+  positions2 <- tmp$positions
+  top_positions <- tmp$top_positions
+
+  # add category others
+  positions2[!(positions2 %in% top_positions)] <- "Others"
+  top_positions <- c(top_positions, "Others")
+
+  # compute density by position
+  densities <- list()
+  xlim <- range(pos_heights, na.rm = TRUE)
+  ylim <- c(1, -1)
+  for (position in top_positions) {
+    idx <- which(!is.na(pos_heights) & !is.na(positions2) & positions2 == position)
+    if (length(idx) > 2) {
+      densities[[position]] <- density(pos_heights[idx], na.rm = TRUE)
+      ylim[1] <- min(c(ylim[1], densities[[position]]$y))
+      ylim[2] <- max(c(ylim[2], densities[[position]]$y))
+    }
+  }
+
+  # set colors
+  color_palette <- c(POSITION_COLORS, "Others" = "#919191")
+
+  # generate density plot
+  plot_file <- file.path(stats_folder, paste0("height_vs_position_agg=", plot_agg, ".pdf"))
+  tlog("Producing plot file: ", plot_file)
+  pdf(plot_file, width = 7, height = 7)
+    # init empty plot
+    plot(NULL,
+      xlim = xlim, ylim = ylim,
+      xlab = "Player height (cm)",
+      ylab = "Density"
+    )
+    # add series
+    for (position in top_positions) {
+      if (!all(is.na(densities[[position]]))) {
+        lines(densities[[position]],
+          col = color_palette[position],
+          lwd = 2
+        )
+      }
+    }
+    # add legend
+    legend(
+      "topleft",
+      legend = top_positions,
+      # cex = 0.8,
+      fill = color_palette[top_positions]
+    )
+  dev.off()
+}
 
 
 
@@ -214,6 +283,7 @@ weights <- players[, "weight"]
 weights <- weights[!is.na(weights)]
 
 plot_file <- file.path(stats_folder, paste0("weights", ".pdf"))
+tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   hist(weights,
     main = NA,
@@ -222,6 +292,62 @@ pdf(plot_file, width = 7, height = 7)
     breaks = 30
   )
 dev.off()
+
+# weights vs. position
+for (plot_agg in 1:4) {
+  # aggregate positions
+  tmp <- aggregate_positions(positions = positions, granularity = plot_agg)
+  positions2 <- tmp$positions
+  top_positions <- tmp$top_positions
+
+  # add category others
+  positions2[!(positions2 %in% top_positions)] <- "Others"
+  top_positions <- c(top_positions, "Others")
+
+  # compute density by position
+  densities <- list()
+  xlim <- range(pos_weights, na.rm = TRUE)
+  ylim <- c(1, -1)
+  for (position in top_positions) {
+    idx <- which(!is.na(pos_weights) & !is.na(positions2) & positions2 == position)
+    if (length(idx) > 2) {
+      densities[[position]] <- density(pos_weights[idx], na.rm = TRUE)
+      ylim[1] <- min(c(ylim[1], densities[[position]]$y))
+      ylim[2] <- max(c(ylim[2], densities[[position]]$y))
+    }
+  }
+
+  # set colors
+  color_palette <- c(POSITION_COLORS, "Others" = "#919191")
+
+  # generate density plot
+  plot_file <- file.path(stats_folder, paste0("weight_vs_position_agg=", plot_agg, ".pdf"))
+  tlog("Producing plot file: ", plot_file)
+  pdf(plot_file, width = 7, height = 7)
+    # init empty plot
+    plot(NULL,
+      xlim = xlim, ylim = ylim,
+      xlab = "Player weight (kg)",
+      ylab = "Density"
+    )
+    # add series
+    for (position in top_positions) {
+      if (!all(is.na(densities[[position]]))) {
+        lines(densities[[position]],
+          col = color_palette[position],
+          lwd = 2
+        )
+      }
+    }
+    # add legend
+    legend(
+      "topleft",
+      legend = top_positions,
+      # cex = 0.8,
+      fill = color_palette[top_positions]
+    )
+  dev.off()
+}
 
 
 

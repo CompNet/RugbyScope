@@ -18,7 +18,8 @@
   * [ ] distribution of weight/height depending on position
   * [x] evolution of the number of players based on birthdate (or activity?) and country
   * [x] evolution of the number of stints based on start date and country
-  * [ ] evolution of the height / weight over time
+  * [x] evolution of the height / weight over time
+  * [ ] for larger position granularities, we could replace "Prop" by both types of prop, and so on
 * Team stats
   * [ ] distribution of teams by country
 * Sting stats
