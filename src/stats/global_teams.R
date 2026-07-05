@@ -1,5 +1,5 @@
 ########################################################################
-# Generates various plots regarding the teams table, without 
+# Generates various plots regarding the teams table, without
 # considering time.
 #
 # 07/2025 Vincent Labatut

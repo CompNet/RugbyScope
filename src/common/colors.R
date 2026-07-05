@@ -184,6 +184,16 @@ TEAMTYPE_COLORS <- c(
   "Regional team" = "#e25822" 				# reddishorange
 )
 
+# colors to represent the different data sources in the plots
+DATASOURCE_COLORS <- c(
+  "esWP" = "#eaca39",
+  "enWP" = "#c01818",
+  "frWP" = "#3b3baa",
+  "itWP" = "#18afc0",
+  "jaWP" = "#c819ae",
+  "WD"   = "#484848"
+)
+
 
 
 
