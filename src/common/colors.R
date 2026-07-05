@@ -170,17 +170,18 @@ POSITION_COLORS <- c(
 # color associated to team types
 TEAMTYPE_COLORS <- c(
   "Club/franchise team" = "#875692", 		# purple
-  "Combined team" = "#f38400", 		# orange
-  "Invitational team" = "#a1caf1", 		# lightblue
+  "Combined team" = "#f38400", 			# orange
+  "Invitational team" = "#0067a5", 		# blue
   "Military/police team" = "#be0032", 		# red
   "National senior team" = "#008856", 		# green
+  "National youth team" = "#8db600", 		# yellowgreen
   "National U18 team" = "#e68fac", 		# purplishpink
-  "National U19 team" = "#0067a5", 		# blue
-  "National U20 team" = "#604e97", 		# violet
+  "National U19 team" = "#72b0d6", 		# lightblue
+  "National U20 team" = "#1fa98d", 		# violet
   "National U21 team" = "#b3446c", 		# purplishred
   "National U23 team" = "#8db600", 		# yellowgreen
-  "National university team" = "#654522", 		# yellowishbrown
-  "Regional team" = "#e25822" 		# reddishorange
+  "National university team" = "#654522", 	# yellowishbrown
+  "Regional team" = "#e25822" 				# reddishorange
 )
 
 

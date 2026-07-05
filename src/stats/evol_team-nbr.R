@@ -1,15 +1,14 @@
 ########################################################################
-# Generates various plots regarding the evolution of the number of players
-# that started their career in a given year, using both stints years
-# a career start year :
+# Generates various plots regarding the evolution of the number of teams
+# that were founded in a given year, or that were active at a given year:
 # - overall
 # - by country
-# - by position
+# - by type
 #
 # 07/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/stats/evol_player-nbr.R")
+# source("src/stats/evol_team-nbr.R")
 ########################################################################
 source("src/common/logging.R")
 source("src/common/colors.R")
@@ -19,7 +18,7 @@ source("src/common/colors.R")
 
 ########################################################################
 # start logging
-start.rec.log("EvolPlayerNbr")
+start.rec.log("EvolTeamNbr")
 
 
 
@@ -36,7 +35,7 @@ mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active y
 
 ########################################################################
 # create output folder
-stats_folder <- file.path("data", "stats", paste0("evol_player-nbr_vs_", mode))
+stats_folder <- file.path("data", "stats", paste0("evol_team-nbr_vs_", mode))
 dir.create(stats_folder, showWarnings = FALSE, recursive = TRUE)
 
 # load tables
@@ -46,41 +45,41 @@ source("src/stats/load_all_tables.R")
 
 
 ########################################################################
-# total number of players by start year
+# total number of teams by start year
 
 # identify start years
 ref_years <- c()
-ref_players <- c()
+ref_teams <- c()
 if (mode == "start-year") {
-  for (p in 1:nrow(players)) {
-    player_id <- players[p, "wikidataId"]
-    if (p %% 1000 == 0)
-      tlog(2, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
+  for (t in 1:nrow(teams)) {
+    team_id <- teams[t, "rugbyscopeId"]
+    if (t %% 1000 == 0)
+      tlog(2, "Processing team ", team_id, " (", t, "/", nrow(teams), ")")
 
-    career_start <- players[p, "careerStartYear"]
+    inception_year <- teams[p, "inceptionDate"] %>% as.Date() %>% format("%Y") %>% as.integer()
 
-    player_stints <- stints[stints[, "playerId"] == player_id, ]
-    first_stint <- suppressWarnings(min(c(player_stints[, "startYear"], player_stints[, "endYear"]), na.rm = TRUE))
+    team_stints <- stints[stints[, "teamRsId"] == team_id, ]
+    first_stint <- suppressWarnings(min(c(team_stints[, "startYear"], team_stints[, "endYear"]), na.rm = TRUE))
 
     if (is.na(first_stint) || is.infinite(first_stint))
-      ref_years <- c(ref_years, career_start)
+      ref_years <- c(ref_years, inception_year)
     else
       ref_years <- c(ref_years, first_stint)
-    ref_players <- c(ref_players, player_id)
+    ref_teams <- c(ref_teams, team_id)
   }
 # identify active years
 } else if (mode == "active-years") {
-  for (p in 1:nrow(players)) {
-    player_id <- players[p, "wikidataId"]
-    if (p %% 1000 == 0)
-      tlog(2, "Processing player ", player_id, " (", p, "/", nrow(players), ")")
+  for (t in 1:nrow(teams)) {
+    team_id <- teams[t, "rugbyscopeId"]
+    if (t %% 1000 == 0)
+      tlog(2, "Processing team ", team_id, " (", t, "/", nrow(teams), ")")
 
-    player_stints <- stints[stints[, "playerId"] == player_id, ]
+    team_stints <- stints[stints[, "teamRsId"] == team_id, ]
     active_years <- c()
-    if (nrow(player_stints) > 0) {
-      for (s in 1:nrow(player_stints)) {
-        stint_start <- player_stints[s, "startYear"]
-        stint_end <- player_stints[s, "endYear"]
+    if (nrow(team_stints) > 0) {
+      for (s in 1:nrow(team_stints)) {
+        stint_start <- team_stints[s, "startYear"]
+        stint_end <- team_stints[s, "endYear"]
         if (is.na(stint_start)) {
           if (!is.na(stint_end))
             active_years <- c(active_years, stint_end)
@@ -96,7 +95,7 @@ if (mode == "start-year") {
 
     if (length(active_years) > 0) {
       ref_years <- c(ref_years, active_years)
-      ref_players <- c(ref_players, rep(player_id, length(active_years)))
+      ref_teams <- c(ref_teams, rep(team_id, length(active_years)))
     }
   }
 } else {
@@ -123,8 +122,8 @@ for (plot_log in c(FALSE, TRUE)) {
     plot(
       x = x,
       y = if (plot_smoothed) predict(fit) else y,
-      xlab = mode_xlabels[mode], ylab = "Number of players",
-      main = paste0("Number of players as a function of ", mode_labels[mode]),
+      xlab = mode_xlabels[mode], ylab = "Number of teams",
+      main = paste0("Number of teams as a function of ", mode_labels[mode]),
       log = if (plot_log) "y" else "",
       type = "l", col = "red", lwd = 2
     )
@@ -136,32 +135,25 @@ for (plot_log in c(FALSE, TRUE)) {
 
 
 ########################################################################
-# number of players by year by country
+# number of teams by year by country
 
-# note: multiple citizenship is possible, so the same player can be counted several times
+# note: some teams are related to multiple countries, so the same team can be counted several times
 
 # get country info
 countries <- c()
 country_years <- c()
-for (i in 1:length(ref_players)) {
+for (i in 1:length(ref_teams)) {
   if (i %% 1000 == 0)
-    tlog(2, "Processing entry ", i, "/", length(ref_players))
-  player_id <- ref_players[i]
-  p <- which(players[, "wikidataId"] == player_id)
+    tlog(2, "Processing entry ", i, "/", length(ref_teams))
+  team_id <- ref_teams[i]
+  t <- which(teams[, "rugbyscopeId"] == team_id)
 
   # get country list
-  sport_countries <- players[p, "sportCountries"]
-  if (!is.na(sport_countries))
-    player_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
-  else {
-    citizenships <- players[p, "citizenships"]
-    player_countries <- trimws(strsplit(citizenships, split = ";")[[1]])
-  }
-
-  # add to stat list
-  for (player_country in player_countries) {
-    countries <- c(countries, player_country)
-    country_years <- c(country_years, ref_years[p])
+  sport_countries <- teams[t, "countries"]
+  if (!is.na(sport_countries)) {
+    team_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
+    countries <- c(countries, team_countries)
+    country_years <- c(country_years, rep(ref_years[t], length(team_countries)))
   }
 }
 countr_tt <- table(countries, country_years, useNA = "always")
@@ -189,13 +181,13 @@ for (plot_log in c(FALSE, TRUE)) {
       top_countries <- c(top_countries, "Others")
       # replace zeros by NA to avoid log(0) in the plot
       if (plot_log)
-        countr_tt2[countr_tt2 == 0] <- NA
+        countr_tt2[countr_tt2 == 0] <- 1
 
       pdf(plot_file, width = 14, height = 7)
         plot(NULL,
-          xlab = mode_xlabels[mode], ylab = "Number of players",
+          xlab = mode_xlabels[mode], ylab = "Number of teams",
           log = if (plot_log) "y" else "",
-          main = paste0("Number of players as a function of ", mode_labels[mode]),
+          main = paste0("Number of teams as a function of ", mode_labels[mode]),
           xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
           ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
         )
@@ -226,87 +218,79 @@ for (plot_log in c(FALSE, TRUE)) {
 
 
 ########################################################################
-# number of players by year by position
+# number of teams by year by type
 
-# note: multiple positions is possible, so the same player can be counted several times
-
-# get position info
-positions <- c()
-position_years <- c()
-for (i in 1:length(ref_players)) {
+# get type info
+types <- c()
+for (i in 1:length(ref_teams)) {
   if (i %% 1000 == 0)
-    tlog(2, "Processing entry ", i, "/", length(ref_players))
-  player_id <- ref_players[i]
-  p <- which(players[, "wikidataId"] == player_id)
+    tlog(2, "Processing entry ", i, "/", length(ref_teams))
+  team_id <- ref_teams[i]
+  t <- which(teams[, "rugbyscopeId"] == team_id)
 
-  # get position lists
-  pos <- players[p, "positions"]
-  if (!is.na(pos)) {
-    player_positions <- trimws(strsplit(pos, split = ";")[[1]])
-
-    # add to stat list
-    for (player_position in player_positions) {
-      positions <- c(positions, player_position)
-      position_years <- c(position_years, ref_years[p])
-    }
-  } else {
-    positions <- c(positions, NA)
-    position_years <- c(position_years, ref_years[p])
-  }
+  # add type to stat list
+  types <- c(types, teams[t, "type"])
 }
-pos_tt <- table(positions, position_years, useNA = "always")
+pos_tt <- table(types, ref_years, useNA = "always")
 print(pos_tt)
 
 
 
 # produce plot files
+types2 <- types
 for (plot_log in c(FALSE, TRUE)) {
   for (plot_smoothed in c(FALSE, TRUE)) {
-    for (plot_top in c(5, 8)) {
-      plot_file <- file.path(stats_folder, paste0("positions_top=", plot_top, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
+    for (plot_agg in 1:2) {
+      plot_file <- file.path(stats_folder, paste0("types_agg=", plot_agg, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
       tlog("Producing plot file: ", plot_file)
 
+      # apply aggregation
+      if (plot_agg == 2) {
+        for (type2 in c("National U18 team", "National U19 team", "National U20 team", "National U21 team", "National U23 team")) {
+          types2[types2 == type] <- "National youth team"
+        }
+      }
+
       # overal values
-      pos_tt0 <- sort(table(positions, useNA = "no"), decreasing = TRUE)
-      top_positions <- names(pos_tt0)[1:plot_top]
+      pos_tt0 <- sort(table(types2, useNA = "no"), decreasing = TRUE)
+      top_types <- names(pos_tt0)
 
       # set colors
-      color_palette <- c(get.palette(values = plot_top), "#919191")
-      names(color_palette) <- c(top_positions, "Others")
+      color_palette <- TEAMTYPE_COLORS
 
-      pos_tt2 <- pos_tt[, !is.na(colnames(pos_tt))]
-      # add a new line for the rest of the positions
-      pos_tt2 <- rbind(pos_tt2, "Others" = colSums(pos_tt2[!(rownames(pos_tt2) %in% top_positions), , drop = FALSE], na.rm = TRUE))
-      top_positions <- c(top_positions, "Others")
+      # compute freq table
+      pos_tt <- table(types2, ref_years, useNA = "always")
+      pos_tt <- pos_tt[, !is.na(colnames(pos_tt))]
+
       # replace zeros by NA to avoid log(0) in the plot
       if (plot_log)
-        pos_tt2[pos_tt2 == 0] <- NA
+        pos_tt[pos_tt == 0] <- NA
 
       pdf(plot_file, width = 14, height = 7)
         plot(NULL,
-          xlab = mode_xlabels[mode], ylab = "Number of players",
+          xlab = mode_xlabels[mode], ylab = "Number of teams",
           log = if (plot_log) "y" else "",
-          main = paste0("Number of players as a function of ", mode_labels[mode]),
-          xlim = c(min(as.integer(colnames(pos_tt2))), max(as.integer(colnames(pos_tt2)))),
-          ylim = c(min(pos_tt2, na.rm = TRUE), max(pos_tt2, na.rm = TRUE))
+          main = paste0("Number of teams as a function of ", mode_labels[mode]),
+          xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
+          ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
         )
-        for (position in top_positions) {
-          x <- as.integer(colnames(pos_tt2))
-          y <- as.integer(pos_tt2[position, ])
+        for (type in top_types) {
+          x <- as.integer(colnames(pos_tt))
+          y <- as.integer(pos_tt[type, ])
           if (plot_smoothed)
               fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
           lines(
             x = x,
             y = if (plot_smoothed) predict(fit) else y,
-            col = color_palette[position],
+            col = color_palette[type],
             lwd = 2
           )
         }
         legend(
           "topleft",
-          legend = top_positions,
+          legend = top_types,
           # cex = 0.8,
-          fill = color_palette[top_positions]
+          fill = color_palette[top_types]
         )
       dev.off()
     }
