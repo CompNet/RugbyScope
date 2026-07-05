@@ -15,14 +15,14 @@
 # STATS
 * Player stats
   * [x] distribution of players by country
-  * [ ] distribution of weight/height depending on position
+  * [x] distribution of weight/height depending on position
   * [x] evolution of the number of players based on birthdate (or activity?) and country
   * [x] evolution of the number of stints based on start date and country
   * [x] evolution of the height / weight over time
   * [ ] for larger position granularities, we could replace "Prop" by both types of prop, and so on
 * Team stats
-  * [ ] distribution of teams by country
-* Sting stats
+  * [x] distribution of teams by country
+* Stint stats
   * [ ] distribution of stints by source
     * [ ] find a way to show how redundant they are
     * [ ] compare evolution of number of player/team/stint *by data source*
