@@ -1,6 +1,6 @@
 #############################################################################################
 # Defines functions and constants related to colors, for plots.
-# 
+#
 # 11/2019 Vincent Labatut
 #############################################################################################
 
@@ -59,38 +59,38 @@ CAT_COLORS_18 <- c(							# manual extension of the color brewer palette
 	rgb(0,255,0,maxColorValue=255)			# straight green
 )
 CAT_COLORS_22 <- c(	# kelly.colors(22) from package Polychrome
-	"#f2f3f4", 		# white 
-	"#222222", 		# black 
-	"#f3c300", 		# yellow 
-	"#875692", 		# purple 
-	"#f38400", 		# orange 
-	"#a1caf1", 		# lightblue 
-	"#be0032", 		# red 
-	"#c2b280", 		# buff 
-	"#848482", 		# gray 
-	"#008856", 		# green 
-	"#e68fac", 		# purplishpink 
-	"#0067a5", 		# blue 
-	"#f99379", 		# yellowishpink 
-	"#604e97", 		# violet 
-	"#f6a600", 		# orangeyellow 
-	"#b3446c", 		# purplishred 
-	"#dcd300", 		# greenishyellow 
-	"#882d17", 		# reddishbrown 
-	"#8db600", 		# yellowgreen 
-	"#654522", 		# yellowishbrown 
-	"#e25822", 		# reddishorange 
-	"#2b3d26"		# olivegreen
+	"#f2f3f4", 		# white
+	"#222222", 		# black
+	"#f3c300", 		# yellow
+	"#875692", 		# purple
+	"#f38400", 		# orange
+	"#a1caf1", 		# lightblue
+	"#be0032", 		# red
+	"#c2b280", 		# buff
+	"#848482", 		# gray
+	"#008856", 		# green
+	"#e68fac", 		# purplishpink
+	"#0067a5", 		# blue
+	"#f99379", 		# yellowishpink
+	"#604e97", 		# violet
+	"#f6a600", 		# orangeyellow
+	"#b3446c", 		# purplishred
+	"#dcd300", 		# greenishyellow
+	"#882d17", 		# reddishbrown
+	"#8db600", 		# yellowgreen
+	"#654522", 		# yellowishbrown
+	"#e25822", 		# reddishorange
+	"#2b3d26"			# olivegreen
 )
 CAT_COLORS_26 <- c(	# green.armytage.colors(26) from package Polychrome
-	"#F0A3FF",		# amethyst 
+	"#F0A3FF",		# amethyst
 	"#0075DC",		# blue
 	"#993F00",		# caramel
 	"#4C005C",		# damson
 	"#191919",		# ebony
 	"#005C31",		# forest
 	"#2BCE48",		# green
-	"#FFCC99", 		# honeydew
+	"#FFCC99", 	# honeydew
 	"#808080",		# iron
 	"#94FFB5",		# jade
 	"#8F7C00",		# khaki
@@ -98,15 +98,15 @@ CAT_COLORS_26 <- c(	# green.armytage.colors(26) from package Polychrome
 	"#C20088",		# mallow
 	"#003380",		# navy
 	"#19A405",		# orpiment
-	"#FFA8BB", 		# pink
-	"#426600",		# quagmire 
+	"#FFA8BB", 	# pink
+	"#426600",		# quagmire
 	"#FF0010",		# red
 	"#5EF1F2",		# sky
 	"#00998F",		# turquoise
 	"#E0FF66",		# uranium
 	"#100AFF",		# violet
 	"#990000",		# wine
-	"#FFFF80", 		# xanthin
+	"#FFFF80", 	# xanthin
 	"#FFE100",		# yellow
 	"#FF5000"		# zinnia
 )
@@ -167,7 +167,21 @@ POSITION_COLORS <- c(
   "Fullback" = "#9595d0"
 )
 
-
+# color associated to team types
+TEAMTYPE_COLORS <- c(
+  "Club/franchise team" = "#875692", 		# purple
+  "Combined team" = "#f38400", 		# orange
+  "Invitational team" = "#a1caf1", 		# lightblue
+  "Military/police team" = "#be0032", 		# red
+  "National senior team" = "#008856", 		# green
+  "National U18 team" = "#e68fac", 		# purplishpink
+  "National U19 team" = "#0067a5", 		# blue
+  "National U20 team" = "#604e97", 		# violet
+  "National U21 team" = "#b3446c", 		# purplishred
+  "National U23 team" = "#8db600", 		# yellowgreen
+  "National university team" = "#654522", 		# yellowishbrown
+  "Regional team" = "#e25822" 		# reddishorange
+)
 
 
 

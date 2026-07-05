@@ -1,5 +1,6 @@
 ########################################################################
-# Generates various plots regarding the data taken globally.
+# Generates various plots regarding the players table, without 
+# considering time.
 #
 # 07/2025 Vincent Labatut
 #
@@ -46,7 +47,7 @@ tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   hist(birth_year,
     main = NA,
-    xlab = "Year of birth",
+    xlab = "Player year of birth",
     col = "red"
   )
 dev.off()
@@ -65,7 +66,7 @@ tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   hist(death_year,
     main = NA,
-    xlab = "Year of death",
+    xlab = "Player year of death",
     col = "red"
   )
 dev.off()
