@@ -8,6 +8,9 @@
 # source("src/stats/global_teams.R")
 ########################################################################
 library("dplyr")
+library("corrplot")
+#library("pheatmap")
+library("viridis")
 
 
 

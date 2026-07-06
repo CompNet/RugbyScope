@@ -8,6 +8,9 @@
 # source("src/stats/global_players.R")
 ########################################################################
 library("dplyr")
+library("corrplot")
+#library("pheatmap")
+library("viridis")
 
 
 
@@ -144,7 +147,7 @@ pos_weights <- c()
 for (p in 1:nrow(players)) {
   if (p %% 1000 == 0)
     tlog(2, "Processing entry ", p, "/", nrow(players))
-  player_id <- players[, "wikidataId"]
+  player_id <- players[p, "wikidataId"]
 
   # get position lists
   pos <- players[p, "positions"]
@@ -349,6 +352,98 @@ for (plot_agg in 1:4) {
     )
   dev.off()
 }
+
+
+
+
+########################################################################
+# distribution of sources
+source_names <- c("enWP", "esWP", "frWP", "itWP", "jaWP", "WD")
+map <- c("wikipediaEn" = "enWP", "wikipediaEs" = "esWP", "wikipediaFr" = "frWP", "wikipediaIt" = "itWP", "wikipediaJa" = "jaWP", "wikidataId" = "WD")
+
+# retrieve sources
+data_sources <- c()
+data_sources_df <- matrix(0, nrow = nrow(players), ncol = length(source_names), dimnames = list(c(), source_names))
+for (p in 1:nrow(players)) {
+  if (p %% 1000 == 0)
+    tlog(2, "Processing entry ", p, "/", nrow(players))
+  player_id <- players[p, "wikidataId"]
+
+  player_data_sources <- c()
+  for (col in names(map)) {
+    if (!is.na(players[p, col])) {
+      player_data_sources <- c(player_data_sources, map[col])
+      data_sources_df[p, map[col]] <- 1
+    }
+  }
+
+  # add to stat list
+  data_sources <- c(data_sources, player_data_sources)
+}
+
+# count values
+countr_tt <- table(data_sources, useNA = "always")
+print(countr_tt)
+
+# focus on most frequent values
+countr_tt0 <- sort(table(data_sources, useNA = "no"), decreasing = TRUE)
+top_data_sources <- names(countr_tt0)
+
+# remove NAs
+countr_tt2 <- countr_tt[!is.na(names(countr_tt))]
+
+# set colors
+color_palette <- DATASOURCE_COLORS
+
+# generate barplot
+plot_file <- file.path(stats_folder, paste0("data-sources_barplot", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  barplot(
+    height = countr_tt2[top_data_sources],
+    names.arg = top_data_sources,
+    #xlab = "Player data sources",
+    legend = FALSE,
+    las = 2,
+    col = color_palette[top_data_sources]
+  )
+dev.off()
+
+# generate up-set diagram
+plot_file <- file.path(stats_folder, paste0("data-sources_up-set", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  upset(as.data.frame(data_sources_df), sets = source_names)
+dev.off()
+
+# generate chordal diagram
+overlap <- t(data_sources_df) %*% data_sources_df
+diag(overlap) <- 0
+#
+plot_file <- file.path(stats_folder, paste0("data-sources_chord-diag", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  chordDiagram(overlap, grid.col = color_palette[source_names])
+dev.off()
+
+# generate Jaccard similarity matrix
+jacc_sim <- matrix(0, nrow = length(source_names), ncol = length(source_names), dimnames = list(source_names, source_names))
+for (i in 1:length(source_names)) {
+  for (j in 1:length(source_names)) {
+    jacc_sim[i, j] <- sum(data_sources_df[, i] & data_sources_df[, j]) / sum(data_sources_df[, i] | data_sources_df[, j])
+  }
+}
+#
+plot_file <- file.path(stats_folder, paste0("data-sources_jaccard-matrix", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  corrplot(jacc_sim,
+    is.corr = FALSE, diag = FALSE,
+    method = "color",
+    addCoef.col = "white",
+    col = viridis(100), col.lim = c(0, 1), tl.col = "black"
+  )
+dev.off()
 
 
 
