@@ -25,10 +25,9 @@
   * [x] distribution of teams by country
   * [ ] use WP links to plot data sources (static and dynamic)
 * Stint stats
-  * [ ] distribution of stints by source and country (both players and teams)
+  * [x] distribution of stints by source and country (both players and teams)
   * [x] distribution of stints by source
     * [x] find a way to show how redundant they are
-  * [ ] compare evolution of number of player/team/stint *by data source*
 
 # DATA AUGMENTATION FOR NET EXTRACTION
 For net extraction, we need all the dates to be filled, and we can allow more approximation when estimating them.
