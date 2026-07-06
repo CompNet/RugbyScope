@@ -20,12 +20,15 @@
   * [x] evolution of the number of stints based on start date and country
   * [x] evolution of the height / weight over time
   * [ ] for larger position granularities, we could replace "Prop" by both types of prop, and so on
+  * [ ] use WP links to plot data sources (static and dynamic)
 * Team stats
   * [x] distribution of teams by country
+  * [ ] use WP links to plot data sources (static and dynamic)
 * Stint stats
-  * [ ] distribution of stints by source
-    * [ ] find a way to show how redundant they are
-    * [ ] compare evolution of number of player/team/stint *by data source*
+  * [ ] distribution of stints by source and country (both players and teams)
+  * [x] distribution of stints by source
+    * [x] find a way to show how redundant they are
+  * [ ] compare evolution of number of player/team/stint *by data source*
 
 # DATA AUGMENTATION FOR NET EXTRACTION
 For net extraction, we need all the dates to be filled, and we can allow more approximation when estimating them.

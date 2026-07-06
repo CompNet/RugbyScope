@@ -131,7 +131,6 @@ data_sources_df <- matrix(0, nrow = nrow(stints), ncol = length(source_names), d
 for (t in 1:nrow(stints)) {
   if (t %% 1000 == 0)
     tlog(2, "Processing stint ", t, "/", nrow(stints))
-  stint_id <- stints[t, "rugbyscopeId"]
 
   # get data source list
   lst <- strsplit(stints[t, "dataSources"], split = ";")
