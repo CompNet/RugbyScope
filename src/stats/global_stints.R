@@ -10,6 +10,11 @@
 library("dplyr")
 library("UpSetR")
 library("circlize")
+library("corrplot")
+#library("pheatmap")
+library("viridis")
+
+
 
 
 source("src/common/logging.R")
@@ -153,7 +158,7 @@ countr_tt2 <- countr_tt[!is.na(names(countr_tt))]
 color_palette <- DATASOURCE_COLORS
 
 # generate barplot
-plot_file <- file.path(stats_folder, paste0("data-sources", ".pdf"))
+plot_file <- file.path(stats_folder, paste0("data-sources_barplot", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   barplot(
@@ -166,42 +171,71 @@ pdf(plot_file, width = 7, height = 7)
   )
 dev.off()
 
-upset(as.data.frame(data_sources_df), sets = source_names)
+# generate up-set diagram
+plot_file <- file.path(stats_folder, paste0("data-sources_up-set", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  upset(as.data.frame(data_sources_df), sets = source_names)
+dev.off()
 
+# generate chordal diagram
 overlap <- t(data_sources_df) %*% data_sources_df
-chordDiagram(overlap, grid.col = color_palette[source_names])
+diag(overlap) <- 0
+#
+plot_file <- file.path(stats_folder, paste0("data-sources_chord-diag", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  chordDiagram(overlap, grid.col = color_palette[source_names])
+dev.off()
 
-# team country
-# player country
-
+# generate Jaccard similarity matrix
+jacc_sim <- matrix(0, nrow = length(source_names), ncol = length(source_names), dimnames = list(source_names, source_names))
+for (i in 1:length(source_names)) {
+  for (j in 1:length(source_names)) {
+    jacc_sim[i, j] <- sum(data_sources_df[, i] & data_sources_df[, j]) / sum(data_sources_df[, i] | data_sources_df[, j])
+  }
+}
+#
+plot_file <- file.path(stats_folder, paste0("data-sources_jaccard-matrix", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  corrplot(jacc_sim,
+    is.corr = FALSE, diag = FALSE,
+    method = "color",
+    addCoef.col = "white",
+    col = viridis(100), col.lim = c(0, 1), tl.col = "black"
+  )
+dev.off()
 
 
 
 
 ########################################################################
-# distribution of countries
+# distribution of team countries
 plot_top <- 12
 
-# get country info
-countries <- c()
+# get team country info
+team_countries <- c()
 for (t in 1:nrow(stints)) {
   if (t %% 1000 == 0)
     tlog(2, "Processing stint ", t, "/", nrow(stints))
-  stint_id <- stints[t, "rugbyscopeId"]
+
+  team_id <- stints[t, "teamRsId"]
+  idx <- which(teams[, "rugbyscopeId"] == team_id)
 
   # get country list
-  stint_countries <- trimws(strsplit(stints[t, "countries"], split = ";")[[1]])
+  stint_countries <- trimws(strsplit(teams[idx, "countries"], split = ";")[[1]])
 
   # add to stat list
-  countries <- c(countries, stint_countries)
+  team_countries <- c(team_countries, stint_countries)
 }
 
 # count values
-countr_tt <- table(countries, useNA = "always")
+countr_tt <- table(team_countries, useNA = "always")
 print(countr_tt)
 
 # focus on most frequent values
-countr_tt0 <- sort(table(countries, useNA = "no"), decreasing = TRUE)
+countr_tt0 <- sort(table(team_countries, useNA = "no"), decreasing = TRUE)
 top_countries <- names(countr_tt0)[1:plot_top]
 
 # remove NAs
@@ -215,13 +249,13 @@ top_countries <- c(top_countries, "Others")
 color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
 
 # generate barplot
-plot_file <- file.path(stats_folder, paste0("countries", ".pdf"))
+plot_file <- file.path(stats_folder, paste0("team-countries", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   barplot(
     height = countr_tt2[top_countries],
     names.arg = top_countries,
-    #xlab = "Stint countries",
+    #xlab = "Stint team countries",
     legend = FALSE,
     las = 2,
     col = color_palette[top_countries]
@@ -232,46 +266,60 @@ dev.off()
 
 
 ########################################################################
-# distribution of types
-plot_top <- 9
+# distribution of player countries
+plot_top <- 12
 
-# retrieve types
-types <- stints[, "type"]
+# get player country info
+player_countries <- c()
+for (t in 1:nrow(stints)) {
+  if (t %% 1000 == 0)
+    tlog(2, "Processing stint ", t, "/", nrow(stints))
 
-# count values
-types_tt <- table(types, useNA = "always")
-print(types_tt)
+  player_id <- stints[t, "playerId"]
+  idx <- which(players[, "wikidataId"] == player_id)
 
-# focus on most frequent values
-types_tt0 <- sort(table(types, useNA = "no"), decreasing = TRUE)
-top_types <- names(types_tt0)[1:plot_top]
+  # get country list
+  sport_countries <- players[idx, "sportCountries"]
+  if (!is.na(sport_countries))
+    stint_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
+  else {
+    citizenships <- players[idx, "citizenships"]
+    stint_countries <- trimws(strsplit(citizenships, split = ";")[[1]])
+  }
 
-# remove NAs
-types_tt2 <- types_tt[!is.na(names(types_tt))]
-
-# set colors
-color_palette <- TEAMTYPE_COLORS
-
-# add a new value for category others
-if (length(unique(types)) > plot_top) {
-  types_tt2 <- c(types_tt2, "Others" = sum(types_tt2[!(names(types_tt2) %in% top_types)], na.rm = TRUE))
-  top_types <- c(top_types, "Others")
-
-  # set colors
-  color_palette <- c(color_palette, "Others" = "#919191")
+  # add to stat list
+  player_countries <- c(player_countries, stint_countries)
 }
 
+# count values
+countr_tt <- table(player_countries, useNA = "always")
+print(countr_tt)
+
+# focus on most frequent values
+countr_tt0 <- sort(table(player_countries, useNA = "no"), decreasing = TRUE)
+top_countries <- names(countr_tt0)[1:plot_top]
+
+# remove NAs
+countr_tt2 <- countr_tt[!is.na(names(countr_tt))]
+
+# add a new value for category others
+countr_tt2 <- c(countr_tt2, "Others" = sum(countr_tt2[!(names(countr_tt2) %in% top_countries)], na.rm = TRUE))
+top_countries <- c(top_countries, "Others")
+
+# set colors
+color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
+
 # generate barplot
-plot_file <- file.path(stats_folder, paste0("types", ".pdf"))
+plot_file <- file.path(stats_folder, paste0("player-countries", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   barplot(
-    height = types_tt2[top_types],
-    names.arg = top_types,
-    #xlab = "Stint types",
+    height = countr_tt2[top_countries],
+    names.arg = top_countries,
+    #xlab = "Stint player countries",
     legend = FALSE,
-    las = 2, log = "y",
-    col = color_palette[top_types]
+    las = 2,
+    col = color_palette[top_countries]
   )
 dev.off()
 
