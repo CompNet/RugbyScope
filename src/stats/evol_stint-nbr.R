@@ -150,15 +150,15 @@ for (i in 1:length(ref_stints)) {
   # get player country list
   sport_countries <- players[p, "sportCountries"]
   if (!is.na(sport_countries))
-    player_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
+    tmp_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
   else {
     citizenships <- players[p, "citizenships"]
-    player_countries <- trimws(strsplit(citizenships, split = ";")[[1]])
+    tmp_countries <- trimws(strsplit(citizenships, split = ";")[[1]])
   }
 
   # add to lists
-  player_countries <- c(player_countries, player_countries)
-  player_country_years <- c(player_country_years, rep(ref_years[i], length(player_countries)))
+  player_countries <- c(player_countries, tmp_countries)
+  player_country_years <- c(player_country_years, rep(ref_years[i], length(tmp_countries)))
 }
 countr_tt <- table(player_countries, player_country_years, useNA = "always")
 print(countr_tt)

@@ -186,6 +186,7 @@ TEAMTYPE_COLORS <- c(
 
 # colors to represent the different data sources in the plots
 DATASOURCE_COLORS <- c(
+  "DBPD" = "#10943c",
   "esWP" = "#eaca39",
   "enWP" = "#c01818",
   "frWP" = "#3b3baa",

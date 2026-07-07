@@ -8,6 +8,8 @@
 # source("src/stats/global_players.R")
 ########################################################################
 library("dplyr")
+library("UpSetR")
+library("circlize")
 library("corrplot")
 #library("pheatmap")
 library("viridis")
@@ -358,8 +360,8 @@ for (plot_agg in 1:4) {
 
 ########################################################################
 # distribution of sources
-source_names <- c("enWP", "esWP", "frWP", "itWP", "jaWP", "WD")
-map <- c("wikipediaEn" = "enWP", "wikipediaEs" = "esWP", "wikipediaFr" = "frWP", "wikipediaIt" = "itWP", "wikipediaJa" = "jaWP", "wikidataId" = "WD")
+source_names <- c("DBPD", "enWP", "esWP", "frWP", "itWP", "jaWP", "WD")
+map <- c("dbpediaId" = "DBPD", "wikipediaEn" = "enWP", "wikipediaEs" = "esWP", "wikipediaFr" = "frWP", "wikipediaIt" = "itWP", "wikipediaJa" = "jaWP", "wikidataId" = "WD")
 
 # retrieve sources
 data_sources <- c()

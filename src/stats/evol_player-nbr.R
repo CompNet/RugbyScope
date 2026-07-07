@@ -18,18 +18,19 @@ source("src/common/colors.R")
 
 
 ########################################################################
-# start logging
-start.rec.log("EvolPlayerNbr")
-
-
-
-
-########################################################################
 # parameters
 
 mode <- "active-years"  # "start-year" or "active-years"
 mode_labels <- c("start-year" = "career start year", "active-years" = "active year")
 mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
+
+
+
+
+########################################################################
+# start logging
+start.rec.log(paste0("EvolPlayerNbr-", mode))
+tlog("mode: ", mode)
 
 
 
@@ -310,6 +311,92 @@ for (plot_log in c(FALSE, TRUE)) {
         )
       dev.off()
     }
+  }
+}
+
+
+
+
+########################################################################
+# number of players by year by source
+source_names <- c("DBPD", "enWP", "esWP", "frWP", "itWP", "jaWP", "WD")
+map <- c("dbpediaId" = "DBPD", "wikipediaEn" = "enWP", "wikipediaEs" = "esWP", "wikipediaFr" = "frWP", "wikipediaIt" = "itWP", "wikipediaJa" = "jaWP", "wikidataId" = "WD")
+
+# note: some players are described by multiple sources, so the same player can be counted several times
+
+# get source info
+sources <- c()
+source_years <-c()
+for (i in 1:length(ref_players)) {
+  if (i %% 1000 == 0)
+    tlog(2, "Processing entry ", i, "/", length(ref_players))
+  player_id <- ref_players[i]
+  p <- which(players[, "wikidataId"] == player_id)
+
+  player_data_sources <- c()
+  for (col in names(map)) {
+    if (!is.na(players[p, col])) {
+      player_data_sources <- c(player_data_sources, map[col])
+    }
+  }
+
+  # add sources to stat list
+  sources <- c(sources, player_data_sources)
+  source_years <- c(source_years, rep(ref_years[i], length(player_data_sources)))
+}
+pos_tt <- table(sources, source_years, useNA = "always")
+print(pos_tt)
+
+
+
+# produce plot files
+for (plot_log in c(FALSE, TRUE)) {
+  for (plot_smoothed in c(FALSE, TRUE)) {
+    plot_file <- file.path(stats_folder, paste0("data-sources_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
+    tlog("Producing plot file: ", plot_file)
+
+    # overal values
+    pos_tt0 <- sort(table(sources, useNA = "no"), decreasing = TRUE)
+    top_sources <- names(pos_tt0)
+
+    # set colors
+    color_palette <- DATASOURCE_COLORS
+
+    # compute freq table
+    pos_tt <- table(sources, source_years, useNA = "always")
+    pos_tt <- pos_tt[, !is.na(colnames(pos_tt))]
+
+    # replace zeros by NA to avoid log(0) in the plot
+    if (plot_log)
+      pos_tt[pos_tt == 0] <- NA
+
+    pdf(plot_file, width = 14, height = 7)
+      plot(NULL,
+        xlab = mode_xlabels[mode], ylab = "Number of players",
+        log = if (plot_log) "y" else "",
+        main = paste0("Number of players as a function of ", mode_labels[mode]),
+        xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
+        ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
+      )
+      for (source in top_sources) {
+        x <- as.integer(colnames(pos_tt))
+        y <- as.integer(pos_tt[source, ])
+        if (plot_smoothed)
+            fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
+        lines(
+          x = x,
+          y = if (plot_smoothed) predict(fit) else y,
+          col = color_palette[source],
+          lwd = 2
+        )
+      }
+      legend(
+        "topleft",
+        legend = top_sources,
+        # cex = 0.8,
+        fill = color_palette[top_sources]
+      )
+    dev.off()
   }
 }
 

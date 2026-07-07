@@ -16,18 +16,20 @@ source("src/common/norm_positions.R")
 
 
 ########################################################################
-# start logging
-start.rec.log("EvolPlayerSize")
+# parameters
+
+mode <- "active-years"  # "start-year" or "active-years"
+mode_labels <- c("start-year" = "career start year", "active-years" = "active years")
+mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
 
 
 
 ########################################################################
-# parameters
+# start logging
+start.rec.log(paste0("EvolPlayerSize", mode))
+tlog("mode: ", mode)
 
-mode <- "start-year"  # "start-year" or "active-years"
-mode_labels <- c("start-year" = "career start year", "active-years" = "active years")
-mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
 
 

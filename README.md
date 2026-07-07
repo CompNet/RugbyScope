@@ -1,14 +1,14 @@
 # RugbyScope
 Extraction and analysis of Rugby Union transfer networks
 
-* Copyright 2024-2025 Vincent Labatut & David O'Sullivan
+* Copyright 2024-2026 Vincent Labatut & David O'Sullivan
 
 RugbyScope is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation. For source availability and license information see `licence.txt`
 
 * Lab site: http://lia.univ-avignon.fr/ -- https://www.ul.ie/macsi
 * GitHub repo: https://github.com/CompNet/RugbyScope
 * Data: TODO
-* Contact: Vincent Labatut <vincent.labatut@univ-avignon.fr>, David O'Sullivan <david.osullivan@ul.ie >
+* Contact: Vincent Labatut <vincent.labatut@univ-avignon.fr>, David O'Sullivan <david.osullivan@ul.ie>
 
 -----------------------------------------------------------------------
 
