@@ -26,11 +26,11 @@
   * [ ] write an algo to split appropriately loans and such, and list the cases that could not be split properly, then fix them
 * Complement data:
   * [ ] Senior focus:
-    * [ ] Remove stints and parts of stints before 18 yo (without changing stats), using birthdate (this should be a separate DB)
+    * [ ] Remove stints and parts of stints before 18 yo (without changing stats), using birthdate (this should be a distinct version of the DB)
     * [ ] Handle cases where there are stints without dates and the first dated stints starts >18yo (could remove the updated stints)
   * [ ] Longer term:
-    * [ ] Cross-ref with other data sources, to complement missing dates (esp. NA-NA in career start), ex. https://www.allrugby.com/
-    * [ ] Leverage LLM to retrive missing information from WP articles' body, and other textual sources
+    * [ ] Cross-ref with other data sources, to complement missing dates (esp. NA-NA in career start), see list below (all.rugby and so on)
+    * [ ] Leverage an LLM to retrive missing information from WP articles' body, and other textual sources
 
 # STATS & PLOTS
 * Player stats
@@ -41,16 +41,16 @@
   * [x] Evolution of the height / weight over time
   * [ ] For larger position granularities, we could disaggregate: replace "Prop" by both types of prop, and so on
   * [x] Use WP links to plot data sources (static and dynamic)
-  * [ ] Cross-ref sources and countries: is there a match?
+  * [x] Cross-ref sources and countries: is there a match?
 * Team stats
   * [x] Distribution of teams by country
   * [x] Use WP links to plot data sources (static and dynamic)
-  * [ ] Cross-ref sources and countries: is there a match?
+  * [x] Cross-ref sources and countries: is there a match?
 * Stint stats
   * [x] Distribution of stints by source and country (both players and teams)
   * [x] Distribution of stints by source
     * [x] Find a way to show how redundant they are
-  * [ ] Cross-ref sources and countries: is there a match?
+  * [x] Cross-ref sources and countries: is there a match?
 * [ ] Add WW1 & WW2 to the evolution plots
   * [ ] Japanes worldcup date? (to explain increase in jaWP?)
 

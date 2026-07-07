@@ -208,15 +208,15 @@ for (t in 1:nrow(teams)) {
 }
 
 # count values
-countr_tt <- table(data_sources, useNA = "always")
-print(countr_tt)
+sources_tt <- table(data_sources, useNA = "always")
+print(sources_tt)
 
 # focus on most frequent values
-countr_tt0 <- sort(table(data_sources, useNA = "no"), decreasing = TRUE)
-top_data_sources <- names(countr_tt0)
+sources_tt0 <- sort(table(data_sources, useNA = "no"), decreasing = TRUE)
+top_data_sources <- names(sources_tt0)
 
 # remove NAs
-countr_tt2 <- countr_tt[!is.na(names(countr_tt))]
+sources_tt2 <- sources_tt[!is.na(names(sources_tt))]
 
 # set colors
 color_palette <- DATASOURCE_COLORS
@@ -226,7 +226,7 @@ plot_file <- file.path(stats_folder, paste0("data-sources_barplot", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   barplot(
-    height = countr_tt2[top_data_sources],
+    height = sources_tt2[top_data_sources],
     names.arg = top_data_sources,
     #xlab = "Team data sources",
     legend = FALSE,
@@ -270,6 +270,67 @@ pdf(plot_file, width = 7, height = 7)
     col = viridis(100), col.lim = c(0, 1), tl.col = "black"
   )
 dev.off()
+
+
+
+
+########################################################################
+# distribution of sources vs. countries
+
+# retrieve sources
+cr_data_sources <- c()
+cr_countries <- c()
+for (t in 1:nrow(teams)) {
+  if (t %% 1000 == 0)
+    tlog(2, "Processing entry ", t, "/", nrow(teams))
+  team_id <- teams[t, "rugbyscopeId"]
+
+  # get countries
+  team_countries <- trimws(strsplit(teams[t, "countries"], split = ";")[[1]])
+
+  # get data sources
+  team_data_sources <- c()
+  for (col in names(map)) {
+    if (!is.na(teams[t, col])) {
+      team_data_sources <- c(team_data_sources, map[col])
+    }
+  }
+
+  # add to stat lists
+  cr_countries <- c(cr_countries, rep(team_countries, each = length(team_data_sources)))
+  cr_data_sources <- c(cr_data_sources, rep(team_data_sources, length(team_countries)))
+}
+
+# count values
+cr_tt <- table(cr_data_sources, cr_countries, useNA = "always")
+print(cr_tt)
+
+# replace minority countries
+idx <- which(is.na(colnames(cr_tt)) | !(colnames(cr_tt) %in% top_countries))
+cr_tt2 <- cbind(cr_tt, "Others" = rowSums(cr_tt[, idx], na.rm = TRUE))
+
+# remove NAs
+cr_tt2 <- cr_tt2[!is.na(rownames(cr_tt2)), ]
+
+# generate contingency table
+for (i in 1:2) {
+  if (i ==  2) {
+    for (top_country in top_countries)
+      cr_tt2[, top_country] <- 100 * cr_tt2[, top_country] / countr_tt2[top_country]
+  }
+  plot_file <- file.path(stats_folder, paste0("data-sources_vs_countries_contingency", if (i == 1) "-nbr" else "-prop", ".pdf"))
+  tlog("Producing plot file: ", plot_file)
+  pdf(plot_file, width = 7, height = 7)
+    corrplot(cr_tt2[, top_countries],
+      is.corr = FALSE, #diag = FALSE,
+      method = "color",
+      number.digits = 0,
+      addCoef.col = "white",
+      col = viridis(100), #col.lim = c(0, 1), 
+      tl.col = "black"
+    )
+  dev.off()
+}
 
 
 
