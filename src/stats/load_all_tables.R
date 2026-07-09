@@ -17,7 +17,7 @@ tlog("Loading data tables")
 
 data_folder <- file.path("data", "fusion")
 
-players <- read.csv(file.path(data_folder, "players_12.csv"))
+players <- read.csv(file.path(data_folder, "players_13.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
 teams <- read.csv(file.path(data_folder, "teams_09.csv"))

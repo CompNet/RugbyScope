@@ -336,5 +336,53 @@ for (i in 1:2) {
 
 
 ########################################################################
+# completeness stats
+field_groups <- list(
+  "perso-fields" = c("type", "inceptionDate", "terminationDate", "countries"),
+  "rugby-fields" = c("affiliations", "competitions", "tier", "homeVenueNames", "homeVenueCapacities", "locations"),
+  "id-fields" = c("wikidataId", "allRugbyId", "googleKnowlId", "dbpediaId"),
+  "wp-fields" = c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")
+)
+
+pal <- viridis(100)
+for (g in 1:(length(field_groups) + 1)) {
+  if (g > length(field_groups)) {
+    fields <- unlist(field_groups)
+    group_name <- "all-fields"
+  } else {
+    fields <- field_groups[[g]]
+    group_name <- names(field_groups)[g]
+  }
+  vals <- sapply(fields, function(field) length(which(!is.na(teams[, field])))) * 100 / nrow(teams)
+
+  colors <- pal[pmax(1, pmin(100, round(vals)))]
+
+  # generate barplot
+  plot_file <- file.path(stats_folder, paste0("completeness_", group_name, ".pdf"))
+  tlog("Producing plot file: ", plot_file)
+  pdf(plot_file, width = 7, height = 7)
+    bp <- barplot(
+      height = vals,
+      names.arg = fields,
+      #xlab = "Team fields",
+      legend = FALSE,
+      las = 2,
+      col = colors,
+    )
+    text(
+      x = if (g > length(field_groups)) bp + 0.20 else bp,
+      y = vals - 0.1 * max(vals),
+      labels = paste0(round(vals), "%", sep = ""),
+      pos = 3, col = sapply(vals, function(val) if (val < 75) "white" else "black"),
+      cex = if (g > length(field_groups)) 0.75 else 1.5, font = 2,
+      srt = if (g > length(field_groups)) 90 else 0
+    )
+  dev.off()
+}
+
+
+
+
+########################################################################
 # stop logging
 end.rec.log()

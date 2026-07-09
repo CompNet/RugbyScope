@@ -448,5 +448,38 @@ for (i in 1:2) {
 
 
 ########################################################################
+# completeness stats
+fields <- c("type", "startYear", "endYear", "matchesPlayed", "pointsScored", "dataSources")
+
+pal <- viridis(100)
+vals <- sapply(fields, function(field) length(which(!is.na(stints[, field])))) * 100 / nrow(stints)
+
+colors <- pal[pmax(1, pmin(100, round(vals)))]
+
+# generate barplot
+plot_file <- file.path(stats_folder, paste0("completeness_all-fields.pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  bp <- barplot(
+    height = vals,
+    names.arg = fields,
+    #xlab = "Team fields",
+    legend = FALSE,
+    las = 2,
+    col = colors,
+  )
+  text(
+    x = bp,
+    y = vals - 0.1 * max(vals),
+    labels = paste0(round(vals), "%", sep = ""),
+    pos = 3, col = sapply(vals, function(val) if (val < 75) "white" else "black"),
+    cex = 1.5, font = 2
+  )
+dev.off()
+
+
+
+
+########################################################################
 # stop logging
 end.rec.log()
