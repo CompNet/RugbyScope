@@ -29,6 +29,8 @@
   * [ ] Senior focus:
     * [ ] Remove stints and parts of stints before 18 yo (without changing stats), using birthdate (this should be a distinct version of the DB)
     * [ ] Handle cases where there are stints without dates and the first dated stints starts >18yo (could remove the updated stints)
+  * [ ] Teams
+    * [ ] Retrieve WP data
   * [ ] Longer term:
     * [ ] Cross-ref with other data sources, to complement missing dates (esp. NA-NA in career start), see list below (all.rugby and so on)
     * [ ] Leverage an LLM to retrive missing information from WP articles' body, and other textual sources
