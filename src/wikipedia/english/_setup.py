@@ -64,9 +64,121 @@ def remove_duplicate_lines(text):
     unique_lines = list(dict.fromkeys(lines))  # Remove duplicates while maintaining order
     return "\n".join(unique_lines)
 
+def download_player_html_profiles(index_csv_path, profile_links_base_path, output_base_path="./html_player_profiles"):
+
+    def create_dir(path):
+        os.makedirs(path, exist_ok=True)
+
+    def sanitize_filename(name):
+        return name.replace('/', '_').replace('"', '').replace(' ', '_')
+
+    def save_html(url, path):
+        headers = {"User-Agent": "Mozilla/5.0"}
+        try:
+            r = requests.get(url, headers=headers)
+            if r.status_code == 200:
+                with open(path, "w", encoding="utf-8") as f:
+                    f.write(r.text)
+                return True
+        except Exception as e:
+            print(f"Error fetching {url}: {e}")
+        return False
+
+    # Load the CSV containing nations
+    players_df = pd.read_csv(index_csv_path)
+
+    for _, row in players_df.iterrows():
+        nation = row["nation"]
+        print(f"Processing: {nation}")
+
+        html_dir = os.path.join(output_base_path, nation)
+        create_dir(html_dir)
+
+        profile_csv = os.path.join(profile_links_base_path, f"profile_links_{nation}.csv")
+        if True: 
+            print(profile_csv)
+            
+        if not os.path.exists(profile_csv):
+            print(f"Missing profile CSV for {nation}")
+            continue
+
+        df = pd.read_csv(profile_csv)
+
+        for i, player in df.iterrows():
+            url, name = player["url"], player["name"]
+            if pd.isna(url): continue
+
+            safe_name = sanitize_filename(name)
+            html_path = os.path.join(html_dir, f"{i}_{safe_name}.html")
+
+            if save_html(url, html_path):
+                print(f"[{i+1}/{len(df)}] Saved HTML for {name}")
+            else:
+                print(f"[{i+1}/{len(df)}] Failed to save HTML for {name}")
+
+
+
+def get_info_box_standard(file_path):
+        
+    with open(file_path, "r", encoding="utf-8") as file:
+        html_content = file.read()
+
+    soup = BeautifulSoup(html_content, 'html.parser')
+    tables = soup.find_all('table', class_='infobox')
+    # st = ""
+    if tables:
+        infobox_table = tables[0]
+        # Extract all text while preserving the table structure
+        # table_text = infobox_table.get_text(separator="\n", strip=True)
+        # st = table_text + ""
+        st = get_infobox_tables(infobox_table)
+
+        # function to santatise text early: 
+        st = remove_text_issues(st)
+
+        # Output the unstructured text
+        rugbybio_json = parse_rugby_player_info(st)
+        rugbybio_json = add_team_url(rugbybio_json, infobox_table)
+        rugbybio_json = add_player_extra_info(rugbybio_json, infobox_table)
+    else:
+        # print("No 'infobox' tables found.")
+        rugbybio_json = "fail"
+    return rugbybio_json
+
+
+def remove_text_issues(text):
+    """
+    Cleans extracted infobox text by:
+    1. Removing footnotes like [1], [23], etc.
+    2. Removing specific unwanted substrings.
+    3. Tidying extra whitespace.
+    """
+    text = re.sub(r'\[[^\]]*\]', '', text)
+    unwanted_patterns = [
+        "(amateur)",
+        "(d/r)",
+        "(loan)",
+        "(medical joker)",
+        "(on loan)",
+        "(permit)",
+        "(trial)",
+        "→",
+        "->", 
+        "â†’"
+    ]
+    for pattern in unwanted_patterns:
+        text = text.replace(pattern, '')
+    # text = re.sub(r'\s+', ' ', text)      # collapse multiple spaces
+    # text = re.sub(r'\n\s+', '\n', text)   # clean leading spaces on lines
+    return text.strip()
 
 def scrap_rugby_wiki_standard(url, name):
-    response = requests.get(url)
+    
+    headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Safari/537.36"
+    }
+
+    response = requests.get(url, headers = headers)
     soup = BeautifulSoup(response.text, 'html.parser')
     tables = soup.find_all('table', class_='infobox')
     # st = ""
@@ -76,6 +188,7 @@ def scrap_rugby_wiki_standard(url, name):
         # table_text = infobox_table.get_text(separator="\n", strip=True)
         # st = table_text + ""
         st = get_infobox_tables(infobox_table)
+        st = remove_text_issues(st)
         # Output the unstructured text
         rugbybio_json = parse_rugby_player_info(st)
         rugbybio_json = add_team_url(rugbybio_json, infobox_table)
@@ -157,6 +270,11 @@ def add_team_url(json_data, infobox_table, car_stages=["amateur", "senior_club",
     return json_data
 
 
+def add_player_extra_info(json_data, html,):
+    json_data["player_html"] = str(html)
+    # json_data["wiki_url"] = str(url)
+    return json_data
+
 
 def parse_rugby_player_info(data):
     """
@@ -170,7 +288,12 @@ def parse_rugby_player_info(data):
             "full": "",
             "date": ""
         },
+        "date_of_death": {
+            "full": "", 
+            "date": ""
+        },
         "place_of_birth": "",
+        "place_of_death": "",
         "height": {
             "meters": 0.0
         },
@@ -189,6 +312,20 @@ def parse_rugby_player_info(data):
         }
     }
     
+    SENIOR_HEADERS = {
+        "senior career",
+        "senior club career",
+        "club career",
+        "professional career",
+        "provincial career",
+        "provincial / state sides",
+        "provincial sides",
+        "state career",
+        "state side",
+        "super rugby",
+        "super rugby career"
+    }
+
     data = (data.replace('\u00A0', ' ')
                   .replace("—", "-")
                   .replace("–", "-")
@@ -208,7 +345,7 @@ def parse_rugby_player_info(data):
             continue
 
         # Extract full name
-        if "Full name" in line:
+        if "full name" in line:
             output["name"] = line.split("|")[1].strip()
 
         # Extract date of birth
@@ -223,20 +360,70 @@ def parse_rugby_player_info(data):
         if "place of birth" in line:
             output["place_of_birth"] = line.split("|")[1].strip()
 
+
+        if "born" in line:
+            born_text = line.split("|")[1].strip()
+            # Try to extract name (before first bracket with date)
+            name_match = re.match(r"^([^\(]+)\(", born_text)
+            if name_match:
+                output["name"] = name_match.group(1).strip()
+            # Try to extract ISO date of birth
+            dob_match = re.search(r"\((\d{4}-\d{2}-\d{2})\)", born_text)
+            if dob_match:
+                dob_iso = datetime.datetime.strptime(dob_match.group(1), "%Y-%m-%d").date().isoformat()
+                output["date_of_birth"]["date"] = dob_iso
+            # Try to extract place of birth (after last closing bracket)
+            place_match = re.search(r"\)([^)]+)$", born_text)
+            if place_match:
+                output["place_of_birth"] = place_match.group(1).strip()
+            print("Had to use Born:")
+            if output["name"]:
+                print(f"--- Name: {output['name']}")
+            if output["date_of_birth"]["date"]:
+                print(f"--- Date of Birth (ISO): {output['date_of_birth']['date']}")
+            if output["place_of_birth"]:
+                print(f"--- Place of Birth: {output['place_of_birth']}")
+
+        # deal with death...
+        if "date of death" in line:
+            dod_info = line.split("|")[1].strip()
+            match = re.search(r'\(([\d-]+)\)', dod_info)
+            if match:
+                output["date_of_death"]["full"] = dod_info
+                output["date_of_death"]["date"] = match.group(1)
+
+        if "died" in line:
+            died_text = line.split("|")[1].strip()
+            # Try to extract ISO date of death
+            dod_match = re.search(r"\((\d{4}-\d{2}-\d{2})\)", died_text)
+            if dod_match:
+                dod_iso = datetime.datetime.strptime(dod_match.group(1), "%Y-%m-%d").date().isoformat()
+                output["date_of_death"]["date"] = dod_iso
+            # Try to extract place of death (after last closing bracket)
+            place_match = re.search(r"\)([^)]+)$", died_text)
+            if place_match:
+                output["place_of_death"] = place_match.group(1).strip()
+            print("Had to use Died:")
+            if output["date_of_death"]["date"]:
+                print(f"--- Date of Death (ISO): {output['date_of_death']['date']}")
+            if output["place_of_death"]:
+                print(f"--- Place of Death: {output['place_of_death']}")
+
+
         # Extract height
         if "height" in line:
             height_info = line.split("|")[1].strip()
-            match1 = re.search(r'([\d.]+) m', height_info)
-            match2 = re.search(r'([\d.]+) cm', height_info)
+            match1 = re.search(r'(\d+(?:[.,]\d+)?)\s*m', height_info)
+            match2 = re.search(r'(\d+(?:[.,]\d+)?)\s*cm', height_info)
             if match1:
-                output["height"]["meters"] = match1.group(0)
+                output["height"]["meters"] = match1.group(0).replace(',', '.')
             if match2:
-                output["height"]["meters"] = match2.group(0)
+                output["height"]["meters"] = match2.group(0).replace(',', '.')
 
         # Extract weight
         if "weight" in line:
             weight_info = line.split("|")[1].strip()
-            match = re.search(r'(\d+) kg', weight_info)
+            match = re.search(r'(\d+(?:\.\d+)?)\s*kg', weight_info, re.IGNORECASE)
             if match:
                 output["weight"]["kg"] = match.group(0)
 
@@ -245,17 +432,17 @@ def parse_rugby_player_info(data):
             output["education"]["school"] = line.split("|")[1].strip()
 
         # Extract positions
-        if "position(s)" in line:
+        if line.startswith("position") or "position(s)" in line:
             positions = line.split("|")[1].strip()
             output["position"] = [pos.strip() for pos in positions.split(',')]
 
         cl = False
         # Detect the start of a career section
-        if line.startswith("amateur team(s)"):
+        if line.startswith("amateur team"):
             current_section = "amateur"
             cl = True
             in_valid_section = True
-        elif line.startswith("senior career") or line.startswith("provincial / state sides"):
+        elif any(line.startswith(header) for header in SENIOR_HEADERS):
             current_section = "senior_club"
             cl = True
             in_valid_section = True
@@ -267,6 +454,17 @@ def parse_rugby_player_info(data):
             current_section = "national_sevens"
             cl = False
             in_valid_section = False
+        elif line.startswith("refereeing career"):
+            current_section = "refereeing_career"
+            cl = False
+            in_valid_section = False
+        elif line.startswith("coaching career"):
+            current_section = "coaching_career"
+            cl = False
+            in_valid_section = False
+        elif line.startswith("cricket career"):
+            cl = False
+            in_valid_section = False
         elif line.startswith("correct as"):
             in_valid_section = False  # Disable processing after correct as of
             
@@ -276,9 +474,11 @@ def parse_rugby_player_info(data):
             if len(parts) == 4:
                 years, team, apps, points = parts
                 if apps == "":
-                    apps = 0
+                    # apps = 0
+                    apps = ""
                 if points == "":
-                    points = 0
+                    # points = 0
+                    points = ""
                 else:
                     points = extract_number(points, full_clean= False)
                     # points = points.strip("()")
@@ -331,8 +531,73 @@ def combine_comma_separated_values(dates_list):
 
 
 def extract_number(input_text, full_clean = True):
+    def extract_s_code(s) -> int | None | str:
+        
+        if isinstance(s, int):
+            return s
+        
+        match_pts = re.search(r"pts:(\d+)", s)
+        match_try = re.search(r"tries:(\d+)", s)
+        match_conv = re.search(r"conv:(\d+)", s)
+        match_pen = re.search(r"pens:(\d+)", s)
+        match_drop = re.search(r"drop:(\d+)", s)
+
+        total = 0
+        matched = False   # tracks if *any* match happened
+        if match_pts:
+            total += int(match_pts.group(1)) * 1
+            matched = True
+        if match_try:
+            total += int(match_try.group(1)) * 5
+            matched = True
+        if match_conv:
+            total += int(match_conv.group(1)) * 2
+            matched = True
+        if match_pen:
+            total += int(match_pen.group(1)) * 3
+            matched = True
+        if match_drop:
+            total += int(match_drop.group(1)) * 3
+            matched = True
+        # If nothing matched, return original string
+        if not matched:
+            return s
+        return str(total)
+
+    def extract_pt_from_try(s): 
+
+        if isinstance(s, int):
+            return s        
+        
+        pattern = r"^\s*\(?\s*(\d+).*?\((\d+)(?:t|\\)\)"
+        match_1 = re.search(pattern, s)
+        if match_1:
+            return match_1.group(1)
+
+        match_2 = re.search(r"\(?\s*(\d+)\s+(\d+)t\)?", s)
+        if match_2:
+            return match_2.group(1)
+
+        match_3 = re.search(r"\(?\s*(\d+)\s+t\)?", s)
+        if match_3:
+            pts = int(match_3.group(1)) * 5
+            return str(pts) 
+
+        return s
+
+        
     if full_clean == True:
         # Remove text in square brackets
+        input_text = extract_s_code(input_text)
+        input_text = extract_pt_from_try(input_text)
+        
+
+        input_text = re.sub(r'\(two conversions\)', '4', input_text)
+        input_text = re.sub(r'\(8016t\)', '80', input_text)
+        input_text = re.sub(r'\(82t\)', '10', input_text)
+        input_text = re.sub(r'\(51t\)', '5', input_text)
+        input_text = re.sub(r'\(518t\)', '0', input_text)
+
         input_text = re.sub(r'1 \(not recognised as an official test cap\)', '', input_text)
         input_text = re.sub(r'\d+ \(0 tests\)', '', input_text)
         input_text = re.sub(r'\(41t\)', '41', input_text)
@@ -356,7 +621,7 @@ def extract_number(input_text, full_clean = True):
         input_text = re.sub(r'[Tt]ry', '', input_text)
         input_text = re.sub(r'[Tt]ests', '', input_text)
         input_text = re.sub(r'[Gg]ames', '', input_text)
-        input_text = re.sub(r't\)', '\)', input_text)
+        # input_text = re.sub(r't\)', '\)', input_text)
         input_text = re.sub(r't', '', input_text)
         
         input_text = re.sub(r'gls', '', input_text)
@@ -405,7 +670,13 @@ def extract_number(input_text, full_clean = True):
         input_text = re.sub(r'duikers', '0', input_text)
         input_text = re.sub(r'24a', '24', input_text)
         input_text = re.sub(r'\.', '0', input_text)
-    
+
+        input_text = re.sub(r'\(s06000\)', '30', input_text)
+        input_text = re.sub(r'\(s00000\)', '0', input_text)
+        input_text = re.sub(r'\(s04000\)', '0', input_text)
+        input_text = re.sub(r's00000', '0', input_text)
+        input_text = re.sub(r's04000', '0', input_text)
+
     # Match number in brackets first
     match_brackets = re.search(r"\((\d+)\)", input_text)
     if match_brackets:
@@ -461,10 +732,33 @@ def find_career_data_in_row(row):
 
 
 
-def scrape_wiki_alt(url):
-    response = requests.get(url)
-    soup = BeautifulSoup(response.text, 'html.parser')
-    tables = soup.find_all('table', class_='infobox')
+# def scrape_wiki_alt(url):
+
+#     headers = {
+#     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Safari/537.36"
+#     }
+
+#     response = requests.get(url, headers = headers)
+#     soup = BeautifulSoup(response.text, 'html.parser')
+#     tables = soup.find_all('table', class_='infobox')
+#     # st = ""
+#     if tables:
+#         infobox_table = tables[0]
+#         # Extract all text while preserving the table structure
+#         # table_text = infobox_table.get_text(separator="\n", strip=True)
+#         # st = table_text + ""
+        
+#         rows = infobox_table.find_all('tr')
+#         rugbybio_json = get_career_alt(rows)
+#         rugbybio_json = add_team_url(rugbybio_json, infobox_table)
+#     return rugbybio_json
+
+
+def reproces_info_table_alt(json_data):
+    html = json_data["player_html"]
+    html = remove_text_issues(html)
+    soup = BeautifulSoup(html, "html.parser")
+    tables = [soup]
     # st = ""
     if tables:
         infobox_table = tables[0]
@@ -526,11 +820,11 @@ def get_career_alt(rows):
         
         cl = False
         # Detect the start of a career section
-        if line.startswith("amateur team(s)"):
+        if line.startswith("amateur team"):
             current_section = "amateur"
             cl = True
             in_valid_section = True
-        elif line.startswith("senior career") or line.startswith("provincial / state sides"):
+        elif line.startswith("senior career") or line.startswith("provincial / state sides") or line.startswith("super rugby"):
             current_section = "senior_club"
             cl = True
             in_valid_section = True
@@ -542,9 +836,11 @@ def get_career_alt(rows):
             current_section = "national_sevens"
             cl = False
             in_valid_section = False
+        elif line.startswith("cricket career"):
+            in_valid_section = False
         elif line.startswith("correct as"):
             in_valid_section = False  # Disable processing after correct as of
-            
+        # 
         # Only process lines in valid sections
         if in_valid_section and not "(Points)" in row and not cl:
             car = find_career_data_in_row(row)
@@ -554,29 +850,89 @@ def get_career_alt(rows):
     # output = json.loads(output)
     return output
 
-
-
 def check_car(json_data, car_stages = ["amateur","senior_club","international"]):
+
+    PEOPLE_TO_CHECK = [
+    'harry william leonard' , # problem
+    'jackson wray' ,
+    'sean reidy' , 
+    'jason rutledge' , 
+    'guy mercer' , 
+    'yohann vivalda' , 
+    'jone tawake' , 
+    'nika neparidze' , 
+    'andrew william kelly' , 
+    'clément ancely' , 
+    'ioan nicholas' , # problem
+    'mike pletch' , 
+    'allan towell' , 
+    'henry twynam' , 
+    'facundo eduardo gattás clávell' , # problem
+    'david ralph waters' , # problem
+    'allan jeffrey martin' , # problem
+    'morgan mitchell' , 
+    'alan brinn' , 
+    'john william sutcliffe' , # problem
+    'pedlar wood' , 
+    'phillip stephen may' , # problem
+    'dylan evans' , # problem
+    'alan john george morley' , # problem
+    'jimmy gopperth' , 
+    'peter john ford' , 
+    'shaun gadsby' , 
+    'david joseph matthews',
+    "watisoni votu", # problem
+    "cameron treloar" # problem
+    ]
+
     for car_stage in car_stages:
         car = json_data.get("career").get(car_stage)
         if len(car) > 0:
             points = car[0].get("points")
             # if points == 0: points = "0"
             points = str(points)
+            
+            # lots of occurances
             points = points.replace(",","")
             points = points.replace("()","")
-                
+            points = points.replace("(","")
+            points = points.replace(")","")
+            points = points.replace("-","")
+            points = points.replace("pts:","")
+            points = re.sub(r'\[\d+\]', '', points)
+
+            # # specific cases
+            # points = points.replace("320 64t","320")
+            # points = points.replace("goals:0;tries:1;conv:0;pens:0;drop:0","2")
+            # points = points.replace("goals:0;tries:4;conv:0;pens:0;drop:0","8")
+            # points = points.replace("goals:0;tries:0;conv:0;pens:0;drop:0","0")
+            # points = points.replace("8;tries:2;conv:0;pens:0;drop:0","8")
+            # points = points.replace("0;tries:0;conv:0;pens:0;drop:0","0")
+            # points = points.replace("goals:0;tries:6;conv:0;pens:0;drop:0","12")
+            # points = points.replace("tries:6","12")
+
+    
             date = car[0]["years"]
             match = re.search(r'\d{6}|\d{8}', date)
             if points == "":
-                points = "0"
+                # points = "0"
+                points = ""
                 
-            if points.isdigit() and not match:
-                points = int(points)
-            else:
-                url = json_data.get("url")
-                json_data_us = scrape_wiki_alt(url)
+            # if not match:
+            #     points = int(points)
+            # else:
+            if match or json_data["name"] in PEOPLE_TO_CHECK: 
+                if json_data["name"] in PEOPLE_TO_CHECK:
+                    print("need to use name")
+                # url = json_data.get("url")
+                print("Need to use the alt scrape.")
+                # print(f"---- URL: {url}")
+                # json_data_us = scrape_wiki_alt(url)
+                json_data_us = reproces_info_table_alt(json_data)
                 json_data["career"][car_stage] = json_data_us["career"][car_stage]
+                json_data["req_alt_scrape"] = True
+            else: 
+                json_data["req_alt_scrape"] = False
     return json_data
 
 
@@ -591,7 +947,7 @@ def change_car_value_to_int(json_data,
                 for i in range(len(selected_car)):
                     selected_value = selected_car[i][value]
                     if isinstance(selected_value, str):
-                        selected_value = selected_value.replace(",","").strip().replace("+","")
+                        selected_value = selected_value.replace(",","").replace("+","")
                         selected_value = extract_number(selected_value) # recover the number of brackets are present
                     if selected_value in ["", "?", "(0)", "()","-", ")"]:
                         selected_value = 0
@@ -696,11 +1052,14 @@ def combine_json_files(input_files, output_file):
     output_file (str): Path to the output JSON file.
     """
     combined_data = []
-
+    k = 0
     for file in input_files:
         with open(file, 'r',encoding='utf-8') as f:
             data = json.load(f)
             combined_data.append(data)
+        k = k + 1
+        if (k % 100) == 0:
+            print(f"Finished {file}, which is {k} of {len(input_files)}.")
 
     with open(output_file, 'w') as f:
         json.dump(combined_data, f, indent=4)
@@ -1140,6 +1499,10 @@ def scrape_wiki_profiles_first(url_df, first_scrape_out_dir):
             url = df["url"].loc[i]
             name = df["name"].loc[i]
             # name = "none"
+
+            if pd.isna(url):
+                print(f"Skipped one as it has no url.")
+                continue
 
             # Apply the scrapp function and store the result
             result = scrap_rugby_wiki_standard(url, name)

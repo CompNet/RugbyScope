@@ -13,7 +13,6 @@ import sys
 sys.path.append("./src/wikipedia/english/")
 from _setup import *  # noqa: F403
 
-
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
@@ -26,100 +25,102 @@ import re
 # setup the file to read in and directories
 # =============================================================================
 
-# # set these up for the team you wanta
+# # set these up for the team you want
 # nation = "Ireland"
 
-players_url_df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
+players_url_df = pd.read_csv("./data/wikipedia/Wikidata_players.csv")
 
-def get_all_htmls(): 
-    def save_html(url, path):
-        headers = {"User-Agent": "Mozilla/5.0"}
-        try:
-            r = requests.get(url, headers=headers)
-            if r.status_code == 200:
-                with open(path, "w", encoding="utf-8") as f:
-                    f.write(r.text)
-                    print(f"---- {url} retrived and saved.")
-            else: 
-                print("xxxx {url} could not retrive")
-        except Exception as e:
-            print(f"Error fetching {url}: {e}")
-        return False
+# def get_all_htmls(): 
 
-    players_url_df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
-    total_nations = players_url_df.shape[0]
+#     def save_html(url, path):
+#         headers = {"User-Agent": "Mozilla/5.0"}
+#         try:
+#             r = requests.get(url, headers=headers)
+#             if r.status_code == 200:
+#                 with open(path, "w", encoding="utf-8") as f:
+#                     f.write(r.text)
+#                     print(f"---- {url} retrived and saved.")
+#             else: 
+#                 print("xxxx {url} could not retrive")
+#         except Exception as e:
+#             print(f"Error fetching {url}: {e}")
+#         return False
 
-    for nation_i in range(total_nations):  
+#     players_url_df = pd.read_csv("./data/wikipedia/Wikidata_players.csv")
+#     total_nations = players_url_df.shape[0]
+
+#     for nation_i in range(total_nations):  
         
-        # set these up for the team you want
-        nation = players_url_df["nation"][nation_i]
-        output_dir = f"./data/wikipedia/english/{nation}/"
-        player_profiles = f"./data/wikipedia/english/profile_links/profile_links_{nation}.csv"
-        output_dir_html = f"{output_dir}/player_html/"
+#         # set these up for the team you want
+#         nation = players_url_df["nation"][nation_i]
+#         output_dir = f"./data/wikipedia/english/{nation}/"
+#         player_profiles = f"./data/wikipedia/english/profile_links/profile_links_{nation}.csv"
+#         output_dir_html = f"{output_dir}/player_html/"
 
-        # setup the folders
-        create_directory(output_dir)
-        create_directory(output_dir_html)
+#         # setup the folders
+#         create_directory(output_dir)
+#         create_directory(output_dir_html)
 
-        # first_scrape_out_dir = f"{output_dir}{nation}PP/"
-        # create_directory(first_scrape_out_dir)
-        # cleaned_json_out_dir = f"{output_dir}{nation}_cleaned/"
-        # create_directory(cleaned_json_out_dir)
-        # output_json = f"{output_dir}{nation}_combined_profile.json"
+#         # first_scrape_out_dir = f"{output_dir}{nation}PP/"
+#         # create_directory(first_scrape_out_dir)
+#         # cleaned_json_out_dir = f"{output_dir}{nation}_cleaned/"
+#         # create_directory(cleaned_json_out_dir)
+#         # output_json = f"{output_dir}{nation}_combined_profile.json"
 
-        df = pd.read_csv(player_profiles)
+#         df = pd.read_csv(player_profiles, encoding="latin1")
 
-        # Iterate over each name in the DataFrame
-        failed_indices = []
-        # for i in range(0, 200):
-        for i in range(0, df.shape[0]):
-            try:
-                # Logging progress
-                if (i % 1) == 0:
-                    print(f"Currently working nation: {nation} ({nation_i} of {total_nations})")
-                    print(f"{nation} FS: Currently Working on {i+1} of {df.shape[0]}.")
+#         # Iterate over each name in the DataFrame
+#         failed_indices = []
+#         # for i in range(0, 200):
+#         for i in range(0, df.shape[0]):
+#             try:
+#                 # Logging progress
+#                 if (i % 100) == 0:
+#                     print(f"Currently working nation: {nation} ({nation_i} of {total_nations})")
+#                     print(f"{nation} FS: Currently Working on {i+1} of {df.shape[0]}.")
                 
-                # i = 1
-                url = df["url"].loc[i]
-                # name = df["name"].loc[i]
+#                 # i = 1
+#                 url = df["url"].loc[i]
+#                 wikiid = df["wikidataId"].loc[i]
+#                 # name = df["name"].loc[i]
 
-                if pd.isna(url):
-                    print("Skipped one.")
-                    continue
+#                 if pd.isna(url):
+#                     print("Skipped one.")
+#                     continue
 
-                # Apply the scrapp function and store the result
-                # result = scrap_rugby_wiki_standard(url)
+#                 # Apply the scrapp function and store the result
+#                 # result = scrap_rugby_wiki_standard(url)
 
-                save_html(url = url, path = f"{output_dir_html}{i}.html")
+#                 save_html(url = url, path = f"{output_dir_html}{i}__{wikiid}.html")
 
-                # if result == "fail":
-                #     failed_indices.append((i, url))
-                #     print(f"failed at index {i} and url {url}.")
-                #     continue
+#                 # if result == "fail":
+#                 #     failed_indices.append((i, url))
+#                 #     print(f"failed at index {i} and url {url}.")
+#                 #     continue
 
-                # Logging progress
-                if (i % 1) == 0:
-                    # print(f"{nation} FS: Currently Finished {i+1} of {df.shape[0]}.")
-                    print(f"---- Perc: {round((i/df.shape[0]) * 100, 2)}%.")
-                    print(f"---- Name: {df['name'][i]}.")
-                    print(f"---- URL: {url}.")
-            except Exception as e:
-                # Log the failed index and the exception message
-                failed_indices.append((i,url))
-                print(f"Failed at index {i} with error: {e}")
-        print("Finished.")
+#                 # Logging progress
+#                 if (i % 100) == 0:
+#                     # print(f"{nation} FS: Currently Finished {i+1} of {df.shape[0]}.")
+#                     print(f"---- Perc: {round((i/df.shape[0]) * 100, 2)}%.")
+#                     print(f"---- Name: {df['name'][i]}.")
+#                     print(f"---- URL: {url}.")
+#             except Exception as e:
+#                 # Log the failed index and the exception message
+#                 failed_indices.append((i,url))
+#                 print(f"Failed at index {i} with error: {e}")
+#         print("Finished.")
 
 
-get_all_htmls()
+# get_all_htmls()
 
 def get_player_profile_info_1st():
-    players_url_df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
+    players_url_df = pd.read_csv("./data/wikipedia/Wikidata_players.csv")
     total_nations = players_url_df.shape[0]
     for nation_i in range(0, total_nations):  
         
         # set these up for the team you want
         nation = players_url_df["nation"][nation_i]
-        output_dir = f"./data/wikipedia/english/{nation}/"
+        output_dir = f"./data/wikipedia/english/{nation}_2/"
         # player_profiles = f"./data/wikipedia/english/profile_links/profile_links_{nation}.csv"
         
         # setup the folders
@@ -138,7 +139,7 @@ def get_player_profile_info_1st():
         
         # Assuming df is your DataFrame and 'Names' is the column with the names
         # Define your scrapp function here
-        # df = pd.read_csv(player_profiles)
+        # df = pd.read_csv(player_profiles, encoding="latin1")
 
         html_dir = f"{output_dir}player_html/"
         files = list_files_in_directory(html_dir)
@@ -156,7 +157,6 @@ def get_player_profile_info_1st():
                 # i = 1
                 file_path = files[i]
                 
-
                 # Apply the scrapp function and store the result
                 result = get_info_box_standard(f"{html_dir}{file_path}")
                 if result == "fail":
@@ -207,12 +207,12 @@ def get_player_profile_info_2nd(base_folder = "/data/wikipedia/english/"):
     
     # Some of the wiki's wont have scraped properly, the following checks for this
     # and if it has failed it used a differt method (works line by line).
-    players_url_df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
+    players_url_df = pd.read_csv("./data/wikipedia/Wikidata_players.csv")
     total_nations = players_url_df.shape[0]
 
     for nation_i in range(0, total_nations):
         nation = players_url_df["nation"][nation_i]
-        file_path = f"./{base_folder}{nation}/PP/"
+        file_path = f"./{base_folder}{nation}_2/PP/"
 
         files = list_files_in_directory(file_path)
         files = [f for f in files if f != 'desktop.ini']
@@ -231,18 +231,16 @@ def get_player_profile_info_2nd(base_folder = "/data/wikipedia/english/"):
             with open(file_path + files[i], "w", encoding='utf-8') as f:
                 f.write(results)
                 
-            # data_list.append({'index': i, 'type': str(type(points)), 
-            #                   'points': points, "url": json_data.get("url")})
+
             # Logging progress
             if (i % 1) == 0:
                 print(f"{nation} SS: Currently Finished {i+1} of {len(files)}.")
                 print(f"---- Perc: {round((i/len(files)) * 100, 2)}%.")
                 print(f"---- Name: {json_data['name']}.")
                 print(f"---- File save:{file_path + files[i]}.")
-        
+    return(1)
 
 get_player_profile_info_2nd()
-
 
 # =============================================================================
 # update
@@ -251,12 +249,12 @@ get_player_profile_info_2nd()
 # Need code that will do 1) add in tbe name and the url for all users
 
 # stranardise the data
-
+ 
 def fix_small_issues_file():
     def remove_footnotes(text):
         """
         Removes square-bracketed footnotes or citations from text.
-        Example: "This is an example [1][2]." -> "This is an example."
+        Example: "This is an example [1][2]." → "This is an example."
         """
         # Remove anything in square brackets (including multiple digits or letters)
         cleaned_text = re.sub(r'\s*\[[^\]]*\]', '', text)
@@ -297,20 +295,20 @@ def fix_small_issues_file():
         
         return place
     
-    players_url_df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
+    players_url_df = pd.read_csv("./data/wikipedia/Wikidata_players.csv")
     total_nations = players_url_df.shape[0]
     base_folder = "/data/wikipedia/english/"
     
     for nation_i in range(0, total_nations):
         nation = players_url_df["nation"][nation_i]
-        file_path = f"./{base_folder}{nation}/PP/"
+        file_path = f"./{base_folder}{nation}_2/PP/"
 
 
         # set these up for the team you want
         nation = players_url_df["nation"][nation_i]
         # output_dir = f"./data/wikipedia/english/{nation}/"
         player_profiles_file_path = f"./data/wikipedia/english/profile_links/profile_links_{nation}.csv"
-        player_profiles = pd.read_csv(player_profiles_file_path)
+        player_profiles = pd.read_csv(player_profiles_file_path, encoding="latin1")
 
 
         files = list_files_in_directory(file_path)
@@ -358,14 +356,14 @@ fix_small_issues_file()
 
 def standardise_player_profile_info():
     
-    players_url_df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
+    players_url_df = pd.read_csv("./data/wikipedia/Wikidata_players.csv")
     total_nations = players_url_df.shape[0]
     base_folder = "/data/wikipedia/english/"
     
     for nation_i in range(0, total_nations):
         nation = players_url_df["nation"][nation_i]
-        file_path = f"./{base_folder}{nation}/PP/"
-        out_file_path = f"./{base_folder}{nation}/PP_cleaned/"
+        file_path = f"./{base_folder}{nation}_2/PP/"
+        out_file_path = f"./{base_folder}{nation}_2/PP_cleaned/"
 
         # set these up for the team you want
         nation = players_url_df["nation"][nation_i]
@@ -416,17 +414,15 @@ standardise_player_profile_info()
 # fix the issues with date of dealth, and place of dealth
 # look at all the positions and use vincents classifications
 
-
-
 def combine_all_jsons_finds():
-    players_url_df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
+    players_url_df = pd.read_csv("./data/wikipedia/Wikidata_players.csv")
     total_nations = players_url_df.shape[0]
     base_folder = "/data/wikipedia/english/"
-    output_json = f".{base_folder}all_capped_players_profile.json"
+    output_json = f".{base_folder}all_wikidata_players_profile_4.json"
     all_files = []
     for nation_i in range(0, total_nations):
         nation = players_url_df["nation"][nation_i]
-        file_path = f"./{base_folder}{nation}/PP_cleaned/"
+        file_path = f"./{base_folder}{nation}_2/PP_cleaned/"
         # out_file_path = f"./{base_folder}{nation}/PP_cleaned/"
 
         files = list_files_in_directory(file_path)

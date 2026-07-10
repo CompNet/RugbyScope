@@ -8,12 +8,19 @@ Created on Sun Jan 12 17:28:01 2025
 """
 
 import sys
-from _setup import *
+sys.path.append("./src/wikipedia/english/")
+from _setup import *  # noqa: F403
+
+# dir = "./data/wikipedia/english/"
+# input_json_file = dir + "all_capped_players_profile.json"
+# output_player_info_file = dir + "PP_player_info_capped_players_2.csv"
+# output_player_stint_file = dir + "PP_stint_info_capped_players_2.csv"
 
 dir = "./data/wikipedia/english/"
-input_json_file = dir + "PP_combined_profile.json"
-output_player_info_file = dir + "PP_player_info.csv"
-output_player_stint_file = dir + "PP_stint_info.csv"
+input_json_file = dir + "all_wikidata_players_profile_4.json"
+output_player_info_file = dir + "PP_player_info_wikidata_players_4.csv"
+output_player_stint_file = dir + "PP_stint_info_wikidata_players_4.csv"
+
 
 # load the json. 
 with open(input_json_file, 'r', encoding='utf-8', errors='replace') as file:
@@ -41,13 +48,13 @@ def create_player_info(json_entry):
         "origName": json_entry.get("origName", ""),
         "debugComment": "",
         "wiki_Name": json_entry.get("name"),
-        "wpPage": json_entry.get("url"),
+        "wpPage": json_entry.get("profile_url"),
         "birthDate": json_entry.get("date_of_birth").get("date"),
         "birthPlace": "",
         "birthPlaceWP": json_entry.get("place_of_birth"),
-        "deathDate": "",
+        "deathDate": json_entry.get("date_of_death").get("date"),
         "deathPlace": "",
-        "deathPlaceWP": "",
+        "deathPlaceWP": json_entry.get("place_of_death"),
         "height": json_entry.get("height").get("meters"),
         "weight": json_entry.get("weight").get("kg"),
         "positions": pos_string,
@@ -55,7 +62,7 @@ def create_player_info(json_entry):
     }
     df = pd.DataFrame([data])
     return df 
-
+# 
 info_df = pd.DataFrame()
 for i in range(len(json_data)):
     json_entry = json_data[i]
@@ -65,18 +72,18 @@ for i in range(len(json_data)):
     info_df = pd.concat([info_df, temp], ignore_index=True)
     # print(info_df)
 
-info_df.to_csv(output_player_info_file)
+info_df.to_csv(output_player_info_file, index=False)
 print(f"Finished creating the player info dataset: {output_player_info_file}")
 
 
 ####
 # Now create the career string data frame
 ####
-
+print(f"Starting to create the stint dataset: {output_player_stint_file}")
 def create_row_stint(json_entry, car_stages = ["amateur", "senior_club", "international"]):
     df = pd.DataFrame()
     car = json_entry["career"]
-    url = json_entry["url"]
+    url = json_entry["profile_url"]
     
     for car_stage in car_stages: 
        cs = car[car_stage] 
@@ -103,7 +110,7 @@ def create_row_stint(json_entry, car_stages = ["amateur", "senior_club", "intern
                 "origWdId": json_entry.get("origWdId", ""),
                 "origName": json_entry.get("origName", ""),
                 'wiki_name': [json_entry.get("name")], 
-                "wpPage": json_entry.get("url"),
+                "wpPage": url,
                 "stintType" : car_stage, 
                 "timePeriod": cs[i]["years"], 
                 "teamName": cs[i]["teams"], 
@@ -124,5 +131,5 @@ for i in range(len(json_data)):
     stint_df = pd.concat([stint_df, temp], ignore_index=True)
     # print(info_df)
 
-stint_df.to_csv(output_player_stint_file)
+stint_df.to_csv(output_player_stint_file, index=False)
 print(f"Finished creating the player strint dataset: {output_player_stint_file}")

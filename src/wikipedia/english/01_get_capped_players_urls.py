@@ -5,9 +5,15 @@ Created on Sun Jan 12 20:23:41 2025
 @author: David.OSullivan
 """
 
+from _setup import *
+
 
 def get_rugby_capped_players(url, name_col = 0):
-    response = requests.get(url)
+    headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Safari/537.36"
+    }
+
+    response = requests.get(url, headers = headers)
     soup = BeautifulSoup(response.content, 'html.parser')
 
     # Find the table by its title
@@ -35,12 +41,12 @@ def get_rugby_capped_players(url, name_col = 0):
     return df
 
 
-df = pd.read_csv("./data/International_players_list_by_contry.csv")
+df = pd.read_csv("./data/wikipedia/International_players_list_by_contry.csv")
 for i in range(df.shape[0]):
     caps_url = df["url"].iloc[i]
     nation = df["nation"].iloc[i]
     name_col = int(df["name_col"].iloc[i])
     url_df = get_rugby_capped_players(caps_url, name_col)
-    url_df.to_csv(f'./data/profile_links_{nation}.csv', index=False)
+    url_df.to_csv(f'./data/wikipedia/english/profile_links/profile_links_{nation}.csv', index=False)
     print(f"Finished with {nation}.")
     print(f"--- Number of rows: {url_df.shape[0]}")
