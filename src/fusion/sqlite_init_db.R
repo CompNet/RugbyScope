@@ -1,5 +1,5 @@
 ## =============================================================================
-## init_rugby_db.R
+## sqlite_init_db.R
 ##
 ## ETL script that initializes a SQLite database matching the rugby DBML
 ## schema, and populates it from three source CSV files:
@@ -31,26 +31,26 @@
 ##     rugbyscopeId, which is used as-is for `team.rugbyscope_id`.
 ## =============================================================================
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/fusion/init_sqlite_db.R")
+# source("src/fusion/sqlite_init_db.R")
 
 suppressPackageStartupMessages({
-  library(DBI)
-  library(RSQLite)
-  library(readr)
-  library(dplyr)
-  library(purrr)
-  library(tidyr)
-  library(stringr)
+  library("DBI")
+  library("RSQLite")
+  library("readr")
+  library("dplyr")
+  library("purrr")
+  library("tidyr")
+  library("stringr")
 })
 
 ## -----------------------------------------------------------------------
 ## 0. CONFIGURATION
 ## -----------------------------------------------------------------------
 
-input_folder <- file.path("data", "fusion")
-PLAYERS_CSV <- file.path(input_folder, "players_13.csv")
-TEAMS_CSV   <- file.path(input_folder, "teams_09.csv")
-STINTS_CSV  <- file.path(input_folder, "stints_20_firststint.csv")
+INPUT_FOLDER <- file.path("data", "fusion")
+PLAYERS_CSV <- file.path(INPUT_FOLDER, "players_14_normsizes.csv")
+TEAMS_CSV   <- file.path(INPUT_FOLDER, "teams_10_nacoms.csv")
+STINTS_CSV  <- file.path(INPUT_FOLDER, "stints_20_firststint.csv")
 DB_PATH     <- file.path("data", "rugby.sqlite")
 
 ## Start from a clean database every run
