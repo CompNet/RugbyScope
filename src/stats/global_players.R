@@ -518,7 +518,7 @@ for (i in 1:2) {
 
 
 ########################################################################
-# completeness stats
+# overall completeness stats
 countries <- sapply(1:nrow(players), function(p) if (is.na(players[p, "sportCountries"])) players[p, "citizenships"] else players[p, "sportCountries"])
 players <- cbind(players, "countries" = countries)
 
@@ -564,7 +564,6 @@ for (g in 1:(length(field_groups) + 1)) {
     )
   dev.off()
 }
-
 
 
 

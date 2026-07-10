@@ -54,11 +54,12 @@
   * [x] Distribution of stints by source
     * [x] Find a way to show how redundant they are
   * [x] Cross-ref sources and countries: is there a match?
+* [ ] Completeness stats:
+  * [x] Static: for each field, proportion of empty rows
+    * [ ] Cross-ref with countries
+  * [ ] Evolution: proportion of missing values over time
 * [ ] Add WW1 & WW2 to the evolution plots
   * [ ] Japanes worldcup date? (to explain increase in jaWP?)
-* [ ] Completeness stats:
-  * [ ] Static: for each field, proportion of empty rows
-  * [ ] Evolution: proportion of missing values over time
 
 # DATA AUGMENTATION FOR NET EXTRACTION
 For net extraction, we need all the dates to be filled, and we can allow more approximation when estimating them.

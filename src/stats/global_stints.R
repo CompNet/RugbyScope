@@ -448,7 +448,7 @@ for (i in 1:2) {
 
 
 ########################################################################
-# completeness stats
+# overall completeness stats
 fields <- c("type", "startYear", "endYear", "matchesPlayed", "pointsScored", "dataSources")
 
 pal <- viridis(100)

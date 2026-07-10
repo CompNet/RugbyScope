@@ -336,7 +336,7 @@ for (i in 1:2) {
 
 
 ########################################################################
-# completeness stats
+# overall completeness stats
 field_groups <- list(
   "perso-fields" = c("type", "inceptionDate", "terminationDate", "countries"),
   "rugby-fields" = c("affiliations", "competitions", "tier", "homeVenueNames", "homeVenueCapacities", "locations"),
