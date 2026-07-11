@@ -1,8 +1,6 @@
 ########################################################################
 # Generates various plots regarding the evolution of the completeness
-# of the player fields :
-# - overall
-# - by country
+# of the player fields.
 #
 # 07/2025 Vincent Labatut
 #
@@ -45,7 +43,7 @@ source("src/stats/load_all_tables.R")
 
 
 ########################################################################
-# total completeness by start year
+# total completeness by year
 countries <- sapply(1:nrow(players), function(p) if (is.na(players[p, "sportCountries"])) players[p, "citizenships"] else players[p, "sportCountries"])
 players <- cbind(players, "countries" = countries)
 
