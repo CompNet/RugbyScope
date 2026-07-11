@@ -117,18 +117,30 @@ for (plot_log in c(FALSE, TRUE)) {
     all_tt2 <- all_tt[!is.na(names(all_tt))]
 
     pdf(plot_file, width = 14, height = 7)
-    x <- as.integer(names(all_tt2))
-    y <- as.integer(all_tt2)
-    if (plot_smoothed)
-      fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
-    plot(
-      x = x,
-      y = if (plot_smoothed) predict(fit) else y,
-      xlab = mode_xlabels[mode], ylab = "Number of players",
-      main = paste0("Number of players as a function of ", mode_labels[mode]),
-      log = if (plot_log) "y" else "",
-      type = "l", col = "red", lwd = 2
-    )
+      x <- as.integer(names(all_tt2))
+      y <- as.integer(all_tt2)
+      if (plot_smoothed)
+        fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
+      # init plot
+      plot(NULL,
+        xlim = range(x, na.rm = TRUE),
+        ylim = range(y, na.rm = TRUE),
+        xlab = mode_xlabels[mode], ylab = "Number of players",
+        main = paste0("Number of players as a function of ", mode_labels[mode]),
+        log = if (plot_log) "y" else "",
+      )
+      # add vertical lines
+      abline(v = "1914", col = "black")
+      abline(v = "1918", col = "black")
+      abline(v = "1939", col = "black")
+      abline(v = "1945", col = "black")
+      axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+      # add line
+      lines(
+        x = x,
+        y = if (plot_smoothed) predict(fit) else y,
+        type = "l", col = "red", lwd = 2
+      )
     dev.off()
   }
 }
@@ -193,6 +205,7 @@ for (plot_log in c(FALSE, TRUE)) {
         countr_tt2[countr_tt2 == 0] <- NA
 
       pdf(plot_file, width = 14, height = 7)
+        # init plot
         plot(NULL,
           xlab = mode_xlabels[mode], ylab = "Number of players",
           log = if (plot_log) "y" else "",
@@ -200,6 +213,13 @@ for (plot_log in c(FALSE, TRUE)) {
           xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
           ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
         )
+        # add vertical lines
+        abline(v = "1914", col = "black")
+        abline(v = "1918", col = "black")
+        abline(v = "1939", col = "black")
+        abline(v = "1945", col = "black")
+        axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+        # add series
         for (country in top_countries) {
           x <- as.integer(colnames(countr_tt2))
           y <- as.integer(countr_tt2[country, ])
@@ -212,6 +232,7 @@ for (plot_log in c(FALSE, TRUE)) {
             lwd = 2
           )
         }
+        # add legend
         legend(
           "topleft",
           legend = top_countries,
@@ -284,6 +305,7 @@ for (plot_log in c(FALSE, TRUE)) {
         pos_tt2[pos_tt2 == 0] <- NA
 
       pdf(plot_file, width = 14, height = 7)
+        # init plot
         plot(NULL,
           xlab = mode_xlabels[mode], ylab = "Number of players",
           log = if (plot_log) "y" else "",
@@ -291,6 +313,13 @@ for (plot_log in c(FALSE, TRUE)) {
           xlim = c(min(as.integer(colnames(pos_tt2))), max(as.integer(colnames(pos_tt2)))),
           ylim = c(min(pos_tt2, na.rm = TRUE), max(pos_tt2, na.rm = TRUE))
         )
+        # add vertical lines
+        abline(v = "1914", col = "black")
+        abline(v = "1918", col = "black")
+        abline(v = "1939", col = "black")
+        abline(v = "1945", col = "black")
+        axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+        # add series
         for (position in top_positions) {
           x <- as.integer(colnames(pos_tt2))
           y <- as.integer(pos_tt2[position, ])
@@ -303,6 +332,7 @@ for (plot_log in c(FALSE, TRUE)) {
             lwd = 2
           )
         }
+        # add legend
         legend(
           "topleft",
           legend = top_positions,
@@ -371,6 +401,7 @@ for (plot_log in c(FALSE, TRUE)) {
       pos_tt[pos_tt == 0] <- NA
 
     pdf(plot_file, width = 14, height = 7)
+      # init plot
       plot(NULL,
         xlab = mode_xlabels[mode], ylab = "Number of players",
         log = if (plot_log) "y" else "",
@@ -378,6 +409,13 @@ for (plot_log in c(FALSE, TRUE)) {
         xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
         ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
       )
+      # add vertical lines
+      abline(v = "1914", col = "black")
+      abline(v = "1918", col = "black")
+      abline(v = "1939", col = "black")
+      abline(v = "1945", col = "black")
+      axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+      # add series
       for (source in top_sources) {
         x <- as.integer(colnames(pos_tt))
         y <- as.integer(pos_tt[source, ])
@@ -390,6 +428,7 @@ for (plot_log in c(FALSE, TRUE)) {
           lwd = 2
         )
       }
+      # add legend
       legend(
         "topleft",
         legend = top_sources,

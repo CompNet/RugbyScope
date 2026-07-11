@@ -165,6 +165,12 @@ for (g in 1:length(field_groups)) {
           log = if (plot_log) "y" else "",
           xlim = range(ref_years[idx]), ylim = if (plot_log) c(1, 100) else c(0, 100)
         )
+        # add vertical lines
+        abline(v = "1914", col = "black")
+        abline(v = "1918", col = "black")
+        abline(v = "1939", col = "black")
+        abline(v = "1945", col = "black")
+        axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
         # add series
         for (field in fields) {
           x <- as.integer(names(vals[[field]]))

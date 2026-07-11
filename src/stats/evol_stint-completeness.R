@@ -122,7 +122,7 @@ names(colors) <- fields
 
 for (plot_log in c(FALSE, TRUE)) {
   for (plot_smoothed in c(FALSE, TRUE)) {
-      plot_file <- file.path(stats_folder, paste0("completeness_", group_name, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
+      plot_file <- file.path(stats_folder, paste0("completeness_all-fields", "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
       tlog("Producing plot file: ", plot_file)
 
       pdf(plot_file, width = 14, height = 7)
@@ -133,6 +133,12 @@ for (plot_log in c(FALSE, TRUE)) {
           log = if (plot_log) "y" else "",
           xlim = range(ref_years[idx]), ylim = if (plot_log) c(1, 100) else c(0, 100)
         )
+        # add vertical lines
+        abline(v = "1914", col = "black")
+        abline(v = "1918", col = "black")
+        abline(v = "1939", col = "black")
+        abline(v = "1945", col = "black")
+        axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
         # add series
         for (field in fields) {
           x <- as.integer(names(vals[[field]]))

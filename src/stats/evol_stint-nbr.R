@@ -27,7 +27,7 @@ start.rec.log("EvolStintNbr")
 ########################################################################
 # parameters
 
-mode <- "start-year"  # "start-year" or "active-years"
+mode <- "active-years"  # "start-year" or "active-years"
 mode_labels <- c("start-year" = "career start year", "active-years" = "active year")
 mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
@@ -116,12 +116,24 @@ for (plot_log in c(FALSE, TRUE)) {
     y <- as.integer(all_tt2)
     if (plot_smoothed)
       fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
-    plot(
-      x = x,
-      y = if (plot_smoothed) predict(fit) else y,
+    plot(NULL,
+      xlim = range(x, na.rm = TRUE),
+      ylim = range(y, na.rm = TRUE),
       xlab = mode_xlabels[mode], ylab = "Number of stints",
       main = paste0("Number of stints as a function of ", mode_labels[mode]),
       log = if (plot_log) "y" else "",
+      type = "l", col = "red", lwd = 2
+    )
+    # add vertical lines
+    abline(v = "1914", col = "black")
+    abline(v = "1918", col = "black")
+    abline(v = "1939", col = "black")
+    abline(v = "1945", col = "black")
+    axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+    # add lines
+    lines(
+      x = x,
+      y = if (plot_smoothed) predict(fit) else y,
       type = "l", col = "red", lwd = 2
     )
     dev.off()
@@ -188,6 +200,7 @@ for (plot_log in c(FALSE, TRUE)) {
         countr_tt2[countr_tt2 == 0] <- 1
 
       pdf(plot_file, width = 14, height = 7)
+        # init plot
         plot(NULL,
           xlab = mode_xlabels[mode], ylab = "Number of stints",
           log = if (plot_log) "y" else "",
@@ -195,6 +208,13 @@ for (plot_log in c(FALSE, TRUE)) {
           xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
           ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
         )
+        # add vertical lines
+        abline(v = "1914", col = "black")
+        abline(v = "1918", col = "black")
+        abline(v = "1939", col = "black")
+        abline(v = "1945", col = "black")
+        axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+        # add series
         for (country in top_countries) {
           x <- as.integer(colnames(countr_tt2))
           y <- as.integer(countr_tt2[country, ])
@@ -207,6 +227,7 @@ for (plot_log in c(FALSE, TRUE)) {
             lwd = 2
           )
         }
+        # add legend
         legend(
           "topleft",
           legend = top_countries,
@@ -275,6 +296,7 @@ for (plot_log in c(FALSE, TRUE)) {
         countr_tt2[countr_tt2 == 0] <- 1
 
       pdf(plot_file, width = 14, height = 7)
+        # init plot
         plot(NULL,
           xlab = mode_xlabels[mode], ylab = "Number of stints",
           log = if (plot_log) "y" else "",
@@ -282,6 +304,13 @@ for (plot_log in c(FALSE, TRUE)) {
           xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
           ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
         )
+        # add vertical lines
+        abline(v = "1914", col = "black")
+        abline(v = "1918", col = "black")
+        abline(v = "1939", col = "black")
+        abline(v = "1945", col = "black")
+        axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+        # add series
         for (country in top_countries) {
           x <- as.integer(colnames(countr_tt2))
           y <- as.integer(countr_tt2[country, ])
@@ -294,6 +323,7 @@ for (plot_log in c(FALSE, TRUE)) {
             lwd = 2
           )
         }
+        # add legend
         legend(
           "topleft",
           legend = top_countries,
@@ -349,6 +379,7 @@ for (plot_log in c(FALSE, TRUE)) {
       pos_tt[pos_tt == 0] <- NA
 
     pdf(plot_file, width = 14, height = 7)
+      # init plot
       plot(NULL,
         xlab = mode_xlabels[mode], ylab = "Number of stints",
         log = if (plot_log) "y" else "",
@@ -356,6 +387,13 @@ for (plot_log in c(FALSE, TRUE)) {
         xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
         ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
       )
+      # add vertical lines
+      abline(v = "1914", col = "black")
+      abline(v = "1918", col = "black")
+      abline(v = "1939", col = "black")
+      abline(v = "1945", col = "black")
+      axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+      # add series
       for (type in top_types) {
         x <- as.integer(colnames(pos_tt))
         y <- as.integer(pos_tt[type, ])
@@ -368,6 +406,7 @@ for (plot_log in c(FALSE, TRUE)) {
           lwd = 2
         )
       }
+      # add legend
       legend(
         "topleft",
         legend = top_types,
@@ -429,6 +468,7 @@ for (plot_log in c(FALSE, TRUE)) {
       pos_tt[pos_tt == 0] <- NA
 
     pdf(plot_file, width = 14, height = 7)
+      # init plot
       plot(NULL,
         xlab = mode_xlabels[mode], ylab = "Number of stints",
         log = if (plot_log) "y" else "",
@@ -436,6 +476,13 @@ for (plot_log in c(FALSE, TRUE)) {
         xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
         ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
       )
+      # add vertical lines
+      abline(v = "1914", col = "black")
+      abline(v = "1918", col = "black")
+      abline(v = "1939", col = "black")
+      abline(v = "1945", col = "black")
+      axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+      # add series
       for (source in top_sources) {
         x <- as.integer(colnames(pos_tt))
         y <- as.integer(pos_tt[source, ])
@@ -448,6 +495,7 @@ for (plot_log in c(FALSE, TRUE)) {
           lwd = 2
         )
       }
+      # add legend
       legend(
         "topleft",
         legend = top_sources,

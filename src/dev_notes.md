@@ -57,7 +57,7 @@
 * [x] Completeness stats:
   * [x] Static: for each field, proportion of empty rows
   * [x] Evolution: proportion of missing values over time
-* [ ] Add WW1 & WW2 to the evolution plots
+* [x] Add WW1 & WW2 to the evolution plots
   * [ ] Japanes worldcup date? (to explain increase in jaWP?)
 
 # DATA AUGMENTATION FOR NET EXTRACTION
