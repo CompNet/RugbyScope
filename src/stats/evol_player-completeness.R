@@ -7,7 +7,7 @@
 # 07/2025 Vincent Labatut
 #
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/stats/evol_player-nbr.R")
+# source("src/stats/evol_player-completeness.R")
 ########################################################################
 source("src/common/logging.R")
 source("src/common/colors.R")
@@ -35,7 +35,7 @@ tlog("mode: ", mode)
 
 ########################################################################
 # create output folder
-stats_folder <- file.path("data", "stats", paste0("evol_player-nbr_vs_", mode))
+stats_folder <- file.path("data", "stats", paste0("evol_player-completeness_vs_", mode))
 dir.create(stats_folder, showWarnings = FALSE, recursive = TRUE)
 
 # load tables
@@ -84,10 +84,11 @@ if (mode == "start-year") {
     ref_years <- c(ref_years, player_years)
     ref_players <- c(ref_players, player_id)
 
+    # update completeness lists
     for (group in names(field_groups)) {
       tmp <- comp_rates_lst[[group]]
       for (field in field_groups[[group]])
-        tmp[[field]] <- c(tmp[[field]], >>XXXXXX<<)
+        tmp[[field]] <- c(tmp[[field]], rep(is.na(players[p, field]), length(player_years)))
       comp_rates_lst[[group]] <- tmp
     }
   }
@@ -120,310 +121,73 @@ if (mode == "start-year") {
     if (length(active_years) > 0) {
       ref_years <- c(ref_years, active_years)
       ref_players <- c(ref_players, rep(player_id, length(active_years)))
+
+      # update completeness lists
+      for (group in names(field_groups)) {
+        tmp <- comp_rates_lst[[group]]
+        for (field in field_groups[[group]])
+          tmp[[field]] <- c(tmp[[field]], rep(is.na(players[p, field]), length(active_years)))
+        comp_rates_lst[[group]] <- tmp
+      }
     }
   }
 } else {
   stop("Unknown mode: ", mode)
 }
-# all_tt <- table(ref_years, useNA = "always")
-# print(all_tt)
-
-
-
-# compute completeness rates
-
 
 
 
 # produce plot files
-for (plot_log in c(FALSE, TRUE)) {
-  for (plot_smoothed in c(FALSE, TRUE)) {
-    plot_file <- file.path(stats_folder, paste0("all_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
-    tlog("Producing plot file: ", plot_file)
+for (g in 1:length(field_groups)) {
+  fields <- field_groups[[g]]
+  group_name <- names(field_groups)[g]
 
-    all_tt2 <- all_tt[!is.na(names(all_tt))]
+  idx <- which(!is.na(ref_years))
 
-    pdf(plot_file, width = 14, height = 7)
-    x <- as.integer(names(all_tt2))
-    y <- as.integer(all_tt2)
-    if (plot_smoothed)
-      fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
-    plot(
-      x = x,
-      y = if (plot_smoothed) predict(fit) else y,
-      xlab = mode_xlabels[mode], ylab = "Number of players",
-      main = paste0("Number of players as a function of ", mode_labels[mode]),
-      log = if (plot_log) "y" else "",
-      type = "l", col = "red", lwd = 2
-    )
-    dev.off()
-  }
-}
-
-
-
-
-########################################################################
-# number of players by year by country
-
-# note: multiple citizenship is possible, so the same player can be counted several times
-
-# get country info
-countries <- c()
-country_years <- c()
-for (i in 1:length(ref_players)) {
-  if (i %% 1000 == 0)
-    tlog(2, "Processing entry ", i, "/", length(ref_players))
-  player_id <- ref_players[i]
-  p <- which(players[, "wikidataId"] == player_id)
-
-  # get country list
-  sport_countries <- players[p, "sportCountries"]
-  if (!is.na(sport_countries))
-    player_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
-  else {
-    citizenships <- players[p, "citizenships"]
-    player_countries <- trimws(strsplit(citizenships, split = ";")[[1]])
+  # compute completeness rates
+  vals <- list()
+  for (field in fields) {
+    vals[[field]] <- table(ref_years[idx], comp_rates_lst[[g]][[field]][idx])[, "FALSE"] *100 / table(ref_years, useNA = "no")
   }
 
-  # add to stat list
-  for (player_country in player_countries) {
-    countries <- c(countries, player_country)
-    country_years <- c(country_years, ref_years[p])
-  }
-}
-countr_tt <- table(countries, country_years, useNA = "always")
-print(countr_tt)
-
-
-
-# produce plot files
-for (plot_log in c(FALSE, TRUE)) {
-  for (plot_smoothed in c(FALSE, TRUE)) {
-    for (plot_top in c(5, 8)) {
-      plot_file <- file.path(stats_folder, paste0("countries_top=", plot_top, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
+  # set colors
+  colors <- get.palette(length(fields))
+  names(colors) <- fields
+  
+  for (plot_log in c(FALSE, TRUE)) {
+    for (plot_smoothed in c(FALSE, TRUE)) {
+      plot_file <- file.path(stats_folder, paste0("completeness_", group_name, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
       tlog("Producing plot file: ", plot_file)
 
-      # overal values
-      countr_tt0 <- sort(table(countries, useNA = "no"), decreasing = TRUE)
-      top_countries <- names(countr_tt0)[1:plot_top]
-
-      # set colors
-      color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
-
-      countr_tt2 <- countr_tt[, !is.na(colnames(countr_tt))]
-      # add a new line for the rest of the countries
-      countr_tt2 <- rbind(countr_tt2, "Others" = colSums(countr_tt2[!(rownames(countr_tt2) %in% top_countries), , drop = FALSE], na.rm = TRUE))
-      top_countries <- c(top_countries, "Others")
-      # replace zeros by NA to avoid log(0) in the plot
-      if (plot_log)
-        countr_tt2[countr_tt2 == 0] <- NA
-
       pdf(plot_file, width = 14, height = 7)
+        # init plot
         plot(NULL,
-          xlab = mode_xlabels[mode], ylab = "Number of players",
+          xlab = mode_xlabels[mode], ylab = "Completeness rate (%)",
+          main = paste0("Player field completeness as a function of ", mode_labels[mode]),
           log = if (plot_log) "y" else "",
-          main = paste0("Number of players as a function of ", mode_labels[mode]),
-          xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
-          ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
+          xlim = range(ref_years[idx]), ylim = if (plot_log) c(1, 100) else c(0, 100)
         )
-        for (country in top_countries) {
-          x <- as.integer(colnames(countr_tt2))
-          y <- as.integer(countr_tt2[country, ])
+        # add series
+        for (field in fields) {
+          x <- as.integer(names(vals[[field]]))
+          y <- c(vals[[field]])
           if (plot_smoothed)
-              fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
+            fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
           lines(
             x = x,
             y = if (plot_smoothed) predict(fit) else y,
-            col = color_palette[country],
-            lwd = 2
+            type = "l", col = colors[field], lwd = 2
           )
         }
+        # add legend
         legend(
-          "topleft",
-          legend = top_countries,
+          "bottomleft",
+          legend = fields,
           # cex = 0.8,
-          fill = color_palette[top_countries]
+          fill = colors[fields]
         )
       dev.off()
     }
-  }
-}
-
-
-
-
-########################################################################
-# number of players by year by position
-
-# note: multiple positions is possible, so the same player can be counted several times
-
-# get position info
-positions <- c()
-position_years <- c()
-for (i in 1:length(ref_players)) {
-  if (i %% 1000 == 0)
-    tlog(2, "Processing entry ", i, "/", length(ref_players))
-  player_id <- ref_players[i]
-  p <- which(players[, "wikidataId"] == player_id)
-
-  # get position lists
-  pos <- players[p, "positions"]
-  if (!is.na(pos)) {
-    player_positions <- trimws(strsplit(pos, split = ";")[[1]])
-
-    # add to stat list
-    for (player_position in player_positions) {
-      positions <- c(positions, player_position)
-      position_years <- c(position_years, ref_years[p])
-    }
-  } else {
-    positions <- c(positions, NA)
-    position_years <- c(position_years, ref_years[p])
-  }
-}
-pos_tt <- table(positions, position_years, useNA = "always")
-print(pos_tt)
-
-
-
-# produce plot files
-for (plot_log in c(FALSE, TRUE)) {
-  for (plot_smoothed in c(FALSE, TRUE)) {
-    for (plot_top in c(5, 8)) {
-      plot_file <- file.path(stats_folder, paste0("positions_top=", plot_top, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
-      tlog("Producing plot file: ", plot_file)
-
-      # overal values
-      pos_tt0 <- sort(table(positions, useNA = "no"), decreasing = TRUE)
-      top_positions <- names(pos_tt0)[1:plot_top]
-
-      # set colors
-      color_palette <- c(get.palette(values = plot_top), "#919191")
-      names(color_palette) <- c(top_positions, "Others")
-
-      pos_tt2 <- pos_tt[, !is.na(colnames(pos_tt))]
-      # add a new line for the rest of the positions
-      pos_tt2 <- rbind(pos_tt2, "Others" = colSums(pos_tt2[!(rownames(pos_tt2) %in% top_positions), , drop = FALSE], na.rm = TRUE))
-      top_positions <- c(top_positions, "Others")
-      # replace zeros by NA to avoid log(0) in the plot
-      if (plot_log)
-        pos_tt2[pos_tt2 == 0] <- NA
-
-      pdf(plot_file, width = 14, height = 7)
-        plot(NULL,
-          xlab = mode_xlabels[mode], ylab = "Number of players",
-          log = if (plot_log) "y" else "",
-          main = paste0("Number of players as a function of ", mode_labels[mode]),
-          xlim = c(min(as.integer(colnames(pos_tt2))), max(as.integer(colnames(pos_tt2)))),
-          ylim = c(min(pos_tt2, na.rm = TRUE), max(pos_tt2, na.rm = TRUE))
-        )
-        for (position in top_positions) {
-          x <- as.integer(colnames(pos_tt2))
-          y <- as.integer(pos_tt2[position, ])
-          if (plot_smoothed)
-              fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
-          lines(
-            x = x,
-            y = if (plot_smoothed) predict(fit) else y,
-            col = color_palette[position],
-            lwd = 2
-          )
-        }
-        legend(
-          "topleft",
-          legend = top_positions,
-          # cex = 0.8,
-          fill = color_palette[top_positions]
-        )
-      dev.off()
-    }
-  }
-}
-
-
-
-
-########################################################################
-# number of players by year by source
-source_names <- c("DBPD", "enWP", "esWP", "frWP", "itWP", "jaWP", "WD")
-map <- c("dbpediaId" = "DBPD", "wikipediaEn" = "enWP", "wikipediaEs" = "esWP", "wikipediaFr" = "frWP", "wikipediaIt" = "itWP", "wikipediaJa" = "jaWP", "wikidataId" = "WD")
-
-# note: some players are described by multiple sources, so the same player can be counted several times
-
-# get source info
-sources <- c()
-source_years <-c()
-for (i in 1:length(ref_players)) {
-  if (i %% 1000 == 0)
-    tlog(2, "Processing entry ", i, "/", length(ref_players))
-  player_id <- ref_players[i]
-  p <- which(players[, "wikidataId"] == player_id)
-
-  player_data_sources <- c()
-  for (col in names(map)) {
-    if (!is.na(players[p, col])) {
-      player_data_sources <- c(player_data_sources, map[col])
-    }
-  }
-
-  # add sources to stat list
-  sources <- c(sources, player_data_sources)
-  source_years <- c(source_years, rep(ref_years[i], length(player_data_sources)))
-}
-pos_tt <- table(sources, source_years, useNA = "always")
-print(pos_tt)
-
-
-
-# produce plot files
-for (plot_log in c(FALSE, TRUE)) {
-  for (plot_smoothed in c(FALSE, TRUE)) {
-    plot_file <- file.path(stats_folder, paste0("data-sources_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
-    tlog("Producing plot file: ", plot_file)
-
-    # overal values
-    pos_tt0 <- sort(table(sources, useNA = "no"), decreasing = TRUE)
-    top_sources <- names(pos_tt0)
-
-    # set colors
-    color_palette <- DATASOURCE_COLORS
-
-    # compute freq table
-    pos_tt <- table(sources, source_years, useNA = "always")
-    pos_tt <- pos_tt[, !is.na(colnames(pos_tt))]
-
-    # replace zeros by NA to avoid log(0) in the plot
-    if (plot_log)
-      pos_tt[pos_tt == 0] <- NA
-
-    pdf(plot_file, width = 14, height = 7)
-      plot(NULL,
-        xlab = mode_xlabels[mode], ylab = "Number of players",
-        log = if (plot_log) "y" else "",
-        main = paste0("Number of players as a function of ", mode_labels[mode]),
-        xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
-        ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
-      )
-      for (source in top_sources) {
-        x <- as.integer(colnames(pos_tt))
-        y <- as.integer(pos_tt[source, ])
-        if (plot_smoothed)
-            fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
-        lines(
-          x = x,
-          y = if (plot_smoothed) predict(fit) else y,
-          col = color_palette[source],
-          lwd = 2
-        )
-      }
-      legend(
-        "topleft",
-        legend = top_sources,
-        # cex = 0.8,
-        fill = color_palette[top_sources]
-      )
-    dev.off()
   }
 }
 
