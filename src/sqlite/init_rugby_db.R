@@ -1,5 +1,5 @@
 ## =============================================================================
-## sqlite_init_db.R
+## init_rugby_db.R
 ##
 ## ETL script that initializes a SQLite database matching the rugby DBML
 ## schema, and populates it from three source CSV files:
@@ -30,28 +30,25 @@
 ##     tables during the transform step. teams.csv DOES provide
 ##     rugbyscopeId, which is used as-is for `team.rugbyscope_id`.
 ## =============================================================================
-# setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/fusion/sqlite_init_db.R")
 
 suppressPackageStartupMessages({
-  library("DBI")
-  library("RSQLite")
-  library("readr")
-  library("dplyr")
-  library("purrr")
-  library("tidyr")
-  library("stringr")
+  library(DBI)
+  library(RSQLite)
+  library(readr)
+  library(dplyr)
+  library(purrr)
+  library(tidyr)
+  library(stringr)
 })
 
 ## -----------------------------------------------------------------------
 ## 0. CONFIGURATION
 ## -----------------------------------------------------------------------
 
-INPUT_FOLDER <- file.path("data", "fusion")
-PLAYERS_CSV <- file.path(INPUT_FOLDER, "players_14_normsizes.csv")
-TEAMS_CSV   <- file.path(INPUT_FOLDER, "teams_10_nacoms.csv")
-STINTS_CSV  <- file.path(INPUT_FOLDER, "stints_20_firststint.csv")
-DB_PATH     <- file.path("data", "rugby.sqlite")
+PLAYERS_CSV <- "players.csv"
+TEAMS_CSV   <- "teams.csv"
+STINTS_CSV  <- "stints.csv"
+DB_PATH     <- "rugby.sqlite"
 
 ## Start from a clean database every run
 if (file.exists(DB_PATH)) file.remove(DB_PATH)
@@ -219,7 +216,10 @@ venue_pairs <- venue_pairs %>%
 
 venue_dim <- venue_pairs %>%
   group_by(name) %>%
-  summarise(capacity = first(na.omit(capacity)), .groups = "drop") %>%
+  summarise(
+    capacity = if (all(is.na(capacity))) NA_integer_ else first(na.omit(capacity)),
+    .groups = "drop"
+  ) %>%
   arrange(name) %>%
   mutate(rugbyscope_id = row_number()) %>%
   select(rugbyscope_id, name, capacity)

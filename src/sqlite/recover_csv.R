@@ -49,7 +49,7 @@
 ##     alongside rugbyscope_id) and ORDER BY that instead below.
 ## =============================================================================
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
-# source("src/fusion/sqlite_recover_csv.R")
+# source("src/sqlite/recover_csv.R")
 
 suppressPackageStartupMessages({
   library("DBI")
@@ -62,11 +62,11 @@ suppressPackageStartupMessages({
 ## 0. CONFIGURATION
 ## -----------------------------------------------------------------------
 
-OUTPUT_FOLDER <- file.path("data", "fusion")
+OUTPUT_FOLDER <- file.path("data")
 PLAYERS_CSV <- file.path(OUTPUT_FOLDER, "reconstructed_players.csv")
 TEAMS_CSV   <- file.path(OUTPUT_FOLDER, "reconstructed_teams.csv")
 STINTS_CSV  <- file.path(OUTPUT_FOLDER, "reconstructed_stints.csv")
-DB_PATH     <- file.path("data", "rugby.sqlite")
+DB_PATH     <- file.path(OUTPUT_FOLDER, "rugbyscope.sqlite")
 
 con <- dbConnect(RSQLite::SQLite(), DB_PATH)
 

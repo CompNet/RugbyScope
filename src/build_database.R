@@ -179,11 +179,15 @@ source("src/fusion/check_stints.R")
 
 ########################################################################
 # produce the SQL database
-source("src/final/sqlite_init_db.R")
+source("src/sqlite/init_db.R")
 # check that we reconstruct the original files correctly
-source("src/final/sqlite_recover_csv.R")
+source("src/sqlite/recover_csv.R")
+# produce SQL dump
+source("src/sqlite/dump_to_sql.R")
 
-# this produces the SQLite DB file `data/rugbyscope.sqlite`:
+# this produces the following files in folder `data`:
+# - `data/rugbyscope.sqlite`: SQLite DB file
+# - `data/rugbyscope.sql`: SQL script to re-create DB
 
 
 
