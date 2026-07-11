@@ -12,11 +12,11 @@ sum(!is.na(df$wikipediaEn))
 
 
 getwd()
-bio_capped <- read_csv("./data/wikipedia/english/PP_player_info_capped_players_2.csv")
-bio_wikidata <- read_csv("./data/wikipedia/english/PP_player_info_wikidata_players_4.csv")
+bio_capped <- read_csv("./data/wikipedia/english/raw0/PP_player_info_capped_players_2.csv")
+bio_wikidata <- read_csv("./data/wikipedia/english/raw0/PP_player_info_wikidata_players_4.csv")
 
-stint_capped <- read_csv("./data/wikipedia/english/PP_player_info_wikidata_players_4.csv")
-stint_wikidata <- read_csv("./data/wikipedia/english/PP_stint_info_wikidata_players_4.csv")
+stint_capped <- read_csv("./data/wikipedia/english/raw0/PP_player_info_wikidata_players_4.csv")
+stint_wikidata <- read_csv("./data/wikipedia/english/raw0/PP_stint_info_wikidata_players_4.csv")
 
 
 sum(bio_capped$wpPage %in% bio_wikidata$wpPage)/nrow(bio_capped)

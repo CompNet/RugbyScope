@@ -15,13 +15,13 @@
 # load tables
 tlog("Loading data tables")
 
-data_folder <- file.path("data", "fusion")
+data_folder <- file.path("data")
 
-players <- read.csv(file.path(data_folder, "players_14_normsizes.csv"))
+players <- read.csv(file.path(data_folder, "players.csv"))
 tlog(2, "Number of players: ", nrow(players))
 
-teams <- read.csv(file.path(data_folder, "teams_10_nacoms.csv"))
+teams <- read.csv(file.path(data_folder, "teams.csv"))
 tlog(2, "Number of teams: ", nrow(teams))
 
-stints <- read.csv(file.path(data_folder, "stints_20_firststint.csv"))
+stints <- read.csv(file.path(data_folder, "stints.csv"))
 tlog(2, "Number of stints: ", nrow(stints))

@@ -65,33 +65,32 @@ source("src/wikidata/integrate_reference.R")
 # retrieve the raw data from Wikipedia by looping over the players listed in the above table
 
 # japanese Wikipedia
-system("python src/wikipedia/japanese/retrieve_stints.pys")
+system("python src/wikipedia/japanese/retrieve_stints.py")
 # this produces the raw CSV files in folder `data/wikipedia/japanese/raw/`
 source("src/wikipedia/japanese/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/japanese/`
 
 # french Wikipedia
-system("python src/wikipedia/french/retrieve_stints.pys")
+system("python src/wikipedia/french/retrieve_stints.py")
 # this produces the raw CSV files in folder `data/wikipedia/french/raw/`
 source("src/wikipedia/french/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/french/`
 
 # italian Wikipedia
-system("python src/wikipedia/italian/retrieve_stints.pys")
+system("python src/wikipedia/italian/retrieve_stints.py")
 # this produces the raw CSV files in folder `data/wikipedia/italian/raw/`
 source("src/wikipedia/italian/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/italian/`
 
 # spanish Wikipedia
-system("python src/wikipedia/spanish/retrieve_stints.pys")
+system("python src/wikipedia/spanish/retrieve_stints.py")
 # this produces the raw CSV files in folder `data/wikipedia/spanish/raw/`
 source("src/wikipedia/spanish/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/spanish/`
 
 # english Wikipedia
-# TODO
 # this produces the raw CSV files in folder `data/wikipedia/english/raw/`
-source("src/wikipedia/english/clean_tables.R")
+system("python src/wikipedia/english/retrieve_stints.py")
 # this complements the data retrieved by the previous script, in the same folder
 source("src/wikipedia/english/clean_tables.R")
 # this produces the clean CSV files in folder `data/wikipedia/english/`
@@ -144,9 +143,66 @@ source("src/wikipedia/english/integrate_data.R")
 
 ########################################################################
 # finalize the tables by merging similar stints, and performing other cleaning operations
-source("src/final/clean_data.R")
-source("src/final/merge_stints.R")
-# this produces the following files in folder `data`:
+
+# first round of merging stints
+source("src/fusion/merge_stints.R")
+# other stint merging scripts, not used in the end
+source("src/fusion/merge_stints_identical.R")
+source("src/fusion/merge_stints_nested.R")
+
+# fix various issues
+source("src/fusion/clean_data.R")
+# add missing stint types
+source("src/fusion/add_stint_types.R")
+# detect missing birthdates
+source("src/fusion/complement_birthdates.R")
+# add missing stint years
+source("src/fusion/complement_firststints.R")
+
+# identify remaining errors for manual fix
+source("src/fusion/check_players.R")
+source("src/fusion/check_teams.R")
+source("src/fusion/check_stints.R")
+
+# this produces all the remaning files in folder `data/fusion`:
+# - `players_XX.csv`: various versions of the players table
+# - `teams_XX.csv`: various versions of the teams table
+# - `stints_XX.csv`: various versions of the stint tables
+
+# the very final version of these tables is located in folder `data`:
 # - `players.csv`: final list of players
 # - `teams.csv`: final list of teams
 # - `stints.csv`: final list of stints
+
+
+
+
+########################################################################
+# produce the SQL database
+source("src/final/sqlite_init_db.R")
+# check that we reconstruct the original files correctly
+source("src/final/sqlite_recover_csv.R")
+
+# this produces the SQLite DB file `data/rugbyscope.sqlite`:
+
+
+
+
+########################################################################
+# generate stats and plots for the final version of the database
+
+# statistics for the data taken globally
+source("src/stats/global_players.R")
+source("src/stats/global_teams.R")
+source("src/stats/global_stints.R")
+
+# statistics considering the temporal evolution of the data
+source("src/stats/evol_player-nbr.R")
+source("src/stats/evol_player-size.R")
+source("src/stats/evol_player-completeness.R")
+source("src/stats/evol_team-nbr.R")
+source("src/stats/evol_team-completeness.R")
+source("src/stats/evol_stint-nbr.R")
+source("src/stats/evol_stint-completeness.R")
+
+# the produced files are located in folder `data/stats`

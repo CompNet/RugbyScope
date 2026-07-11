@@ -1,9 +1,17 @@
+# R and Rstudio configuration files
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
 
 .vscode/sftp.json
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# log folder
+log/*
 
 # Ignore all the individual files that were scraped:
 data/wikipedia/english/Wikidata/
@@ -28,10 +36,6 @@ data/wikipedia/english/Tonga/
 data/wikipedia/english/United States/
 data/wikipedia/english/Uruguay/
 
-# Python bytecode
-__pycache__/
-*.pyc
-
 # Local experiments / scratch for the english pipeline (not for sharing)
 src/wikipedia/english/sandbox/
 
@@ -42,3 +46,8 @@ data/wikipedia/english/**/PP_cleaned/
 
 # Ignore all JSON outputs in the english folder (from Vincent)
 /data/wikipedia/english/*.json
+
+data/others
+data/rugbyscope.sqlite
+src/others
+src/common/__pycache__

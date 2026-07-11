@@ -18,8 +18,8 @@ from _setup import *  # noqa: F403
 
 dir = "./data/wikipedia/english/"
 input_json_file = dir + "all_wikidata_players_profile_4.json"
-output_player_info_file = dir + "PP_player_info_wikidata_players_4.csv"
-output_player_stint_file = dir + "PP_stint_info_wikidata_players_4.csv"
+output_player_info_file = dir + "/raw0/PP_player_info_wikidata_players_4.csv"
+output_player_stint_file = dir + "/raw0/PP_stint_info_wikidata_players_4.csv"
 
 
 # load the json. 
