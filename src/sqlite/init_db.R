@@ -276,8 +276,8 @@ team_country_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$countries) %
   left_join(country_dim, by = c("value" = "country_name")) %>%
   transmute(team_id = id, country_id = rugbyscope_id)
 
-# team_governing_body
-team_gb_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$affiliations) %>%
+# team_affiliation
+team_affiliation_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$affiliations) %>%
   left_join(governing_body_dim, by = c("value" = "name")) %>%
   transmute(team_id = id, governing_body_id = rugbyscope_id)
 
@@ -445,7 +445,7 @@ CREATE TABLE team (
 );", sql_check_clause("type", team_type_domain)))
 
 dbExecute(con, "
-CREATE TABLE team_governing_body (
+CREATE TABLE team_affiliation (
   team_id INTEGER REFERENCES team(rugbyscope_id),
   governing_body_id INTEGER REFERENCES governing_body(rugbyscope_id)
 );")
@@ -564,7 +564,7 @@ CREATE TABLE stint_data_source (
 
 ## Helpful indexes on FK columns
 fk_indexes <- list(
-  c("team_governing_body", "team_id"), c("team_governing_body", "governing_body_id"),
+  c("team_affiliation", "team_id"), c("team_affiliation", "governing_body_id"),
   c("team_competition", "team_id"),    c("team_competition", "competition_id"),
   c("team_venue", "team_id"),          c("team_venue", "venue_id"),
   c("team_location", "team_id"),       c("team_location", "location_id"),
@@ -598,7 +598,7 @@ dbWriteTable(con, "location",       location_dim,        append = TRUE, row.name
 dbWriteTable(con, "country",        country_dim,         append = TRUE, row.names = FALSE)
 
 dbWriteTable(con, "team", team_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "team_governing_body", team_gb_tbl, append = TRUE, row.names = FALSE)
+dbWriteTable(con, "team_affiliation", team_affiliation_tbl, append = TRUE, row.names = FALSE)
 dbWriteTable(con, "team_competition", team_competition_tbl, append = TRUE, row.names = FALSE)
 dbWriteTable(con, "team_venue", team_venue_tbl, append = TRUE, row.names = FALSE)
 dbWriteTable(con, "team_location", team_location_tbl, append = TRUE, row.names = FALSE)

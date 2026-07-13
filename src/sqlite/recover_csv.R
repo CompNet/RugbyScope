@@ -122,7 +122,7 @@ country        <- dbReadTable(con, "country") %>% as_tibble()
 
 team_altname_c <- collapse_multi(read_ordered("team_altname"), "team_id", "altname")
 
-team_gb_c <- read_ordered("team_governing_body") %>%
+team_affiliation_c <- read_ordered("team_affiliation") %>%
   left_join(governing_body, by = c("governing_body_id" = "rugbyscope_id")) %>%
   collapse_multi("team_id", "name")
 
@@ -156,7 +156,7 @@ team_venue_c <- read_ordered("team_venue") %>%
 
 teams_out <- team %>%
   left_join(team_altname_c      %>% rename(altNames = value),      by = c("rugbyscope_id" = "id")) %>%
-  left_join(team_gb_c           %>% rename(affiliations = value),  by = c("rugbyscope_id" = "id")) %>%
+  left_join(team_affiliation_c  %>% rename(affiliations = value),  by = c("rugbyscope_id" = "id")) %>%
   left_join(team_country_c      %>% rename(countries = value),     by = c("rugbyscope_id" = "id")) %>%
   left_join(team_competition_c  %>% rename(competitions = value),  by = c("rugbyscope_id" = "id")) %>%
   left_join(team_location_c     %>% rename(locations = value),     by = c("rugbyscope_id" = "id")) %>%
