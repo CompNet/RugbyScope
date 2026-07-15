@@ -18,7 +18,7 @@ source("src/common/norm_positions.R")
 ########################################################################
 # parameters
 
-mode <- "active-years"  # "start-year" or "active-years"
+mode <- "start-year"  # "start-year" or "active-years"
 mode_labels <- c("start-year" = "career start year", "active-years" = "active years")
 mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
@@ -176,13 +176,36 @@ for (size_name in c("height", "weight")) {
   tlog("Producing plot file: ", plot_file)
 
   pdf(plot_file, width = 14, height = 7)
-    plot(
-      x = size_years, y = vals[[size_name]],
+    par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+    par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
+    # init plot
+    plot(NULL,
       xlab = mode_xlabels[mode], ylab = size_labels[size_name],
-      log = if (plot_log) "y" else "",
-      col = "#ff00000b", pch = 19,
-      main = paste0("Average player ", size_name," as a function of ", mode_labels[mode])
+      #main = paste0("Average player ", size_name," as a function of ", mode_labels[mode]),
+      xlim = c(min(as.integer(un_years)), max(as.integer(un_years))),
+      ylim = c(min(vals[[size_name]], na.rm = TRUE), max(vals[[size_name]], na.rm = TRUE))
     )
+    # add vertical lines
+    abline(v = "1871", col = "black")
+    abline(v = "1895", col = "black")
+    u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
+    u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
+    rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
+    # abline(v = "1914", col = "black")
+    # abline(v = "1918", col = "black")
+    rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
+    # abline(v = "1939", col = "black")
+    # abline(v = "1945", col = "black")
+    abline(v = "1995", col = "black")
+    for (year in seq(1987, 2023, by = 4))
+      abline(v = year, col = "black", lty = 3)
+    axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
+    # add points
+    points(
+      x = size_years, y = vals[[size_name]],
+      col = "#ff00000b", pch = 19
+    )
+    # add lines
     lines(
       x = un_years, y = av_vals[[size_name]],
       col = "black",
@@ -295,19 +318,37 @@ plot_log <- FALSE
           tlog("Producing plot file: ", plot_file)
 
           pdf(plot_file, width = 14, height = 7)
+            par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+            par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
+
             # init plot
             plot(NULL,
               xlab = mode_xlabels[mode], ylab = size_labels[size_name],
               log = if (plot_log) "y" else "",
-              main = paste0("Average player ", size_name," as a function of ", mode_labels[mode]),
+              #main = paste0("Average player ", size_name," as a function of ", mode_labels[mode]),
               xlim = c(min(as.integer(un_years)), max(as.integer(un_years))),
               ylim = c(min(vals[[size_name]], na.rm = TRUE), max(vals[[size_name]], na.rm = TRUE))
             )
 
-            # add series
-            for (position in top_positions) {
-              # plot points
-              if (plot_points) {
+            # add vertical lines
+            abline(v = "1871", col = "black")
+            abline(v = "1895", col = "black")
+            u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
+            u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
+            rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
+            # abline(v = "1914", col = "black")
+            # abline(v = "1918", col = "black")
+            rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
+            # abline(v = "1939", col = "black")
+            # abline(v = "1945", col = "black")
+            abline(v = "1995", col = "black")
+            for (y in seq(1987, 2023, by = 4))
+              abline(v = y, col = "black", lty = 3)
+            axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
+
+            # plot points
+            if (plot_points) {
+              for (position in top_positions) {
                 idx <- which(positions2 == position)
                 x <- as.integer(position_years[idx])
                 y <- as.integer(vals[[size_name]][idx])
@@ -316,7 +357,10 @@ plot_log <- FALSE
                   col = make.color.transparent(color = color_palette[position], transparency = 95)
                 )
               }
-              # plot average
+            }
+
+            # plot average
+            for (position in top_positions) {
               x <- as.integer(un_years)
               y <- as.integer(av_vals[[size_name]][position, ])
               if (length(which(!is.na(y))) > 2) {
@@ -336,7 +380,8 @@ plot_log <- FALSE
               "topleft",
               legend = top_positions,
               # cex = 0.8,
-              fill = color_palette[top_positions]
+              fill = color_palette[top_positions],
+              bg = "#FFFFFFBB"
             )
           dev.off()
         }

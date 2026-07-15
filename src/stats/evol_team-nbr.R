@@ -121,30 +121,41 @@ for (plot_log in c(FALSE, TRUE)) {
     all_tt2 <- all_tt[!is.na(names(all_tt))]
 
     pdf(plot_file, width = 14, height = 7)
-    x <- as.integer(names(all_tt2))
-    y <- as.integer(all_tt2)
-    if (plot_smoothed)
-      fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
-    # init plot
-    plot(NULL,
-      xlim = range(x, na.rm = TRUE),
-      ylim = range(y, na.rm = TRUE),
-      xlab = mode_xlabels[mode], ylab = "Number of teams",
-      main = paste0("Number of teams as a function of ", mode_labels[mode]),
-      log = if (plot_log) "y" else ""
-    )
-    # add vertical lines
-    abline(v = "1914", col = "black")
-    abline(v = "1918", col = "black")
-    abline(v = "1939", col = "black")
-    abline(v = "1945", col = "black")
-    axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
-    # add line
-    lines(
-      x = x,
-      y = if (plot_smoothed) predict(fit) else y,
-      type = "l", col = "red", lwd = 2
-    )
+      par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+      par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
+      x <- as.integer(names(all_tt2))
+      y <- as.integer(all_tt2)
+      if (plot_smoothed)
+        fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
+      # init plot
+      plot(NULL,
+        xlim = range(x, na.rm = TRUE),
+        ylim = range(y, na.rm = TRUE),
+        xlab = mode_xlabels[mode], ylab = "Number of teams",
+        #main = paste0("Number of teams as a function of ", mode_labels[mode]),
+        log = if (plot_log) "y" else ""
+      )
+      # add vertical lines
+      abline(v = "1871", col = "black")
+      abline(v = "1895", col = "black")
+      u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
+      u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
+      rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
+      # abline(v = "1914", col = "black")
+      # abline(v = "1918", col = "black")
+      rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
+      # abline(v = "1939", col = "black")
+      # abline(v = "1945", col = "black")
+      abline(v = "1995", col = "black")
+      for (year in seq(1987, 2023, by = 4))
+        abline(v = year, col = "black", lty = 3)
+      axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
+      # add line
+      lines(
+        x = x,
+        y = if (plot_smoothed) predict(fit) else y,
+        type = "l", col = "red", lwd = 2
+      )
     dev.off()
   }
 }
@@ -202,20 +213,31 @@ for (plot_log in c(FALSE, TRUE)) {
         countr_tt2[countr_tt2 == 0] <- 1
 
       pdf(plot_file, width = 14, height = 7)
+        par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+        par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
         # init plot
         plot(NULL,
           xlab = mode_xlabels[mode], ylab = "Number of teams",
           log = if (plot_log) "y" else "",
-          main = paste0("Number of teams as a function of ", mode_labels[mode]),
+          #main = paste0("Number of teams as a function of ", mode_labels[mode]),
           xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
           ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
         )
         # add vertical lines
-        abline(v = "1914", col = "black")
-        abline(v = "1918", col = "black")
-        abline(v = "1939", col = "black")
-        abline(v = "1945", col = "black")
-        axis(3, at = c(1916, 1942), labels = c("WW1", "WW2"))
+        abline(v = "1871", col = "black")
+        abline(v = "1895", col = "black")
+        u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
+        u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
+        rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
+        # abline(v = "1914", col = "black")
+        # abline(v = "1918", col = "black")
+        rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
+        # abline(v = "1939", col = "black")
+        # abline(v = "1945", col = "black")
+        abline(v = "1995", col = "black")
+        for (y in seq(1987, 2023, by = 4))
+          abline(v = y, col = "black", lty = 3)
+        axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
         # add series
         for (country in top_countries) {
           x <- as.integer(colnames(countr_tt2))
@@ -234,7 +256,8 @@ for (plot_log in c(FALSE, TRUE)) {
           "topleft",
           legend = top_countries,
           # cex = 0.8,
-          fill = color_palette[top_countries]
+          fill = color_palette[top_countries],
+          bg = "#FFFFFFBB"
         )
       dev.off()
     }
@@ -294,14 +317,31 @@ for (plot_log in c(FALSE, TRUE)) {
         pos_tt[pos_tt == 0] <- NA
 
       pdf(plot_file, width = 14, height = 7)
+        par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+        par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
         # init plot
         plot(NULL,
           xlab = mode_xlabels[mode], ylab = "Number of teams",
           log = if (plot_log) "y" else "",
-          main = paste0("Number of teams as a function of ", mode_labels[mode]),
+          #main = paste0("Number of teams as a function of ", mode_labels[mode]),
           xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
           ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
         )
+        # add vertical lines
+        abline(v = "1871", col = "black")
+        abline(v = "1895", col = "black")
+        u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
+        u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
+        rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
+        # abline(v = "1914", col = "black")
+        # abline(v = "1918", col = "black")
+        rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
+        # abline(v = "1939", col = "black")
+        # abline(v = "1945", col = "black")
+        abline(v = "1995", col = "black")
+        for (y in seq(1987, 2023, by = 4))
+          abline(v = y, col = "black", lty = 3)
+        axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
         # add series
         for (type in top_types) {
           x <- as.integer(colnames(pos_tt))
@@ -384,14 +424,31 @@ for (plot_log in c(FALSE, TRUE)) {
       pos_tt[pos_tt == 0] <- NA
 
     pdf(plot_file, width = 14, height = 7)
+      par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+      par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
       # init plot
       plot(NULL,
         xlab = mode_xlabels[mode], ylab = "Number of teams",
         log = if (plot_log) "y" else "",
-        main = paste0("Number of teams as a function of ", mode_labels[mode]),
+        #main = paste0("Number of teams as a function of ", mode_labels[mode]),
         xlim = c(min(as.integer(colnames(pos_tt))), max(as.integer(colnames(pos_tt)))),
         ylim = c(min(pos_tt, na.rm = TRUE), max(pos_tt, na.rm = TRUE))
       )
+      # add vertical lines
+      abline(v = "1871", col = "black")
+      abline(v = "1895", col = "black")
+      u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
+      u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
+      rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
+      # abline(v = "1914", col = "black")
+      # abline(v = "1918", col = "black")
+      rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
+      # abline(v = "1939", col = "black")
+      # abline(v = "1945", col = "black")
+      abline(v = "1995", col = "black")
+      for (y in seq(1987, 2023, by = 4))
+        abline(v = y, col = "black", lty = 3)
+      axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
       # add series
       for (source in top_sources) {
         x <- as.integer(colnames(pos_tt))

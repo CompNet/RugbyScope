@@ -85,6 +85,7 @@ plot_top <- 12
 
 # get country info
 countries <- c()
+country_counts <- c()
 for (p in 1:nrow(players)) {
   if (p %% 1000 == 0)
     tlog(2, "Processing player ", p, "/", nrow(players))
@@ -101,7 +102,9 @@ for (p in 1:nrow(players)) {
 
   # add to stat list
   countries <- c(countries, player_countries)
+  country_counts <- c(country_counts, length(player_countries))
 }
+tlog("Average number of country by player: ", mean(country_counts))
 
 # count values
 countr_tt <- table(countries, useNA = "always")
@@ -146,6 +149,7 @@ plot_top <- 12
 positions <- c()
 pos_heights <- c()
 pos_weights <- c()
+pos_counts <- c()
 for (p in 1:nrow(players)) {
   if (p %% 1000 == 0)
     tlog(2, "Processing entry ", p, "/", nrow(players))
@@ -158,10 +162,12 @@ for (p in 1:nrow(players)) {
 
     # add to stat list
     positions <- c(positions, player_positions)
+    pos_counts <- c(pos_counts, length(player_positions))
     pos_heights <- c(pos_heights, rep(players[p, "height"], length(player_positions)))
     pos_weights <- c(pos_weights, rep(players[p, "height"], length(player_positions)))
   }
 }
+tlog("Average number of position by player: ", mean(pos_counts))
 
 # loop over aggregation levels
 for (plot_agg in 1:4) {
@@ -355,6 +361,12 @@ for (plot_agg in 1:4) {
   dev.off()
 }
 
+
+
+
+########################################################################
+# distribution of stint number and duration
+# TODO stint number and duration, same for teams
 
 
 
