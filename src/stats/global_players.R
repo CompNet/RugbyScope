@@ -547,49 +547,49 @@ color_palette <- DATASOURCE_COLORS
 plot_file <- file.path(stats_folder, paste0("data-sources_barplot", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
-    par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
-    par(mar = c(1.50, 2.50, 0.00, 0.00))  # control margins: B L T R
-    heights <- sources_tt2[top_data_sources]
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(1.50, 2.50, 0.00, 0.00))  # control margins: B L T R
+  heights <- sources_tt2[top_data_sources]
 
-    # init plot
-    bp <- barplot(
-      height = heights,
-      # xlab = "Player data source",
-      ylab = "Frequency",
-      names.arg = FALSE,
-      legend = FALSE,
-      #las = 2,
-      col = color_palette[top_data_sources]
+  # init plot
+  bp <- barplot(
+    height = heights,
+    # xlab = "Player data source",
+    ylab = "Frequency",
+    names.arg = FALSE,
+    legend = FALSE,
+    #las = 2,
+    col = color_palette[top_data_sources]
+  )
+  mtext("Player data sources", side = 1, line = 0.25)
+
+  # decide bar text pos
+  outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
+  inside_text <- which(heights >= 0.5 * max(heights, na.rm = TRUE))
+
+  # bar names on top
+  if (length(outside_text) > 0) {
+    text(bp[outside_text],
+      heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
+      labels = top_data_sources[outside_text],
+      col = "black",
+      srt = 90,
+      adj = c(0, 0.5),
+      xpd = TRUE
     )
-    mtext("Player data sources", side = 1, line = 0.25)
+  }
 
-    # decide bar text pos
-    outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
-    inside_text <- which(heights >= 0.5 * max(heights, na.rm = TRUE))
-
-    # bar names on top
-    if (length(outside_text) > 0) {
-      text(bp[outside_text],
-        heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
-        labels = top_data_sources[outside_text],
-        col = "black",
-        srt = 90,
-        adj = c(0, 0.5),
-        xpd = TRUE
-      )
-    }
-
-    # bar names inside
-    if (length(inside_text) > 0) {
-      text(bp[inside_text],
-        heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
-        labels = top_data_sources[inside_text],
-        col = text_color(color_palette[top_data_sources[inside_text]]),
-        srt = 90,
-        adj = c(1, 0.5),
-        xpd = TRUE
-      )
-    }
+  # bar names inside
+  if (length(inside_text) > 0) {
+    text(bp[inside_text],
+      heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
+      labels = top_data_sources[inside_text],
+      col = text_color(color_palette[top_data_sources[inside_text]]),
+      srt = 90,
+      adj = c(1, 0.5),
+      xpd = TRUE
+    )
+  }
 dev.off()
 
 # generate up-set diagram
@@ -728,7 +728,7 @@ for (g in 1:(length(field_groups) + 1)) {
   tlog("Producing plot file: ", plot_file)
   pdf(plot_file, width = 7, height = 7)
     par(mgp = c(2.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
-    par(mar = c(7.00, 3.00, 0.50, 0.00))  # control margins: B L T R
+    par(mar = c(9.00, 3.00, 0.50, 0.00))  # control margins: B L T R
 
     # init barplot
     bp <- barplot(
@@ -744,7 +744,7 @@ for (g in 1:(length(field_groups) + 1)) {
     # add bar values
     text(
       x = if (g > length(field_groups)) bp + 0.20 else bp,
-      y = vals - 0.1 * max(vals),
+      y = if (g > length(field_groups)) vals - 0.06 * max(vals) else vals - 0.1 * max(vals),
       labels = paste0(round(vals), "%", sep = ""),
       pos = 3, col = sapply(vals, function(val) if (val < 75) "white" else "black"),
       cex = if (g > length(field_groups)) 0.75 else 1.5, font = 2,
