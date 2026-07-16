@@ -281,3 +281,25 @@ make.color.transparent <- function(color, transparency = 50)
 	
 	return(res)
 }
+
+
+
+
+#############################################################
+# Decide whether some text color should be black or white
+# depending on the background color.
+#
+# col: background color.
+#
+# return: text color (either white or black).
+#############################################################
+text_color <- function(col) {
+  rgb <- col2rgb(col) / 255
+
+  # Relative luminance (WCAG)
+  lum <- 0.2126 * rgb[1, ] +
+         0.7152 * rgb[2, ] +
+         0.0722 * rgb[3, ]
+
+  ifelse(lum > 0.5, "black", "white")
+}

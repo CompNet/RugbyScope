@@ -122,54 +122,54 @@ names(colors) <- fields
 
 for (plot_log in c(FALSE, TRUE)) {
   for (plot_smoothed in c(FALSE, TRUE)) {
-      plot_file <- file.path(stats_folder, paste0("completeness_all-fields", "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
-      tlog("Producing plot file: ", plot_file)
+    plot_file <- file.path(stats_folder, paste0("completeness_all-fields", "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
+    tlog("Producing plot file: ", plot_file)
 
-      pdf(plot_file, width = 14, height = 7)
-        par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
-        par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
-        # init plot
-        plot(NULL,
-          xlab = mode_xlabels[mode], ylab = "Completeness rate (%)",
-          #main = paste0("Stint field completeness as a function of ", mode_labels[mode]),
-          log = if (plot_log) "y" else "",
-          xlim = range(ref_years[idx]), ylim = if (plot_log) c(1, 100) else c(0, 100)
+    pdf(plot_file, width = 14, height = 7)
+      par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+      par(mar = c(3.00, 2.75, 1.75, 0.10))  # control margins: B L T R
+      # init plot
+      plot(NULL,
+        xlab = mode_xlabels[mode], ylab = "Completeness rate (%)",
+        #main = paste0("Stint field completeness as a function of ", mode_labels[mode]),
+        log = if (plot_log) "y" else "",
+        xlim = range(ref_years[idx]), ylim = if (plot_log) c(1, 100) else c(0, 100)
+      )
+      # add vertical lines
+      abline(v = "1871", col = "black")
+      abline(v = "1895", col = "black")
+      u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
+      u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
+      rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
+      # abline(v = "1914", col = "black")
+      # abline(v = "1918", col = "black")
+      rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
+      # abline(v = "1939", col = "black")
+      # abline(v = "1945", col = "black")
+      abline(v = "1995", col = "black")
+      for (y in seq(1987, 2023, by = 4))
+        abline(v = y, col = "black", lty = 3)
+      axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
+      # add series
+      for (field in fields) {
+        x <- as.integer(names(vals[[field]]))
+        y <- c(vals[[field]])
+        if (plot_smoothed)
+          fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
+        lines(
+          x = x,
+          y = if (plot_smoothed) predict(fit) else y,
+          type = "l", col = colors[field], lwd = 2
         )
-        # add vertical lines
-        abline(v = "1871", col = "black")
-        abline(v = "1895", col = "black")
-        u3 <- if (plot_log) 10^par("usr")[3] else par("usr")[3]
-        u4 <- if (plot_log) 10^par("usr")[4] else par("usr")[4]
-        rect(1914, u3, 1918, u4, border = NA, col = "#EEEEEE")
-        # abline(v = "1914", col = "black")
-        # abline(v = "1918", col = "black")
-        rect(1939, u3, 1945, u4, border = NA, col = "#EEEEEE")
-        # abline(v = "1939", col = "black")
-        # abline(v = "1945", col = "black")
-        abline(v = "1995", col = "black")
-        for (y in seq(1987, 2023, by = 4))
-          abline(v = y, col = "black", lty = 3)
-        axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
-        # add series
-        for (field in fields) {
-          x <- as.integer(names(vals[[field]]))
-          y <- c(vals[[field]])
-          if (plot_smoothed)
-            fit <- loess(y ~ x, na.action = na.exclude, span = 0.05)
-          lines(
-            x = x,
-            y = if (plot_smoothed) predict(fit) else y,
-            type = "l", col = colors[field], lwd = 2
-          )
-        }
-        # add legend
-        legend(
-          "bottomleft",
-          legend = fields,
-          # cex = 0.8,
-          fill = colors[fields],
-          bg = "#FFFFFFBB"
-        )
+      }
+      # add legend
+      legend(
+        "bottomleft",
+        legend = fields,
+        # cex = 0.8,
+        fill = colors[fields],
+        bg = "#FFFFFFBB"
+      )
     dev.off()
   }
 }

@@ -459,7 +459,7 @@ for (plot_log in c(FALSE, TRUE)) {
         legend = top_types,
         # cex = 0.8,
         fill = color_palette[top_types],
-          bg = "#FFFFFFBB"
+        bg = "#FFFFFFBB"
       )
     dev.off()
   }
