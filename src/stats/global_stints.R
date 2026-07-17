@@ -50,12 +50,15 @@ start_dates <- start_dates[!is.na(start_dates)]
 plot_file <- file.path(stats_folder, paste0("start-years", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
   hist(start_dates,
     main = NA,
     xlab = "Stint start year",
     col = "red",
-    breaks = 30,
-    las = 2
+    # las = 2,
+    breaks = 30
   )
 dev.off()
 
@@ -71,12 +74,15 @@ end_dates <- end_dates[!is.na(end_dates)]
 plot_file <- file.path(stats_folder, paste0("end-years", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
   hist(end_dates,
     main = NA,
     xlab = "Stint end year",
     col = "red",
-    breaks = 30,
-    las = 2
+    # las = 2,
+    breaks = 30
   )
 dev.off()
 
@@ -108,13 +114,76 @@ names(color_palette) <- top_types
 plot_file <- file.path(stats_folder, paste0("types", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
-  barplot(
-    height = types_tt2[top_types],
-    names.arg = top_types,
-    #xlab = "Stint types",
+  par(mgp = c(3.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(1.50, 4.00, 0.25, 0.00))  # control margins: B L T R
+  heights <- types_tt2[top_types]
+
+  # init plot
+  bp <- barplot(
+    height = heights,
+    #xlab = "Stint type",
+    ylab = "Frequency",
+    names.arg = FALSE,
     legend = FALSE,
-    #las = 2, log = "y",
+    las = 2,
     col = color_palette[top_types]
+  )
+  mtext("Stint type", side = 1, line = 0.25)
+
+  # decide bar text pos
+  outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
+  inside_text <- which(heights >= 0.5 * max(heights, na.rm = TRUE))
+  
+  # bar names on top
+  if (length(outside_text) > 0) {
+    text(bp[outside_text],
+      heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
+      labels = top_types[outside_text], cex = 2,
+      col = "black",
+      srt = 90,
+      adj = c(0, 0.5),
+      xpd = TRUE
+    )
+  }
+
+  # bar names inside
+  if (length(inside_text) > 0) {
+    text(bp[inside_text],
+      heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
+      labels = top_types[inside_text], cex = 2,
+      col = text_color(color_palette[top_types[inside_text]]),
+      srt = 90,
+      adj = c(1, 0.5),
+      xpd = TRUE
+    )
+  }
+dev.off()
+
+
+
+
+########################################################################
+# distribution of stint duration
+
+# retrieve stint stats
+stint_dur <- stints[, "endYear"] - stints[, "startYear"]
+tlog("Average stint duration: ", mean(stint_dur, na.rm = TRUE), "(sd: ", sd(stint_dur, na.rm = TRUE),")")
+
+plot_file <- file.path(stats_folder, paste0("durations", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  # excluding a statistic anomaly: a 50 year long stint (far longer than the rest)
+  idx <- which(stints[, "playerId"] == "Q131675151")
+
+  hist(stint_dur[-idx],
+    main = NA,
+    xlab = "Stint duration",
+    col = "red",
+    breaks = max(stint_dur, na.rm = TRUE)
+    # log = "y"
   )
 dev.off()
 
@@ -135,7 +204,7 @@ for (s in 1:nrow(stints)) {
   # get data source list
   lst <- strsplit(stints[s, "dataSources"], split = ";")
   for (source in lst[[1]])
-    data_sources_df[t, trimws(source)] <- 1
+    data_sources_df[s, trimws(source)] <- 1
   stint_data_sources <- trimws(lst[[1]])
 
   # add to stat list
@@ -160,14 +229,49 @@ color_palette <- DATASOURCE_COLORS
 plot_file <- file.path(stats_folder, paste0("data-sources_barplot", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
-  barplot(
-    height = sources_tt2[top_data_sources],
-    names.arg = top_data_sources,
-    #xlab = "Stint data sources",
+  par(mgp = c(3.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(1.50, 4.00, 0.25, 0.00))  # control margins: B L T R
+  heights <- sources_tt2[top_data_sources]
+
+  # init plot
+  bp <- barplot(
+    height = heights,
+    #xlab = "Stint data source",
+    ylab = "Frequency",
+    names.arg = FALSE,
     legend = FALSE,
     las = 2,
     col = color_palette[top_data_sources]
   )
+  mtext("Stint data source", side = 1, line = 0.25)
+
+  # decide bar text pos
+  outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
+  inside_text <- which(heights >= 0.5 * max(heights, na.rm = TRUE))
+  
+  # bar names on top
+  if (length(outside_text) > 0) {
+    text(bp[outside_text],
+      heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
+      labels = top_data_sources[outside_text], cex = 2,
+      col = "black",
+      srt = 90,
+      adj = c(0, 0.5),
+      xpd = TRUE
+    )
+  }
+
+  # bar names inside
+  if (length(inside_text) > 0) {
+    text(bp[inside_text],
+      heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
+      labels = top_data_sources[inside_text], cex = 2,
+      col = text_color(color_palette[top_data_sources[inside_text]]),
+      srt = 90,
+      adj = c(1, 0.5),
+      xpd = TRUE
+    )
+  }
 dev.off()
 
 # generate up-set diagram
@@ -251,14 +355,49 @@ color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
 plot_file <- file.path(stats_folder, paste0("team-countries", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
-  barplot(
-    height = tm_countr_tt2[top_countries],
-    names.arg = top_countries,
-    #xlab = "Stint team countries",
+  par(mgp = c(3.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(1.50, 4.00, 0.25, 0.00))  # control margins: B L T R
+  heights <- tm_countr_tt2[top_countries]
+
+  # init plot
+  bp <- barplot(
+    height = heights,
+    #xlab = "Stint team country",
+    ylab = "Frequency",
+    names.arg = FALSE,
     legend = FALSE,
     las = 2,
     col = color_palette[top_countries]
   )
+  mtext("Stint team country", side = 1, line = 0.25)
+
+  # decide bar text pos
+  outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
+  inside_text <- which(heights >= 0.5 * max(heights, na.rm = TRUE))
+
+  # bar names on top
+  if (length(outside_text) > 0) {
+    text(bp[outside_text],
+      heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
+      labels = top_countries[outside_text],
+      col = "black",
+      srt = 90,
+      adj = c(0, 0.5),
+      xpd = TRUE
+    )
+  }
+
+  # bar names inside
+  if (length(inside_text) > 0) {
+    text(bp[inside_text],
+      heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
+      labels = top_countries[inside_text],
+      col = text_color(color_palette[top_countries[inside_text]]),
+      srt = 90,
+      adj = c(1, 0.5),
+      xpd = TRUE
+    )
+  }
 dev.off()
 
 
@@ -312,14 +451,49 @@ color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
 plot_file <- file.path(stats_folder, paste0("player-countries", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
-  barplot(
-    height = pl_countr_tt2[top_countries],
-    names.arg = top_countries,
-    #xlab = "Stint player countries",
+  par(mgp = c(3.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(1.50, 4.00, 0.25, 0.00))  # control margins: B L T R
+  heights <- pl_countr_tt2[top_countries]
+
+  # init plot
+  bp <- barplot(
+    height = heights,
+    #xlab = "Stint player country",
+    ylab = "Frequency",
+    names.arg = FALSE,
     legend = FALSE,
     las = 2,
     col = color_palette[top_countries]
   )
+  mtext("Stint player country", side = 1, line = 0.25)
+
+  # decide bar text pos
+  outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
+  inside_text <- which(heights >= 0.5 * max(heights, na.rm = TRUE))
+
+  # bar names on top
+  if (length(outside_text) > 0) {
+    text(bp[outside_text],
+      heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
+      labels = top_countries[outside_text],
+      col = "black",
+      srt = 90,
+      adj = c(0, 0.5),
+      xpd = TRUE
+    )
+  }
+
+  # bar names inside
+  if (length(inside_text) > 0) {
+    text(bp[inside_text],
+      heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
+      labels = top_countries[inside_text],
+      col = text_color(color_palette[top_countries[inside_text]]),
+      srt = 90,
+      adj = c(1, 0.5),
+      xpd = TRUE
+    )
+  }
 dev.off()
 
 
@@ -460,6 +634,10 @@ colors <- pal[pmax(1, pmin(100, round(vals)))]
 plot_file <- file.path(stats_folder, paste0("completeness_all-fields.pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(2.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(9.00, 3.00, 0.50, 0.00))  # control margins: B L T R
+
+  # init plot
   bp <- barplot(
     height = vals,
     names.arg = fields,
@@ -468,6 +646,8 @@ pdf(plot_file, width = 7, height = 7)
     las = 2,
     col = colors,
   )
+
+  # add bar text
   text(
     x = bp,
     y = vals - 0.1 * max(vals),

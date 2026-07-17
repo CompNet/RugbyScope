@@ -153,6 +153,7 @@ pdf(plot_file, width = 7, height = 7)
   # decide bar text pos
   outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
   inside_text <- which(heights >= 0.5 * max(heights, na.rm = TRUE))
+
   # bar names on top
   if (length(outside_text) > 0) {
     text(bp[outside_text],
@@ -561,7 +562,7 @@ pdf(plot_file, width = 7, height = 7)
     #las = 2,
     col = color_palette[top_data_sources]
   )
-  mtext("Player data sources", side = 1, line = 0.25)
+  mtext("Player data source", side = 1, line = 0.25)
 
   # decide bar text pos
   outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
@@ -571,7 +572,7 @@ pdf(plot_file, width = 7, height = 7)
   if (length(outside_text) > 0) {
     text(bp[outside_text],
       heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
-      labels = top_data_sources[outside_text],
+      labels = top_data_sources[outside_text], cex = 2,
       col = "black",
       srt = 90,
       adj = c(0, 0.5),
@@ -583,7 +584,7 @@ pdf(plot_file, width = 7, height = 7)
   if (length(inside_text) > 0) {
     text(bp[inside_text],
       heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
-      labels = top_data_sources[inside_text],
+      labels = top_data_sources[inside_text], cex = 2,
       col = text_color(color_palette[top_data_sources[inside_text]]),
       srt = 90,
       adj = c(1, 0.5),
