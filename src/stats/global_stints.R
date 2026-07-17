@@ -44,16 +44,25 @@ source("src/stats/load_all_tables.R")
 ########################################################################
 # distribution of start years
 
+# compute stats
 start_dates <- stints[, "startYear"]
+tt <- table(start_dates, useNA = "always")
 start_dates <- start_dates[!is.na(start_dates)]
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("start-years0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("StartYear", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# produce plot
 plot_file <- file.path(stats_folder, paste0("start-years", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
   par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
 
-  hist(start_dates,
+  hh <- hist(start_dates,
     main = NA,
     xlab = "Stint start year",
     col = "red",
@@ -62,22 +71,37 @@ pdf(plot_file, width = 7, height = 7)
   )
 dev.off()
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("start-years", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
 
 
 
 ########################################################################
 # distribution of end years
 
+# compute stats
 end_dates <- stints[, "endYear"]
+tt <- table(end_dates, useNA = "always")
 end_dates <- end_dates[!is.na(end_dates)]
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("end-years0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("EndYear", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# produce plot
 plot_file <- file.path(stats_folder, paste0("end-years", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
   par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
 
-  hist(end_dates,
+  hh <- hist(end_dates,
     main = NA,
     xlab = "Stint end year",
     col = "red",
@@ -85,6 +109,12 @@ pdf(plot_file, width = 7, height = 7)
     breaks = 30
   )
 dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("end-years", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -98,6 +128,11 @@ types <- stints[, "type"]
 # count values
 types_tt <- table(types, useNA = "always")
 print(types_tt)
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("types0", ".csv"))
+tab <- as.data.frame(types_tt)
+colnames(tab) <- c("Type", "Count")
+write.csv(as.data.frame(tab), tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # focus on most frequent values
 types_tt0 <- sort(table(types, useNA = "no"), decreasing = TRUE)
@@ -159,6 +194,11 @@ pdf(plot_file, width = 7, height = 7)
   }
 dev.off()
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("types", ".csv"))
+tab <- cbind("Type" = top_types, "Count" = heights)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
 
 
 
@@ -167,8 +207,16 @@ dev.off()
 
 # retrieve stint stats
 stint_dur <- stints[, "endYear"] - stints[, "startYear"]
+tt <- table(stint_dur, useNA = "always")
 tlog("Average stint duration: ", mean(stint_dur, na.rm = TRUE), "(sd: ", sd(stint_dur, na.rm = TRUE),")")
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("durations0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("Duration", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# plot stint durations
 plot_file <- file.path(stats_folder, paste0("durations", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
@@ -178,7 +226,7 @@ pdf(plot_file, width = 7, height = 7)
   # excluding a statistic anomaly: a 50 year long stint (far longer than the rest)
   idx <- which(stints[, "playerId"] == "Q131675151")
 
-  hist(stint_dur[-idx],
+  hh <- hist(stint_dur[-idx],
     main = NA,
     xlab = "Stint duration",
     col = "red",
@@ -186,6 +234,12 @@ pdf(plot_file, width = 7, height = 7)
     # log = "y"
   )
 dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("durations", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 
@@ -214,6 +268,12 @@ for (s in 1:nrow(stints)) {
 # count values
 sources_tt <- table(data_sources, useNA = "always")
 print(sources_tt)
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("data-sources0", ".csv"))
+tab <- as.data.frame(sources_tt)
+colnames(tab) <- c("Source", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # focus on most frequent values
 sources_tt0 <- sort(table(data_sources, useNA = "no"), decreasing = TRUE)
@@ -274,6 +334,11 @@ pdf(plot_file, width = 7, height = 7)
   }
 dev.off()
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("data-sources", ".csv"))
+tab <- cbind("Source" = top_data_sources, "Count" = heights)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
 # generate up-set diagram
 plot_file <- file.path(stats_folder, paste0("data-sources_up-set", ".pdf"))
 tlog("Producing plot file: ", plot_file)
@@ -310,6 +375,10 @@ pdf(plot_file, width = 7, height = 7)
   )
 dev.off()
 
+# export similarity as a csv file
+tab_file <- file.path(stats_folder, paste0("data-sources_jaccard-matrix", ".csv"))
+write.csv(jacc_sim, tab_file, row.names = TRUE, fileEncoding = "UTF-8")
+
 
 
 
@@ -336,6 +405,11 @@ for (s in 1:nrow(stints)) {
 # count values
 tm_countr_tt <- table(team_countries, useNA = "always")
 print(tm_countr_tt)
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("team-countries0", ".csv"))
+tab <- as.data.frame(tm_countr_tt)
+colnames(tab) <- c("Country", "Count")
+write.csv(as.data.frame(tab), tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # focus on most frequent values
 tm_countr_tt0 <- sort(table(team_countries, useNA = "no"), decreasing = TRUE)
@@ -400,6 +474,11 @@ pdf(plot_file, width = 7, height = 7)
   }
 dev.off()
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("team-countries", ".csv"))
+tab <- cbind("Country" = top_countries, "Count" = heights)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
 
 
 
@@ -432,6 +511,11 @@ for (s in 1:nrow(stints)) {
 # count values
 pl_countr_tt <- table(player_countries, useNA = "always")
 print(pl_countr_tt)
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("player-countries0", ".csv"))
+tab <- as.data.frame(pl_countr_tt)
+colnames(tab) <- c("Country", "Count")
+write.csv(as.data.frame(tab), tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # focus on most frequent values
 pl_countr_tt0 <- sort(table(player_countries, useNA = "no"), decreasing = TRUE)
@@ -496,6 +580,11 @@ pdf(plot_file, width = 7, height = 7)
   }
 dev.off()
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("player-countries", ".csv"))
+tab <- cbind("Country" = top_countries, "Count" = heights)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
 
 
 
@@ -532,6 +621,9 @@ for (s in 1:nrow(stints)) {
 # count values
 cr_tt <- table(cr_data_sources, cr_countries, useNA = "always")
 print(cr_tt)
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("data-sources_vs_player-countries_contingency0", "-nbr", ".csv"))
+write.csv(cr_tt, tab_file, row.names = TRUE, fileEncoding = "UTF-8")
 
 # replace minority countries
 idx <- which(is.na(colnames(cr_tt)) | !(colnames(cr_tt) %in% top_countries))
@@ -558,6 +650,10 @@ for (i in 1:2) {
       tl.col = "black"
     )
   dev.off()
+
+  # export values as a csv file
+  tab_file <- file.path(stats_folder, paste0("data-sources_vs_player-countries_contingency", if (i == 1) "-nbr" else "-prop", ".csv"))
+  write.csv(cr_tt2[, top_countries], tab_file, row.names = TRUE, fileEncoding = "UTF-8")
 }
 
 
@@ -590,6 +686,9 @@ for (s in 1:nrow(stints)) {
 # count values
 cr_tt <- table(cr_data_sources, cr_countries, useNA = "always")
 print(cr_tt)
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("data-sources_vs_team-countries_contingency0", "-nbr", ".csv"))
+write.csv(cr_tt, tab_file, row.names = TRUE, fileEncoding = "UTF-8")
 
 # replace minority countries
 idx <- which(is.na(colnames(cr_tt)) | !(colnames(cr_tt) %in% top_countries))
@@ -616,6 +715,10 @@ for (i in 1:2) {
       tl.col = "black"
     )
   dev.off()
+
+  # export values as a csv file
+  tab_file <- file.path(stats_folder, paste0("data-sources_vs_team-countries_contingency", if (i == 1) "-nbr" else "-prop", ".csv"))
+  write.csv(cr_tt2[, top_countries], tab_file, row.names = TRUE, fileEncoding = "UTF-8")
 }
 
 
@@ -630,8 +733,13 @@ vals <- sapply(fields, function(field) length(which(!is.na(stints[, field])))) *
 
 colors <- pal[pmax(1, pmin(100, round(vals)))]
 
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("completeness_all-fields", ".csv"))
+tab <- cbind("Field" = fields, "CompletenessRate" = vals)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
 # generate barplot
-plot_file <- file.path(stats_folder, paste0("completeness_all-fields.pdf"))
+plot_file <- file.path(stats_folder, paste0("completeness_all-fields", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   par(mgp = c(2.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
