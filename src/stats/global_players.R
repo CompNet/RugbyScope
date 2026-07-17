@@ -91,7 +91,7 @@ plot_top <- 12
 
 # get country info
 countries <- c()
-country_counts <- c()
+country_nbr <- c()
 for (p in 1:nrow(players)) {
   if (p %% 1000 == 0)
     tlog(2, "Processing player ", p, "/", nrow(players))
@@ -108,9 +108,10 @@ for (p in 1:nrow(players)) {
 
   # add to stat list
   countries <- c(countries, player_countries)
-  country_counts <- c(country_counts, length(player_countries))
+  country_nbr <- c(country_nbr, length(player_countries))
 }
-tlog("Average number of country by player: ", mean(country_counts))
+tlog("Number of distinct player countries: ", length(unique(countries)))
+tlog("Average number of countries by team: ", mean(country_nbr, na.rm = TRUE), " (", sd(country_nbr, na.rm = TRUE),")")
 
 # count values
 countr_tt <- table(countries, useNA = "always")
@@ -208,7 +209,8 @@ for (p in 1:nrow(players)) {
     pos_weights <- c(pos_weights, rep(players[p, "weight"], length(player_positions)))
   }
 }
-tlog("Average number of position by player: ", mean(pos_counts))
+tlog("Number of distinct player countries: ", length(unique(positions)))
+tlog("Average number of position by player: ", mean(pos_counts), " (", sd(pos_counts),")")
 
 # loop over aggregation levels
 for (plot_agg in 1:4) {

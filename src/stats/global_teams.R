@@ -94,6 +94,7 @@ plot_top <- 12
 
 # get country info
 countries <- c()
+country_nbr <- c()
 for (t in 1:nrow(teams)) {
   if (t %% 1000 == 0)
     tlog(2, "Processing team ", t, "/", nrow(teams))
@@ -104,7 +105,12 @@ for (t in 1:nrow(teams)) {
 
   # add to stat list
   countries <- c(countries, team_countries)
+  country_nbr <- c(country_nbr, length(team_countries))
 }
+tlog("Number of distinct team countries: ", length(unique(countries)))
+tlog("Average number of countries by team: ", mean(country_nbr, na.rm = TRUE), " (", sd(country_nbr, na.rm = TRUE),")")
+
+
 
 # count values
 countr_tt <- table(countries, useNA = "always")
