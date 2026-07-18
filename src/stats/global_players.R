@@ -44,8 +44,26 @@ source("src/stats/load_all_tables.R")
 ########################################################################
 # distribution of birthdates
 
-# compute stats
+# retrieve values
 birth_year <- players[, "birthDate"] %>% as.Date() %>% format("%Y") %>% as.integer()
+
+# earliest year
+earliest_date <- min(players[, "birthDate"], na.rm = TRUE)
+idx <- which(players[, "birthDate"] == earliest_date)
+earliest_player_names <- players[idx, "fullName"]
+tlog("Earliest birth date: ", paste0(earliest_date, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(earliest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# latest year
+latest_date <- max(players[, "birthDate"], na.rm = TRUE)
+idx <- which(players[, "birthDate"] == latest_date)
+latest_player_names <- players[idx, "fullName"]
+tlog("Latest birth date: ", paste0(latest_date, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(latest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# compute distribution
 tt <- table(birth_year, useNA = "always")
 birth_year <- birth_year[!is.na(birth_year)]
 
@@ -81,8 +99,26 @@ write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 ########################################################################
 # distribution of deathdates
 
-# compute stats
+# retrieve values
 death_year <- players[, "deathDate"] %>% as.Date() %>% format("%Y") %>% as.integer()
+
+# earliest year
+earliest_date <- min(players[, "deathDate"], na.rm = TRUE)
+idx <- which(players[, "deathDate"] == earliest_date)
+earliest_player_names <- players[idx, "fullName"]
+tlog("Earliest death date: ", paste0(earliest_date, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(earliest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# latest year
+latest_date <- max(players[, "deathDate"], na.rm = TRUE)
+idx <- which(players[, "deathDate"] == latest_date)
+latest_player_names <- players[idx, "fullName"]
+tlog("Latest death date: ", paste0(latest_date, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(latest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# compute distribution
 tt <- table(death_year, useNA = "always")
 death_year <- death_year[!is.na(death_year)]
 
@@ -116,6 +152,116 @@ write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 ########################################################################
+# distribution of career start years
+
+# retrieve values
+start_year <- players[, "careerStartYear"]
+
+# earliest year
+earliest_year <- min(start_year, na.rm = TRUE)
+idx <- which(players[, "careerStartYear"] == earliest_year)
+earliest_player_names <- players[idx, "fullName"]
+tlog("Earliest career start year: ", paste0(earliest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(earliest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# latest year
+latest_year <- max(start_year, na.rm = TRUE)
+idx <- which(players[, "careerStartYear"] == latest_year)
+latest_player_names <- players[idx, "fullName"]
+tlog("Latest career start year: ", paste0(latest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(latest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# compute distribution
+tt <- table(start_year, useNA = "always")
+start_year <- start_year[!is.na(start_year)]
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("career-start-years0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("CareerStartYear", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# produce plot
+plot_file <- file.path(stats_folder, paste0("career-start-years", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  hh <- hist(start_year,
+    main = NA,
+    xlab = "Player year of career start",
+    col = "red"
+  )
+dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("career-start-year", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+
+
+########################################################################
+# distribution of career end years
+
+# retrieve values
+end_year <- players[, "careerEndYear"]
+
+# earliest year
+earliest_year <- min(end_year, na.rm = TRUE)
+idx <- which(players[, "careerEndYear"] == earliest_year)
+earliest_player_names <- players[idx, "fullName"]
+tlog("Earliest career end year: ", paste0(earliest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(earliest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# latest year
+latest_year <- max(end_year, na.rm = TRUE)
+idx <- which(players[, "careerEndYear"] == latest_year)
+latest_player_names <- players[idx, "fullName"]
+tlog("Latest career end: ", paste0(latest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(latest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# compute distribution
+tt <- table(end_year, useNA = "always")
+end_year <- end_year[!is.na(end_year)]
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("career-end-years0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("CareerEndYear", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# produce plot
+plot_file <- file.path(stats_folder, paste0("career-end-years", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  hh <- hist(end_year,
+    main = NA,
+    xlab = "Player year of career end",
+    col = "red"
+  )
+dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("career-end-years", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+
+
+########################################################################
 # distribution of countries
 plot_top <- 12
 
@@ -141,7 +287,7 @@ for (p in 1:nrow(players)) {
   country_nbr <- c(country_nbr, length(player_countries))
 }
 tlog("Number of distinct player countries: ", length(unique(countries)))
-tlog("Average number of countries by team: ", mean(country_nbr, na.rm = TRUE), " (", sd(country_nbr, na.rm = TRUE),")")
+tlog("Average number of countries by player: ", mean(country_nbr, na.rm = TRUE), " (", sd(country_nbr, na.rm = TRUE),")")
 
 # count values
 countr_tt <- table(countries, useNA = "always")
@@ -344,7 +490,26 @@ for (plot_agg in 1:4) {
 ########################################################################
 # distribution of heights
 
+# retrieve values
 heights <- players[, "height"]
+
+# shortest player
+shortest_height <- min(heights, na.rm = TRUE)
+idx <- which(heights == shortest_height)
+shortest_player_names <- players[idx, "fullName"]
+tlog("Shortest height: ", paste0(shortest_height, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(shortest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# tallest player
+tallest_height <- max(heights, na.rm = TRUE)
+idx <- which(heights == tallest_height)
+tallest_player_names <- players[idx, "fullName"]
+tlog("Tallest height: ", paste0(tallest_height, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(tallest_player_names, collapse = ", "))
+print(players[idx, ])
+
+# remove empty values
 heights <- heights[!is.na(heights)]
 
 plot_file <- file.path(stats_folder, paste0("heights", ".pdf"))
@@ -523,11 +688,15 @@ for (plot_agg in 1:4) {
 
 
 ########################################################################
-# distribution of stint number and duration
+# distribution of stint number and duration, numbers of matches played and points scored
 
 # retrieve stint stats
 stint_nbr <- c()
 stint_dur <- c()
+points_scored_mean <- c()
+matches_played_mean <- c()
+points_scored_nbr <- c()
+matches_played_nbr <- c()
 for (p in 1:nrow(players)) {
   if (p %% 1000 == 0)
     tlog(2, "Processing entry ", p, "/", nrow(players))
@@ -535,17 +704,95 @@ for (p in 1:nrow(players)) {
 
   player_stints <- stints[stints[, "playerId"] == player_id, ]
   stint_nbr <- c(stint_nbr, nrow(player_stints))
-  stint_dur <- c(stint_dur, mean(player_stints[, "endYear"] - player_stints[, "startYear"], na.rm = TRUE))
-}
-tt <- table(stint_nbr, useNA = "always")
-tlog("Average stint number by player: ", mean(stint_nbr, na.rm = TRUE), "(sd: ", sd(stint_nbr, na.rm = TRUE),")")
-tlog("Average mean stint duration by player: ", mean(stint_dur, na.rm = TRUE), "(sd: ", sd(stint_dur, na.rm = TRUE),")")
+  player_durations <- player_stints[, "endYear"] - player_stints[, "startYear"]
+  stint_dur <- c(stint_dur, mean(player_durations, na.rm = TRUE))
 
-# export values as a csv file
+  total_points <- sum(player_stints[, "pointsScored"], na.rm = TRUE)
+  points_scored_nbr <- c(points_scored_nbr, total_points)
+  total_matches <- sum(player_stints[, "matchesPlayed"], na.rm = TRUE)
+  matches_played_nbr <- c(matches_played_nbr, total_matches)
+
+  idx <- which(!is.na(player_stints[, "pointsScored"]) & !is.na(player_durations))
+  tmp_scored <- sum(player_stints[idx, "pointsScored"], na.rm = TRUE) / sum(player_durations[idx], na.rm = TRUE)
+  if (is.nan(tmp_scored) || is.infinite(tmp_scored))
+    tmp_scored <- NA
+  points_scored_mean <- c(points_scored_mean, tmp_scored)
+  #
+  idx <- which(!is.na(player_stints[, "matchesPlayed"]) & !is.na(player_durations))
+  tmp_played <- sum(player_stints[idx, "matchesPlayed"], na.rm = TRUE) / sum(player_durations[idx], na.rm = TRUE)
+  if (is.nan(tmp_played) || is.infinite(tmp_played))
+    tmp_played <- NA
+  matches_played_mean <- c(matches_played_mean, tmp_played)
+}
+
+# display basic stats
+tlog("Average stint number by player: ", mean(stint_nbr, na.rm = TRUE), " (sd: ", sd(stint_nbr, na.rm = TRUE),")")
+max_val <- max(stint_nbr, na.rm = TRUE)
+idx <- which(stint_nbr == max_val)
+max_names <- players[idx, "fullName"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Max players (", length(idx), "): ", paste0(max_names, collapse = ", "))
+print(players[idx, ])
+#
+tlog("Average mean stint duration by player: ", mean(stint_dur, na.rm = TRUE), " (sd: ", sd(stint_dur, na.rm = TRUE),")")
+max_val <- max(stint_dur, na.rm = TRUE)
+idx <- which(stint_dur == max_val)
+max_names <- players[idx, "fullName"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Max players (", length(idx), "): ", paste0(max_names, collapse = ", "))
+print(players[idx, ])
+#
+tlog("Average yearly number of points scored by player: ", mean(points_scored_mean, na.rm = TRUE), " (sd: ", sd(points_scored_mean, na.rm = TRUE),")")
+max_val <- max(points_scored_mean, na.rm = TRUE)
+idx <- which(points_scored_mean == max_val)
+max_names <- players[idx, "fullName"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Max players (", length(idx), "): ", paste0(max_names, collapse = ", "))
+print(players[idx, ])
+#
+tlog("Average yearly number of matches played by player: ", mean(matches_played_mean, na.rm = TRUE), " (sd: ", sd(matches_played_mean, na.rm = TRUE),")")
+max_val <- max(matches_played_mean, na.rm = TRUE)
+idx <- which(matches_played_mean == max_val)
+max_names <- players[idx, "fullName"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Max players (", length(idx), "): ", paste0(max_names, collapse = ", "))
+print(players[idx, ])
+#
+tlog("Average career number of points scored by player: ", mean(points_scored_nbr, na.rm = TRUE), " (sd: ", sd(points_scored_nbr, na.rm = TRUE),")")
+max_val <- max(points_scored_nbr, na.rm = TRUE)
+idx <- which(points_scored_nbr == max_val)
+max_names <- players[idx, "fullName"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Max players (", length(idx), "): ", paste0(max_names, collapse = ", "))
+print(players[idx, ])
+#
+tlog("Average career number of matches played by player: ", mean(matches_played_nbr, na.rm = TRUE), " (sd: ", sd(matches_played_nbr, na.rm = TRUE),")")
+max_val <- max(matches_played_nbr, na.rm = TRUE)
+idx <- which(matches_played_nbr == max_val)
+max_names <- players[idx, "fullName"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Max players (", length(idx), "): ", paste0(max_names, collapse = ", "))
+print(players[idx, ])
+
+# export stint numbers as a csv file
+tt <- table(stint_nbr, useNA = "always")
 tab_file <- file.path(stats_folder, paste0("stint-numbers0", ".csv"))
 tab <- as.data.frame(tt)
 colnames(tab) <- c("StintNumber", "Count")
 write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+# export career points as a csv file
+tt <- table(points_scored_nbr, useNA = "always")
+tab_file <- file.path(stats_folder, paste0("points-scored-career0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("PointsScored", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+# export career matches as a csv file
+tt <- table(matches_played_nbr, useNA = "always")
+tab_file <- file.path(stats_folder, paste0("matches-played-career0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("MatchesPlayed", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
 
 # plot stint numbers
 plot_file <- file.path(stats_folder, paste0("stint-numbers", ".pdf"))
@@ -593,6 +840,94 @@ tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
 write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
+# plot yearly points scored
+plot_file <- file.path(stats_folder, paste0("points-scored-yearly", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  hh <- hist(points_scored_mean,
+    main = NA,
+    xlab = "Yearly points scored by player",
+    col = "red",
+    # log = "y"
+  )
+dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("points-scored-yearly", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+# plot yearly matches played
+plot_file <- file.path(stats_folder, paste0("matches-played-yearly", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  hh <- hist(matches_played_mean,
+    main = NA,
+    xlab = "Yearly matches played by player",
+    col = "red",
+    # log = "y"
+  )
+dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("matches-played-yearly", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+# plot career points scored
+plot_file <- file.path(stats_folder, paste0("points-scored-career", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  hh <- hist(points_scored_nbr,
+    main = NA,
+    xlab = "Career points scored by player",
+    col = "red",
+    # log = "y"
+  )
+dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("points-scored-career", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+# plot career matches played
+plot_file <- file.path(stats_folder, paste0("matches-played-career", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  hh <- hist(matches_played_nbr,
+    main = NA,
+    xlab = "Career matches played by player",
+    col = "red",
+    # log = "y"
+  )
+dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("matches-played-career", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
 
 
 ########################################################################
@@ -619,6 +954,9 @@ for (p in 1:nrow(players)) {
   # add to stat list
   data_sources <- c(data_sources, player_data_sources)
 }
+data_source_nbr <- apply(data_sources_df, 1, sum)
+tlog("Number of distinct values: ", length(unique(data_sources)))
+tlog("Average number of sources by player: ", mean(data_source_nbr), " (", sd(data_source_nbr),")")
 
 # count values
 sources_tt <- table(data_sources, useNA = "always")
@@ -733,6 +1071,29 @@ dev.off()
 # export similarity as a csv file
 tab_file <- file.path(stats_folder, paste0("data-sources_jaccard-matrix", ".csv"))
 write.csv(jacc_sim, tab_file, row.names = TRUE, fileEncoding = "UTF-8")
+
+
+
+# produce plot
+plot_file <- file.path(stats_folder, paste0("data-source-nbr", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  hh <- hist(data_source_nbr,
+    main = NA,
+    xlab = "Number of player data sources",
+    col = "red", breaks = 7
+  )
+dev.off()
+
+# export counts as a csv file
+tt <- table(data_source_nbr)
+tab_file <- file.path(stats_folder, paste0("data-source-nbr", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("SourceNumber", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 

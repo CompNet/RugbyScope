@@ -44,8 +44,28 @@ source("src/stats/load_all_tables.R")
 ########################################################################
 # distribution of start years
 
-# compute stats
+# retrieve values
 start_dates <- stints[, "startYear"]
+
+# earliest year
+earliest_year <- min(start_dates, na.rm = TRUE)
+idx <- which(start_dates == earliest_year)
+earliest_player_names <- stints[idx, "playerName"]
+earliest_player_ids <- stints[idx, "playerId"]
+tlog("Earliest start year: ", paste0(earliest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(earliest_player_names, collapse = ", "))
+print(players[players[, "wikidataId"] %in% earliest_player_ids, ])
+
+# latest year
+latest_year <- max(start_dates, na.rm = TRUE)
+idx <- which(start_dates == latest_year)
+latest_player_names <- stints[idx, "playerName"]
+latest_player_ids <- stints[idx, "playerId"]
+tlog("Latest start year: ", paste0(latest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(latest_player_names, collapse = ", "))
+print(players[players[, "wikidataId"] %in% latest_player_ids, ])
+
+# compute distribution
 tt <- table(start_dates, useNA = "always")
 start_dates <- start_dates[!is.na(start_dates)]
 
@@ -83,8 +103,28 @@ write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 ########################################################################
 # distribution of end years
 
-# compute stats
+# retrieve values
 end_dates <- stints[, "endYear"]
+
+# earliest year
+earliest_year <- min(end_dates, na.rm = TRUE)
+idx <- which(end_dates == earliest_year)
+earliest_player_names <- stints[idx, "playerName"]
+earliest_player_ids <- stints[idx, "playerId"]
+tlog("Earliest end year: ", paste0(earliest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(earliest_player_names, collapse = ", "))
+print(players[players[, "wikidataId"] %in% earliest_player_ids, ])
+
+# latest year
+latest_year <- max(end_dates, na.rm = TRUE)
+idx <- which(end_dates == latest_year)
+latest_player_names <- stints[idx, "playerName"]
+latest_player_ids <- stints[idx, "playerId"]
+tlog("Latest end year: ", paste0(latest_year, collapse = ", "))
+tlog("Players (", length(idx), "): ", paste0(latest_player_names, collapse = ", "))
+print(players[players[, "wikidataId"] %in% latest_player_ids, ])
+
+# compute distribution
 tt <- table(end_dates, useNA = "always")
 end_dates <- end_dates[!is.na(end_dates)]
 
@@ -207,10 +247,80 @@ write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # retrieve stint stats
 stint_dur <- stints[, "endYear"] - stints[, "startYear"]
-tt <- table(stint_dur, useNA = "always")
+
+# display stats
 tlog("Average stint duration: ", mean(stint_dur, na.rm = TRUE), "(sd: ", sd(stint_dur, na.rm = TRUE),")")
+longest_stint <- max(stint_dur, na.rm = TRUE)
+idx <- which(stint_dur == longest_stint)
+longest_player_names <- stints[idx, "playerName"]
+longest_player_ids <- stints[idx, "playerId"]
+tlog("Longest stint: ", longest_stint)
+tlog("Players (", length(idx), "): ", paste0(longest_player_names, collapse = ", "))
+print(players[players[, "wikidataId"] %in% longest_player_ids, ])
 
 # export values as a csv file
+tt <- table(stint_dur, useNA = "always")
+tab_file <- file.path(stats_folder, paste0("durations0", ".csv"))
+tab <- as.data.frame(tt)
+colnames(tab) <- c("Duration", "Count")
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# plot stint durations
+plot_file <- file.path(stats_folder, paste0("durations", ".pdf"))
+tlog("Producing plot file: ", plot_file)
+pdf(plot_file, width = 7, height = 7)
+  par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
+  par(mar = c(3.00, 2.75, 0.50, 0.00))  # control margins: B L T R
+
+  # excluding a statistic anomaly: a 50 year long stint (far longer than the rest)
+  idx <- which(stints[, "playerId"] == "Q131675151")
+
+  hh <- hist(stint_dur[-idx],
+    main = NA,
+    xlab = "Stint duration",
+    col = "red",
+    breaks = max(stint_dur, na.rm = TRUE)
+    # log = "y"
+  )
+dev.off()
+
+# export values as a csv file
+tab_file <- file.path(stats_folder, paste0("durations", ".csv"))
+nms <- apply(cbind(hh$breaks[1:(length(hh$breaks)-1)], hh$breaks[2:length(hh$breaks)]), 1, function(row) paste0("[", row[1], ", ", row[2], "["))
+tab <- cbind("Intervals" = nms, "Counts" = hh$counts, "Density" = hh$density)
+write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+
+
+
+########################################################################
+# distribution of points scored and matches played
+
+# retrieve stint stats
+matches_played <- stints[, "matchesPlayed"]
+points_scored <- stints[, "pointsScored"]
+
+# display stats
+tlog("Average number of matches played: ", mean(matches_played, na.rm = TRUE), "(sd: ", sd(matches_played, na.rm = TRUE),")")
+max_val <- max(matches_played, na.rm = TRUE)
+idx <- which(matches_played == max_val)
+max_player_names <- stints[idx, "playerName"]
+max_player_ids <- stints[idx, "playerId"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Players (", length(idx), "): ", paste0(max_player_names, collapse = ", "))
+print(players[players[, "wikidataId"] %in% longest_player_ids, ])
+#
+tlog("Average number of points scored: ", mean(points_scored, na.rm = TRUE), "(sd: ", sd(points_scored, na.rm = TRUE),")")
+max_val <- max(points_scored, na.rm = TRUE)
+idx <- which(points_scored == max_val)
+max_player_names <- stints[idx, "playerName"]
+max_player_ids <- stints[idx, "playerId"]
+tlog(2, "Max value: ", max_val)
+tlog(2, "Players (", length(idx), "): ", paste0(max_player_names, collapse = ", "))
+print(players[players[, "wikidataId"] %in% max_player_ids, ])
+
+# export values as a csv file
+tt <- table(stint_dur, useNA = "always")
 tab_file <- file.path(stats_folder, paste0("durations0", ".csv"))
 tab <- as.data.frame(tt)
 colnames(tab) <- c("Duration", "Count")
@@ -264,6 +374,9 @@ for (s in 1:nrow(stints)) {
   # add to stat list
   data_sources <- c(data_sources, stint_data_sources)
 }
+data_source_nbr <- apply(data_sources_df, 1, sum)
+tlog("Number of distinct values: ", length(unique(data_sources)))
+tlog("Average number of sources by stint: ", mean(data_source_nbr), " (", sd(data_source_nbr),")")
 
 # count values
 sources_tt <- table(data_sources, useNA = "always")
