@@ -108,7 +108,7 @@ print(all_tt)
 
 
 
-# produce plot file
+# produce plot files
 for (plot_log in c(FALSE, TRUE)) {
   for (plot_smoothed in c(FALSE, TRUE)) {
     plot_file <- file.path(stats_folder, paste0("all_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))

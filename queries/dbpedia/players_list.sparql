@@ -1,4 +1,4 @@
-# This query retrieves the list and inforlation of all the rugby union 
+# This query retrieves the list and information of all the rugby union 
 # players described on DBpedia.
 # 
 # It is designed to be called from R, after replacing "xxxxxx" by the

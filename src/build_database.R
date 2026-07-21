@@ -13,7 +13,8 @@
 # Vincent Labatut
 # 01/2025
 #
-# setwd("C:/Users/Vincent/eclipse/workspaces/Test/RugbyScope/RugbyScope")
+# setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
+# source("src/build_database.R")
 ########################################################################
 
 
@@ -201,6 +202,7 @@ source("src/stats/global_teams.R")
 source("src/stats/global_stints.R")
 
 # statistics considering the temporal evolution of the data
+source("src/stats/evol_all-nbr.R")
 source("src/stats/evol_player-nbr.R")
 source("src/stats/evol_player-size.R")
 source("src/stats/evol_player-completeness.R")

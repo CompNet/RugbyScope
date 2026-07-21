@@ -1193,16 +1193,17 @@ for (g in 1:(length(field_groups) + 1)) {
     fields <- field_groups[[g]]
     group_name <- names(field_groups)[g]
   }
-  vals <- sapply(fields, function(field) length(which(!is.na(players[, field])))) * 100 / nrow(players)
+  props <- sapply(fields, function(field) length(which(!is.na(players[, field])))) / nrow(players)
+  percs <- props * 100
 
   # export values as a csv file
   if (g > length(field_groups)) {
     tab_file <- file.path(stats_folder, paste0("completeness_", group_name, ".csv"))
-    tab <- cbind("Field" = fields, "CompletenessRate" = vals)
+    tab <- cbind("Field" = fields, "CompletenessRate" = props)
     write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
   }
 
-  colors <- pal[pmax(1, pmin(100, round(vals)))]
+  colors <- pal[pmax(1, pmin(100, round(percs)))]
 
   # generate barplot
   plot_file <- file.path(stats_folder, paste0("completeness_", group_name, ".pdf"))
@@ -1213,7 +1214,7 @@ for (g in 1:(length(field_groups) + 1)) {
 
     # init barplot
     bp <- barplot(
-      height = vals,
+      height = percs,
       names.arg = fields,
       #xlab = "Player fields",
       ylab = "Completeness (%)",
@@ -1225,9 +1226,9 @@ for (g in 1:(length(field_groups) + 1)) {
     # add bar values
     text(
       x = if (g > length(field_groups)) bp + 0.20 else bp,
-      y = if (g > length(field_groups)) vals - 0.06 * max(vals) else vals - 0.1 * max(vals),
-      labels = paste0(round(vals), "%", sep = ""),
-      pos = 3, col = sapply(vals, function(val) if (val < 75) "white" else "black"),
+      y = if (g > length(field_groups)) percs - 0.06 * max(percs) else percs - 0.1 * max(percs),
+      labels = paste0(round(percs), "%", sep = ""),
+      pos = 3, col = sapply(percs, function(val) if (val < 75) "white" else "black"),
       cex = if (g > length(field_groups)) 0.75 else 1.5, font = 2,
       srt = if (g > length(field_groups)) 90 else 0
     )
