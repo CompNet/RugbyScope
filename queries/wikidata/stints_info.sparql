@@ -1,0 +1,75 @@
+########################################################################
+# This query retrieves all the stints constituting the
+# career of a specific rugby player from Wikidata.
+# 
+# It is designed to be called from R, after replacing "QQQQQQ" by the
+# player's proper Wikidata ID.
+#
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+SELECT DISTINCT 
+  ?playerId #?playerLabel
+  ?teamId #?teamLabel 
+  (STR(YEAR(?startDate)) AS ?startYear)
+  (STR(YEAR(?endDate)) AS ?endYear)
+  ?matchesPlayed ?pointsScored
+
+WHERE
+{ 
+  # set the player variable
+  BIND(wd:QQQQQQ AS ?player).
+  
+  # keep only the Wikidata ID (not the whole URL)
+  BIND(STRAFTER(STR(?player), STR(wd:)) AS ?playerId).
+  
+  # get their team contracts
+  ?player p:P54 ?statement.                 # P54=member of sports team, statement=relation between player/team
+  ?statement ps:P54 ?team.                  # ps:=object of the relation, pq:=qualifier of the relation
+
+#  # same thing with a different property: not used in wikidata for rugby players (a single case)
+#  ?player p:P39 ?statement.                 # P39=position held
+#  ?statement ps:P39 wd:Q14089670.           # Q14089670=rugby union player
+
+  # get the rugby teams (more general category)
+  {    
+    ?team wdt:P31 wd:Q14645593.                                     # P31=instance of, Q14645593=Rugby union team
+  }
+  UNION
+  # add the teams, clubs and franchises (more specific categories)
+  {
+    ?team wdt:P31/wdt:P279* wd:Q14645593.                           # P31=instance of, P279=subclass of, Q14645593=Rugby union team
+  }
+  # filter depending on team type
+  ?team wdt:P31 ?teamType.                                          # P31=instance of
+  FILTER(?teamType IN(
+                      wd:Q14645593,                                 # Q14645593=rugby union team
+                      wd:Q43009164,                                 # Q43009164=rugby union club
+                      wd:Q63171169,                                 # Q63171169=rugby union franchise
+                      wd:Q63171186,                                 # Q63171186=defunct rugby union club
+#                     wd:Q113144812,                                # Q113144812=women's rugby union club
+                      wd:Q58840819,                                 # Q58840819=national rugby union team
+                      wd:Q104630756                                 # Q104630756=second rugby union team
+                    ))
+  
+  # keep only the Wikidata ID (not the whole URL)
+  BIND(STRAFTER(STR(?team), STR(wd:)) AS ?teamId).
+  
+  
+  ############# retrieve individual information
+  
+  # end/start dates
+  OPTIONAL{?statement pq:P580 ?startDate;}         # P580=start time
+  OPTIONAL{?statement pq:P582 ?endDate.}           # P582=end time
+  
+  # statistics
+  OPTIONAL{?statement pq:P1350 ?matchesPlayed.}    # P1350=number of matches played
+  OPTIONAL{?statement pq:P1351 ?pointsScored.}     # P1351=number of points/goals/set scored
+  
+  
+#  ############# retrieve textual labels
+#  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en". } # just to get the label right
+}
+
+ORDER BY ?startYear

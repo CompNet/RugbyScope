@@ -1,0 +1,134 @@
+########################################################################
+# This query retrieves the information describing a specific rugby 
+# union teams described on Wikidata.
+# 
+# It is designed to be called from R, after replacing "QQQQQQ" by the
+# team's proper Wikidata ID.
+# 
+# If this query times out, it is possible to run it in two steps using
+# queries `teams_info1.sparql` and `teams_info2.sparql`.
+#
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+SELECT DISTINCT ?teamId ?teamLabel
+  ?teamTypeLabel
+  (GROUP_CONCAT(DISTINCT ?altName; SEPARATOR="; ") as ?altNames)
+  (MAX(?inception) AS ?inceptionMax) (CONCAT(STR(YEAR(?inceptionMax)),"-",STR(MONTH(?inceptionMax)),"-",STR(DAY(?inceptionMax))) AS ?inceptionFormat)
+  (MAX(?termination) AS ?terminationMax) (CONCAT(STR(YEAR(?terminationMax)),"-",STR(MONTH(?terminationMax)),"-",STR(DAY(?terminationMax))) AS ?terminationFormat)
+  (GROUP_CONCAT(DISTINCT ?nicknameLabel; SEPARATOR="; ") as ?nickmaneLabels)
+  (GROUP_CONCAT(DISTINCT ?affiliationLabel; SEPARATOR="; ") as ?affiliationLabels)
+  (GROUP_CONCAT(DISTINCT ?countryLabel; SEPARATOR="; ") as ?countryLabels)
+  (GROUP_CONCAT(DISTINCT ?competitionLabel; SEPARATOR="; ") as ?competitionLabels)
+  (GROUP_CONCAT(DISTINCT ?homeVenueLabel; SEPARATOR="; ") as ?homeVenueLabels)
+  (GROUP_CONCAT(DISTINCT ?homeVenueCapacity; SEPARATOR="; ") as ?homeVenueCapacities)
+  (GROUP_CONCAT(DISTINCT ?locationLabel; SEPARATOR="; ") as ?locationLabels)
+  (GROUP_CONCAT(DISTINCT ?allRugbyId; SEPARATOR="; ") as ?allRugbyIds)
+  (GROUP_CONCAT(DISTINCT ?googleKnowlId; SEPARATOR="; ") as ?googleKnowlIds)
+  ?wikipediaEn ?wikipediaFr ?wikipediaIt ?wikipediaEs ?wikipediaJa
+
+WHERE
+{ 
+  # set the player variable
+  BIND(wd:QQQQQQ AS ?team).
+
+  # keep only the Wikidata ID (not the whole URL)
+  BIND(STRAFTER(STR(?team), STR(wd:)) AS ?teamId).
+
+  # get alternative names
+  OPTIONAL { ?item skos:altLabel ?altName . }
+
+  ############# retrieve individual information
+  # team type
+  ?team wdt:P31 ?teamType.                                              # P31=instance of
+  FILTER(?teamType IN(
+                      wd:Q14645593,                                     # Q14645593=rugby union team
+                      wd:Q43009164,                                     # Q43009164=rugby union club
+                      wd:Q63171169,                                     # Q63171169=rugby union franchise
+                      wd:Q63171186,                                     # Q63171186=defunct rugby union club
+#                     wd:Q113144812,                                    # Q113144812=women's rugby union club
+                      wd:Q58840819,                                     # Q58840819=national rugby union team
+                      wd:Q104630756                                     # Q104630756=second rugby union team
+                    ))
+  
+  # dates
+  OPTIONAL{?team wdt:P571 ?inception.}                                  # P571=inception
+  OPTIONAL{?team wdt:P576 ?termination.}                                # P576=dissolved, abolished or demolished date
+  
+  # names
+  OPTIONAL{?team wdt:P1448 ?name.}                                      # P1448=official name
+  OPTIONAL{?team wdt:P1449 ?nickname.}                                  # P1449=nickname
+  
+  # affiliations / country
+  OPTIONAL{?team wdt:P1416 ?affiliation.                                # P1416=affiliation
+           # for multisport clubs (several affiliation: keep only rugby)
+           ?affiliation wdt:P641 ?affSport.                             # P641=sport
+           FILTER(!BOUND(?affSport) || ?affSport = wd:Q5849)            # Q5849=Rugby Union (keep rugby affiliations, but also sport-less ones)
+          }
+  OPTIONAL{?team wdt:P17 ?country.}                                     # P17=country
+  OPTIONAL{?team wdt:P118 ?competition.                                 # P118=league or competition
+           # for multisport clubs (several competitions: keep only rugby)
+           ?competition wdt:P641 ?competSport.                          # P641=sport
+           FILTER(!BOUND(?competSport) || ?competSport = wd:Q5849)      # Q5849=Rugby Union (keep rugby competitions, but also sport-less ones)
+          }
+  
+  # location & home venue
+  OPTIONAL{?team p:P115 ?statement.                                     # P115=home venue
+           ?statement ps:P115 ?homeVenue.                               # ps:=object of the relation, pq:=qualifier of the relation
+           OPTIONAL{?statement pq:P1083 ?capacity.}                     # P1083=maximum capacity
+           BIND(COALESCE(?capacity, "NA") As ?homeVenueCapacity)        # forces NA as the default value if no capacity specified
+         }
+  OPTIONAL{?team wdt:P159 ?location.}                                   # P159=headquarters location
+  
+  # external IDs
+  OPTIONAL{?team wdt:P10590 ?allRugbyId.}                               # P10590=All.Rugby club ID
+  OPTIONAL{?team wdt:P2671 ?googleKnowlId.}                             # P2671=Google Knowledge Graph ID
+  
+  
+  ############# retrieve wikipedia article
+  # English Wipedia article
+  OPTIONAL{?wikipediaEn schema:about ?team;
+           schema:inLanguage "en";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # French Wipedia article
+  OPTIONAL{?wikipediaFr schema:about ?team;
+           schema:inLanguage "fr";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Italian Wipedia article
+  OPTIONAL{?wikipediaIt schema:about ?team;
+           schema:inLanguage "it";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Spanish Wipedia article
+  OPTIONAL{?wikipediaEs schema:about ?team;
+           schema:inLanguage "es";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Japanese Wipedia article
+  OPTIONAL{?wikipediaJa schema:about ?team;
+           schema:inLanguage "ja";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  
+  ############# retrieve textual labels
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],mul,en".
+                           ?team rdfs:label ?teamLabel.
+                           ?teamType rdfs:label ?teamTypeLabel.
+                           ?nickname rdfs:label ?nicknameLabel.
+                           ?affiliation rdfs:label ?affiliationLabel.
+                           ?country rdfs:label ?countryLabel.
+                           ?competition rdfs:label ?competitionLabel.
+                           ?homeVenue rdfs:label ?homeVenueLabel.
+                           ?location rdfs:label ?locationLabel.
+                         } # just to get the label right
+}
+
+GROUP BY ?teamId ?teamLabel ?teamTypeLabel ?inceptionFormat ?terminationFormat ?wikipediaEn ?wikipediaFr ?wikipediaIt ?wikipediaEs ?wikipediaJa

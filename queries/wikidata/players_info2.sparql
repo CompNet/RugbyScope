@@ -1,0 +1,51 @@
+########################################################################
+# Sometimes, query `players_info.sparql` times out: it is possible to run
+# the same query in two steps. This query is the second step.
+# 
+# It is designed to be called from R, after replacing "QQQQQQ" by the
+# player's proper Wikidata ID.
+#
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+SELECT DISTINCT  
+  ?wikipediaEn ?wikipediaFr ?wikipediaIt ?wikipediaEs ?wikipediaJa
+
+WHERE
+{ 
+  # set the player variable
+  BIND(wd:QQQQQQ AS ?player).
+  
+  
+  ############# retrieve wikipedia article
+  # English Wipedia article
+  OPTIONAL{?wikipediaEn schema:about ?player;
+           schema:inLanguage "en";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # French Wipedia article
+  OPTIONAL{?wikipediaFr schema:about ?player;
+           schema:inLanguage "fr";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Italian Wipedia article
+  OPTIONAL{?wikipediaIt schema:about ?player;
+           schema:inLanguage "it";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Spanish Wipedia article
+  OPTIONAL{?wikipediaEs schema:about ?player;
+           schema:inLanguage "es";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+  
+  # Japanese Wipedia article
+  OPTIONAL{?wikipediaJa schema:about ?player;
+           schema:inLanguage "ja";
+           schema:isPartOf [ wikibase:wikiGroup "wikipedia" ].
+          }
+}

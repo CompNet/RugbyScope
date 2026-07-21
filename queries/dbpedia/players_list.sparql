@@ -1,0 +1,76 @@
+# This query retrieves the list and information of all the rugby union 
+# players described on DBpedia.
+# 
+# It is designed to be called from R, after replacing "xxxxxx" by the
+# appropriate offset, in order to get a paginated access to the many
+# results.
+# 
+# Vincent Labatut
+# 12/2024
+########################################################################
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dbo: <http://dbpedia.org/ontology/>
+PREFIX dbop: <http://dbpedia.org/ontology/Person/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX dbp: <http://dbpedia.org/property/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT DISTINCT 
+  ?player
+  (GROUP_CONCAT(DISTINCT ?fullName; SEPARATOR="; ") as ?fullNames)
+  (GROUP_CONCAT(DISTINCT ?firstName; SEPARATOR="; ") as ?firstNames)
+  (GROUP_CONCAT(DISTINCT ?givenName; SEPARATOR="; ") as ?givenNames)
+  (GROUP_CONCAT(DISTINCT ?lastName; SEPARATOR="; ") as ?lastNames)
+  (GROUP_CONCAT(DISTINCT ?birthName; SEPARATOR="; ") as ?birthNames)
+  (GROUP_CONCAT(DISTINCT ?birthDate; SEPARATOR="; ") as ?birthDates)
+  (GROUP_CONCAT(DISTINCT ?birthPlace; SEPARATOR="; ") as ?birthPlaces)
+  (GROUP_CONCAT(DISTINCT ?deathDate; SEPARATOR="; ") as ?deathDates)
+  (GROUP_CONCAT(DISTINCT ?deathPlace; SEPARATOR="; ") as ?deathPlaces)
+  ?weightA ?heightA ?weightB ?heightB
+  (GROUP_CONCAT(DISTINCT ?position; SEPARATOR="; ") as ?positions)
+  ?wikidataId
+#SELECT (COUNT(*) AS ?count)
+WHERE {
+  # get the players
+  ?player rdf:type dbo:RugbyPlayer.
+
+  # filter out rugby league players (based on WP page URL)
+  FILTER( !REGEX(STR(?player), "[rR]ugby[ _][lL]eague" ))
+  # filter out other outliers (takes too much time)
+  #FILTER( !REGEX(STR(?player), "(Justice_of_the)|(Keeper_of_)|(Rugby_World_Cup)|(Tennis_Channel)|(dog-free_zone)|(3M_computer)|(5_lever_lock)|(President_)|(Postmaster-General)|(Positional_advantage)|(Post-structural)|(Port_Mayaca)|(Presidential_Assistant)|(Presiding_bishop)|(Primacy_of_Simon_Peter)|(Prime_Minister)|(Private_trustee)|(Procurator_)|(Production_)|(_position)|(Protovestiarios)|(Provincial_)|(Provost_of_)|(Psychologism)|(_minister)|(Government)" ))
+  
+  # get names
+  OPTIONAL { ?player foaf:name ?fullName.}
+  OPTIONAL { ?player dbp:firstName ?firstName. }
+  OPTIONAL { ?player dbp:givenName ?givenName. }
+  OPTIONAL { ?player dbp:surname ?lastName. }
+  OPTIONAL { ?player dbp:givenName ?givenName. }
+  OPTIONAL { ?player dbp:birthName ?birthName. }
+  
+  # get birth/death info
+  OPTIONAL { ?player dbp:birthDate ?birthDate. }
+  OPTIONAL { ?player dbp:birthPlace ?birthPlace. }
+  OPTIONAL { ?player dbp:deathDate ?deathDate. }
+  OPTIONAL { ?player dbp:deathPlace ?deathPlace. }
+  
+  # physical features
+  OPTIONAL { ?player dbp:weight ?weightA. }
+  OPTIONAL { ?player dbp:height ?heightA. }
+  OPTIONAL { ?player dbop:weight ?weightB. }
+  OPTIONAL { ?player dbop:height ?heightB. }
+  
+  # position
+  OPTIONAL { ?player dbp:ruPosition ?position. }
+  
+  # get Wikidata id
+  OPTIONAL{ ?player owl:sameAs ?wikidataId
+            FILTER(!BOUND(?wikidataId) || regex(str(?wikidataId), "www.wikidata.org"))
+          }
+  
+  # filter by sex only if indicated
+  OPTIONAL{ ?player dbo:gender ?sex.
+            FILTER(!BOUND(?sex) || ?sex = dbr:Male)
+          }
+}
+ORDER BY ?player LIMIT 10000 OFFSET xxxxxx
