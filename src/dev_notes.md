@@ -21,7 +21,7 @@
 # DATABASE
 * **Note:** we should have kept stint order and loan indications (esp. to extract networks)
   some stints cannot be ordered based on dates alone, e.g. 2015-2015 at X and 2015-2015 at Y
-* [ ] Script to build the proper SQL database
+* [x] Script to build the proper SQL database
 * [ ] Loans:
   * [ ] Write a better function to order stints, that takes loans and intermediary stints into account (see section below)
   * [ ] write an algo to split appropriately loans and such, and list the cases that could not be split properly, then fix them
