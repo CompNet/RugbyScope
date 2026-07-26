@@ -5,6 +5,8 @@
 #
 # Vincent Labatut
 # 05/2026
+#
+# source("src/common/norm_stints.R")
 ########################################################################
 library("stringi")
 
@@ -212,7 +214,10 @@ merge_overlapping_stints_strict <- function(stints) {
 
 
 ########################################################################
-# Order stints based on dates, and player and team names.
+# Order stints based on dates, and player and team names. Stints are
+# ordered by increasing start year first, then by decreasing end year.
+# This way, when two stints start on the same year, the longest one is
+# placed first (as the other often corresponds to a loan).
 #
 # stints: stint table.
 #
@@ -241,6 +246,72 @@ order_stints <- function(stints) {
 
   return(stints)
 }
-# TODO
-# - if start=end, not a loan but put it before the longer stint
-# - would be nice to put invitational and national stints at the end
+
+
+
+
+########################################################################
+# Order stints based on dates, and player and team names. This is an 
+# improved version of the order_stints function:
+# - in case of 2 stints starting on the same year, if the shortest one
+#   as the same start/end years, we consider it as a short stint taking
+#   place before the longer one (and not as a loan, as before).
+# - we distinguish between amateur/senior, regional, invitational and
+#   national stints.
+#
+# stints: stint table.
+# teams: team table.
+#
+# returns: ordered stint table.
+########################################################################
+order_stints_improved <- function(stints, teams) {
+  # player ids
+  player_ids <- stints[, "playerId"]
+  player_ids <- as.integer(substr(player_ids, start = 2, stop = nchar(player_ids)))
+
+  # types
+  type_vals <- sapply(1:nrow(stints), function(i) {
+    type <- stints[i, "type"]
+    if (is.na(type)) {
+      val <- 1
+    } else if (type %in% c("Amateur", "Senior")) {
+      team_type <- teams[which(teams[, "rugbyscopeId"] == stints[i, "teamRsId"]), "type"]
+      if (team_type == "Invitational team")
+        val <- 3
+      else
+        val <- 1
+    } else if (type == "Regional") {
+      val <- 2
+    } else if (type == "International") {
+      val <- 4
+    } else {
+      print(stints[i, ])
+      stop("Unpredicted case")
+    }
+  })
+
+  # start years
+  start_years <- as.integer(stints[, "startYear"])
+  start_years[is.na(start_years)] <- 1000
+
+  # end years
+  end_years <- as.integer(stints[, "endYear"])
+  end_years[is.na(end_years)] <- 9999
+  end_years[start_years == end_years] <- 10000
+  end_years <- -end_years # we want the largest stints first
+  
+  # team names
+  team_names <- stints[, "teamName"]
+
+  # order stints
+  idx <- order(player_ids, type_vals, start_years, end_years, team_names)
+  stints <- stints[idx, ]
+
+  return(stints)
+}
+# test
+#source("src/stats/load_all_tables.R")
+#data_folder <- file.path("data", "fusion")
+#stints <- order_stints_improved(stints, teams)
+#tab_file <- file.path(data_folder, "stints_22_stintorder.csv")
+#write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")

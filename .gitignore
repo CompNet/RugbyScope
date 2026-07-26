@@ -48,7 +48,7 @@ data/wikipedia/english/**/PP_cleaned/
 /data/wikipedia/english/*.json
 
 data/others
-data/rugbyscope.sqlite
-data/rugbyscope.sql
+#data/rugbyscope.sqlite
+#data/rugbyscope.sql
 src/others
 src/common/__pycache__
