@@ -1,4 +1,4 @@
-# RugbyScope v1.0.0
+# RugbyScope v1.0.1
 Extraction and analysis of Rugby Union transfer networks
 
 * Copyright 2024-2026 Vincent Labatut & David O'Sullivan
@@ -13,7 +13,7 @@ RugbyScope is free software: you can redistribute it and/or modify it under the 
 -----------------------------------------------------------------------
 
 ## Description
-This collection of `Python` and `R` scripts create the RugbyScope database v.1.0.0 from seven online data sources: Wikidata, DBpedia, and 5 language editions of Wikipedia (English, French, Italian, Japanese, and Spanish). RugbyScope is structured around three main rugby union-related entities: players, teams, and stints, with a focus on *male* players (due to the sparsity of available female player information). It covers all the data present in the sources at the time of retrieval. The scripts include the extraction of raw data from these sources, and their merging in a single database, solving a certain number of conflicts between them. 
+This collection of `Python` and `R` scripts create the RugbyScope database v.1.0.1 from seven online data sources: Wikidata, DBpedia, and 5 language editions of Wikipedia (English, French, Italian, Japanese, and Spanish). RugbyScope is structured around three main rugby union-related entities: players, teams, and stints, with a focus on *male* players (due to the sparsity of available female player information). It covers all the data present in the sources at the time of retrieval. The scripts include the extraction of raw data from these sources, and their merging in a single database, solving a certain number of conflicts between them. 
 
 <p align="center">
   <img src="./logo_rugbyscope.svg" width="30%">
@@ -95,6 +95,7 @@ The produced database goes in folder `data`, whereas the plots and stats resulti
 Note that it is *very unlikely* that these scripts will work in the future, due to the unpredictable evolution of the online sources from which our database is extracted (cf. Section [Description](#description)).
 
 
+
 ## Dependencies
 
 ### `R` Environment
@@ -137,8 +138,9 @@ Tested with `Python` 3.13, with the following packages:
 
 
 
-## To-do List
-* ...
+## Changelog
+* v1.0.0: original version
+* v1.0.1: improved the order of stints so that they match Wikipedia's, and also a few manual corrections.
 
 
 
