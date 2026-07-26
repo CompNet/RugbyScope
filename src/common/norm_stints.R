@@ -315,12 +315,3 @@ order_stints_improved <- function(stints, teams) {
 #stints <- order_stints_improved(stints, teams)
 #tab_file <- file.path(data_folder, "stints_22_stintorder.csv")
 #write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
-
-
-# TODO
-# case 1: 2000-2010 and 2001-2002 > the 2nd stint is a loan
-#         > already covered
-# case 2: 2000-2001, 2001-2001, 2001-2002 > the 2nd stint may be intermediary, not a loan
-#         if start=end, not a loan but put it before the longer stint
-# case 3: put invitational and national stints at the end
-#         > done
