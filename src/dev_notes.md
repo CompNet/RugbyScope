@@ -32,10 +32,13 @@
   * [ ] Stints:
     * [ ] Complement missing types (2,623 cases)
   * [ ] Teams
-    * [ ] Retrieve WP data
+    * [ ] Retrieve more WP data
   * [ ] Longer term:
     * [ ] Cross-ref with other data sources, to complement missing dates (esp. NA-NA in career start), see list below (all.rugby and so on)
     * [ ] Leverage an LLM to retrive missing information from WP articles' body, and other textual sources
+* [ ] Check that B&I Lions stints don't last longer than 1 year
+* [ ] Complement missing start-end year for senior national stints
+* [ ] ChaptGPT seems ok to retrieve missing Barbarians stint years
 
 # STATS & PLOTS
 * Player stats
