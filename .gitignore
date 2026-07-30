@@ -52,4 +52,4 @@ data/others
 #data/rugbyscope.sql
 src/others
 src/common/__pycache__
-data/networks0
+data/networks
