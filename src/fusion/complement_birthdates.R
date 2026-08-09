@@ -215,7 +215,7 @@ for (p in 1:length(idx)) {
 # use birthdate to complement missing youth team years
 
 changes <- 0
-for (p in 21077:nrow(players)) {
+for (p in 1:nrow(players)) {
   if (p %% 1000 == 0)
     tlog(2, "Processing player ", p, "/", nrow(players))
 
@@ -309,7 +309,7 @@ for (p in 21077:nrow(players)) {
   }
 }
 tlog(2, "Number of changes: ", changes)
-# NOTE: complements 128 missing dates
+# NOTE: complements 968 missing dates
 
 
 
@@ -323,7 +323,7 @@ tab_file <- file.path(data_folder, "players_12.csv")
 write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # record stints table
-tab_file <- file.path(data_folder, "stints_19_birthyears.csv")
+tab_file <- file.path(data_folder, "stints_23_missing-start-years.csv")
 write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 

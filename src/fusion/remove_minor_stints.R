@@ -116,7 +116,7 @@ stints <- stints[-rem_flag, ]
 
 ########################################################################
 # record stint table
-tab.file <- file.path(data_folder, "stints_23_rm-minor-stints.csv")
+tab.file <- file.path(data_folder, "stints_24_rm-minor-stints.csv")
 # write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # stop logging

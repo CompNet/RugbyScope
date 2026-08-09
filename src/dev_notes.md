@@ -37,8 +37,10 @@
     * [ ] Cross-ref with other data sources, to complement missing dates (esp. NA-NA in career start), see list below (all.rugby and so on)
     * [ ] Leverage an LLM to retrive missing information from WP articles' body, and other textual sources
 * [ ] Check that B&I Lions stints don't last longer than 1 year
-* [ ] Complement missing start-end year for senior national stints
+* [ ] Check that stints with ZA provinces pre-prof are categorized as regional
+* [ ] Complement missing start-end year for senior national stints (?)
 * [ ] ChaptGPT seems ok to retrieve missing Barbarians stint years
+* [x] Issue with missing start years for stints with youth national teams, when birth date is available
 
 # STATS & PLOTS
 * Player stats
