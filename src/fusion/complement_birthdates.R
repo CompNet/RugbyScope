@@ -225,7 +225,7 @@ for (p in 1:nrow(players)) {
   idx <- match(player_stints[, "teamRsId"], teams[, "rugbyscopeId"])
   player_teams <- teams[idx, ]
 
-  if (!is.na(birth_year) & any(is.na(player_stints[, "startYear"]) & player_teams[, "type"] %in% c("National U18 team", "National U19 team", "National U20 team", "National U21 team", "National U23 team"))) {
+  if (!is.na(birth_year) & any(is.na(unlist(player_stints[, c("startYear", "endYear")])) & player_teams[, "type"] %in% c("National U18 team", "National U19 team", "National U20 team", "National U21 team", "National U23 team"))) {
     tlog(2, "Dealing with player ", player_id, " (", p, "/", nrow(players), ")")
     print(player_stints)
 
@@ -309,7 +309,7 @@ for (p in 1:nrow(players)) {
   }
 }
 tlog(2, "Number of changes: ", changes)
-# NOTE: complements 968 missing dates
+# NOTE: complements 1027 missing dates
 
 
 
@@ -323,8 +323,13 @@ tab_file <- file.path(data_folder, "players_12.csv")
 write.csv(players, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # record stints table
-tab_file <- file.path(data_folder, "stints_23_missing-start-years.csv")
+tab_file <- file.path(data_folder, "stints_25_missing-start-years.csv")
 write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+
+# check the RS ids
+#id1 <- stints[, "teamRsId"]
+#id2 <- as.integer(stints[, "teamRsId"])
+#which(is.na(id2))
 
 
 
