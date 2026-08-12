@@ -38,9 +38,10 @@
     * [ ] Leverage an LLM to retrive missing information from WP articles' body, and other textual sources
 * [ ] Check that B&I Lions stints don't last longer than 1 year
 * [ ] Check that stints with ZA provinces pre-prof are categorized as regional
-* [ ] Complement missing start-end year for senior national stints (?)
-* [ ] ChaptGPT seems ok to retrieve missing Barbarians stint years
+* [ ] Complement missing start-end year for senior *national* stints (?)
+* [ ] ChaptGPT seems fine to retrieve missing Barbarians stint years
 * [x] Issue with missing start years for stints with youth national teams, when birth date is available
+* [ ] Missing Uxx *end* dates: check existing script (maybe it focuses on *start* dates)
 
 # STATS & PLOTS
 * Player stats
