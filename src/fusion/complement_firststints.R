@@ -131,7 +131,7 @@ cat("Number of changes: ", changes, "\n")
 
 ########################################################################
 # record stints table
-stints <- order_stints_improved(stints)
+stints <- order_stints_improved(stints, teams)
 tab_file <- file.path(data_folder, "stints_21_stintorder.csv")
 write.csv(stints, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 

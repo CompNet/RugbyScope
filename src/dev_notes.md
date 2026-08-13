@@ -26,9 +26,9 @@
   * [x] Write a better function to order stints, that takes loans and intermediary stints into account (see separate section below)
   * [ ] write an algo to split appropriately loans and such, and list the cases that could not be split properly, then fix them > for net extraction
 * Complement data:
-  * [ ] Senior focus:
-    * [ ] Remove stints and parts of stints before 18 yo (without changing stats), using birthdate (this should be a distinct version of the DB)
-    * [ ] Handle cases where there are stints without dates and the first dated stints starts <18yo (could remove the non-dated stints)
+  * [x] Senior focus:
+    * [x] Remove stints and parts of stints before 18 yo (without changing stats), using birthdate (this should be a distinct version of the DB)
+    * [x] Handle cases where there are stints without dates and the first dated stints starts <18yo (could remove the non-dated stints)
   * [ ] Stints:
     * [ ] Complement missing types (2,623 cases)
   * [ ] Teams
@@ -36,10 +36,10 @@
   * [ ] Longer term:
     * [ ] Cross-ref with other data sources, to complement missing dates (esp. NA-NA in career start), see list below (all.rugby and so on)
     * [ ] Leverage an LLM to retrive missing information from WP articles' body, and other textual sources
-* [ ] Check that B&I Lions stints don't last longer than 1 year
-* [ ] Check that stints with ZA provinces pre-professionalism are categorized as *regional*
+* [x] Check that B&I Lions stints don't last longer than 1 year > actually not relevant
+* [x] Check that pre-professionalism stints with ZA provinces are categorized as *regional* > not sure about that
 * [x] Complement missing start-end year for senior *national* stints (?)
-* [ ] ChaptGPT seems fine to retrieve missing Barbarians stint years
+* [x] Check that years are present in all Barbarians stints
 * [x] Issue with missing start years for stints with youth national teams, when birth date is available
 * [x] Missing youth national team *end* dates: check existing script (maybe it focuses only on *start* dates)
 

@@ -45,5 +45,5 @@ teams[, "terminationDate"] <- as.Date(teams[, "terminationDate"])
 
 ########################################################################
 # load stint table
-stints <- read.csv(file.path(data_folder, "stints.csv"))
+stints <- read.csv(file.path(data_folder, "stints_full.csv"))
 tlog(2, "Number of stints: ", nrow(stints))

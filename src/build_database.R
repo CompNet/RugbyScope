@@ -165,6 +165,9 @@ source("src/fusion/check_players.R")
 source("src/fusion/check_teams.R")
 source("src/fusion/check_stints.R")
 
+# perform additional verifications
+source("src/fusion/additional_verifications.R")
+
 # this produces all the remaning files in folder `data/fusion`:
 # - `players_XX.csv`: various versions of the players table
 # - `teams_XX.csv`: various versions of the teams table
@@ -174,6 +177,14 @@ source("src/fusion/check_stints.R")
 # - `players.csv`: final list of players
 # - `teams.csv`: final list of teams
 # - `stints.csv`: final list of stints
+
+
+
+
+########################################################################
+# removes minor stints (i.e. those performed when the player was under 18)
+# this generates the "major" variant of the database, by opposition to the "full version"
+#source("src/fusion/remove_minor_stints.R")
 
 
 

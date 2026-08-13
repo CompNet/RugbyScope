@@ -48,10 +48,12 @@ suppressPackageStartupMessages({
 ## -----------------------------------------------------------------------
 
 INPUT_FOLDER <- file.path("data")
-PLAYERS_CSV <- file.path(INPUT_FOLDER, "players.csv")
-TEAMS_CSV   <- file.path(INPUT_FOLDER, "teams.csv")
-STINTS_CSV  <- file.path(INPUT_FOLDER, "stints.csv")
-DB_PATH     <- file.path(INPUT_FOLDER, "rugbyscope.sqlite")
+PLAYERS_CSV  <- file.path(INPUT_FOLDER, "players.csv")
+TEAMS_CSV    <- file.path(INPUT_FOLDER, "teams.csv")
+STINTS_CSV   <- file.path(INPUT_FOLDER, "stints_full.csv")
+DB_PATH      <- file.path(INPUT_FOLDER, "rugbyscope_full.sqlite")
+#STINTS_CSV   <- file.path(INPUT_FOLDER, "stints_major.csv")
+#DB_PATH      <- file.path(INPUT_FOLDER, "rugbyscope_major.sqlite")
 
 ## Start from a clean database every run
 if (file.exists(DB_PATH)) file.remove(DB_PATH)
