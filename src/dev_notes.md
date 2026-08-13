@@ -20,7 +20,7 @@
 
 # DATABASE
 * **Note:** we should have kept stint order and loan indications (esp. to extract networks)
-  some stints cannot be ordered based on dates alone, e.g. 2015-2015 at X and 2015-2015 at Y
+  some stints cannot be ordered based on dates alone, e.g. 2015-2015 at Xxxx and 2015-2015 at Yyyy.
 * [x] Script to build the proper SQL database
 * [ ] Loans:
   * [x] Write a better function to order stints, that takes loans and intermediary stints into account (see separate section below)
@@ -81,7 +81,7 @@ For net extraction, we need all the dates to be filled, and we can allow more ap
     * [ ] first stint of the career: use the existing DB script, but without the existing constraints (cf. comments in script)
     * [ ] other stints: use end year of the preceding stint, if present. otherwise: average stint duration for this team? or for the considered player?
 * [ ] missing end years:
-    * [ ] last stint of the career: use an approximate age limit : 30 years? average career duration? 2026 for stints starting in 2024 and after?
+    * [ ] last stint of the career: use an approximate age limit : 35 years? average career duration? 2026 for stints starting in 2024 and after?
     * [ ] other stints: leverage start year of the following stint, if present. otherwise: average stint duration for this team? or for the considered player?
 
 # ALTERNATIVE DATABASES
