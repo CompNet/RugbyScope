@@ -1,4 +1,4 @@
-# RugbyScope v1.0.1
+# RugbyScope v1.1.0
 Extraction and analysis of Rugby Union transfer networks
 
 * Copyright 2024-2026 Vincent Labatut & David O'Sullivan
@@ -13,23 +13,30 @@ RugbyScope is free software: you can redistribute it and/or modify it under the 
 -----------------------------------------------------------------------
 
 ## Description
-This collection of `Python` and `R` scripts create the RugbyScope database v.1.0.1 from seven online data sources: Wikidata, DBpedia, and 5 language editions of Wikipedia (English, French, Italian, Japanese, and Spanish). RugbyScope is structured around three main rugby union-related entities: players, teams, and stints, with a focus on *male* players (due to the sparsity of available female player information). It covers all the data present in the sources at the time of retrieval. The scripts include the extraction of raw data from these sources, and their merging in a single database, solving a certain number of conflicts between them. 
+This collection of `Python` and `R` scripts create the RugbyScope database from seven online data sources: Wikidata, DBpedia, and 5 language editions of Wikipedia (English, French, Italian, Japanese, and Spanish). RugbyScope is structured around three main rugby union-related entities: players, teams, and stints, with a focus on *male* players (due to the sparsity of available female player information). It covers all the data present in the sources at the time of retrieval. The scripts include the extraction of raw data from these sources, and their merging in a single database, solving a certain number of conflicts between them. 
 
 <p align="center">
   <img src="./logo_rugbyscope.svg" width="30%">
 </p>
+
+This version of the database contains two variants of the rugby player stints:
+* `full`: all the stints retrieved from the sources.
+* `major`: only the stints played while above 18 year old.
 
 Note that the retrieval part of this source code is provided mainly for documentation purposes: it was originally tailored to work with a certain configuration of our sources, taken
 at a certain point in time. These sources are live material, and it is very unlikely that scripts will still work in the future, due to their unpredictable evolution. The RugbyScope data is also available on [Zenodo](http://doi.org/10.5281/zenodo.21476473).
 
 If you use this source code or the associated data, please cite [[LO'26](#references)]:
 
-TODO
-<!--```bibtex
-@Article{Labatut2026,
-  ....
+```bibtex
+@TechReport{Labatut2026,
+  author      = {Labatut, Vincent and O'Sullivan, David J. P.},
+  title       = {{R}ugby{S}cope: a Transfer-Oriented Database of Rugby Union Teams and Players},
+  institution = {Avignon Universit\'e and University of Limerick},
+  year        = {2026},
+  type        = {Technical Report},
 }
-```-->
+```
 
 
 
@@ -139,8 +146,9 @@ Tested with `Python` 3.13, with the following packages:
 
 
 ## Changelog
-* v1.0.0: original version
-* v1.0.1: improved the order of stints so that they match Wikipedia's, and also a few manual corrections.
+* `v1.0.0`: original version
+* `v1.0.1`: improved the order of stints so that they match Wikipedia's, and also a few manual corrections.
+* `v1.1.0`: a number of manual corrections, and two distinct variants of the DB: `full` (all data retrieved from the sources) vs. `major` (does not contain under-18 stints, and some stint years are inferred). 
 
 
 

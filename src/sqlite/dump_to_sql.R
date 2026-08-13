@@ -16,8 +16,10 @@ suppressPackageStartupMessages({
 })
 
 INPUT_FOLDER <- file.path("data")
-DB_PATH     <- file.path(INPUT_FOLDER, "rugbyscope.sqlite")
-SQL_PATH <- file.path(INPUT_FOLDER, "rugbyscope.sql")
+DB_PATH      <- file.path(INPUT_FOLDER, "rugbyscope_full.sqlite")
+SQL_PATH     <- file.path(INPUT_FOLDER, "rugbyscope_full.sql")
+#DB_PATH      <- file.path(INPUT_FOLDER, "rugbyscope_major.sqlite")
+#SQL_PATH     <- file.path(INPUT_FOLDER, "rugbyscope_major.sql")
 
 ## -----------------------------------------------------------------------
 ## Helper: turn an R vector into a vector of SQL literals (vectorised, so
