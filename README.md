@@ -1,4 +1,4 @@
-# RugbyScope v1.1.0
+# RugbyScope v1.1.1
 Extraction and analysis of Rugby Union transfer networks
 
 * Copyright 2024-2026 Vincent Labatut & David O'Sullivan
@@ -149,6 +149,7 @@ Tested with `Python` 3.13, with the following packages:
 * `v1.0.0`: original version
 * `v1.0.1`: improved the order of stints so that they match Wikipedia's, and also a few manual corrections.
 * `v1.1.0`: a number of manual corrections, and two distinct variants of the DB: `full` (all data retrieved from the sources) vs. `major` (does not contain under-18 stints, and some stint years are inferred). 
+* `v1.1.1`: fixed missing years in Barbarian stints, and other manual corrections. 
 
 
 

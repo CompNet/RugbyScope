@@ -7,6 +7,8 @@
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
 # source("src/stats/evol_all-nbr.R")
 ########################################################################
+library("dplyr")
+
 source("src/common/logging.R")
 source("src/common/colors.R")
 
