@@ -18,7 +18,7 @@ source("src/common/norm_positions.R")
 ########################################################################
 # parameters
 
-mode <- "start-year"  # "start-year" or "active-years"
+mode <- "active-years"  # "start-year" or "active-years"
 mode_labels <- c("start-year" = "career start year", "active-years" = "active years")
 mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
@@ -171,6 +171,7 @@ sd_vals <- list(height = sd_heights, weight = sd_weights)
 size_labels <- c(height = "Player average height (cm)", weight = "Player average weight (kg)")
 
 # produce plot files
+plot_log <- FALSE
 for (size_name in c("height", "weight")) {
   plot_file <- file.path(stats_folder, paste0(size_name, "_all", ".pdf"))
   tlog("Producing plot file: ", plot_file)

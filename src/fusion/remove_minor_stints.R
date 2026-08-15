@@ -49,6 +49,21 @@ for (p in 1:nrow(players)) {
     # process stints
     idx <- which(stints[, "playerId"] == player_id)
 
+    # missing start and end year => remove if there's another stint starting before/at the same time as the majority year
+    idx2 <- idx[is.na(stints[idx, "startYear"]) & is.na(stints[idx, "endYear"])]
+    if (length(idx2) > 0) { 
+      idx3 <- idx[!is.na(stints[idx, "startYear"]) & stints[idx, "startYear"] <= majority_year | !is.na(stints[idx, "endYear"]) & stints[idx, "endYear"] <= majority_year]
+      if (length(idx3) > 0) {
+        tlog(4, "Found subsequent stints:")
+        print(stints[idx3, ])
+        tlog(4, "Removing the following stints:")
+        print(stints[idx2, ])
+        rem_flag <- c(rem_flag, idx2)
+        changes <- TRUE
+        change_nbr <- change_nbr + length(idx2)
+      }
+    }
+
     # end year equal or before majority year => minor-age stint, should be removed
     idx2 <- idx[!is.na(stints[idx, "endYear"]) & stints[idx, "endYear"] <= majority_year]
     if (length(idx2) > 0) {
@@ -126,13 +141,26 @@ tlog(2, "Number of stints removed or modified: ", length(rem_flag)) # 3,753 / 96
 # total number of modifications
 tlog(2, "Number of modifications: ", change_nbr)  # 7,074 / 96,751 modifications (7%)
 
+#
+idx <- which(is.na(stints[, "startYear"]) & is.na(stints[,"endYear"]))
+length(unique(stints[idx, "playerId"]))
+ids <- unique(stints[idx, "playerId"])
+print(ids)
+
+idx <- which(is.na(stints[, "startYear"]) & is.na(stints[,"endYear"]) & stints[, "teamWdId"] == "Q807749")
+length(unique(stints[idx, "playerId"]))
+names <- unique(stints[idx, "playerName"])
+print(names)
+
+
+
 
 
 
 ########################################################################
 # record stint table
 #tab.file <- file.path(data_folder, "stints_25_rm-minor-stints.csv")
-tab.file <- file.path(data_folder, "stints_major.csv")
+tab.file <- file.path(data_folder, "stints_major2.csv")
 write.csv(stints, tab.file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # stop logging

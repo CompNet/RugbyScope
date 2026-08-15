@@ -21,7 +21,7 @@ source("src/common/colors.R")
 ########################################################################
 # parameters
 
-mode <- "start-year"  # "start-year" or "active-years"
+mode <- "active-years"  # "start-year" or "active-years"
 mode_labels <- c("start-year" = "career start year", "active-years" = "active year")
 mode_xlabels <- c("start-year" = "Career start year", "active-years" = "Active year")
 
