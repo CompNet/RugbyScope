@@ -11,8 +11,8 @@
 #
 # setwd("C:/Users/Vincent/eclipse/workspaces/Test/RugbyScope/RugbyScope")
 ########################################################################
-# Number of clubs by country according to WP
-# https://en.wikipedia.org/wiki/List_of_rugby_union_playing_countries
+# Number of clubs by nation according to WP
+# https://en.wikipedia.org/wiki/List_of_rugby_union_playing_nations
 #
 # Argentina:     420
 # Australia:     767
@@ -68,23 +68,23 @@ cat("Raw number of teams in merged table:", nrow(teams), "\n")
 ########################################################################
 # load reference tables
 all_teams <- NA
-countries <- c("AR", "AU", "EN", "FJ", "FR", "IE", "IT", "JP", "NZ", "SC", "WA", "ZA")
-country_refs <- list()
-for (country in countries) {
-  tab_file <- file.path(ref_folder, paste0(country, "_teams.csv"))
+nations <- c("AR", "AU", "EN", "FJ", "FR", "IE", "IT", "JP", "NZ", "SC", "WA", "ZA")
+nation_refs <- list()
+for (nation in nations) {
+  tab_file <- file.path(ref_folder, paste0(nation, "_teams.csv"))
 
   # # debug
-  # country_refs[[country]] <- read.csv(tab_file, sep = "\t")
-  # write.csv(x = country_refs[[country]], file = tab_file, row.names = FALSE, fileEncoding = "UTF-8")
+  # nation_refs[[nation]] <- read.csv(tab_file, sep = "\t")
+  # write.csv(x = nation_refs[[nation]], file = tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
-  country_refs[[country]] <- read.csv(tab_file)
-  country_refs[[country]] <- country_refs[[country]] %>% mutate(across(where(is.character), ~ na_if(., "")))
-  cat("Reading ", country, ": ", nrow(country_refs[[country]]), " teams\n", sep = "")
+  nation_refs[[nation]] <- read.csv(tab_file)
+  nation_refs[[nation]] <- nation_refs[[nation]] %>% mutate(across(where(is.character), ~ na_if(., "")))
+  cat("Reading ", nation, ": ", nrow(nation_refs[[nation]]), " teams\n", sep = "")
 
   if (all(is.na(all_teams)))
-    all_teams <- country_refs[[country]]
+    all_teams <- nation_refs[[nation]]
   else
-    all_teams <- rbind(all_teams, country_refs[[country]])
+    all_teams <- rbind(all_teams, nation_refs[[nation]])
 }
 
 # check that the same WD id is not used several times in the reference table
@@ -97,13 +97,13 @@ print(which(table(all_teams[, "wikidataId"]) > 1))
 ########################################################################
 # compare WD table to reference: used once, to complement reference table with WD ids
 
-# for (country in countries) {
-#   cat("Processing ", country, "\n", sep = "")
+# for (nation in nations) {
+#   cat("Processing ", nation, "\n", sep = "")
 
 #   # get info
-#   ref_names <- normalize_team_names(country_refs[[country]][, "name"], level = 1)
-#   tiers <- country_refs[[country]][, "tier"]
-#   theor_hits <- length(which(!is.na(country_refs[[country]][, "wikidataId"])))
+#   ref_names <- normalize_team_names(nation_refs[[nation]][, "name"], level = 1)
+#   tiers <- nation_refs[[nation]][, "tier"]
+#   theor_hits <- length(which(!is.na(nation_refs[[nation]][, "wikidataId"])))
 #   wd_names <- normalize_team_names(wd_teams[, "teamLabel"], level = 1)
 
 #   # match names
@@ -118,13 +118,13 @@ print(which(table(all_teams[, "wikidataId"]) > 1))
 #   # print(ref_names[!identified])
 
 #   # record detailed list
-#   tab <- cbind(country_refs[[country]], wd_teams[idx, c("teamId", "teamLabel")])
-#   tab_file <- file.path(wd_table_folder, paste0(country, "_teams_matches.csv"))
+#   tab <- cbind(nation_refs[[nation]], wd_teams[idx, c("teamId", "teamLabel")])
+#   tab_file <- file.path(wd_table_folder, paste0(nation, "_teams_matches.csv"))
 #   write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 #   # display misses
 #   missed <- is.na(idx)
-#   print(cbind(country_refs[[country]][missed, "name"], country_refs[[country]][missed, "wikidataId"]))
+#   print(cbind(nation_refs[[nation]][missed, "name"], nation_refs[[nation]][missed, "wikidataId"]))
 # }
 
 
@@ -135,7 +135,7 @@ print(which(table(all_teams[, "wikidataId"]) > 1))
 # goal: finding missing WD ids in reference table
 
 # get ref names
-# ref_names <- country_refs[[country]][, "name"]
+# ref_names <- nation_refs[[nation]][, "name"]
 ref_names <- all_teams[, "name"]
 
 # get main and alt WD names
@@ -209,9 +209,9 @@ idx <- which(colnames(teams) == "competitions")
 teams <- cbind(teams[, 1:idx], rep(NA, nrow(teams)), teams[, (idx + 1):ncol(teams)])
 colnames(teams)[idx + 1] <- "tier"
 
-# complement merged list with reference info: country, competition, tier
+# complement merged list with reference info: nation, competition, tier
 map <- c()
-map["countries"] <- "country"
+map["nations"] <- "nation"
 map["competitions"] <- "division"
 map["tier"] <- "tier"
 # loop over teams to copy DBP data
@@ -264,7 +264,7 @@ for (m in 1:length(map)) {
 # print(table(teams[-idx, "competitions"]))
 # print(table(teams[idx, "competitions"]))
 
-# clean country names
+# clean nation names
 map <- c()
 map["مونتينيجرو"] <- "Montenegro"
 map["United Kingdom; England"] <- "England"
@@ -273,13 +273,13 @@ map["United Kingdom; Scotland"] <- "Scotland"
 map["United Kingdom; Wales"] <- "Wales"
 for (m in 1:length(map)) {
   mm <- names(map)[m]
-  idx <- which(teams[, "countries"] == mm)
+  idx <- which(teams[, "nations"] == mm)
   if (length(idx) > 0)
-    teams[idx, "countries"] <- map[mm]
+    teams[idx, "nations"] <- map[mm]
 }
-# idx <- which(grepl("; ", teams[, "countries"], fixed = TRUE))
-# print(table(teams[-idx, "countries"]))
-# print(table(teams[idx, "countries"]))
+# idx <- which(grepl("; ", teams[, "nations"], fixed = TRUE))
+# print(table(teams[-idx, "nations"]))
+# print(table(teams[idx, "nations"]))
 
 
 
@@ -313,7 +313,7 @@ tlog("Number of teams in the reference list not matched in the merged table: ", 
 
 # add them into the merged table
 addendum <- all_teams[idx, -which(colnames(all_teams) == "homonyms")]
-cn <- c("fullName", "tier", "competitions", "countries", "wikidataId")
+cn <- c("fullName", "tier", "competitions", "nations", "wikidataId")
 missing_cols <- setdiff(colnames(teams), cn)
 addendum <- cbind(addendum, matrix(NA, nrow = nrow(addendum), ncol = length(missing_cols)))
 colnames(addendum) <- c(cn, missing_cols)
@@ -393,7 +393,7 @@ idx <- match(regio_teams, compl_teams[, "wikidataId"])
 compl_teams[idx, "type"] <- "Regional team"
 compl_teams[idx, "tier"] <- "1"
 
-# combined teams (involving several countries, i.e. British & Irish Lions)
+# combined teams (involving several nations, i.e. British & Irish Lions)
 comb_teams <- c("Q3651754", "Q624092", "Q733600", "Q5327644", "Q3606252", "Q247246", "Q3976615", "Q121190772")
 idx <- match(comb_teams, compl_teams[, "wikidataId"])
 compl_teams[idx, "type"] <- "Combined team"

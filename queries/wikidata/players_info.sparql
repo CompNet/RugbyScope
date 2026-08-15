@@ -21,7 +21,7 @@ SELECT DISTINCT ?playerId ?playerLabel
   (MAX(?dod) AS ?dodMax) (CONCAT(STR(YEAR(?dodMax)),"-",STR(MONTH(?dodMax)),"-",STR(DAY(?dodMax))) AS ?dodFormat)
   (GROUP_CONCAT(DISTINCT ?podLabel; SEPARATOR="; ") as ?podLabels)
   (GROUP_CONCAT(DISTINCT ?citizenshipLabel; SEPARATOR="; ") as ?citizenshipLabels)
-  (GROUP_CONCAT(DISTINCT ?sportCountryLabel; SEPARATOR="; ") as ?sportCountryLabels)
+  (GROUP_CONCAT(DISTINCT ?sportNationLabel; SEPARATOR="; ") as ?sportNationLabels)
   (GROUP_CONCAT(DISTINCT ?positionLabel; SEPARATOR="; ") as ?positionLabels)
   (GROUP_CONCAT(DISTINCT ?careerStartYear; SEPARATOR="; ") as ?careerStartYears)
   (GROUP_CONCAT(DISTINCT ?careerEndYear; SEPARATOR="; ") as ?careerEndYears)
@@ -56,9 +56,9 @@ WHERE
   OPTIONAL{?player wdt:P570 ?dod.}                              # P570=date of death
   OPTIONAL{?player wdt:P20 ?pod.}                               # P20=place of death
   
-  # countries & positions
-  OPTIONAL{?player wdt:P27 ?citizenship.}                       # P27=country of citizenship
-  OPTIONAL{?player wdt:P1532 ?sportCountry.}                    # P1532=country for sport
+  # nations & positions
+  OPTIONAL{?player wdt:P27 ?citizenship.}                       # P27=nation of citizenship
+  OPTIONAL{?player wdt:P1532 ?sportNation.}                    # P1532=nation for sport
   OPTIONAL{?player wdt:P413 ?position.}                         # PP413=position played on team
   
   # career start/end dates
@@ -120,7 +120,7 @@ WHERE
                            ?pob rdfs:label ?pobLabel.
                            ?pod rdfs:label ?podLabel.
                            ?citizenship rdfs:label ?citizenshipLabel.
-                           ?sportCountry rdfs:label ?sportCountryLabel.
+                           ?sportNation rdfs:label ?sportNationLabel.
                            ?position rdfs:label ?positionLabel.
                          } # just to get the label right
 }

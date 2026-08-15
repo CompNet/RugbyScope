@@ -167,7 +167,7 @@ tlog("Insert individual information")
 # add main team information
 idx <- match(V(g)$name, teams[, "rugbyscopeId"])
 V(g)$type <- teams[idx, "type"]
-V(g)$country <- teams[idx, "countries"]
+V(g)$nation <- teams[idx, "nations"]
 V(g)$competition <- teams[idx, "competitions"]
 
 
@@ -178,7 +178,7 @@ V(g)$competition <- teams[idx, "competitions"]
 
 # print some stats
 print(sort(table(V(g)$type)))
-print(sort(table(V(g)$country)))
+print(sort(table(V(g)$nation)))
 print(sort(table(V(g)$competition)))
 
 # export as a graphml file

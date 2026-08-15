@@ -79,18 +79,18 @@ wp_players[, "deathDate"] %<>%  as.Date()
 fus_players[, "birthDate"] %<>%  as.Date()
 fus_players[, "deathDate"] %<>%  as.Date()
 
-# merge country and place of birth/death
+# merge nation and place of birth/death
 wp_players[, "birthPlace"] <- sapply(1:nrow(wp_players), function(i) {
-  if (is.na(wp_players[i, "birthCountry"]))
+  if (is.na(wp_players[i, "birthNation"]))
     return(wp_players[i, "birthPlace"])
   else
-    return(paste0(wp_players[i, "birthPlace"], "; ", wp_players[i, "birthCountry"]))
+    return(paste0(wp_players[i, "birthPlace"], "; ", wp_players[i, "birthNation"]))
 })
 wp_players[, "deathPlace"] <- sapply(1:nrow(wp_players), function(i) {
-  if (is.na(wp_players[i, "deathCountry"]))
+  if (is.na(wp_players[i, "deathNation"]))
     return(wp_players[i, "deathPlace"])
   else
-    return(paste0(wp_players[i, "deathPlace"], "; ", wp_players[i, "deathCountry"]))
+    return(paste0(wp_players[i, "deathPlace"], "; ", wp_players[i, "deathNation"]))
 })
 
 # normalize player names case

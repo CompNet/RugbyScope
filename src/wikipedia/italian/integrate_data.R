@@ -77,8 +77,8 @@ tlog(2, "Successful player matches: ", length(which(!is.na(idx))), "/", nrow(wp_
 
 # insert WP info if field is empty in the merged table
 map <- c()  # merged <- wp
-map["citizenships"] <- "birthCountry"
-map["sportCountries"] <- "sportCountry"
+map["citizenships"] <- "birthNation"
+map["sportNations"] <- "sportNation"
 map["fullName"] <- "fullName"
 map["heights"] <- "height"
 map["weights"] <- "weight"

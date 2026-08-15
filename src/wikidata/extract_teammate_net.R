@@ -109,8 +109,8 @@ V(g)$fullname <- players[idx, "playerLabel"]
 # plot(g)
 
 # add main player information
-all_countries <- get_merged_countries(players)
-V(g)$country <- all_countries[idx]
+all_nations <- get_merged_nations(players)
+V(g)$nation <- all_nations[idx]
 all_positions <- get_clean_positions(players)
 V(g)$position <- all_positions[idx]
 V(g)$composition <- players[idx, "positionLabels"]

@@ -15,7 +15,7 @@ SELECT DISTINCT ?teamId ?teamLabel
   (MAX(?termination) AS ?terminationMax) (CONCAT(STR(YEAR(?terminationMax)),"-",STR(MONTH(?terminationMax)),"-",STR(DAY(?terminationMax))) AS ?terminationFormat)
   (GROUP_CONCAT(DISTINCT ?nicknameLabel; SEPARATOR="; ") as ?nicknameLabels)
   (GROUP_CONCAT(DISTINCT ?affiliationLabel; SEPARATOR="; ") as ?affiliationLabels)
-  (GROUP_CONCAT(DISTINCT ?countryLabel; SEPARATOR="; ") as ?countryLabels)
+  (GROUP_CONCAT(DISTINCT ?nationLabel; SEPARATOR="; ") as ?nationLabels)
   (GROUP_CONCAT(DISTINCT ?competitionLabel; SEPARATOR="; ") as ?competitionLabels)
   (GROUP_CONCAT(DISTINCT ?homeVenueLabel; SEPARATOR="; ") as ?homeVenueLabels)
   (GROUP_CONCAT(DISTINCT ?homeVenueCapacity; SEPARATOR="; ") as ?homeVenueCapacities)
@@ -53,13 +53,13 @@ WHERE
   OPTIONAL{?team wdt:P1448 ?name.}                                      # P1448=official name
   OPTIONAL{?team wdt:P1449 ?nickname.}                                  # P1449=nickname
   
-  # affiliations / country
+  # affiliations / nation
   OPTIONAL{?team wdt:P1416 ?affiliation.                                # P1416=affiliation
            # for multisport clubs (several affiliation: keep only rugby)
            ?affiliation wdt:P641 ?affSport.                             # P641=sport
            FILTER(!BOUND(?affSport) || ?affSport = wd:Q5849)            # Q5849=Rugby Union (keep rugby affiliations, but also sport-less ones)
           }
-  OPTIONAL{?team wdt:P17 ?country.}                                     # P17=country
+  OPTIONAL{?team wdt:P17 ?nation.}                                     # P17=nation
   OPTIONAL{?team wdt:P118 ?competition.                                 # P118=league or competition
            # for multisport clubs (several competitions: keep only rugby)
            ?competition wdt:P641 ?competSport.                          # P641=sport
@@ -117,7 +117,7 @@ WHERE
                            ?teamType rdfs:label ?teamTypeLabel.
                            ?nickname rdfs:label ?nicknameLabel.
                            ?affiliation rdfs:label ?affiliationLabel.
-                           ?country rdfs:label ?countryLabel.
+                           ?nation rdfs:label ?nationLabel.
                            ?competition rdfs:label ?competitionLabel.
                            ?homeVenue rdfs:label ?homeVenueLabel.
                            ?location rdfs:label ?locationLabel.

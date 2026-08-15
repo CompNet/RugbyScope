@@ -43,17 +43,17 @@ BIOGRAPHY = "Datos personales"
 
 FULL_NAME = "Nombre completo"
 BIRTH = "Nacimiento"
-BIRTH_COUNTRY = "País"
+BIRTH_NATION = "País"
 DEATH = "Fallecimiento"
 CITIZENSHIP = "Nacionalidad(es)"
 HEIGHT = "Altura"
 WEIGHT = "Peso"
 POSITIONS = "Posición"
 
-COUNTRY_TEAM = "Selección"
-COUNTRY_MATCHES = "Part."
-COUNTRY_POINTS = "Puntos"
-COUNTRY_START = "Debut"
+NATION_TEAM = "Selección"
+NATION_MATCHES = "Part."
+NATION_POINTS = "Puntos"
+NATION_START = "Debut"
 
 CAREER = "Trayectoria"
 TEAMS = "Equipos"
@@ -243,7 +243,7 @@ for _, player in merged_table.iterrows():
                     tlog(2, f"Could not find the birth section")
 
                 # citizenship
-                citi_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == BIRTH_COUNTRY)
+                citi_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == BIRTH_NATION)
                 if citi_elt:
                     temp_elt = citi_elt.find_next_siblings()[0]
                     citizenship = temp_elt.get_text(strip=True)
@@ -354,7 +354,7 @@ for _, player in merged_table.iterrows():
                     tlog(2, f"Could not find positions")
 
                 # national selection
-                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == COUNTRY_TEAM)
+                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == NATION_TEAM)
                 if nati_elt:
                     temp_elt = nati_elt.find_next_siblings()[0]
                     nat_team = temp_elt.get_text(strip=True)
@@ -365,7 +365,7 @@ for _, player in merged_table.iterrows():
                 else:
                     tlog(2, f"Could not find a national team")
                 # starting year
-                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == COUNTRY_START)
+                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == NATION_START)
                 if nati_elt:
                     temp_elt = nati_elt.find_next_siblings()[0]
                     nat_start = temp_elt.get_text(strip=True)
@@ -376,7 +376,7 @@ for _, player in merged_table.iterrows():
                 else:
                     tlog(4, f"Could not find a start date")
                 # matches played
-                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == COUNTRY_MATCHES)
+                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == NATION_MATCHES)
                 if nati_elt:
                     temp_elt = nati_elt.find_next_siblings()[0]
                     nat_matches = temp_elt.get_text(strip=True)
@@ -390,7 +390,7 @@ for _, player in merged_table.iterrows():
                 else:
                     tlog(4, f"Could not find matches played")
                 # points scored
-                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == COUNTRY_POINTS)
+                nati_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == NATION_POINTS)
                 if nati_elt:
                     temp_elt = nati_elt.find_next_siblings()[0]
                     nat_points = temp_elt.get_text(strip=True)

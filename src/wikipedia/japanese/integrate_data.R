@@ -369,7 +369,7 @@ for (i in 1:length(map_ids)) {
       rsid <- rsid + 1
       supp[r, "wikipediaJa"] <- names(map_ids)[i]
       supp[r, "wikidataId"] <- map_ids[i]
-      supp[r, "countries"] <- "Japan"
+      supp[r, "nations"] <- "Japan"
       supp[r, "fullName"] <- map_names[map_ids[i]]
       supp[r, "altNames"] <- wp_teams[matches[i], "altNames"]
       r <- r + 1
@@ -408,7 +408,7 @@ for (i in 1:length(map_names)) {
   wp_teams[wp_idx[i], "rugbyscopeId"] <- rsid
   rsid <- rsid + 1
   supp[r, "wikipediaJa"] <- names(map_names)[i]
-  supp[r, "countries"] <- "Japan"
+  supp[r, "nations"] <- "Japan"
   supp[r, "fullName"] <- map_names[i]
   supp[r, "altNames"] <- wp_teams[wp_idx[i], "altNames"]
   r <- r + 1
@@ -489,7 +489,7 @@ for (i in 1:nrow(tab)) {
   wp_teams[wp_idx[i], "rugbyscopeId"] <- rsid
   rsid <- rsid + 1
   supp[r, "wikipediaJa"] <- tab[i, "teamWP"]
-  supp[r, "countries"] <- "Japan"
+  supp[r, "nations"] <- "Japan"
   names <- strsplit(tab[i, "altNames"], "; ")[[1]]
   en_name <- NA
   ja_names <- c()
@@ -503,13 +503,13 @@ for (i in 1:nrow(tab)) {
   supp[r, "altNames"] <- paste0(ja_names, collapse = "; ")
   r <- r + 1
 }
-# update certain teams' countries based on name2country.csv map
-temp <- read.csv(file.path(wp_folder, "maps", "name2country.csv"))
-map_ctry <- temp[, "country"]
+# update certain teams' nations based on name2nation.csv map
+temp <- read.csv(file.path(wp_folder, "maps", "name2nation.csv"))
+map_ctry <- temp[, "nation"]
 names(map_ctry) <- temp[, "teamName"]
 idx <- which(!is.na(match(supp[, "fullName"], names(map_ctry))))
 for (team in names(map_ctry))
-  supp[which(supp[, "fullName"] == team), "countries"] <- map_ctry[team]
+  supp[which(supp[, "fullName"] == team), "nations"] <- map_ctry[team]
 # add to merged table
 fus_teams <- rbind(fus_teams, supp)
 tlog(4, "Had to create ", nrow(supp), " new teams in merged table")
@@ -644,7 +644,7 @@ r <- 1
 for (r in 1:nrow(tab)) {
   # update temp table
   supp[r, "rugbyscopeId"] <- rsid
-  supp[r, "countries"] <- tab[r, "countries"]
+  supp[r, "nations"] <- tab[r, "nations"]
   supp[r, "fullName"] <- tab[r, "fullName"]
   supp[r, "altNames"] <- tab[r, "altNames"]
   supp[r, "type"] <- tab[r, "type"]

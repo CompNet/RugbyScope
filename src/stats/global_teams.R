@@ -155,71 +155,71 @@ write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 ########################################################################
-# distribution of countries
+# distribution of nations
 plot_top <- 12
 
-# get country info
-countries <- c()
-country_nbr <- c()
+# get nation info
+nations <- c()
+nation_nbr <- c()
 for (t in 1:nrow(teams)) {
   if (t %% 1000 == 0)
     tlog(2, "Processing team ", t, "/", nrow(teams))
   team_id <- teams[t, "rugbyscopeId"]
 
-  # get country list
-  team_countries <- trimws(strsplit(teams[t, "countries"], split = ";")[[1]])
+  # get nation list
+  team_nations <- trimws(strsplit(teams[t, "nations"], split = ";")[[1]])
 
   # add to stat list
-  countries <- c(countries, team_countries)
-  country_nbr <- c(country_nbr, length(team_countries))
+  nations <- c(nations, team_nations)
+  nation_nbr <- c(nation_nbr, length(team_nations))
 }
-tlog("Number of distinct team countries: ", length(unique(countries)))
-tlog("Average number of countries by team: ", mean(country_nbr, na.rm = TRUE), " (", sd(country_nbr, na.rm = TRUE),")")
+tlog("Number of distinct team nations: ", length(unique(nations)))
+tlog("Average number of nations by team: ", mean(nation_nbr, na.rm = TRUE), " (", sd(nation_nbr, na.rm = TRUE),")")
 
 
 
 # count values
-countr_tt <- table(countries, useNA = "always")
-print(countr_tt)
+nat_tt <- table(nations, useNA = "always")
+print(nat_tt)
 # export values as a csv file
-tab_file <- file.path(stats_folder, paste0("countries0", ".csv"))
-tab <- as.data.frame(countr_tt)
-colnames(tab) <- c("Country", "Count")
+tab_file <- file.path(stats_folder, paste0("nations0", ".csv"))
+tab <- as.data.frame(nat_tt)
+colnames(tab) <- c("Nation", "Count")
 write.csv(as.data.frame(tab), tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 # focus on most frequent values
-countr_tt0 <- sort(table(countries, useNA = "no"), decreasing = TRUE)
-top_countries <- names(countr_tt0)[1:plot_top]
+nat_tt0 <- sort(table(nations, useNA = "no"), decreasing = TRUE)
+top_nations <- names(nat_tt0)[1:plot_top]
 
 # remove NAs
-countr_tt2 <- countr_tt[!is.na(names(countr_tt))]
+nat_tt2 <- nat_tt[!is.na(names(nat_tt))]
 
 # add a new value for category others
-countr_tt2 <- c(countr_tt2, "Others" = sum(countr_tt2[!(names(countr_tt2) %in% top_countries)], na.rm = TRUE))
-top_countries <- c(top_countries, "Others")
+nat_tt2 <- c(nat_tt2, "Others" = sum(nat_tt2[!(names(nat_tt2) %in% top_nations)], na.rm = TRUE))
+top_nations <- c(top_nations, "Others")
 
 # set colors
-color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
+color_palette <- c(NATION_COLORS, "Others" = "#919191")
 
 # generate barplot
-plot_file <- file.path(stats_folder, paste0("countries", ".pdf"))
+plot_file <- file.path(stats_folder, paste0("nations", ".pdf"))
 tlog("Producing plot file: ", plot_file)
 pdf(plot_file, width = 7, height = 7)
   par(mgp = c(3.0, 0.5, 0))             # reduce space between axis title / axis values and axis line
   par(mar = c(1.50, 4.00, 0.25, 0.00))  # control margins: B L T R
-  heights <- countr_tt2[top_countries]
+  heights <- nat_tt2[top_nations]
 
   # init plot
   bp <- barplot(
     height = heights,
-    #xlab = "Team Countries",
+    #xlab = "Team Nations",
     ylab = "Frequency",
     names.arg = FALSE,
     legend = FALSE,
     las = 2,
-    col = color_palette[top_countries]
+    col = color_palette[top_nations]
   )
-  mtext("Team country", side = 1, line = 0.25)
+  mtext("Team nation", side = 1, line = 0.25)
 
   # decide bar text pos
   outside_text <- which(heights < 0.5 * max(heights, na.rm = TRUE))
@@ -228,7 +228,7 @@ pdf(plot_file, width = 7, height = 7)
   if (length(outside_text) > 0) {
     text(bp[outside_text],
       heights[outside_text] + 0.025 * max(heights, na.rm = TRUE),
-      labels = top_countries[outside_text],
+      labels = top_nations[outside_text],
       col = "black",
       srt = 90,
       adj = c(0, 0.5),
@@ -240,8 +240,8 @@ pdf(plot_file, width = 7, height = 7)
   if (length(inside_text) > 0) {
     text(bp[inside_text],
       heights[inside_text] - 0.025 * max(heights, na.rm = TRUE),
-      labels = top_countries[inside_text],
-      col = text_color(color_palette[top_countries[inside_text]]),
+      labels = top_nations[inside_text],
+      col = text_color(color_palette[top_nations[inside_text]]),
       srt = 90,
       adj = c(1, 0.5),
       xpd = TRUE
@@ -250,8 +250,8 @@ pdf(plot_file, width = 7, height = 7)
 dev.off()
 
 # export values as a csv file
-tab_file <- file.path(stats_folder, paste0("countries", ".csv"))
-tab <- cbind("Country" = top_countries, "Count" = heights)
+tab_file <- file.path(stats_folder, paste0("nations", ".csv"))
+tab <- cbind("Nation" = top_nations, "Count" = heights)
 write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
@@ -790,18 +790,18 @@ write.csv(tab, tab_file, row.names = FALSE, fileEncoding = "UTF-8")
 
 
 ########################################################################
-# distribution of sources vs. countries
+# distribution of sources vs. nations
 
 # retrieve sources
 cr_data_sources <- c()
-cr_countries <- c()
+cr_nations <- c()
 for (t in 1:nrow(teams)) {
   if (t %% 1000 == 0)
     tlog(2, "Processing entry ", t, "/", nrow(teams))
   team_id <- teams[t, "rugbyscopeId"]
 
-  # get countries
-  team_countries <- trimws(strsplit(teams[t, "countries"], split = ";")[[1]])
+  # get nations
+  team_nations <- trimws(strsplit(teams[t, "nations"], split = ";")[[1]])
 
   # get data sources
   team_data_sources <- c()
@@ -812,19 +812,19 @@ for (t in 1:nrow(teams)) {
   }
 
   # add to stat lists
-  cr_countries <- c(cr_countries, rep(team_countries, each = length(team_data_sources)))
-  cr_data_sources <- c(cr_data_sources, rep(team_data_sources, length(team_countries)))
+  cr_nations <- c(cr_nations, rep(team_nations, each = length(team_data_sources)))
+  cr_data_sources <- c(cr_data_sources, rep(team_data_sources, length(team_nations)))
 }
 
 # count values
-cr_tt <- table(cr_data_sources, cr_countries, useNA = "always")
+cr_tt <- table(cr_data_sources, cr_nations, useNA = "always")
 print(cr_tt)
 # export values as a csv file
-tab_file <- file.path(stats_folder, paste0("data-sources_vs_countries_contingency0", "-nbr", ".csv"))
+tab_file <- file.path(stats_folder, paste0("data-sources_vs_nations_contingency0", "-nbr", ".csv"))
 write.csv(cr_tt, tab_file, row.names = TRUE, fileEncoding = "UTF-8")
 
-# replace minority countries
-idx <- which(is.na(colnames(cr_tt)) | !(colnames(cr_tt) %in% top_countries))
+# replace minority nations
+idx <- which(is.na(colnames(cr_tt)) | !(colnames(cr_tt) %in% top_nations))
 cr_tt2 <- cbind(cr_tt, "Others" = rowSums(cr_tt[, idx], na.rm = TRUE))
 
 # remove NAs
@@ -833,13 +833,13 @@ cr_tt2 <- cr_tt2[!is.na(rownames(cr_tt2)), ]
 # generate contingency table
 for (i in 1:2) {
   if (i ==  2) {
-    for (top_country in top_countries)
-      cr_tt2[, top_country] <- 100 * cr_tt2[, top_country] / countr_tt2[top_country]
+    for (top_nation in top_nations)
+      cr_tt2[, top_nation] <- 100 * cr_tt2[, top_nation] / nat_tt2[top_nation]
   }
-  plot_file <- file.path(stats_folder, paste0("data-sources_vs_countries_contingency", if (i == 1) "-nbr" else "-prop", ".pdf"))
+  plot_file <- file.path(stats_folder, paste0("data-sources_vs_nations_contingency", if (i == 1) "-nbr" else "-prop", ".pdf"))
   tlog("Producing plot file: ", plot_file)
   pdf(plot_file, width = 7, height = 7)
-    corrplot(cr_tt2[, top_countries],
+    corrplot(cr_tt2[, top_nations],
       is.corr = FALSE, #diag = FALSE,
       method = "color",
       number.digits = 0,
@@ -850,8 +850,8 @@ for (i in 1:2) {
   dev.off()
 
   # export values as a csv file
-  tab_file <- file.path(stats_folder, paste0("data-sources_vs_countries_contingency", if (i == 1) "-nbr" else "-prop", ".csv"))
-  write.csv(cr_tt2[, top_countries], tab_file, row.names = TRUE, fileEncoding = "UTF-8")
+  tab_file <- file.path(stats_folder, paste0("data-sources_vs_nations_contingency", if (i == 1) "-nbr" else "-prop", ".csv"))
+  write.csv(cr_tt2[, top_nations], tab_file, row.names = TRUE, fileEncoding = "UTF-8")
 }
 
 
@@ -860,7 +860,7 @@ for (i in 1:2) {
 ########################################################################
 # overall completeness stats
 field_groups <- list(
-  "perso-fields" = c("type", "inceptionDate", "terminationDate", "countries"),
+  "perso-fields" = c("type", "inceptionDate", "terminationDate", "nations"),
   "rugby-fields" = c("affiliations", "competitions", "tier", "homeVenueNames", "homeVenueCapacities", "locations"),
   "id-fields" = c("wikidataId", "allRugbyId", "googleKnowlId", "dbpediaId"),
   "wp-fields" = c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")

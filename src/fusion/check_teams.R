@@ -128,7 +128,7 @@ print(unique(teams[idx, "firstName"]))
 
 ########################################################################
 # categories: verify normalization
-# "type" "countries" "competitions" "tier"
+# "type" "nations" "competitions" "tier"
 
 # check names vs. types
 print(sort(unique(teams[, "type"])))
@@ -137,23 +137,23 @@ print(teams[idx, c("fullName", "tier")])
 print(as.matrix(sort(teams[idx, "fullName"]), ncol = 1))
 
 
-# normalize country names
-countries <- trimws(unlist(strsplit(teams[, "countries"], ";")))
-unique_countries <- sort(unique(countries))
-print(unique_countries)
-#print(setdiff(unique_countries, names(map)))
-sort(table(countries))
-#### debug: produce a list of countries, to complement manually
-#vals <- setdiff(unique_countries, names(map))
+# normalize nation names
+nations <- trimws(unlist(strsplit(teams[, "nations"], ";")))
+unique_nations <- sort(unique(nations))
+print(unique_nations)
+#print(setdiff(unique_nations, names(map)))
+sort(table(nations))
+#### debug: produce a list of nations, to complement manually
+#vals <- setdiff(unique_nations, names(map))
 #tab <- cbind(vals, rep(NA, length(vals)))
 #tab <- rbind(tab, cbind(names(map), map))
-#colnames(tab) <- c("Country", "GoverningBody")
+#colnames(tab) <- c("Nation", "GoverningBody")
 #tab <- tab[order(tab[, 1]), ]
 #write.csv(tab, "temptemp.csv", row.names = FALSE)
 ####
-#check teams without country
-idx <- which(is.na(teams[, "countries"]))
-print(teams[idx, c("rugbyscopeId", "fullName", "countries")])
+#check teams without nation
+idx <- which(is.na(teams[, "nations"]))
+print(teams[idx, c("rugbyscopeId", "fullName", "nations")])
 
 
 # check tier values
@@ -171,13 +171,13 @@ print(sort(unique(trimws(unlist(strsplit(teams[, "affiliations"], ";"))))))
 # read affiliation map
 tmp <- read.csv(file.path(res_folder, "_governing_bodies.csv"))
 map <- tmp[, "GoverningBody"]
-names(map) <- tmp[, "Country"]
+names(map) <- tmp[, "Nation"]
 # apply to missing values
 for (i in 1:length(map)) {
-  country <- names(map)[i]
+  nation <- names(map)[i]
   federation_name <- map[i]
 
-  idx <- which(teams[, "countries"] == country & is.na(teams[, "affiliations"]))
+  idx <- which(teams[, "nations"] == nation & is.na(teams[, "affiliations"]))
   table(teams[idx, "affiliations"], useNA = "always")
   table(teams[idx, "type"], useNA = "always")
   print(teams[idx, c("fullName", "affiliations")])
@@ -190,18 +190,18 @@ for (i in 1:length(map)) {
   }
 
   # handle national teams
-  if (country == "U.S.A.")
-    country <- "United States"
-  else if (country == "U.S.S.R.")
-    country <- "Soviet Union"
-  else if (country == "Czechia")
-    country <- "Czech Republic"
-  else if (country == "Republic of the Congo")
-    country <- "Congo"
-  else if (country == "D.R. of the Congo")
-    country <- "Democratic Republic of the Congo"
+  if (nation == "U.S.A.")
+    nation <- "United States"
+  else if (nation == "U.S.S.R.")
+    nation <- "Soviet Union"
+  else if (nation == "Czechia")
+    nation <- "Czech Republic"
+  else if (nation == "Republic of the Congo")
+    nation <- "Congo"
+  else if (nation == "D.R. of the Congo")
+    nation <- "Democratic Republic of the Congo"
   #
-  idx2 <- idx[grepl("national", teams[idx, "type"], ignore.case = TRUE) & grepl(country, teams[idx, "fullName"], ignore.case = TRUE)]
+  idx2 <- idx[grepl("national", teams[idx, "type"], ignore.case = TRUE) & grepl(nation, teams[idx, "fullName"], ignore.case = TRUE)]
   if (length(idx2) > 0) {
     print(teams[idx2, c("fullName", "affiliations")])
     teams[idx2, "affiliations"] <- federation_name
@@ -228,13 +228,13 @@ for (i in 1:length(map)) {
 
 # display non-affiliated teams overall
 idx <- which(is.na(teams[, "affiliations"]))
-print(teams[idx, c("fullName", "countries", "affiliations")])
+print(teams[idx, c("fullName", "nations", "affiliations")])
 
 # display existing affiliations (after update)
 table(trimws(unlist(strsplit(teams[, "affiliations"], ";"))), useNA = "always")
 print(sort(unique(trimws(unlist(strsplit(teams[, "affiliations"], ";"))))))
 #
-sort(unique(sapply(1:nrow(teams), function(i) paste0(teams[i, "countries"], "--", teams[i, "affiliations"]))))
+sort(unique(sapply(1:nrow(teams), function(i) paste0(teams[i, "nations"], "--", teams[i, "affiliations"]))))
 
 
 # normalize competition names

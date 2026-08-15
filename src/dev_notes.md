@@ -2,7 +2,7 @@
 * If we just focus on pro clubs, the careers will be very incomplete, the sequences very short (not useful)
   * [x] include amateur/university clubs too
 * Must be able to assess the completeness of the data, in order to get long enough sequences
-  * [x] list and add all clubs from tier 1 countries
+  * [x] list and add all clubs from tier 1 nations
 * Wikidata = manual vs. DBpedia = auto extraction of info box
   * src: https://stackoverflow.com/questions/33862336/how-to-extract-information-from-a-wikipedia-infobox
 * DBpedia data:
@@ -45,23 +45,23 @@
 
 # STATS & PLOTS
 * Player stats
-  * [x] Distribution of players by country
+  * [x] Distribution of players by nation
   * [x] Distribution of weight/height depending on position
-  * [x] Evolution of the number of players based on birthdate (or activity?) and country
-  * [x] Evolution of the number of stints based on start date and country
+  * [x] Evolution of the number of players based on birthdate (or activity?) and nation
+  * [x] Evolution of the number of stints based on start date and nation
   * [x] Evolution of the height / weight over time
   * [ ] For larger position granularities, we could dis-aggregate: replace "Prop" by both types of prop, and so on
   * [x] Use WP links to plot data sources (static and dynamic)
-  * [x] Cross-ref sources and countries: is there a match?
+  * [x] Cross-ref sources and nations: is there a match?
 * Team stats
-  * [x] Distribution of teams by country
+  * [x] Distribution of teams by nation
   * [x] Use WP links to plot data sources (static and dynamic)
-  * [x] Cross-ref sources and countries: is there a match?
+  * [x] Cross-ref sources and nations: is there a match?
 * Stint stats
-  * [x] Distribution of stints by source and country (both players and teams)
+  * [x] Distribution of stints by source and nation (both players and teams)
   * [x] Distribution of stints by source
     * [x] Find a way to show how redundant they are
-  * [x] Cross-ref sources and countries: is there a match?
+  * [x] Cross-ref sources and nations: is there a match?
 * [x] Completeness stats:
   * [x] Static: for each field, proportion of empty rows
   * [x] Evolution: proportion of missing values over time

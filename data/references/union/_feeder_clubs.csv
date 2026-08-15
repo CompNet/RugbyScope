@@ -1,4 +1,4 @@
-country,startYear,endYear,feederId,feederName,receiverId,receiverName
+nation,startYear,endYear,feederId,feederName,receiverId,receiverName
 Wales,2003,2004,104,Pontypridd RFC,185,Celtic Warriors
 Wales,2003,2004,440,Bridgend Ravens,185,Celtic Warriors
 Wales,2003,NA,150,Swansea RFC,273,Ospreys

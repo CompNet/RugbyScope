@@ -237,88 +237,88 @@ players[, "deathPlaces"] <- gsub(",", ";", players[, "deathPlaces"], fixed = TRU
 
 
 ########################################################################
-# countries: verify normalization
-# "citizenships" "sportCountries"
+# nations: verify normalization
+# "citizenships" "sportNations"
 home_nations <- c("England", "Ireland", "Scotland", "Wales")
 
 print(sort(table(trimws(unlist(strsplit(players[, "citizenships"], ";"))), useNA = "always")))
-print(sort(table(trimws(unlist(strsplit(players[, "sportCountries"], ";"))), useNA = "always")))
-print(sort(table(trimws(unlist(strsplit(unlist(players[, c("citizenships", "sportCountries")]), ";"))), useNA = "always")))
+print(sort(table(trimws(unlist(strsplit(players[, "sportNations"], ";"))), useNA = "always")))
+print(sort(table(trimws(unlist(strsplit(unlist(players[, c("citizenships", "sportNations")]), ";"))), useNA = "always")))
 
-print(sort(unique(trimws(unlist(strsplit(c(teams[, "countries"], unlist(players[, c("citizenships", "sportCountries")])), ";"))))))
+print(sort(unique(trimws(unlist(strsplit(c(teams[, "nations"], unlist(players[, c("citizenships", "sportNations")])), ";"))))))
 
 
 
-# fix missing sport countries for UK
+# fix missing sport nations for UK
 idx <- which(players[, "citizenships"] == "England")
 players[idx, "citizenships"] <- "United Kingdom"
-players[idx, "sportCountries"] <- "England"
+players[idx, "sportNations"] <- "England"
 idx <- which(grepl("England", players[, "citizenships"]))
 #
 idx <- which(players[, "citizenships"] == "Scotland")
 players[idx, "citizenships"] <- "United Kingdom"
-players[idx, "sportCountries"] <- "Scotland"
+players[idx, "sportNations"] <- "Scotland"
 idx <- which(grepl("Scotland", players[, "citizenships"]))
 #
 idx <- which(players[, "citizenships"] == "Wales")
 players[idx, "citizenships"] <- "United Kingdom"
-players[idx, "sportCountries"] <- "Wales"
+players[idx, "sportNations"] <- "Wales"
 idx <- which(grepl("Wales", players[, "citizenships"]))
 
-idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
+idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportNations"]))
 print(players[idx, ])
 
 # leverage international stints
 for (i in 1:length(idx)) {
   tlog(2, "Process player ", players[idx[i], "fullName"])
-  print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+  print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportNations")])
 
   player_stints <- stints[stints[, "playerId"] == players[idx[i], "wikidataId"], ]
-  sport_countries <- c()
+  sport_nations <- c()
   for (nation in home_nations) {
     if (grepl(nation, paste0(player_stints[, "teamName"], collapse = "; "), fixed = TRUE))
-      sport_countries <- c(sport_countries, nation)
+      sport_nations <- c(sport_nations, nation)
   }
 
-  if (length(sport_countries) > 0) {
-    players[idx[i], "sportCountries"] <- paste0(sport_countries, collapse = "; ")
-    print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+  if (length(sport_nations) > 0) {
+    players[idx[i], "sportNations"] <- paste0(sport_nations, collapse = "; ")
+    print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportNations")])
   }
 }
-idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
+idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportNations"]))
 print(players[idx, ])
 
 # add manual annotations
 map <- read.csv("data/fusion/_missing_nations.csv")
 idx <- match(map[, "url"], players[, "wikipediaEn"])
 cbind(players[idx, "wikipediaEn"], map)
-players[idx, "sportCountries"] <- map[, "country"]
+players[idx, "sportNations"] <- map[, "nation"]
 #
-idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportCountries"]))
+idx <- which(!is.na(players[, "citizenships"]) & players[, "citizenships"] == "United Kingdom" & is.na(players[, "sportNations"]))
 print(players[idx, ])
 
 
-# dealing with missing citizenships when there are sport countries
-idx <- which(is.na(players[, "citizenships"]) & !is.na(players[, "sportCountries"]))
+# dealing with missing citizenships when there are sport nations
+idx <- which(is.na(players[, "citizenships"]) & !is.na(players[, "sportNations"]))
 print(players[idx, ])
 # home nations
-idx2 <- idx[players[idx, "sportCountries"] %in% setdiff(home_nations, "Ireland")]
+idx2 <- idx[players[idx, "sportNations"] %in% setdiff(home_nations, "Ireland")]
 players[idx2, "citizenships"] <- "United Kingdom"
 print(players[idx2, ])
-# other countries
-idx <- which(is.na(players[, "citizenships"]) & !is.na(players[, "sportCountries"]))
-players[idx, "citizenships"] <- players[idx, "sportCountries"]
-players[idx, "sportCountries"] <- NA
+# other nations
+idx <- which(is.na(players[, "citizenships"]) & !is.na(players[, "sportNations"]))
+players[idx, "citizenships"] <- players[idx, "sportNations"]
+players[idx, "sportNations"] <- NA
 print(players[idx, ])
 
 
-# dealing with missing citizenships and sport country
+# dealing with missing citizenships and sport nation
 idx <- which(is.na(players[, "citizenships"]))
 print(length(idx))
 # leverage international stints
 for (i in 1:length(idx)) {
   tlog(2, "Process player ", players[idx[i], "fullName"], "(", i, "/", length(idx), ")")
-  print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+  print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportNations")])
 
   player_stints <- stints[stints[, "playerId"] == players[idx[i], "wikidataId"], ]
   print(player_stints)
@@ -356,7 +356,7 @@ for (i in 1:length(idx)) {
         } else if (length(nations) == 1) {
           if (nations %in% setdiff(home_nations, "Ireland")) {
             players[idx[i], "citizenships"] <- "United Kingdom"
-            players[idx[i], "sportCountries"] <- nations
+            players[idx[i], "sportNations"] <- nations
           } else {
             players[idx[i], "citizenships"] <- nations
           }
@@ -365,7 +365,7 @@ for (i in 1:length(idx)) {
           if (any(nations %in% home_nations)) {
             players[idx[i], "citizenships"] <- "United Kingdom"
           } else {
-            players[idx[i], "sportCountries"] <- paste0(nations, collapse = "; ")
+            players[idx[i], "sportNations"] <- paste0(nations, collapse = "; ")
           }
           again <- -1
         }
@@ -374,11 +374,11 @@ for (i in 1:length(idx)) {
           again <- 1
         else {
           again <- -1
-          nation <- readline("Country?")
+          nation <- readline("Nation?")
           if (nation != "") {
             if (nation %in% setdiff(home_nations, "Ireland")) {
               players[idx[i], "citizenships"] <- "United Kingdom"
-              players[idx[i], "sportCountries"] <- nation
+              players[idx[i], "sportNations"] <- nation
             } else {
               players[idx[i], "citizenships"] <- nation
             }
@@ -387,12 +387,12 @@ for (i in 1:length(idx)) {
       }
     }
 
-    print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+    print(players[idx[i], c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportNations")])
     # readline("Press enter to continue")
   }
 }
 idx2 <- which(is.na(players[, "citizenships"]))
-print(players[idx2, c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportCountries")])
+print(players[idx2, c("fullName", "birthPlaces", "deathDate", "deathPlaces", "citizenships", "sportNations")])
 
 
 

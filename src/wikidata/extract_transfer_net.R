@@ -91,7 +91,7 @@ tlog("Insert individual information")
 
 # add main team information
 idx <- match(V(g)$name, teams[, "teamId"])
-V(g)$country <- teams[idx, "countryLabels"]
+V(g)$nation <- teams[idx, "nationLabels"]
 V(g)$competition <- teams[idx, "competitionLabels"]
 
 
@@ -101,7 +101,7 @@ V(g)$competition <- teams[idx, "competitionLabels"]
 # finalize the network
 
 # print some stats
-print(sort(table(V(g)$country)))
+print(sort(table(V(g)$nation)))
 print(sort(table(V(g)$competition)))
 
 # export as a graphml file

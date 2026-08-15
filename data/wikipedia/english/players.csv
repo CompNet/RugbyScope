@@ -1,4 +1,4 @@
-"wikidataId","fullName","enName","birthDate","birthPlace","birthCountry","deathDate","deathPlace","deathCountry","height","weight","positions"
+"wikidataId","fullName","enName","birthDate","birthPlace","birthNation","deathDate","deathPlace","deathNation","height","weight","positions"
 "Q6833587",NA,"michael poppmeier",1982-07-24,"Durban","South Africa",NA,NA,NA,197,112,"2nd Row"
 "Q7152776",NA,"paul o'donohoe",1987-08-27,"Dublin","Ireland",NA,NA,NA,178,92,"Scrum-Half"
 "Q2939422",NA,"carlos nieto",1976-06-25,"La Plata","Argentina",NA,NA,NA,185,110,"Tighthead Prop"
