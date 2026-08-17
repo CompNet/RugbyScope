@@ -56,7 +56,7 @@ col_names <- c(
   "playerId", "playerLabel",
   "firstnameLabels", "lastnameLabels", "sexLabel",
   "dobMax", "dobFormat", "pobLabels", "dodMax", "dodFormat", "podLabels",
-  "citizenshipLabels", "sportCountryLabels",
+  "citizenshipLabels", "sportNationLabels",
   "positionLabels", "careerStartYears", "careerEndYears",
   "masses", "heights",
   "espnScrumIds", "allRugbyIds", "googleKnowlIds", "itsRugbyIds", "rugbyDatabaseIds",
@@ -154,7 +154,7 @@ col_names <- c(
   "inceptionMax", "inceptionFormat",
   "terminationMax", "terminationFormat",
   "altNames", "nicknameLabels", "affiliationLabels",
-  "countryLabels", "competitionLabels",
+  "nationLabels", "competitionLabels",
   "homeVenueLabels", "homeVenueCapacities", "locationLabels",
   "allRugbyIds", "googleKnowlIds",
   "wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa"

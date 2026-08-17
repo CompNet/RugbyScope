@@ -1,4 +1,4 @@
-"wikidataId","fullName","itName","height","weight","positions","positionsWP","birthCountry","sportCountry","currentTeamWP"
+"wikidataId","fullName","itName","height","weight","positions","positionsWP","birthNation","sportNation","currentTeamWP"
 "Q207","George W. Bush","George W. Bush",NA,NA,NA,NA,NA,NA,NA
 "Q5809","Ernesto Guevara","Ernesto Che Guevara",NA,NA,NA,NA,NA,NA,NA
 "Q7571","Patricio Albacete","Patricio Albacete",200,115,"2nd Row",NA,"Argentina",NA,NA

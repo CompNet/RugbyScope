@@ -223,7 +223,7 @@ for (size_name in c("height", "weight")) {
 
 # note: multiple positions are possible, so the same player can be counted several times
 
-# get country info
+# get nation info
 positions <- c()
 position_years <- c()
 position_heights <- c()

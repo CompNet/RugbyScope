@@ -290,64 +290,64 @@ all_locs <- strsplit(all_locs, ",")
 unique_locs <- sort(unique(trimws(unlist(all_locs))))
 #write.csv(unique_locs, file.path(folder, "check_locations.csv"), row.names = FALSE)
 
-# distinguish between towns/regions and countries
+# distinguish between towns/regions and nations
 #### check number of distinct names by row
 #tt <- table(sapply(all_locs, length))
 #all_locs[which(sapply(all_locs, length) == 4)]
 ####
 idx_unq <- which(sapply(all_locs, length) == 1)
 idx_sev <- which(sapply(all_locs, length) > 1)
-countries <- sapply(all_locs[idx_sev], function(ll) ll[length(ll)])
-#unique_countries <- sort(unique(trimws(unlist(countries))))
-#write.csv(unique_countries, file.path(folder, "check_countries.csv"), row.names = FALSE)
-country_map <- read.csv(file.path(folder, "maps", "text2country.csv"))
-countries <- rep(NA, length(all_locs))
+nations <- sapply(all_locs[idx_sev], function(ll) ll[length(ll)])
+#unique_nations <- sort(unique(trimws(unlist(nations))))
+#write.csv(unique_nations, file.path(folder, "check_nations.csv"), row.names = FALSE)
+nation_map <- read.csv(file.path(folder, "maps", "text2nation.csv"))
+nations <- rep(NA, length(all_locs))
 # loop over entries with more than one location name
 for (i in idx_sev) {
   locs <- trimws(all_locs[[i]])
   if (length(locs) > 1) {
-    # look for the potential country in the map
-    ii <- which(country_map[, "original"] == locs[length(locs)])
+    # look for the potential nation in the map
+    ii <- which(nation_map[, "original"] == locs[length(locs)])
     # if it is up there
     if (length(ii) == 1) {
-      # add the normalized string to the country list
-      countries[i] <- country_map[ii, "normalized"]
+      # add the normalized string to the nation list
+      nations[i] <- nation_map[ii, "normalized"]
       # and possibly delete the original string from locs
-      if (!as.logical(country_map[ii, "keep"])) {
+      if (!as.logical(nation_map[ii, "keep"])) {
         locs <- locs[-length(locs)]
       }
     }
   }
   all_locs[[i]] <- locs
 }
-# try to identify countries in entries with a single name
+# try to identify nations in entries with a single name
 for (i in idx_unq) {
   locs <- trimws(all_locs[[i]])
   if (length(locs) == 1) {
-    # look for the potential country in the map (normalized names or not)
-    ii <- which(country_map[, "normalized"] == locs[1])
+    # look for the potential nation in the map (normalized names or not)
+    ii <- which(nation_map[, "normalized"] == locs[1])
     if (length(ii) == 0)
-      ii <- which(country_map[, "original"] == locs[1])
+      ii <- which(nation_map[, "original"] == locs[1])
     # if it is up there
     if (length(ii) >= 1) {
-      # add the normalized string to the country list
-      countries[i] <- country_map[ii[1], "normalized"]
+      # add the normalized string to the nation list
+      nations[i] <- nation_map[ii[1], "normalized"]
     }
   }
   all_locs[[i]] <- locs
 }
-#length(which(!is.na(countries)))
+#length(which(!is.na(nations)))
 # collapse to get strings again
 all_locs <- sapply(all_locs, function(locs) paste0(locs, collapse = "; "))
 all_locs[all_locs == "NA" | all_locs == ""] <- NA
 names(all_locs) <- NULL
 players[, "birthPlace"] <- all_locs[1:nrow(players)]
 players[, "deathPlace"] <- all_locs[(nrow(players)+1):(2*nrow(players))]
-# add countries as a column
-colnames(players)[colnames(players) == "birthPlaceWP"] <- "birthCountry"
-players[, "birthCountry"] <- countries[1:nrow(players)]
-colnames(players)[colnames(players) == "deathPlaceWP"] <- "deathCountry"
-players[, "deathCountry"] <- countries[(nrow(players)+1):(2*nrow(players))]
+# add nations as a column
+colnames(players)[colnames(players) == "birthPlaceWP"] <- "birthNation"
+players[, "birthNation"] <- nations[1:nrow(players)]
+colnames(players)[colnames(players) == "deathPlaceWP"] <- "deathNation"
+players[, "deathNation"] <- nations[(nrow(players)+1):(2*nrow(players))]
 #write.csv(players, file.path(folder, "raw/tmp.csv"), row.names = FALSE)
 
 # remove superfluous columns

@@ -76,14 +76,14 @@ end_years[idx] <- start_years[idx]
 start_year <- min(c(start_years, end_years))
 end_year <- max(c(start_years, end_years))
 
-# init country info
-all_countries <- get_merged_countries(players)
-# count them to select which countries to display later (cannot show them all)
-tt <- sort(table(all_countries), decreasing = TRUE)
+# init nation info
+all_nations <- get_merged_nations(players)
+# count them to select which nations to display later (cannot show them all)
+tt <- sort(table(all_nations), decreasing = TRUE)
 
-# match country for each stint
+# match nation for each stint
 idx <- match(filt_stints[, "playerId"], players[, "playerId"])
-countries <- all_countries[idx]
+nations <- all_nations[idx]
 
 # compute overall stats
 player_by_year <- sapply(start_year:end_year, function(year) length(which(start_years <= year & end_years >= year)))
@@ -91,17 +91,17 @@ player_by_year <- sapply(start_year:end_year, function(year) length(which(start_
 # # clean data tables
 # source("src/wikidata/load_tables.R")
 
-# compute country-wise stats
-# sort(table(countries))
-unique_countries <- head(names(tt), 10)
-for(unique_country in unique_countries) {
-  temp <- sapply(start_year:end_year, function(year) length(which(start_years <= year & end_years >= year & countries == unique_country)))
+# compute nation-wise stats
+# sort(table(nations))
+unique_nations <- head(names(tt), 10)
+for(unique_nation in unique_nations) {
+  temp <- sapply(start_year:end_year, function(year) length(which(start_years <= year & end_years >= year & nations == unique_nation)))
   player_by_year <- rbind(player_by_year, temp)
 }
 
 # set column/row names
 colnames(player_by_year) <- start_year:end_year
-rownames(player_by_year) <- c("All", unique_countries)
+rownames(player_by_year) <- c("All", unique_nations)
 
 # set colors
 cols <- get.palette(values = nrow(player_by_year))
@@ -117,11 +117,11 @@ plot(
   xlim = c(start_year,end_year),
   ylim = c(0, max(player_by_year["All", ]))
 )
-for (unique_country in rownames(player_by_year)) {
+for (unique_nation in rownames(player_by_year)) {
   lines(
     x = start_year:end_year,
-    y = player_by_year[unique_country, ],
-    col = cols[unique_country]
+    y = player_by_year[unique_nation, ],
+    col = cols[unique_nation]
   )
 }
 legend(

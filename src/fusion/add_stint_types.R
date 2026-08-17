@@ -147,7 +147,7 @@ all_teams <- list(enWP=en_teams, frWP=fr_teams, itWP=it_teams, jaWP=ja_teams)
 # [x] Rugby Union
 # [x] Rugby Union Team
 # [x] District
-# [x] Country
+# [x] Nation
 # [x] XV
 # [x] Division
 # [x] Unión
@@ -181,7 +181,7 @@ switch_year <- 1995
 
 #####################
 # principle : no "senior" stint before 1995, then it means more or less pro after 1995
-# algorithm: depends on the country, as they differ in how they switched to professionalism
+# algorithm: depends on the nation, as they differ in how they switched to professionalism
 #####################
 # FR/EN/IT/JP:
 # - <1995: all clubs "amateur"
@@ -316,8 +316,8 @@ head(stints[idx2, ])
 print(sort(unique(stints[idx2, "teamName"])))
 #### export list of teams to be annotated and used later
 #tids <- sort(unique(stints[idx2, "teamRsId"]))
-#tab <- teams[teams[, "rugbyscopeId"] %in% tids, c("rugbyscopeId", "fullName", "countries")]
-#tab <- tab[order(tab[, "countries"], tab[, "rugbyscopeId"]), ]
+#tab <- teams[teams[, "rugbyscopeId"] %in% tids, c("rugbyscopeId", "fullName", "nations")]
+#tab <- tab[order(tab[, "nations"], tab[, "rugbyscopeId"]), ]
 #write.csv(cbind(tab, rep(NA, nrow(tab))), file.path(data_folder, "team_list.csv"), row.names = FALSE)
 ####
 map <- read.csv(file = file.path(data_folder, "team_list.csv"))

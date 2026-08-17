@@ -42,8 +42,8 @@ base_url = "https://it.wikipedia.org/wiki/{}"
 BIOGRAPHY = "Dati biografici"
 RUGBY_UNION = "Rugby a 15"
 
-COUNTRY_BIRTH = "Paese"
-COUNTRY_SPORT = "Union"
+NATION_BIRTH = "Paese"
+NATION_SPORT = "Union"
 CITIZENSHIP = "Nazionalità"
 HEIGHT = "Altezza"
 WEIGHT = "Peso"
@@ -124,8 +124,8 @@ for _, player in merged_table.iterrows():
     weight = ""
     positions = ""
     positions_url = ""
-    birth_country = ""
-    sport_country = ""
+    birth_nation = ""
+    sport_nation = ""
     current_team = ""
     current_team_url = ""
 
@@ -164,7 +164,7 @@ for _, player in merged_table.iterrows():
             else:
                 tlog(2, f"Could not find any infobox: skipping the rest of the extraction process")
                 comment = "No infobox found"
-                player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
+                player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_nation, sport_nation, current_team])
                 p = p + 1
                 continue
 
@@ -183,22 +183,22 @@ for _, player in merged_table.iterrows():
 #             if bio_elt is None:
 #                 tlog(2, f"Infobox not properly formatted: skipping the rest of the extraction process")
 #                 comment = "Infobox format problem"
-#                 player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_country, sport_country, current_team])
+#                 player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, birth_nation, sport_nation, current_team])
 #                 p = p + 1
 #                 continue
 
-            # birth country
-            country_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == COUNTRY_BIRTH)
-            if country_elt:
-                birth_country = country_elt.find_next_siblings()[0].get_text(strip=True)
-                tlog(2, f"Birth country: {birth_country}")
+            # birth nation
+            nation_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == NATION_BIRTH)
+            if nation_elt:
+                birth_nation = nation_elt.find_next_siblings()[0].get_text(strip=True)
+                tlog(2, f"Birth nation: {birth_nation}")
             else:
-                country_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == CITIZENSHIP)
-                if country_elt:
-                    birth_country = country_elt.find_next_siblings()[0].get_text(strip=True)
-                    tlog(2, f"Citizenship: {birth_country}")
+                nation_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == CITIZENSHIP)
+                if nation_elt:
+                    birth_nation = nation_elt.find_next_siblings()[0].get_text(strip=True)
+                    tlog(2, f"Citizenship: {birth_nation}")
                 else:
-                    tlog(2, f"Could not find birth country or citizenship")
+                    tlog(2, f"Could not find birth nation or citizenship")
 
             # height
             height_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == HEIGHT)
@@ -264,20 +264,20 @@ for _, player in merged_table.iterrows():
             else:
                 tlog(2, f"Could not find current team")
 
-            # sport country
-            country_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == COUNTRY_SPORT)
-            if country_elt:
-                td_elt = country_elt.find_next_siblings()[0]
+            # sport nation
+            nation_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == NATION_SPORT)
+            if nation_elt:
+                td_elt = nation_elt.find_next_siblings()[0]
                 a_elts = td_elt.find_all("a", recursive = False)
                 if len(a_elts) > 0:
-                    sport_country = "; ".join(a.get_text(strip=True) for a in a_elts)
+                    sport_nation = "; ".join(a.get_text(strip=True) for a in a_elts)
                     if len(a_elts) > 1:
-                        tlog(2, f"WARNING: found several sport countries!")
+                        tlog(2, f"WARNING: found several sport nations!")
                 else:
-                    country_elt = td_elt.get_text(strip=True)
-                tlog(2, f"Sport country: {sport_country}")
+                    nation_elt = td_elt.get_text(strip=True)
+                tlog(2, f"Sport nation: {sport_nation}")
             else:
-                tlog(2, f"Could not find sport country")
+                tlog(2, f"Could not find sport nation")
 
             # get career sections
             ru_elt = infobox_elt.find(lambda tag: tag.name == "th" and tag.get_text(strip=True) == RUGBY_UNION)
@@ -396,8 +396,8 @@ for _, player in merged_table.iterrows():
                 tlog(2, comment)
 
     # record player info
-    player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, positions_url, birth_country, sport_country, current_team, current_team_url])
-    player_df = pd.DataFrame(player_info, columns=["origWdId", "origName", "debugComment", "itName", "wpPage", "height", "weight", "positions", "positionsWP", "birthCountry", "sportCountry", "currentTeam", "currentTeamWP"])
+    player_info.append([orig_id, orig_name, comment, name, player_page, height, weight, positions, positions_url, birth_nation, sport_nation, current_team, current_team_url])
+    player_df = pd.DataFrame(player_info, columns=["origWdId", "origName", "debugComment", "itName", "wpPage", "height", "weight", "positions", "positionsWP", "birthNation", "sportNation", "currentTeam", "currentTeamWP"])
     player_df.to_csv(path.join(table_folder, "player_info.csv"), index=False)
                 
     # record stints

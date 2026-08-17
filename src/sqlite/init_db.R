@@ -52,8 +52,8 @@ PLAYERS_CSV  <- file.path(INPUT_FOLDER, "players.csv")
 TEAMS_CSV    <- file.path(INPUT_FOLDER, "teams.csv")
 STINTS_CSV   <- file.path(INPUT_FOLDER, "stints_full.csv")
 DB_PATH      <- file.path(INPUT_FOLDER, "rugbyscope_full.sqlite")
-#STINTS_CSV   <- file.path(INPUT_FOLDER, "stints_major.csv")
-#DB_PATH      <- file.path(INPUT_FOLDER, "rugbyscope_major.sqlite")
+# STINTS_CSV   <- file.path(INPUT_FOLDER, "stints_major.csv")
+# DB_PATH      <- file.path(INPUT_FOLDER, "rugbyscope_major.sqlite")
 
 ## Start from a clean database every run
 if (file.exists(DB_PATH)) file.remove(DB_PATH)
@@ -189,13 +189,13 @@ message("  stint_data_source.data_source: ", paste(data_source_domain, collapse 
 ## 4. TRANSFORM (part B): build shared dimension/lookup tables
 ## -----------------------------------------------------------------------
 
-## --- country --------------------------------------------------------------
-country_values <- c(
+## --- nation --------------------------------------------------------------
+nation_values <- c(
   unlist(map(players_raw$citizenships, split_multi)),
-  unlist(map(players_raw$sportCountries, split_multi)),
-  unlist(map(teams_raw$countries, split_multi))
+  unlist(map(players_raw$sportNations, split_multi)),
+  unlist(map(teams_raw$nations, split_multi))
 )
-country_dim <- build_lookup(country_values, "rugbyscope_id", "country_name")
+nation_dim <- build_lookup(nation_values, "rugbyscope_id", "nation_name")
 
 ## --- location ---------------------------------------------------------------
 location_values <- c(
@@ -230,8 +230,8 @@ venue_dim <- venue_pairs %>%
   select(rugbyscope_id, name, capacity)
 
 message("Dimension tables built:")
-message(sprintf("  country: %d, location: %d, governing_body: %d, competition: %d, venue: %d",
-                 nrow(country_dim), nrow(location_dim), nrow(governing_body_dim),
+message(sprintf("  nation: %d, location: %d, governing_body: %d, competition: %d, venue: %d",
+                 nrow(nation_dim), nrow(location_dim), nrow(governing_body_dim),
                  nrow(competition_dim), nrow(venue_dim)))
 
 ## -----------------------------------------------------------------------
@@ -273,10 +273,10 @@ team_tbl <- team_tbl %>% left_join(team_first_venue, by = "rugbyscope_id")
 team_altname_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$altNames) %>%
   transmute(team_id = id, altname = value)
 
-# team_country
-team_country_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$countries) %>%
-  left_join(country_dim, by = c("value" = "country_name")) %>%
-  transmute(team_id = id, country_id = rugbyscope_id)
+# team_nation
+team_nation_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$nations) %>%
+  left_join(nation_dim, by = c("value" = "nation_name")) %>%
+  transmute(team_id = id, nation_id = rugbyscope_id)
 
 # team_affiliation
 team_affiliation_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$affiliations) %>%
@@ -338,14 +338,14 @@ player_lastname_tbl <- expand_multi_ranked(players_raw$.player_id, players_raw$l
 player_altname_tbl <- expand_multi(players_raw$.player_id, players_raw$altNames) %>%
   transmute(player_id = id, altname = value)
 
-# player_citizenship / player_sport_country
+# player_citizenship / player_sport_nation
 player_citizenship_tbl <- expand_multi(players_raw$.player_id, players_raw$citizenships) %>%
-  left_join(country_dim, by = c("value" = "country_name")) %>%
-  transmute(player_id = id, country_id = rugbyscope_id)
+  left_join(nation_dim, by = c("value" = "nation_name")) %>%
+  transmute(player_id = id, nation_id = rugbyscope_id)
 
-player_sport_country_tbl <- expand_multi(players_raw$.player_id, players_raw$sportCountries) %>%
-  left_join(country_dim, by = c("value" = "country_name")) %>%
-  transmute(player_id = id, country_id = rugbyscope_id)
+player_sport_nation_tbl <- expand_multi(players_raw$.player_id, players_raw$sportNations) %>%
+  left_join(nation_dim, by = c("value" = "nation_name")) %>%
+  transmute(player_id = id, nation_id = rugbyscope_id)
 
 # player_position
 player_position_tbl <- expand_multi(players_raw$.player_id, players_raw$positions) %>%
@@ -420,9 +420,9 @@ CREATE TABLE location (
 );")
 
 dbExecute(con, "
-CREATE TABLE country (
+CREATE TABLE nation (
   rugbyscope_id INTEGER PRIMARY KEY,
-  country_name VARCHAR
+  nation_name VARCHAR
 );")
 
 dbExecute(con, sprintf("
@@ -477,9 +477,9 @@ CREATE TABLE team_altname (
 );")
 
 dbExecute(con, "
-CREATE TABLE team_country (
+CREATE TABLE team_nation (
   team_id INTEGER REFERENCES team(rugbyscope_id),
-  country_id INTEGER REFERENCES country(rugbyscope_id)
+  nation_id INTEGER REFERENCES nation(rugbyscope_id)
 );")
 
 dbExecute(con, "
@@ -531,13 +531,13 @@ CREATE TABLE player_altname (
 dbExecute(con, "
 CREATE TABLE player_citizenship (
   player_id INTEGER REFERENCES player(rugbyscope_id),
-  country_id INTEGER REFERENCES country(rugbyscope_id)
+  nation_id INTEGER REFERENCES nation(rugbyscope_id)
 );")
 
 dbExecute(con, "
-CREATE TABLE player_sport_country (
+CREATE TABLE player_sport_nation (
   player_id INTEGER REFERENCES player(rugbyscope_id),
-  country_id INTEGER REFERENCES country(rugbyscope_id)
+  nation_id INTEGER REFERENCES nation(rugbyscope_id)
 );")
 
 dbExecute(con, sprintf("
@@ -571,11 +571,11 @@ fk_indexes <- list(
   c("team_venue", "team_id"),          c("team_venue", "venue_id"),
   c("team_location", "team_id"),       c("team_location", "location_id"),
   c("team_altname", "team_id"),
-  c("team_country", "team_id"),        c("team_country", "country_id"),
+  c("team_nation", "team_id"),        c("team_nation", "nation_id"),
   c("player_lastname", "player_id"),   c("player_firstname", "player_id"),
   c("player_altname", "player_id"),
-  c("player_citizenship", "player_id"),   c("player_citizenship", "country_id"),
-  c("player_sport_country", "player_id"), c("player_sport_country", "country_id"),
+  c("player_citizenship", "player_id"),   c("player_citizenship", "nation_id"),
+  c("player_sport_nation", "player_id"), c("player_sport_nation", "nation_id"),
   c("player_position", "player_id"),
   c("stint", "player_id"), c("stint", "team_id"),
   c("stint_data_source", "stint_id")
@@ -595,25 +595,25 @@ message("Loading data...")
 
 dbWriteTable(con, "governing_body", governing_body_dim, append = TRUE, row.names = FALSE)
 dbWriteTable(con, "competition",    competition_dim,    append = TRUE, row.names = FALSE)
-dbWriteTable(con, "venue",          venue_dim,           append = TRUE, row.names = FALSE)
-dbWriteTable(con, "location",       location_dim,        append = TRUE, row.names = FALSE)
-dbWriteTable(con, "country",        country_dim,         append = TRUE, row.names = FALSE)
+dbWriteTable(con, "venue",          venue_dim,          append = TRUE, row.names = FALSE)
+dbWriteTable(con, "location",       location_dim,       append = TRUE, row.names = FALSE)
+dbWriteTable(con, "nation",         nation_dim,         append = TRUE, row.names = FALSE)
 
-dbWriteTable(con, "team", team_tbl, append = TRUE, row.names = FALSE)
+dbWriteTable(con, "team",             team_tbl,             append = TRUE, row.names = FALSE)
 dbWriteTable(con, "team_affiliation", team_affiliation_tbl, append = TRUE, row.names = FALSE)
 dbWriteTable(con, "team_competition", team_competition_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "team_venue", team_venue_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "team_location", team_location_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "team_altname", team_altname_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "team_country", team_country_tbl, append = TRUE, row.names = FALSE)
+dbWriteTable(con, "team_venue",       team_venue_tbl,       append = TRUE, row.names = FALSE)
+dbWriteTable(con, "team_location",    team_location_tbl,    append = TRUE, row.names = FALSE)
+dbWriteTable(con, "team_altname",     team_altname_tbl,     append = TRUE, row.names = FALSE)
+dbWriteTable(con, "team_nation",      team_nation_tbl,          append = TRUE, row.names = FALSE)
 
-dbWriteTable(con, "player", player_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "player_firstname", player_firstname_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "player_lastname", player_lastname_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "player_altname", player_altname_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "player_citizenship", player_citizenship_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "player_sport_country", player_sport_country_tbl, append = TRUE, row.names = FALSE)
-dbWriteTable(con, "player_position", player_position_tbl, append = TRUE, row.names = FALSE)
+dbWriteTable(con, "player",               player_tbl,               append = TRUE, row.names = FALSE)
+dbWriteTable(con, "player_firstname",     player_firstname_tbl,     append = TRUE, row.names = FALSE)
+dbWriteTable(con, "player_lastname",      player_lastname_tbl,      append = TRUE, row.names = FALSE)
+dbWriteTable(con, "player_altname",       player_altname_tbl,       append = TRUE, row.names = FALSE)
+dbWriteTable(con, "player_citizenship",   player_citizenship_tbl,   append = TRUE, row.names = FALSE)
+dbWriteTable(con, "player_sport_nation", player_sport_nation_tbl,   append = TRUE, row.names = FALSE)
+dbWriteTable(con, "player_position",      player_position_tbl,      append = TRUE, row.names = FALSE)
 
 dbWriteTable(con, "stint", stint_tbl, append = TRUE, row.names = FALSE)
 dbWriteTable(con, "stint_data_source", stint_data_source_tbl, append = TRUE, row.names = FALSE)

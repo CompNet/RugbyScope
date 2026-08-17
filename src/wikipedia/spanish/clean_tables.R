@@ -249,18 +249,18 @@ for (col in cols) {
 #print(head(players[, c("birthPlace", "deathPlace")]))
 ####
 
-# translating country names
-#### debug: list unique countries
-#all_countries <- c(players[, "citizenship"])
-#all_countries <- strsplit(all_countries, "; ")
-#unique_countries <- sort(unique(trimws(unlist(all_countries))))
+# translating nation names
+#### debug: list unique nations
+#all_nations <- c(players[, "citizenship"])
+#all_nations <- strsplit(all_nations, "; ")
+#unique_nations <- sort(unique(trimws(unlist(all_nations))))
 #### used to constitute the text2location.csv map used below
 # translation map (text to name)
 temp <- read.csv(file.path(folder, "maps", "text2location.csv"))
 map_es <- temp[, "location"]
 names(map_es) <- temp[, "text"]
 # clean locations
-tlog(4, "Substituting country names in the player table")
+tlog(4, "Substituting nation names in the player table")
 cols <- c("citizenship")
 for (col in cols) {
   tlog(6, "Normalizing \"", col, "\"")

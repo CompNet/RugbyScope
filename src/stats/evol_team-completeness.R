@@ -50,7 +50,7 @@ source("src/stats/load_all_tables.R")
 ########################################################################
 # total number of teams by start year
 field_groups <- list(
-  "perso-fields" = c("type", "inceptionDate", "terminationDate", "countries"),
+  "perso-fields" = c("type", "inceptionDate", "terminationDate", "nations"),
   "rugby-fields" = c("affiliations", "competitions", "tier", "homeVenueNames", "homeVenueCapacities", "locations"),
   "id-fields" = c("wikidataId", "allRugbyId", "googleKnowlId", "dbpediaId"),
   "wp-fields" = c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")

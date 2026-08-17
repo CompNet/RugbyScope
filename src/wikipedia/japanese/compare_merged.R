@@ -61,8 +61,8 @@ sort(unique(wp_players[, "deathDate"]))
 sort(unique(wp_players[, "height"]))
 sort(unique(wp_players[, "weight"]))
 
-# number of players by country
-tlog("Number of players by country:")
+# number of players by nation
+tlog("Number of players by nation:")
 idx  <- match(wp_players[, "origWdId"], fus_players[, "wikidataId"])
 print(sort(table(fus_players[idx, "citizenships"])))
 

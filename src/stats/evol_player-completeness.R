@@ -44,11 +44,11 @@ source("src/stats/load_all_tables.R")
 
 ########################################################################
 # total completeness by year
-countries <- sapply(1:nrow(players), function(p) if (is.na(players[p, "sportCountries"])) players[p, "citizenships"] else players[p, "sportCountries"])
-players <- cbind(players, "countries" = countries)
+nations <- sapply(1:nrow(players), function(p) if (is.na(players[p, "sportNations"])) players[p, "citizenships"] else players[p, "sportNations"])
+players <- cbind(players, "nations" = nations)
 
 field_groups <- list(
-  "perso-fields" = c("birthDate", "birthPlace", "deathDate", "deathPlace", "countries"),
+  "perso-fields" = c("birthDate", "birthPlace", "deathDate", "deathPlace", "nations"),
   "rugby-fields" = c("positions", "careerStartYear", "careerEndYear", "weight", "height"),
   "id-fields" = c("espnScrumId", "allRugbyId", "googleKnowlId", "itsRugbyId", "rugbyDatabaseId", "dbpediaId"),
   "wp-fields" = c("wikipediaEn", "wikipediaFr", "wikipediaIt", "wikipediaEs", "wikipediaJa")

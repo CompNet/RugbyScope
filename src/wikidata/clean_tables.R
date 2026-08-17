@@ -10,29 +10,29 @@
 
 ########################################################################
 # Takes the player table and returns a normalized column representing
-# their country, by combining two fields: `sportCountry` and `citizenship`.
-# The function also normalizes certain country names.
+# their nation, by combining two fields: `sportNation` and `citizenship`.
+# The function also normalizes certain nation names.
 #
 # players: player table.
 # 
-# returns: vector of countries, one for each player in the table.
+# returns: vector of nations, one for each player in the table.
 ########################################################################
-get_merged_countries <- function(players) {
-  # normalize country names in both fields
-  cz <- get_clean_countries(players, field = "citizenshipLabels")
-  sc <- get_clean_countries(players, field = "sportCountryLabels")
+get_merged_nations <- function(players) {
+  # normalize nation names in both fields
+  cz <- get_clean_nations(players, field = "citizenshipLabels")
+  sc <- get_clean_nations(players, field = "sportNationLabels")
 
-  # use field `sportCountry` whenever available, otherwise field `citizenship`
-  all_countries <- sc
-  idx <- which(is.na(all_countries))
+  # use field `sportNation` whenever available, otherwise field `citizenship`
+  all_nations <- sc
+  idx <- which(is.na(all_nations))
   if (length(idx) > 0)
-    all_countries[idx] <- cz[idx]
+    all_nations[idx] <- cz[idx]
 
   # possibly split multiple values (arbitrarily keep the first one)
-  all_countries <- sapply(all_countries, function(country) strsplit(country, "; ")[[1]][1])
-  all_countries[all_countries == "NA"] <- NA
+  all_nations <- sapply(all_nations, function(nation) strsplit(nation, "; ")[[1]][1])
+  all_nations[all_nations == "NA"] <- NA
 
-  return(all_countries)
+  return(all_nations)
 }
 
 
@@ -40,26 +40,26 @@ get_merged_countries <- function(players) {
 
 ########################################################################
 # Takes the player table and returns a normalized vector representing
-# their country, as specified by parameter `field`.
+# their nation, as specified by parameter `field`.
 #
 # players: player table.
-# field: the name of the column containing country names.
+# field: the name of the column containing nation names.
 # 
-# returns: vector of countries, one for each player in the table.
+# returns: vector of nations, one for each player in the table.
 ########################################################################
-get_clean_countries <- function(players, field) {
-  # retrieve the country names
-  all_countries <- players[, field]
+get_clean_nations <- function(players, field) {
+  # retrieve the nation names
+  all_nations <- players[, field]
 
   # possibly split multiple values
-  all_countries <- sapply(all_countries, function(all_country) strsplit(all_country, "; ")[[1]])
+  all_nations <- sapply(all_nations, function(all_nation) strsplit(all_nation, "; ")[[1]])
 
   # see all existing values
-  # sort(table(unlist(all_countries)))
+  # sort(table(unlist(all_nations)))
 
   # define conversion map
   map <- c()
-  map["Basque Country"] <- "Spain"
+  map["Basque Nation"] <- "Spain"
   map["British Raj"] <- "India"
   map["Chinese Taipei"] <- "Taiwan"
   map["Colony of New Zealand"] <- "New Zealand"
@@ -90,23 +90,23 @@ get_clean_countries <- function(players, field) {
   map["United States"] <- "U.S.A."
   map["中華民國"] <- "Taiwan"
 
-  # normalize countries
-  for (c in 1:length(all_countries)) {
-    countries <- all_countries[[c]]
+  # normalize nations
+  for (c in 1:length(all_nations)) {
+    nations <- all_nations[[c]]
 
-    # normalize country names
-    for (country in names(map))
-      countries[countries == country] <- map[country]
+    # normalize nation names
+    for (nation in names(map))
+      nations[nations == nation] <- map[nation]
 
     # remove duplicates
-    countries <- unique(countries)
+    nations <- unique(nations)
 
     # update list
-    all_countries[[c]] <- countries
+    all_nations[[c]] <- nations
   }
 
   # collapse to get strings again
-  result <- sapply(all_countries, function(countries) paste0(countries, collapse = "; "))
+  result <- sapply(all_nations, function(nations) paste0(nations, collapse = "; "))
   names(result) <- NULL
 
   # remove empty strings

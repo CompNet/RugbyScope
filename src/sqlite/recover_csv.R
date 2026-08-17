@@ -14,7 +14,7 @@
 ##     which is used to rebuild "firstNames" / "lastNames" in the exact
 ##     original order.
 ##   * All other multi-valued junction tables (altnames, citizenships,
-##     positions, affiliations, countries, competitions, locations,
+##     positions, affiliations, nations, competitions, locations,
 ##     data sources, venues) have no explicit rank, so insertion order is
 ##     recovered via SQLite's implicit `rowid`, which init_rugby_db.R filled
 ##     in the same order as the original CSV rows.
@@ -118,7 +118,7 @@ governing_body <- dbReadTable(con, "governing_body") %>% as_tibble()
 competition    <- dbReadTable(con, "competition") %>% as_tibble()
 venue          <- dbReadTable(con, "venue") %>% as_tibble()
 location       <- dbReadTable(con, "location") %>% as_tibble()
-country        <- dbReadTable(con, "country") %>% as_tibble()
+nation         <- dbReadTable(con, "nation") %>% as_tibble()
 
 team_altname_c <- collapse_multi(read_ordered("team_altname"), "team_id", "altname")
 
@@ -126,9 +126,9 @@ team_affiliation_c <- read_ordered("team_affiliation") %>%
   left_join(governing_body, by = c("governing_body_id" = "rugbyscope_id")) %>%
   collapse_multi("team_id", "name")
 
-team_country_c <- read_ordered("team_country") %>%
-  left_join(country, by = c("country_id" = "rugbyscope_id")) %>%
-  collapse_multi("team_id", "country_name")
+team_nation_c <- read_ordered("team_nation") %>%
+  left_join(nation, by = c("nation_id" = "rugbyscope_id")) %>%
+  collapse_multi("team_id", "nation_name")
 
 team_competition_c <- read_ordered("team_competition") %>%
   left_join(competition, by = c("competition_id" = "rugbyscope_id")) %>%
@@ -157,7 +157,7 @@ team_venue_c <- read_ordered("team_venue") %>%
 teams_out <- team %>%
   left_join(team_altname_c      %>% rename(altNames = value),      by = c("rugbyscope_id" = "id")) %>%
   left_join(team_affiliation_c  %>% rename(affiliations = value),  by = c("rugbyscope_id" = "id")) %>%
-  left_join(team_country_c      %>% rename(countries = value),     by = c("rugbyscope_id" = "id")) %>%
+  left_join(team_nation_c       %>% rename(nations = value),       by = c("rugbyscope_id" = "id")) %>%
   left_join(team_competition_c  %>% rename(competitions = value),  by = c("rugbyscope_id" = "id")) %>%
   left_join(team_location_c     %>% rename(locations = value),     by = c("rugbyscope_id" = "id")) %>%
   left_join(team_venue_c,                                          by = c("rugbyscope_id" = "id")) %>%
@@ -169,7 +169,7 @@ teams_out <- team %>%
     type                 = type,
     inceptionDate        = as.Date(inception_date),
     terminationDate      = as.Date(termination_date),
-    altNames, affiliations, countries, competitions,
+    altNames, affiliations, nations, competitions,
     tier                 = as.integer(tier),
     homeVenueNames, homeVenueCapacities, locations,
     allRugbyId           = all_rugby_id,
@@ -198,24 +198,24 @@ player_lastname_c  <- collapse_ranked(dbReadTable(con, "player_lastname") %>% as
 player_altname_c   <- collapse_multi(read_ordered("player_altname"), "player_id", "altname")
 
 player_citizenship_c <- read_ordered("player_citizenship") %>%
-  left_join(country, by = c("country_id" = "rugbyscope_id")) %>%
-  collapse_multi("player_id", "country_name")
+  left_join(nation, by = c("nation_id" = "rugbyscope_id")) %>%
+  collapse_multi("player_id", "nation_name")
 
-player_sport_country_c <- read_ordered("player_sport_country") %>%
-  left_join(country, by = c("country_id" = "rugbyscope_id")) %>%
-  collapse_multi("player_id", "country_name")
+player_sport_nation_c <- read_ordered("player_sport_nation") %>%
+  left_join(nation, by = c("nation_id" = "rugbyscope_id")) %>%
+  collapse_multi("player_id", "nation_name")
 
 player_position_c <- collapse_multi(read_ordered("player_position"), "player_id", "position")
 
 players_out <- player %>%
-  left_join(player_firstname_c      %>% rename(firstNames = value),     by = c("rugbyscope_id" = "id")) %>%
-  left_join(player_lastname_c       %>% rename(lastNames = value),      by = c("rugbyscope_id" = "id")) %>%
-  left_join(player_altname_c        %>% rename(altNames = value),       by = c("rugbyscope_id" = "id")) %>%
-  left_join(location %>% select(birth_place_id = rugbyscope_id, birthPlace = location_name), by = "birth_place_id") %>%
-  left_join(location %>% select(death_place_id = rugbyscope_id, deathPlace = location_name), by = "death_place_id") %>%
-  left_join(player_citizenship_c    %>% rename(citizenships = value),   by = c("rugbyscope_id" = "id")) %>%
-  left_join(player_sport_country_c  %>% rename(sportCountries = value), by = c("rugbyscope_id" = "id")) %>%
-  left_join(player_position_c       %>% rename(positions = value),      by = c("rugbyscope_id" = "id")) %>%
+  left_join(player_firstname_c      %>% rename(firstNames = value),                                         by = c("rugbyscope_id" = "id")) %>%
+  left_join(player_lastname_c       %>% rename(lastNames = value),                                          by = c("rugbyscope_id" = "id")) %>%
+  left_join(player_altname_c        %>% rename(altNames = value),                                           by = c("rugbyscope_id" = "id")) %>%
+  left_join(location                %>% select(birth_place_id = rugbyscope_id, birthPlace = location_name), by = "birth_place_id") %>%
+  left_join(location                %>% select(death_place_id = rugbyscope_id, deathPlace = location_name), by = "death_place_id") %>%
+  left_join(player_citizenship_c    %>% rename(citizenships = value),                                       by = c("rugbyscope_id" = "id")) %>%
+  left_join(player_sport_nation_c   %>% rename(sportNations = value),                                       by = c("rugbyscope_id" = "id")) %>%
+  left_join(player_position_c       %>% rename(positions = value),                                          by = c("rugbyscope_id" = "id")) %>%
   arrange(rugbyscope_id) %>%
   transmute(
     wikidataId          = wikidata_id,
@@ -225,7 +225,7 @@ players_out <- player %>%
     birthPlace,
     deathDate           = as.Date(death_date),
     deathPlace,
-    citizenships, sportCountries, positions,
+    citizenships, sportNations, positions,
     careerStartYear     = as.integer(career_start_year),
     careerEndYear       = as.integer(career_end_year),
     weight              = as.integer(weight),

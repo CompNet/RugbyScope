@@ -1,4 +1,4 @@
-# RugbyScope v1.1.1
+# RugbyScope v1.2.0
 Extraction and analysis of Rugby Union transfer networks
 
 * Copyright 2024-2026 Vincent Labatut & David O'Sullivan
@@ -7,7 +7,7 @@ RugbyScope is free software: you can redistribute it and/or modify it under the 
 
 * Lab site: http://lia.univ-avignon.fr/ -- https://www.ul.ie/macsi
 * GitHub repo: https://github.com/CompNet/RugbyScope
-* Data: https://doi.org/10.5281/zenodo.21943537
+* Data: https://doi.org/10.5281/zenodo.21948213
 * Contact: Vincent Labatut <vincent.labatut@univ-avignon.fr>, David O'Sullivan <david.osullivan@ul.ie>
 
 -----------------------------------------------------------------------
@@ -24,7 +24,7 @@ This version of the database contains two variants of the rugby player stints:
 * `major`: only the stints played while above 18 year old.
 
 Note that the retrieval part of this source code is provided mainly for documentation purposes: it was originally tailored to work with a certain configuration of our sources, taken
-at a certain point in time. These sources are live material, and it is very unlikely that scripts will still work in the future, due to their unpredictable evolution. The RugbyScope data is also available on [Zenodo](https://doi.org/10.5281/zenodo.21943537).
+at a certain point in time. These sources are live material, and it is very unlikely that scripts will still work in the future, due to their unpredictable evolution. The RugbyScope data is also available on [Zenodo](https://doi.org/10.5281/zenodo.21948213).
 
 If you use this source code or the associated data, please cite [[LO'26](#references)]:
 
@@ -97,7 +97,7 @@ To apply the extraction, cleaning and merging process described in the data pape
 2. Set the current directory as the working directory, using `setwd("<my directory>")`.
    3. Run the main script `src/build_database.R`.
 
-The produced database goes in folder `data`, whereas the plots and stats resulting from its descriptive analysis go in folder `data/stats` (cf. Section [Organization](#organization)). In addition to this GitHub repository, the RugbyScope data is also available on [Zenodo](https://doi.org/10.5281/zenodo.21943537).
+The produced database goes in folder `data`, whereas the plots and stats resulting from its descriptive analysis go in folder `data/stats` (cf. Section [Organization](#organization)). In addition to this GitHub repository, the RugbyScope data is also available on [Zenodo](https://doi.org/10.5281/zenodo.21948213).
 
 Note that it is *very unlikely* that these scripts will work in the future, due to the unpredictable evolution of the online sources from which our database is extracted (cf. Section [Description](#description)).
 
@@ -150,6 +150,7 @@ Tested with `Python` 3.13, with the following packages:
 * `v1.0.1`: improved the order of stints so that they match Wikipedia's, and also a few manual corrections.
 * `v1.1.0`: a number of manual corrections, and two distinct variants of the DB: `full` (all data retrieved from the sources) vs. `major` (does not contain under-18 stints, and some stint years are inferred). 
 * `v1.1.1`: fixed missing years in Barbarian stints, and other manual corrections. 
+* `v1.2.0`: renamed `country` to `nation` for the sake of consistency. 
 
 
 

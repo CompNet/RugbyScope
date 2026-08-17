@@ -2,7 +2,7 @@
 # Generates various plots regarding the evolution of the number of stints
 # that were founded in a given year, or that were active at a given year:
 # - overall
-# - by country
+# - by nation
 # - by type
 # - by source
 #
@@ -156,13 +156,13 @@ for (plot_log in c(FALSE, TRUE)) {
 
 
 ########################################################################
-# number of stints by year by player country
+# number of stints by year by player nation
 
-# note: some players are related to multiple countries, so the same stint can be counted several times
+# note: some players are related to multiple nations, so the same stint can be counted several times
 
-# get country info
-player_countries <- c()
-player_country_years <- c()
+# get nation info
+player_nations <- c()
+player_nation_years <- c()
 for (i in 1:length(ref_stints)) {
   if (i %% 1000 == 0)
     tlog(2, "Processing entry ", i, "/", length(ref_stints))
@@ -171,21 +171,21 @@ for (i in 1:length(ref_stints)) {
   player_id <- stints[ref_stints[i], "playerId"]
   p <- which(players[, "wikidataId"] == player_id)
 
-  # get player country list
-  sport_countries <- players[p, "sportCountries"]
-  if (!is.na(sport_countries))
-    tmp_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
+  # get player nation list
+  sport_nations <- players[p, "sportNations"]
+  if (!is.na(sport_nations))
+    tmp_nations <- trimws(strsplit(sport_nations, split = ";")[[1]])
   else {
     citizenships <- players[p, "citizenships"]
-    tmp_countries <- trimws(strsplit(citizenships, split = ";")[[1]])
+    tmp_nations <- trimws(strsplit(citizenships, split = ";")[[1]])
   }
 
   # add to lists
-  player_countries <- c(player_countries, tmp_countries)
-  player_country_years <- c(player_country_years, rep(ref_years[i], length(tmp_countries)))
+  player_nations <- c(player_nations, tmp_nations)
+  player_nation_years <- c(player_nation_years, rep(ref_years[i], length(tmp_nations)))
 }
-countr_tt <- table(player_countries, player_country_years, useNA = "always")
-print(countr_tt)
+nat_tt <- table(player_nations, player_nation_years, useNA = "always")
+print(nat_tt)
 
 
 
@@ -193,23 +193,23 @@ print(countr_tt)
 for (plot_log in c(FALSE, TRUE)) {
   for (plot_smoothed in c(FALSE, TRUE)) {
     for (plot_top in c(5, 8)) {
-      plot_file <- file.path(stats_folder, paste0("player-countries_top=", plot_top, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
+      plot_file <- file.path(stats_folder, paste0("player-nations_top=", plot_top, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
       tlog("Producing plot file: ", plot_file)
 
       # overal values
-      countr_tt0 <- sort(table(player_countries, useNA = "no"), decreasing = TRUE)
-      top_countries <- names(countr_tt0)[1:plot_top]
+      nat_tt0 <- sort(table(player_nations, useNA = "no"), decreasing = TRUE)
+      top_nations <- names(nat_tt0)[1:plot_top]
 
       # set colors
-      color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
+      color_palette <- c(NATION_COLORS, "Others" = "#919191")
 
-      countr_tt2 <- countr_tt[, !is.na(colnames(countr_tt))]
-      # add a new line for the rest of the countries
-      countr_tt2 <- rbind(countr_tt2, "Others" = colSums(countr_tt2[!(rownames(countr_tt2) %in% top_countries), , drop = FALSE], na.rm = TRUE))
-      top_countries <- c(top_countries, "Others")
+      nat_tt2 <- nat_tt[, !is.na(colnames(nat_tt))]
+      # add a new line for the rest of the nations
+      nat_tt2 <- rbind(nat_tt2, "Others" = colSums(nat_tt2[!(rownames(nat_tt2) %in% top_nations), , drop = FALSE], na.rm = TRUE))
+      top_nations <- c(top_nations, "Others")
       # replace zeros by NA to avoid log(0) in the plot
       if (plot_log)
-        countr_tt2[countr_tt2 == 0] <- 1
+        nat_tt2[nat_tt2 == 0] <- 1
 
       pdf(plot_file, width = 14, height = 7)
         par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
@@ -219,8 +219,8 @@ for (plot_log in c(FALSE, TRUE)) {
           xlab = mode_xlabels[mode], ylab = "Number of stints",
           log = if (plot_log) "y" else "",
           #main = paste0("Number of stints as a function of ", mode_labels[mode]),
-          xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
-          ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
+          xlim = c(min(as.integer(colnames(nat_tt2))), max(as.integer(colnames(nat_tt2)))),
+          ylim = c(min(nat_tt2, na.rm = TRUE), max(nat_tt2, na.rm = TRUE))
         )
          # add vertical lines
         abline(v = "1871", col = "black")
@@ -238,24 +238,24 @@ for (plot_log in c(FALSE, TRUE)) {
           abline(v = y, col = "black", lty = 3)
         axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
         # add series
-        for (country in top_countries) {
-          x <- as.integer(colnames(countr_tt2))
-          y <- as.integer(countr_tt2[country, ])
+        for (nation in top_nations) {
+          x <- as.integer(colnames(nat_tt2))
+          y <- as.integer(nat_tt2[nation, ])
           if (plot_smoothed)
               fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
           lines(
             x = x,
             y = if (plot_smoothed) predict(fit) else y,
-            col = color_palette[country],
+            col = color_palette[nation],
             lwd = 2
           )
         }
         # add legend
         legend(
           "topleft",
-          legend = top_countries,
+          legend = top_nations,
           # cex = 0.8,
-          fill = color_palette[top_countries],
+          fill = color_palette[top_nations],
           bg = "#FFFFFFBB"
         )
       dev.off()
@@ -267,13 +267,13 @@ for (plot_log in c(FALSE, TRUE)) {
 
 
 ########################################################################
-# number of stints by year by team country
+# number of stints by year by team nation
 
-# note: some teams are related to multiple countries, so the same stint can be counted several times
+# note: some teams are related to multiple nations, so the same stint can be counted several times
 
-# get country info
-team_countries <- c()
-team_country_years <- c()
+# get nation info
+team_nations <- c()
+team_nation_years <- c()
 for (i in 1:length(ref_stints)) {
   if (i %% 1000 == 0)
     tlog(2, "Processing entry ", i, "/", length(ref_stints))
@@ -282,18 +282,18 @@ for (i in 1:length(ref_stints)) {
   team_id <- stints[ref_stints[i], "teamRsId"]
   t <- which(teams[, "rugbyscopeId"] == team_id)
 
-  # get country list
-  sport_countries <- teams[t, "countries"]
-  if (!is.na(sport_countries)) {
-    tmp_countries <- trimws(strsplit(sport_countries, split = ";")[[1]])
+  # get nation list
+  sport_nations <- teams[t, "nations"]
+  if (!is.na(sport_nations)) {
+    tmp_nations <- trimws(strsplit(sport_nations, split = ";")[[1]])
   
     # add to lists
-    team_countries <- c(team_countries, tmp_countries)
-    team_country_years <- c(team_country_years, rep(ref_years[i], length(tmp_countries)))
+    team_nations <- c(team_nations, tmp_nations)
+    team_nation_years <- c(team_nation_years, rep(ref_years[i], length(tmp_nations)))
   }
 }
-countr_tt <- table(team_countries, team_country_years, useNA = "always")
-print(countr_tt)
+nat_tt <- table(team_nations, team_nation_years, useNA = "always")
+print(nat_tt)
 
 
 
@@ -301,23 +301,23 @@ print(countr_tt)
 for (plot_log in c(FALSE, TRUE)) {
   for (plot_smoothed in c(FALSE, TRUE)) {
     for (plot_top in c(5, 8)) {
-      plot_file <- file.path(stats_folder, paste0("team-countries_top=", plot_top, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
+      plot_file <- file.path(stats_folder, paste0("team-nations_top=", plot_top, "_smoothed=", plot_smoothed, "_ylog=", plot_log, ".pdf"))
       tlog("Producing plot file: ", plot_file)
 
       # overal values
-      countr_tt0 <- sort(table(team_countries, useNA = "no"), decreasing = TRUE)
-      top_countries <- names(countr_tt0)[1:plot_top]
+      nat_tt0 <- sort(table(team_nations, useNA = "no"), decreasing = TRUE)
+      top_nations <- names(nat_tt0)[1:plot_top]
 
       # set colors
-      color_palette <- c(COUNTRY_COLORS, "Others" = "#919191")
+      color_palette <- c(NATION_COLORS, "Others" = "#919191")
 
-      countr_tt2 <- countr_tt[, !is.na(colnames(countr_tt))]
-      # add a new line for the rest of the countries
-      countr_tt2 <- rbind(countr_tt2, "Others" = colSums(countr_tt2[!(rownames(countr_tt2) %in% top_countries), , drop = FALSE], na.rm = TRUE))
-      top_countries <- c(top_countries, "Others")
+      nat_tt2 <- nat_tt[, !is.na(colnames(nat_tt))]
+      # add a new line for the rest of the nations
+      nat_tt2 <- rbind(nat_tt2, "Others" = colSums(nat_tt2[!(rownames(nat_tt2) %in% top_nations), , drop = FALSE], na.rm = TRUE))
+      top_nations <- c(top_nations, "Others")
       # replace zeros by NA to avoid log(0) in the plot
       if (plot_log)
-        countr_tt2[countr_tt2 == 0] <- 1
+        nat_tt2[nat_tt2 == 0] <- 1
 
       pdf(plot_file, width = 14, height = 7)
         par(mgp = c(1.5, 0.5, 0))             # reduce space between axis title / axis values and axis line
@@ -327,8 +327,8 @@ for (plot_log in c(FALSE, TRUE)) {
           xlab = mode_xlabels[mode], ylab = "Number of stints",
           log = if (plot_log) "y" else "",
           #main = paste0("Number of stints as a function of ", mode_labels[mode]),
-          xlim = c(min(as.integer(colnames(countr_tt2))), max(as.integer(colnames(countr_tt2)))),
-          ylim = c(min(countr_tt2, na.rm = TRUE), max(countr_tt2, na.rm = TRUE))
+          xlim = c(min(as.integer(colnames(nat_tt2))), max(as.integer(colnames(nat_tt2)))),
+          ylim = c(min(nat_tt2, na.rm = TRUE), max(nat_tt2, na.rm = TRUE))
         )
         # add vertical lines
         abline(v = "1871", col = "black")
@@ -346,24 +346,24 @@ for (plot_log in c(FALSE, TRUE)) {
           abline(v = y, col = "black", lty = 3)
         axis(3, at = c(1871, 1895, 1916, 1942, 1995), labels = c("RFU", "Schism", "WW1", "WW2", "Professionalism"))
         # add series
-        for (country in top_countries) {
-          x <- as.integer(colnames(countr_tt2))
-          y <- as.integer(countr_tt2[country, ])
+        for (nation in top_nations) {
+          x <- as.integer(colnames(nat_tt2))
+          y <- as.integer(nat_tt2[nation, ])
           if (plot_smoothed)
               fit <- loess(y ~ x, na.action = na.exclude, span = 0.1)
           lines(
             x = x,
             y = if (plot_smoothed) predict(fit) else y,
-            col = color_palette[country],
+            col = color_palette[nation],
             lwd = 2
           )
         }
         # add legend
         legend(
           "topleft",
-          legend = top_countries,
+          legend = top_nations,
           # cex = 0.8,
-          fill = color_palette[top_countries],
+          fill = color_palette[top_nations],
           bg = "#FFFFFFBB"
         )
       dev.off()

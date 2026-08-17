@@ -54,9 +54,9 @@ source("src/wikidata/clean_tables.R")
 teams_wd <- read.csv(file.path(wd_table_folder, "teams.csv"))
 tlog(2, "Raw number of WD teams: ", nrow(teams_wd))
 
-# normalize countries
-all_countries <- get_clean_countries(teams_wd, field = "countryLabels")
-teams_wd[, "countryLabels"] <- all_countries
+# normalize nations
+all_nations <- get_clean_nations(teams_wd, field = "nationLabels")
+teams_wd[, "nationLabels"] <- all_nations
 
 
 ###
@@ -68,11 +68,11 @@ tlog(2, "Raw number of WD players: ", nrow(players_wd))
 all_positions <- get_clean_positions(players_wd)
 players_wd[, "positionLabels"] <- all_positions
 
-# normalize countries (both fields)
-all_countries <- get_clean_countries(players_wd, field = "citizenshipLabels")
-players_wd[, "citizenshipLabels"] <- all_countries
-all_countries <- get_clean_countries(players_wd, field = "sportCountryLabels")
-players_wd[, "sportCountryLabels"] <- all_countries
+# normalize nations (both fields)
+all_nations <- get_clean_nations(players_wd, field = "citizenshipLabels")
+players_wd[, "citizenshipLabels"] <- all_nations
+all_nations <- get_clean_nations(players_wd, field = "sportNationLabels")
+players_wd[, "sportNationLabels"] <- all_nations
 
 
 
@@ -299,7 +299,7 @@ map["birthPlaces"] <- "pobLabels"
 map["deathDate"] <- "dodMax"
 map["deathPlaces"] <- "podLabels"
 map["citizenships"] <- "citizenshipLabels"
-map["sportCountries"] <- "sportCountryLabels"
+map["sportNations"] <- "sportNationLabels"
 map["positions"] <- "positionLabels"
 map["weights"] <- "masses"
 idx <- match(map, colnames(players))
@@ -453,7 +453,7 @@ map["type"] <- "teamTypeLabel"
 map["inceptionDate"] <- "inceptionMax"
 map["terminationDate"] <- "terminationMax"
 map["affiliations"] <- "affiliationLabels"
-map["countries"] <- "countryLabels"
+map["nations"] <- "nationLabels"
 map["competitions"] <- "competitionLabels"
 map["homeVenueNames"] <- "homeVenueLabels"
 map["locations"] <- "locationLabels"

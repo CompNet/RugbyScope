@@ -242,7 +242,7 @@ for (r in 1:nrow(wp_stints)) {
 tlog(4, "Found ", nrow(wp_teams), " unique teams")
 wp_teams[, "altNames"] <- sapply(alt_names, function(an) paste0(an, collapse = "; "))
 #### debug: take a look at teams with multiple names, some are associated to very generic url
-#### and should not be merged (ex. same NZ country url associated to teams NZ, U20 NZ, U21 NZ...)
+#### and should not be merged (ex. same NZ nation url associated to teams NZ, U20 NZ, U21 NZ...)
 #idx <- which(sapply(alt_names, length) > 1)
 #tab <- wp_teams[idx,]
 #tab.file <- file.path(wp_folder, "duplicate_urls.csv")
