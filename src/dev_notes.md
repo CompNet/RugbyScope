@@ -42,6 +42,7 @@
 * [x] Check that years are present in all Barbarians stints
 * [x] Issue with missing start years for stints with youth national teams, when birth date is available
 * [x] Missing youth national team *end* dates: check existing script (maybe it focuses only on *start* dates)
+* [ ] Some overlapping stint remains (same team, strictly overlapping dates)
 
 # STATS & PLOTS
 * Player stats
