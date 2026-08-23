@@ -43,6 +43,8 @@
 * [x] Issue with missing start years for stints with youth national teams, when birth date is available
 * [x] Missing youth national team *end* dates: check existing script (maybe it focuses only on *start* dates)
 * [ ] Some overlapping stint remains (same team, strictly overlapping dates)
+* [ ] Birthyear/univ stint of Japanese players can be infered from one another + names + positions
+
 
 # STATS & PLOTS
 * Player stats

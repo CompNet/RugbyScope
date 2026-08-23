@@ -28,7 +28,7 @@ data_folder <- file.path("data", "fusion")
 
 
 ########################################################################
-# check barbarian stint dates
+# check Barbarian FC stint dates
 
 tlog("Checking Barbarian stints")
 team_id <- "Q807749"
