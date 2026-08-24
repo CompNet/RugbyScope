@@ -6,6 +6,8 @@
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
 # source("src/fusion/remove_minor_stints.R")
 ########################################################################
+library("stringi")
+
 source("src/common/logging.R")
 
 
@@ -141,17 +143,17 @@ tlog(2, "Number of stints removed or modified: ", length(rem_flag)) # 3,753 / 96
 # total number of modifications
 tlog(2, "Number of modifications: ", change_nbr)  # 7,074 / 96,751 modifications (7%)
 
-# missing stint dates in general
+# missing stint dates (both) in general
 idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]))
 length(unique(stints[idx, "playerId"]))
 ids <- unique(stints[idx, "playerId"])
 print(ids)
 
-# missing stint dates for barbarians
-idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]) & stints[, "teamWdId"] == "Q807749")
-length(unique(stints[idx, "playerId"]))
-names <- unique(stints[idx, "playerName"])
-print(names)
+# # missing stint dates for barbarians
+# idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]) & stints[, "teamWdId"] == "Q807749")
+# length(unique(stints[idx, "playerId"]))
+# names <- unique(stints[idx, "playerName"])
+# print(names)
 
 # players with a single stints missing both years
 idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]))
@@ -164,12 +166,17 @@ names(tt[which(tt == 1)])
 # idx <- which(!is.na(stints[, "startYear"]) & stints[, "playerId"] %in% intersect(jap_plyrs, no_bd))
 # print(unique(stints[idx, "playerId"]))
 
-# japanese players without a dated stint but with a known birthdate
-jap_plyrs <- players[grepl("Japan", players[, "citizenships"], fixed = TRUE) | grepl("Japan", players[, "sportNations"], fixed = TRUE), "wikidataId"]
-with_bd <- players[!is.na(players[, "birthDate"]), "wikidataId"]
-with_ds <- unique(stints[!is.na(stints[, "startYear"]) | !is.na(stints[, "endYear"]), "playerId"])
-ids <- setdiff(intersect(jap_plyrs, with_bd), with_ds)
-print(ids)
+# # japanese players without a dated stint but with a known birthdate
+# jap_plyrs <- players[grepl("Japan", players[, "citizenships"], fixed = TRUE) | grepl("Japan", players[, "sportNations"], fixed = TRUE), "wikidataId"]
+# with_bd <- players[!is.na(players[, "birthDate"]), "wikidataId"]
+# with_ds <- unique(stints[!is.na(stints[, "startYear"]) | !is.na(stints[, "endYear"]), "playerId"])
+# ids <- setdiff(intersect(jap_plyrs, with_bd), with_ds)
+# print(ids)
+
+# # japanese players without a japanese name
+# idx <- which((grepl("Japan", players[, "citizenships"], fixed = TRUE) | grepl("Japan", players[, "sportNations"], fixed = TRUE)) & 
+#              !stri_detect_regex(players[, "altNames"], "[^\\p{Latin}\\p{Common}\\p{Inherited}]"))
+# print(players[idx, ])
 
 
 
