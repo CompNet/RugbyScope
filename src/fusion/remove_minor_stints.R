@@ -181,22 +181,22 @@ print(data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by))
 #              !stri_detect_regex(players[, "altNames"], "[^\\p{Latin}\\p{Common}\\p{Inherited}]"))
 # print(players[idx, ])
 
-# missing birthdate
+# missing birthdates
 idx <- which(is.na(players[, "birthDate"]))
 tab <- data.frame(players[idx, "wikidataId"], players[idx, "fullName"])
 print(tab)
 write.csv(tab, file = file.path(data_folder, "missing_birthdate.csv"), row.names = FALSE)
 
-# missing deathdate
-idx <- which(is.na(players[, "deathDate"]))
-by <- as.integer(format(players[idx, "birthDate"], "%Y"))
-idx <- idx[!is.na(by) & by < 1946]
-by <- as.integer(format(players[idx, "birthDate"], "%Y"))
-tab <- data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by)
-print(tab)
-write.csv(tab, file = file.path(data_folder, "missing_deathdate.csv"), row.names = FALSE)
+# # missing deathdates
+# idx <- which(is.na(players[, "deathDate"]))
+# by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+# idx <- idx[!is.na(by) & by < 1946]
+# by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+# tab <- data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by)
+# print(tab)
+# write.csv(tab, file = file.path(data_folder, "missing_deathdate.csv"), row.names = FALSE)
 
-# missing position
+# missing positions
 idx <- which(is.na(players[, "positions"]))
 by <- as.integer(format(players[idx, "birthDate"], "%Y"))
 tab <- data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by)
