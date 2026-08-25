@@ -35,7 +35,7 @@
     * [ ] Retrieve more WP data
   * [ ] Longer term:
     * [ ] Cross-ref with other data sources, to complement missing dates (esp. NA-NA in career start), see list below (all.rugby and so on)
-    * [ ] Leverage an LLM to retrive missing information from WP articles' body, and other textual sources
+    * [ ] Leverage an LLM to retrieve missing information from WP articles' body, and other textual sources
 * [x] Check that B&I Lions stints don't last longer than 1 year > actually not relevant
 * [x] Check that pre-professionalism stints with ZA provinces are categorized as *regional* > not sure about that
 * [x] Complement missing start-end year for senior *national* stints (?)
@@ -43,7 +43,8 @@
 * [x] Issue with missing start years for stints with youth national teams, when birth date is available
 * [x] Missing youth national team *end* dates: check existing script (maybe it focuses only on *start* dates)
 * [ ] Some overlapping stint remains (same team, strictly overlapping dates)
-* [ ] Birthyear/univ stint of Japanese players can be infered from one another + names + positions
+* [x] Birthyear/univ stint of Japanese players can be infered from one another + names + positions
+* [ ] Check unicity of positions
 
 
 # STATS & PLOTS
