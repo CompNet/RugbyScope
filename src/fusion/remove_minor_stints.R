@@ -158,7 +158,10 @@ print(ids)
 # players with a single stints missing both years
 idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]))
 tt <- table(stints[idx, "playerId"])
-names(tt[which(tt == 1)])
+ids <- names(tt[which(tt == 1)])
+idx <- which(players[, "wikidataId"] %in% ids)
+by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+print(data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by))
 
 # # japanese players without a birthdate but at least one dated stint
 # jap_plyrs <- players[grepl("Japan", players[, "citizenships"], fixed = TRUE) | grepl("Japan", players[, "sportNations"], fixed = TRUE), "wikidataId"]
@@ -177,6 +180,28 @@ names(tt[which(tt == 1)])
 # idx <- which((grepl("Japan", players[, "citizenships"], fixed = TRUE) | grepl("Japan", players[, "sportNations"], fixed = TRUE)) & 
 #              !stri_detect_regex(players[, "altNames"], "[^\\p{Latin}\\p{Common}\\p{Inherited}]"))
 # print(players[idx, ])
+
+# missing birthdate
+idx <- which(is.na(players[, "birthDate"]))
+tab <- data.frame(players[idx, "wikidataId"], players[idx, "fullName"])
+print(tab)
+write.csv(tab, file = file.path(data_folder, "missing_birthdate.csv"), row.names = FALSE)
+
+# missing deathdate
+idx <- which(is.na(players[, "deathDate"]))
+by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+idx <- idx[!is.na(by) & by < 1946]
+by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+tab <- data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by)
+print(tab)
+write.csv(tab, file = file.path(data_folder, "missing_deathdate.csv"), row.names = FALSE)
+
+# missing position
+idx <- which(is.na(players[, "positions"]))
+by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+tab <- data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by)
+print(tab)
+write.csv(tab, file = file.path(data_folder, "missing_position.csv"), row.names = FALSE)
 
 
 
