@@ -45,6 +45,8 @@
 * [ ] Some overlapping stint remains (same team, strictly overlapping dates)
 * [x] Birthyear/univ stint of Japanese players can be infered from one another + names + positions
 * [ ] Check unicity of positions
+* [ ] Check stintless players
+* [ ] Insert hard id in player table
 
 
 # STATS & PLOTS
