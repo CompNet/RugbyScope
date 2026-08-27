@@ -44,9 +44,10 @@
 * [x] Missing youth national team *end* dates: check existing script (maybe it focuses only on *start* dates)
 * [ ] Some overlapping stint remains (same team, strictly overlapping dates)
 * [x] Birthyear/univ stint of Japanese players can be infered from one another + names + positions
-* [ ] Check unicity of positions
+* [x] Check unicity of positions
 * [ ] Check stintless players
-* [ ] Insert hard id in player table
+* [ ] Insert hard ID in player table
+* [ ] Uniformize certain field names: `lastname`, `firstname`, `altname`, `location_name`, `nation_name` => `name`
 
 
 # STATS & PLOTS
