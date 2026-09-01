@@ -29,12 +29,12 @@ at a certain point in time. These sources are live material, and it is very unli
 If you use this source code or the associated data, please cite [[LO'26](#references)]:
 
 ```bibtex
-@TechReport{Labatut2026,
-  author      = {Labatut, Vincent and O'Sullivan, David J. P.},
-  title       = {{R}ugby{S}cope: a Transfer-Oriented Database of Rugby Union Teams and Players},
-  institution = {Avignon Universit\'e and University of Limerick},
-  year        = {2026},
-  type        = {Technical Report},
+@Article{Labatut2026,
+  author  = {Labatut, Vincent and O'Sullivan, David},
+  title   = {{R}ugby{S}cope: a Transfer-Oriented Database of Rugby Union Teams and Players},
+  journal = {Data in Brief},
+  year    = {2026},
+  volume  = {in presss},
 }
 ```
 
