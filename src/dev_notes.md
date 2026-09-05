@@ -42,12 +42,14 @@
 * [x] Check that years are present in all Barbarians stints
 * [x] Issue with missing start years for stints with youth national teams, when birth date is available
 * [x] Missing youth national team *end* dates: check existing script (maybe it focuses only on *start* dates)
-* [ ] Some overlapping stint remains (same team, strictly overlapping dates)
+* [ ] Some overlapping stints remain (same team, strictly overlapping dates)
 * [x] Birthyear/univ stint of Japanese players can be infered from one another + names + positions
 * [x] Check unicity of positions
-* [ ] Check stintless players
-* [ ] Insert hard ID in player table
+* [ ] Check completely stintless players
+* [ ] Insert hard ID in CSV player table, so that they don't get a new number each time the SQL version is regenerated
 * [ ] Uniformize certain field names: `lastname`, `firstname`, `altname`, `location_name`, `nation_name` => `name`
+* [ ] Could easily manually add locations of French clubs
+* [ ] Leverage B&I Lions + Barbarians websites to complement these stints
 
 
 # STATS & PLOTS
