@@ -25,10 +25,9 @@
 ##     stint_data_source.data_source) are NOT hard-coded: they are
 ##     discovered at runtime from the CSVs (pre-scan pass) and turned into
 ##     SQL CHECK constraints when the schema is created.
-##   * players.csv and stints.csv do not carry a rugbyscope_id, so
-##     surrogate integer keys are generated for the `player` and `stint`
-##     tables during the transform step. teams.csv DOES provide
-##     rugbyscopeId, which is used as-is for `team.rugbyscope_id`.
+##   * players.csv and teams.csv provide rugbyscope_id, which is used as-is.
+##     stints.csv does not provide rugbyscope_id, so a surrogate integer key
+##     is generated during the transform step via row_number().
 ## =============================================================================
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
 # source("src/sqlite/init_db.R")
@@ -167,9 +166,9 @@ message(sprintf("  stints.csv:  %d rows", nrow(stints_raw)))
 ## 3. TRANSFORM (part A): assign surrogate keys, pre-scan enum domains
 ## -----------------------------------------------------------------------
 
-# Surrogate keys: teams already have rugbyscopeId in the source; players
-# and stints do not, so we mint sequential integer ids here.
-players_raw <- players_raw %>% mutate(.player_id = row_number())
+# Surrogate keys: teams and players already have rugbyscopeId in the source;
+# stints do not, so we mint sequential integer ids here.
+players_raw <- players_raw %>% mutate(rugbyscope_id = clean_int(rugbyscopeId))
 teams_raw   <- teams_raw   %>% mutate(rugbyscope_id = clean_int(rugbyscopeId))
 stints_raw  <- stints_raw  %>% mutate(.stint_id = row_number())
 
@@ -295,12 +294,12 @@ team_location_tbl <- expand_multi(teams_raw$rugbyscope_id, teams_raw$locations) 
 
 ## === PLAYER =================================================================
 player_tbl <- players_raw %>%
-  left_join(location_dim, by = c("birthPlace" = "location_name")) %>%
-  rename(birth_place_id = rugbyscope_id) %>%
-  left_join(location_dim, by = c("deathPlace" = "location_name")) %>%
-  rename(death_place_id = rugbyscope_id) %>%
+  left_join(location_dim, by = c("birthPlace" = "location_name"), suffix = c("", "_birth")) %>%
+  rename(birth_place_id = rugbyscope_id_birth) %>%
+  left_join(location_dim, by = c("deathPlace" = "location_name"), suffix = c("", "_death")) %>%
+  rename(death_place_id = rugbyscope_id_death) %>%
   transmute(
-    rugbyscope_id      = .player_id,
+    rugbyscope_id      = rugbyscope_id,
     full_name          = fullName,
     birth_date         = clean_date(birthDate),
     birth_place_id     = birth_place_id,
@@ -329,26 +328,26 @@ player_wd_lookup <- player_tbl %>% filter(!is.na(wikidata_id)) %>%
   select(wikidata_id, player_id = rugbyscope_id)
 
 # player_firstname / player_lastname (ordered)
-player_firstname_tbl <- expand_multi_ranked(players_raw$.player_id, players_raw$firstNames) %>%
+player_firstname_tbl <- expand_multi_ranked(players_raw$rugbyscope_id, players_raw$firstNames) %>%
   transmute(player_id = id, firstname = value, rank = rank)
-player_lastname_tbl <- expand_multi_ranked(players_raw$.player_id, players_raw$lastNames) %>%
+player_lastname_tbl <- expand_multi_ranked(players_raw$rugbyscope_id, players_raw$lastNames) %>%
   transmute(player_id = id, lastname = value, rank = rank)
 
 # player_altname
-player_altname_tbl <- expand_multi(players_raw$.player_id, players_raw$altNames) %>%
+player_altname_tbl <- expand_multi(players_raw$rugbyscope_id, players_raw$altNames) %>%
   transmute(player_id = id, altname = value)
 
 # player_citizenship / player_sport_nation
-player_citizenship_tbl <- expand_multi(players_raw$.player_id, players_raw$citizenships) %>%
+player_citizenship_tbl <- expand_multi(players_raw$rugbyscope_id, players_raw$citizenships) %>%
   left_join(nation_dim, by = c("value" = "nation_name")) %>%
   transmute(player_id = id, nation_id = rugbyscope_id)
 
-player_sport_nation_tbl <- expand_multi(players_raw$.player_id, players_raw$sportNations) %>%
+player_sport_nation_tbl <- expand_multi(players_raw$rugbyscope_id, players_raw$sportNations) %>%
   left_join(nation_dim, by = c("value" = "nation_name")) %>%
   transmute(player_id = id, nation_id = rugbyscope_id)
 
 # player_position
-player_position_tbl <- expand_multi(players_raw$.player_id, players_raw$positions) %>%
+player_position_tbl <- expand_multi(players_raw$rugbyscope_id, players_raw$positions) %>%
   transmute(player_id = id, position = value)
 
 ## === STINT ===================================================================

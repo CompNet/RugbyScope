@@ -1,4 +1,4 @@
-# RugbyScope v1.2.0
+# RugbyScope v2.0.0
 Extraction and analysis of Rugby Union transfer networks
 
 * Copyright 2024-2026 Vincent Labatut & David O'Sullivan
@@ -26,7 +26,7 @@ This version of the database contains two variants of the rugby player stints:
 Note that the retrieval part of this source code is provided mainly for documentation purposes: it was originally tailored to work with a certain configuration of our sources, taken
 at a certain point in time. These sources are live material, and it is very unlikely that scripts will still work in the future, due to their unpredictable evolution. The RugbyScope data is also available on [Zenodo](https://doi.org/10.5281/zenodo.21948213).
 
-If you use this source code or the associated data, please cite [[LO'26](#references)]:
+If you use this source code or the associated data, please cite our data paper [[LO'26](#references)]:
 
 ```bibtex
 @Article{Labatut2026,
@@ -35,6 +35,7 @@ If you use this source code or the associated data, please cite [[LO'26](#refere
   journal = {Data in Brief},
   year    = {2026},
   volume  = {in presss},
+  doi     = {10.1016/j.dib.2026.113231},
 }
 ```
 
@@ -151,8 +152,9 @@ Tested with `Python` 3.13, with the following packages:
 * `v1.1.0`: a number of manual corrections, and two distinct variants of the DB: `full` (all data retrieved from the sources) vs. `major` (does not contain under-18 stints, and some stint years are inferred). 
 * `v1.1.1`: fixed missing years in Barbarian stints, and other manual corrections. 
 * `v1.2.0`: renamed `country` to `nation` for the sake of consistency. 
+* `v2.0.0`: complemented data, added internal ids in CSV, (made field names more consistent, added tables for better data sourcing)
 
 
 
 ## References
-* **[LO'26]** V. Labatut & D. O'Sullivan. *RugbyScope: a Transfer-Oriented Database of Rugby Union Teams and Players*, in submission, 2026. <!--⟨[hal-xxxxxxxx](https://hal.archives-ouvertes.fr/hal-xxxxxxxx)⟩ - DOI: [10.1142/S0219525922400033](http://doi.org/10.1142/S0219525922400033) -->
+* **[LO'26]** V. Labatut & D. O'Sullivan. *RugbyScope: a Transfer-Oriented Database of Rugby Union Teams and Players*, Data in Brief, in press, 2026. <!--⟨[hal-xxxxxxxx](https://hal.archives-ouvertes.fr/hal-xxxxxxxx)⟩ --> - DOI: [10.1016/j.dib.2026.113231](http://doi.org/10.1016/j.dib.2026.113231)

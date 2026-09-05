@@ -46,9 +46,10 @@
 * [x] Birthyear/univ stint of Japanese players can be infered from one another + names + positions
 * [x] Check unicity of positions
 * [ ] Check completely stintless players
-* [ ] Insert hard ID in CSV player table, so that they don't get a new number each time the SQL version is regenerated
-* [ ] Uniformize certain field names: `lastname`, `firstname`, `altname`, `location_name`, `nation_name` => `name`
-* [ ] Could easily manually add locations of French clubs
+* [x] Insert hard ID in `players.csv` table, so that they don't get a new number each time the SQL version is regenerated
+  * [ ] Why not doing the same thing for `stints.csv`? (wait after having finished complemented stints)
+* [ ] Uniformize certain field names in SQL tables: `lastname`, `firstname`, `altname`, `location_name`, `nation_name` => `name`
+* [ ] Could easily add locations of French clubs (manually)
 * [ ] Leverage B&I Lions + Barbarians websites to complement these stints
 
 

@@ -20,8 +20,8 @@
 ##     in the same order as the original CSV rows.
 ##   * Rows in the three output files are ordered by each table's
 ##     rugbyscope_id, which was itself assigned in original-row order by
-##     init_rugby_db.R (row_number() for player/stint; the CSV-provided
-##     rugbyscopeId for team).
+##     init_rugby_db.R (CSV-provided rugbyscopeId for player/team;
+##     row_number() for stint).
 ##
 ## Known limitations (information that init_rugby_db.R did not retain, and
 ## therefore cannot be perfectly restored):
@@ -34,18 +34,18 @@
 ##   * Empty-string values (e.g. "" in teams.csv$comment) were loaded as NA
 ##     by init_rugby_db.R (na = c("NA", "")), so that distinction from a
 ##     genuine literal "NA" cannot be recovered; both are exported as NA.
-##   * Row order for teams.csv is NOT guaranteed to match the original file:
-##     team.rugbyscope_id came directly from the source "rugbyscopeId"
+##   * Row order for teams.csv and players.csv is NOT guaranteed to match the
+##     original file: their rugbyscope_id came directly from the source CSV
 ##     column and is an INTEGER PRIMARY KEY, which SQLite treats as an
 ##     alias for rowid -- so no separate "original file position" is
-##     stored for teams. Exporting `ORDER BY rugbyscope_id` therefore
-##     reproduces teams in ascending id order, which only matches the
-##     original row order if the source file happened to be id-sorted.
-##     (players.csv and stints.csv don't have this issue: their surrogate
-##     rugbyscope_id was assigned via row_number() in original file order,
-##     so ordering by rugbyscope_id does reproduce the original order.)
-##     If exact team row order matters, add a `load_order INTEGER` column
-##     to the `team` table in init_rugby_db.R (populated from row_number()
+##     stored. Exporting `ORDER BY rugbyscope_id` therefore reproduces
+##     rows in ascending id order, which only matches the original row order
+##     if the source file happened to be id-sorted.
+##     (stints.csv doesn't have this issue: its surrogate rugbyscope_id
+##     was assigned via row_number() in original file order, so ordering
+##     by rugbyscope_id does reproduce the original order.)
+##     If exact row order matters, add a `load_order INTEGER` column
+##     to the respective tables in init_rugby_db.R (populated from row_number()
 ##     alongside rugbyscope_id) and ORDER BY that instead below.
 ## =============================================================================
 # setwd("D:/Users/Vincent/eclipse/workspaces/Test/RugbyScope")
@@ -66,7 +66,8 @@ OUTPUT_FOLDER <- file.path("data")
 PLAYERS_CSV <- file.path(OUTPUT_FOLDER, "reconstructed_players.csv")
 TEAMS_CSV   <- file.path(OUTPUT_FOLDER, "reconstructed_teams.csv")
 STINTS_CSV  <- file.path(OUTPUT_FOLDER, "reconstructed_stints.csv")
-DB_PATH     <- file.path(OUTPUT_FOLDER, "rugbyscope.sqlite")
+DB_PATH     <- file.path(OUTPUT_FOLDER, "rugbyscope_full.sqlite")
+# DB_PATH     <- file.path(OUTPUT_FOLDER, "rugbyscope_major.sqlite")
 
 con <- dbConnect(RSQLite::SQLite(), DB_PATH)
 
@@ -218,6 +219,7 @@ players_out <- player %>%
   left_join(player_position_c       %>% rename(positions = value),                                          by = c("rugbyscope_id" = "id")) %>%
   arrange(rugbyscope_id) %>%
   transmute(
+    rugbyscopeId        = as.integer(rugbyscope_id),
     wikidataId          = wikidata_id,
     fullName            = full_name,
     firstNames, lastNames, altNames,
