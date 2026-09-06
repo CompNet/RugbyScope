@@ -30,12 +30,13 @@ If you use this source code or the associated data, please cite our data paper [
 
 ```bibtex
 @Article{Labatut2026,
-  author  = {Labatut, Vincent and O'Sullivan, David},
-  title   = {{R}ugby{S}cope: a Transfer-Oriented Database of Rugby Union Teams and Players},
-  journal = {Data in Brief},
-  year    = {2026},
-  volume  = {in presss},
-  doi     = {10.1016/j.dib.2026.113231},
+  author    = {Labatut, Vincent and O'Sullivan, David J. P.},
+  title     = {{RugbyScope}: a Transfer-Oriented Database of Rugby Union Teams and Players},
+  journal   = {Data in Brief},
+  year      = {2026},
+  volume    = {in press},
+  pages     = {113231},
+  doi       = {10.1016/j.dib.2026.113231},
 }
 ```
 
@@ -157,4 +158,4 @@ Tested with `Python` 3.13, with the following packages:
 
 
 ## References
-* **[LO'26]** V. Labatut & D. O'Sullivan. *RugbyScope: a Transfer-Oriented Database of Rugby Union Teams and Players*, Data in Brief, in press, 2026. <!--⟨[hal-xxxxxxxx](https://hal.archives-ouvertes.fr/hal-xxxxxxxx)⟩ --> - DOI: [10.1016/j.dib.2026.113231](http://doi.org/10.1016/j.dib.2026.113231)
+* **[LO'26]** V. Labatut & D. O'Sullivan. *RugbyScope: a Transfer-Oriented Database of Rugby Union Teams and Players*, Data in Brief, in press, 2026. ⟨[hal-05739894](https://hal.archives-ouvertes.fr/hal-05739894)⟩ - DOI: [10.1016/j.dib.2026.113231](http://doi.org/10.1016/j.dib.2026.113231)
