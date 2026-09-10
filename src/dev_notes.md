@@ -51,6 +51,7 @@
 * [ ] Uniformize certain field names in SQL tables: `lastname`, `firstname`, `altname`, `location_name`, `nation_name` => `name`
 * [ ] Could easily add locations of French clubs (manually)
 * [ ] Leverage B&I Lions + Barbarians websites to complement these stints
+* [ ] Re-identify players searched manually
 
 
 # STATS & PLOTS
