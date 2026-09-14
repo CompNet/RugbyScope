@@ -1325,7 +1325,7 @@
 1332,"Q5775039","Club de Golf del Uruguay","Club/franchise team",1922-01-01,NA,"Los Cuervos","Uruguayan Rugby Union","Uruguay",NA,NA,NA,NA,NA,NA,NA,"Club_de_Golf_del_Uruguay",NA,NA,"Club_de_Golf_del_Uruguay",NA,NA,NA
 1333,"Q5775167","Associated Clubs Progreso Rowing and Independiente","Club/franchise team",1960-01-01,NA,"Capri","Argentine Rugby Union","Argentina","Unión de Rugby de Misiones",4,NA,NA,NA,NA,"120wr89s",NA,NA,NA,"Clubes_Asociados_Progreso_Rowing_e_Independiente",NA,NA,NA
 1334,"Q5790523","Craighouse Old Boys","Club/franchise team",1972-01-01,NA,"COBS","Chilean Rugby Federation","Chile",NA,NA,NA,NA,NA,NA,"120pnkw7",NA,NA,NA,"Craighouse_Old_Boys",NA,NA,NA
-1335,"Q5815133","Durango RT","Club/franchise team",1986-01-01,NA,"Durango Nissan-Gaursa; Durango Rugby Taldea","Spanish Rugby Federation","Spain",NA,NA,NA,NA,NA,NA,"155r9lls","Durango_RT",NA,NA,"Durango_Rugby_Taldea",NA,"http://dbpedia.org/resource/Durango_RT",NA
+1335,"Q5815133","Durango RT","Club/franchise team",1986-01-01,NA,"Durango Nissan-Gaursa; Durango Rugby Taldea","Spanish Rugby Federation","Spain",NA,NA,NA,NA,"Durango",NA,"155r9lls","Durango_RT",NA,NA,"Durango_Rugby_Taldea",NA,"http://dbpedia.org/resource/Durango_RT",NA
 1336,"Q5852829","Unione Rugby Sannio","Club/franchise team",1998-01-01,NA,"Rugby Sannio; Sannio; Union Rugby Sannio","Italian Rugby Federation","Italy",NA,NA,NA,NA,NA,NA,NA,"Unione_Rugby_Sannio",NA,NA,"Unione_Rugby_Sannio",NA,"http://dbpedia.org/resource/Unione_Rugby_Sannio",NA
 1337,"Q5863184","Floresta Rugby Club","Club/franchise team",NA,NA,NA,"Argentine Rugby Union","Argentina","Unión de Rugby de Buenos Aires",4,NA,NA,NA,NA,"11x1nxbz8",NA,NA,NA,"Floresta_Rugby_Club",NA,NA,NA
 1338,"Q5871837","Hitchin Rugby Club","Club/franchise team",NA,NA,"Hitchin","Rugby Football Union","England","Counties 1 Herts/Middlesex",7,NA,NA,NA,NA,NA,"Hitchin_Rugby_Club",NA,NA,NA,NA,"http://dbpedia.org/resource/Hitchin_Rugby_Club",NA
@@ -7918,3 +7918,6 @@
 8013,NA,"Shunan University","Club/franchise team",NA,NA,"Tokuyama University; 周南公立大学","Japan Rugby Football Union","Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8014,NA,"Rugby Club Guiziérois","Club/franchise team",NA,NA,"RC Guiziérois; RCG","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Médard-de-Guizières",NA,NA,NA,NA,NA,NA,NA,NA,NA
 8015,NA,"CSS Tecuci","Club/franchise team",NA,NA,"Clubul Sportiv Școlar Tecuci","Romanian Rugby Federation","Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8016,NA,"Irún Rugby Taldea","Club/franchise team",NA,NA,"Irún RT","Spanish Rugby Federation","Spain",NA,NA,NA,NA,"Irún",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8017,NA,"Haileybury Rugby","Club/franchise team",NA,NA,NA,"Rugby Football Union","England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8018,NA,"Chile national under-19 rugby union team","National U19 team",NA,NA,"Chile U19; Chile U19s; Chili -19; U19チリ","Chilean Rugby Federation","Chile",NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
