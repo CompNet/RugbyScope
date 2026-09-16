@@ -52,7 +52,7 @@
 * [ ] Could easily add locations of French clubs (manually)
 * [ ] Leverage B&I Lions + Barbarians websites to complement these stints
 * [ ] Re-identify players searched manually
-* [ ] Check Wakefield Trinity stints
+* [ ] Check Wakefield Trinity / Salford Red Devils stints
 
 
 # STATS & PLOTS
