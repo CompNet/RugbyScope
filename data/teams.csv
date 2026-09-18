@@ -1720,7 +1720,7 @@
 1728,"Q7276919","RK Petrovice","Club/franchise team",1944-01-01,NA,"Rugby Klub Petrovice","Czech Rugby Union","Czechia",NA,NA,NA,NA,"Prague",NA,NA,"RK_Petrovice",NA,NA,NA,NA,"http://dbpedia.org/resource/RK_Petrovice",NA
 1729,"Q7276924","RK Sisak","Club/franchise team",1970-01-01,NA,"Ragbi klub Sisak; Ragbi klub Student; Ragbijaški klub Sisak","Croatian Rugby Federation","Croatia",NA,NA,NA,NA,NA,NA,NA,"RK_Sisak",NA,NA,NA,NA,"http://dbpedia.org/resource/RK_Sisak",NA
 1730,"Q7276932","RK Zagreb","Club/franchise team",1964-01-01,NA,"Ragbi klub Trgovački; RK Zagreb Rugby Union; Rugby klub Zagreb","Croatian Rugby Federation","Croatia",NA,NA,NA,NA,NA,NA,NA,"RK_Zagreb_(rugby_union)",NA,"Ragbi_klub_Zagreb",NA,NA,"http://dbpedia.org/resource/RK_Zagreb_(rugby_union)",NA
-1731,"Q7282829","Ragbi Klub Crvena Zvezda","Club/franchise team",NA,NA,"RK Red Star; Rugby Club Red Star; Рагби Клуб Црвена Звезда","Rugby Union of Serbia","Serbia",NA,NA,NA,NA,NA,NA,NA,"Rugby_Club_Red_Star",NA,NA,NA,NA,"http://dbpedia.org/resource/Rugby_Club_Red_Star",NA
+1731,"Q7282829","Ragbi Klub Crvena Zvezda","Club/franchise team",NA,NA,"RK Crvena Zvezda; RK Red Star; Rugby Club Red Star; Рагби Клуб Црвена Звезда","Rugby Union of Serbia","Serbia",NA,NA,NA,NA,NA,NA,NA,"Rugby_Club_Red_Star",NA,NA,NA,NA,"http://dbpedia.org/resource/Rugby_Club_Red_Star",NA
 1732,"Q7282831","Ragbi Klub Partizan","Club/franchise team",1953-01-01,NA,"Colors; Rugby Club Partizan; Рагби клуб Партизан","Rugby Union of Serbia","Serbia",NA,NA,NA,NA,NA,NA,NA,"Rugby_Club_Partizan",NA,"Ragbi_klub_Partizan",NA,NA,"http://dbpedia.org/resource/Rugby_Club_Partizan",NA
 1733,"Q7284217","Railway Union RFC","Club/franchise team",1905-01-01,NA,NA,"Irish Rugby Football Union","Ireland","Unknown Leinster Competition",NA,NA,NA,NA,NA,NA,"Railway_Union_Sports_Club",NA,NA,NA,NA,NA,NA
 1734,"Q7284861","Rainey Old Boys R.F.C.","Club/franchise team",1928-01-01,NA,"Old Boys; Rainey Old Boys; Rainey Old Boys RFC; Rainey Old Boys Rugby Football Club","Irish Rugby Football Union","Ireland","All-Ireland League - Division 2B",5,NA,NA,NA,NA,NA,"Rainey_RFC",NA,NA,NA,NA,"http://dbpedia.org/resource/Rainey_Old_Boys_R.F.C.",NA
@@ -7568,7 +7568,7 @@
 7656,NA,"St. Josephs Rugby Club Whakatane","Club/franchise team",NA,NA,"St. Josephs Rugby Club; St.Josephs Rugby Club; St.josephs Rugby Club Whakatane; St.Josephs Rugby Club Whakatane","Fiji Rugby Union","Fiji",NA,NA,NA,NA,"Whakatane",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7657,NA,"St. Vincent's University Hospital","Club/franchise team",NA,NA,"St. Vincent's Hospital","Irish Rugby Football Union","Ireland",NA,NA,NA,NA,"Dublin",NA,NA,NA,"St._Vincent%27s_University_Hospital",NA,NA,NA,NA,NA
 7658,NA,"St. Louis Royals Rugby","Club/franchise team",NA,NA,"St. Louis Royals","USA Rugby","U.S.A.",NA,NA,NA,NA,"Saint Charles",NA,NA,NA,NA,NA,NA,NA,NA,NA
-7659,NA,"St. John's Marist Club","Club/franchise team",NA,NA,"St. John's Marist","Fiji Rugby Union","Fiji",NA,NA,NA,NA,"Suva",NA,NA,NA,NA,NA,NA,NA,NA,NA
+7659,NA,"St. John's Marist Club","Club/franchise team",NA,NA,"St. John's Marist; St. John Marist","Fiji Rugby Union","Fiji",NA,NA,NA,NA,"Suva",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7660,NA,"St David's Rugby","Club/franchise team",NA,NA,"St. Davids Cardiff","Welsh Rugby Union","Wales",NA,NA,NA,NA,"Cardiff",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7661,NA,"St Bede's Rugby","Club/franchise team",NA,NA,"St Bede's College; St. Bede's College","New Zealand Rugby","New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 7662,NA,"St. Albert RFC","Club/franchise team",NA,NA,"St. Albert","Rugby Canada","Canada",NA,NA,NA,NA,"Saint Albert",NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7932,3 +7932,5 @@
 8027,NA,"Serbia national under-20 rugby union team","National U20 team",NA,NA,NA,"Rugby Union of Serbia","Serbia"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8028,NA,"Serbia national under-21 rugby union team","National U21 team",NA,NA,NA,"Rugby Union of Serbia","Serbia"",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8029,NA,"Montclair Norsemen","Club/franchise team",1976-01-01,NA,"Montclair Rugby Club; Montclair RC","USA Rugby","U.S.A.",NA,NA,NA,NA,"Montclair",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8030,NA,"Shipley FC","Club/franchise team",1884-01-05,1901-01-01,"Heaton Cricket & Football Club","Rugby Football Union","England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8031,NA,"Eastern Counties Rugby Union Team","Club/franchise team",NA,NA,"Eastern Counties; Eastern Counties Rugby Union","Rugby Football Union","England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
