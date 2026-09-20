@@ -47,6 +47,7 @@
 * [x] Check unicity of positions
 * [ ] Check completely stintless players
 * [x] Insert hard ID in `players.csv` table, so that they don't get a new number each time the SQL version is regenerated
+  * [ ] Problem with player ordering: must check that
   * [ ] Why not doing the same thing for `stints.csv`? (wait after having finished complemented stints)
 * [ ] Uniformize certain field names in SQL tables: `lastname`, `firstname`, `altname`, `location_name`, `nation_name` => `name`
 * [ ] Could easily add locations of French clubs (manually)
