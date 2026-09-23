@@ -2573,7 +2573,7 @@
 2591,"Q25348871","UR Almería","Club/franchise team",NA,NA,"Unión Rugby Almería Playcar","Spanish Rugby Federation","Spain",NA,NA,NA,NA,NA,NA,"11bx1z4xbv","UR_Almer%C3%ADa",NA,NA,NA,NA,"http://dbpedia.org/resource/UR_Almería",NA
 2592,"Q25352074","Scottish Exiles","Club/franchise team",NA,NA,"Anglo-Scots; Scottish Exiles Rugby Union","Scottish Rugby Union","Scotland",NA,NA,NA,NA,NA,NA,"11cm4b00xx","Scottish_Exiles_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Scottish_Exiles_(rugby_union)",NA
 2593,"Q25382139","Stade oranais","Club/franchise team",2007-01-01,NA,NA,"Algerian Rugby Federation","Algeria",NA,NA,NA,NA,NA,NA,"11bxfvlzr4",NA,"Stade_oranais",NA,NA,NA,NA,NA
-2594,"Q25393900","Flagman Rugby Club","Club/franchise team",2011-01-01,NA,NA,"Rugby Union of Russia","Russia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+2594,"Q25393900","Flagman Rugby Club","Club/franchise team",2011-01-01,NA,"Flagman Yaroslavl; RC Flagman; ","Rugby Union of Russia","Russia",NA,NA,NA,NA,"Yaroslavl",NA,NA,NA,NA,NA,NA,NA,NA,NA
 2595,"Q25395988","Club athlétique des sports généraux","Club/franchise team",1903-01-01,1995-05-15,"C.A.S.G.; C.A.S.G. Paris; CASG; CASG Paris; CASG Paris rugby; Club athlétique des sports généraux Rugby","French Rugby Federation","France",NA,NA,"Stade Jean-Bouin","20000","Paris",NA,"11cmcycv4f",NA,"Club_athl%C3%A9tique_des_sports_g%C3%A9n%C3%A9raux_(rugby_%C3%A0_XV)",NA,NA,NA,NA,NA
 2596,"Q25421425","Clube e Escola de Rugby Samambaia","Club/franchise team",NA,NA,NA,"Brazilian Rugby Confederation","Brazil",NA,NA,NA,NA,NA,NA,"11bx1g1ry5",NA,NA,NA,NA,NA,NA,NA
 2597,"Q25477067","Mouguerre Union","Club/franchise team",1962-05-25,NA,"US Mouguerre; USM","French Rugby Federation","France","Fédérale 2 - Poule 6",6,NA,NA,"Mouguerre",NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7937,3 +7937,5 @@
 8032,NA,"Cardiff Northern RFC","Club/franchise team",1892-01-01,1911-01-01,NA,"Welsh Rugby Union","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8033,NA,"Japan national university rugby union team","National university team",NA,NA,"Japan university representative","Japan Rugby Football Union","Japan",NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8034,NA,"Bream RFC","Club/franchise team",1878-01-01,NA,"Bream Rugby Football Club","Rugby Football Union","England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8035,NA,"Dolgoprudny Sokoly","Club/franchise team",1996-01-01,NA,"Dolgoprudnye Sokoly; Dolgoprudny Falcons; Долгопрудненские Соколы","Rugby Union of Russia","Russia",NA,NA,NA,NA,"Dolgoprudny",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8036,NA,"Start Łódź","Club/franchise team",1956-01-01,1962-01-01,"Włókniarz Łódź Rugby; KS Włókniarz Łódź; Włókniarz Łódź; Start Łódź Rugby; ZS Start","Polish Rugby Union","Poland",NA,NA,NA,NA,"Łódź",NA,NA,NA,NA,NA,NA,NA,NA,NA
