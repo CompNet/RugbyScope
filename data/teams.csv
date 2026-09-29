@@ -4673,8 +4673,8 @@
 4719,NA,"RO C Giffois","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4720,NA,"RO C Houilles Carrieres Seine","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4721,NA,"Rst Chilly / Epinay","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4722,NA,"Rst UBM/Champigny","Club/franchise team",NA,NA,"ES Villiers-sur-Marne","French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4723,NA,"Rueil AC","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4722,NA,"Rst UBM/Champigny","Club/franchise team",NA,NA,"Rassemblement Union Bord de Marne Champigny; ES Villiers-sur-Marne","French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,"Villiers-sur-Marne",NA,NA,NA,NA,NA,NA,NA,NA,NA
+4723,NA,"Rueil AC","Club/franchise team",NA,NA,"Rueil-Malmaison AC","French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,"Rueil-Malmaison",NA,NA,NA,NA,NA,NA,NA,NA,NA
 4724,NA,"Rugby Cellois Chesnaysien","Club/franchise team",NA,NA,"Le Chesnay","French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4725,NA,"Rugby Club Garches Vaucresson","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4726,NA,"Rugby Club Vallee de Montmorency Soisy","Club/franchise team",NA,NA,"OGE Montmorency; RC Soisy Andilly Margency; RC Vallée de Montmorency; RCV Montmorency; RCV Montmorency Soisy","French Rugby Federation","France","Régionale 1 - Ligue Île-de-France",8,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -4987,7 +4987,7 @@
 5033,NA,"Avenir Monclarais","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5034,NA,"Avenir Olympique Viviez","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5035,NA,"CO St Lary Soulan","Club/franchise team",NA,NA,"CO Saint-Lary; CO Saint-Lary-Soulan","French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-5036,NA,"Compound C ACapdenacois","Club/franchise team",NA,NA,"Cca Capdenac; CCA Capdenac","French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+5036,NA,"CCA Capdenacois","Club/franchise team",NA,NA,"Compound C ACapdenacois; Cca Capdenac; CCA Capdenac; Compound Club Athlétique Capdenacois","French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5037,NA,"Entente Fleury Salles Coursan XV","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5038,NA,"Entente La Tet","Club/franchise team",NA,NA,"Saint-Féliu-d'Avall","French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 5039,NA,"Entente Les 3 Clochers","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Occitanie",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7944,3 +7944,4 @@
 8039,NA,"Georgia national under-21 rugby union team","National U21 team",NA,NA,"Georgia U21; Georgia Under-21; Géorgie -21; U21ジョージア; ジョージアU21; ラグビーU-21ジョージア代表","Georgian Rugby Union","Georgia",NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8040,NA,"Universitatea Ecologică București","Club/franchise team",NA,NA,"Ecological University of Bucharest","Romanian Rugby Federation","Romania",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8041,NA,"Midlands Rugby Team","Regional team",NA,NA,NA,"Rugby Football Union","England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8042,NA,"UE Sants","Club/franchise team",NA,NA,"Unió Esportiva de Sants; UES Rugby","Spanish Rugby Federation","Spain",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
