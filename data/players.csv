@@ -2839,7 +2839,7 @@
 2846,"Q120143906","Jacques Bénédé","Jacques","Bénédé",NA,1938-03-03,"Dax",2023-06-27,"Dax","France",NA,"Centre",NA,NA,NA,172,NA,NA,NA,NA,NA,NA,"Jacques_B%C3%A9n%C3%A9d%C3%A9",NA,NA,NA,NA
 2847,"Q120186954","David Lolohea","David","Lolohea",NA,1992-02-26,"Penrith",NA,NA,"Australia","Tonga","Prop",NA,NA,NA,193,299436,"david-lolohea",NA,29565,NA,NA,"David_Lolohea",NA,NA,NA,NA
 2848,"Q120378604","Ilan El Khattabi","Ilan","El Khattabi",NA,1999-06-10,"Colombes",NA,NA,"France",NA,"Scrum-Half",NA,NA,82,180,NA,"ilan-el-khattabi",NA,45528,NA,NA,"Ilan_El_Khattabi",NA,"Ilan_El_Khattabi",NA,NA
-2849,"Q120450617","Martin Green","Martin","Green",NA,1945-01-01,"Solihull",NA,NA,"United Kingdom","England","Flanker",NA,1976,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Martin_Green",NA,NA,NA
+2849,"Q120450617","Martin Green","Martin","Green","Martin J. Green",1945-01-01,"Solihull; Warwickshire; England",NA,NA,"United Kingdom","England","Flanker",NA,1976,90,180,NA,NA,NA,NA,NA,"Martin_Green_(rugby_union_coach)",NA,"Martin_Green","Martin_Green",NA,NA
 2850,"Q120491590","Matthieu Loudet","Matthieu","Loudet",NA,1998-01-01,NA,NA,NA,"France",NA,"Prop",NA,NA,NA,184,301426,"matthieu-loudet",NA,44639,NA,NA,"Matthieu_Loudet",NA,NA,NA,NA
 2851,"Q120512607","Jean-Baptiste Barrère","Jean-Baptiste","Barrère",NA,1989-12-15,"Aire-sur-l'Adour",NA,NA,"France",NA,"3rd Row",NA,NA,NA,188,NA,"jean-baptiste-barrere",NA,22300,NA,NA,"Jean-Baptiste_Barr%C3%A8re",NA,NA,NA,NA
 2852,"Q12052362","François Herry","François","Herry",NA,1988-10-08,"Nanterre",NA,NA,"France",NA,"Centre",NA,NA,NA,182,NA,"francois-herry","12b02tzdx",15491,NA,NA,"Fran%C3%A7ois_Herry",NA,NA,NA,NA
@@ -3559,7 +3559,6 @@
 3566,"Q124407680","George Cromey","George","Cromey","George Ernest Cromey",1913-05-08,"Bushmills; County Antrim; Ireland",2006-09-27,"Ballymoney; County Antrim; Ireland","Ireland",NA,"Fly-Half",NA,NA,NA,NA,4480,NA,"11vsdgvp2z",NA,NA,"George_Cromey",NA,NA,NA,NA,NA
 3567,"Q124407868","Bob Graves","Bob","Graves","Charles Robert Arthur Graves",1909-01-23,"Valentia; County Kerry; Ireland",1990-10-14,"Dublin; Ireland","Ireland",NA,"Hooker",NA,NA,NA,NA,NA,NA,"11f0s9v_vq",NA,NA,"Bob_Graves_(rugby_union)",NA,NA,NA,NA,NA
 3568,"Q124407934","Vesey Boyle","Vesey","Boyle","Charles Vesey Boyle",1915-07-02,"Dublin; Ireland",2007-03-03,"Devon; England","Ireland",NA,"Winger",NA,NA,NA,NA,4309,NA,NA,NA,NA,"Vesey_Boyle",NA,NA,NA,NA,NA
-3569,"Q124408571","Martin Green","Martin","Green",NA,NA,"Warwickshire",NA,NA,"United Kingdom","England","3rd Row",NA,NA,90,180,NA,NA,NA,NA,NA,"Martin_Green_(rugby_union_coach)",NA,NA,"Martin_Green",NA,NA
 3570,"Q124408643","Arthur Clark","Arthur","Clark",NA,2001-12-19,"Oxford; England",NA,NA,"United Kingdom","England","2nd Row",NA,NA,126,201,NA,NA,"11vptdf4ct",NA,NA,"Arthur_Clark_(rugby_union)",NA,NA,NA,NA,NA
 3571,"Q124408928","Jim McVicker","Jim","McVicker","James Mcvicker",1896-10-01,"Ballymoney; County Antrim; Ireland",1985-12-18,"Ballymoney; County Antrim; Ireland","Ireland",NA,"2nd Row",NA,NA,NA,NA,3073,NA,NA,NA,NA,"Jim_McVicker",NA,NA,NA,NA,NA
 3572,"Q124414106","Paul Murray","Paul","Murray","Paul Finbarr Murray",1905-06-29,"Sandycove; Dublin; Ireland",1981-06-01,"Ballsbridge; Dublin; Ireland","Ireland",NA,"Half-Back; Centre",NA,NA,NA,NA,3388,NA,"11y2t0810b",NA,NA,"Paul_Murray_(rugby_union)",NA,NA,NA,NA,NA
@@ -3932,7 +3931,7 @@
 3939,"Q125355220","Roger Shackleton","Roger","Shackleton","Ian Roger Shackleton",1948-01-01,"Shipley; Yorkshire; England",NA,NA,"United Kingdom","England","Centre; Fly-Half",NA,NA,NA,NA,7586,NA,NA,NA,NA,"Roger_Shackleton",NA,NA,NA,NA,NA
 3940,"Q125355363","Terry Brooke","Terry","Brooke","Terence John Brooke",1940-01-01,"Surbiton; Surrey; England",NA,NA,"United Kingdom","England","Centre",NA,NA,90,188,7353,NA,NA,NA,NA,"Terry_Brooke",NA,NA,NA,NA,NA
 3941,"Q125355824","Bill Redwood","Bill","Redwood","Brian William Redwood",1939-01-01,"Bristol; England",NA,NA,"United Kingdom","England","Scrum-Half",NA,NA,NA,NA,7341,NA,NA,NA,NA,"Bill_Redwood",NA,NA,NA,NA,NA
-3942,"Q125356459","Duce Gotora","Duce","Gotora",NA,NA,NA,NA,NA,"Zimbabwe",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+3942,"Q125356459","Duce Gotora","Duce","Gotora",NA,1978-03-01,NA,NA,NA,"Zimbabwe",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 3943,"Q125358201","Victor Harding","Victor","Harding","Victor Sydney James Harding",1932-01-01,"Southwark; London; England",2017-01-01,NA,"United Kingdom","England","2nd Row",NA,NA,NA,191,6439,NA,NA,NA,NA,"Victor_Harding",NA,NA,NA,NA,NA
 3944,"Q125372931","Peter Claffey","Peter","Claffey",NA,1996-07-28,"Portumna",NA,NA,"Ireland",NA,"2nd Row",NA,NA,119,195,NA,NA,NA,NA,NA,"Peter_Claffey",NA,NA,NA,NA,NA
 3945,"Q125377620","Aviata Silago","Aviata","Silago",NA,1993-01-02,NA,NA,NA,"New Zealand",NA,"Fly-Half; Centre; Fullback",NA,NA,NA,180,NA,"aviata-silago",NA,30585,NA,NA,"Aviata_Silago",NA,NA,NA,NA
@@ -4614,7 +4613,7 @@
 4621,"Q12866215","Levan Tsabadze","Levan","Tsabadze",NA,1973-01-08,"Aspindza",NA,NA,"Georgia",NA,"Prop",NA,NA,NA,NA,11716,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4622,"Q128694207","Pierre Rivera","Pierre","Rivera",NA,1948-01-01,"Pau; Pyrénées-Atlantiques",NA,NA,"France",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Pierre_Rivera",NA,NA,NA,NA
 4623,"Q128694296","Junya Matsumoto","Junya","Matsumoto",NA,2000-03-17,NA,NA,NA,"Japan",NA,"Winger",NA,NA,80,171,NA,NA,NA,NA,NA,"Junya_Matsumoto",NA,NA,NA,NA,NA
-4624,"Q128697301","Medhi Narjissi","Mehdi","Narjissi",NA,2007-02-13,NA,NA,NA,"France",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4624,"Q128697301","Medhi Narjissi","Mehdi","Narjissi",NA,2007-02-13,NA,2024-08-07,"Dias Beach; Cape of Good Hope; South Africa","France",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4625,"Q128746166","Ignacio Facciolo","Ignacio","Facciolo","イグナシオ・ファッチョロ",2001-01-01,"Uruguay",NA,NA,"Uruguay",NA,"Fly-Half",NA,NA,91,188,NA,NA,NA,NA,NA,"Ignacio_Facciolo",NA,NA,NA,"%E3%82%A4%E3%82%B0%E3%83%8A%E3%82%B7%E3%82%AA%E3%83%BB%E3%83%95%E3%82%A1%E3%83%83%E3%83%81%E3%83%A7%E3%83%AD",NA
 4626,"Q128792329","Harry Taylor","Harry","Taylor",NA,2001-09-09,"Bristol; England",NA,NA,"United Kingdom","England","Flanker",NA,NA,108,190,NA,"harry-taylor",NA,NA,NA,"Harry_Taylor_(rugby_union)",NA,NA,NA,NA,NA
 4627,"Q128797721","Mark Catchpole","Mark","Catchpole","Mark Phillip Catchpole",1968-01-01,"Sydney; New South Wales; Australia",NA,NA,"Australia",NA,"Scrum-Half",NA,NA,85,175,11640,NA,NA,NA,NA,"Mark_Catchpole",NA,NA,NA,NA,NA
