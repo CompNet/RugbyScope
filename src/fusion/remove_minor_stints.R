@@ -155,10 +155,28 @@ print(ids)
 # names <- unique(stints[idx, "playerName"])
 # print(names)
 
-# players with a single stints missing both years
+# # players with a single stint missing both years
+# idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]))
+# tt <- table(stints[idx, "playerId"])
+# ids <- names(tt[which(tt == 1)])
+# idx <- which(players[, "wikidataId"] %in% ids)
+# by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+# print(data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by))
+
+# players with only stints missing both years
+idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]))
+tt0 <- table(sort(stints[, "playerId"]))
+tt <- table(sort(stints[idx, "playerId"]))
+ids <- names(tt[which(tt >= 1)])
+tt0 <- tt0[names(tt0) %in% ids]
+idx <- which(players[, "wikidataId"] %in% ids[tt == tt0])
+by <- as.integer(format(players[idx, "birthDate"], "%Y"))
+print(data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by))
+
+# players with several stints missing both years
 idx <- which(is.na(stints[, "startYear"]) & is.na(stints[, "endYear"]))
 tt <- table(stints[idx, "playerId"])
-ids <- names(tt[which(tt == 1)])
+ids <- names(tt[which(tt > 1)])
 idx <- which(players[, "wikidataId"] %in% ids)
 by <- as.integer(format(players[idx, "birthDate"], "%Y"))
 print(data.frame(players[idx, "wikidataId"], players[idx, "fullName"], by))

@@ -6861,7 +6861,7 @@
 6939,NA,"New Zealand Institute of Sports","Club/franchise team",NA,NA,"ニュージーランド・インスティチュート・オブ・スポーツ","New Zealand Rugby","New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6940,NA,"Niko Niko Do","Club/franchise team",NA,NA,"Nikonikodo; NikoNikoDo Kumamoto; ニコニコドー","Japan Rugby Football Union","Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6941,NA,"Niigata Sanyo Electronics","Club/franchise team",NA,NA,"新潟三洋電子","Japan Rugby Football Union","Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-6942,NA,"North-West University","Club/franchise team",NA,NA,"Nwu Pukke; NWU Pukke; Université du Nord-Ouest; ノース・ウェスト大学; ノースウェスト大学; ノースウエスト大学","South African Rugby Union","South Africa",NA,NA,NA,NA,NA,NA,NA,NA,"Universit%C3%A9_du_Nord-Ouest",NA,NA,NA,NA,NA
+6942,NA,"North-West University","Club/franchise team",NA,NA,"Nwu Pukke; NWU-Pukke; NWU Pukke; Université du Nord-Ouest; ノース・ウェスト大学; ノースウェスト大学; ノースウエスト大学","South African Rugby Union","South Africa",NA,NA,NA,NA,NA,NA,NA,NA,"Universit%C3%A9_du_Nord-Ouest",NA,NA,NA,NA,NA
 6943,NA,"NTT Tohoku","Club/franchise team",NA,NA,"NTTグループ東北","Japan Rugby Football Union","Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6944,NA,"OK Finance","Club/franchise team",NA,NA,"Ok Financial Group Okman; OK Financial Group Okman; OK金融","Korea Rugby Union","South Korea",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 6945,NA,"PSI Cost Cuts","Club/franchise team",NA,NA,"PSIコストカッツ","Japan Rugby Football Union","Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7317,7 +7317,7 @@
 7403,NA,"VC Beauvais","Club/franchise team",NA,NA,"Beauvais Rugby; Vélo Club Beauvais","French Rugby Federation","France",NA,NA,NA,NA,"Beauvais",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7404,"Q30737454","Vélo Sport chartrain","Club/franchise team",1897-01-01,1987-01-01,"VS Chartres; VSC","French Rugby Federation","France",NA,NA,NA,NA,"Chartres",NA,NA,NA,"V%C3%A9lo_Sport_chartrain",NA,NA,NA,NA,NA
 7405,NA,"Vendres Lespignan Sauvian XV","Club/franchise team",2019-01-01,NA,"Entente Vendres Lespignan Sauvian Hérault XV; Entente Vendres Lespignan Sauvian XV; EVLS XV","French Rugby Federation","France",NA,NA,NA,NA,"Vendres",NA,NA,NA,NA,NA,NA,NA,NA,"Merger of Entente Vendres-Lespignan Hérault XV and JS Sauviannaise"
-7406,NA,"Vest-Zvezda Kaliningrad","Club/franchise team",NA,NA,"Kaliningrad; Zvezda Kaliningrad","Rugby Union of Russia","Russia",NA,NA,NA,NA,"Kaliningrad",NA,NA,NA,NA,NA,NA,NA,NA,NA
+7406,NA,"Vest-Zvezda Kaliningrad","Club/franchise team",NA,NA,"Kaliningrad; Zvezda Kaliningrad; West Star Kaliningrad","Rugby Union of Russia","Russia",NA,NA,NA,NA,"Kaliningrad",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7407,NA,"Vio","Club/franchise team",NA,NA,NA,"Fiji Rugby Union","Fiji",NA,NA,NA,NA,"Vio",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7408,NA,"Visol Kochebi","Club/franchise team",NA,NA,NA,"Georgian Rugby Union","Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 7409,NA,"Voința Cluj","Club/franchise team",NA,NA,NA,"Romanian Rugby Federation","Romania",NA,NA,NA,NA,"Cluj",NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7327,7 +7327,6 @@
 7413,NA,"Wales national under-21 rugby union team","National U21 team",NA,NA,"Galles -21; Pays de Galles -21; Wales U21; Wales U21s; Wales Under-21","Welsh Rugby Union","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 7415,NA,"Washington Loggers","Club/franchise team",NA,NA,NA,"USA Rugby","U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 7416,NA,"Wasps Dubai","Club/franchise team",NA,NA,"Xodus Wasps Dubai","United Arab Emirates Rugby Federation","United Arab Emirates",NA,NA,NA,NA,"Dubai",NA,NA,NA,NA,NA,NA,NA,NA,NA
-7417,NA,"West Star Kaliningrad","Club/franchise team",NA,NA,NA,"Rugby Union of Russia","Russia",NA,NA,NA,NA,"Kaliningrad",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7418,NA,"Westside Ronins","Club/franchise team",NA,NA,NA,"USA Rugby","U.S.A.",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 7419,NA,"Woonona Shamrocks Rugby Club","Club/franchise team",NA,NA,"Woonona Shamrocks; Woonona Shamrocks RC","Rugby Australia","Australia",NA,NA,NA,NA,"Woonona",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7420,NA,"XV Corsaire St-Malo","Club/franchise team",NA,NA,"XV Corsaire Saint-Malo","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Malo",NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7960,3 +7959,7 @@
 8055,NA,"Trébol Rugby Club","Club/franchise team",NA,NA,"PGC Trébol; PGC Trébol Rugby Paysandú; Trébol RC","Uruguayan Rugby Union","Uruguay",NA,NA,NA,NA,"Paysandú",NA,NA,NA,NA,NA,NA,NA,NA,NA
 8056,NA,"Lobos RC","Club/franchise team",NA,NA,"Lobos Rugby Club","Uruguayan Rugby Union","Uruguay",NA,NA,NA,NA,"Punta del Este",NA,NA,NA,NA,NA,NA,NA,NA,NA
 8057,NA,"CS Agronomia","Club/franchise team",NA,NA,"Agronomia Cluj","Romanian Rugby Federation","Romania",NA,NA,NA,NA,"Cluj",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8058,NA,"Kaliningrad Old Boys","Club/franchise team",NA,NA,NA,"Rugby Union of Russia","Russia",NA,NA,NA,NA,"Kaliningrad",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8059,NA,"RC Artisien","Club/franchise team",NA,NA,"Rugby Club Artisien; RC Artix","French Rugby Federation","France",NA,NA,"Stade Albert Plantier; Stade Arriau",NA,"Artix",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8060,NA,"SNC Biterrois rugby","Club/franchise team",NA,NA,"Sporting National Cheminot Biterrois; ","French Rugby Federation","France",NA,NA,NA,NA,"Béziers",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8061,NA,"South Africa Army","Club/franchise team",NA,NA,NA,"South African Rugby Union","South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
