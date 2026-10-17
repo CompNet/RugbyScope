@@ -48,7 +48,7 @@
 47,"Q100998869","Enzo Hervé","Enzo","Hervé",NA,1998-10-13,"Le Bugue",NA,NA,"France",NA,"Fly-Half",NA,NA,94,177,NA,"enzo-herve","11mvhbf3fl",41862,"18333",NA,"Enzo_Herv%C3%A9",NA,"Enzo_Herv%C3%A9",NA,NA
 48,"Q101006672","Ollie Chessum","Oliver","Chessum","Oliver Andrew Chessum; オリー・チェサム",2000-09-06,"Boston",NA,NA,"United Kingdom","England","2nd Row; Number 8; Flanker",NA,NA,114,201,306376,"ollie-chessum","11lgjq10hg",46721,"8489","Ollie_Chessum","Ollie_Chessum",NA,NA,"%E3%82%AA%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%81%E3%82%A7%E3%82%B5%E3%83%A0","http://dbpedia.org/resource/Ollie_Chessum"
 49,"Q101058765","Theo Boshoff","Theo","Boshoff","Theo Fiela Boshoff",1998-08-31,"South Africa",NA,NA,"South Africa",NA,"Fly-Half",NA,NA,83,185,NA,NA,"11qn59335v",NA,NA,"Theo_Boshoff",NA,NA,NA,NA,"http://dbpedia.org/resource/Theo_Boshoff"
-50,"Q101058792","Stephan de Jager","Stephan","de Jager",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,NA,NA,"11mvm2wshr",NA,NA,"Stephan_de_Jager",NA,NA,NA,NA,"http://dbpedia.org/resource/Stephan_de_Jager"
+50,"Q101058792","Stephan de Jager","Stephan","de Jager",NA,1997-03-05,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,NA,NA,"11mvm2wshr",NA,NA,"Stephan_de_Jager",NA,NA,NA,NA,"http://dbpedia.org/resource/Stephan_de_Jager"
 51,"Q101064426","Marcel Theunissen","Marcel","Theunissen",NA,1999-06-09,"Cape Town",NA,NA,"South Africa",NA,"Flanker",NA,NA,99,192,NA,NA,"11qn5mjkbp",NA,NA,"Marcel_Theunissen",NA,NA,NA,NA,"http://dbpedia.org/resource/Marcel_Theunissen"
 52,"Q101064427","Ben-Jason Dixon","Ben-Jason","Dixon",NA,1998-04-29,"Cape Town",NA,NA,"South Africa",NA,"2nd Row; Flanker",NA,NA,106,198,NA,"ben-jason-dixon","11qn5mn_55",43341,"15910","Ben-Jason_Dixon","Ben-Jason_Dixon",NA,NA,NA,"http://dbpedia.org/resource/Ben-Jason_Dixon"
 53,"Q101072735","Lucas Poirson","Lucas","Poirson",NA,1999-12-09,NA,NA,NA,"France",NA,"Winger",NA,NA,NA,180,NA,"lucas-poirson","11lq6_vc8w",44975,NA,NA,"Lucas_Poirson",NA,NA,NA,NA
@@ -80,7 +80,7 @@
 79,"Q101423784","Matt Cornish","Matt","Cornish","Matthew James Fenton Cornish",1997-03-13,"Surrey",NA,NA,"United Kingdom","England","Hooker",NA,NA,121,180,306364,"matt-cornish","11gbf_x3r1",38514,NA,"Matt_Cornish",NA,NA,NA,NA,"http://dbpedia.org/resource/Matt_Cornish"
 80,"Q101437795","Serupepeli Vularika","Serupepeli","Vularika",NA,1990-04-29,"Rewa",NA,NA,"Fiji",NA,"Fly-Half; Centre; Scrum-Half",NA,NA,81,160,264807,"seru-vularika","11mvv9xpg8",38003,NA,"Serupepeli_Vularika","Serupepeli_Vularika",NA,NA,NA,"http://dbpedia.org/resource/Serupepeli_Vularika"
 81,"Q101437848","Caleb Korteweg","Caleb","Korteweg",NA,1997-01-01,"New Zealand",NA,NA,"New Zealand",NA,"Scrum-Half",NA,NA,84,178,NA,NA,"11qndgz3xl",NA,NA,"Caleb_Korteweg",NA,NA,NA,NA,"http://dbpedia.org/resource/Caleb_Korteweg"
-82,"Q101437850","Dan Gamble","Dan","Gamble",NA,NA,"Scotland",NA,NA,"United Kingdom","Scotland","Tighthead Prop",NA,NA,118,185,NA,NA,"11mvv9s8kj",NA,NA,"Dan_Gamble",NA,NA,NA,NA,"http://dbpedia.org/resource/Dan_Gamble"
+82,"Q101437850","Dan Gamble","Dan","Gamble",NA,1999-01-01,"Scotland",NA,NA,"United Kingdom","Scotland","Tighthead Prop",NA,NA,118,185,NA,NA,"11mvv9s8kj",NA,NA,"Dan_Gamble",NA,NA,NA,NA,"http://dbpedia.org/resource/Dan_Gamble"
 83,"Q101437853","Sam Grahamslaw","Sam","Grahamslaw","Samuel Alexander Grahamslaw",1999-02-24,"Scotland",NA,NA,"United Kingdom",NA,"Loosehead Prop",NA,NA,125,194,NA,NA,"11lgs975cq",43200,NA,"Sam_Grahamslaw",NA,NA,NA,NA,"http://dbpedia.org/resource/Sam_Grahamslaw"
 84,"Q101479371","Damiano Mazza","Damiano","Mazza",NA,1999-02-16,"Montecchio Emilia",NA,NA,"Italy",NA,"Centre",NA,NA,99,183,NA,"damiano-mazza","11ggn0bmky",36173,NA,"Damiano_Mazza_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Damiano_Mazza_(rugby_union)"
 85,"Q101515848","Lucio Cinti","Lucio","Luna; Cinti","Lucio Cinti Luna; Lucio Constantino Cinti Luna; ルシオ・シンティ",2000-02-23,"La Plata",NA,NA,"Argentina",NA,"Winger; Centre",NA,NA,90,190,307077,"lucio-luna","11qng_13lk",44551,"11741","Lucio_Cinti","Lucio_Cinti",NA,"Lucio_Cinti","%E3%83%AB%E3%82%B7%E3%82%AA%E3%83%BB%E3%82%B7%E3%83%B3%E3%83%86%E3%82%A3","http://dbpedia.org/resource/Lucio_Cinti"
@@ -698,7 +698,7 @@
 699,"Q106391713","Martin Jessen","Martin","Jessen",NA,1998-01-01,NA,NA,NA,"Belgium",NA,"Hooker",NA,NA,NA,177,301607,"martin-jessen",NA,40669,NA,NA,"Martin_Jessen",NA,NA,NA,NA
 700,"Q106393629","Tom Herenger","Tom","Herenger",NA,1996-01-01,NA,NA,NA,"Belgium; France",NA,"2nd Row",NA,NA,NA,193,298802,"tom-herenger",NA,42499,NA,NA,"Tom_Herenger",NA,NA,NA,NA
 701,"Q106395234","Teva Maké","Teva","Maké",NA,1988-01-01,NA,NA,NA,"France",NA,"Prop",NA,NA,NA,187,NA,"teva-make",NA,20763,NA,NA,"Teva_Mak%C3%A9",NA,NA,NA,NA
-702,"Q106399017","Dazzy Cornez","Dazzy","Cornez",NA,NA,NA,NA,NA,"Belgium",NA,"Winger; Centre; Fullback",NA,NA,NA,NA,298799,"dazzy-cornez",NA,33416,NA,NA,"Dazzy_Cornez",NA,NA,NA,NA
+702,"Q106399017","Dazzy Cornez","Dazzy","Cornez",NA,1996-05-02,NA,NA,NA,"Belgium",NA,"Winger; Centre; Fullback",NA,NA,NA,NA,298799,"dazzy-cornez",NA,33416,NA,NA,"Dazzy_Cornez",NA,NA,NA,NA
 703,"Q106407267","Josh Moorby","Josh","Moorby","Joshua Moorby",1998-07-11,"Te Awamutu; New Zealand",NA,NA,"New Zealand",NA,"Winger; Fullback",NA,NA,99,188,NA,"joshua-moorby","11r7w_2zyc",44986,NA,"Josh_Moorby",NA,NA,NA,NA,"http://dbpedia.org/resource/Josh_Moorby"
 704,"Q106407269","James Arscott","James","Arscott","James Michael Arscott",2000-07-15,"New Zealand",NA,NA,"New Zealand",NA,"Half-Back",NA,NA,80,174,NA,NA,"11n87j26b1",44743,NA,"James_Arscott",NA,NA,NA,NA,"http://dbpedia.org/resource/James_Arscott"
 705,"Q106410921","Thomas de Molder","Thomas","de Molder",NA,1992-06-22,"Brussels metropolitan area",NA,NA,"Belgium",NA,"3rd Row",NA,NA,NA,190,176533,"thomas-demolder",NA,25488,NA,NA,"Thomas_de_Molder",NA,NA,NA,NA
@@ -896,7 +896,7 @@
 897,"Q107295254","Hanru Sirgel","Hanru","Sirgel",NA,1998-05-08,"East London",NA,NA,"South Africa",NA,"Number 8; Flanker",NA,NA,103,188,NA,"hanru-sirgel","11rgf_m_50",42981,NA,"Hanru_Sirgel","Hanru_Sirgel",NA,NA,NA,"http://dbpedia.org/resource/Hanru_Sirgel"
 898,"Q107295876","JJ Scheepers","J. J.","Scheepers","J. J. Scheepers",1998-03-20,"South Africa",NA,NA,"South Africa",NA,"2nd Row",NA,NA,115,198,NA,NA,NA,NA,NA,"JJ_Scheepers",NA,NA,NA,NA,"http://dbpedia.org/resource/JJ_Scheepers"
 899,"Q107295883","Jaco Labuschagne","Jaco","Labuschagne",NA,1999-04-29,"Ermelo; Mpumalanga; South Africa",NA,NA,"South Africa",NA,"Flanker",NA,NA,102,190,NA,NA,"11nntrdmz9",NA,NA,"Jaco_Labuschagne",NA,NA,NA,NA,"http://dbpedia.org/resource/Jaco_Labuschagne"
-900,"Q107295884","Francois Klopper","François","Klopper",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,NA,"francois-klopper","11nntrcmqs",45156,NA,"Francois_Klopper",NA,NA,NA,NA,"http://dbpedia.org/resource/Francois_Klopper"
+900,"Q107295884","Francois Klopper","François","Klopper",NA,1999-09-07,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,NA,"francois-klopper","11nntrcmqs",45156,NA,"Francois_Klopper",NA,NA,NA,NA,"http://dbpedia.org/resource/Francois_Klopper"
 901,"Q107295885","Werner Fourie","Werner","Fourie",NA,1998-07-28,"South Africa",NA,NA,"South Africa",NA,"Hooker",NA,NA,100,175,NA,NA,NA,NA,NA,"Werner_Fourie",NA,NA,NA,NA,"http://dbpedia.org/resource/Werner_Fourie"
 902,"Q107295906","Tiaan de Klerk","Tiaan","de Klerk",NA,2001-06-12,"Namibia",NA,NA,"Namibia",NA,"2nd Row",NA,NA,108,204,NA,"tiaan-de-klerk","11rgf_h9j4",49720,NA,"Tiaan_de_Klerk",NA,NA,NA,NA,"http://dbpedia.org/resource/Tiaan_de_Klerk"
 903,"Q107295907","Jaco Bezuidenhout","Jaco","Bezuidenhout","Hendrik Willem Jacobus Bezuidenhout",1997-01-05,"Durban; South Africa",NA,NA,"South Africa",NA,"Flanker",NA,NA,101,191,NA,NA,"11rgf_pmyw",NA,NA,"Jaco_Bezuidenhout",NA,NA,NA,NA,"http://dbpedia.org/resource/Jaco_Bezuidenhout"
@@ -956,7 +956,7 @@
 957,"Q107406718","Ross Braude","Ross","Braude",NA,2000-01-18,"Pretoria; South Africa; South Africa",NA,NA,"Canada",NA,"Scrum-Half",NA,NA,82,168,NA,NA,"11nwx8zs0x",49402,NA,"Ross_Braude",NA,NA,NA,NA,"http://dbpedia.org/resource/Ross_Braude"
 958,"Q107406720","Siaki Vikilani","Siaki","Vikilani","Siaki Lolohea Vikilani",2000-08-07,"Canada",NA,NA,"Canada",NA,"Flanker; Number 8",NA,NA,123,191,NA,NA,"11nwx8xwn1",45755,NA,"Siaki_Vikilani",NA,NA,NA,NA,"http://dbpedia.org/resource/Siaki_Vikilani"
 959,"Q107406721","Tyler Rowland","Tyler","Rowland",NA,1999-10-16,"Canada",NA,NA,"Canada",NA,"Prop",NA,NA,125,187,NA,NA,NA,11661,NA,"Tyler_Rowland",NA,NA,NA,NA,"http://dbpedia.org/resource/Tyler_Rowland"
-960,"Q107410284","Johan Mulder","Johan","Mulder",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,178,NA,NA,NA,NA,NA,"Johan_Mulder",NA,NA,NA,NA,"http://dbpedia.org/resource/Johan_Mulder"
+960,"Q107410284","Johan Mulder","Johan","Mulder",NA,1999-08-06,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,178,NA,NA,NA,NA,NA,"Johan_Mulder",NA,NA,NA,NA,"http://dbpedia.org/resource/Johan_Mulder"
 961,"Q107411011","Juan Martín González","Juan; Martín","González","Juan González; Juan Martín González Samso; フアン・マルティン・ゴンサレス",2000-11-14,"Mendoza",NA,NA,"Argentina",NA,"Flanker",NA,NA,97,192,308470,"juan-martin-gonzalez-samso","11nwx8ydv1",45341,"11717","Juan_Mart%C3%ADn_Gonz%C3%A1lez","Juan_Mart%C3%ADn_Gonz%C3%A1lez",NA,"Juan_Gonz%C3%A1lez_(rugbista)","%E3%83%95%E3%82%A2%E3%83%B3%E3%83%BB%E3%83%9E%E3%83%AB%E3%83%86%E3%82%A3%E3%83%B3%E3%83%BB%E3%82%B4%E3%83%B3%E3%82%B5%E3%83%AC%E3%82%B9","http://dbpedia.org/resource/Juan_Martín_González"
 962,"Q107415479","Luke Carty","Luke","Carty",NA,1997-09-24,"Athlone; Ireland",NA,NA,"U.S.A.",NA,"Fly-Half",NA,NA,90,182,NA,NA,"11f37krybl",39248,NA,"Luke_Carty",NA,NA,NA,NA,"http://dbpedia.org/resource/Luke_Carty"
 963,"Q107416453","Mika Kruse","Mika","Kruse",NA,1998-06-27,"U.S.A.",NA,NA,"U.S.A.",NA,"Centre; Winger",NA,NA,95,185,NA,NA,"11rrjrvjmw",43043,NA,"Mika_Kruse",NA,NA,NA,NA,"http://dbpedia.org/resource/Mika_Kruse"
@@ -1084,7 +1084,7 @@
 1085,"Q108055427","Jacopo Abram","Jacopo","Abram",NA,1996-07-11,NA,NA,NA,"Italy",NA,"Flanker","2014",NA,95,187,NA,NA,NA,39134,NA,NA,NA,NA,NA,NA,NA
 1086,"Q108062107","Henco van Wyk","Henco","van Wyk",NA,2001-01-01,"Rustenburg",NA,NA,"South Africa",NA,"Centre",NA,NA,92,181,NA,"henco-van-wyk","11n_yr43f6",50458,"18384","Henco_van_Wyk","Henco_van_Wyk",NA,NA,NA,"http://dbpedia.org/resource/Henco_van_Wyk"
 1087,"Q108062147","Lunga Ncube","Lunga","Ncube",NA,2000-05-26,"Durban; South Africa",NA,NA,"South Africa",NA,"2nd Row",NA,NA,112,197,NA,NA,"11qg0v2gk7",NA,NA,"Lunga_Ncube",NA,NA,NA,NA,"http://dbpedia.org/resource/Lunga_Ncube"
-1088,"Q108083418","Sheham Siddik","Sheham","Siddik",NA,NA,NA,2021-08-13,NA,"Sri Lanka",NA,"Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+1088,"Q108083418","Sheham Siddik","Sheham","Siddik",NA,1963-01-01,NA,2021-08-13,NA,"Sri Lanka",NA,"Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 1089,"Q108096016","Carlos Muzzio","Carlos","Muzzio",NA,1984-08-21,"Corrientes",NA,NA,"Argentina",NA,"Prop",NA,NA,110,180,290929,"carlos-muzzio","11rwmkss4j",20790,"11753","Carlos_Muzzio","Carlos_Muzzio",NA,NA,NA,"http://dbpedia.org/resource/Carlos_Muzzio"
 1090,"Q1081019","Daisuke Ohata","Daisuke","Ōhata","Daisuke Ōhata; Ōhata だいすけ; 大畑 大介",1975-11-11,"Osaka",NA,NA,"Japan",NA,"Winger; Centre","1996",2011,85,175,12383,NA,NA,1780,NA,"Daisuke_Ohata","Daisuke_Ohata","Daisuke_%C5%8Chata","Daisuke_Ohata","%E5%A4%A7%E7%95%91%E5%A4%A7%E4%BB%8B",NA
 1091,"Q108109395","Clark Laidlaw","Clark","Laidlaw","クラーク・レイドロー",1977-01-01,"Scotland",NA,NA,"United Kingdom","Scotland","Scrum-Half",NA,NA,NA,NA,NA,NA,"11ny2d4s06",NA,NA,"Clark_Laidlaw",NA,NA,NA,"%E3%82%AF%E3%83%A9%E3%83%BC%E3%82%AF%E3%83%BB%E3%83%AC%E3%82%A4%E3%83%89%E3%83%AD%E3%83%BC","http://dbpedia.org/resource/Clark_Laidlaw"
@@ -1282,7 +1282,7 @@
 1285,"Q109453570","James McKendrick","James","McKendrick","James Grierson McKendrick",1864-08-08,"Carluke; Scotland",1938-08-16,"Edinburgh; Scotland","United Kingdom","Scotland","Forward",NA,NA,NA,NA,885,NA,"11s1b1b6m_",NA,NA,"James_McKendrick_(rugby_union,_born_1864)",NA,NA,NA,NA,"http://dbpedia.org/resource/James_McKendrick_(rugby_union)"
 1286,"Q109453800","Hirofumi Uchiyama","Hirofumi","Uchiyama","Uchiyama 浩文; 内山 浩文",1980-11-12,"Miyazaki Prefecture; Hyūga; Miyazaki",NA,NA,"Japan",NA,"Winger; Centre",NA,NA,89,186,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%86%85%E5%B1%B1%E6%B5%A9%E6%96%87",NA
 1287,"Q109461088","Maksim Shevtsov","Maksim","Shevtsov",NA,2001-03-09,NA,NA,NA,"Russia",NA,"Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-1288,"Q109462980","Jean Despiau","Jean","Despiau",NA,NA,NA,NA,NA,"France",NA,"3rd Row",NA,NA,NA,NA,NA,"jean-despiau",NA,51490,NA,NA,NA,NA,NA,NA,NA
+1288,"Q109462980","Jean Despiau","Jean","Despiau",NA,2001-10-23,NA,NA,NA,"France",NA,"3rd Row",NA,NA,NA,NA,NA,"jean-despiau",NA,51490,NA,NA,NA,NA,NA,NA,NA
 1289,"Q109464232","Cody Thomas","Cody","Thomas",NA,1996-03-01,"Durban",NA,NA,"South Africa","Portugal","Prop",NA,NA,NA,186,NA,"cody-thomas",NA,43411,NA,NA,"Cody_Thomas",NA,NA,NA,NA
 1290,"Q109478917","Marshall Reid","Marshall","Reid","Marshall Frederick Reid",1864-01-01,"Partick; Scotland",1925-01-01,"England; Epsom","United Kingdom","Scotland","Centre",NA,NA,NA,NA,645,NA,"11rhvszn2l",NA,NA,"Marshall_Reid_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Marshall_Reid_(rugby_union)"
 1291,"Q109483980","Anzelo Tuitavuki","Anzelo","Tuitavuki","Anzelo Thomas More Tuitavuki; アンジェロ・ツイタヴキ",1998-10-10,"Auckland",NA,NA,"New Zealand","Tonga","Winger",NA,NA,103,185,NA,"anzelo-tuitavuki","11pcrtjjlz",43538,"1638","Anzelo_Tuitavuki","Anzelo_Tuitavuki",NA,NA,"%E3%82%A2%E3%83%B3%E3%82%B8%E3%82%A7%E3%83%AD%E3%83%BB%E3%83%84%E3%82%A4%E3%82%BF%E3%83%B4%E3%82%AD","http://dbpedia.org/resource/Anzelo_Tuitavuki"
@@ -1405,7 +1405,7 @@
 1408,"Q110043927","Jack Tuck","Jack","Tuck","Jack Manson Tuck",1907-05-13,"Tikokino; New Zealand",1967-03-23,"Whangaroa; New Zealand","New Zealand",NA,"Utility Back",NA,NA,66,168,NA,NA,NA,NA,NA,"Jack_Tuck",NA,NA,NA,NA,"http://dbpedia.org/resource/Jack_Tuck"
 1409,"Q110051149","Don McIntosh","Don","McIntosh","Donald Neil McIntosh",1931-04-01,"Lower Hutt; New Zealand",2025-07-17,"Levin; New Zealand","New Zealand",NA,"Flanker",NA,NA,94,188,NA,NA,NA,NA,NA,"Don_McIntosh",NA,NA,NA,NA,"http://dbpedia.org/resource/Don_McIntosh"
 1410,"Q110059399","Ethan Lloyd","Ethan","Lloyd",NA,2001-01-01,"Wales",NA,NA,"United Kingdom","Wales","Scrum-Half",NA,NA,81,178,NA,NA,NA,NA,NA,"Ethan_Lloyd",NA,NA,NA,NA,"http://dbpedia.org/resource/Ethan_Lloyd"
-1411,"Q110059427","Rhys Anstey","Rhys","Anstey",NA,NA,"Wales",NA,NA,"United Kingdom","Wales","2nd Row",NA,NA,NA,NA,NA,NA,"11rkfdwl2j",NA,NA,"Rhys_Anstey",NA,NA,NA,NA,"http://dbpedia.org/resource/Rhys_Anstey"
+1411,"Q110059427","Rhys Anstey","Rhys","Anstey",NA,2001-01-01,"Wales",NA,NA,"United Kingdom","Wales","2nd Row",NA,NA,NA,NA,NA,NA,"11rkfdwl2j",NA,NA,"Rhys_Anstey",NA,NA,NA,NA,"http://dbpedia.org/resource/Rhys_Anstey"
 1412,"Q110059554","Ryan Wilkins","Ryan","Wilkins",NA,NA,"Wales",NA,NA,"United Kingdom","Wales","Centre; Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Ryan_Wilkins",NA,NA,NA,NA,"http://dbpedia.org/resource/Ryan_Wilkins"
 1413,"Q110059574","Jacob Beetham","Jacob","Beetham",NA,2001-04-18,"Wales",NA,NA,"United Kingdom","Wales","Fly-Half; Fullback",NA,NA,87,185,NA,NA,"11rkfdw9f4",NA,NA,"Jacob_Beetham",NA,NA,NA,NA,"http://dbpedia.org/resource/Jacob_Beetham"
 1414,"Q110059664","Theo Cabango","Theo","Cabango",NA,2001-11-29,"Cardiff; Wales",NA,NA,"United Kingdom","Wales","Winger",NA,NA,85,185,NA,NA,"11sg_g9fk0",NA,NA,"Theo_Cabango",NA,NA,NA,NA,"http://dbpedia.org/resource/Theo_Cabango"
@@ -1511,7 +1511,7 @@
 1514,"Q110623802","Canan Moodie","Canan","Moodie","カナン・ムーディ",2002-11-05,"Paarl",NA,NA,"South Africa",NA,"Winger; Fullback",NA,NA,89,190,NA,"canan-moodie","11nn5145hp",52131,NA,"Canan_Moodie","Canan_Moodie",NA,NA,"%E3%82%AB%E3%83%8A%E3%83%B3%E3%83%BB%E3%83%A0%E3%83%BC%E3%83%87%E3%82%A3","http://dbpedia.org/resource/Canan_Moodie"
 1515,"Q110623803","Sebastian Lombard","Sebastian","Lombard",NA,2002-10-07,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,NA,"seb-lombard",NA,52138,NA,NA,NA,NA,NA,NA,"http://dbpedia.org/resource/Sebastian_Lombard"
 1516,"Q110623804","Jacques Goosen","Jacques","Goosen",NA,2001-01-01,"East London; South Africa",NA,NA,"South Africa",NA,"Hooker",NA,NA,96,181,NA,NA,"11sn02dl8y",NA,NA,"Jacques_Goosen",NA,NA,NA,NA,"http://dbpedia.org/resource/Jacques_Goosen"
-1517,"Q110623805","Corné Weilbach","Corné","Weilbach",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,NA,NA,"11pvcwzxdb",NA,NA,"Corn%C3%A9_Weilbach",NA,NA,NA,NA,"http://dbpedia.org/resource/Corné_Weilbach"
+1517,"Q110623805","Corné Weilbach","Corné","Weilbach",NA,2002-02-18,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,NA,NA,"11pvcwzxdb",NA,NA,"Corn%C3%A9_Weilbach",NA,NA,NA,NA,"http://dbpedia.org/resource/Corné_Weilbach"
 1518,"Q110623807","Jordan Chait","Jordan","Chait",NA,1997-01-26,"Cape Town; South Africa",NA,NA,"South Africa",NA,"Fly-Half",NA,NA,87,183,NA,NA,"11f6kx0txs",NA,NA,"Jordan_Chait",NA,NA,NA,NA,"http://dbpedia.org/resource/Jordan_Chait"
 1519,"Q110627523","Will Wand","William; George","Wand","William George Wand",2001-12-31,"Spalding",NA,NA,"United Kingdom","England","Centre",NA,NA,94,188,NA,"will-wand","11rnc40zq8",54223,NA,"Will_Wand",NA,NA,NA,NA,"http://dbpedia.org/resource/Will_Wand"
 1520,"Q110634846","Kevin Flynn","Kevin","Flynn","Michael Kevin Flynn",1939-03-20,"Dublin",2022-01-16,"Dublin","Ireland",NA,"Centre",NA,NA,NA,NA,NA,NA,"11rncj7n05",NA,NA,"Kevin_Flynn_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Kevin_Flynn_(rugby_union)"
@@ -1536,7 +1536,7 @@
 1539,"Q110734560","Matteo Meggiato","Matteo","Meggiato",NA,2001-01-01,"Italy",NA,NA,"Italy",NA,"Flanker",NA,NA,96,191,NA,NA,"11rp7bj318",47057,NA,"Matteo_Meggiato",NA,NA,NA,NA,"http://dbpedia.org/resource/Matteo_Meggiato"
 1540,"Q110738114","Cathal Forde","Cathal","Forde",NA,2001-01-01,"Ireland",NA,NA,"Ireland",NA,"Centre; Fly-Half",NA,NA,95,188,NA,NA,"11snv1qjh9",49749,NA,"Cathal_Forde",NA,NA,NA,NA,"http://dbpedia.org/resource/Cathal_Forde"
 1541,"Q110748385","Efan Daniel","Efan","Daniel",NA,2002-01-01,"Wales",NA,NA,"United Kingdom","Wales","Hooker",NA,NA,97,185,NA,NA,"11rp9pdt4l",49798,NA,"Efan_Daniel",NA,NA,NA,NA,"http://dbpedia.org/resource/Efan_Daniel"
-1542,"Q110761536","Will Hickey","Will","Hickey",NA,NA,"Ireland",NA,NA,"Ireland",NA,"Flanker",NA,NA,103,191,NA,NA,NA,50942,NA,"Will_Hickey",NA,NA,NA,NA,"http://dbpedia.org/resource/Will_Hickey"
+1542,"Q110761536","Will Hickey","Will","Hickey",NA,2001-10-31,"Ireland",NA,NA,"Ireland",NA,"Flanker",NA,NA,103,191,NA,NA,NA,50942,NA,"Will_Hickey",NA,NA,NA,NA,"http://dbpedia.org/resource/Will_Hickey"
 1543,"Q110761541","Ruan Venter","Ruan","Venter",NA,2002-11-29,"Western Cape; South Africa",NA,NA,"South Africa",NA,"2nd Row; Flanker",NA,NA,118,198,NA,"ruan-venter","11pv6hzzv0",52114,"17024","Ruan_Venter_(rugby_union,_born_2002)","Ruan_Venter",NA,NA,NA,"http://dbpedia.org/resource/Ruan_Venter_(rugby_union,_born_2002)"
 1544,"Q110773682","Eugene Ruiz","Emmanuel; Eugène","Ruiz","Eugène Ruiz",1939-07-13,"Géronce",2008-05-02,"Pau","France",NA,"Prop",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Eug%C3%A8ne_Ruiz",NA,NA,NA,NA
 1545,"Q110774548","Robert Toyos","Robert","Toyos",NA,1937-10-13,"Ciboure",2014-01-24,"Pau","France",NA,"Fullback; Fly-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Robert_Toyos",NA,NA,NA,NA
@@ -1578,7 +1578,7 @@
 1581,"Q110962181","Isoa Nasilasila","Isoa","Nasilasila","イソア・ナシラシラ",1999-09-13,"Campbelltown",NA,NA,"Fiji",NA,"2nd Row; Flanker",NA,NA,117,197,NA,"isoa-nasilasila","11sq32sfxr",46799,"5442","Isoa_Nasilasila","Isoa_Nasilasila",NA,NA,"%E3%82%A4%E3%82%BD%E3%82%A2%E3%83%BB%E3%83%8A%E3%82%B7%E3%83%A9%E3%82%B7%E3%83%A9","http://dbpedia.org/resource/Isoa_Nasilasila"
 1582,"Q110962460","Selestino Ravutaumada","Selestino","Ravutaumada","セレスティノ・ラヴタウマンダ",2000-01-17,"Taveuni",NA,NA,"Fiji",NA,"Winger; Fullback",NA,NA,93,183,NA,"selestino-ravutaumada","11rqhyd5ww",52438,"5455","Selestino_Ravutaumada","Selestino_Ravutaumada",NA,NA,"%E3%82%BB%E3%83%AC%E3%82%B9%E3%83%86%E3%82%A3%E3%83%8E%E3%83%BB%E3%83%A9%E3%83%B4%E3%82%BF%E3%82%A6%E3%83%9E%E3%83%B3%E3%83%80","http://dbpedia.org/resource/Selestino_Ravutaumada"
 1583,"Q110962463","Kalaveti Ravouvou","Kalaveti","Ravouvou","カラヴェティ・ラヴォウヴォウ",1998-06-06,"Sigatoka",NA,NA,"Fiji",NA,"Centre",NA,NA,94,186,NA,"kalaveti-ravouvou","11pzh1577q",48939,"5454","Kalaveti_Ravouvou","Kalaveti_Ravouvou",NA,NA,"%E3%82%AB%E3%83%A9%E3%83%B4%E3%82%A7%E3%83%86%E3%82%A3%E3%83%BB%E3%83%A9%E3%83%B4%E3%82%A9%E3%82%A6%E3%83%B4%E3%82%A9%E3%82%A6","http://dbpedia.org/resource/Kalaveti_Ravouvou"
-1584,"Q110962492","Gustav du Rand","Gustav","du Rand",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Hooker",NA,NA,NA,NA,NA,NA,"11pzh1hw2q",NA,NA,"Gustav_du_Rand",NA,NA,NA,NA,"http://dbpedia.org/resource/Gustav_du_Rand"
+1584,"Q110962492","Gustav du Rand","Gustav","du Rand",NA,1999-04-13,"South Africa",NA,NA,"South Africa",NA,"Hooker",NA,NA,NA,NA,NA,NA,"11pzh1hw2q",NA,NA,"Gustav_du_Rand",NA,NA,NA,NA,"http://dbpedia.org/resource/Gustav_du_Rand"
 1585,"Q110965958","Tamati Ioane","Tamati","Ioane","タマティ・イオアネ",1997-04-26,"Australia",NA,NA,"Australia",NA,"Number 8; Flanker",NA,NA,119,184,NA,NA,"11pzhk3zhk",52439,NA,"Tamati_Ioane",NA,NA,NA,"%E3%82%BF%E3%83%9E%E3%83%86%E3%82%A3%E3%83%BB%E3%82%A4%E3%82%AA%E3%82%A2%E3%83%8D","http://dbpedia.org/resource/Tamati_Ioane"
 1586,"Q110966218","Anele Lungisa","Anele","Lungisa",NA,1992-01-01,"South Africa",NA,NA,"South Africa",NA,"2nd Row; Flanker",NA,NA,98,196,NA,NA,"11sq3k5nqk",NA,NA,"Anele_Lungisa",NA,NA,NA,NA,"http://dbpedia.org/resource/Anele_Lungisa"
 1587,"Q110966323","Dmitry Parkhomenko","Dmitry","Parkhomenko",NA,1995-11-02,"Staronizhestebliyevskaya",NA,NA,"Russia",NA,"Hooker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -1612,7 +1612,7 @@
 1615,"Q111095568","Jackson Pugh","Jackson","Pugh",NA,2000-02-03,"Perth",NA,NA,"Australia",NA,"Flanker",NA,NA,110,197,NA,NA,"11p_4b25bw",48670,NA,"Jackson_Pugh",NA,NA,NA,NA,"http://dbpedia.org/resource/Jackson_Pugh"
 1616,"Q111095570","Jona Mataiciwa","Jona","Mataiciwa",NA,1999-04-11,"Beqa; Fiji",NA,NA,"Fiji",NA,"Winger",NA,NA,90,184,NA,NA,"11p_49y3g2",NA,NA,"Jona_Mataiciwa",NA,NA,NA,NA,"http://dbpedia.org/resource/Jona_Mataiciwa"
 1617,"Q111095615","Corne Rahl","Corne","Rahl",NA,2002-05-27,"South Africa",NA,NA,"South Africa",NA,"2nd Row",NA,NA,122,203,NA,"corne-rahl","11p_4b4hs1",52132,NA,"Corne_Rahl",NA,NA,NA,NA,"http://dbpedia.org/resource/Corne_Rahl"
-1618,"Q111095686","Bradley Davids","Bradley","Davids",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,NA,NA,"bradley-davids","11sqs82wnl",52598,NA,"Bradley_Davids",NA,NA,NA,NA,"http://dbpedia.org/resource/Bradley_Davids"
+1618,"Q111095686","Bradley Davids","Bradley","Davids",NA,2002-07-30,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,NA,NA,"bradley-davids","11sqs82wnl",52598,NA,"Bradley_Davids",NA,NA,NA,NA,"http://dbpedia.org/resource/Bradley_Davids"
 1619,"Q111112034","Asiperli Moala","Asiperli","Moala","アシペリ・モアラ",1998-06-28,"Tonga",NA,NA,"Japan",NA,"Number 8; 2nd Row",NA,NA,115,185,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%A2%E3%82%B7%E3%83%9A%E3%83%AA%E3%83%BB%E3%83%A2%E3%82%A2%E3%83%A9",NA
 1620,"Q111112068","Quintom Mahina","Quintom","Mahina","クイントン・マヒナ",1999-04-28,"Australia",NA,NA,"Australia",NA,"Fly-Half; Winger; Centre",NA,NA,90,175,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AF%E3%82%A4%E3%83%B3%E3%83%88%E3%83%B3%E3%83%BB%E3%83%9E%E3%83%92%E3%83%8A",NA
 1621,"Q111112072","Christain Laui","Christain","Laui","クリスチャン・ラウイ",1998-09-08,"Tonga",NA,NA,"Tonga",NA,"Centre",NA,NA,105,180,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%81%E3%83%A3%E3%83%B3%E3%83%BB%E3%83%A9%E3%82%A6%E3%82%A4",NA
@@ -1685,7 +1685,7 @@
 1688,"Q111234849","Jean-Claude Castagnet","Jean-Claude","Castagnet",NA,1955-03-06,"Pau",NA,NA,"France",NA,"Centre",NA,NA,NA,177,9165,NA,NA,NA,NA,NA,"Jean-Claude_Castagnet",NA,NA,NA,NA
 1689,"Q111249861","Paul Lamouret","Paul","Lamouret",NA,1895-01-01,"Biarritz",1930-01-11,"Grenoble","France",NA,"Scrum-Half",NA,NA,NA,164,NA,NA,NA,NA,NA,NA,"Paul_Lamouret",NA,NA,NA,NA
 1690,"Q111262091","Jean Mons","Joseph; Paul; Jean","Mons",NA,1931-11-19,"Luc-sur-Orbieu",2015-08-26,"Carmaux","France",NA,"Hooker",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jean_Mons_(rugby)",NA,NA,NA,NA
-1691,"Q111267637","Prince Nkabinde","Prince","Nkabinde",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Winger",NA,NA,102,180,NA,NA,"11pf8c92t3",NA,NA,"Prince_Nkabinde",NA,NA,NA,NA,"http://dbpedia.org/resource/Prince_Nkabinde"
+1691,"Q111267637","Prince Nkabinde","Prince","Nkabinde",NA,1999-12-11,"South Africa",NA,NA,"South Africa",NA,"Winger",NA,NA,102,180,NA,NA,"11pf8c92t3",NA,NA,"Prince_Nkabinde",NA,NA,NA,NA,"http://dbpedia.org/resource/Prince_Nkabinde"
 1692,"Q111267671","Jacque-Louis du Toit","Jacque-Louis","du Toit",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Hooker",NA,NA,NA,NA,NA,NA,"11q3smw82r",NA,NA,"Jacque-Louis_du_Toit",NA,NA,NA,NA,"http://dbpedia.org/resource/Jacque-Louis_du_Toit"
 1693,"Q111268201","Braam Reyneke","Braam","Reyneke",NA,2002-06-14,"South Africa",2025-05-29,NA,"South Africa",NA,"Prop",NA,NA,117,183,NA,NA,"11swdgr7z9",NA,NA,"Braam_Reyneke",NA,NA,NA,NA,"http://dbpedia.org/resource/Braam_Reyneke"
 1694,"Q111268211","Lukhanyo Vokozela","Lukhanyo","Vokozela",NA,2002-02-05,"South Africa",NA,NA,"South Africa",NA,"Hooker",NA,NA,108,175,NA,NA,"11swdh67zt",NA,NA,"Lukhanyo_Vokozela",NA,NA,NA,NA,"http://dbpedia.org/resource/Lukhanyo_Vokozela"
@@ -1717,7 +1717,7 @@
 1720,"Q111359451","Cebo Dlamini","Cebo","Dlamini","Cebolenkosi Dlamini",2001-11-28,"South Africa",NA,NA,"South Africa",NA,"Prop",NA,NA,115,176,NA,NA,"11q41kr8t8",NA,NA,"Cebo_Dlamini",NA,NA,NA,NA,"http://dbpedia.org/resource/Cebo_Dlamini"
 1721,"Q111360875","Henri Espelette","Henri","Espelette",NA,1890-07-22,"Urrugne",1918-09-06,"Jumencourt","France",NA,"Fly-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Henri_Espelette",NA,NA,NA,NA
 1722,"Q111363677","Jack Tarrant","Jack","Tarrant","ジャック・タラント",1980-02-04,"New Zealand",NA,NA,"New Zealand",NA,"Centre",NA,NA,108,197,95930,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%BF%E3%83%A9%E3%83%B3%E3%83%88",NA
-1723,"Q111366331","Daniel Maiava","Daniel","Maiava",NA,NA,"Australia",NA,NA,"Australia",NA,"2nd Row; Flanker",NA,NA,115,195,NA,NA,"11q41w9kgv",NA,NA,"Daniel_Maiava",NA,NA,NA,NA,"http://dbpedia.org/resource/Daniel_Maiava"
+1723,"Q111366331","Daniel Maiava","Daniel","Maiava",NA,2003-05-26,"Australia",NA,NA,"Australia",NA,"2nd Row; Flanker",NA,NA,115,195,NA,NA,"11q41w9kgv",NA,NA,"Daniel_Maiava",NA,NA,NA,NA,"http://dbpedia.org/resource/Daniel_Maiava"
 1724,"Q111366343","Manu Paea","Manu","Paea","マヌ・パエア",2001-09-17,"New Zealand",NA,NA,"Tonga",NA,"Scrum-Half",NA,NA,92,175,NA,"manu-paea","11swppzgg9",52710,"5798","Manu_Paea","Manu_Paea",NA,NA,"%E3%83%9E%E3%83%8C%E3%83%BB%E3%83%91%E3%82%A8%E3%82%A2","http://dbpedia.org/resource/Manu_Paea"
 1725,"Q111366488","Charl Snyman","Charl","Snyman",NA,1967-01-01,NA,NA,NA,"South Africa",NA,"Centre",NA,NA,NA,182,NA,NA,NA,NA,NA,NA,"Charl_Snyman",NA,NA,NA,NA
 1726,"Q111366495","Sebastián Rondinelli","Sebastián","Rondinelli",NA,1975-01-01,"La Plata",NA,NA,"Argentina",NA,"Prop",NA,NA,NA,180,14955,NA,NA,NA,NA,NA,"Sebasti%C3%A1n_Rondinelli",NA,NA,NA,NA
@@ -1819,7 +1819,7 @@
 1822,"Q111904070","Émile Bosc","Joseph; Louis; Émile","Bosc",NA,1912-10-06,"Magalas",2002-04-23,"Béziers","France",NA,"Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%C3%89mile_Bosc",NA,NA,NA,NA
 1823,"Q111904619","Riley Higgins","Riley","Higgins",NA,2002-09-10,"Palmerston North; New Zealand",NA,NA,"New Zealand",NA,"Centre",NA,NA,99,187,NA,NA,"11sz26tglj",NA,NA,"Riley_Higgins",NA,NA,NA,NA,"http://dbpedia.org/resource/Riley_Higgins"
 1824,"Q111914522","Lewis Morgan","Lewis","Morgan",NA,2003-08-01,"Carmarthen; Wales",NA,NA,"United Kingdom","Wales","Hooker",NA,NA,108,178,NA,NA,"11rv3lzd3r",NA,NA,"Lewis_Morgan_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Lewis_Morgan_(rugby_union)"
-1825,"Q111914597","Bobby Alexander","Bobby","Alexander","Dylan Alexander",NA,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,"11sx0gnddp",NA,NA,"Bobby_Alexander_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Bobby_Alexander_(rugby_union)"
+1825,"Q111914597","Bobby Alexander","Bobby","Alexander","Dylan Alexander",2001-11-02,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,"11sx0gnddp",NA,NA,"Bobby_Alexander_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Bobby_Alexander_(rugby_union)"
 1826,"Q111914623","George Young","George","Young",NA,2001-10-10,"Wales",NA,NA,"United Kingdom","Wales","Flanker",NA,NA,85,182,NA,NA,NA,NA,NA,"George_Young_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/George_Young_(rugby_union)"
 1827,"Q111914810","David Richards","David","Richards",NA,1999-07-30,"Cwmbran; Wales",NA,NA,"United Kingdom","Wales","Fullback",NA,NA,93,182,NA,NA,"11rvhjlt_1",NA,NA,"David_Richards_(rugby_union,_born_1999)",NA,NA,NA,NA,"http://dbpedia.org/resource/David_Richards_(rugby_union,_born_1999)"
 1828,"Q111914955","Ethan Fisher","Ethan","Fisher","Ethan Derek Fisher",2001-01-29,"Johannesburg; South Africa",NA,NA,"South Africa",NA,"Centre",NA,NA,95,184,NA,NA,NA,NA,NA,"Ethan_Fisher",NA,NA,NA,NA,"http://dbpedia.org/resource/Ethan_Fisher"
@@ -1858,7 +1858,7 @@
 1861,"Q112122402","Maurice Dupey","Maurice","Dupey",NA,1946-10-29,"Bourisp",2022-05-21,"Auch","France",NA,"Flanker",NA,NA,NA,183,NA,NA,NA,NA,NA,NA,"Maurice_Dupey",NA,NA,NA,NA
 1862,"Q112123325","Antoine Puyuelo","Antoine","Puyuelo",NA,1908-12-27,"Bordeaux",1976-01-09,"Cullera","France",NA,"2nd Row",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Antoine_Puyuelo",NA,NA,NA,NA
 1863,"Q112135581","Shamus Hurley-Langton","Shamus","Hurley-Langton",NA,2000-04-22,"Taranaki Region",NA,NA,"New Zealand",NA,"Flanker",NA,NA,108,185,NA,"shamus-hurley-langton","11s2207s9r",37553,"1723","Shamus_Hurley-Langton","Shamus_Hurley-Langton",NA,NA,NA,"http://dbpedia.org/resource/Shamus_Hurley-Langton"
-1864,"Q112147735","Tharquinn Manuel","Tharquinn","Manuel",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Winger",NA,NA,85,174,NA,NA,"11s2337f0v",NA,NA,"Tharquinn_Manuel",NA,NA,NA,NA,"http://dbpedia.org/resource/Tharquinn_Manuel"
+1864,"Q112147735","Tharquinn Manuel","Tharquinn","Manuel",NA,2000-01-01,"South Africa",NA,NA,"South Africa",NA,"Winger",NA,NA,85,174,NA,NA,"11s2337f0v",NA,NA,"Tharquinn_Manuel",NA,NA,NA,NA,"http://dbpedia.org/resource/Tharquinn_Manuel"
 1865,"Q112148147","Andre Fouché","Andre","Fouché",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Flanker",NA,NA,NA,NA,NA,NA,"11t1sftzgy",NA,NA,"Andre_Fouch%C3%A9",NA,NA,NA,NA,"http://dbpedia.org/resource/Andre_Fouché"
 1866,"Q11214900","Norman Bennett","Norman","Bennett","Norman Osborn Bennett",1922-09-21,"Putney",2005-07-07,"Dinckley","United Kingdom","England","Centre",NA,NA,NA,NA,4899,NA,NA,NA,NA,"Norman_Bennett",NA,NA,NA,NA,NA
 1867,"Q112156861","Shingirai Katsvere","Shingirai","Katsvere",NA,1997-01-01,"Zimbabwe",NA,NA,"Zimbabwe",NA,"Centre; Fullback; Winger",NA,NA,82,179,NA,NA,"11s26hdv3p",37437,NA,"Shingirai_Katsvere",NA,NA,NA,NA,"http://dbpedia.org/resource/Shingirai_Katsvere"
@@ -1921,7 +1921,7 @@
 1924,"Q112239614","Keitarō Hitora","Keitarō","Hitora","人羅 奎太郎",1998-12-11,"Hyōgo Prefecture; Japan",NA,NA,"Japan",NA,"Scrum-Half",NA,NA,70,164,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%BA%BA%E7%BE%85%E5%A5%8E%E5%A4%AA%E9%83%8E",NA
 1925,"Q112239622","Ika Motulalo Taku","Ika","Motulalo; Taku","イカ・モツラロ・タカウ",1995-01-09,"Tonga",NA,NA,"Tonga",NA,"2nd Row",NA,NA,113,189,NA,NA,"11t2bb0ny7",60284,NA,NA,NA,NA,NA,"%E3%82%A4%E3%82%AB%E3%83%BB%E3%83%A2%E3%83%84%E3%83%A9%E3%83%AD%E3%83%BB%E3%82%BF%E3%82%AB%E3%82%A6",NA
 1926,"Q112239914","Yuichi Fujishima","Yuichi","Fujishima",NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E8%97%A4%E5%B3%B6%E5%8B%87%E4%B8%80",NA
-1927,"Q112243722","Gerado Jaars","Gerado","Jaars",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,"11t2c4qhb3",NA,NA,"Gerado_Jaars",NA,NA,NA,NA,"http://dbpedia.org/resource/Gerado_Jaars"
+1927,"Q112243722","Gerado Jaars","Gerado","Jaars",NA,1999-01-01,"South Africa",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,"11t2c4qhb3",NA,NA,"Gerado_Jaars",NA,NA,NA,NA,"http://dbpedia.org/resource/Gerado_Jaars"
 1928,"Q112252119","Ben Murphy","Ben","Murphy",NA,2001-04-23,"Bray",NA,NA,"Ireland",NA,"Scrum-Half",NA,NA,75,178,NA,NA,"11s_wxtqnw",47023,NA,"Ben_Murphy_(rugby_union,_born_2001)",NA,NA,NA,NA,"http://dbpedia.org/resource/Ben_Murphy_(rugby_union,_born_2001)"
 1929,"Q112259065","Marcel Teychenné","Marcel","Teychenné",NA,1914-04-03,"Toulouse",1985-05-03,"Toulouse","France",NA,"Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Marcel_Teychenn%C3%A9",NA,NA,NA,NA
 1930,"Q112265345","Josiah Maraku","Josiah","Maraku",NA,2000-03-30,"New Zealand",NA,NA,"New Zealand",NA,"Centre",NA,NA,96,180,NA,"josiah-maraku",NA,45487,"1694",NA,"Josiah_Maraku",NA,"Josiah_Maraku",NA,NA
@@ -1938,7 +1938,7 @@
 1941,"Q112600299","Valynce Te Whare","Valynce","Te Whare","Valynce-Mikaeri Crosby-Te Whare; Valynce Mikaeri Crosby Te Whare; ヴァレンス・テファレ",2000-09-15,"Waikato Region",NA,NA,"New Zealand",NA,"Winger; Centre; 2nd Row",NA,NA,108,182,NA,"valynce-te-whare-crosby","11t2_4qnjk",45716,"291","Valynce_Te_Whare",NA,NA,NA,"%E3%83%B4%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E3%83%BB%E3%83%86%E3%83%95%E3%82%A1%E3%83%AC","http://dbpedia.org/resource/Valynce_Te_Whare"
 1942,"Q112605446","Guillaume Bouche","Guillaume","Bouche",NA,2000-01-18,"Pessac",NA,NA,"France",NA,"Winger",NA,NA,NA,182,NA,"guillaume-bouche",NA,44612,NA,NA,"Guillaume_Bouche",NA,NA,NA,NA
 1943,"Q112618963","Tiff Eden","Tiff","Eden",NA,1994-10-16,"Cheltenham; England",NA,NA,"United Kingdom","England","Fly-Half",NA,NA,92,183,NA,NA,"11nnv0rrhm",33371,NA,"Tiff_Eden",NA,NA,NA,NA,"http://dbpedia.org/resource/Tiff_Eden"
-1944,"Q112623869","Stephan Smit","Stephan","Smit",NA,NA,"South Africa",NA,NA,"South Africa",NA,"Flanker",NA,NA,87,187,NA,NA,NA,NA,NA,"Stephan_Smit",NA,NA,NA,NA,"http://dbpedia.org/resource/Stephan_Smit"
+1944,"Q112623869","Stephan Smit","Stephan","Smit",NA,1989-01-01,"South Africa",NA,NA,"South Africa",NA,"Flanker",NA,NA,87,187,NA,NA,NA,NA,NA,"Stephan_Smit",NA,NA,NA,NA,"http://dbpedia.org/resource/Stephan_Smit"
 1945,"Q112623871","Willie Potgieter","Willie","Potgieter","ヴィリー・ポトヒエッター",2002-01-05,"Pretoria",NA,NA,"South Africa",NA,"2nd Row; Flanker; Number 8",NA,NA,105,190,NA,NA,"11t3fwq0q9",NA,NA,"Willie_Potgieter",NA,NA,NA,"%E3%83%B4%E3%82%A3%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%88%E3%83%92%E3%82%A8%E3%83%83%E3%82%BF%E3%83%BC","http://dbpedia.org/resource/Willie_Potgieter"
 1946,"Q112648455","Jamie Jack","Jamie","Jack",NA,1996-09-08,"Coventry; England",NA,NA,"United Kingdom","England","Prop",NA,NA,115,178,NA,NA,"11fm7lnt13",41278,NA,"Jamie_Jack",NA,NA,NA,NA,"http://dbpedia.org/resource/Jamie_Jack"
 1947,"Q112660228","Louis Le Brun","Louis","Le Brun",NA,2002-02-28,"France",NA,NA,"France",NA,"Centre; Fullback",NA,NA,96,190,306910,"louis-le-brun","11m4302whb",48433,"18303","Louis_Le_Brun","Louis_Le_Brun",NA,"Louis_Le_Brun",NA,"http://dbpedia.org/resource/Louis_Le_Brun"
@@ -1947,7 +1947,7 @@
 1950,"Q112665740","Rémy Baget","Rémy","Baget",NA,1997-07-27,"Albi",NA,NA,"France",NA,"Winger; Fullback",NA,NA,85,182,NA,"remy-baget","11t39525_y",43426,"18311","R%C3%A9my_Baget","R%C3%A9my_Baget",NA,"R%C3%A9my_Baget",NA,"http://dbpedia.org/resource/Rémy_Baget"
 1951,"Q112665744","Thomas Laclayat","Thomas","Laclayat",NA,1997-10-02,"Pont-de-Vaux",NA,NA,"France",NA,"Prop",NA,NA,125,176,NA,"thomas-laclayat","11rgg8w897",40455,"13032","Thomas_Laclayat","Thomas_Laclayat",NA,NA,NA,"http://dbpedia.org/resource/Thomas_Laclayat"
 1952,"Q112667540","Lado Chachanidze","Lado","Chachanidze","Vladimeri Chachanidze; ラド・チャチャニドゼ",2000-05-14,"Georgia",NA,NA,"Georgia",NA,"2nd Row",NA,NA,114,200,NA,NA,"11t3r0qz5y",NA,NA,"Lado_Chachanidze",NA,NA,NA,"%E3%83%A9%E3%83%89%E3%83%BB%E3%83%81%E3%83%A3%E3%83%81%E3%83%A3%E3%83%8B%E3%83%89%E3%82%BC","http://dbpedia.org/resource/Lado_Chachanidze"
-1953,"Q112701413","Jonathan Roche","Jonathan","Roche",NA,NA,NA,NA,NA,"South Africa",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jonathan_Roche",NA,NA,NA,NA,"http://dbpedia.org/resource/Jonathan_Roche"
+1953,"Q112701413","Jonathan Roche","Jonathan","Roche",NA,2003-01-01,NA,NA,NA,"South Africa",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jonathan_Roche",NA,NA,NA,NA,"http://dbpedia.org/resource/Jonathan_Roche"
 1954,"Q112706042","Phil Cokanasiga","Phil","Cokanasiga",NA,2001-07-31,"London; England",NA,NA,"United Kingdom","England","Centre",NA,NA,95,183,NA,NA,"11n885t1hw",NA,NA,"Phil_Cokanasiga",NA,NA,NA,NA,"http://dbpedia.org/resource/Phil_Cokanasiga"
 1955,"Q112714305","Cleopas Kundiona","Cleopas","Kundiona",NA,1998-12-15,NA,NA,NA,"Zimbabwe",NA,"Prop",NA,NA,NA,183,NA,"cleopas-kundiona",NA,21689,NA,NA,"Cleopas_Kundiona",NA,NA,NA,NA
 1956,"Q112727244","Manfredi Albanese","Manfredi","Albanese","Manfredi Albanese Ginammi",2001-01-01,"Roma",NA,NA,"Italy",NA,"Scrum-Half",NA,NA,83,174,36689,NA,"11s3wy4tv6",44283,NA,"Manfredi_Albanese",NA,"Manfredi_Albanese",NA,NA,"http://dbpedia.org/resource/Manfredi_Albanese"
@@ -2300,7 +2300,7 @@
 2307,"Q115258515","Jean-Claude Mignaçabal","Jean-Claude","Mignaçabal",NA,1944-03-06,"Mauléon-Licharre",2016-08-23,"Romans-sur-Isère","France",NA,"Scrum-Half",NA,NA,NA,184,NA,NA,NA,NA,NA,NA,"Jean-Claude_Migna%C3%A7abal",NA,NA,NA,NA
 2308,"Q11526695","Masahide Higashiyama","Masahide","Higashiyama","東山勝英",1958-01-01,NA,2007-12-01,NA,"Japan",NA,"Flanker; Number 8",NA,NA,NA,NA,NA,NA,"121v8jbd",NA,NA,NA,NA,NA,NA,"%E6%9D%B1%E5%B1%B1%E5%8B%9D%E8%8B%B1",NA
 2309,"Q11528195","Kōzō Higashi","Kōzō","Higashi","東考三",1969-08-04,NA,NA,NA,"Japan",NA,"Prop",NA,NA,NA,NA,NA,NA,"123587t9",NA,NA,NA,NA,NA,NA,"%E6%9D%B1%E8%80%83%E4%B8%89",NA
-2310,"Q115301201","Tony McWhirter","Tony","McWhirter",NA,NA,NA,NA,NA,"Ireland",NA,"2nd Row; Number 8",NA,NA,NA,NA,NA,NA,"11fhsn33yt",NA,NA,"Tony_McWhirter",NA,NA,NA,NA,"http://dbpedia.org/resource/Tony_McWhirter"
+2310,"Q115301201","Tony McWhirter","Tony","McWhirter",NA,1974-01-01,NA,NA,NA,"Ireland",NA,"2nd Row; Number 8",NA,NA,NA,NA,NA,NA,"11fhsn33yt",NA,NA,"Tony_McWhirter",NA,NA,NA,NA,"http://dbpedia.org/resource/Tony_McWhirter"
 2311,"Q11531935","Manabu Matsuse","Manabu","Matsuse","松瀬学",1960-01-01,"Nagasaki Prefecture; Japan",NA,NA,"Japan",NA,"Number 8",NA,NA,NA,NA,NA,NA,"11h1tdyv6",NA,NA,NA,NA,NA,NA,"%E6%9D%BE%E7%80%AC%E5%AD%A6",NA
 2312,"Q11532009","Tsutomu Matsuda","Tsutomu","Matsuda","松田 努",1970-04-30,"Saitama Prefecture; Japan",NA,NA,"Japan",NA,"Winger",NA,NA,90,180,NA,NA,"1224nk7p",NA,NA,"Tsutomu_Matsuda",NA,NA,NA,"%E6%9D%BE%E7%94%B0%E5%8A%AA","http://dbpedia.org/resource/Tsutomu_Matsuda_(rugby_union)"
 2313,"Q115327559","Felix Kalapu","Felix","Kalapu","Felix Samuel Kalapu",1999-09-27,"Auckland; New Zealand",NA,NA,"New Zealand",NA,"2nd Row; Flanker",NA,NA,111,194,NA,NA,"11tkbn9567",50362,NA,"Felix_Kalapu",NA,NA,NA,NA,"http://dbpedia.org/resource/Felix_Kalapu"
@@ -2313,7 +2313,7 @@
 2320,"Q115411018","Nicolò Teneggi","Nicolò","Teneggi",NA,2002-11-07,"Sassuolo; Italy",NA,NA,"Italy",NA,"Fly-Half",NA,NA,91,179,NA,"nicolo-teneggi","11t1g88gkw",49792,NA,"Nicol%C3%B2_Teneggi",NA,NA,NA,NA,"http://dbpedia.org/resource/Nicolò_Teneggi"
 2321,"Q1154165","Santiago Mesós","Santiago","Mesós","Santiago Estebán Mesón; Santiago Mesón",1968-01-25,"San Miguel de Tucumán",NA,NA,"Argentina",NA,"Fullback",NA,NA,90,180,10288,NA,NA,NA,NA,"Santiago_Mes%C3%B3n","Santiago_Mes%C3%B3n",NA,"Santiago_Mes%C3%B3n",NA,"http://dbpedia.org/resource/Santiago_Mesón"
 2322,"Q11542281","Tarō Kenjō","Tarō","Kenjō","権丈 太郎",1986-01-09,"Fukuoka Prefecture; Japan",NA,NA,"Japan",NA,"2nd Row; Flanker; Number 8",NA,NA,100,185,NA,NA,"120phs3z",NA,NA,NA,NA,NA,NA,"%E6%A8%A9%E4%B8%88%E5%A4%AA%E9%83%8E",NA
-2323,"Q115427335","Gary Leslie","Gary","Leslie",NA,NA,NA,NA,NA,"Ireland",NA,"Prop",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Gary_Leslie",NA,NA,NA,NA,"http://dbpedia.org/resource/Gary_Leslie"
+2323,"Q115427335","Gary Leslie","Gary","Leslie",NA,1968-01-01,NA,NA,NA,"Ireland",NA,"Prop",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Gary_Leslie",NA,NA,NA,NA,"http://dbpedia.org/resource/Gary_Leslie"
 2324,"Q115429300","Waldemar Zajczonko","Waldemar","Zajczonko",NA,1950-09-04,NA,1970-12-17,NA,"Poland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 2325,"Q11543834","Shunji Hashimoto","Shunji","Hashimoto","橋本",1978-07-01,"Osaka",NA,NA,"Japan",NA,"Scrum-Half",NA,NA,60,165,NA,NA,"12345sd4",NA,NA,NA,NA,NA,NA,"%E6%A9%8B%E6%9C%AC%E4%BF%8A%E6%B2%BB",NA
 2326,"Q11545722","Kenji Shōmen","Kenji","Shōmen","Shōmen けんじ; 正面 健司",1983-05-01,"Osaka Prefecture; Japan",NA,NA,"Japan",NA,"Fullback",NA,NA,85,175,14058,NA,"121r28zf",NA,NA,NA,NA,NA,NA,"%E6%AD%A3%E9%9D%A2%E5%81%A5%E5%8F%B8",NA
@@ -2799,7 +2799,7 @@
 2806,"Q118697278","Yasuhiko Yamazaki","Yasuhiko","Yamazaki",NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%B1%B1%E5%B4%8E%E9%9D%96%E5%BD%A6",NA
 2807,"Q118697279","Taro Yamamoto","Taro","Yamamoto",NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E5%B1%B1%E6%9C%AC%E5%A4%AA%E9%83%8E_(%E3%83%A9%E3%82%B0%E3%83%93%E3%83%BC%E9%81%B8%E6%89%8B)",NA
 2808,"Q118722442","Kanta Tsuda","Kanta","Tsuda","津田 貫汰",2000-10-17,"Kanagawa Prefecture; Fujisawa; Kanagawa",NA,NA,"Japan",NA,"Fly-Half",NA,NA,81,181,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E6%B4%A5%E7%94%B0%E8%B2%AB%E6%B1%B0",NA
-2809,"Q118727305","Raphaël Laboille","Raphaël","Laboille",NA,NA,NA,NA,NA,"France",NA,"Prop",NA,NA,NA,NA,NA,"raphael-laboille",NA,58444,NA,NA,NA,NA,NA,NA,NA
+2809,"Q118727305","Raphaël Laboille","Raphaël","Laboille",NA,2004-12-21,NA,NA,NA,"France",NA,"Prop",NA,NA,NA,NA,NA,"raphael-laboille",NA,58444,NA,NA,NA,NA,NA,NA,NA
 2810,"Q118744966","Arnaud Élissalde","Arnaud","Élissalde",NA,1926-10-01,NA,2016-05-04,NA,"France",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 2811,"Q118749152","Kentarō Futami","Kentarō","Futami",NA,NA,NA,NA,NA,"Japan",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E4%BA%8C%E8%A6%8B%E5%81%A5%E5%A4%AA%E9%83%8E",NA
 2812,"Q118792840","Giovanni Montemauri","Giovanni","Montemauri",NA,2000-10-24,"Roma",NA,NA,"Italy",NA,"Fly-Half",NA,NA,92,189,NA,"giovanni-montemauri",NA,47340,NA,"Giovanni_Montemauri","Giovanni_Montemauri","Giovanni_Montemauri",NA,NA,NA
@@ -2895,7 +2895,7 @@
 2902,"Q121436819","Joel Lam","Joel","Lam",NA,2002-05-17,"Australia",NA,NA,"Australia",NA,"Scrum-Half",NA,NA,84,179,NA,NA,"11ksp1yyhq",NA,NA,"Joel_Lam",NA,NA,NA,NA,NA
 2903,"Q121437423","Sam Wye","Sam","Wye",NA,2000-11-11,"New Zealand; New Zealand",NA,NA,"Fiji",NA,"Half-Back",NA,NA,89,178,NA,NA,"11v4m27b_1",NA,NA,"Sam_Wye",NA,NA,NA,NA,NA
 2904,"Q121437925","Riley Hohepa","Riley","Hohepa","Riley H.t.m. Hohepa",1995-02-09,"Pukekohe; New Zealand",NA,NA,"New Zealand",NA,"Fly-Half; Centre",NA,NA,96,189,NA,"riley-hohepa","11kspnmndd",28644,NA,"Riley_Hohepa",NA,NA,NA,NA,NA
-2905,"Q121437931","Hugo Plummer","Hugo","Plummer",NA,NA,NA,NA,NA,"New Zealand",NA,"2nd Row",NA,NA,118,198,NA,NA,"11v01j861w",NA,NA,"Hugo_Plummer",NA,NA,NA,NA,NA
+2905,"Q121437931","Hugo Plummer","Hugo","Plummer",NA,2000-08-25,NA,NA,NA,"New Zealand",NA,"2nd Row",NA,NA,118,198,NA,NA,"11v01j861w",NA,NA,"Hugo_Plummer",NA,NA,NA,NA,NA
 2906,"Q121482787","Imad Khan","Imad","Khan",NA,2003-12-02,"Cape Town",NA,NA,"South Africa",NA,"Scrum-Half",NA,NA,78,179,NA,NA,"11v78s36vf",NA,NA,"Imad_Khan",NA,NA,NA,NA,NA
 2907,"Q121484156","Vladimir Covalschi","Vladimir","Covalschi",NA,1988-10-28,"Rada Tilly; Escalante; Argentina",NA,NA,"Argentina",NA,"Forward",NA,NA,NA,188,NA,NA,"11h37srjn5",NA,NA,"Vladimir_Covalschi",NA,NA,NA,NA,NA
 2908,"Q121494627","Aimé Buiret","Aimé","Buirette",NA,1947-02-09,NA,2023-08-01,"Saint-Nic","France",NA,"Prop",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -3663,7 +3663,7 @@
 3671,"Q124616211","Alfie Petch","Alfie","Petch",NA,1999-12-21,"Truro",NA,NA,"United Kingdom","England","Prop",NA,NA,124,180,NA,"alfie-petch",NA,44513,"7293","Alfie_Petch","Alfie_Petch",NA,NA,NA,NA
 3672,"Q124620759","Shoma Sagawa","Shoma","Sagawa","佐川 しょうま; 佐川 奨茉",2002-01-20,"Fukushima Prefecture; Japan",NA,NA,"Japan",NA,"Number 8",NA,NA,103,180,NA,NA,"11vszkpvsy",NA,NA,NA,NA,NA,NA,"%E4%BD%90%E5%B7%9D%E5%A5%A8%E8%8C%89",NA
 3673,"Q124621989","Nafi Ma'afu","Nafi","Ma'afu",NA,1998-06-18,"Phoenix",NA,NA,"U.S.A.",NA,"2nd Row; Flanker",NA,NA,NA,200,NA,"nafi-ma-afu",NA,47819,NA,NA,"Nafi_Ma%27afu",NA,NA,NA,NA
-3674,"Q124623821","Gysbert du Preez","Gysbert","du Preez",NA,NA,NA,NA,NA,"South Africa",NA,"2nd Row",NA,NA,NA,NA,NA,"gysbert-du-preez",NA,59546,NA,NA,NA,NA,NA,NA,NA
+3674,"Q124623821","Gysbert du Preez","Gysbert","du Preez",NA,2001-02-20,NA,NA,NA,"South Africa",NA,"2nd Row",NA,NA,NA,NA,NA,"gysbert-du-preez",NA,59546,NA,NA,NA,NA,NA,NA,NA
 3675,"Q124623871","Ratu Nacika","Josaia; Ratu","Nacika",NA,1997-02-11,NA,NA,NA,"Fiji",NA,"2nd Row",NA,NA,NA,197,NA,"ratu-nacika",NA,58980,NA,NA,"Ratu_Nacika",NA,NA,NA,NA
 3676,"Q124636283","Charles Bochard","Charles","Bochard",NA,1916-01-01,NA,1944-01-01,NA,"France",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Charles_Bochard",NA,NA,NA,NA
 3677,"Q124661887","André Clady","André","Clady",NA,1905-03-31,"Lézignan-Corbières",1989-10-15,"Aix-en-Provence","France",NA,"2nd Row; Flanker",NA,NA,NA,NA,3677,NA,NA,NA,NA,NA,"Andr%C3%A9_Clady",NA,NA,NA,NA
@@ -3691,7 +3691,7 @@
 3699,"Q124728924","Mesake Vocevoce","Mesake","Vocevoce",NA,2003-01-01,"Fiji",NA,NA,"Fiji",NA,"2nd Row",NA,NA,106,197,NA,NA,NA,NA,NA,"Mesake_Vocevoce",NA,NA,"Mesake_Vocevoce",NA,NA
 3700,"Q124729009","Isikeli Rabitu","Isikeli","Rabitu",NA,2005-01-01,"Fiji",NA,NA,"Fiji",NA,"Fly-Half; Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Isikeli_Rabitu",NA,NA,NA,NA,NA
 3701,"Q124729069","Junior Ratuva","Junior","Ratuva",NA,1999-01-01,"Fiji",NA,NA,"Fiji",NA,"Winger",NA,NA,110,196,NA,NA,NA,NA,NA,"Junior_Ratuva",NA,NA,NA,NA,NA
-3702,"Q124729124","Titi Nofoagatotoa","Titi","Nofoagatotoa",NA,NA,NA,NA,NA,"Australia",NA,"2nd Row; Flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Titi_Nofoagatotoa",NA,NA,NA,NA,NA
+3702,"Q124729124","Titi Nofoagatotoa","Titi","Nofoagatotoa",NA,2002-08-17,NA,NA,NA,"Australia",NA,"2nd Row; Flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Titi_Nofoagatotoa",NA,NA,NA,NA,NA
 3703,"Q124729157","Veveni Lasaqa","Veveni","Lasaqa","Ratu Veveni Vuiwakaya Lasaqa",2002-01-01,"Lautoka; Fiji",NA,NA,"Fiji",NA,"Flanker",NA,NA,101,186,NA,NA,NA,NA,NA,"Veveni_Lasaqa",NA,NA,NA,NA,NA
 3704,"Q124729597","Jordi Viljoen","Jordi","Viljoen",NA,2003-01-01,"Pretoria; South Africa",NA,NA,"New Zealand",NA,"Half-Back",NA,NA,76,169,NA,NA,NA,NA,NA,"Jordi_Viljoen",NA,NA,NA,NA,NA
 3705,"Q124731645","Allan Craig","Allan","Craig",NA,2002-01-01,"New Zealand; New Zealand",NA,NA,"New Zealand",NA,"2nd Row",NA,NA,112,196,NA,"allan-craig",NA,50404,"4295","Allan_Craig_(rugby_union)",NA,NA,NA,NA,NA
@@ -3705,7 +3705,7 @@
 3713,"Q124736421","Manase Havili","Manase","Havili","マナセ・ハビリ",2001-04-07,"Tonga",NA,NA,"Tonga",NA,"Centre",NA,NA,95,175,NA,NA,"11vr44vj7j",NA,NA,NA,NA,NA,NA,"%E3%83%9E%E3%83%8A%E3%82%BB%E3%83%BB%E3%83%8F%E3%83%93%E3%83%AA",NA
 3714,"Q124736899","Andy Timo","Andy","Timo","アンディ・ティモ",2004-05-28,"Massy",NA,NA,"France",NA,"Number 8; Flanker",NA,NA,95,192,NA,"andy-timo",NA,53390,"17418","Andy_Timo","Andy_Timo",NA,NA,"%E3%82%A2%E3%83%B3%E3%83%87%E3%82%A3%E3%83%BB%E3%83%86%E3%82%A3%E3%83%A2",NA
 3715,"Q124738058","Mathis Castro-Ferreira","Mathis","Castro-Ferreira",NA,2004-01-13,"Lourdes",NA,NA,"France",NA,"Number 8; Flanker",NA,NA,105,192,NA,"mathis-castro-ferreira",NA,57193,"16270",NA,"Mathis_Castro-Ferreira",NA,"Mathis_Castro-Ferreira",NA,NA
-3716,"Q124738838","Doug Sanft","Doug","Sanft","Douglas Gordon Sanft",NA,NA,NA,NA,"Samoa",NA,"Fly-Half; Centre",NA,NA,94,180,15255,NA,NA,NA,NA,"Doug_Sanft",NA,NA,NA,NA,NA
+3716,"Q124738838","Doug Sanft","Doug","Sanft","Douglas Gordon Sanft",1982-01-01,NA,NA,NA,"Samoa",NA,"Fly-Half; Centre",NA,NA,94,180,15255,NA,NA,NA,NA,"Doug_Sanft",NA,NA,NA,NA,NA
 3717,"Q124750281","Zaccharie Affane","Zacharie","Affane",NA,2004-07-15,NA,NA,NA,"France",NA,"Prop",NA,NA,NA,191,NA,"zaccharie-affane",NA,53640,"15321",NA,"Zaccharie_Affane",NA,NA,NA,NA
 3718,"Q124754565","Andrey Yanyushkin","Andrey","Yanyushkin","Andrey Alexandrovich Yanyushkin",2004-05-02,"Penza",NA,NA,"Russia",NA,"Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 3719,"Q124754747","Taiga Kato","Taiga","Kato","加藤 大冴",2005-08-24,"Kawasaki",NA,NA,"Japan",NA,"Scrum-Half",NA,NA,70,170,NA,NA,"11vycq9s40",NA,NA,NA,NA,NA,NA,"%E5%8A%A0%E8%97%A4%E5%A4%A7%E5%86%B4",NA
@@ -3777,7 +3777,7 @@
 3785,"Q124949944","Jonathan Kpoku","Jonathan","Kpoku",NA,1999-06-22,NA,NA,NA,"United Kingdom","England","2nd Row",NA,NA,103,202,NA,NA,NA,NA,NA,"Jonathan_Kpoku",NA,NA,NA,NA,NA
 3786,"Q124950670","Lachlan Shaw","Lachlan","Shaw",NA,2003-01-01,"Brisbane; Australia",NA,NA,"Australia",NA,"2nd Row",NA,NA,112,200,NA,NA,NA,NA,NA,"Lachlan_Shaw_(rugby_union)",NA,NA,NA,NA,NA
 3787,"Q124951807","Josh Jacomb","Josh","Jacomb","ジョシュ・ジェイコム",2001-01-01,"New Zealand; Auckland",NA,NA,"New Zealand",NA,"Fly-Half; Fullback",NA,NA,90,179,NA,NA,NA,NA,NA,"Josh_Jacomb",NA,NA,NA,"%E3%82%B8%E3%83%A7%E3%82%B7%E3%83%A5%E3%83%BB%E3%82%B8%E3%82%A7%E3%82%A4%E3%82%B3%E3%83%A0",NA
-3788,"Q124954196","Ethan Dobbins","Ethan","Dobbins",NA,NA,NA,NA,NA,"Australia",NA,"Hooker",NA,NA,101,181,NA,NA,NA,NA,NA,"Ethan_Dobbins",NA,NA,NA,NA,NA
+3788,"Q124954196","Ethan Dobbins","Ethan","Dobbins",NA,2000-05-03,NA,NA,NA,"Australia",NA,"Hooker",NA,NA,101,181,NA,NA,NA,NA,NA,"Ethan_Dobbins",NA,NA,NA,NA,NA
 3789,"Q124955287","Maciu Nabolakasi","Maciu","Nabolakasi",NA,NA,NA,NA,NA,"Australia",NA,"Flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Maciu_Nabolakasi",NA,NA,NA,NA,NA
 3790,"Q124957979","Kyle Steeves","Kyle","Steeves",NA,2000-01-01,"Winnipeg",NA,NA,"Canada",NA,"Loosehead Prop",NA,NA,122,183,NA,NA,NA,NA,NA,"Kyle_Steeves",NA,NA,"Kyle_Steeves",NA,NA
 3791,"Q124958216","Pedro Imhoff","Pedro","Imhoff","Pedro José Imhoff",1989-01-01,"Argentina",NA,NA,"Argentina",NA,"Scrum-Half",NA,NA,82,174,NA,NA,NA,NA,NA,"Pedro_Imhoff",NA,NA,NA,NA,NA
@@ -4005,7 +4005,7 @@
 4013,"Q125503752","Jeff Clements","Jeff","Clements","Jeffrey Woodward Clements",1932-08-18,"Wincanton; England",1986-10-04,"Guildford; England","United Kingdom","England","Flanker",NA,NA,NA,NA,6363,NA,NA,NA,NA,"Jeff_Clements_(rugby_union)",NA,NA,NA,NA,NA
 4014,"Q125504051","Haydn Davies","Haydn","Davies","Hayden John Davies",1935-11-21,"Cowbridge; Wales",2017-12-22,"Hertfordshire; England","United Kingdom","Wales","Centre",NA,NA,NA,NA,6353,NA,NA,NA,NA,"Haydn_Davies_(rugby_union)",NA,NA,NA,NA,NA
 4015,"Q125504975","G. W. Erle Mitchell","G.; W.; Erle","Mitchell","Erle Mitchell",1943-01-01,NA,2003-01-01,NA,"United Kingdom","England",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"G._W._Erle_Mitchell",NA,NA,NA,NA,NA
-4016,"Q125506068","Noël Guillemot","Noël","Guillemot",NA,NA,NA,NA,NA,"France",NA,"Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"No%C3%ABl_Guillemot",NA,NA,NA,NA
+4016,"Q125506068","Noël Guillemot","Noël","Guillemot",NA,1950-01-01,NA,NA,NA,"France",NA,"Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"No%C3%ABl_Guillemot",NA,NA,NA,NA
 4017,"Q125511500","Leighton Jenkins","Leighton","Jenkins","Leighton Hugh Jenkins",1931-07-01,"New Tredegar; Wales",2020-05-07,"Lincolnshire; England","United Kingdom","Wales","Number 8",NA,NA,NA,NA,5778,NA,NA,NA,NA,"Leighton_Jenkins",NA,NA,NA,NA,NA
 4018,"Q125523271","Jim Parsons","Jim","Parsons","Michael James Parsons",1943-03-13,"Chipping Norton; England",NA,NA,"United Kingdom","England","2nd Row",NA,NA,NA,NA,7339,NA,NA,NA,NA,"Jim_Parsons_(rugby_union)",NA,NA,NA,NA,NA
 4019,"Q125523293","Geoff Beckingham","Geoff","Beckingham","Geoffrey Thomas Beckingham",1924-07-29,"Barry; Wales",2005-03-04,"Barry; Wales","United Kingdom","Wales","Hooker",NA,NA,NA,NA,5651,NA,NA,NA,NA,"Geoff_Beckingham",NA,NA,NA,NA,NA
@@ -4016,9 +4016,9 @@
 4024,"Q125536273","Tom Nesdale","Tom","Nesdale","Thomas Jude Nesdale",1933-01-01,"Cork; Ireland",2019-01-01,"Sandycove; Ireland","Ireland",NA,"2nd Row",NA,NA,NA,NA,6590,NA,NA,NA,NA,"Tom_Nesdale",NA,NA,NA,NA,NA
 4025,"Q125536463","Paddy Berkery","Paddy","Berkery","Patrick Joseph Berkery",1929-01-01,"Clonmel; County Tipperary; Ireland",2013-01-01,NA,"Ireland",NA,"Fullback",NA,NA,NA,NA,5776,NA,NA,NA,NA,"Paddy_Berkery",NA,NA,NA,NA,NA
 4026,"Q125544045","Paul Clinch","Paul","Clinch","Paul Daniel Clinch",1961-01-01,"Aldershot; England",NA,NA,"Ireland",NA,"Centre",NA,NA,NA,NA,10605,NA,NA,NA,NA,"Paul_Clinch",NA,NA,NA,NA,NA
-4027,"Q125544308","Emmet O'Rafferty","Emmet","O'Rafferty",NA,NA,NA,NA,NA,"Ireland",NA,"2nd Row",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Emmet_O%27Rafferty",NA,NA,NA,NA,NA
-4028,"Q125544415","Rab Brady","Rab","Brady",NA,NA,NA,NA,NA,"Ireland",NA,"Scrum-Half",NA,NA,NA,NA,9818,NA,NA,NA,NA,"Rab_Brady",NA,NA,NA,NA,NA
-4029,"Q125544498","Leo Galvin","Leo","Galvin",NA,NA,NA,NA,NA,"Ireland",NA,"2nd Row",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Leo_Galvin",NA,NA,NA,NA,NA
+4027,"Q125544308","Emmet O'Rafferty","Emmet","O'Rafferty",NA,1976-01-01,NA,NA,NA,"Ireland",NA,"2nd Row",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Emmet_O%27Rafferty",NA,NA,NA,NA,NA
+4028,"Q125544415","Rab Brady","Rab","Brady",NA,1985-01-01,NA,NA,NA,"Ireland",NA,"Scrum-Half",NA,NA,NA,NA,9818,NA,NA,NA,NA,"Rab_Brady",NA,NA,NA,NA,NA
+4029,"Q125544498","Leo Galvin","Leo","Galvin",NA,1973-01-01,NA,NA,NA,"Ireland",NA,"2nd Row",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Leo_Galvin",NA,NA,NA,NA,NA
 4030,"Q125545618","Paddy Kenny","Paddy","Kenny","Padraig Kenny",1960-01-01,"Philippines",NA,NA,"Ireland",NA,"Flanker",NA,NA,NA,NA,9897,NA,NA,NA,NA,"Paddy_Kenny_(rugby_union)",NA,NA,NA,NA,NA
 4031,"Q125546558","Thibault Rabourdin","Thibault","Rabourdin",NA,2001-01-20,NA,NA,NA,"France",NA,"Fullback",NA,NA,NA,176,NA,"thibault-rabourdin",NA,50534,"18669",NA,"Thibault_Rabourdin",NA,NA,NA,NA
 4032,"Q125548834","Mark Lax","Joseph; Mark","Fragell",NA,1983-01-01,"Ann Arbor",NA,NA,"U.S.A.",NA,NA,NA,NA,NA,196,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -4041,7 +4041,7 @@
 4049,"Q125574326","Colin Grimshaw","Colin","Grimshaw",NA,1947-01-01,"Belfast; Ireland",NA,NA,"Ireland",NA,"Scrum-Half",NA,NA,NA,173,7479,NA,NA,NA,NA,"Colin_Grimshaw_(rugby_union)",NA,NA,NA,NA,NA
 4050,"Q125575916","Jim Tydings","Jim","Tydings","John Joseph Tydings",1945-01-01,"Limerick; Ireland",2019-01-01,"Limerick; Ireland","Ireland",NA,"Winger",NA,NA,NA,NA,7451,NA,NA,NA,NA,"Jim_Tydings",NA,NA,NA,NA,NA
 4051,"Q125577719","John Dee","John","Dee","John Mackenzie Dee",1938-10-22,"Hartlepool; England",NA,NA,"United Kingdom","England","Centre; Winger",NA,NA,NA,175,6673,NA,NA,NA,NA,"John_Dee_(rugby_union)",NA,NA,NA,NA,NA
-4052,"Q125579622","Sam Hutton","Sam","Hutton","Samuel Allen Hutton",NA,NA,NA,NA,"Ireland",NA,"Prop",NA,NA,NA,NA,7190,NA,NA,NA,NA,"Sam_Hutton",NA,NA,NA,NA,NA
+4052,"Q125579622","Sam Hutton","Sam","Hutton","Samuel Allen Hutton",1967-01-01,NA,NA,NA,"Ireland",NA,"Prop",NA,NA,NA,NA,7190,NA,NA,NA,NA,"Sam_Hutton",NA,NA,NA,NA,NA
 4053,"Q125581000","Arthur Cordwell","Arthur","Cordwell",NA,1999-03-03,NA,NA,NA,"United Kingdom","England","Prop",NA,NA,116,183,NA,NA,NA,NA,NA,"Arthur_Cordwell",NA,NA,NA,NA,NA
 4054,"Q125581012","Gabe Goss","Gabe","Goss","Gabriel Goss",2001-12-17,NA,NA,NA,"United Kingdom","England","Winger",NA,NA,82,182,NA,NA,NA,NA,NA,"Gabe_Goss",NA,NA,NA,NA,NA
 4055,"Q125588536","Johnny Fortune","Johnny","Fortune","John Joseph Fortune",1933-01-01,"Dublin; Ireland",2015-01-01,"Balbriggan; County Dublin; Ireland","Ireland",NA,"Winger",NA,NA,NA,NA,6855,NA,NA,NA,NA,"Johnny_Fortune",NA,NA,NA,NA,NA
@@ -4074,7 +4074,7 @@
 4082,"Q125703054","Bill Tector","Bill","Tector","William Richard Tector",1929-04-16,"Clonroche; Wexford; Ireland",1996-04-28,"Dublin; Ireland","Ireland",NA,"Fullback",NA,NA,NA,NA,5891,NA,NA,NA,NA,"Bill_Tector",NA,NA,NA,NA,NA
 4083,"Q125703428","Ron McCarten","Ron","McCarten","Ronald James Mccarten",1935-08-06,"Seaton; Cumberland; England",2021-01-29,"Castleknock; Dublin; Ireland","Ireland",NA,"Winger",NA,NA,NA,NA,6574,NA,NA,NA,NA,"Ron_McCarten",NA,NA,NA,NA,NA
 4084,"Q125704969","Dave Horton","Dave","Horton","David C. Horton",1960-09-30,"Massachusetts; U.S.A.",NA,NA,"U.S.A.",NA,"Fly-Half",NA,NA,NA,NA,10139,NA,NA,NA,NA,"Dave_Horton",NA,NA,NA,NA,NA
-4085,"Q125722086","Fayçal Tourek","Fayçal","Tourek",NA,NA,NA,NA,NA,"France",NA,"Hooker",NA,NA,NA,NA,NA,"faycal-tourek",NA,41580,NA,NA,NA,NA,NA,NA,NA
+4085,"Q125722086","Fayçal Tourek","Fayçal","Tourek",NA,1988-10-24,NA,NA,NA,"France",NA,"Hooker",NA,NA,NA,NA,NA,"faycal-tourek",NA,41580,NA,NA,NA,NA,NA,NA,NA
 4086,"Q125724139","Dave Kiely","Dave","Kiely","Matthew David Kiely",1935-02-27,"Cork; Ireland",2025-07-27,"Cork","Ireland",NA,"Flanker",NA,NA,NA,NA,6736,NA,NA,NA,NA,"Dave_Kiely",NA,NA,NA,NA,NA
 4087,"Q125725511","Frank Byrne","Frank","Byrne","Noel Francis Byrne",1938-12-18,"Curragh; County Kildare; Ireland",NA,NA,"Ireland",NA,"Winger",NA,NA,NA,NA,6677,NA,NA,NA,NA,"Frank_Byrne_(rugby_union)",NA,NA,NA,NA,NA
 4088,"Q125727663","Ron Evans","Ron","Evans","Ronald Evans",1941-11-06,"Bridgend; Wales",2023-01-01,NA,"United Kingdom","Wales","Centre",NA,NA,NA,NA,6775,NA,NA,NA,NA,"Ron_Evans_(rugby_union)",NA,NA,NA,NA,NA
@@ -4102,7 +4102,7 @@
 4110,"Q125768580","Luc Ignace Véa","Luc; Ignace","Vea","Luka Véa",2002-07-31,NA,NA,NA,"France",NA,"Prop",NA,NA,NA,183,NA,"luka-vea",NA,49493,NA,NA,"Luc_Ignace_V%C3%A9a",NA,NA,NA,NA
 4111,"Q125778997","Willem Delport","Willem","Delport","Willem Hendrik Delport",1920-01-01,"Kirkwood; South Africa",1984-01-01,"Pretoria; South Africa","South Africa",NA,"Hooker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Willem_Delport",NA,NA,NA,NA,NA
 4112,"Q125780625","Ronnie Hill","Ronnie","Hill","Ronald Andrew Hill",1934-01-01,"Johannesburg; South Africa",2011-01-01,"Johannesburg; South Africa","South Africa",NA,"Hooker",NA,NA,NA,NA,6549,NA,NA,NA,NA,"Ronnie_Hill",NA,NA,NA,NA,NA
-4113,"Q125784739","John Birch","John","Birch",NA,NA,NA,NA,NA,"Ireland",NA,"Hooker",NA,NA,NA,NA,7672,NA,NA,NA,NA,"John_Birch_(rugby_union)",NA,NA,NA,NA,NA
+4113,"Q125784739","John Birch","John","Birch",NA,1970-01-01,NA,NA,NA,"Ireland",NA,"Hooker",NA,NA,NA,NA,7672,NA,NA,NA,NA,"John_Birch_(rugby_union)",NA,NA,NA,NA,NA
 4114,"Q125800199","Brendan Haami","Brendan","Haami","Brendan Derek Te Oranga Haami",1974-01-01,"Stratford; New Zealand",NA,NA,"New Zealand",NA,"Half-Back",NA,NA,76,173,14194,NA,NA,NA,NA,"Brendan_Haami",NA,NA,NA,NA,NA
 4115,"Q125804012","James Mullan","James","Mullan",NA,2002-11-20,"New Zealand; New Zealand",NA,NA,"New Zealand",NA,"Hooker",NA,NA,112,188,NA,NA,NA,NA,NA,"James_Mullan",NA,NA,NA,NA,NA
 4116,"Q125804170","Frank Quinn","Frank","Quinn","Francis Peter Quinn",1954-09-05,"Dublin; Ireland",NA,NA,"Ireland",NA,"Winger",NA,NA,NA,NA,9277,NA,NA,NA,NA,"Frank_Quinn_(rugby_union)",NA,NA,NA,NA,NA
@@ -4201,7 +4201,7 @@
 4209,"Q125998249","Todd Feather","Todd","Feather","Todd Robert Feather",1977-09-19,"Reporoa; New Zealand",NA,NA,"New Zealand",NA,"Fly-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Todd_Feather",NA,NA,NA,NA,NA
 4210,"Q126004278","Erik Arne Melling","Erik; Arne","Melling",NA,1918-09-25,"Wallsend; England",2004-02-24,"Newcastle Upon Tyne; England","United Kingdom","Scotland","Flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Erik_Arne_Melling",NA,NA,NA,NA,NA
 4211,"Q126004787","Tama Tuirirangi","Tama","Tuirirangi","Kuramate Tama Tuirirangi",1978-01-01,"Invercargill; New Zealand",NA,NA,"New Zealand",NA,"Prop",NA,NA,111,181,195393,NA,NA,NA,NA,"Tama_Tuirirangi",NA,NA,NA,NA,NA
-4212,"Q126004987","Tyron Mandrusiak","Tyron","Mandrusiak",NA,NA,NA,NA,NA,"Australia",NA,"Fly-Half; Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Tyron_Mandrusiak",NA,NA,NA,NA,NA
+4212,"Q126004987","Tyron Mandrusiak","Tyron","Mandrusiak",NA,1975-01-01,NA,NA,NA,"Australia",NA,"Fly-Half; Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Tyron_Mandrusiak",NA,NA,NA,NA,NA
 4213,"Q126005615","Tim Buchanan","Tim","Buchanan",NA,1988-01-01,NA,NA,NA,"Australia",NA,"2nd Row",NA,NA,109,193,231735,NA,NA,NA,NA,"Tim_Buchanan_(rugby_union)",NA,NA,NA,NA,NA
 4214,"Q126005788","Talilotu Fakatulolo","Talilotu","Fakatulolo","タリロトゥ・ファカトゥロロ",2001-05-20,"Tonga",NA,NA,"Tonga",NA,"Winger; Centre",NA,NA,95,184,NA,NA,NA,NA,NA,NA,NA,NA,NA,"%E3%82%BF%E3%83%AA%E3%83%AD%E3%83%88%E3%82%A5%E3%83%BB%E3%83%95%E3%82%A1%E3%82%AB%E3%83%88%E3%82%A5%E3%83%AD%E3%83%AD",NA
 4215,"Q126007191","Joel Rapana","Joel","Rapana","Joelin Rapana",1986-01-01,"Wellington; New Zealand",NA,NA,"Cook Islands",NA,"Winger; Centre",NA,NA,98,188,231335,NA,NA,NA,NA,"Joel_Rapana",NA,NA,NA,NA,NA
@@ -4252,13 +4252,13 @@
 4260,"Q126176252","Tila Mealoi","Tila","Mealoi",NA,1991-01-01,NA,NA,NA,"Samoa",NA,"Fullback",NA,NA,NA,NA,295348,NA,NA,NA,NA,"Tila_Mealoi",NA,NA,NA,NA,NA
 4261,"Q126176422","Iakopo Mapu","Iakopo","Mapu","Iakopo Petelo Mapu",1997-01-01,NA,NA,NA,"Samoa",NA,"Flanker; Number 8",NA,NA,106,183,301176,NA,NA,NA,NA,"Iakopo_Mapu",NA,NA,NA,NA,NA
 4262,"Q126176554","Johnny Vaili","Johnny","Vaili","John Vaili",1995-01-01,NA,NA,NA,"Samoa",NA,"Back",NA,NA,83,193,303199,NA,NA,NA,NA,"Johnny_Vaili",NA,NA,NA,NA,NA
-4263,"Q126181416","Michel Camptort","Michel","Camptort",NA,NA,NA,NA,NA,"France",NA,"2nd Row; 3rd Row",NA,NA,NA,181,NA,NA,NA,NA,NA,NA,"Michel_Camptort",NA,NA,NA,NA
+4263,"Q126181416","Michel Camptort","Michel","Camptort",NA,1947-01-01,NA,NA,NA,"France",NA,"2nd Row; 3rd Row",NA,NA,NA,181,NA,NA,NA,NA,NA,NA,"Michel_Camptort",NA,NA,NA,NA
 4264,"Q126188417","Claude Pétrissans","Claude","Pétrissans",NA,1944-01-01,NA,NA,NA,"France",NA,"Flanker",NA,NA,NA,188,NA,NA,NA,NA,NA,NA,"Claude_P%C3%A9trissans",NA,NA,NA,NA
 4265,"Q126189862","Alofaaga Sao","Alofaaga","Sao","Alofaaga Junior Sao",1997-01-01,NA,NA,NA,"Samoa",NA,"Prop",NA,NA,123,180,303196,NA,NA,NA,NA,"Alofaaga_Sao",NA,NA,NA,NA,NA
 4266,"Q126190388","Losi Filipo","Losi","Filipo","Losilosivale Filipo",1997-12-29,NA,NA,NA,"Samoa",NA,"Winger",NA,NA,NA,NA,295158,"losi-filipo",NA,40813,"268","Losi_Filipo",NA,NA,NA,NA,NA
 4267,"Q126190542","Martini Talapusi","Martini","Talapusi",NA,1995-01-01,"Wellington; New Zealand",NA,NA,"Samoa",NA,"Centre; Fly-Half; Fullback",NA,NA,98,183,NA,NA,NA,NA,NA,"Martini_Talapusi",NA,NA,NA,NA,NA
 4268,"Q126191009","Des Sepulona","Des","Sepulona","Des Sepulona Faoa",2001-01-01,NA,NA,NA,"Samoa",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Des_Sepulona",NA,NA,NA,NA,NA
-4269,"Q126195701","Jean-Claude Pétuya","Jean-Claude","Pétuya",NA,NA,NA,NA,NA,"France",NA,"2nd Row",NA,NA,NA,185,NA,NA,NA,NA,NA,NA,"Jean-Claude_P%C3%A9tuya",NA,NA,NA,NA
+4269,"Q126195701","Jean-Claude Pétuya","Jean-Claude","Pétuya",NA,1940-01-01,NA,NA,NA,"France",NA,"2nd Row",NA,NA,NA,185,NA,NA,NA,NA,NA,NA,"Jean-Claude_P%C3%A9tuya",NA,NA,NA,NA
 4270,"Q126200587","Misioka Timoteo","Misioka","Timoteo","Misioka Maluapapa Timoteo",1988-01-01,NA,NA,NA,"Samoa",NA,"3rd Row; Prop",NA,NA,100,188,98751,NA,NA,NA,NA,"Misioka_Timoteo",NA,NA,NA,NA,NA
 4271,"Q126200821","Ben Masoe","Ben","Masoe",NA,1986-01-01,NA,NA,NA,"Samoa",NA,"3rd Row",NA,NA,110,180,165284,NA,NA,NA,NA,"Ben_Masoe",NA,NA,NA,NA,NA
 4272,"Q126201243","Fautua Otto","Fautua","Otto",NA,1985-01-01,"Saasaai; Samoa",NA,NA,"Samoa",NA,"Centre; Winger",NA,NA,90,185,117761,NA,NA,NA,NA,"Fautua_Otto",NA,NA,NA,NA,NA
@@ -4298,8 +4298,8 @@
 4306,"Q126372965","Mike Reid","Mike","Reid","Michael Noy Reid",1985-10-22,NA,NA,NA,"New Zealand",NA,"Prop",NA,NA,116,189,102695,NA,NA,NA,NA,"Mike_Reid_(rugby_union)",NA,NA,NA,NA,NA
 4307,"Q126384700","Flavien Laforie","Flavien","Laforie",NA,NA,NA,NA,NA,"France",NA,"Winger",NA,NA,NA,NA,NA,"flavien-laforie",NA,53914,NA,NA,NA,NA,NA,NA,NA
 4308,"Q126385162","Paul Laperne","Paul","Laperne",NA,2004-09-06,NA,NA,NA,"France",NA,"Hooker",NA,NA,NA,NA,NA,"paul-laperne",NA,58961,NA,NA,NA,NA,NA,NA,NA
-4309,"Q126385455","Enzo Saytour","Enzo","Saytour",NA,NA,"Monaco",NA,NA,"France","Monaco","3rd Row",NA,NA,NA,NA,NA,"enzo-saytour",NA,NA,NA,NA,NA,NA,NA,NA,NA
-4310,"Q126387253","Tom Dourthe","Tom","Dourthe",NA,NA,NA,NA,NA,"France",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4309,"Q126385455","Enzo Saytour","Enzo","Saytour",NA,2003-01-01,"Monaco",NA,NA,"France","Monaco","3rd Row",NA,NA,NA,NA,NA,"enzo-saytour",NA,NA,NA,NA,NA,NA,NA,NA,NA
+4310,"Q126387253","Tom Dourthe","Tom","Dourthe",NA,2004-02-03,NA,NA,NA,"France",NA,"Scrum-Half",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4311,"Q126387622","Roman Œillet","Roman","Œillet",NA,NA,NA,NA,NA,"France",NA,"Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4312,"Q126390434","Orcades Crawford","Orcades","Crawford",NA,1965-01-01,NA,NA,NA,"New Zealand",NA,"Prop",NA,NA,111,185,NA,NA,NA,NA,NA,"Orcades_Crawford",NA,NA,NA,NA,NA
 4313,"Q126390510","Darryl Fale","Darryl","Fale","Darryl Glen Fale",1971-01-01,NA,NA,NA,"New Zealand",NA,"3rd Row",NA,NA,105,192,NA,NA,NA,NA,NA,"Darryl_Fale",NA,NA,NA,NA,NA
@@ -4407,7 +4407,7 @@
 4415,"Q126914783","Leo Afeaki","Leo","Afeaki","Sanualio Afeaki",1987-01-01,NA,NA,NA,"Australia",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Leo_Afeaki",NA,NA,NA,NA,NA
 4416,"Q126915197","James McCormack","James","McCormack",NA,1976-04-07,NA,NA,NA,"Australia",NA,"Hooker",NA,NA,NA,NA,212485,NA,NA,NA,NA,"James_McCormack_(rugby_union)",NA,NA,NA,NA,NA
 4417,"Q126915202","Craig Wells","Allan; Craig","Wells","Craig Allan Wells",1970-07-16,NA,NA,NA,"Australia",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Craig_Wells",NA,NA,NA,NA,NA
-4418,"Q126916626","Manueli Ratuniyarawa","Manueli","Ratuniyarawa",NA,NA,NA,NA,NA,"Fiji",NA,"3rd Row; 2nd Row",NA,NA,NA,NA,307331,NA,NA,NA,NA,"Manueli_Ratuniyarawa",NA,NA,NA,NA,NA
+4418,"Q126916626","Manueli Ratuniyarawa","Manueli","Ratuniyarawa",NA,1994-01-01,NA,NA,NA,"Fiji",NA,"3rd Row; 2nd Row",NA,NA,NA,NA,307331,NA,NA,NA,NA,"Manueli_Ratuniyarawa",NA,NA,NA,NA,NA
 4419,"Q126917116","Tomás Malanos","Tomás","Malanos",NA,1997-07-04,"Argentina",NA,NA,"Argentina",NA,"Inside Centre",NA,NA,86,178,NA,NA,NA,NA,NA,NA,NA,NA,"Tom%C3%A1s_Malanos",NA,NA
 4420,"Q126917124","Connor Winchester","Connor","Winchester",NA,1997-04-19,"Australia",NA,NA,"Australia",NA,"Fly-Half",NA,NA,98,188,NA,NA,NA,NA,NA,NA,NA,NA,"Connor_Winchester",NA,NA
 4421,"Q126917148","Manuel Covella","Manuel","Covella",NA,1990-10-19,"Argentina",NA,NA,"Argentina",NA,"Inside Centre",NA,NA,93,189,NA,NA,NA,NA,NA,NA,NA,NA,"Manuel_Covella",NA,NA
@@ -4578,7 +4578,7 @@
 4586,"Q128353547","Jason Reilly","Jason","Reilly",NA,1970-01-01,NA,NA,NA,"Australia",NA,"Prop",NA,NA,114,184,NA,NA,NA,NA,NA,"Jason_Reilly",NA,NA,NA,NA,NA
 4587,"Q128372010","Louis Werchon","Louis","Werchon",NA,2002-01-01,"Nambour; Queensland; Australia",NA,NA,"Australia",NA,"Scrum-Half",NA,NA,84,177,NA,NA,NA,NA,NA,"Louis_Werchon",NA,NA,NA,NA,NA
 4588,"Q128374224","Henry O'Donnell","Henry","O'Donnell",NA,2003-01-01,"Mosman; New South Wales; Australia",NA,NA,"Australia",NA,"Centre",NA,NA,97,186,NA,NA,NA,NA,NA,"Henry_O%27Donnell_(rugby_union)",NA,NA,NA,NA,NA
-4589,"Q128376361","Lachie Albert","Lachlan","Albert","Lachlan Albert",NA,NA,NA,NA,"Australia",NA,"Scrum-Half",NA,NA,89,186,NA,NA,NA,NA,NA,"Lachie_Albert",NA,NA,NA,NA,NA
+4589,"Q128376361","Lachie Albert","Lachlan","Albert","Lachlan Albert",2000-01-01,NA,NA,NA,"Australia",NA,"Scrum-Half",NA,NA,89,186,NA,NA,NA,NA,NA,"Lachie_Albert",NA,NA,NA,NA,NA
 4590,"Q128378313","Liam Bowron","Liam","Bowron",NA,2003-01-01,NA,NA,NA,"Australia",NA,"Hooker",NA,NA,103,183,NA,NA,NA,NA,NA,"Liam_Bowron",NA,NA,NA,NA,NA
 4591,"Q128395362","David Morgan","David","Morgan","David James Morgan",1969-02-07,NA,NA,NA,"New Zealand",NA,"Prop",NA,NA,NA,NA,NA,NA,NA,NA,NA,"David_Morgan_(rugby_union,_born_1969)",NA,NA,NA,NA,NA
 4592,"Q128395432","Arthur Green","Arthur","Green",NA,2004-03-04,NA,NA,NA,"United Kingdom","England","Number 8",NA,NA,105,182,NA,NA,NA,NA,NA,"Arthur_Green_(rugby_union)",NA,NA,NA,NA,NA
@@ -4679,7 +4679,7 @@
 4687,"Q12940","Jacques Chaban-Delmas","Jacques; Pierre; Michel","Chaban-Delmas","Jacques Michel Pierre Delmas",1915-03-07,"13th arrondissement of Paris",2000-11-10,"7th arrondissement of Paris","France",NA,"Winger",NA,NA,NA,NA,4778,NA,NA,NA,NA,"Jacques_Chaban-Delmas","Jacques_Chaban-Delmas","Jacques_Chaban-Delmas","Jacques_Chaban-Delmas","%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AF%E3%83%BB%E3%82%B7%E3%83%A3%E3%83%90%E3%83%B3%EF%BC%9D%E3%83%87%E3%83%AB%E3%83%9E%E3%82%B9",NA
 4688,"Q129404440","Chris Stephandellis","Chris","Stephandellis","Chris Theo Stephandellis",1961-07-30,"Darlinghurst; New South Wales; Australia",NA,NA,"Australia",NA,"Fullback; Winger",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Chris_Stephandellis",NA,NA,NA,NA,NA
 4689,"Q129449431","Peter Palmer","Peter","Palmer",NA,NA,NA,NA,NA,"Australia",NA,"Hooker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Peter_Palmer_(rugby_union)",NA,NA,NA,NA,NA
-4690,"Q129466406","Alan Kennington","Alan","Kennington",NA,NA,NA,NA,NA,"Australia",NA,"1st Row",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Alan_Kennington_(rugby)",NA,NA,NA,NA,NA
+4690,"Q129466406","Alan Kennington","Alan","Kennington",NA,1946-01-01,NA,NA,NA,"Australia",NA,"1st Row",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Alan_Kennington_(rugby)",NA,NA,NA,NA,NA
 4691,"Q129476729","Des Carrick","Des","Carrick","Desmond Joseph Carrick",1919-01-01,"Stanmore; New South Wales; Australia",1999-01-01,NA,"Australia",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Des_Carrick",NA,NA,NA,NA,NA
 4692,"Q129497886","Bryn Bradley","Bryn","Bradley",NA,2003-04-17,"London; England",NA,NA,"United Kingdom","Wales","Centre",NA,NA,106,192,NA,NA,NA,NA,NA,"Bryn_Bradley",NA,NA,NA,NA,NA
 4693,"Q129532268","Bruce Broderson","Bruce; Neville","Broderson",NA,1944-09-14,"Te Aroha",2024-08-18,"Waikato Hospital","New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -4748,7 +4748,7 @@
 4756,"Q13035011","Jaco Reinach","Jaco","Reinach","Jacobus Reinach",1962-01-01,"Ceres",1997-01-21,"Kroonstad","South Africa",NA,"Winger",NA,NA,78,178,NA,NA,"11clt71lb0",NA,NA,"Jaco_Reinach",NA,NA,NA,NA,"http://dbpedia.org/resource/Jaco_Reinach"
 4757,"Q13035024","Jacques Botes","Jacques","Botes","Louis Jacques Botes",1980-11-28,"Mbombela",NA,NA,"South Africa",NA,"Flanker",NA,NA,99,182,NA,NA,NA,2096,NA,"Jacques_Botes",NA,NA,NA,NA,"http://dbpedia.org/resource/Jacques_Botes"
 4758,"Q13035033","Jannie Breedt","Jannie","Breedt","Johannes Christoffel Breedt",1959-06-04,"Kempton Park",NA,NA,"South Africa",NA,"Flanker; Number 8",NA,NA,105,195,NA,NA,"11clt8_g00",NA,NA,"Jannie_Breedt",NA,NA,NA,NA,"http://dbpedia.org/resource/Jannie_Breedt"
-4759,"Q13035321","Lourens van der Merwe","Lourens","van der Merwe",NA,NA,"South Africa",NA,NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Lourens_van_der_Merwe",NA,NA,NA,NA,"http://dbpedia.org/resource/Lourens_van_der_Merwe"
+4759,"Q13035321","Lourens van der Merwe","Lourens","van der Merwe",NA,1977-02-03,"South Africa",NA,NA,"South Africa",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Lourens_van_der_Merwe",NA,NA,NA,NA,"http://dbpedia.org/resource/Lourens_van_der_Merwe"
 4760,"Q13035413","Martiens Bekker","Martiens","Bekker",NA,1930-01-01,"Dordrecht",1971-11-10,NA,"South Africa",NA,"Prop",NA,NA,NA,NA,6504,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4761,"Q13035475","Mof Myburgh","Mof","Myburgh","Johannes Lodewikus Myburgh",1936-08-24,"Senekal",2012-06-15,"Pretoria","South Africa",NA,"Prop",NA,NA,NA,185,6697,NA,"11b7g30srk",NA,NA,"Mof_Myburgh","Mof_Myburgh",NA,NA,NA,NA
 4762,"Q13035964","Roy Dryburgh","Roy","Dryburgh","Royden Gladstone Dryburgh",1929-11-01,"Cape Town",2000-01-01,"Durban","South Africa",NA,"Fullback; Winger",NA,NA,83,183,5966,NA,"11clt0gx4s",NA,NA,"Roy_Dryburgh",NA,NA,NA,NA,"http://dbpedia.org/resource/Roy_Dryburgh"
@@ -4844,10 +4844,10 @@
 4852,"Q130477078","Griff Bevan","Griff","Bevan","Griffith Wilfred Bevan",1914-08-15,"Burry Port; Wales",2004-10-25,"Carmarthen; Wales","United Kingdom","Wales","Prop",NA,NA,NA,NA,4783,NA,NA,NA,NA,"Griff_Bevan",NA,NA,NA,NA,NA
 4853,"Q130477080","Cliff Ashton","Cliff","Ashton","Clifford Ashton",1932-12-17,"Cwmavon; Wales",2001-03-29,"Newport; Wales","United Kingdom","Wales","Fly-Half",NA,NA,NA,NA,6350,NA,NA,NA,NA,"Cliff_Ashton",NA,NA,NA,NA,NA
 4854,"Q130477272","Wilf Evans","Wilf","Evans","Wilfred James Evans",1914-05-12,"Griffithstown; Wales",1992-11-17,"Pontypool; Wales","United Kingdom","Wales","Prop",NA,NA,NA,NA,4788,NA,NA,NA,NA,"Wilf_Evans",NA,NA,NA,NA,NA
-4855,"Q130477463","Danny Love","Danny","Love",NA,NA,NA,NA,NA,"New Zealand",NA,"Half-Back; Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Danny_Love",NA,NA,NA,NA,NA
+4855,"Q130477463","Danny Love","Danny","Love",NA,1970-01-01,NA,NA,NA,"New Zealand",NA,"Half-Back; Fullback",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Danny_Love",NA,NA,NA,NA,NA
 4856,"Q130478231","Alun Meredith","Alun","Meredith",NA,1919-11-09,"Ystrad; Wales",2003-08-17,"Truro; Cornwall; England","United Kingdom","Wales","2nd Row",NA,NA,NA,188,5145,NA,NA,NA,NA,"Alun_Meredith",NA,NA,NA,NA,NA
 4857,"Q130478232","Dean Coleman","Dean","Coleman",NA,NA,NA,NA,NA,"New Zealand",NA,"2nd Row; Flanker",NA,NA,NA,198,NA,NA,NA,NA,NA,"Dean_Coleman_(rugby_union)",NA,NA,NA,NA,NA
-4858,"Q130478498","Jeff Karika","Jeff","Karika",NA,NA,NA,NA,NA,"Cook Islands",NA,"Flanker",NA,NA,85,178,NA,NA,NA,NA,NA,"Jeff_Karika",NA,NA,NA,NA,NA
+4858,"Q130478498","Jeff Karika","Jeff","Karika",NA,1970-01-01,NA,NA,NA,"Cook Islands",NA,"Flanker",NA,NA,85,178,NA,NA,NA,NA,NA,"Jeff_Karika",NA,NA,NA,NA,NA
 4859,"Q130479827","David Kilasonia","Davit","Kilasonia",NA,1951-06-14,"Tbilisi",2018-11-24,NA,"Georgia",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4860,"Q130481589","Robin Davies","Robin","Davies","Robin Harvard Davies",1934-01-12,"Battersea; London; England",2011-10-07,"Penarth; Wales","United Kingdom","Wales","Flanker",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Robin_Davies_(rugby_union)",NA,NA,NA,NA,NA
 4861,"Q130482228","Viv Evans","Vivien","Evans","Vivian Evans",1919-06-14,"Skewen; Wales",1995-04-01,"Neath; Wales","United Kingdom","Wales","Fullback",NA,NA,NA,NA,5777,NA,NA,NA,NA,"Viv_Evans",NA,NA,NA,NA,NA
@@ -4929,7 +4929,7 @@
 4937,"Q130546167","Mike Smith","Mike","Smith","Michael Adam Smith",1945-11-23,"Liverpool; England",NA,NA,"United Kingdom","Scotland","Centre; Winger",NA,NA,NA,NA,7552,NA,NA,NA,NA,"Mike_Smith_(rugby_union)",NA,NA,NA,NA,NA
 4938,"Q130546174","Ken Oliver","Ken","Oliver","George Kenneth Oliver",1946-03-04,"Galashiels; Scotland",2009-04-22,"Grantown-On-Spey; Scotland","United Kingdom","Scotland","3rd Row",NA,NA,NA,NA,7622,NA,NA,NA,NA,"Ken_Oliver_(rugby_union)",NA,NA,NA,NA,NA
 4939,"Q130546247","Griff Williams","Griff","Williams","Griffith Morgan Williams",1907-06-30,"Tynewydd; Wales",1991-04-06,"Skewen; Wales","United Kingdom","Wales","2nd Row",NA,NA,NA,NA,4326,NA,NA,NA,NA,"Griff_Williams_(rugby_union)",NA,NA,NA,NA,NA
-4940,"Q130546622","Rizvi Suhayb","Rizvi","Suhayb",NA,NA,NA,2024-09-26,NA,"Sri Lanka",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rizvi_Suhayb",NA,NA,NA,NA,NA
+4940,"Q130546622","Rizvi Suhayb","Rizvi","Suhayb",NA,2024-09-26,NA,2024-09-26,NA,"Sri Lanka",NA,"Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Rizvi_Suhayb",NA,NA,NA,NA,NA
 4941,"Q130546623","Jumbo Scott","Jumbo","Scott","James William Scott",1903-09-24,NA,1949-09-24,"St Helens; England","United Kingdom","Scotland","Forward",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jumbo_Scott",NA,NA,NA,NA,NA
 4942,"Q130546776","Robert Gallie","Robert","Gallie","Robert Arthur Gallie",1893-01-18,"Glasgow; Scotland",1948-05-25,"Edinburgh; Scotland","United Kingdom","Scotland","Hooker",NA,NA,NA,NA,2580,NA,NA,NA,NA,"Robert_Gallie",NA,NA,NA,NA,NA
 4943,"Q130547380","Jock Stewart","Jock","Stewart","John Livingstone Stewart",1894-05-06,"Hawick; Scotland",1971-08-06,"South Africa; South Africa","United Kingdom","Scotland","Flanker",NA,NA,NA,NA,2767,NA,NA,NA,NA,"Jock_Stewart_(rugby_union)",NA,NA,NA,NA,NA
@@ -5019,7 +5019,7 @@
 5027,"Q130619115","Ben Edwards","Ben","Edwards","Benjamin Oswald Edwards",1923-05-29,"Sudbrook; Wales",1978-09-02,"Cheltenham; England","United Kingdom","Wales","2nd Row",NA,NA,NA,NA,5384,NA,NA,NA,NA,"Ben_Edwards_(rugby_union)",NA,NA,NA,NA,NA
 5028,"Q130619122","Peter Evans","Peter","Evans","Peter Denzil Evans",1928-06-21,"Llanelli; Wales",2014-09-22,"Llanelli; Wales","United Kingdom","Wales","Flanker",NA,NA,NA,NA,5354,NA,NA,NA,NA,"Peter_Evans_(rugby_union)",NA,NA,NA,NA,NA
 5029,"Q130629310","Maurice Bonaventura","Maurice","Bonaventura","Maurice Sydney Bonaventura",1902-04-28,"Rochford; Essex; England",1992-07-14,"Lewes; East Sussex; England","United Kingdom","England","Forward",NA,NA,NA,NA,3835,NA,NA,NA,NA,"Maurice_Bonaventura",NA,NA,NA,NA,NA
-5030,"Q130629589","Jeff Forrest","Jeff","Forrest","John William Forrest",NA,"Barnet; London; England",1963-03-18,"Bath; Somerset; England","United Kingdom","England","2nd Row",NA,NA,NA,NA,3746,NA,NA,NA,NA,"Jeff_Forrest_(rugby_union)",NA,NA,NA,NA,NA
+5030,"Q130629589","Jeff Forrest","Jeff","Forrest","John William Forrest",1900-01-01,"Barnet; London; England",1963-03-18,"Bath; Somerset; England","United Kingdom","England","2nd Row",NA,NA,NA,NA,3746,NA,NA,NA,NA,"Jeff_Forrest_(rugby_union)",NA,NA,NA,NA,NA
 5031,"Q130629593","Leslie Bedford","Leslie","Bedford","Lawrence Leslie Bedford",1903-02-11,"Leeds; England",1963-11-25,"Harewood; Leeds; England","United Kingdom","England","Fullback",NA,NA,NA,NA,3834,NA,NA,NA,NA,"Leslie_Bedford_(rugby_union)",NA,NA,NA,NA,NA
 5032,"Q130629930","Wallace Eyres","Wallace","Eyres","Walter Charles Townsend Eyres",1895-02-17,"Barton Regis; England",1965-09-16,"London; England","United Kingdom","England","Number 8",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Wallace_Eyres",NA,NA,NA,NA,NA
 5033,"Q130629932","William Pratten","William","Pratten","William Edgar Pratten",1907-05-29,"Lewisham; England",1969-08-25,"Canterbury; England","United Kingdom","England","2nd Row",NA,NA,NA,NA,3418,NA,NA,NA,NA,"William_Pratten",NA,NA,NA,NA,NA
@@ -7857,7 +7857,7 @@
 7867,"Q20011528","Richard Mayhew","Richard","Mayhew",NA,1985-06-24,"Auckland",NA,NA,"New Zealand",NA,"Flanker",NA,NA,110,191,NA,"richard-mayhew",NA,NA,NA,"Richard_Mayhew_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Richard_Mayhew_(rugby_union)"
 7868,"Q20011595","Senan van der Merwe","Senan","van der Merwe","Senan Declan Clint van der Merwe",1986-02-02,"Robertson",NA,NA,"South Africa",NA,"Winger",NA,NA,90,186,NA,NA,NA,NA,NA,"Senan_van_der_Merwe",NA,NA,NA,NA,"http://dbpedia.org/resource/Senan_van_der_Merwe"
 7869,"Q20020410","Daniel Roberts","Daniel","Roberts","Daniel Cornelius Roberts",1992-01-20,"Heidelberg",NA,NA,"South Africa",NA,"Winger; Centre",NA,NA,86,180,NA,NA,NA,NA,NA,"Daniel_Roberts_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Daniel_Roberts_(rugby_union)"
-7870,"Q20020512","Charlie Higson-Smith","Charlie","Higson-Smith",NA,NA,NA,NA,NA,"Hong Kong",NA,"Winger",NA,NA,NA,196,NA,NA,NA,NA,NA,"Charlie_Higson-Smith",NA,NA,NA,NA,"http://dbpedia.org/resource/Charlie_Higson-Smith"
+7870,"Q20020512","Charlie Higson-Smith","Charlie","Higson-Smith",NA,1991-01-01,NA,NA,NA,"Hong Kong",NA,"Winger",NA,NA,NA,196,NA,NA,NA,NA,NA,"Charlie_Higson-Smith",NA,NA,NA,NA,"http://dbpedia.org/resource/Charlie_Higson-Smith"
 7871,"Q20020514","Niall Rowark","Niall","Rowark","ニール・ロアーク",1990-06-20,"South Korea",NA,NA,"Hong Kong",NA,"Fly-Half",NA,NA,83,181,296905,NA,NA,NA,NA,"Niall_Rowark",NA,NA,NA,"%E3%83%8B%E3%83%BC%E3%83%AB%E3%83%BB%E3%83%AD%E3%82%A2%E3%83%BC%E3%82%AF",NA
 7872,"Q20020516","Gavin Hadley","Gavin","Hadley",NA,NA,NA,NA,NA,"United Kingdom","England","Winger; Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Gavin_Hadley",NA,NA,NA,NA,NA
 7873,"Q20020519","Jonny Rees","Jonny","Rees",NA,NA,NA,NA,NA,"United Kingdom","England","Centre",NA,NA,NA,NA,NA,NA,NA,NA,NA,"Jonny_Rees",NA,NA,NA,NA,NA
@@ -8635,7 +8635,7 @@
 8645,"Q21928085","Shinnosuke Kakinaga","Shinnosuke","Kakinaga","垣永 真之介",1991-12-19,"Fukuoka",NA,NA,"Japan",NA,"Prop",NA,NA,118,180,245949,"shinnosuke-kakinaga","11bwf2x89m",33103,NA,"Shinnosuke_Kakinaga",NA,NA,NA,"%E5%9E%A3%E6%B0%B8%E7%9C%9F%E4%B9%8B%E4%BB%8B","http://dbpedia.org/resource/Shinnosuke_Kakinaga"
 8646,"Q21932440","Daniel Hawkins","Daniel","Hawkins",NA,1991-04-20,"Picton",NA,NA,"New Zealand",NA,"Fly-Half",NA,NA,88,180,120614,NA,"11bwcb96nn",19880,NA,"Daniel_Hawkins_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Daniel_Hawkins_(rugby_union)"
 8647,"Q21934185","John Dobson","John","Dobson",NA,2000-01-01,"Welkom; Free State; South Africa",NA,NA,"South Africa",NA,"Hooker",NA,NA,NA,NA,NA,NA,"11bwkbssvf",NA,NA,"John_Dobson_(rugby_union_coach)",NA,NA,NA,NA,"http://dbpedia.org/resource/John_Dobson_(rugby_union_coach)"
-8648,"Q21934352","Hawies Fourie","Hawies","Fourie",NA,NA,NA,NA,NA,"South Africa",NA,"Fly-Half",NA,NA,NA,NA,NA,NA,"11bwjc1cnn",NA,NA,"Hawies_Fourie",NA,NA,NA,NA,"http://dbpedia.org/resource/Hawies_Fourie"
+8648,"Q21934352","Hawies Fourie","Hawies","Fourie",NA,1968-08-05,NA,NA,NA,"South Africa",NA,"Fly-Half",NA,NA,NA,NA,NA,NA,"11bwjc1cnn",NA,NA,"Hawies_Fourie",NA,NA,NA,NA,"http://dbpedia.org/resource/Hawies_Fourie"
 8649,"Q21964318","Michael Bartlett","Michael","Bartlett",NA,1978-12-25,"Christchurch",NA,NA,"New Zealand",NA,"Winger",NA,NA,92,185,NA,NA,"11bxffb4qf",NA,NA,"Michael_Bartlett_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Michael_Bartlett_(rugby_union)"
 8650,"Q21964333","Cameron Blades","Cameron","Blades","Cameron David Blades",1971-04-16,"Sydney",NA,NA,"Australia",NA,"Loosehead Prop",NA,NA,110,180,NA,NA,"11bxfppqmh",NA,NA,"Cameron_Blades",NA,NA,NA,NA,"http://dbpedia.org/resource/Cameron_Blades"
 8651,"Q21964963","Calvin Howarth","Calvin","Howarth",NA,1976-06-18,"Auckland",NA,NA,"New Zealand",NA,"Fly-Half",NA,NA,96,186,NA,NA,"11bxf08_c_",NA,NA,"Calvin_Howarth",NA,NA,NA,NA,"http://dbpedia.org/resource/Calvin_Howarth"
@@ -8700,7 +8700,7 @@
 8710,"Q22084250","Jerry Sexton","Jerry","Sexton","Jeremiah Sexton; ジェリー・セクストン",1993-01-20,"Dublin",NA,NA,"Ireland",NA,"2nd Row",NA,NA,113,195,NA,NA,"11bwfk5tl4",NA,NA,"Jerry_Sexton",NA,NA,NA,"%E3%82%B8%E3%82%A7%E3%83%AA%E3%83%BC%E3%83%BB%E3%82%BB%E3%82%AF%E3%82%B9%E3%83%88%E3%83%B3","http://dbpedia.org/resource/Jerry_Sexton"
 8711,"Q22087298","Stuart Roy","Stuart","Roy","William Stuart Roy",1968-12-25,"Ely",NA,NA,"United Kingdom","Wales","2nd Row",NA,NA,110,198,NA,NA,"11bxfv5pvf",NA,NA,"Stuart_Roy",NA,NA,NA,NA,"http://dbpedia.org/resource/Stuart_Roy"
 8712,"Q22097008","Garrett Bender","Garrett","Bender","ギャレット・ベンダー",1991-12-02,"Minneapolis",NA,NA,"U.S.A.",NA,"Forward",NA,NA,105,193,NA,NA,"11bxdylqdd",NA,NA,"Garrett_Bender",NA,NA,NA,"%E3%82%AE%E3%83%A3%E3%83%AC%E3%83%83%E3%83%88%E3%83%BB%E3%83%99%E3%83%B3%E3%83%80%E3%83%BC","http://dbpedia.org/resource/Garrett_Bender"
-8713,"Q22097692","Kurt McQuilkin","Kurt","McQuilkin",NA,NA,NA,NA,NA,"New Zealand",NA,"Inside Centre",NA,NA,NA,NA,NA,NA,"11bwq9bpb1",NA,NA,"Kurt_McQuilkin",NA,NA,NA,NA,NA
+8713,"Q22097692","Kurt McQuilkin","Kurt","McQuilkin",NA,1965-01-01,NA,NA,NA,"New Zealand",NA,"Inside Centre",NA,NA,NA,NA,NA,NA,"11bwq9bpb1",NA,NA,"Kurt_McQuilkin",NA,NA,NA,NA,NA
 8714,"Q22097738","Guy Perrett","Guy","Perrett","Guy Perett",1975-03-22,"Lanark",NA,NA,"United Kingdom","Scotland","2nd Row",NA,NA,114,203,NA,NA,"11clghjr0f",NA,NA,"Guy_Perrett",NA,NA,NA,NA,"http://dbpedia.org/resource/Guy_Perrett"
 8715,"Q22097756","Aaron Collins","Aaron","Collins",NA,1971-06-25,"New Zealand",NA,NA,"New Zealand",NA,"Centre",NA,NA,104,188,NA,NA,"11cjhz8kvh",NA,NA,"Aaron_Collins_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Aaron_Collins_(rugby_union)"
 8716,"Q22097780","Erin Cossey","Erin","Cossey",NA,1971-09-29,"Katikati",NA,NA,"New Zealand",NA,"Fly-Half",NA,NA,NA,NA,NA,NA,"11clgcvmyw",NA,NA,"Erin_Cossey",NA,NA,NA,NA,"http://dbpedia.org/resource/Erin_Cossey"
@@ -11573,7 +11573,7 @@
 11584,"Q3010442","César Damiani","César","Damiani",NA,1986-10-09,"Toulon",NA,NA,"France",NA,"2nd Row",NA,NA,NA,202,NA,"cesar-damiani","155pg3xw",13872,NA,NA,"C%C3%A9sar_Damiani",NA,NA,NA,NA
 11585,"Q3010443","César Delarue","César","Delarue",NA,1986-12-11,"Toulon",NA,NA,"France",NA,"2nd Row",NA,NA,NA,195,NA,"cesar-delarue","120vz85l",13865,NA,NA,"C%C3%A9sar_Delarue",NA,NA,NA,NA
 11586,"Q30106076","Arthur Norman McClinton","Norman; Arthur","McClinton",NA,1886-08-16,"Belfast",1929-11-29,"Belfast","Ireland",NA,"Fly-Half",NA,NA,NA,NA,2109,NA,"11dzss6g0b",NA,NA,"Arthur_McClinton",NA,NA,NA,NA,NA
-11587,"Q30106157","Iain Wood","Iain","Wood",NA,NA,"New Zealand",NA,NA,"New Zealand",NA,"Centre",NA,NA,NA,NA,NA,NA,"11g8cm7s6w",NA,NA,"Iain_Wood",NA,NA,NA,NA,"http://dbpedia.org/resource/Iain_Wood"
+11587,"Q30106157","Iain Wood","Iain","Wood",NA,1963-12-30,"New Zealand",NA,NA,"New Zealand",NA,"Centre",NA,NA,NA,NA,NA,NA,"11g8cm7s6w",NA,NA,"Iain_Wood",NA,NA,NA,NA,"http://dbpedia.org/resource/Iain_Wood"
 11588,"Q30106165","Ivor Stirling","Ivor","Stirling","Ivor Gerald Stirling",1916-02-19,"New Zealand",1979-09-21,NA,"New Zealand",NA,NA,NA,NA,NA,NA,NA,NA,"11dfhx8dsk",NA,NA,"Ivor_Stirling",NA,NA,NA,NA,"http://dbpedia.org/resource/Ivor_Stirling"
 11589,"Q3010774","Cătălin Nicolae","Cătălin","Nicolae",NA,1980-07-22,"Bucharest",NA,NA,"Romania",NA,"Winger",NA,NA,84,183,14140,NA,NA,4470,NA,"C%C4%83t%C4%83lin_Nicolae","C%C4%83t%C4%83lin_Nicolae",NA,NA,NA,"http://dbpedia.org/resource/Cătălin_Nicolae"
 11590,"Q301081","Jamie Salmon","James; Jamie","Salmon",NA,1959-10-16,"Hong Kong",NA,NA,"United Kingdom; New Zealand","New Zealand; England","Centre","1978",1990,84,183,9251,NA,NA,NA,NA,"Jamie_Salmon","Jamie_Salmon","Jamie_Salmon","Jamie_Salmon",NA,"http://dbpedia.org/resource/Jamie_Salmon"
@@ -12973,7 +12973,7 @@
 12984,"Q3161412","James Simpson-Daniel","James","Simpson-Daniel",NA,1982-05-30,"Stockton-on-Tees",NA,NA,"United Kingdom","England","Winger",NA,NA,92,183,14088,NA,NA,623,NA,"James_Simpson-Daniel","James_Simpson-Daniel","James_Simpson-Daniel",NA,NA,"http://dbpedia.org/resource/James_Simpson-Daniel"
 12985,"Q3161434","James Stuart","James","Stuart",NA,1981-05-27,"Buenos Aires",NA,NA,"Argentina",NA,"2nd Row",NA,NA,NA,198,15625,NA,"122gfm7k",13854,NA,NA,"James_Stuart_(rugby_%C3%A0_XV)",NA,NA,NA,NA
 12986,"Q3161451","James Topping","James","Topping","James Andrew Topping",1974-12-18,"Belfast",NA,NA,"United Kingdom","Ireland","Winger",NA,2006,95,180,12393,NA,NA,3443,"12758","James_Topping","James_Topping","James_Topping",NA,NA,"http://dbpedia.org/resource/James_Topping"
-12987,"Q3161493","James Winston","James","Winston",NA,NA,NA,NA,NA,"U.S.A.",NA,"Forward",NA,NA,NA,NA,2723,NA,"1hc0qsnwp",NA,NA,NA,"James_Winston",NA,NA,NA,NA
+12987,"Q3161493","James Winston","James","Winston",NA,1896-12-16,NA,NA,NA,"U.S.A.",NA,"Forward",NA,NA,NA,NA,2723,NA,"1hc0qsnwp",NA,NA,NA,"James_Winston",NA,NA,NA,NA
 12988,"Q3161527","Jamie Corsi","Jamie","Corsi",NA,1987-12-30,"Cardiff",NA,NA,"United Kingdom","Wales","Prop",NA,NA,110,191,NA,"jamie-corsi",NA,4874,"2251","Jamie_Corsi","Jamie_Corsi",NA,NA,NA,"http://dbpedia.org/resource/Jamie_Corsi"
 12989,"Q3161528","Jamie Cudmore","Jamie","Cudmore",NA,1978-09-06,"Winnipeg",NA,NA,"Canada",NA,"2nd Row",NA,NA,118,196,14018,"jamie-cudmore",NA,463,NA,"Jamie_Cudmore","Jamie_Cudmore",NA,NA,NA,"http://dbpedia.org/resource/Jamie_Cudmore"
 12990,"Q3161534","Jamie Hamilton","Jamie","Hamilton","James Garth Hamilton",1970-07-01,"Guildford",NA,NA,"United Kingdom","England","Scrum-Half",NA,NA,80,174,126356,NA,"1212grs_",12002,NA,"Jamie_Hamilton_(rugby_union)","Jamie_Hamilton_(rugby_%C3%A0_XV)",NA,NA,NA,"http://dbpedia.org/resource/Jamie_Hamilton_(rugby_union)"
@@ -23771,7 +23771,7 @@
 23783,"Q92486787","George Adkins","George","Adkins","George Thomas Augustus Adkins",1910-08-21,"Timaru",1976-05-24,"Timaru; New Zealand","New Zealand",NA,"Prop",NA,NA,93,180,NA,NA,"11jgb_lbv2",NA,NA,"George_Adkins",NA,NA,NA,NA,"http://dbpedia.org/resource/George_Adkins"
 23784,"Q925097","Stephen Larkham","Stephen","Larkham",NA,1974-05-29,"Canberra",NA,NA,"Australia",NA,"Fullback","1996",2010,88,189,12265,NA,NA,1892,"6440","Stephen_Larkham","Stephen_Larkham","Stephen_Larkham","Stephen_Larkham","%E3%82%B9%E3%83%86%E3%82%A3%E3%83%BC%E3%83%96%E3%83%B3%E3%83%BB%E3%83%A9%E3%83%BC%E3%82%AB%E3%83%A0","http://dbpedia.org/resource/Stephen_Larkham"
 23785,"Q92518996","Enzo Pakihivatau","Enzo","Pakihivatau",NA,1996-06-08,NA,NA,NA,"France",NA,"Hooker",NA,NA,116,179,294996,NA,"11jgb_nlrp",40602,NA,NA,"Enzo_Pakihivatau",NA,NA,NA,NA
-23786,"Q92540952","Jimmy McNeil","Jimmy","McNeil","Jimmy T. McNeil",NA,NA,2003-01-01,NA,"United Kingdom","Scotland",NA,NA,NA,NA,NA,NA,NA,"11ftm6pscr",NA,NA,"Jimmy_McNeil",NA,NA,NA,NA,"http://dbpedia.org/resource/Jimmy_McNeil"
+23786,"Q92540952","Jimmy McNeil","Jimmy","McNeil","Jimmy T. McNeil",1930-01-01,NA,2003-01-01,NA,"United Kingdom","Scotland",NA,NA,NA,NA,NA,NA,NA,"11ftm6pscr",NA,NA,"Jimmy_McNeil",NA,NA,NA,NA,"http://dbpedia.org/resource/Jimmy_McNeil"
 23787,"Q925823","Richard Hyland","Richard","Hyland","Dick Hyland",1900-07-26,"San Francisco",1981-07-16,"Wawona","U.S.A.",NA,"Centre",NA,NA,NA,NA,3125,NA,NA,NA,NA,"Richard_Hyland_(rugby_union)","Richard_Hyland",NA,NA,NA,NA
 23788,"Q92622862","Arthur Singe","Arthur","Singe","Arthur Percy Singe",1898-01-01,"Palmerston North",1936-01-05,"Auckland","New Zealand",NA,"Flanker",NA,NA,83,152,NA,NA,"11fv3mxq9c",NA,NA,"Arthur_Singe",NA,NA,NA,NA,"http://dbpedia.org/resource/Arthur_Singe"
 23789,"Q926351","John Eales","John; Anthony","Eales","John Anthony Eales",1970-06-27,"Brisbane",NA,NA,"Australia",NA,"2nd Row","1989",2001,115,200,11042,NA,NA,4263,NA,"John_Eales","John_Eales","John_Eales","John_Eales",NA,"http://dbpedia.org/resource/John_Eales"
@@ -24099,7 +24099,7 @@
 24111,"Q96374799","Charles Stewart","Charles","Stewart","Charles Alexander Reid Stewart",1860-05-08,"Glasgow",1890-02-25,"Searig; Dumfries and Galloway; Scotland","United Kingdom","Scotland","Forward",NA,NA,NA,NA,NA,NA,"11fw9klxby",NA,NA,"Charles_Stewart_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Charles_Stewart_(rugby_union)"
 24112,"Q96376031","David Fisher","David","Fisher",NA,1871-07-04,"Glasgow",1932-10-01,"Glasgow; Scotland","United Kingdom","Scotland","Forward",NA,NA,NA,NA,NA,NA,"11j6b8bwbc",NA,NA,"David_Fisher_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/David_Fisher_(rugby_union)"
 24113,"Q96377911","Filippo Alongi","Filippo","Alongi",NA,2000-01-01,"Pietrasanta",NA,NA,"Italy",NA,"Prop",NA,NA,121,187,NA,NA,"11j6jvqcq8",NA,NA,"Filippo_Alongi",NA,NA,NA,NA,"http://dbpedia.org/resource/Filippo_Alongi"
-24114,"Q96379347","George Jack","George","Jack","George W. Jack",NA,NA,NA,NA,"United Kingdom","Scotland","Hooker",NA,NA,NA,NA,NA,NA,"11ftwc91w7",NA,NA,"George_Jack_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/George_Jack_(rugby_union)"
+24114,"Q96379347","George Jack","George","Jack","George W. Jack",1947-01-01,NA,NA,NA,"United Kingdom","Scotland","Hooker",NA,NA,NA,NA,NA,NA,"11ftwc91w7",NA,NA,"George_Jack_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/George_Jack_(rugby_union)"
 24115,"Q96379371","George Robb","George","Robb","George Henry Robb",1858-09-24,"Glasgow",1927-04-15,"Glasgow; Scotland","United Kingdom","Scotland","Forward",NA,NA,NA,NA,551,NA,"11jg57j2l5",NA,NA,"George_Robb_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/George_Robb_(rugby_union)"
 24116,"Q96379382","George Thomson","George","Thomson","George W. Thomson; GeorgeThomson",NA,NA,2005-01-01,NA,"United Kingdom","England","Hooker",NA,NA,NA,NA,NA,NA,"11ftlxs4cj",NA,NA,"George_Thomson_(rugby_union,_died_2005)",NA,NA,NA,NA,"http://dbpedia.org/resource/George_Thomson_(rugby_union)"
 24117,"Q96379383","George Turnbull","George","Turnbull","George Oliver Turnbull",1877-07-21,"Colinton",1970-01-14,"Brighton; England","United Kingdom","Scotland","Forward",NA,NA,NA,NA,1192,NA,"11fw4yq5ty",NA,NA,"George_Turnbull_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/George_Turnbull_(rugby_union)"
@@ -24107,7 +24107,7 @@
 24119,"Q96380371","Harry Smith","Harry","Smith","Harry Oswald Smith",1873-01-01,"North Berwick",1957-01-01,"England; Tonbridge","United Kingdom","Scotland","Forward",NA,NA,NA,NA,1144,NA,"11fsvytdx0",NA,NA,"Harry_Smith_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Harry_Smith_(rugby_union)"
 24120,"Q96381338","Hugh Gilmour","Hugh","Gilmour","Hugh Ross Gilmour",1974-09-13,"Edinburgh",NA,NA,"United Kingdom","Scotland","Winger",NA,NA,95,188,NA,NA,"11f0xcsm02",NA,NA,"Hugh_Gilmour",NA,NA,NA,NA,"http://dbpedia.org/resource/Hugh_Gilmour"
 24121,"Q96381877","Iacopo Bianchi","Iacopo","Bianchi",NA,1998-05-05,"Arezzo",NA,NA,"Italy",NA,"Flanker",NA,NA,108,188,NA,NA,"11j6jvr63l",NA,NA,"Iacopo_Bianchi",NA,NA,NA,NA,"http://dbpedia.org/resource/Iacopo_Bianchi"
-24122,"Q96381883","Ian Rankin","Ian","Rankin","Ian T. Rankin",NA,NA,NA,NA,"United Kingdom","Scotland",NA,NA,NA,NA,NA,NA,NA,"11hfgbn29r",NA,NA,"Ian_Rankin_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Ian_Rankin_(rugby_union)"
+24122,"Q96381883","Ian Rankin","Ian","Rankin","Ian T. Rankin",1952-01-01,NA,NA,NA,"United Kingdom","Scotland",NA,NA,NA,NA,NA,NA,NA,"11hfgbn29r",NA,NA,"Ian_Rankin_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Ian_Rankin_(rugby_union)"
 24123,"Q96384120","James Bishop","James","Bishop","James Murray Bishop",1867-12-27,"Partick",1938-01-15,"Glasgow; Scotland","United Kingdom","Scotland","Forward",NA,NA,NA,NA,1078,NA,"11jg5md3zz",NA,NA,"James_Bishop_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/James_Bishop_(rugby_union)"
 24124,"Q96384122","James Couper","James","Couper","James Hammond Couper",1873-09-15,"Cathcart",1917-01-01,"Erskine; Scotland","United Kingdom","Scotland","Forward",NA,NA,NA,NA,1175,NA,"11j34fhw0v",NA,NA,"James_Couper_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/James_Couper_(rugby_union)"
 24125,"Q96384453","Jimmy Ross","Jimmy","Ross","James Ross",1922-02-01,NA,1997-12-22,NA,"United Kingdom","England","Prop",NA,NA,NA,NA,NA,NA,"11ftlx_w9k",NA,NA,"Jimmy_Ross_(rugby_union)",NA,NA,NA,NA,"http://dbpedia.org/resource/Jimmy_Ross_(rugby_union)"

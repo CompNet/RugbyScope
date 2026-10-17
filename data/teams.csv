@@ -7193,7 +7193,7 @@
 7278,"Q2669242","Rugbyclub Eemland","Club/franchise team",1977-01-01,NA,"RC Eemland; Rugby Club Eemland","Dutch Rugby Union","Netherlands",NA,NA,NA,NA,"Amersfoort",NA,NA,"Rugbyclub_Eemland",NA,NA,NA,NA,NA,NA
 7279,NA,"SA Castelbriantais","Club/franchise team",NA,NA,"SA Châteaubriant; SAC Rugby","French Rugby Federation","France",NA,NA,NA,NA,"Châteaubriant",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7280,NA,"Sabah Osca Warriors RC","Club/franchise team",2013-01-01,NA,"Sabah","Malaysian Rugby Union","Malaysia",NA,NA,NA,NA,"Kota Kinabalu",NA,NA,NA,NA,NA,NA,NA,NA,NA
-7281,"Q23045970","Saint-Denis Union Sports","Club/franchise team",1943-01-01,2023-01-01,"Saint-Denis US; US Saint-Denis","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Denis",NA,NA,NA,"Saint-Denis_Union_Sports",NA,NA,NA,NA,NA
+7281,"Q23045970","Saint-Denis Union Sports","Club/franchise team",1943-01-01,2023-01-01,"Saint-Denis US; US Saint-Denis; SDUS","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Denis",NA,NA,NA,"Saint-Denis_Union_Sports",NA,NA,NA,NA,NA
 7282,NA,"Saint-Front-sur-Lémance","Club/franchise team",NA,NA,"Saint-Front-sur-Lémance Rugby","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Front-sur-Lémance",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7283,NA,"Saint Mary's College of California","Club/franchise team",NA,NA,"Collège Saint Mary de Californie; Saint Mary's","USA Rugby","U.S.A.",NA,NA,NA,NA,"Moraga",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7284,NA,"Saint Quentin en Yvelines Rugby","Club/franchise team",NA,NA,"St-Quentin Yvelines R.","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Quentin-en-Yvelines",NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7976,3 +7976,10 @@
 8072,NA,"Pontypool Harlequins","Club/franchise team",NA,1946-05-12,"Pontypool Harlequins RFC","Welsh Rugby Union","Wales",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Merged with Pontypool Excelsiors to form Pontypool United"
 8073,NA,"Caribs RFC","Club/franchise team",NA,NA,"Caribs Rugby Football Club","Trinidad and Tobago Rugby Football Union","Trinidad and Tobago",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 8074,NA,"BSC Offenbach","Club/franchise team",NA,NA,"Rugby Offenbach; OSCR Rugby; Offenbacher Sport-Club-Rugby","German Rugby Federation","Germany",NA,NA,NA,NA,"Offenbach am Main",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8075,"Q16246712","Swiss Barbarians","Invitational team",1988-01-01,NA,"Barbarian Suisse Rugby Club; BSRC","Swiss Rugby Union","Switzerland",NA,NA,NA,NA,"Geneva",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8076,NA,"Lanarkshire RFU Team","Regional team",NA,NA,NA,"Scottish Rugby Union","Scotland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8077,NA,"North Midlands RFU Team","Club/franchise team",NA,NA,"North Midlands","Scottish Rugby Union","Scotland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8078,NA,"East of Scotland College of Agriculture","Club/franchise team",NA,NA,NA,"Scottish Rugby Union","Scotland",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+8079,NA,"Oatridge College","Club/franchise team",NA,NA,"SRUC Oatridge","Scottish Rugby Union","Scotland",NA,NA,NA,NA,"West Lothian",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8080,NA,"Aberdeen Strollers","Club/franchise team",NA,NA,NA,"Scottish Rugby Union","Scotland",NA,NA,NA,NA,"Aberdeen",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8081,NA,"Canada national under-23 rugby union team","National U23 team",NA,NA,"Canada -23; Canadá sub-23; Canada U23; Canada U23s; Canada Under-23; U23カナダ","Rugby Canada","Canada",NA,1,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
