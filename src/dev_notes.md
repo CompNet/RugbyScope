@@ -54,6 +54,7 @@
 * [ ] Leverage B&I Lions + Barbarians websites to complement these stints
 * [ ] Re-identify players searched manually
 * [ ] Check Wakefield Trinity / Salford Red Devils stints
+* [ ] Handle one-stint players
 
 
 # STATS & PLOTS
