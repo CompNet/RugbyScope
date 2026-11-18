@@ -700,7 +700,7 @@
 704,"Q3550034","UA Libourne","Club/franchise team",1893-01-01,2016-01-01,"Libourne; Ua Libourne; UAL; Union athlétique libournaise","French Rugby Federation","France",NA,NA,"Stade Jean-Antoine Moueix",NA,"Libourne",NA,"120pnm4m",NA,"Union_athl%C3%A9tique_libournaise",NA,NA,NA,NA,NA
 705,"Q3550478","Union sportive Annecy","Club/franchise team",1898-01-01,NA,"Annecy; Union sportive Annecy rugby; US Annecy","French Rugby Federation","France","Fédérale 1 - Poule 2",5,NA,NA,"Annecy",NA,"121y01pt",NA,"Union_sportive_Annecy_rugby",NA,NA,NA,NA,NA
 706,"Q3550481","US Bergerac","Club/franchise team",1902-02-01,NA,"Bergerac; Union sportive Bergerac rugby vallée de la Dordogne; US Bergerac rugby vallée de la Dordogne; USベルジュラック","French Rugby Federation","France","Fédérale 1 - Poule 3",5,"Stade Gaston-Simounet",NA,"Bergerac",NA,"121d1sct",NA,"Union_sportive_Bergerac_rugby_vall%C3%A9e_de_la_Dordogne",NA,NA,NA,NA,NA
-707,"Q3550488","Union sportive Fumel Libos","Club/franchise team",1908-01-01,2019-06-06,"U.S. Fumel; US Fumel; US Fumel Libos; USFL","French Rugby Federation","France",NA,NA,NA,NA,"Fumel",NA,"1236mw1z",NA,"Union_sportive_Fumel_Libos",NA,NA,NA,NA,NA
+707,"Q3550488","Union sportive Fumel Libos","Club/franchise team",1908-01-01,2019-06-06,"U.S. Fumel; US Fumel; US Fumel Libos; USFL","French Rugby Federation","France",NA,NA,NA,NA,"Fumel",NA,"1236mw1z",NA,"Union_sportive_Fumel_Libos",NA,NA,NA,NA,"Merged with US Tournon XV to form US Vallée du Lot"
 708,"Q3550490","Union sportive Marmande rugby","Club/franchise team",1911-01-01,NA,"Marmande; U.S. Marmande; Union rugby Marmande Casteljaloux; Union sportive marmandaise; UR Marmande Casteljaloux; US Marmande; USM","French Rugby Federation","France","Nationale 2",4,NA,NA,"Marmande",NA,"122s8wg9",NA,"Union_sportive_Marmande_rugby",NA,NA,NA,NA,NA
 709,"Q3550494","Union sportive Montmélian rugby","Club/franchise team",1912-01-01,NA,"Union sportive montmélian; US Montmélian; US Montmélian rugby","French Rugby Federation","France","Fédérale 2 - Poule 2",6,NA,NA,"Montmélian",NA,"122czwx5",NA,"Union_sportive_Montm%C3%A9lian_rugby",NA,NA,NA,NA,NA
 710,"Q3550496","Union sportive Morlaàs","Club/franchise team",1932-01-01,NA,"Morlaàs; US Morlaas; US Morlaàs","French Rugby Federation","France","Fédérale 2 - Poule 6",6,NA,NA,"Morlaàs",NA,"120xv2td",NA,"Union_sportive_Morla%C3%A0s_rugby",NA,NA,NA,NA,NA
@@ -4468,7 +4468,7 @@
 4524,NA,"RC Villeneuve","Club/franchise team",NA,NA,"C.A. Villeneuve; CA Villeneuve; CA Villeneuve sur Lot; RC Villeneuve-sur-Lot; Villeneuve XV","French Rugby Federation","France","Fédérale 3 - Poule 13",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4525,NA,"Stade Blayais","Club/franchise team",NA,NA,"Stade blayais","French Rugby Federation","France","Fédérale 3 - Poule 13",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4526,NA,"Stade Réolais","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Fédérale 3 - Poule 13",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4527,NA,"US Vallée du Lot","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Fédérale 3 - Poule 13",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4527,NA,"US Vallée du Lot","Club/franchise team",2019-01-01,NA,"US Vallée Lot 47","French Rugby Federation","France","Fédérale 3 - Poule 13",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"Merger of US Fumel Libos and US Tournon XV"
 4528,NA,"Naves SLR","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Fédérale 3 - Poule 14",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4529,NA,"RC buguois","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Fédérale 3 - Poule 14",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4530,NA,"RC Saint-Cernin","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Fédérale 3 - Poule 14",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -4544,7 +4544,7 @@
 4601,NA,"SC Tarare","Club/franchise team",NA,NA,"S.C. Tarare","French Rugby Federation","France","Fédérale 3 - Poule 5",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4602,NA,"Bassin de Crussol Rugby","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Fédérale 3 - Poule 6",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4603,NA,"Entente Chateauneuf St-Marcel XV","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Fédérale 3 - Poule 6",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4604,NA,"FC Tournon Tain","Club/franchise team",NA,NA,"FC Tain Tournon; FC Tournon-Tain","French Rugby Federation","France","Fédérale 3 - Poule 6",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4604,NA,"FC Tournon Tain","Club/franchise team",1923-01-01,NA,"FC Tain Tournon; FC Tournon-Tain; FCTT","French Rugby Federation","France","Fédérale 3 - Poule 6",7,NA,NA,"Tournon-sur-Rhône",NA,NA,NA,NA,NA,NA,NA,NA,NA
 4605,NA,"RC cévenol","Club/franchise team",NA,NA,"Rugby club cévenol","French Rugby Federation","France","Fédérale 3 - Poule 6",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4606,NA,"RC Seyssins","Club/franchise team",NA,NA,"RC Seyssens; RCセイサン; Seyssins","French Rugby Federation","France","Fédérale 3 - Poule 6",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4607,NA,"RC teillois","Club/franchise team",NA,NA,"RC Le Teil; RC Teillois; Rugby Club teillois; Rugby Club Teillois","French Rugby Federation","France","Fédérale 3 - Poule 6",7,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -7280,7 +7280,7 @@
 7392,NA,"US Saint-Léonard-de-Noblat","Club/franchise team",NA,NA,"US Saint Leonard de Noblat","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Léonard-de-Noblat",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7393,NA,"US Saint Florent-sur-Cher","Club/franchise team",NA,NA,"Saint-Florent-sur-Cher; US Saint Florent Rugby; Us St Florent Sur Cher","French Rugby Federation","France",NA,NA,NA,NA,"Saint-Florent-sur-Cher",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7394,NA,"US Sauvetérienne","Club/franchise team",NA,NA,"US Sauveterre rugby","French Rugby Federation","France",NA,NA,NA,NA,"Sauveterre-de-Béarn",NA,NA,NA,NA,NA,NA,NA,NA,NA
-7395,NA,"US Tournon XV","Club/franchise team",NA,NA,"US Tournon","French Rugby Federation","France",NA,NA,NA,NA,"Tournon",NA,NA,NA,NA,NA,NA,NA,NA,NA
+7395,NA,"US Tournon XV","Club/franchise team",1944-01-01,2019-01-01,"US Tournon","French Rugby Federation","France",NA,NA,NA,NA,"Tournon-d'Agenais",NA,NA,NA,NA,NA,NA,NA,NA,"Merged with US Fumel Libos to form US Vallée du Lot"
 7396,NA,"US Vic-en-Bigorre","Club/franchise team",NA,NA,"Union Sportive Vicquoise XV; US Vic","French Rugby Federation","France",NA,NA,NA,NA,"Vic-en-Bigorre",NA,NA,NA,NA,NA,NA,NA,NA,NA
 7397,NA,"USA Mirande","Club/franchise team",NA,2003-01-01,"Union Sportive Alerte Mirandaise","French Rugby Federation","France",NA,NA,NA,NA,"Mirande",NA,NA,NA,NA,NA,NA,NA,NA,"Merged with Olympique Mielan and Union Sportive Rabastanaise to form Entente Astarac Bigorre XV"
 7398,NA,"USEFS Blumarine Chișinău","Club/franchise team",NA,NA,"Kishniev Blue Marine; USEFS Blumarine Chisinau","Moldovan Rugby Federation","Moldova",NA,NA,NA,NA,"Chișinău",NA,NA,NA,NA,NA,NA,NA,NA,NA
