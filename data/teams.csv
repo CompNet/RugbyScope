@@ -4874,7 +4874,7 @@
 4938,NA,"RC Laon","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Hauts-de-France",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4939,NA,"RC Valenciennois","Club/franchise team",NA,NA,"RC Valenciennes","French Rugby Federation","France","Régionale 2 - Ligue Hauts-de-France",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4940,NA,"Rugby Olympique Flesselles","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Hauts-de-France",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
-4941,NA,"Entente RC CS Bretigny","Club/franchise team",NA,NA,"Entente RCCS Brétigny; RCS Brétigny","French Rugby Federation","France","Régionale 2 - Ligue Île-de-France",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+4941,NA,"Entente RC CS Bretigny","Club/franchise team",1975-01-01,NA,"Entente RCCS Brétigny; Rugby Club / Club Sportif de Brétigny; RCCSB; RCSB; RCS Brétigny","French Rugby Federation","France","Régionale 2 - Ligue Île-de-France",9,NA,NA,"Brétigny-sur-Orge",NA,NA,NA,NA,NA,NA,NA,NA,NA
 4942,NA,"Entente RC Plessis Robinson Meudo","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Île-de-France",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4943,NA,"Provins Rugby Club","Club/franchise team",NA,NA,NA,"French Rugby Federation","France","Régionale 2 - Ligue Île-de-France",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
 4944,NA,"R Conflans Herblay Val Seine","Club/franchise team",NA,NA,"Rugby Conflans Herblay; Rugby Conflans Herblay Val Seine","French Rugby Federation","France","Régionale 2 - Ligue Île-de-France",9,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
@@ -8004,3 +8004,8 @@
 8133,NA,"University College of North Wales","Club/franchise team",NA,NA,"University College Bangor","Welsh Rugby Union","Wales",NA,NA,NA,NA,"Bangor",NA,NA,NA,NA,NA,NA,NA,NA,NA
 8134,NA,"AS Port Autonome de Bordeaux","Club/franchise team",1932-01-01,1945-01-01,"AS du Port de Bordeaux","French Rugby Federation","France",NA,NA,NA,NA,"Bordeaux",NA,NA,NA,NA,NA,NA,NA,NA,"Initially a rugby league club, switched to rugby union in 1940 and disappeared at the end of WW2"
 8135,NA,"University of London RC","Club/franchise team",NA,NA,"University of London; UoL","Rugby Football Union","England",NA,NA,NA,NA,"London",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8136,NA,"Ciboure RC","Club/franchise team",1990-01-01,NA,"Ciboure Rugby Club","French Rugby Federation","France",NA,NA,NA,NA,"Ciboure",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8137,NA,"CS Bretigny","Club/franchise team",1964-01-01,1975-01-01,"Club Sportif de Brétigny","French Rugby Federation","France",NA,NA,NA,NA,"Brétigny-sur-Orge",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8138,NA,"RC Bretigny","Club/franchise team",1974-01-01,1975-01-01,"Rugby Club Brétigny","French Rugby Federation","France",NA,NA,NA,NA,"Brétigny-sur-Orge",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8139,NA,"Kurunegala RFC","Club/franchise team",NA,NA,"Kurunegala Rugby Football Club","Sri Lanka Rugby","Sri Lanka",NA,NA,NA,NA,"Kurunegala",NA,NA,NA,NA,NA,NA,NA,NA,NA
+8140,NA,"RC Ponto","Club/franchise team",NA,NA,"Rugby Club Ponto; ქობულეთის სარაგბო კლუბი პონტო","Georgian Rugby Union","Georgia",NA,NA,NA,NA,"Kobuleti",NA,NA,NA,NA,NA,NA,NA,NA,NA
